@@ -59,7 +59,7 @@ namespace DDD.TNFY.BRAWL
         public void BuildTileList()
         {
             allTiles.Clear();
-            allTiles.AddRange(FindObjectsOfType<Tile>());
+            allTiles.AddRange(FindObjectsByType<Tile>(FindObjectsSortMode.None));
 
             // Auto-detect spacing if not manually set (check if any component is 0 or negative)
             if (tileSpacing.x <= 0 || tileSpacing.y <= 0 || tileSpacing.z <= 0)
@@ -817,7 +817,7 @@ namespace DDD.TNFY.BRAWL
             else
             {
                 // Try to find MapConfiguration in the scene
-                var mapManager = FindObjectOfType<MapManager>();
+                var mapManager = FindAnyObjectByType<MapManager>();
                 if (mapManager != null && mapManager.CurrentConfiguration != null)
                 {
                     mapConfiguration = mapManager.CurrentConfiguration;

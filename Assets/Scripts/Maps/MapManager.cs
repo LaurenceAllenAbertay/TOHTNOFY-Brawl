@@ -1,5 +1,5 @@
 using UnityEngine;
-using static UnityEngine.Experimental.Rendering.RayTracingAccelerationStructure;
+using static UnityEngine.Rendering.RayTracingAccelerationStructure;
 
 namespace DDD.TNFY.BRAWL
 {

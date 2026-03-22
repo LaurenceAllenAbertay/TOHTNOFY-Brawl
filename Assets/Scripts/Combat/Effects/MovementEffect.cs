@@ -203,7 +203,7 @@ public class MovementEffect : AbilityEffect
 
     private bool IsActivePlayerUnit(Unit unit)
     {
-        var combatManager = Object.FindObjectOfType<CombatManager>();
+        var combatManager = Object.FindAnyObjectByType<CombatManager>();
         return combatManager != null &&
                combatManager.CurrentActiveUnit == unit &&
                unit is PlayerUnit;
@@ -211,7 +211,7 @@ public class MovementEffect : AbilityEffect
 
     private void BlockPlayerInputDuringMovement()
     {
-        var combatManager = Object.FindObjectOfType<CombatManager>();
+        var combatManager = Object.FindAnyObjectByType<CombatManager>();
         if (combatManager != null)
         {
             // Clear tile highlights immediately
@@ -239,7 +239,7 @@ public class MovementEffect : AbilityEffect
 
     private void RestorePlayerInputAfterMovement()
     {
-        var combatManager = Object.FindObjectOfType<CombatManager>();
+        var combatManager = Object.FindAnyObjectByType<CombatManager>();
         if (combatManager != null)
         {
             combatManager.StartCoroutine(DelayedInputRestore(combatManager));

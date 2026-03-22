@@ -147,9 +147,9 @@ namespace DDD.TNFY.BRAWL
         /// </summary>
         private void FindGameSystems()
         {
-            turnManager = FindObjectOfType<TurnManager>();
-            combatManager = FindObjectOfType<CombatManager>();
-            jumpSystem = FindObjectOfType<JumpSystem>();
+            turnManager = FindAnyObjectByType<TurnManager>();
+            combatManager = FindAnyObjectByType<CombatManager>();
+            jumpSystem = FindAnyObjectByType<JumpSystem>();
         }
 
         /// <summary>
@@ -252,7 +252,6 @@ namespace DDD.TNFY.BRAWL
         /// </summary>
         private void SubscribeToEvents()
         {
-            // UI system events
             UIUpdateSystem.OnTurnUIUpdate += HandleTurnUIUpdate;
             UIUpdateSystem.OnAbilityButtonsUpdate += HandleAbilityButtonsUpdate;
             UIUpdateSystem.OnAbilityAnimationStarted += HandleAbilityAnimationStarted;
@@ -260,13 +259,10 @@ namespace DDD.TNFY.BRAWL
             UIUpdateSystem.OnMovementAnimationStarted += HandleMovementAnimationStarted;
             UIUpdateSystem.OnMovementAnimationComplete += HandleMovementAnimationComplete;
 
-            // Input events
-            InputManager.OnEscapePressedHighPriority += HandleEscapePressed;
-            InputManager.OnMouseRightClickedHighPriority += HandleRightClicked;
+            InputManager.OnEscapePressed += HandleEscapePressed;
+            InputManager.OnMouseRightClicked += HandleRightClicked;
 
-            // Turn management events
             TurnManager.OnTurnStarted += HandleTurnStarted;
-
             TurnManager.OnTurnNumberChanged += HandleTurnIndexChanged;
         }
 
@@ -287,12 +283,11 @@ namespace DDD.TNFY.BRAWL
 
             if (InputManager.Instance != null)
             {
-                InputManager.OnEscapePressedHighPriority -= HandleEscapePressed;
-                InputManager.OnMouseRightClickedHighPriority -= HandleRightClicked;
+                InputManager.OnEscapePressed -= HandleEscapePressed;
+                InputManager.OnMouseRightClicked -= HandleRightClicked;
             }
 
             TurnManager.OnTurnStarted -= HandleTurnStarted;
-
             TurnManager.OnTurnNumberChanged -= HandleTurnIndexChanged;
         }
 
@@ -862,7 +857,7 @@ namespace DDD.TNFY.BRAWL
         /// </summary>
         private System.Collections.IEnumerator SmoothCameraTransition(Vector3 targetPosition)
         {
-            var cameraController = FindObjectOfType<CameraController>();
+            var cameraController = FindAnyObjectByType<CameraController>();
             if (cameraController == null)
                 yield break;
 

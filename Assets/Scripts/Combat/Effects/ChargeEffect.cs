@@ -34,7 +34,7 @@ public class ChargeEffect : AbilityEffect
     private IEnumerator AnimateChargeMovement(Unit caster, Tile destinationTile, float speed, Vector2Int aimDirection)
     {
         // Store reference to combat manager for state management
-        var combatManager = Object.FindObjectOfType<CombatManager>();
+        var combatManager = Object.FindAnyObjectByType<CombatManager>();
         bool isPlayerUnit = caster is PlayerUnit;
 
         // Store the unit that might need displacement (if any)
@@ -56,7 +56,7 @@ public class ChargeEffect : AbilityEffect
         Vector3 startPos = caster.transform.position;
         Vector3 endPos = destinationTile.transform.position;
 
-        var cameraController = GameObject.FindObjectOfType<CameraController>();
+        var cameraController = GameObject.FindAnyObjectByType<CameraController>();
         bool shouldMoveCamera = cameraController != null && caster is EnemyUnit;
 
         Vector3 cameraStartPos = Vector3.zero;
@@ -154,7 +154,7 @@ public class ChargeEffect : AbilityEffect
 
         // Check if this is a player unit to handle input blocking
         bool isPlayerUnit = unitToDisplace is PlayerUnit;
-        var combatManager = Object.FindObjectOfType<CombatManager>();
+        var combatManager = Object.FindAnyObjectByType<CombatManager>();
 
         if (isPlayerUnit && combatManager != null && combatManager.CurrentActiveUnit == unitToDisplace)
         {

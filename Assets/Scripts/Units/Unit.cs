@@ -117,7 +117,7 @@ namespace DDD.TNFY.BRAWL
             }
 
             // STEP 1: First move camera to caster
-            var cameraController = FindObjectOfType<CameraController>();
+            var cameraController = FindAnyObjectByType<CameraController>();
             if (cameraController != null)
             {
                 Vector3 casterCameraPosition = new Vector3(
@@ -133,14 +133,8 @@ namespace DDD.TNFY.BRAWL
                 yield return new WaitForSeconds(1.5f);
             }
 
-            // STEP 2: Handle self-inflicted knockback BEFORE animation
-            bool hasSelfKnockback = HasSelfKnockbackEffect(ctx.ability);
-            if (hasSelfKnockback)
-            {
-                yield return StartCoroutine(HandleSelfKnockbackEffects(ctx));
-            }
-
-            // STEP 3: NOW play the attack animation and cast effect
+            // STEP 2: Play the attack animation and cast effect
+            // NOTE: Self-knockback is intentionally deferred to AFTER the animation completes (see Step 3.5)
             var animator = unitAnimator?.GetComponent<Animator>();
             if (animator == null)
             {
@@ -222,8 +216,15 @@ namespace DDD.TNFY.BRAWL
                 SpawnCastEffect(ctx);
             }
 
+            // STEP 3.5: Fire self-knockback concurrently after animation completes.
+            // We StartCoroutine without yielding so it runs in parallel with camera/target effects below.
+            if (HasSelfKnockbackEffect(ctx.ability))
+            {
+                StartCoroutine(HandleSelfKnockbackEffects(ctx));
+            }
+
             // STEP 4: After caster animation completes, handle camera transitions and target effects
-            // Filter out self from targets for camera transitions (self-effects already handled)
+            // Filter out self from targets for camera transitions (self-knockback handled above)
             var nonSelfTargets = targets.Where(t => t != this).ToList();
             if (nonSelfTargets.Count > 0)
             {
@@ -255,27 +256,18 @@ namespace DDD.TNFY.BRAWL
 
             if (selfKnockbackEffects.Count == 0) yield break;
 
-            // Play knockback animation on self
-            if (unitAnimator != null)
-            {
-                unitAnimator.PlayKnockbackStart();
-            }
-
-            // Apply self-knockback effects
+            // Apply self-knockback effects.
+            // ApplyKnockbackWithAnimation (inside KnockbackEffect) owns the animation — calling
+            // PlayKnockbackStart() here as well was setting isInKnockbackSequence = true prematurely,
+            // which blocked the caster's attack animation from playing.
             var selfTargetList = new List<Unit> { this };
             foreach (var effect in selfKnockbackEffects)
             {
                 effect.Apply(ctx, selfTargetList);
             }
 
-            // Wait for self-knockback to complete
-            yield return new WaitForSeconds(1.5f); // Allow time for knockback animation and movement
-
-            // Return to idle if not in knockback sequence anymore
-            if (unitAnimator != null && !unitAnimator.IsInKnockbackSequence)
-            {
-                unitAnimator.PlayIdle();
-            }
+            // Wait for self-knockback animation + movement to complete
+            yield return new WaitForSeconds(1.5f);
         }
 
         private IEnumerator HandleRemainingEffects(AbilityContext ctx, List<Unit> targets)
@@ -367,7 +359,7 @@ namespace DDD.TNFY.BRAWL
 
         private IEnumerator HandleCameraTransitionsAndEffects(AbilityContext ctx, List<Unit> targets)
         {
-            var cameraController = FindObjectOfType<CameraController>();
+            var cameraController = FindAnyObjectByType<CameraController>();
             if (cameraController == null)
             {
                 // Fallback: execute effects without camera transitions
@@ -621,7 +613,10 @@ namespace DDD.TNFY.BRAWL
         private IEnumerator PlayTargetEffectsWithAnimation(AbilityContext ctx, List<Unit> targets)
         {
             // Group effects by type and execution order
-            var knockbackEffects = ctx.ability.effects.OfType<KnockbackEffect>().ToList();
+            // Exclude applyToSelf knockbacks — those are fired concurrently in Step 3.5 of ExecuteTimedEffects
+            var knockbackEffects = ctx.ability.effects.OfType<KnockbackEffect>()
+                .Where(kb => !kb.applyToSelf)
+                .ToList();
             var damageEffects = ctx.ability.effects.OfType<DamageEffect>().ToList();
             var movementEffects = ctx.ability.effects.OfType<MovementEffect>().Where(me => !me.applyToCaster).ToList();
             var statusEffects = ctx.ability.effects.OfType<StatusEffect>().ToList();
@@ -676,7 +671,7 @@ namespace DDD.TNFY.BRAWL
             // Step 3: Handle Movement Effects
             if (movementEffects.Count > 0)
             {
-                var cameraController = FindObjectOfType<CameraController>();
+                var cameraController = FindAnyObjectByType<CameraController>();
 
                 foreach (var target in targets)
                 {

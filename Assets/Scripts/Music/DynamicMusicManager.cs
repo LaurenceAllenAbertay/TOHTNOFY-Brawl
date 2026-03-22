@@ -160,7 +160,7 @@ public class DynamicMusicManager : MonoBehaviour
         }
 
         // Process turn number triggers immediately when turn starts
-        var turnManager = FindObjectOfType<TurnManager>();
+        var turnManager = FindAnyObjectByType<TurnManager>();
         if (turnManager != null)
         {
             int totalTurns = turnManager.TotalTurnCount;
@@ -412,7 +412,7 @@ public class DynamicMusicManager : MonoBehaviour
             yield return new WaitForSeconds(0.5f); // Check twice per second
 
             // Monitor combat state changes
-            var combatManager = FindObjectOfType<CombatManager>();
+            var combatManager = FindAnyObjectByType<CombatManager>();
             if (combatManager != null && combatManager.currentState != lastCombatState)
             {
                 ProcessCombatStateTriggers(combatManager.currentState, combatManager.CurrentActiveUnit);

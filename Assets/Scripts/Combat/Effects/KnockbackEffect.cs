@@ -230,7 +230,7 @@ public class KnockbackEffect : AbilityEffect
         }
 
         // Find combat manager to block input during animation
-        var combatManager = Object.FindObjectOfType<CombatManager>();
+        var combatManager = Object.FindAnyObjectByType<CombatManager>();
         if (combatManager != null && combatManager.CurrentActiveUnit == target)
         {
             // UPDATED: Set state to ExecutingAction to block input more comprehensively
@@ -253,7 +253,7 @@ public class KnockbackEffect : AbilityEffect
         // Only restore state for player units
         if (!(target is PlayerUnit)) return;
 
-        var combatManager = Object.FindObjectOfType<CombatManager>();
+        var combatManager = Object.FindAnyObjectByType<CombatManager>();
         if (combatManager != null && combatManager.CurrentActiveUnit == target)
         {
             // UPDATED: Add a small delay to ensure animation is fully complete

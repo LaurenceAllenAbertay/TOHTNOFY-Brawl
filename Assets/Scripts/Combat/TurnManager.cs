@@ -28,14 +28,14 @@ namespace DDD.TNFY.BRAWL
 
         void Start()
         {
-            combatManager = FindObjectOfType<CombatManager>();
+            combatManager = FindAnyObjectByType<CombatManager>();
             BuildTurnOrder();
             StartNextTurn();
         }
 
         void BuildTurnOrder()
         {
-            var allUnits = FindObjectsOfType<Unit>();
+            var allUnits = FindObjectsByType<Unit>(FindObjectsSortMode.None);
             // Only include PlayerUnit and EnemyUnit
             var validUnits = allUnits.Where(u => u is PlayerUnit || u is EnemyUnit);
 

@@ -25,18 +25,14 @@ namespace DDD.TNFY.BRAWL
             // Auto-find bounds if not assigned
             if (boundsBox == null)
             {
-                boundsBox = FindObjectOfType<BoxCollider>();
-                if (boundsBox == null)
-                {
-                    Debug.LogWarning("CameraController: No BoxCollider found for bounds. Camera movement will be unbounded.");
-                }
+                Debug.LogWarning("CameraController: No BoxCollider found for bounds. Camera movement will be unbounded.");
             }
 
             // Subscribe to turn change events
             TurnManager.OnTurnStarted += OnTurnStarted;
 
             // NEW: Focus on current unit immediately if game already started
-            var turnManager = FindObjectOfType<TurnManager>();
+            var turnManager = FindAnyObjectByType<TurnManager>();
             if (turnManager != null && turnManager.CurrentUnit != null)
             {
                 FocusOnUnitImmediate(turnManager.CurrentUnit);

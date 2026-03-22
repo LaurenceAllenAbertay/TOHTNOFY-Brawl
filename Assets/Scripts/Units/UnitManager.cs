@@ -46,7 +46,7 @@ namespace DDD.TNFY.BRAWL
         private void RegisterExistingUnits()
         {
             // Only call FindObjectsOfType once during initialization
-            var existingUnits = FindObjectsOfType<Unit>();
+            var existingUnits = FindObjectsByType<Unit>(FindObjectsSortMode.None);
             foreach (var unit in existingUnits)
             {
                 // Check if unit is already in our list to avoid double registration

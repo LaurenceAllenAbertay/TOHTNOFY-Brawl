@@ -87,8 +87,8 @@ namespace DDD.TNFY.BRAWL
 
         void Start()
         {
-            turnManager = FindObjectOfType<TurnManager>();
-            jumpSystem = FindObjectOfType<JumpSystem>();
+            turnManager = FindAnyObjectByType<TurnManager>();
+            jumpSystem = FindAnyObjectByType<JumpSystem>();
 
             if (enableDebugLogging)
             {
@@ -1030,7 +1030,7 @@ namespace DDD.TNFY.BRAWL
                 Debug.Log($"[{unit.name}] {movementType} to {plan.movementTarget.name}");
             }
 
-            var combatManager = FindObjectOfType<CombatManager>();
+            var combatManager = FindAnyObjectByType<CombatManager>();
             if (combatManager == null)
             {
                 Debug.LogError($"[{unit.name}] CombatManager not found - cannot execute movement");
@@ -1173,7 +1173,7 @@ namespace DDD.TNFY.BRAWL
             if (success)
             {
                 // NEW: Wait for complete ability sequence including camera transitions
-                var combatManager = FindObjectOfType<CombatManager>();
+                var combatManager = FindAnyObjectByType<CombatManager>();
 
                 // Wait for camera transitions and effects to complete
                 float maxWaitTime = 30f; // Safety timeout
@@ -1183,7 +1183,7 @@ namespace DDD.TNFY.BRAWL
                 {
                     // Check if camera is still transitioning or ability is still executing
                     bool cameraTransitioning = false;
-                    var cameraController = FindObjectOfType<CameraController>();
+                    var cameraController = FindAnyObjectByType<CameraController>();
                     if (cameraController != null)
                         cameraTransitioning = cameraController.IsTransitioning;
 

@@ -1,4 +1,6 @@
+using System;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
 
 namespace DDD.TNFY.BRAWL
@@ -7,181 +9,135 @@ namespace DDD.TNFY.BRAWL
     {
         public static InputManager Instance { get; private set; }
 
-        // Input events that other systems can subscribe to
-        public static event System.Action<Vector3> OnMouseMoved;
-        public static event System.Action<Vector3> OnMouseClicked;
-        public static event System.Action<Vector3> OnMouseRightClicked;
-        public static event System.Action<KeyCode> OnKeyPressed;
-        public static event System.Action OnEscapePressed;
+        [SerializeField] private InputActionAsset inputActions;
+        [SerializeField] private Camera mainCamera;
 
-        // High priority events that get handled first (for UI systems)
-        public static event System.Action OnEscapePressedHighPriority;
-        public static event System.Action<Vector3> OnMouseRightClickedHighPriority;
+        // Mouse events
+        public static event Action<Vector3> OnMouseMoved;
+        public static event Action<Vector3> OnMouseClicked;
+        public static event Action<Vector3> OnMouseRightClicked;
 
-        [Header("Settings")]
-        [SerializeField] private float mouseMoveThreshold = 0.1f; // Minimum movement to trigger event
-        [SerializeField] private LayerMask raycastLayers = -1; // IDK Like layers to be ignored?
+        // Ability events — slot index replaces KeyCode
+        public static event Action<int> OnAbilitySelected;
 
-        // State tracking
-        private Vector3 lastMouseWorldPosition;
-        private bool isMouseOverUI;
-        private Camera mainCamera;
+        // Action events
+        public static event Action OnEscapePressed;
+        public static event Action OnEndTurnRequested;
+
+        // Camera events
+        public static event Action<Vector2> OnCameraMove;
+        public static event Action<float> OnCameraElevate;
+
+        private InputActionMap gameplayMap;
+        private InputAction clickAction;
+        private InputAction rightClickAction;
+        private InputAction mousePositionAction;
+        private InputAction ability1Action;
+        private InputAction ability2Action;
+        private InputAction ability3Action;
+        private InputAction cancelAction;
+        private InputAction endTurnAction;
+        private InputAction cameraMoveAction;
+        private InputAction cameraElevateAction;
 
         private void Awake()
         {
-            if (Instance != null && Instance != this)
-            {
-                Destroy(gameObject);
-                return;
-            }
+            if (Instance != null && Instance != this) { Destroy(gameObject); return; }
             Instance = this;
-            mainCamera = Camera.main;
+
+            if (mainCamera == null)
+                mainCamera = Camera.main;
+
+            gameplayMap = inputActions.FindActionMap("Gameplay", throwIfNotFound: true);
+
+            clickAction         = gameplayMap.FindAction("Click",         throwIfNotFound: true);
+            rightClickAction    = gameplayMap.FindAction("RightClick",    throwIfNotFound: true);
+            mousePositionAction = gameplayMap.FindAction("MousePosition", throwIfNotFound: true);
+            ability1Action      = gameplayMap.FindAction("Ability1",      throwIfNotFound: true);
+            ability2Action      = gameplayMap.FindAction("Ability2",      throwIfNotFound: true);
+            ability3Action      = gameplayMap.FindAction("Ability3",      throwIfNotFound: true);
+            cancelAction        = gameplayMap.FindAction("Cancel",        throwIfNotFound: true);
+            endTurnAction       = gameplayMap.FindAction("EndTurn",       throwIfNotFound: true);
+            cameraMoveAction    = gameplayMap.FindAction("CameraMove",    throwIfNotFound: true);
+            cameraElevateAction = gameplayMap.FindAction("CameraElevate", throwIfNotFound: true);
+        }
+
+        private void OnEnable()
+        {
+            gameplayMap.Enable();
+
+            clickAction.performed         += OnClick;
+            rightClickAction.performed    += OnRightClick;
+            ability1Action.performed      += OnAbility1;
+            ability2Action.performed      += OnAbility2;
+            ability3Action.performed      += OnAbility3;
+            cancelAction.performed        += OnCancel;
+            endTurnAction.performed       += OnEndTurn;
+        }
+
+        private void OnDisable()
+        {
+            clickAction.performed         -= OnClick;
+            rightClickAction.performed    -= OnRightClick;
+            ability1Action.performed      -= OnAbility1;
+            ability2Action.performed      -= OnAbility2;
+            ability3Action.performed      -= OnAbility3;
+            cancelAction.performed        -= OnCancel;
+            endTurnAction.performed       -= OnEndTurn;
+
+            gameplayMap.Disable();
         }
 
         private void Update()
         {
-            // Track UI state
-            isMouseOverUI = IsMouseOverUI();
+            // Only broadcast mouse movement while the action map is active
+            // This silences subscribers during cutscenes or when input is globally disabled
+            if (!gameplayMap.enabled) return;
 
-            // Handle mouse movement
-            HandleMouseMovement();
+            Vector2 screenPos = mousePositionAction.ReadValue<Vector2>();
+            OnMouseMoved?.Invoke(ScreenToWorld(screenPos));
 
-            // Handle mouse clicks
-            HandleMouseClicks();
-
-            // Handle keyboard input
-            HandleKeyboardInput();
+            OnCameraMove?.Invoke(cameraMoveAction.ReadValue<Vector2>());
+            OnCameraElevate?.Invoke(cameraElevateAction.ReadValue<float>());
         }
 
-        private void HandleMouseMovement()
-        {
-            Vector3 currentMouseWorld = GetMouseWorldPosition();
+        // --- Action callbacks ---
 
-            // Only trigger events if mouse moved significantly and we have a valid position
-            if (currentMouseWorld != Vector3.zero &&
-                Vector3.Distance(currentMouseWorld, lastMouseWorldPosition) > mouseMoveThreshold)
-            {
-                lastMouseWorldPosition = currentMouseWorld;
-                OnMouseMoved?.Invoke(currentMouseWorld);
-            }
+        private void OnClick(InputAction.CallbackContext ctx)
+        {
+            if (IsMouseOverUI()) return;
+            OnMouseClicked?.Invoke(ScreenToWorld(mousePositionAction.ReadValue<Vector2>()));
         }
 
-        private void HandleMouseClicks()
+        private void OnRightClick(InputAction.CallbackContext ctx)
         {
-            if (isMouseOverUI) return; // Don't process clicks over UI
-
-            Vector3 mouseWorldPos = GetMouseWorldPosition();
-            if (mouseWorldPos == Vector3.zero) return;
-
-            if (Input.GetMouseButtonDown(0)) // Left click
-            {
-                OnMouseClicked?.Invoke(mouseWorldPos);
-            }
-
-            if (Input.GetMouseButtonDown(1)) // Right click
-            {
-                // First let high priority systems handle right-click (like UI)
-                OnMouseRightClickedHighPriority?.Invoke(mouseWorldPos);
-
-                // Then let normal systems handle it
-                OnMouseRightClicked?.Invoke(mouseWorldPos);
-            }
+            if (IsMouseOverUI()) return;
+            OnMouseRightClicked?.Invoke(ScreenToWorld(mousePositionAction.ReadValue<Vector2>()));
         }
 
-        private void HandleKeyboardInput()
+        private void OnAbility1(InputAction.CallbackContext ctx) => OnAbilitySelected?.Invoke(0);
+        private void OnAbility2(InputAction.CallbackContext ctx) => OnAbilitySelected?.Invoke(1);
+        private void OnAbility3(InputAction.CallbackContext ctx) => OnAbilitySelected?.Invoke(2);
+
+        private void OnCancel(InputAction.CallbackContext ctx) => OnEscapePressed?.Invoke();
+
+        private void OnEndTurn(InputAction.CallbackContext ctx) => OnEndTurnRequested?.Invoke();
+
+        // --- Utilities ---
+
+        private Vector3 ScreenToWorld(Vector2 screenPos)
         {
-            // Handle escape key specially since it's commonly used
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                // First let high priority systems handle ESC (like UI)
-                OnEscapePressedHighPriority?.Invoke();
-
-                // Then let normal systems handle it
-                OnEscapePressed?.Invoke();
-                return; // Don't also send it as a general key press
-            }
-
-            // Handle ability hotkeys
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-                OnKeyPressed?.Invoke(KeyCode.Alpha1);
-            else if (Input.GetKeyDown(KeyCode.Alpha2))
-                OnKeyPressed?.Invoke(KeyCode.Alpha2);
-            else if (Input.GetKeyDown(KeyCode.Alpha3))
-                OnKeyPressed?.Invoke(KeyCode.Alpha3);
-
-            // Add more specific keys as needed
-        }
-
-        private Vector3 GetMouseWorldPosition()
-        {
-            Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
-
-            // First try raycast against tile colliders specifically
-            if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, raycastLayers))
-            {
-                return hit.point;
-            }
-
-            // If no tiles hit, fallback to intelligent ground plane detection
-            return GetIntelligentGroundPosition(ray);
-        }
-
-        private Vector3 GetIntelligentGroundPosition(Ray ray)
-        {
-            // Try multiple Y levels to see which one makes sense
-            Vector3 tileSpacing = GridManager.Instance.GetTileSpacing();
-
-            for (int level = -3; level <= 3; level++) // Check 7 levels around current
-            {
-                float yLevel = level * tileSpacing.y;
-                Plane levelPlane = new Plane(Vector3.up, new Vector3(0, yLevel, 0));
-
-                if (levelPlane.Raycast(ray, out float distance))
-                {
-                    Vector3 hitPoint = ray.GetPoint(distance);
-
-                    // Check if there are any tiles near this level
-                    Tile nearbyTile = GridManager.Instance.GetClosestTile(hitPoint, tileSpacing);
-                    if (nearbyTile != null)
-                    {
-                        return hitPoint;
-                    }
-                }
-            }
-
-            // Ultimate fallback
+            if (mainCamera == null) return Vector3.zero;
+            Ray ray = mainCamera.ScreenPointToRay(screenPos);
+            if (new Plane(Vector3.up, Vector3.zero).Raycast(ray, out float dist))
+                return ray.GetPoint(dist);
             return Vector3.zero;
         }
 
-        private bool IsMouseOverUI()
-        {
-            return EventSystem.current != null && EventSystem.current.IsPointerOverGameObject();
-        }
+        private bool IsMouseOverUI() =>
+            EventSystem.current != null && EventSystem.current.IsPointerOverGameObject();
 
-        // Static convenience methods for other systems
-        public static bool IsMouseOverUI_Static()
-        {
-            return Instance?.isMouseOverUI ?? false;
-        }
-
-        public static Vector3 GetCurrentMouseWorldPosition()
-        {
-            return Instance?.GetMouseWorldPosition() ?? Vector3.zero;
-        }
-
-        private void OnDestroy()
-        {
-            if (Instance == this)
-            {
-                Instance = null;
-            }
-        }
-
-        // Optional: Method to temporarily disable input processing
-        public static void SetInputEnabled(bool enabled)
-        {
-            if (Instance != null)
-                Instance.enabled = enabled;
-        }
+        public static bool IsMouseOverUI_Static() =>
+            EventSystem.current != null && EventSystem.current.IsPointerOverGameObject();
     }
 }

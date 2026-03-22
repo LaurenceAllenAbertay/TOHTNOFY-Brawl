@@ -275,7 +275,7 @@ public class TileGeneratorTool : EditorWindow
         Debug.Log($"Generated {tileIndex} tiles in a {tilesX}x{tilesZ} grid at Y level {targetYLevel} (Y pos: {yPos})");
 
         // Refresh GridManager if it exists
-        var gridManager = FindObjectOfType<GridManager>();
+        var gridManager = FindAnyObjectByType<GridManager>();
         if (gridManager != null)
         {
             gridManager.BuildTileList();
@@ -430,7 +430,7 @@ public class TileGeneratorTool : EditorWindow
         Debug.Log($"Grid size: {tilesX}x{tilesZ}, Gaps created: {tilesSkippedGaps}, Existing tiles skipped: {tilesSkippedExisting}");
 
         // Refresh GridManager if it exists
-        var gridManager = FindObjectOfType<GridManager>();
+        var gridManager = FindAnyObjectByType<GridManager>();
         if (gridManager != null)
         {
             gridManager.BuildTileList();
@@ -440,7 +440,7 @@ public class TileGeneratorTool : EditorWindow
 
     private bool TileExistsAtPosition(Vector3 position, float tolerance)
     {
-        Tile[] allTiles = FindObjectsOfType<Tile>();
+        Tile[] allTiles = FindObjectsByType<Tile>(FindObjectsSortMode.None);
         foreach (var tile in allTiles)
         {
             if (Vector3.Distance(tile.transform.position, position) < tolerance)
@@ -481,7 +481,7 @@ public class TileGeneratorTool : EditorWindow
 
     private void SelectAllTiles()
     {
-        Tile[] allTiles = FindObjectsOfType<Tile>();
+        Tile[] allTiles = FindObjectsByType<Tile>(FindObjectsSortMode.None);
         GameObject[] tileObjects = new GameObject[allTiles.Length];
 
         for (int i = 0; i < allTiles.Length; i++)

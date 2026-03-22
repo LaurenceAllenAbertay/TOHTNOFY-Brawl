@@ -17,8 +17,8 @@ namespace DDD.TNFY.BRAWL
 
         void Start()
         {
-            combatManager = FindObjectOfType<CombatManager>();
-            cameraController = FindObjectOfType<CameraController>();
+            combatManager = FindAnyObjectByType<CombatManager>();
+            cameraController = FindAnyObjectByType<CameraController>();
         }
 
         void Update()
@@ -247,7 +247,7 @@ namespace DDD.TNFY.BRAWL
             unit.FaceDirection(jumpDir);
 
             // Get camera controller reference
-            var cameraController = FindObjectOfType<CameraController>();
+            var cameraController = FindAnyObjectByType<CameraController>();
 
             Vector3 cameraStartPos = Vector3.zero;
             Vector3 cameraTargetPos = Vector3.zero;

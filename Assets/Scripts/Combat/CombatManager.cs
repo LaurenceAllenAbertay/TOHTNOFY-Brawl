@@ -97,6 +97,10 @@ namespace DDD.TNFY.BRAWL
         private float turnStartTime;
         private const float turnStartProtectionDuration = 1.5f;
 
+        // Prevents end-turn spam: locked from the moment EndTurn fires until
+        // the next turn is fully set up and ready for player input.
+        private bool _turnTransitionPending = false;
+
         #endregion
 
         #region Unity Lifecycle
@@ -121,9 +125,9 @@ namespace DDD.TNFY.BRAWL
         /// </summary>
         private void InitializeComponents()
         {
-            turnManager = FindObjectOfType<TurnManager>();
-            jumpSystem = FindObjectOfType<JumpSystem>();
-            cameraController = FindObjectOfType<CameraController>();
+            turnManager = FindAnyObjectByType<TurnManager>();
+            jumpSystem = FindAnyObjectByType<JumpSystem>();
+            cameraController = FindAnyObjectByType<CameraController>();
         }
 
         /// <summary>
@@ -131,18 +135,15 @@ namespace DDD.TNFY.BRAWL
         /// </summary>
         private void SubscribeToEvents()
         {
-            // Tile interaction events
             Tile.OnTileClicked += HandleTileClicked;
-
-            // Potentially Temporary Change
             TurnManager.OnTurnStarted += OnTurnStarted;
 
-            // Input system events - using event-driven instead of Update for performance
             InputManager.OnMouseMoved += HandleMouseMoved;
             InputManager.OnMouseClicked += HandleMouseClicked;
             InputManager.OnMouseRightClicked += HandleMouseRightClicked;
-            InputManager.OnKeyPressed += HandleKeyPressed;
+            InputManager.OnAbilitySelected += HandleAbilitySelected;
             InputManager.OnEscapePressed += HandleEscapePressed;
+            InputManager.OnEndTurnRequested += EndTurn;
         }
 
         /// <summary>
@@ -151,7 +152,6 @@ namespace DDD.TNFY.BRAWL
         private void UnsubscribeFromEvents()
         {
             Tile.OnTileClicked -= HandleTileClicked;
-
             TurnManager.OnTurnStarted -= OnTurnStarted;
 
             if (InputManager.Instance != null)
@@ -159,8 +159,9 @@ namespace DDD.TNFY.BRAWL
                 InputManager.OnMouseMoved -= HandleMouseMoved;
                 InputManager.OnMouseClicked -= HandleMouseClicked;
                 InputManager.OnMouseRightClicked -= HandleMouseRightClicked;
-                InputManager.OnKeyPressed -= HandleKeyPressed;
+                InputManager.OnAbilitySelected -= HandleAbilitySelected;
                 InputManager.OnEscapePressed -= HandleEscapePressed;
+                InputManager.OnEndTurnRequested -= EndTurn;
             }
         }
 
@@ -224,6 +225,9 @@ namespace DDD.TNFY.BRAWL
         /// </summary>
         private void SetupTurnAfterCameraTransition()
         {
+            // Release the end-turn spam lock now that the next turn is fully ready
+            _turnTransitionPending = false;
+
             currentState = CombatState.WaitingForInput;
 
             // Clear any lingering targeting state from previous turns
@@ -252,23 +256,25 @@ namespace DDD.TNFY.BRAWL
         /// </summary>
         public void EndTurn()
         {
+            // Only the player may manually end a turn — AI ends its own turn internally
+            if (!(currentActiveUnit is PlayerUnit))
+                return;
+
+            // Block all further end-turn requests until the next turn is fully ready
+            if (_turnTransitionPending)
+                return;
+
             // Prevent ending turn within first 2 seconds of turn start
             if (Time.time - turnStartTime < turnStartProtectionDuration)
-            {
                 return;
-            }
 
             // Prevent ending turn during active movement
             if (isMoving || currentState == CombatState.MovingUnit)
-            {
                 return;
-            }
 
             // Prevent during ability execution
             if (isWaitingForAnimation || currentState == CombatState.ExecutingAction)
-            {
                 return;
-            }
 
             // Only allow ending turn when in waiting for input state
             if (currentState != CombatState.WaitingForInput)
@@ -277,6 +283,7 @@ namespace DDD.TNFY.BRAWL
                 return;
             }
 
+            _turnTransitionPending = true;
             currentState = CombatState.TurnEnding;
             GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
             CancelAbilityTargeting();
@@ -378,25 +385,13 @@ namespace DDD.TNFY.BRAWL
         /// <summary>
         /// Handles keyboard shortcuts for quick ability access (1, 2, 3 keys)
         /// </summary>
-        private void HandleKeyPressed(KeyCode key)
+        private void HandleAbilitySelected(int slot)
         {
             if (ShouldBlockInput()) return;
 
-            // Only allow shortcuts when not already targeting
             if (CanUseAbility && !IsTargetingAbility)
             {
-                int abilitySlot = -1;
-                switch (key)
-                {
-                    case KeyCode.Alpha1: abilitySlot = 0; break;
-                    case KeyCode.Alpha2: abilitySlot = 1; break;
-                    case KeyCode.Alpha3: abilitySlot = 2; break;
-                }
-
-                if (abilitySlot >= 0)
-                {
-                    EnterAbilityTargeting(abilitySlot);
-                }
+                EnterAbilityTargeting(slot);
             }
         }
 
