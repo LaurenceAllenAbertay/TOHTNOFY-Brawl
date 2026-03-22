@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 538600722897cd54787bdb9601555fbf, type: 3}
+  m_Name: Straight Shot
+  m_EditorClassIdentifier: 
+  abilityName: Straight Shot
+  description: 
+  image: {fileID: 21300000, guid: 4b7093924c33dd945953bb657e41cfcc, type: 3}
+  rangeType: 1
+  range: 5
+  damage: 10
+  canHitEnemies: 1
+  canHitAllies: 0
+  passThroughUnits: 0
+  maxTargets: 1
+  canExecuteWithoutTargets: 0
+  animationState: Straight_Shot
+  animationTiming:
+    castEffectTime: 0.57575756
+    hitEffectTime: 0.7
+    applyEffectsTime: 0.7
+  castEffectPrefab: {fileID: 1168242340067801985, guid: 5e6f3d405aeae91449afc37c03e4bfa9, type: 3}
+  castEffectOffset: {x: 0.7, y: 0.35, z: 0}
+  parentCastEffectToCaster: 0
+  hitEffectPrefab: {fileID: 0}
+  hitEffectOffset: {x: 0, y: 0, z: 0}
+  parentHitEffectToTarget: 0
+  targeting: {fileID: 11400000, guid: 2047dac3f0c1d6d4da0984b52201bc25, type: 2}
+  effects:
+  - {fileID: 11400000, guid: 7bbe0b6e3f185f143b1c19342a3a4c8e, type: 2}

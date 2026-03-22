@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc194c45739c27a488e7f6200ef59a3f, type: 3}
+  m_Name: Lorns
+  m_EditorClassIdentifier: 
+  characterName: Lorns
+  portrait: {fileID: 215081699, guid: 85dd2a411dee5264ca097828f8075603, type: 3}
+  maxHealth: 100
+  attack: 3
+  defense: 1
+  speed: 4
+  abilityLoadout:
+  - {fileID: 11400000, guid: eedbfca08973fdd47b54a7525675f82a, type: 2}
+  - {fileID: 11400000, guid: 7b5298c02649ca24194198c32229b6fd, type: 2}
+  - {fileID: 11400000, guid: b76ac2ff104713646bdfe8a5a9ee6c37, type: 2}

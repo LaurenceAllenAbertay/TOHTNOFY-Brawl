@@ -1,0 +1,1724 @@
+fileFormatVersion: 2
+guid: 3b75f706541745a42944c61464e87f5b
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Oliver_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6020
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3053cf04b41634144b84dac2b321c0a9
+      internalID: 2144568979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 6020
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4737b4145b92eb46bcb244e12b37fb3
+      internalID: -637238632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 6020
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78d2d47a27dfe0744a8daab36475163a
+      internalID: -1753066821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 6020
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e70da98e346ef734d8a070a24e592858
+      internalID: -1128835048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 6020
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29165d1775f48ba48bf70bb9da1acafc
+      internalID: 301973888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 6020
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 222095f330968114f8c42e8b41873292
+      internalID: 97422710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 3864
+        y: 6020
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9705bd27b149d9b4e9634e195fd59a2b
+      internalID: -220101587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 4508
+        y: 6020
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2aa1634b3a2bf942a684c2e2dde57e6
+      internalID: 2122358336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_8
+      rect:
+        serializedVersion: 2
+        x: 5152
+        y: 6020
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ea783977eeec1e4abe3dedcbb2959ba
+      internalID: -1160706647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5160
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28819a383e904e47bd8196265ea39e3
+      internalID: 1145399159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_10
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 5160
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af646cc1c7402743af2dad2b7869890
+      internalID: 539895525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_11
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 5160
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ffc4d1f1ee1d144b8aecb5d2dfa795
+      internalID: -2061511903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_12
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 5160
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e75514fe586b12643a29b3e118182796
+      internalID: 436103125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_13
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 5160
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf73fdaf8a239534fa926b6a8d7a0cca
+      internalID: 713430823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_14
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 5160
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf6bc632910b70041954e142e5ac3b9e
+      internalID: 235291309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_15
+      rect:
+        serializedVersion: 2
+        x: 3864
+        y: 5160
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbda93c00c763f84c91c19ccfc486a4e
+      internalID: 1052906284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_16
+      rect:
+        serializedVersion: 2
+        x: 4508
+        y: 5160
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3ec6f2616ecf5d4db72c8bb5826d3f8
+      internalID: 1688636974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_17
+      rect:
+        serializedVersion: 2
+        x: 5152
+        y: 5160
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 392d9bea4bd633c49944ad0ba843b045
+      internalID: 772529900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4300
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39d647c3a066d994380b2cdb9801b6c6
+      internalID: -543730533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_19
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 4300
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3fd346ad2471b541af244244ec03487
+      internalID: 1459247135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_20
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 4300
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 988c487b873bb4c48aca996103342272
+      internalID: -2011167683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_21
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 4300
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cec1489f67c5aa41a6e82e018a93df0
+      internalID: 1238033629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_22
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 4300
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5265a259a665143458f56793c2713a21
+      internalID: 1556509742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_23
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 4300
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8240b0b0baf9ea848b543baef4588134
+      internalID: 541983164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_24
+      rect:
+        serializedVersion: 2
+        x: 3864
+        y: 4300
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9cd3f8ccd1b3c041bb5ac922cfc82fc
+      internalID: 1037729234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_25
+      rect:
+        serializedVersion: 2
+        x: 4508
+        y: 4300
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0316f0b199ee23642bee0066f5245756
+      internalID: 319595620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_26
+      rect:
+        serializedVersion: 2
+        x: 5152
+        y: 4300
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c200003fbc48364f896712de2d5e964
+      internalID: -2141614216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3440
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a59a45fc0fa4b144eb3de7b561bd4bfd
+      internalID: 229822562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_28
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 3440
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8babc812b88b2a4c9367eedaa1d73f7
+      internalID: -1441044266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_29
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 3440
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 818b710b9d5e56e4989eedbe89045f69
+      internalID: -609897332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_30
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 3440
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3c7ff364bb430d4195a908a036cf5d4
+      internalID: 1991880178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_31
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 3440
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6740ebf9bea52794b9bbe24c0136fb19
+      internalID: -1273930350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_32
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 3440
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3dd25b0e9f233e44b103c8a7023db3c
+      internalID: 1972284930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_33
+      rect:
+        serializedVersion: 2
+        x: 3864
+        y: 3440
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be2c517a072ef9a449c8732de64e6913
+      internalID: 1370807605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_34
+      rect:
+        serializedVersion: 2
+        x: 4508
+        y: 3440
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5a388cf65e65dd47a38ffb1a49dad6a
+      internalID: 1160811040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_35
+      rect:
+        serializedVersion: 2
+        x: 5152
+        y: 3440
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f17d31c8a3c8594dad48d8c7caa31b6
+      internalID: -151006086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2580
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3fa55cc419d09045922f1e48a5acda7
+      internalID: 639429819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_37
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 2580
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c81bdb0fddb9e7246ba8f2d8d4133f7a
+      internalID: -982009230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_38
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 2580
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab87ee54c0cbbb947a63f3e5ee6d4869
+      internalID: -575590749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_39
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 2580
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfce51e59298f80418e69e40a7cdc07d
+      internalID: 2119980777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_40
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 2580
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb86cadb85aea714fb8e2916703adc44
+      internalID: 883258552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_41
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 2580
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc18deeb6fbef0048bf87860468ad444
+      internalID: 1059913809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_42
+      rect:
+        serializedVersion: 2
+        x: 3864
+        y: 2580
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0bbeac0f0c9eca45a196179497ff05b
+      internalID: -1845522498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_43
+      rect:
+        serializedVersion: 2
+        x: 4508
+        y: 2580
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9108f07dab5fa5c4fa792bfc0b5a763a
+      internalID: -2062078180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_44
+      rect:
+        serializedVersion: 2
+        x: 5152
+        y: 2580
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9fac4fe928e934d879a79f483481a3
+      internalID: 1994582358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1720
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8dea76ccd4d89943a6fa360b4730c2a
+      internalID: -1836491845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_46
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 1720
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45227bc34011dd746b71dc1e75ceaad8
+      internalID: -2008281047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_47
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 1720
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ffd06f51b2e3c34f9c22222f1e2a099
+      internalID: -87989655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_48
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 1720
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3545ff8fd92d4a84d9b5754fc98491e0
+      internalID: 299242671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_49
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 1720
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 131e6f1fdcbfefd4593d94f3177ad341
+      internalID: 446364240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_50
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 1720
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701e9eeecd3ee52438eee0e87eeacbe3
+      internalID: 688604831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_51
+      rect:
+        serializedVersion: 2
+        x: 3864
+        y: 1720
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30367613bdfea2c4988bd5ec720df494
+      internalID: 991657382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_52
+      rect:
+        serializedVersion: 2
+        x: 4508
+        y: 1720
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1faa86063b2fde489a1c449e98f1665
+      internalID: 98786167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_53
+      rect:
+        serializedVersion: 2
+        x: 5152
+        y: 1720
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c03934b8f48fec4bb27929d494736b8
+      internalID: -1783603178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 860
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 964b643d449cb8e4b86e367180aae6cc
+      internalID: -147477418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_55
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 860
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cf51b9dab458fc45a67733ddaed792f
+      internalID: -1165898493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_56
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 860
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41a69fc7a7abc3a4589cfc67f1653841
+      internalID: 1290909976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_57
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 860
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 132293e8461066442ab88081a6d8bbd2
+      internalID: -921467567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_58
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 860
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 090b061db23160f4b9b067c101b884a3
+      internalID: -1640779836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_59
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 860
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d9e185c97ae4cc429bddbead87c5553
+      internalID: -1669546474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_60
+      rect:
+        serializedVersion: 2
+        x: 3864
+        y: 860
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b89f7a2d691b2fe4a9e705a34adad5bc
+      internalID: 310771191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_61
+      rect:
+        serializedVersion: 2
+        x: 4508
+        y: 860
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e99fbe5e121c654a9ae81cd1b5a128e
+      internalID: 118751524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_62
+      rect:
+        serializedVersion: 2
+        x: 5152
+        y: 860
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d79f7398d40b9c41b34811536b6ec10
+      internalID: -1786208371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e666347a936d44e4394f6c52c8064ab4
+      internalID: 1451889084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_64
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 0
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4260085bfa67bd545bd4efe05d437747
+      internalID: -1308675241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_65
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 0
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ced9ad6cabd9645afbf89ca0a009b0
+      internalID: -566479013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_66
+      rect:
+        serializedVersion: 2
+        x: 1932
+        y: 0
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78fbc394df189264caaa4329f6f0298f
+      internalID: 1127873461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_67
+      rect:
+        serializedVersion: 2
+        x: 2576
+        y: 0
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7155bb0cdce2bfa40aa049f804ee7ab5
+      internalID: 839884918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_68
+      rect:
+        serializedVersion: 2
+        x: 3220
+        y: 0
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ea14ce76bc92d46ab6e376656a6e86
+      internalID: -78081796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_69
+      rect:
+        serializedVersion: 2
+        x: 3864
+        y: 0
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e111ebde597651c4a93fc370c529105a
+      internalID: 949142485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_70
+      rect:
+        serializedVersion: 2
+        x: 4508
+        y: 0
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5842ea9c5dacd1f4cad8b471059a3bd9
+      internalID: -728631464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Oliver_Idle_71
+      rect:
+        serializedVersion: 2
+        x: 5152
+        y: 0
+        width: 644
+        height: 860
+      alignment: 9
+      pivot: {x: 0.59, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb36f29fd94de1478eba4e3ec9d0628
+      internalID: -476161707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Oliver_Idle_0: 2144568979
+      Oliver_Idle_1: -637238632
+      Oliver_Idle_10: 539895525
+      Oliver_Idle_11: -2061511903
+      Oliver_Idle_12: 436103125
+      Oliver_Idle_13: 713430823
+      Oliver_Idle_14: 235291309
+      Oliver_Idle_15: 1052906284
+      Oliver_Idle_16: 1688636974
+      Oliver_Idle_17: 772529900
+      Oliver_Idle_18: -543730533
+      Oliver_Idle_19: 1459247135
+      Oliver_Idle_2: -1753066821
+      Oliver_Idle_20: -2011167683
+      Oliver_Idle_21: 1238033629
+      Oliver_Idle_22: 1556509742
+      Oliver_Idle_23: 541983164
+      Oliver_Idle_24: 1037729234
+      Oliver_Idle_25: 319595620
+      Oliver_Idle_26: -2141614216
+      Oliver_Idle_27: 229822562
+      Oliver_Idle_28: -1441044266
+      Oliver_Idle_29: -609897332
+      Oliver_Idle_3: -1128835048
+      Oliver_Idle_30: 1991880178
+      Oliver_Idle_31: -1273930350
+      Oliver_Idle_32: 1972284930
+      Oliver_Idle_33: 1370807605
+      Oliver_Idle_34: 1160811040
+      Oliver_Idle_35: -151006086
+      Oliver_Idle_36: 639429819
+      Oliver_Idle_37: -982009230
+      Oliver_Idle_38: -575590749
+      Oliver_Idle_39: 2119980777
+      Oliver_Idle_4: 301973888
+      Oliver_Idle_40: 883258552
+      Oliver_Idle_41: 1059913809
+      Oliver_Idle_42: -1845522498
+      Oliver_Idle_43: -2062078180
+      Oliver_Idle_44: 1994582358
+      Oliver_Idle_45: -1836491845
+      Oliver_Idle_46: -2008281047
+      Oliver_Idle_47: -87989655
+      Oliver_Idle_48: 299242671
+      Oliver_Idle_49: 446364240
+      Oliver_Idle_5: 97422710
+      Oliver_Idle_50: 688604831
+      Oliver_Idle_51: 991657382
+      Oliver_Idle_52: 98786167
+      Oliver_Idle_53: -1783603178
+      Oliver_Idle_54: -147477418
+      Oliver_Idle_55: -1165898493
+      Oliver_Idle_56: 1290909976
+      Oliver_Idle_57: -921467567
+      Oliver_Idle_58: -1640779836
+      Oliver_Idle_59: -1669546474
+      Oliver_Idle_6: -220101587
+      Oliver_Idle_60: 310771191
+      Oliver_Idle_61: 118751524
+      Oliver_Idle_62: -1786208371
+      Oliver_Idle_63: 1451889084
+      Oliver_Idle_64: -1308675241
+      Oliver_Idle_65: -566479013
+      Oliver_Idle_66: 1127873461
+      Oliver_Idle_67: 839884918
+      Oliver_Idle_68: -78081796
+      Oliver_Idle_69: 949142485
+      Oliver_Idle_7: 2122358336
+      Oliver_Idle_70: -728631464
+      Oliver_Idle_71: -476161707
+      Oliver_Idle_8: -1160706647
+      Oliver_Idle_9: 1145399159
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

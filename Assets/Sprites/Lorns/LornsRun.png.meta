@@ -1,0 +1,932 @@
+fileFormatVersion: 2
+guid: 4c21334952c19fe42ab6dfb51e30bbc0
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LornsRun_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4670
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3f5377d52607e4e886f52fc269b262
+      internalID: 568109836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_1
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 4670
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eaa223e83a4b0647bc1c4f1f1b69d2b
+      internalID: 1341524693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_2
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 4670
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f237216f870a5914388101d9d35534fc
+      internalID: 276627729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_3
+      rect:
+        serializedVersion: 2
+        x: 2265
+        y: 4670
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdba55530f0c1cd4fb8604aff978cad6
+      internalID: 342497128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_4
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 4670
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fde3748571abbfc4f9fee1c068d296ed
+      internalID: 585356649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_5
+      rect:
+        serializedVersion: 2
+        x: 3775
+        y: 4670
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c303c71f3d8eb34d9ad9c9bd8fe0b2e
+      internalID: -898820863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3736
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f084904687a04454eb5cc8688f70d203
+      internalID: 1917118389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_7
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 3736
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e12661f4da309cf48827a64ab313f0ab
+      internalID: -2129571264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_8
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 3736
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01f8b6ad62e37fa4a9244c3e335eeb10
+      internalID: 1064265895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_9
+      rect:
+        serializedVersion: 2
+        x: 2265
+        y: 3736
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5687ab6f078c1894896a7fdafd58762a
+      internalID: -1261827682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_10
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 3736
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce3045ecf7400494eb839522975d85a2
+      internalID: 697262396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_11
+      rect:
+        serializedVersion: 2
+        x: 3775
+        y: 3736
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3262b5ca690ad45b92a98cd99bffd3
+      internalID: -1245672293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2802
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06af21f4dd5a9204abd68189487a9620
+      internalID: -2030421565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_13
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 2802
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 306529d573e62ef44adb9f8dfcaa5639
+      internalID: 567288491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_14
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 2802
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d377d8a609edf544b8d873744def81c2
+      internalID: -46142798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_15
+      rect:
+        serializedVersion: 2
+        x: 2265
+        y: 2802
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33bbc727d74fda49a0d75e56f49a54f
+      internalID: -634836571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_16
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 2802
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b580c74afc96ce249906fd02d70502a9
+      internalID: 243356552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_17
+      rect:
+        serializedVersion: 2
+        x: 3775
+        y: 2802
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18e2f05bedf692f4da7da96c76f9c98f
+      internalID: 112016053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1868
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a3145650eec13e4ba814bf46cc1cb89
+      internalID: 1442388776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_19
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 1868
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35d1011879c195740ada6e39985b3061
+      internalID: 132204169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_20
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 1868
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61929341b611d0a419f31bf2ee9a2285
+      internalID: -608670066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_21
+      rect:
+        serializedVersion: 2
+        x: 2265
+        y: 1868
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be06550a1ed14cd4f9fbe62e0c52b52f
+      internalID: -1044893227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_22
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 1868
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff53acdc67ce6574e8d2c03d17978efd
+      internalID: 18159090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_23
+      rect:
+        serializedVersion: 2
+        x: 3775
+        y: 1868
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd4852b70b7c0e42b4eca8dca1c77ff
+      internalID: 277088142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 934
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c0ddc29e1dabc843930cb959c376e7a
+      internalID: 2013709085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_25
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 934
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06541cf05d5261e4885cfc942150afd2
+      internalID: 1411415287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_26
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 934
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50acf832384d22d468e2f3ffd07c4667
+      internalID: -1499343583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_27
+      rect:
+        serializedVersion: 2
+        x: 2265
+        y: 934
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a76fb94122d8df04c90bd91bc459743a
+      internalID: -995641712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_28
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 934
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e251176be1a9de14bb484f51b73fc155
+      internalID: -1498581748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_29
+      rect:
+        serializedVersion: 2
+        x: 3775
+        y: 934
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3b8811cc2a8d8c4c97ebf8ee71c36a9
+      internalID: -622365582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2fa3e0f44357e5458c90c5b84367737
+      internalID: -832022169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_31
+      rect:
+        serializedVersion: 2
+        x: 755
+        y: 0
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 397b7cb820bb7bc4d821ab458546274e
+      internalID: -1818942956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_32
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 0
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5460197355cd4e94cbdedaa9ff458f29
+      internalID: 1986699879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_33
+      rect:
+        serializedVersion: 2
+        x: 2265
+        y: 0
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e00b5742346edb42bec3be7ddc2494c
+      internalID: 1847638237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_34
+      rect:
+        serializedVersion: 2
+        x: 3020
+        y: 0
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a8710ba807da2546a39eb33adda139f
+      internalID: 536812120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRun_35
+      rect:
+        serializedVersion: 2
+        x: 3775
+        y: 0
+        width: 755
+        height: 934
+      alignment: 9
+      pivot: {x: 0.4, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f92876d50e7381429e278d2b28d4a72
+      internalID: 1053473011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      LornsRun_0: 568109836
+      LornsRun_1: 1341524693
+      LornsRun_10: 697262396
+      LornsRun_11: -1245672293
+      LornsRun_12: -2030421565
+      LornsRun_13: 567288491
+      LornsRun_14: -46142798
+      LornsRun_15: -634836571
+      LornsRun_16: 243356552
+      LornsRun_17: 112016053
+      LornsRun_18: 1442388776
+      LornsRun_19: 132204169
+      LornsRun_2: 276627729
+      LornsRun_20: -608670066
+      LornsRun_21: -1044893227
+      LornsRun_22: 18159090
+      LornsRun_23: 277088142
+      LornsRun_24: 2013709085
+      LornsRun_25: 1411415287
+      LornsRun_26: -1499343583
+      LornsRun_27: -995641712
+      LornsRun_28: -1498581748
+      LornsRun_29: -622365582
+      LornsRun_3: 342497128
+      LornsRun_30: -832022169
+      LornsRun_31: -1818942956
+      LornsRun_32: 1986699879
+      LornsRun_33: 1847638237
+      LornsRun_34: 536812120
+      LornsRun_35: 1053473011
+      LornsRun_4: 585356649
+      LornsRun_5: -898820863
+      LornsRun_6: 1917118389
+      LornsRun_7: -2129571264
+      LornsRun_8: 1064265895
+      LornsRun_9: -1261827682
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

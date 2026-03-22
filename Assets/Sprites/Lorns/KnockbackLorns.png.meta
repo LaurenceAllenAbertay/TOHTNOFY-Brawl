@@ -1,0 +1,1108 @@
+fileFormatVersion: 2
+guid: 76980e82bb2ef834a897826acaf82813
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 90
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: KnockbackLorns_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4338
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b02fde81149b73488f3c38ebe994ca0
+      internalID: -1055667452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_1
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 4338
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92d48f3dbe28aec4ead26120c1565523
+      internalID: 72235828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_2
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 4338
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fea071dbc20c5384989b138dfd1fb8c0
+      internalID: 1579072285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_3
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 4338
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0abc8fe967f3194c9c3aef42f319b5f
+      internalID: 11686622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_4
+      rect:
+        serializedVersion: 2
+        x: 2140
+        y: 4338
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 346ea224f3fc8f54b995548026b76744
+      internalID: -1349941787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_5
+      rect:
+        serializedVersion: 2
+        x: 2675
+        y: 4338
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 377d3b762e1dc1d4fbe9f472b4c310f8
+      internalID: 1613941757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_6
+      rect:
+        serializedVersion: 2
+        x: 3210
+        y: 4338
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cba0593d05d9beb4b9c788d37ae47a16
+      internalID: 114292332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3615
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ab6282b33428ed4bb80f37e9cf49896
+      internalID: -1406237414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_8
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 3615
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78946d4c70c13fe43b0b9a34e52e2ec8
+      internalID: -1494703539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_9
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 3615
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061b0c2b50414144aa493187840aa7be
+      internalID: -475633721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_10
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 3615
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63697c51ae8c7d94288b63edc8243642
+      internalID: 1129694338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_11
+      rect:
+        serializedVersion: 2
+        x: 2140
+        y: 3615
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4c13330aa862143bf12b0ef06bf7bb
+      internalID: -1145917740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_12
+      rect:
+        serializedVersion: 2
+        x: 2675
+        y: 3615
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c948a4dcb72494e4caf43133f2c95eaf
+      internalID: -1657360524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_13
+      rect:
+        serializedVersion: 2
+        x: 3210
+        y: 3615
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32f0d4ef3541e6444aeab10b55ecb261
+      internalID: -619771787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2892
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 038635c01a3dd5d4f89a51acbc8c0e64
+      internalID: -1102515551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_15
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 2892
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da0ecb263e32da749980c3158e52ccd3
+      internalID: -1396322153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_16
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 2892
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2df4be14bb9f6b24e844e1647ff01a29
+      internalID: -426839616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_17
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 2892
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96cba23a022c8ec4da11f3d44106520b
+      internalID: 1190517944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_18
+      rect:
+        serializedVersion: 2
+        x: 2140
+        y: 2892
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d98825955c92948a9582de4df72c5d
+      internalID: -1475239876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_19
+      rect:
+        serializedVersion: 2
+        x: 2675
+        y: 2892
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cb65f097c007164f80693e6a49e81ee
+      internalID: 1411093703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_20
+      rect:
+        serializedVersion: 2
+        x: 3210
+        y: 2892
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d13203a2dddafe44ae6a4136cc97852
+      internalID: -1461069644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2169
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96ddf9b87f3ffe847a8e76446b0fbe61
+      internalID: -78151601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_22
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 2169
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 769495de5f1809b4b9dd830d12f5c9f7
+      internalID: 1190425128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_23
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 2169
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecfb1ec6e72abdb41b2cd279c1f56a27
+      internalID: -364426855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_24
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 2169
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3da7d572e8deb244afe29b8fc3816c1
+      internalID: -843636513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_25
+      rect:
+        serializedVersion: 2
+        x: 2140
+        y: 2169
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8cec9c365e4a682429fafcfdd9bac24f
+      internalID: 957606690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_26
+      rect:
+        serializedVersion: 2
+        x: 2675
+        y: 2169
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de4501ce08019524faa35036bd9aad3e
+      internalID: -1679161271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_27
+      rect:
+        serializedVersion: 2
+        x: 3210
+        y: 2169
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 790f920dc4b0bfa4d87f6e7bf9a13392
+      internalID: -96634847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1446
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e204fc7be467c894a972eeab6ac07244
+      internalID: -818909028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_29
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 1446
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7059f68f7d8cb654c952ae4e1df2e2ab
+      internalID: 1396921297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_30
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 1446
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6eee0cb6f93a1d4490ca68a0624009c
+      internalID: 410990256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_31
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 1446
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 241de268f2249bd45904f693dd2551a0
+      internalID: 1153886537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_32
+      rect:
+        serializedVersion: 2
+        x: 2140
+        y: 1446
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 904cbd4b93e42074d989a830762b8b35
+      internalID: -387247062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_33
+      rect:
+        serializedVersion: 2
+        x: 2675
+        y: 1446
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00bd6de5dfa6034449a4df277d9e9bf4
+      internalID: 618839358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_34
+      rect:
+        serializedVersion: 2
+        x: 3210
+        y: 1446
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3c4d3d1909d6104599153c04a691b2f
+      internalID: 1693266469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 723
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f93138e224800614b9eb36929a9754e9
+      internalID: -96233625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_36
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 723
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65e62a60082619b4ebe0c69a3673ca22
+      internalID: -629513989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_37
+      rect:
+        serializedVersion: 2
+        x: 1070
+        y: 723
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 033fc1fc20c2b244a9c1064564ed99aa
+      internalID: 881468246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_38
+      rect:
+        serializedVersion: 2
+        x: 1605
+        y: 723
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f441f150762fcc46a88ec6405f1ded1
+      internalID: -227150999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_39
+      rect:
+        serializedVersion: 2
+        x: 2140
+        y: 723
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b15c114e84f52be4d85d2c34ce4fd074
+      internalID: -1646967934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_40
+      rect:
+        serializedVersion: 2
+        x: 2675
+        y: 723
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de1ea9eed50c0ae46b0ed504da3b6ef1
+      internalID: 1210697575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_41
+      rect:
+        serializedVersion: 2
+        x: 3210
+        y: 723
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dc80143a1b038b4c89634aa96781b83
+      internalID: -45566706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cef022190d617d4e81376f7d371d494
+      internalID: 898714690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: KnockbackLorns_43
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 0
+        width: 535
+        height: 723
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed6adeead300ebe49bcc29304759c4b4
+      internalID: -1640850374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      KnockbackLorns_0: -1055667452
+      KnockbackLorns_1: 72235828
+      KnockbackLorns_10: 1129694338
+      KnockbackLorns_11: -1145917740
+      KnockbackLorns_12: -1657360524
+      KnockbackLorns_13: -619771787
+      KnockbackLorns_14: -1102515551
+      KnockbackLorns_15: -1396322153
+      KnockbackLorns_16: -426839616
+      KnockbackLorns_17: 1190517944
+      KnockbackLorns_18: -1475239876
+      KnockbackLorns_19: 1411093703
+      KnockbackLorns_2: 1579072285
+      KnockbackLorns_20: -1461069644
+      KnockbackLorns_21: -78151601
+      KnockbackLorns_22: 1190425128
+      KnockbackLorns_23: -364426855
+      KnockbackLorns_24: -843636513
+      KnockbackLorns_25: 957606690
+      KnockbackLorns_26: -1679161271
+      KnockbackLorns_27: -96634847
+      KnockbackLorns_28: -818909028
+      KnockbackLorns_29: 1396921297
+      KnockbackLorns_3: 11686622
+      KnockbackLorns_30: 410990256
+      KnockbackLorns_31: 1153886537
+      KnockbackLorns_32: -387247062
+      KnockbackLorns_33: 618839358
+      KnockbackLorns_34: 1693266469
+      KnockbackLorns_35: -96233625
+      KnockbackLorns_36: -629513989
+      KnockbackLorns_37: 881468246
+      KnockbackLorns_38: -227150999
+      KnockbackLorns_39: -1646967934
+      KnockbackLorns_4: -1349941787
+      KnockbackLorns_40: 1210697575
+      KnockbackLorns_41: -45566706
+      KnockbackLorns_42: 898714690
+      KnockbackLorns_43: -1640850374
+      KnockbackLorns_5: 1613941757
+      KnockbackLorns_6: 114292332
+      KnockbackLorns_7: -1406237414
+      KnockbackLorns_8: -1494703539
+      KnockbackLorns_9: -475633721
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,2098 @@
+fileFormatVersion: 2
+guid: 878154ffaa839b148ba3c69578eda723
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 90
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 14560
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e4e1bbed014ec94793cfe333215a7e7
+      internalID: 258443020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_1
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 14560
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 362b9d6df0c00154588cf8cbfd52b0a3
+      internalID: -1711265834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_2
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 14560
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd78c0aa2f0e61948b211ce7b5733408
+      internalID: -1509966006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_3
+      rect:
+        serializedVersion: 2
+        x: 3141
+        y: 14560
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a808470b51739c745ba2d8e44b920c9a
+      internalID: -489060046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_4
+      rect:
+        serializedVersion: 2
+        x: 4188
+        y: 14560
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40574b6a0ea35cf43aa924f060dabd8e
+      internalID: 325772221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_5
+      rect:
+        serializedVersion: 2
+        x: 5235
+        y: 14560
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a45bc16efb3e8aa44b3a85bb80611935
+      internalID: -2114620159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_6
+      rect:
+        serializedVersion: 2
+        x: 6282
+        y: 14560
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4766b83bcd6f6c84989fc785a8a47d53
+      internalID: -1829544169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_7
+      rect:
+        serializedVersion: 2
+        x: 7329
+        y: 14560
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66e1384f16fdde746a6b368d5739d10e
+      internalID: 491777812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_8
+      rect:
+        serializedVersion: 2
+        x: 8376
+        y: 14560
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76dc85d60ce739348b556e82adb82443
+      internalID: 2017809409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_9
+      rect:
+        serializedVersion: 2
+        x: 9423
+        y: 14560
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d169a6c442b341428dec91f6d2b7119
+      internalID: -965058169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12740
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 591c527d92d19034cb8136486f661f86
+      internalID: -1372056350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_11
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 12740
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3423ab47b9709ca438a65382f803f109
+      internalID: -1347963508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_12
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 12740
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ed1e63fb57d3664b96b6e5a681edcb0
+      internalID: -1036880322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_13
+      rect:
+        serializedVersion: 2
+        x: 3141
+        y: 12740
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a56fdbb78de4c2846b11db48a43fa397
+      internalID: -1615303506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_14
+      rect:
+        serializedVersion: 2
+        x: 4188
+        y: 12740
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59da5c9ea17810846b819db503955ea1
+      internalID: 1693010901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_15
+      rect:
+        serializedVersion: 2
+        x: 5235
+        y: 12740
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ce958dc76dcfdf4e8271ce272716821
+      internalID: 257425934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_16
+      rect:
+        serializedVersion: 2
+        x: 6282
+        y: 12740
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5110c988d2d8c054a97c5f98c73c7d5f
+      internalID: -549481118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_17
+      rect:
+        serializedVersion: 2
+        x: 7329
+        y: 12740
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff1f4c0e4931206449c75a32c56d5157
+      internalID: -2004557249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_18
+      rect:
+        serializedVersion: 2
+        x: 8376
+        y: 12740
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba078fa17db4f814cb36525ad7254346
+      internalID: 1062870697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_19
+      rect:
+        serializedVersion: 2
+        x: 9423
+        y: 12740
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 976d08e215a1def43838dbca716905a5
+      internalID: 2096805420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10920
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bea6ed7349907e4b9cdce7be4c380e4
+      internalID: -1665733934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_21
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 10920
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43e5d5d3cd974fd46b1c64fba7c14357
+      internalID: -1362795092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_22
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 10920
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b76a5cdb008744d9b2c211a681f5c1
+      internalID: 1493243130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_23
+      rect:
+        serializedVersion: 2
+        x: 3141
+        y: 10920
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91c16f08553097c4aa4c8e25059a3a8d
+      internalID: -2136788254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_24
+      rect:
+        serializedVersion: 2
+        x: 4188
+        y: 10920
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f1634fa8842cf942acf4a2cecd8fe85
+      internalID: 1336415240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_25
+      rect:
+        serializedVersion: 2
+        x: 5235
+        y: 10920
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c54582f690c14b949b2e03a33d4fbb1e
+      internalID: -588036181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_26
+      rect:
+        serializedVersion: 2
+        x: 6282
+        y: 10920
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ae5bed6ea7229d47946c74f1dda553a
+      internalID: 956736058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_27
+      rect:
+        serializedVersion: 2
+        x: 7329
+        y: 10920
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 180770a8530a6014fbdedadf118ca078
+      internalID: 809152170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_28
+      rect:
+        serializedVersion: 2
+        x: 8376
+        y: 10920
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31ff07708b81bb04a93320b3d5917282
+      internalID: 664806936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_29
+      rect:
+        serializedVersion: 2
+        x: 9423
+        y: 10920
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7488fd70c3d95814fa910d7addeb7054
+      internalID: 1312853017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9100
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 533312dc58d96974eb1fdb6d2542ccd1
+      internalID: -1996827520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_31
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 9100
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48f1721cca0da5940bcdaab245789ec8
+      internalID: -963350084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_32
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 9100
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e183d74a9eb7dd4ab88068244151516
+      internalID: 90323235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_33
+      rect:
+        serializedVersion: 2
+        x: 3141
+        y: 9100
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68856632b86153844b76d96f5f69cfa3
+      internalID: -720196284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_34
+      rect:
+        serializedVersion: 2
+        x: 4188
+        y: 9100
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56f7c8af9454b7d4fb72858ce20172ba
+      internalID: -368574811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_35
+      rect:
+        serializedVersion: 2
+        x: 5235
+        y: 9100
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f04c9fd535fb8047a8ccbd304eed5f8
+      internalID: 3050582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_36
+      rect:
+        serializedVersion: 2
+        x: 6282
+        y: 9100
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77ff6f77c13022c43a7594095f06930f
+      internalID: 880464669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_37
+      rect:
+        serializedVersion: 2
+        x: 7329
+        y: 9100
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7883b89e11cbe1f4cbcc2b4543fb8021
+      internalID: -614958766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_38
+      rect:
+        serializedVersion: 2
+        x: 8376
+        y: 9100
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b4054d3b9c623b4e85fdd9bfeb7e9be
+      internalID: 1941369804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_39
+      rect:
+        serializedVersion: 2
+        x: 9423
+        y: 9100
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9e57cde6357db244b96d0c7fc14e844
+      internalID: 506398011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7280
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1efe744058ffb7f41bd840ef6c3dcd8d
+      internalID: 703229411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_41
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 7280
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdb990243b8729d438ce0402926367df
+      internalID: -1461352199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_42
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 7280
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 068b1a9e566674b43ad27aae3ae56770
+      internalID: 1995958745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_43
+      rect:
+        serializedVersion: 2
+        x: 3141
+        y: 7280
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3379d79679ca28545b40a9d3a0798432
+      internalID: -1235753669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_44
+      rect:
+        serializedVersion: 2
+        x: 4188
+        y: 7280
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fda57596fdcb9948961b55cfeb73e13
+      internalID: 1685572331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_45
+      rect:
+        serializedVersion: 2
+        x: 5235
+        y: 7280
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 862ecded6a98499499453d11783f0ceb
+      internalID: 889148228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_46
+      rect:
+        serializedVersion: 2
+        x: 6282
+        y: 7280
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b47f92cd3f18a04c8c84dfdccd74a2c
+      internalID: -1534967443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_47
+      rect:
+        serializedVersion: 2
+        x: 7329
+        y: 7280
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f11e75b8f7bc92448c4a194482a71dc
+      internalID: -1792388026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_48
+      rect:
+        serializedVersion: 2
+        x: 8376
+        y: 7280
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 697940a0271de174e8053e99722753d0
+      internalID: 2024352237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_49
+      rect:
+        serializedVersion: 2
+        x: 9423
+        y: 7280
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31a87635e6919ed4a9daceda2ba5cb5e
+      internalID: 159793889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5460
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22ef92260be821548a15bf76498d21dc
+      internalID: 604816310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_51
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 5460
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c88ca3f17c3da24a82d24a74ec10b2c
+      internalID: -860526809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_52
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 5460
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70c23271bfbff784b8dcad633ed26421
+      internalID: -36786100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_53
+      rect:
+        serializedVersion: 2
+        x: 3141
+        y: 5460
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f7ae9dd27bb3a747875b4fa6bcee083
+      internalID: 818809602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_54
+      rect:
+        serializedVersion: 2
+        x: 4188
+        y: 5460
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d1e904365c37b242b4fedd43625d2e6
+      internalID: 1297450993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_55
+      rect:
+        serializedVersion: 2
+        x: 5235
+        y: 5460
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0e2db9534cd277478735e615ae13f60
+      internalID: -468473113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_56
+      rect:
+        serializedVersion: 2
+        x: 6282
+        y: 5460
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eec06b96a07fee40b35c8f6781b855e
+      internalID: -951587991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_57
+      rect:
+        serializedVersion: 2
+        x: 7329
+        y: 5460
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0c10933bc5d26f418296ede90d61f54
+      internalID: -1104028047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_58
+      rect:
+        serializedVersion: 2
+        x: 8376
+        y: 5460
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b31427173999fd448f4337ff1c8bd8a
+      internalID: -131589743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_59
+      rect:
+        serializedVersion: 2
+        x: 9423
+        y: 5460
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f888e6c95d5cd6a45b3eb66703d0b9d5
+      internalID: 350509855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3640
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75720afb2578c8e4aa4c38bbdcfd15f0
+      internalID: 2139446606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_61
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 3640
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aee850eb8eeafd4d9c1390886558a40
+      internalID: 1398404360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_62
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 3640
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a738e64f86010843864283c4f4b06ec
+      internalID: 1462408802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_63
+      rect:
+        serializedVersion: 2
+        x: 3141
+        y: 3640
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 199105bfa0bf9ba4294ff56ce54fa945
+      internalID: 1772046715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_64
+      rect:
+        serializedVersion: 2
+        x: 4188
+        y: 3640
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3db0f3363b54cb34b86bd2f456015164
+      internalID: 361186006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_65
+      rect:
+        serializedVersion: 2
+        x: 5235
+        y: 3640
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bb75531f04c8924bab46ed884405c7c
+      internalID: 827247914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_66
+      rect:
+        serializedVersion: 2
+        x: 6282
+        y: 3640
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b09e5e249f50cf4ca0c3a500cbcc2e5
+      internalID: 2081842806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_67
+      rect:
+        serializedVersion: 2
+        x: 7329
+        y: 3640
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ced3d0859fb24d49be417846c261a5f
+      internalID: 26477579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_68
+      rect:
+        serializedVersion: 2
+        x: 8376
+        y: 3640
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fadd2d1cc887464f9d0545dbf11a4fa
+      internalID: -513809739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_69
+      rect:
+        serializedVersion: 2
+        x: 9423
+        y: 3640
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08aaffb9e650e904eaedce447d1a6bd3
+      internalID: 650956943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1820
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78997006f3450a34cb9863a6d5bdb8ce
+      internalID: 224496597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_71
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 1820
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df64a6ff67c888040b319a2eee96ddcf
+      internalID: 559488089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_72
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 1820
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7367afbcffdecbe4b8a0f8cdb1bc6aec
+      internalID: -159313544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_73
+      rect:
+        serializedVersion: 2
+        x: 3141
+        y: 1820
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48980981f2a71af42962460a4b2032bf
+      internalID: 393572445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_74
+      rect:
+        serializedVersion: 2
+        x: 4188
+        y: 1820
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1dcd72491df1fb44796a579355febacb
+      internalID: 451588250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_75
+      rect:
+        serializedVersion: 2
+        x: 5235
+        y: 1820
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6560969ffd03a47aa7865f7fbc7692
+      internalID: 665894533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_76
+      rect:
+        serializedVersion: 2
+        x: 6282
+        y: 1820
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94f8ced12cebee049a247adc9abce1bb
+      internalID: 1480960403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_77
+      rect:
+        serializedVersion: 2
+        x: 7329
+        y: 1820
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5edd2e063ac6cc45a2b23d07105c089
+      internalID: 10301881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_78
+      rect:
+        serializedVersion: 2
+        x: 8376
+        y: 1820
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e0209ddb60e7cc44b913a08783919f3
+      internalID: -1408006445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_79
+      rect:
+        serializedVersion: 2
+        x: 9423
+        y: 1820
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53a6a27a990eb8f4ba662febf327179c
+      internalID: 398261880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78cb92d4cee525d40bf9a5e7131fa46b
+      internalID: 464258702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_81
+      rect:
+        serializedVersion: 2
+        x: 1047
+        y: 0
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faceb494a3ceba64eb807faf87df019f
+      internalID: -986712185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_82
+      rect:
+        serializedVersion: 2
+        x: 2094
+        y: 0
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4fd1599121230489af654ee39ed029
+      internalID: -1467878328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_83
+      rect:
+        serializedVersion: 2
+        x: 3141
+        y: 0
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fce7b69fefc1d34ea51fb191e70f13a
+      internalID: 1627339605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_84
+      rect:
+        serializedVersion: 2
+        x: 4188
+        y: 0
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba2d347f27be2a24ca20d1eecb07de6f
+      internalID: -1321199187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_85
+      rect:
+        serializedVersion: 2
+        x: 5235
+        y: 0
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1ec60f968260eb4cacde594384adb52
+      internalID: -1434161717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_86
+      rect:
+        serializedVersion: 2
+        x: 6282
+        y: 0
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 945930abc94bce349ba97f2fb6983d30
+      internalID: -1767613993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_87
+      rect:
+        serializedVersion: 2
+        x: 7329
+        y: 0
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e9f2159d42f68409a8f29c6dd2f5c0
+      internalID: -1822738722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: LornsRangedAttack_1_88
+      rect:
+        serializedVersion: 2
+        x: 8376
+        y: 0
+        width: 1047.7
+        height: 1820
+      alignment: 9
+      pivot: {x: 0.33, y: 0.035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 822a1f8d27815cb4ba2ed1cc4a4f9689
+      internalID: -831187743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      LornsRangedAttack_1_0: 258443020
+      LornsRangedAttack_1_1: -1711265834
+      LornsRangedAttack_1_10: -1372056350
+      LornsRangedAttack_1_11: -1347963508
+      LornsRangedAttack_1_12: -1036880322
+      LornsRangedAttack_1_13: -1615303506
+      LornsRangedAttack_1_14: 1693010901
+      LornsRangedAttack_1_15: 257425934
+      LornsRangedAttack_1_16: -549481118
+      LornsRangedAttack_1_17: -2004557249
+      LornsRangedAttack_1_18: 1062870697
+      LornsRangedAttack_1_19: 2096805420
+      LornsRangedAttack_1_2: -1509966006
+      LornsRangedAttack_1_20: -1665733934
+      LornsRangedAttack_1_21: -1362795092
+      LornsRangedAttack_1_22: 1493243130
+      LornsRangedAttack_1_23: -2136788254
+      LornsRangedAttack_1_24: 1336415240
+      LornsRangedAttack_1_25: -588036181
+      LornsRangedAttack_1_26: 956736058
+      LornsRangedAttack_1_27: 809152170
+      LornsRangedAttack_1_28: 664806936
+      LornsRangedAttack_1_29: 1312853017
+      LornsRangedAttack_1_3: -489060046
+      LornsRangedAttack_1_30: -1996827520
+      LornsRangedAttack_1_31: -963350084
+      LornsRangedAttack_1_32: 90323235
+      LornsRangedAttack_1_33: -720196284
+      LornsRangedAttack_1_34: -368574811
+      LornsRangedAttack_1_35: 3050582
+      LornsRangedAttack_1_36: 880464669
+      LornsRangedAttack_1_37: -614958766
+      LornsRangedAttack_1_38: 1941369804
+      LornsRangedAttack_1_39: 506398011
+      LornsRangedAttack_1_4: 325772221
+      LornsRangedAttack_1_40: 703229411
+      LornsRangedAttack_1_41: -1461352199
+      LornsRangedAttack_1_42: 1995958745
+      LornsRangedAttack_1_43: -1235753669
+      LornsRangedAttack_1_44: 1685572331
+      LornsRangedAttack_1_45: 889148228
+      LornsRangedAttack_1_46: -1534967443
+      LornsRangedAttack_1_47: -1792388026
+      LornsRangedAttack_1_48: 2024352237
+      LornsRangedAttack_1_49: 159793889
+      LornsRangedAttack_1_5: -2114620159
+      LornsRangedAttack_1_50: 604816310
+      LornsRangedAttack_1_51: -860526809
+      LornsRangedAttack_1_52: -36786100
+      LornsRangedAttack_1_53: 818809602
+      LornsRangedAttack_1_54: 1297450993
+      LornsRangedAttack_1_55: -468473113
+      LornsRangedAttack_1_56: -951587991
+      LornsRangedAttack_1_57: -1104028047
+      LornsRangedAttack_1_58: -131589743
+      LornsRangedAttack_1_59: 350509855
+      LornsRangedAttack_1_6: -1829544169
+      LornsRangedAttack_1_60: 2139446606
+      LornsRangedAttack_1_61: 1398404360
+      LornsRangedAttack_1_62: 1462408802
+      LornsRangedAttack_1_63: 1772046715
+      LornsRangedAttack_1_64: 361186006
+      LornsRangedAttack_1_65: 827247914
+      LornsRangedAttack_1_66: 2081842806
+      LornsRangedAttack_1_67: 26477579
+      LornsRangedAttack_1_68: -513809739
+      LornsRangedAttack_1_69: 650956943
+      LornsRangedAttack_1_7: 491777812
+      LornsRangedAttack_1_70: 224496597
+      LornsRangedAttack_1_71: 559488089
+      LornsRangedAttack_1_72: -159313544
+      LornsRangedAttack_1_73: 393572445
+      LornsRangedAttack_1_74: 451588250
+      LornsRangedAttack_1_75: 665894533
+      LornsRangedAttack_1_76: 1480960403
+      LornsRangedAttack_1_77: 10301881
+      LornsRangedAttack_1_78: -1408006445
+      LornsRangedAttack_1_79: 398261880
+      LornsRangedAttack_1_8: 2017809409
+      LornsRangedAttack_1_80: 464258702
+      LornsRangedAttack_1_81: -986712185
+      LornsRangedAttack_1_82: -1467878328
+      LornsRangedAttack_1_83: 1627339605
+      LornsRangedAttack_1_84: -1321199187
+      LornsRangedAttack_1_85: -1434161717
+      LornsRangedAttack_1_86: -1767613993
+      LornsRangedAttack_1_87: -1822738722
+      LornsRangedAttack_1_88: -831187743
+      LornsRangedAttack_1_9: -965058169
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

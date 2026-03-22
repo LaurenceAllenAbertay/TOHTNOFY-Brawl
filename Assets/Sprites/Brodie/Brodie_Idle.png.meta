@@ -1,0 +1,1856 @@
+fileFormatVersion: 2
+guid: e531406b1ba316c4b88a0291c8240e66
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Brodie_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7440
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 374aba82f90d47942b04928163b12b09
+      internalID: -2051855900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 7440
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5519a46cb43f98b44bf80d709c57de27
+      internalID: 24016359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 7440
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1488a83d36c88144c9c8c01b57587dc6
+      internalID: -575685961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 7440
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ddadb77b64ec844d8c1268887814bbb
+      internalID: 691188554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 2488
+        y: 7440
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc36b86474651264d80766d07760772a
+      internalID: -945590680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 3110
+        y: 7440
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 379fee4c95bae934786ca680a9e3fc7c
+      internalID: -455575449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 3732
+        y: 7440
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 791334f8c8c6c7245a5edb9cec94bf97
+      internalID: -744932344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 4354
+        y: 7440
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d17066a32d2ce5d4fbe8fe374aa697e1
+      internalID: 963111796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_8
+      rect:
+        serializedVersion: 2
+        x: 4976
+        y: 7440
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e7d95f343e705943b17d98a531efb5d
+      internalID: -564143166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6510
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a92ee87fabcd3740b62930af22f3eb2
+      internalID: 49998200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_10
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 6510
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eaa1d7253437964fb09c248b339ba36
+      internalID: 285016119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_11
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 6510
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8837ca97fdde9314c8746219d093ba5a
+      internalID: 188076950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_12
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 6510
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa72e2521b6c114d8c826066b6b6eb7
+      internalID: 830903148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_13
+      rect:
+        serializedVersion: 2
+        x: 2488
+        y: 6510
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 156dc21eaa319a84b9871f5c4a1ccf05
+      internalID: -1725677004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_14
+      rect:
+        serializedVersion: 2
+        x: 3110
+        y: 6510
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14e002e6deefb85489901c81c0aff878
+      internalID: -835434284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_15
+      rect:
+        serializedVersion: 2
+        x: 3732
+        y: 6510
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409a9c1284a732f46983fe728d099e3a
+      internalID: 782791626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_16
+      rect:
+        serializedVersion: 2
+        x: 4354
+        y: 6510
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dff69fe6da7fe14d8a3e3333497abdd
+      internalID: 639630243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_17
+      rect:
+        serializedVersion: 2
+        x: 4976
+        y: 6510
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cbf9ae3ef8e7134f8b186c91fc59ea3
+      internalID: -1735182669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5580
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3daa595eec6ec3b4da550841782285f5
+      internalID: -2124611473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_19
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 5580
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49aca5734ddb1b94083d14d9b7da07ab
+      internalID: 471463211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_20
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 5580
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a8035cab16f24b43b89eab4d8d55ae5
+      internalID: -1419053871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_21
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 5580
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b75c1e4659ecb549b00859a4c379f13
+      internalID: 899329877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_22
+      rect:
+        serializedVersion: 2
+        x: 2488
+        y: 5580
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d42e1c8e4a289e64c89c0d9310c2e943
+      internalID: -875038304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_23
+      rect:
+        serializedVersion: 2
+        x: 3110
+        y: 5580
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a301144c65c369d428778cc4ba8ef8a9
+      internalID: 1758006133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_24
+      rect:
+        serializedVersion: 2
+        x: 3732
+        y: 5580
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c2e4cf36e4dd8d4198cb7c454580907
+      internalID: 98106176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_25
+      rect:
+        serializedVersion: 2
+        x: 4354
+        y: 5580
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5315b78f21a4bd0488dece4930d66165
+      internalID: 1257872896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_26
+      rect:
+        serializedVersion: 2
+        x: 4976
+        y: 5580
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 202fa891bd125374db62ebe6adc2fa78
+      internalID: -1642811926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4650
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ed71ffe22c91d4b9d119876d524862
+      internalID: 687263036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_28
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 4650
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e302024bf67f4234182b9b4b179ed6b2
+      internalID: 1507419221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_29
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 4650
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94c81c64ba41fbd4b8ad30805e3af073
+      internalID: 1069783372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_30
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 4650
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 174b86a318d86ff4aa793eec6c7a0de4
+      internalID: 401016616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_31
+      rect:
+        serializedVersion: 2
+        x: 2488
+        y: 4650
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38d469928cc3190439d7fbdab8ba1426
+      internalID: -2110787845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_32
+      rect:
+        serializedVersion: 2
+        x: 3110
+        y: 4650
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f030bfe9d18c73442affcb46ae23664b
+      internalID: -1068533250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_33
+      rect:
+        serializedVersion: 2
+        x: 3732
+        y: 4650
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f985828d5232045b0f443e46c46ceb
+      internalID: 1883241122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_34
+      rect:
+        serializedVersion: 2
+        x: 4354
+        y: 4650
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0407395bb3112ab45a95ee993a13f41a
+      internalID: -1586035471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_35
+      rect:
+        serializedVersion: 2
+        x: 4976
+        y: 4650
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f62e3637244cf744986737b668a10161
+      internalID: -1541761774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3720
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d2a1ed73e1bed49b5b54870fe7cb03
+      internalID: -1374311737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_37
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 3720
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1901aba42559de47896d916675df539
+      internalID: -533732562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_38
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 3720
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9726f62fb9fc4a34a87ec0f7c6b838c8
+      internalID: -681447216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_39
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 3720
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f78e59d5f46722c469d79238adba992d
+      internalID: 161422216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_40
+      rect:
+        serializedVersion: 2
+        x: 2488
+        y: 3720
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb970d68a4c567649bd17fe6d4a33eab
+      internalID: 1753099557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_41
+      rect:
+        serializedVersion: 2
+        x: 3110
+        y: 3720
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ef5ddee3f4e3d408d51c15b46d88fb
+      internalID: 245573183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_42
+      rect:
+        serializedVersion: 2
+        x: 3732
+        y: 3720
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a4d36dd4a2128146a954d1464b68692
+      internalID: -1808768551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_43
+      rect:
+        serializedVersion: 2
+        x: 4354
+        y: 3720
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ccea21eef7bc943a166f4c2af306bf
+      internalID: -747396589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_44
+      rect:
+        serializedVersion: 2
+        x: 4976
+        y: 3720
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 383e74e8977b7604eaf88265f85000c8
+      internalID: -1621966905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2790
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8282d3255ab846049aa23a00a395165b
+      internalID: 1798862682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_46
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 2790
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70ba7156f2ff18145acd90e94a472c28
+      internalID: 1849498601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_47
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 2790
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 939c0015373be094eb45f49ebf0e023a
+      internalID: -889125669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_48
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 2790
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5fde8c132dbdad4e88fd95104de5ce5
+      internalID: 650064602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_49
+      rect:
+        serializedVersion: 2
+        x: 2488
+        y: 2790
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3a6a748648306241a6866ed1a6aabc7
+      internalID: 830774635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_50
+      rect:
+        serializedVersion: 2
+        x: 3110
+        y: 2790
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bb206f00ad667d409249bacf6e95add
+      internalID: 1741964527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_51
+      rect:
+        serializedVersion: 2
+        x: 3732
+        y: 2790
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71314d35eaa63c34a9af1fcf595ead6f
+      internalID: 2009830282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_52
+      rect:
+        serializedVersion: 2
+        x: 4354
+        y: 2790
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11422f438c11b944186799391f24f548
+      internalID: -1791010399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_53
+      rect:
+        serializedVersion: 2
+        x: 4976
+        y: 2790
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a404b7c3f7e17ab4e87fde0de9d53470
+      internalID: -1953278539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1860
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbb0d955d23b2a1429eaa49ff48d7867
+      internalID: 760998039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_55
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 1860
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7e520590204bc346bc652dc37a20f7d
+      internalID: 431369490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_56
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 1860
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a08c7c7f6d316d40a04888069eaafd7
+      internalID: 932060113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_57
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 1860
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122244296a1ec2f469107f07ad7c7533
+      internalID: 1081554719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_58
+      rect:
+        serializedVersion: 2
+        x: 2488
+        y: 1860
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f1b8c4a1fc697642a2abc3b1710ebb6
+      internalID: 382882977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_59
+      rect:
+        serializedVersion: 2
+        x: 3110
+        y: 1860
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd0bedf530a495844ad45554a42a7015
+      internalID: -1801582866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_60
+      rect:
+        serializedVersion: 2
+        x: 3732
+        y: 1860
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30abb551141e58a4e960f90f2dc50380
+      internalID: 1335813026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_61
+      rect:
+        serializedVersion: 2
+        x: 4354
+        y: 1860
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df75d2f7d9cfc8e40967f8a74ce4a188
+      internalID: 1444872656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_62
+      rect:
+        serializedVersion: 2
+        x: 4976
+        y: 1860
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fadd950d59f3a0546a00ae1e182b9af1
+      internalID: -2049866631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 930
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81c52d8e7139f9c4a8c6c9960effcef2
+      internalID: 41281333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_64
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 930
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d97c7d7e1333cc2479cac0317320aa66
+      internalID: 1177237380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_65
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 930
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ee14e351c028dd4499b8a0f286001af
+      internalID: 1614990823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_66
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 930
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edc72b5a63f28be43a7878ecabbd26c6
+      internalID: 1036568525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_67
+      rect:
+        serializedVersion: 2
+        x: 2488
+        y: 930
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83d5201728f5fa24a8d29644e8d25636
+      internalID: 121228982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_68
+      rect:
+        serializedVersion: 2
+        x: 3110
+        y: 930
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cd0a19243c145b49a8555e42fdc9917
+      internalID: 9902061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_69
+      rect:
+        serializedVersion: 2
+        x: 3732
+        y: 930
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 080744e24a1b45b4fba35ee70fbaa83c
+      internalID: 1884931615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_70
+      rect:
+        serializedVersion: 2
+        x: 4354
+        y: 930
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa44690e55ab0d748aa3eba71562b2fc
+      internalID: -1410033073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_71
+      rect:
+        serializedVersion: 2
+        x: 4976
+        y: 930
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f755dd83de98d2d41ad308f2f50c323d
+      internalID: -1948125404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a34c4471cd2a92341bc3af1b7b0db295
+      internalID: -1273916276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_73
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 0
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6ac11ae52feaf246a60fb73855e3ef7
+      internalID: -916893040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_74
+      rect:
+        serializedVersion: 2
+        x: 1244
+        y: 0
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0ccf3d93009db14f8801abbd83a3a21
+      internalID: 2111221527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_75
+      rect:
+        serializedVersion: 2
+        x: 1866
+        y: 0
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f36239a3c832045ae133bafad57066
+      internalID: -2022748034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_76
+      rect:
+        serializedVersion: 2
+        x: 2488
+        y: 0
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1123575ac5ceb194eb6210787d3f630a
+      internalID: 1649271232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Brodie_Idle_77
+      rect:
+        serializedVersion: 2
+        x: 3110
+        y: 0
+        width: 622
+        height: 930
+      alignment: 9
+      pivot: {x: 0.51, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b90a24553385ce4d80b3add3a069e36
+      internalID: -171674292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Brodie_Idle_0: -2051855900
+      Brodie_Idle_1: 24016359
+      Brodie_Idle_10: 285016119
+      Brodie_Idle_11: 188076950
+      Brodie_Idle_12: 830903148
+      Brodie_Idle_13: -1725677004
+      Brodie_Idle_14: -835434284
+      Brodie_Idle_15: 782791626
+      Brodie_Idle_16: 639630243
+      Brodie_Idle_17: -1735182669
+      Brodie_Idle_18: -2124611473
+      Brodie_Idle_19: 471463211
+      Brodie_Idle_2: -575685961
+      Brodie_Idle_20: -1419053871
+      Brodie_Idle_21: 899329877
+      Brodie_Idle_22: -875038304
+      Brodie_Idle_23: 1758006133
+      Brodie_Idle_24: 98106176
+      Brodie_Idle_25: 1257872896
+      Brodie_Idle_26: -1642811926
+      Brodie_Idle_27: 687263036
+      Brodie_Idle_28: 1507419221
+      Brodie_Idle_29: 1069783372
+      Brodie_Idle_3: 691188554
+      Brodie_Idle_30: 401016616
+      Brodie_Idle_31: -2110787845
+      Brodie_Idle_32: -1068533250
+      Brodie_Idle_33: 1883241122
+      Brodie_Idle_34: -1586035471
+      Brodie_Idle_35: -1541761774
+      Brodie_Idle_36: -1374311737
+      Brodie_Idle_37: -533732562
+      Brodie_Idle_38: -681447216
+      Brodie_Idle_39: 161422216
+      Brodie_Idle_4: -945590680
+      Brodie_Idle_40: 1753099557
+      Brodie_Idle_41: 245573183
+      Brodie_Idle_42: -1808768551
+      Brodie_Idle_43: -747396589
+      Brodie_Idle_44: -1621966905
+      Brodie_Idle_45: 1798862682
+      Brodie_Idle_46: 1849498601
+      Brodie_Idle_47: -889125669
+      Brodie_Idle_48: 650064602
+      Brodie_Idle_49: 830774635
+      Brodie_Idle_5: -455575449
+      Brodie_Idle_50: 1741964527
+      Brodie_Idle_51: 2009830282
+      Brodie_Idle_52: -1791010399
+      Brodie_Idle_53: -1953278539
+      Brodie_Idle_54: 760998039
+      Brodie_Idle_55: 431369490
+      Brodie_Idle_56: 932060113
+      Brodie_Idle_57: 1081554719
+      Brodie_Idle_58: 382882977
+      Brodie_Idle_59: -1801582866
+      Brodie_Idle_6: -744932344
+      Brodie_Idle_60: 1335813026
+      Brodie_Idle_61: 1444872656
+      Brodie_Idle_62: -2049866631
+      Brodie_Idle_63: 41281333
+      Brodie_Idle_64: 1177237380
+      Brodie_Idle_65: 1614990823
+      Brodie_Idle_66: 1036568525
+      Brodie_Idle_67: 121228982
+      Brodie_Idle_68: 9902061
+      Brodie_Idle_69: 1884931615
+      Brodie_Idle_7: 963111796
+      Brodie_Idle_70: -1410033073
+      Brodie_Idle_71: -1948125404
+      Brodie_Idle_72: -1273916276
+      Brodie_Idle_73: -916893040
+      Brodie_Idle_74: 2111221527
+      Brodie_Idle_75: -2022748034
+      Brodie_Idle_76: 1649271232
+      Brodie_Idle_77: -171674292
+      Brodie_Idle_8: -564143166
+      Brodie_Idle_9: 49998200
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

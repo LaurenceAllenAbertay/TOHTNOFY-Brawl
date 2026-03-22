@@ -1,0 +1,24 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace DDD.TNFY.BRAWL
+{
+    [CreateAssetMenu(menuName = "TNFY Brawl/Unit")]
+    public class CharacterData : ScriptableObject
+    {
+        [Header("Info")]
+        public string characterName;
+        public Sprite portrait;
+
+        [Header("Stats")]
+        public int maxHealth;
+        public int attack;
+        public int defense;
+        public int speed;
+
+        [Header("Abilities")]
+        public Ability[] abilityLoadout = new Ability[3];
+    }
+
+}

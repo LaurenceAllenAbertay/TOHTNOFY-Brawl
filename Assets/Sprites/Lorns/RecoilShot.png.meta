@@ -1,0 +1,470 @@
+fileFormatVersion: 2
+guid: 1f0c3d505a3c72f45a00b42a10988a09
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: RecoilShot_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3138
+        width: 1382
+        height: 1046
+      alignment: 9
+      pivot: {x: 0.15, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aedb9ac4c575c14cbb9361358ab813e
+      internalID: -2139639984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecoilShot_1
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 3138
+        width: 1382
+        height: 1046
+      alignment: 9
+      pivot: {x: 0.15, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb03374b91558eb4d9cefb5562773e02
+      internalID: 1997203770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecoilShot_2
+      rect:
+        serializedVersion: 2
+        x: 2764
+        y: 3138
+        width: 1382
+        height: 1046
+      alignment: 9
+      pivot: {x: 0.15, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d5be143c257173419df06a64ab4280c
+      internalID: -970392773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecoilShot_3
+      rect:
+        serializedVersion: 2
+        x: 4146
+        y: 3138
+        width: 1382
+        height: 1046
+      alignment: 9
+      pivot: {x: 0.15, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5002cb16ce53d34fae723b5101ff145
+      internalID: 1160332398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecoilShot_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2092
+        width: 1382
+        height: 1046
+      alignment: 9
+      pivot: {x: 0.15, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2053c30fa7a33ba45af7736eddb8600e
+      internalID: -522446884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecoilShot_5
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 2092
+        width: 1382
+        height: 1046
+      alignment: 9
+      pivot: {x: 0.15, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b60c367ccfed95940b064b780a653260
+      internalID: -1348151749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecoilShot_6
+      rect:
+        serializedVersion: 2
+        x: 2764
+        y: 2092
+        width: 1382
+        height: 1046
+      alignment: 9
+      pivot: {x: 0.15, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12d46f71586931148ba94ef21dc712cb
+      internalID: 362597025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecoilShot_7
+      rect:
+        serializedVersion: 2
+        x: 4146
+        y: 2092
+        width: 1382
+        height: 1046
+      alignment: 9
+      pivot: {x: 0.15, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5734054f71febc4b97e5ec64be8ecaa
+      internalID: 2031663627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecoilShot_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1046
+        width: 1382
+        height: 1046
+      alignment: 9
+      pivot: {x: 0.15, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99e536ff03951564dac79ab83c127e2e
+      internalID: -1841764881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecoilShot_9
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 1046
+        width: 1382
+        height: 1046
+      alignment: 9
+      pivot: {x: 0.15, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8af0055ba60773847838a1713133ebeb
+      internalID: 2116524362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecoilShot_10
+      rect:
+        serializedVersion: 2
+        x: 2764
+        y: 1046
+        width: 1382
+        height: 1046
+      alignment: 9
+      pivot: {x: 0.15, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5121f3667d5961f458d768254ac55b7f
+      internalID: -2020083797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecoilShot_11
+      rect:
+        serializedVersion: 2
+        x: 4146
+        y: 1046
+        width: 1382
+        height: 1046
+      alignment: 9
+      pivot: {x: 0.15, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e87ad012daabf4447b19a8270148051b
+      internalID: 1111763928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecoilShot_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1382
+        height: 1046
+      alignment: 9
+      pivot: {x: 0.15, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0445597ee64cd2f4b8a7bfd5a7b1daaf
+      internalID: -1063165501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecoilShot_13
+      rect:
+        serializedVersion: 2
+        x: 1382
+        y: 0
+        width: 1382
+        height: 1046
+      alignment: 9
+      pivot: {x: 0.15, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58de8ed81b592b14895fd3c089ea33ba
+      internalID: 75476240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: RecoilShot_14
+      rect:
+        serializedVersion: 2
+        x: 2764
+        y: 0
+        width: 1382
+        height: 1046
+      alignment: 9
+      pivot: {x: 0.15, y: 0.38}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4461b74d8baa06947ac10f03ed881544
+      internalID: 947077567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      RecoilShot_0: -2139639984
+      RecoilShot_1: 1997203770
+      RecoilShot_10: -2020083797
+      RecoilShot_11: 1111763928
+      RecoilShot_12: -1063165501
+      RecoilShot_13: 75476240
+      RecoilShot_14: 947077567
+      RecoilShot_2: -970392773
+      RecoilShot_3: 1160332398
+      RecoilShot_4: -522446884
+      RecoilShot_5: -1348151749
+      RecoilShot_6: 362597025
+      RecoilShot_7: 2031663627
+      RecoilShot_8: -1841764881
+      RecoilShot_9: 2116524362
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

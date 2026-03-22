@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc194c45739c27a488e7f6200ef59a3f, type: 3}
+  m_Name: Kallper
+  m_EditorClassIdentifier: 
+  characterName: Kallper
+  portrait: {fileID: -1879143901, guid: af94e13e2cdf2ab408fa6c300759353d, type: 3}
+  maxHealth: 50
+  attack: 0
+  defense: 0
+  speed: 2
+  abilityLoadout:
+  - {fileID: 11400000, guid: cc03d69e37c87a5419a9e613f89a49fd, type: 2}
+  - {fileID: 11400000, guid: cc03d69e37c87a5419a9e613f89a49fd, type: 2}
+  - {fileID: 11400000, guid: cc03d69e37c87a5419a9e613f89a49fd, type: 2}
