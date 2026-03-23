@@ -256,6 +256,15 @@ namespace DDD.TNFY.BRAWL
                 }
             }
 
+            // Factor in persistent tile hazards — AI avoids standing in fire, poison clouds, etc.
+            // GetAIDangerValue() is defined per-effect so each hazard type self-reports its threat.
+            // effectPower / 10f normalises it to the same scale as the ability threat values above.
+            foreach (var effect in position.ActiveEffects)
+            {
+                if (effect?.effectData == null) continue;
+                totalDanger += effect.effectData.GetAIDangerValue() * (effect.effectPower / 10f);
+            }
+
             return totalDanger;
         }
 

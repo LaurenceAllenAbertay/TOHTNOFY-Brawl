@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -26,11 +27,48 @@ namespace DDD.TNFY.BRAWL
         public int CurrentTurnIndex => currentIndex;
         public int TotalTurnCount => totalTurnCount;
 
+        // Snapshotted at the start of TriggerEnvironmentEffects so GetCurrentRound() returns a
+        // stable value for the entire environment-effect phase, even if units die mid-processing.
+        // 0 means "not currently in environment effects — use live turnOrder.Count".
+        private int _stableRoundCount = 0;
+
         void Start()
         {
             combatManager = FindAnyObjectByType<CombatManager>();
             BuildTurnOrder();
             StartNextTurn();
+        }
+
+        void OnEnable()
+        {
+            UnitManager.OnUnitDied += HandleUnitDied;
+        }
+
+        void OnDisable()
+        {
+            UnitManager.OnUnitDied -= HandleUnitDied;
+        }
+
+        /// <summary>
+        /// Removes a dead unit from the turn order and adjusts currentIndex so the
+        /// next call to StartNextTurn() lands on the correct unit.
+        /// Called by UnitManager.OnUnitDied for every death source: abilities, tile effects, anything.
+        /// </summary>
+        private void HandleUnitDied(Unit unit)
+        {
+            int diedIndex = turnOrder.IndexOf(unit);
+            if (diedIndex < 0) return; // Not in our turn order
+
+            turnOrder.RemoveAt(diedIndex);
+
+            // If the dead unit was at or before the current index, shift the index back
+            // so it still points at the same logical "next" unit after removal.
+            if (diedIndex <= currentIndex)
+                currentIndex = Mathf.Max(0, currentIndex - 1);
+
+            // Clamp to valid range in case the list is now shorter
+            if (turnOrder.Count > 0)
+                currentIndex = Mathf.Clamp(currentIndex, 0, turnOrder.Count - 1);
         }
 
         void BuildTurnOrder()
@@ -117,21 +155,44 @@ namespace DDD.TNFY.BRAWL
             // FIRE THE TURN ENDED EVENT
             OnTurnEnded?.Invoke(currentUnit);
 
+            // The rest of the sequence (index advancement, environment effects, next turn start)
+            // runs as a coroutine so TriggerEnvironmentEffects can yield on animations.
+            StartCoroutine(EndTurnSequence());
+        }
+
+        private IEnumerator EndTurnSequence()
+        {
             currentIndex++;
             if (currentIndex >= turnOrder.Count)
             {
                 currentIndex = 0;
-                TriggerEnvironmentEffects();
+                // Snapshot the turn order size before any tile-effect deaths can shrink it.
+                // GetCurrentRound() uses this value for the entire environment-effect phase,
+                // so round numbers stay stable for UI and any round-scaling logic.
+                _stableRoundCount = turnOrder.Count;
+                yield return StartCoroutine(TriggerEnvironmentEffects());
+                _stableRoundCount = 0; // Back to live count after effects finish
             }
 
             OnTurnNumberChanged?.Invoke(totalTurnCount, currentIndex);
 
+            // Guard: if all units died during environment effects, stop here
+            if (turnOrder.Count == 0) yield break;
+
             StartNextTurn();
         }
 
-        void TriggerEnvironmentEffects()
+        private IEnumerator TriggerEnvironmentEffects()
         {
-            //tile.TriggerEnvironmentEffect();
+            if (GridManager.Instance == null) yield break;
+
+            int currentRound = GetCurrentRound();
+
+            foreach (var tile in GridManager.Instance.AllTiles)
+            {
+                if (tile.HasActiveEffects)
+                    yield return StartCoroutine(tile.TriggerEffects(currentRound));
+            }
         }
 
         // Public method to reset total turn count (useful for new battles)
@@ -143,8 +204,11 @@ namespace DDD.TNFY.BRAWL
         // Public method to get current round number (how many complete cycles through all units)
         public int GetCurrentRound()
         {
-            if (turnOrder.Count == 0) return 0;
-            return (totalTurnCount - 1) / turnOrder.Count + 1;
+            // During TriggerEnvironmentEffects, use the snapshotted count so deaths mid-processing
+            // don't silently change the round number for UI or round-scaling damage effects.
+            int count = _stableRoundCount > 0 ? _stableRoundCount : turnOrder.Count;
+            if (count == 0) return 0;
+            return (totalTurnCount - 1) / count + 1;
         }
 
         // Public method to get turn within current round (1-based)
