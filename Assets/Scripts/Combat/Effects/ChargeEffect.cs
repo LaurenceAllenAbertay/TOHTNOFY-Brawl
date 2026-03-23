@@ -57,7 +57,7 @@ public class ChargeEffect : AbilityEffect
         Vector3 endPos = destinationTile.transform.position;
 
         var cameraController = GameObject.FindAnyObjectByType<CameraController>();
-        bool shouldMoveCamera = cameraController != null && caster is EnemyUnit;
+        bool shouldMoveCamera = cameraController != null;
 
         Vector3 cameraStartPos = Vector3.zero;
         Vector3 cameraTargetPos = Vector3.zero;
