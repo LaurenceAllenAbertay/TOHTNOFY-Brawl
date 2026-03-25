@@ -35,6 +35,12 @@ namespace DDD.TNFY.BRAWL
                  "including empty ones.")]
         [SerializeField] private PlacementMode placementMode = PlacementMode.OnTargetUnits;
 
+        [Tooltip("If true and the tile is already occupied when the effect is placed, " +
+                 "TriggerOnEnterEffects fires immediately on that unit. " +
+                 "Use for OnEnter effects where a unit standing on the tile at cast time " +
+                 "should be hit straight away rather than waiting for their next move.")]
+        [SerializeField] private bool triggerImmediatelyIfOccupied = false;
+
         public enum PlacementMode
         {
             /// <summary>Places the tile effect on the tile each hit unit is currently standing on.</summary>
@@ -93,6 +99,17 @@ namespace DDD.TNFY.BRAWL
         private void PlaceEffect(Tile tile, Unit applier)
         {
             tile.AddEffect(new TileEffectInstance(tileEffectData, applier, rounds, effectPower));
+
+            // If the tile is already occupied and immediate triggering is enabled,
+            // fire OnEnter effects on the occupant now. This handles the case where a
+            // unit is standing on a tile when the hazard is placed — they shouldn't be
+            // immune just because they didn't "walk through" it.
+            if (triggerImmediatelyIfOccupied &&
+                tileEffectData.triggerTiming == TriggerTiming.OnEnter &&
+                tile.currentUnit != null)
+            {
+                tile.StartCoroutine(tile.TriggerOnEnterEffects(tile.currentUnit));
+            }
         }
     }
 }

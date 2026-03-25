@@ -197,6 +197,27 @@ namespace DDD.TNFY.BRAWL
             // Penalize positions that leave us vulnerable after our action
             float dangerPenalty = CalculateDangerAtPosition(finalPosition, potentialTargets);
             positionScore -= dangerPenalty;
+
+            // Penalize paths that pass through OnEnter tile hazards.
+            // An otherwise safe destination is not safe if the unit will be
+            // damaged or killed walking to it.
+            if (movementTarget != null && enemyUnit?.currentTile != null)
+            {
+                var path = GridManager.Instance.FindPath(
+                    enemyUnit.currentTile,
+                    movementTarget,
+                    enemyUnit.currentSpeed);
+
+                foreach (var tile in path)
+                {
+                    foreach (var effect in tile.ActiveEffects)
+                    {
+                        if (effect?.effectData == null) continue;
+                        if (effect.effectData.triggerTiming == TriggerTiming.OnEnter)
+                            positionScore -= effect.effectData.GetAIDangerValue() * (effect.effectPower / 10f);
+                    }
+                }
+            }
         }
 
         private float CalculateDangerAtPosition(Tile position, List<Unit> enemies)

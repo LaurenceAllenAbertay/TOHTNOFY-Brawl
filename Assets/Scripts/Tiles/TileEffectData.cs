@@ -13,6 +13,18 @@ namespace DDD.TNFY.BRAWL
     /// yields on TriggerEnvironmentEffects, which yields on each tile's TriggerEffects coroutine,
     /// so StartNextTurn() never fires until all tile effect feedback has finished.
     /// </summary>
+    /// <summary>
+    /// Controls when a tile effect fires.
+    /// OnRoundEnd  — triggered by TurnManager.TriggerEnvironmentEffects at the end of each round.
+    /// OnEnter     — triggered whenever a unit moves onto or through this tile during movement.
+    ///               Duration still ticks down at round end so expiry is consistent.
+    /// </summary>
+    public enum TriggerTiming
+    {
+        OnRoundEnd,
+        OnEnter
+    }
+
     public abstract class TileEffectData : ScriptableObject
     {
         [Header("Basic Info")]
@@ -28,6 +40,12 @@ namespace DDD.TNFY.BRAWL
 
         [Tooltip("Tint used for UI elements and VFX colour variants. Mirrors StatusEffectData.effectColor.")]
         public Color effectColor = Color.white;
+
+        [Header("Trigger")]
+        [Tooltip("OnRoundEnd: fires during TriggerEnvironmentEffects at round end.\n" +
+                 "OnEnter: fires when any unit moves onto or through this tile. " +
+                 "Duration still ticks at round end so expiry is consistent with other effects.")]
+        public TriggerTiming triggerTiming = TriggerTiming.OnRoundEnd;
 
         [Header("Visual / Audio")]
         [Tooltip("Spawned on the tile when this effect is first applied.")]

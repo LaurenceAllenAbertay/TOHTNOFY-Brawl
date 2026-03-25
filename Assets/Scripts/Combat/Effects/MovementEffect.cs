@@ -117,6 +117,11 @@ public class MovementEffect : AbilityEffect
 
             // Update logical tile position
             unitToMove.SetCurrentTileLogical(tile);
+
+            // Trigger any OnEnter tile effects for this tile.
+            // yield return ensures the effect animation finishes before the unit moves on.
+            if (tile.HasActiveEffects)
+                yield return tile.TriggerOnEnterEffects(unitToMove);
         }
 
         // Ensure exact final position

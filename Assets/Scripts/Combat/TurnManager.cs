@@ -214,8 +214,11 @@ namespace DDD.TNFY.BRAWL
         // Public method to get turn within current round (1-based)
         public int GetTurnInCurrentRound()
         {
-            if (turnOrder.Count == 0) return 0;
-            return ((totalTurnCount - 1) % turnOrder.Count) + 1;
+            // Uses the same stable snapshot as GetCurrentRound() so both methods return
+            // consistent values during the environment-effect phase, even if units die mid-processing.
+            int count = _stableRoundCount > 0 ? _stableRoundCount : turnOrder.Count;
+            if (count == 0) return 0;
+            return ((totalTurnCount - 1) % count) + 1;
         }
     }
 }

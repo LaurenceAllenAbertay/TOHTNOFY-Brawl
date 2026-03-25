@@ -1,0 +1,115 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5200236beb71b044ab66892f3cf4efb0, type: 3}
+  m_Name: Tutorial
+  m_EditorClassIdentifier: 
+  trackName: Tutorial
+  description: 
+  bpm: 180
+  beatsPerMeasure: 4
+  layers:
+  - layerName: Bass
+    audioClip: {fileID: 8300000, guid: 67d95e943d638104b9f1a5d74815e0c3, type: 3}
+    volume: 1
+    looping: 1
+    startEnabled: 1
+    fadeInDuration: 1
+    fadeOutDuration: 0
+    enableTriggers: []
+    disableTriggers: []
+  - layerName: Drums
+    audioClip: {fileID: 8300000, guid: a946ac4635668f547b7a83d3ef5c35f8, type: 3}
+    volume: 1
+    looping: 1
+    startEnabled: 1
+    fadeInDuration: 1
+    fadeOutDuration: 0
+    enableTriggers: []
+    disableTriggers: []
+  - layerName: Lorns' Turn
+    audioClip: {fileID: 8300000, guid: fc276831562a5d64cae51a4a5b151211, type: 3}
+    volume: 1
+    looping: 1
+    startEnabled: 0
+    fadeInDuration: 2
+    fadeOutDuration: 0
+    enableTriggers:
+    - triggerType: 0
+      activateOnce: 1
+      unitTypeName: Lorns
+      combatState: 0
+      combatStateUnitFilter: 
+      turnCountMode: 0
+      turnNumber: 0
+      everyNthTurn: 0
+      healthPercentage: 0
+      eventName: 
+    disableTriggers: []
+  - layerName: Brodie's Turn
+    audioClip: {fileID: 8300000, guid: d6332844ed6850a40b6d1a72bc291bcf, type: 3}
+    volume: 1
+    looping: 1
+    startEnabled: 0
+    fadeInDuration: 2
+    fadeOutDuration: 0
+    enableTriggers:
+    - triggerType: 0
+      activateOnce: 1
+      unitTypeName: Brodie
+      combatState: 0
+      combatStateUnitFilter: 
+      turnCountMode: 0
+      turnNumber: 0
+      everyNthTurn: 0
+      healthPercentage: 0
+      eventName: 
+    disableTriggers: []
+  - layerName: Oliver's Turn
+    audioClip: {fileID: 8300000, guid: 5102b5b3efb540e4f88eebd900f6cbab, type: 3}
+    volume: 1
+    looping: 1
+    startEnabled: 0
+    fadeInDuration: 2
+    fadeOutDuration: 0
+    enableTriggers:
+    - triggerType: 0
+      activateOnce: 1
+      unitTypeName: Oliver
+      combatState: 0
+      combatStateUnitFilter: 
+      turnCountMode: 0
+      turnNumber: 0
+      everyNthTurn: 0
+      healthPercentage: 0
+      eventName: 
+    disableTriggers: []
+  - layerName: Kallper's Turn
+    audioClip: {fileID: 8300000, guid: e8b959782db1cc44a81e3ee7e31039ad, type: 3}
+    volume: 1
+    looping: 1
+    startEnabled: 0
+    fadeInDuration: 2
+    fadeOutDuration: 0
+    enableTriggers:
+    - triggerType: 0
+      activateOnce: 1
+      unitTypeName: Kallper
+      combatState: 0
+      combatStateUnitFilter: 
+      turnCountMode: 0
+      turnNumber: 0
+      everyNthTurn: 0
+      healthPercentage: 0
+      eventName: 
+    disableTriggers: []
+  masterVolume: 0.7
+  syncAllLayers: 1

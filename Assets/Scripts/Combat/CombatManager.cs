@@ -342,6 +342,10 @@ namespace DDD.TNFY.BRAWL
                 {
                     HandleSingleTargetingMouseMove(mouseWorldPosition);
                 }
+                else if (currentAbility.targeting is MultiTileSelectionTargeting)
+                {
+                    HandleMultiTileSelectionMouseMove(mouseWorldPosition);
+                }
                 else
                 {
                     HandleDirectionalTargetingMouseMove(mouseWorldPosition);
@@ -428,6 +432,10 @@ namespace DDD.TNFY.BRAWL
                 if (currentAbility.targeting is SingleTargeting)
                 {
                     ConfirmSingleTargetAbility(clickedTile);
+                }
+                else if (currentAbility.targeting is MultiTileSelectionTargeting multiTargeting)
+                {
+                    HandleMultiTileSelectionClick(clickedTile, multiTargeting);
                 }
                 // Other targeting types don't use tile clicks
                 return;
@@ -619,15 +627,16 @@ namespace DDD.TNFY.BRAWL
                 }
 
                 currentPos = segmentEnd;
+
+                // Trigger any OnEnter tile effects for this waypoint tile.
+                // yield return ensures animations finish before the unit continues moving.
+                if (waypoint.HasActiveEffects)
+                    yield return StartCoroutine(waypoint.TriggerOnEnterEffects(movingUnit));
             }
 
             // Ensure exact final position
             movingUnit.transform.position = waypoints[waypoints.Count - 1].transform.position;
         }
-
-        /// <summary>
-        /// Moves unit along waypoints WITH camera smoothly following to final destination
-        /// </summary>
         private IEnumerator MoveAlongWaypointsWithCamera(Unit movingUnit, List<Tile> waypoints, SpriteRenderer spriteRenderer)
         {
             Vector3 currentPos = movingUnit.transform.position;
@@ -708,6 +717,10 @@ namespace DDD.TNFY.BRAWL
                 }
 
                 currentPos = segmentEnd;
+
+                // Trigger any OnEnter tile effects for this waypoint tile.
+                if (waypoint.HasActiveEffects)
+                    yield return StartCoroutine(waypoint.TriggerOnEnterEffects(movingUnit));
             }
 
             // Ensure exact final positions
@@ -782,6 +795,14 @@ namespace DDD.TNFY.BRAWL
                 ShowSingleTargetRangePreview();
             }
 
+            // Begin selection session for multi-tile selection abilities
+            if (currentAbility.targeting is MultiTileSelectionTargeting multiTargeting)
+            {
+                var ctx = new AbilityContext { caster = currentActiveUnit, ability = currentAbility };
+                multiTargeting.BeginSelection(ctx);
+                ShowMultiTileSelectionPreview(multiTargeting, ctx);
+            }
+
             // Notify UI systems of targeting state change
             UIEvents.OnTargetingStateChanged();
         }
@@ -796,6 +817,12 @@ namespace DDD.TNFY.BRAWL
             if (currentAbility?.targeting is RandomAOETargeting randomTargeting)
             {
                 randomTargeting.OnTargetingCancelled();
+            }
+
+            // Clear multi-tile selection state
+            if (currentAbility?.targeting is MultiTileSelectionTargeting multiTargeting)
+            {
+                multiTargeting.CancelSelection();
             }
 
             ClearAbilityTargeting();
@@ -1133,9 +1160,74 @@ namespace DDD.TNFY.BRAWL
             }
         }
 
-        #endregion
+        /// <summary>
+        /// Handles tile clicks during multi-tile selection targeting.
+        /// Each valid click adds a tile to the selection. The ability fires automatically
+        /// when the required number of unique tiles have been chosen — no separate confirm needed.
+        /// </summary>
+        private void HandleMultiTileSelectionClick(Tile clickedTile, MultiTileSelectionTargeting targeting)
+        {
+            var ctx = new AbilityContext { caster = currentActiveUnit, ability = currentAbility };
 
-        #region Utility Methods
+            if (!targeting.TrySelectTile(clickedTile, ctx)) return;
+
+            if (targeting.IsComplete)
+            {
+                // All required tiles selected — execute immediately.
+                GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
+                StartCoroutine(ExecuteAbilityWithAnimation(currentAbility, ctx, false));
+            }
+            else
+            {
+                // Refresh highlights to show the new selection state.
+                ShowMultiTileSelectionPreview(targeting, ctx);
+            }
+        }
+
+        /// <summary>
+        /// Handles mouse movement during multi-tile selection targeting.
+        /// Shows the selectable range, highlights already-chosen tiles, and previews the hovered tile.
+        /// </summary>
+        private void HandleMultiTileSelectionMouseMove(Vector3 mouseWorldPosition)
+        {
+            if (!(currentAbility.targeting is MultiTileSelectionTargeting multiTargeting)) return;
+
+            Tile newHover = GridManager.Instance.GetClosestTile(
+                mouseWorldPosition,
+                MapManager.Instance.CurrentConfiguration.tileSpacing);
+
+            if (newHover == hoveredTile) return;
+            hoveredTile = newHover;
+
+            var ctx = new AbilityContext { caster = currentActiveUnit, ability = currentAbility };
+            ShowMultiTileSelectionPreview(multiTargeting, ctx);
+
+            // Highlight the hovered tile if it's a valid selection
+            if (hoveredTile != null && multiTargeting.IsValidSelection(hoveredTile, ctx))
+                hoveredTile.Highlight(TileHighlightType.Occupied); // Distinct hover colour
+        }
+
+        /// <summary>
+        /// Refreshes the highlight state for multi-tile selection.
+        /// Selectable range = Moveable (cyan). Already selected = AttackRange (red). Hover = Occupied (dark).
+        /// </summary>
+        private void ShowMultiTileSelectionPreview(MultiTileSelectionTargeting targeting, AbilityContext ctx)
+        {
+            GridManager.Instance.ClearAllHighlights();
+
+            // Show all tiles the player can still select
+            foreach (var tile in targeting.GetTilesInRange(ctx))
+            {
+                if (!targeting.SelectedTiles.Contains(tile))
+                    tile.Highlight(TileHighlightType.Moveable);
+            }
+
+            // Already-selected tiles get a distinct colour so the player can track their choices
+            foreach (var tile in targeting.SelectedTiles)
+                tile.Highlight(TileHighlightType.AttackRange);
+        }
+
+        #endregion
 
 
         // Add new methods for input blocking control
@@ -1162,6 +1254,6 @@ namespace DDD.TNFY.BRAWL
                 return dir.z > 0 ? Vector2Int.up : Vector2Int.down;
         }
 
-        #endregion
+        #pragma endregion
     }
 }

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace DDD.TNFY.BRAWL
@@ -141,6 +142,10 @@ namespace DDD.TNFY.BRAWL
                 {
                     existing.RefreshDuration(effect.remainingRounds);
                     existing.effectPower = Mathf.Max(existing.effectPower, effect.effectPower);
+                    // VFX is intentionally not re-spawned on refresh. Re-applying fire to a tile
+                    // that is already on fire shouldn't flash again. If a future effect needs a
+                    // visual "reapplication" (e.g. ice refreezing), override this behaviour in a
+                    // subclass by calling SpawnApplicationVFX() from within Apply() at the right moment.
                     return;
                 }
             }
@@ -161,34 +166,34 @@ namespace DDD.TNFY.BRAWL
         }
 
         /// <summary>
-        /// Triggers all active effects as a coroutine (called by TurnManager at round end via
-        /// TriggerEnvironmentEffects). Each effect Apply() can yield — e.g. to wait for a hurt
-        /// animation before applying damage — so EndTurn waits for all feedback to finish before
-        /// starting the next turn. Works identically for PlayerUnit and EnemyUnit on the tile.
+        /// Fires at round end via TurnManager.TriggerEnvironmentEffects.
+        /// OnRoundEnd effects execute their Apply() coroutine.
+        /// OnEnter effects only tick their duration — they fire via TriggerOnEnterEffects instead.
         /// </summary>
         public IEnumerator TriggerEffects(int currentRound)
         {
             if (_activeEffects.Count == 0) yield break;
 
-            var ctx = new TileEffectContext
-            {
-                tile         = this,
-                currentRound = currentRound
-            };
-
             foreach (var instance in _activeEffects)
             {
                 if (instance.IsExpired) continue;
 
-                // Re-read currentUnit each iteration. If the previous effect killed the unit,
-                // currentUnit will be null here and Apply() will exit early rather than
-                // firing ReceiveDamage on an already-dead unit.
-                ctx.unitOnTile  = currentUnit;
-                ctx.applier     = instance.applier;
-                ctx.effectPower = instance.effectPower;
+                // Always tick the duration so OnEnter effects expire on the same schedule.
+                // Only Apply OnRoundEnd effects here.
+                if (instance.effectData.triggerTiming == TriggerTiming.OnRoundEnd)
+                {
+                    // Fresh context per iteration — see comments in TriggerOnEnterEffects.
+                    var ctx = new TileEffectContext
+                    {
+                        tile         = this,
+                        unitOnTile   = currentUnit,
+                        applier      = instance.applier,
+                        effectPower  = instance.effectPower,
+                        currentRound = currentRound
+                    };
 
-                // Apply() is a coroutine — yield on it so animations finish before we move on
-                yield return instance.effectData.Apply(ctx);
+                    yield return instance.effectData.Apply(ctx);
+                }
 
                 instance.remainingRounds--;
             }
@@ -205,6 +210,46 @@ namespace DDD.TNFY.BRAWL
             // Drop back to the normal visual once all effects have burned out
             if (_activeEffects.Count == 0)
                 ResetHighlight();
+        }
+
+        /// <summary>
+        /// Fires when a unit moves onto or through this tile during movement.
+        /// Triggers all OnEnter effects for the moving unit, regardless of whether
+        /// they are the tile's currentUnit (they may still be mid-path).
+        /// Does NOT decrement duration — that is handled at round end by TriggerEffects
+        /// so an effect can fire multiple times per round without expiring early.
+        /// Safe for both PlayerUnit and EnemyUnit.
+        /// </summary>
+        public IEnumerator TriggerOnEnterEffects(Unit movingUnit)
+        {
+            if (_activeEffects.Count == 0) yield break;
+
+            // Snapshot OnEnter effects — iterate a copy so the main list can be safely
+            // modified by Apply() if it kills the unit and prunes effects.
+            var onEnterEffects = _activeEffects
+                .Where(e => !e.IsExpired && e.effectData.triggerTiming == TriggerTiming.OnEnter)
+                .ToList();
+
+            if (onEnterEffects.Count == 0) yield break;
+
+            foreach (var instance in onEnterEffects)
+            {
+                // A fresh context per iteration prevents a resuming coroutine from reading
+                // stale data written by the next iteration (same pattern as TriggerEffects).
+                var ctx = new TileEffectContext
+                {
+                    tile         = this,
+                    unitOnTile   = movingUnit,   // The unit in motion, not currentUnit
+                    applier      = instance.applier,
+                    effectPower  = instance.effectPower,
+                    currentRound = 0             // Not a round-end trigger
+                };
+
+                yield return instance.effectData.Apply(ctx);
+
+                // If the effect killed the unit, stop processing further effects on it.
+                if (movingUnit == null || movingUnit.currentHealth <= 0) yield break;
+            }
         }
 
         /// <summary>
