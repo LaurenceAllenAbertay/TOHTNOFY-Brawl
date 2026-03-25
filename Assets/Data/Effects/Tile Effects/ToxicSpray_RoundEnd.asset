@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 66f0aac79acc6a442aafcd4c4fa436c9, type: 3}
-  m_Name: ToxicSprayTileEffect
+  m_Name: ToxicSpray_RoundEnd
   m_EditorClassIdentifier: 
-  effectName: Poisoned
-  description: Deals 3 damage when walking through this tile.
+  effectName: Poison Puddle
+  description: Deals 10 damage when walking through this tile.
   icon: {fileID: 21300000, guid: b19688a3c17b5de448068e4769902399, type: 3}
   effectColor: {r: 0.4967427, g: 0.107645065, b: 0.5566038, a: 1}
-  triggerTiming: 1
+  triggerTiming: 0
   applicationVFX: {fileID: 0}
   persistentVFX: {fileID: 0}
   removalVFX: {fileID: 0}

@@ -416,6 +416,34 @@ namespace DDD.TNFY.BRAWL
                     }
                 }
             }
+            else if (ability.targeting is MultiTileSelectionTargeting multiTileTargeting)
+            {
+                // Temporarily position unit at fromPosition for accurate range calculation
+                var originalTile = unit.currentTile;
+                unit.currentTile = fromPosition;
+                var ctx = new AbilityContext { caster = unit, ability = ability };
+
+                var validTiles = multiTileTargeting.GetTilesInRange(ctx);
+                unit.currentTile = originalTile;
+
+                if (validTiles.Count == 0) return 0;
+
+                // Prioritise tiles with enemies on them, then fill with remaining tiles
+                var tilesWithEnemies = validTiles.Where(t => t.currentUnit != null && !IsAlly(t.currentUnit)).ToList();
+                var emptyTiles = validTiles.Where(t => t.currentUnit == null).ToList();
+
+                var chosen = tilesWithEnemies.Take(multiTileTargeting.SelectionCount).ToList();
+                if (chosen.Count < multiTileTargeting.SelectionCount)
+                    chosen.AddRange(emptyTiles.Take(multiTileTargeting.SelectionCount - chosen.Count));
+
+                if (chosen.Count == 0) return 0;
+
+                var plan = CreateActionPlan(ability, abilitySlot, fromPosition, movementTarget, Vector2Int.zero, null);
+                plan.preSelectedTiles = chosen;
+                plan.CalculateScore(this, targets, teammates);
+                evaluatedActions.Add(plan);
+                return 1;
+            }
             else
             {
                 // Area abilities (AOE, Random AOE, etc.) - check if they would be useful
@@ -1164,7 +1192,16 @@ namespace DDD.TNFY.BRAWL
                 aimDir = plan.aimDirection,
                 targetTile = plan.targetTile
             };
-
+            
+            // Pre-populate selection state for MultiTileSelectionTargeting
+            if (ability.targeting is MultiTileSelectionTargeting multiSel && plan.preSelectedTiles != null)
+            {
+                ctx = new AbilityContext { caster = unit, ability = ability };
+                multiSel.BeginSelection(ctx);
+                foreach (var tile in plan.preSelectedTiles)
+                    multiSel.TrySelectTile(tile, ctx);
+            }
+            
             // Execute ability
             bool success = plan.targetTile != null ?
                 ability.ExecuteWithContext(ctx) :
@@ -1172,7 +1209,7 @@ namespace DDD.TNFY.BRAWL
 
             if (success)
             {
-                // NEW: Wait for complete ability sequence including camera transitions
+                // Wait for complete ability sequence including camera transitions
                 var combatManager = FindAnyObjectByType<CombatManager>();
 
                 // Wait for camera transitions and effects to complete

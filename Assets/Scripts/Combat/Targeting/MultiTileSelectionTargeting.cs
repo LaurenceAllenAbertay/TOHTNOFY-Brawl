@@ -36,11 +36,14 @@ namespace DDD.TNFY.BRAWL
         private readonly List<Tile> _selectedTiles = new List<Tile>();
         private bool _selectionActive = false;
 
+        public int SelectionCount => selectionCount;
+        
         /// <summary>Read-only view of the tiles chosen so far.</summary>
         public IReadOnlyList<Tile> SelectedTiles => _selectedTiles;
 
         /// <summary>True once the required number of unique tiles have been selected.</summary>
         public bool IsComplete => _selectedTiles.Count >= selectionCount;
+        
 
         // ── Session control ───────────────────────────────────────────────────────
 

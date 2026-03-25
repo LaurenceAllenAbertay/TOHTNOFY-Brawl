@@ -40,7 +40,6 @@ namespace DDD.TNFY.BRAWL
             {
                 _currentUnit = value;
                 occupied = (_currentUnit != null);
-                // Note: We no longer modify 'moveable' here - it's calculated dynamically
             }
         }
         [SerializeField] private Unit _currentUnit;
@@ -48,7 +47,7 @@ namespace DDD.TNFY.BRAWL
         public bool occupied { get; private set; }
 
         // ── Tile Effects ─────────────────────────────────────────────────────────
-        private readonly List<TileEffectInstance> _activeEffects = new List<TileEffectInstance>();
+        [SerializeField] private readonly List<TileEffectInstance> _activeEffects = new List<TileEffectInstance>();
 
         /// <summary>Read-only view of all effects currently active on this tile.</summary>
         public IReadOnlyList<TileEffectInstance> ActiveEffects => _activeEffects;
@@ -112,7 +111,10 @@ namespace DDD.TNFY.BRAWL
         // hazard stays visually marked after ClearAllHighlights() runs.
         public void ResetHighlight()
         {
-            ApplyHighlight(HasActiveEffects ? TileHighlightType.Danger : TileHighlightType.Normal);
+            if (HasActiveEffects)
+                ApplyEffectColor();
+            else
+                ApplyHighlight(TileHighlightType.Normal);
         }
 
         // Applies a highlight immediately (bypassing priority checks).
@@ -160,9 +162,21 @@ namespace DDD.TNFY.BRAWL
             if (persistent != null)
                 _persistentVFX[effect] = persistent;
 
-            // Immediately show hazard highlight so the tile is visually marked the moment
-            // an effect lands, not only after the next ClearAllHighlights() call.
-            Highlight(TileHighlightType.Danger);
+            ApplyEffectColor();
+        }
+        
+        // Applies the colour from the highest-priority active effect directly to the renderer,
+        // bypassing the enum highlight system which has no concept of custom per-effect colours.
+        // Uses the last-added effect's colour since that is the most recently placed hazard.
+        private void ApplyEffectColor()
+        {
+            if (_activeEffects.Count == 0) return;
+
+            // Use the most recently added effect's colour
+            var effectColor = _activeEffects[_activeEffects.Count - 1].effectData.effectColor;
+            currentHighlight = TileHighlightType.Danger; // Keep logical state as Danger for priority checks
+            if (tileRenderer != null)
+                tileRenderer.material.color = effectColor;
         }
 
         /// <summary>

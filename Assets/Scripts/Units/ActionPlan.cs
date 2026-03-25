@@ -20,6 +20,7 @@ namespace DDD.TNFY.BRAWL
         public int abilitySlot = -1;
         public Vector2Int aimDirection;
         public Tile targetTile;
+        public List<Tile> preSelectedTiles; // Used for MultiTileSelectionTargeting
         public Tile abilityFromPosition; // Position to use ability from (after movement)
         public bool isAbilityFirst = false;
 

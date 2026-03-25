@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8d69c248af93e6418bc4d2e5b53c2d5, type: 3}
-  m_Name: ToxicSprayApply
+  m_Name: ToxicSprayOnEnterEffect
   m_EditorClassIdentifier: 
-  tileEffectData: {fileID: 0}
-  rounds: 2
+  tileEffectData: {fileID: 11400000, guid: 8947b30134c428e43836e76e99d13bb7, type: 2}
+  rounds: 1
   effectPower: 10
-  placementMode: 0
+  placementMode: 1
   triggerImmediatelyIfOccupied: 0
