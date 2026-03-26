@@ -360,14 +360,10 @@ namespace DDD.TNFY.BRAWL
         {
             if (ShouldBlockInput()) return;
 
+            // Tile-based interactions are handled by HandleTileClicked
             if (IsTargetingAbility && currentAbility.targeting is SingleTargeting)
             {
-                // Single targeting uses tile click events via HandleTileClicked
-                return;
-            }
-            else if (IsTargetingAbility && currentAbility.targeting is MultiTileSelectionTargeting)
-            {
-                // Multi-tile selection uses tile click events via HandleTileClicked — do nothing here
+                // Single targeting uses tile click events
                 return;
             }
             else if (IsTargetingAbility)

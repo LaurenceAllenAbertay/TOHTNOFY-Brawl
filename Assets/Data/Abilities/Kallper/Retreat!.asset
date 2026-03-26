@@ -23,11 +23,7 @@ MonoBehaviour:
   passThroughUnits: 0
   maxTargets: 1
   canExecuteWithoutTargets: 0
-  animationState: Attack_Melee_1
-  animationTiming:
-    castEffectTime: 0.8
-    hitEffectTime: 0.85
-    applyEffectsTime: 0.82
+  animationState: Retreat!
   castEffectPrefab: {fileID: 0}
   castEffectOffset: {x: 0, y: 0, z: 0}
   parentCastEffectToCaster: 0

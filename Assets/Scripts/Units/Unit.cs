@@ -9,6 +9,10 @@ namespace DDD.TNFY.BRAWL
     {
         public CharacterData characterData;
 
+        [Header("Turn Order")]
+        [Tooltip("If true, this unit is always placed at the front of the turn order regardless of initiative.")]
+        public bool goesFirst = false;
+
         [Header("Runtime Stats")]
         public int currentHealth;
         public int currentAttack;
@@ -78,7 +82,6 @@ namespace DDD.TNFY.BRAWL
         public IEnumerator ExecuteAbilityAnimationSequence(AbilityContext ctx, List<Unit> targets)
         {
             var ability = ctx.ability;
-            var timing = ability.AnimationTiming;
 
             // Store context for effect execution
             currentAbilityContext = ctx;
@@ -109,14 +112,10 @@ namespace DDD.TNFY.BRAWL
         }
         private IEnumerator ExecuteTimedEffects(AbilityContext ctx, List<Unit> targets, float totalDuration)
         {
-            var timing = ctx.ability.AnimationTiming;
-
             if (enableDebugLogging)
-            {
                 Debug.Log($"Starting timed effects for {ctx.ability.AnimationState}");
-            }
 
-            // STEP 1: First move camera to caster
+            // STEP 1: Move camera to caster
             var cameraController = FindAnyObjectByType<CameraController>();
             if (cameraController != null)
             {
@@ -126,30 +125,47 @@ namespace DDD.TNFY.BRAWL
                     this.transform.position.z - 3.5f
                 );
                 casterCameraPosition = cameraController.ClampToBounds(casterCameraPosition);
-
                 yield return StartCoroutine(TransitionCameraToPosition(cameraController, casterCameraPosition));
 
                 // STEP 1.5: Wait for camera to fully settle
                 yield return new WaitForSeconds(1.5f);
             }
 
-            // STEP 2: Play the attack animation and cast effect
-            // NOTE: Self-knockback is intentionally deferred to AFTER the animation completes (see Step 3.5)
+            // STEP 2: Get animator
             var animator = unitAnimator?.GetComponent<Animator>();
             if (animator == null)
             {
-                // Fallback to immediate effects if no animator
                 yield return StartCoroutine(ExecuteImmediateEffects(ctx, targets));
                 yield break;
             }
 
-            // Start the animation AFTER camera has arrived and settled
+            // STEP 3: Play animation (after camera has arrived and settled)
             if (!string.IsNullOrEmpty(ctx.ability.AnimationState))
-            {
                 unitAnimator.PlayAnimation(ctx.ability.AnimationState);
+
+            // STEP 4: Subscribe to cast effect Animation Event
+            bool castEffectTriggered = false;
+            void OnCastEffect()
+            {
+                if (castEffectTriggered) return;
+                castEffectTriggered = true;
+                if (enableDebugLogging) Debug.Log("AnimEvent_CastEffect fired");
+                SpawnCastEffect(ctx);
+            }
+            unitAnimator.OnCastEffectEvent += OnCastEffect;
+
+            // STEP 5: Charge vs non-charge diverge here.
+            // Charge bypasses the animation-start wait — the charge movement is independent
+            // of whether the looping clip started cleanly, so we never fall into ExecuteImmediateEffects.
+            if (HasChargeEffect(ctx.ability))
+            {
+                yield return StartCoroutine(ExecuteChargeSequence(ctx, targets));
+                unitAnimator.OnCastEffectEvent -= OnCastEffect;
+                if (!castEffectTriggered) SpawnCastEffect(ctx);
+                yield break;
             }
 
-            // Wait for the animation state to actually start
+            // Non-charge: wait for the animation state to actually start
             float waitTime = 0f;
             while (waitTime < 1f && !animator.GetCurrentAnimatorStateInfo(0).IsName(ctx.ability.AnimationState))
             {
@@ -160,78 +176,62 @@ namespace DDD.TNFY.BRAWL
             if (!animator.GetCurrentAnimatorStateInfo(0).IsName(ctx.ability.AnimationState))
             {
                 Debug.LogWarning($"Animation {ctx.ability.AnimationState} never started, using immediate effects");
+                unitAnimator.OnCastEffectEvent -= OnCastEffect;
                 yield return StartCoroutine(ExecuteImmediateEffects(ctx, targets));
                 yield break;
             }
 
-            // Track which effects have been triggered
-            bool castEffectTriggered = false;
-
-            // Monitor animation progress for cast effect only
+            // STEP 6: Wait for the non-charge animation to finish naturally
             while (true)
             {
                 var stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-
-                // Break if we're no longer in the expected animation state
-                if (!stateInfo.IsName(ctx.ability.AnimationState))
-                    break;
-
-                float progress = stateInfo.normalizedTime;
-
-                // Handle looped animations (normalizedTime > 1)
-                if (progress > 1f)
-                    progress = progress - Mathf.Floor(progress);
-
-                // Trigger cast effect
-                if (!castEffectTriggered && progress >= timing.castEffectTime)
-                {
-                    castEffectTriggered = true;
-                    if (enableDebugLogging)
-                        Debug.Log($"Cast effect triggered at {progress:F3} progress (target: {timing.castEffectTime:F3})");
-                    SpawnCastEffect(ctx);
-                }
-
-                // Break if animation is complete (normalizedTime >= 1.0) for non-looping animations
-                if (stateInfo.normalizedTime >= 1.0f && !stateInfo.loop)
-                {
-                    break;
-                }
-
-                // For looping animations (like Charge), check if we need special handling
-                if (stateInfo.loop && HasChargeEffect(ctx.ability))
-                {
-                    // For charge effects, the loop will be stopped by the ChargeEffect itself
-                    yield return null;
-                    continue;
-                }
-
-                // For regular non-looping animations, continue monitoring
+                if (!stateInfo.IsName(ctx.ability.AnimationState)) break;
+                if (stateInfo.normalizedTime >= 1.0f && !stateInfo.loop) break;
                 yield return null;
             }
 
-            // Ensure cast effect was triggered
+            unitAnimator.OnCastEffectEvent -= OnCastEffect;
+
+            // Fallback: cast effect may not have fired if clip has no event yet
             if (!castEffectTriggered)
             {
-                if (enableDebugLogging) Debug.Log("Triggering missed cast effect");
+                if (enableDebugLogging) Debug.Log("AnimEvent_CastEffect fallback triggered");
                 SpawnCastEffect(ctx);
             }
 
-            // STEP 3.5: Fire self-knockback concurrently after animation completes.
-            // We StartCoroutine without yielding so it runs in parallel with camera/target effects below.
-            if (HasSelfKnockbackEffect(ctx.ability))
-            {
-                StartCoroutine(HandleSelfKnockbackEffects(ctx));
-            }
+            // STEP 6: Animation finished — now handle targets and remaining effects
+            yield return StartCoroutine(HandlePostAnimationEffects(ctx, targets));
+        }
 
-            // STEP 4: After caster animation completes, handle camera transitions and target effects
-            // Filter out self from targets for camera transitions (self-knockback handled above)
+        /// <summary>
+        /// Runs after the caster's non-charge animation ends.
+        /// Pans camera to each target, applies hit effects, then returns camera to caster.
+        /// </summary>
+        private IEnumerator HandlePostAnimationEffects(AbilityContext ctx, List<Unit> targets)
+        {
+            if (HasSelfKnockbackEffect(ctx.ability))
+                StartCoroutine(HandleSelfKnockbackEffects(ctx));
+
             var nonSelfTargets = targets.Where(t => t != this).ToList();
             if (nonSelfTargets.Count > 0)
-            {
                 yield return StartCoroutine(HandleCameraTransitionsAndEffects(ctx, nonSelfTargets));
-            }
 
-            // Apply any remaining effects that weren't handled by camera transitions
+            yield return StartCoroutine(HandleRemainingEffects(ctx, targets));
+        }
+
+        /// <summary>
+        /// Drives charge ability execution: delegates movement, real-time camera following,
+        /// pass-through hit effects, and the stop animation to ChargeEffect, then cleans up.
+        /// </summary>
+        private IEnumerator ExecuteChargeSequence(AbilityContext ctx, List<Unit> targets)
+        {
+            var chargeEffect = ctx.ability.effects.OfType<ChargeEffect>().FirstOrDefault();
+            if (chargeEffect == null) yield break;
+
+            var cameraController = FindAnyObjectByType<CameraController>();
+            yield return StartCoroutine(chargeEffect.ExecuteCharge(ctx, targets, unitAnimator, cameraController));
+
+            // Remaining effects that aren't handled inline by the charge (tile effects, caster self-buffs, etc.)
             yield return StartCoroutine(HandleRemainingEffects(ctx, targets));
         }
 
@@ -277,7 +277,8 @@ namespace DDD.TNFY.BRAWL
 
             var processedEffectTypes = new HashSet<System.Type>
     {
-        typeof(KnockbackEffect) // Already handled self-knockback
+        typeof(KnockbackEffect), // Already handled via HandleSelfKnockbackEffects
+        typeof(ChargeEffect)     // Always handled by ExecuteChargeSequence, never via this path
     };
 
             // Check if we used camera transitions
@@ -362,42 +363,22 @@ namespace DDD.TNFY.BRAWL
             var cameraController = FindAnyObjectByType<CameraController>();
             if (cameraController == null)
             {
-                // Fallback: execute effects without camera transitions
                 ApplyAbilityEffectsToTargets(ctx, targets);
                 SpawnHitEffects(ctx, targets);
                 yield break;
             }
 
-            // Check if this ability type should use camera transitions
             bool shouldUseTransitions = ctx.ability.targeting is LineTargeting || ctx.ability.targeting is SingleTargeting;
-
-            // ADDED: Also check for movement effects - they should always use camera transitions
             bool hasMovementEffect = ctx.ability.effects.Any(e => e is MovementEffect && !((MovementEffect)e).applyToCaster);
 
             if (!shouldUseTransitions && !hasMovementEffect)
             {
-                // Execute effects normally without camera transitions
                 ApplyAbilityEffectsToTargets(ctx, targets);
                 SpawnHitEffects(ctx, targets);
                 yield break;
             }
 
-            // Store original camera position for return (caster position)
-            Vector3 casterCameraPosition = new Vector3(
-                this.transform.position.x,
-                this.transform.position.y + 2f,
-                this.transform.position.z - 3.5f
-            );
-            casterCameraPosition = cameraController.ClampToBounds(casterCameraPosition);
-
-            if (ctx.ability.targeting is SingleTargeting || hasMovementEffect)
-            {
-                yield return StartCoroutine(HandleSingleTargetingEffects(ctx, targets, cameraController, casterCameraPosition));
-            }
-            else if (ctx.ability.targeting is LineTargeting)
-            {
-                yield return StartCoroutine(HandleLineTargetingEffects(ctx, targets, cameraController, casterCameraPosition));
-            }
+            yield return StartCoroutine(HandleSingleTargetingEffects(ctx, targets, cameraController));
         }
 
         private void ApplyAbilityEffectsToTargets(AbilityContext ctx, List<Unit> targets)
@@ -421,158 +402,24 @@ namespace DDD.TNFY.BRAWL
             }
         }
 
-        private IEnumerator HandleSingleTargetingEffects(AbilityContext ctx, List<Unit> targets, CameraController cameraController, Vector3 returnCameraPosition)
+        private IEnumerator HandleSingleTargetingEffects(AbilityContext ctx, List<Unit> targets, CameraController cameraController)
         {
             foreach (var target in targets)
             {
                 if (target == null) continue;
 
-                // Transition camera to target
                 yield return StartCoroutine(TransitionCameraToUnit(cameraController, target));
 
-                // Apply effects to this target
                 var singleTargetList = new List<Unit> { target };
-
-                // Determine animation order and play effects
                 yield return StartCoroutine(PlayTargetEffectsWithAnimation(ctx, singleTargetList));
 
-                // Small delay between targets
                 yield return new WaitForSeconds(0.3f);
             }
 
-            // Return camera to caster's current position (may have moved)
-            Vector3 finalCasterPosition = new Vector3(
+            yield return StartCoroutine(TransitionCameraToPosition(cameraController, cameraController.ClampToBounds(new Vector3(
                 this.transform.position.x,
                 this.transform.position.y + 2f,
-                this.transform.position.z - 3.5f
-            );
-            finalCasterPosition = cameraController.ClampToBounds(finalCasterPosition);
-
-            yield return StartCoroutine(TransitionCameraToPosition(cameraController, finalCasterPosition));
-        }
-
-        private IEnumerator HandleLineTargetingEffects(AbilityContext ctx, List<Unit> targets, CameraController cameraController, Vector3 returnCameraPosition)
-        {
-            if (targets.Count == 0)
-            {
-                yield break;
-            }
-
-            // Calculate zoom-out position to cover all targets
-            Vector3 zoomOutPosition = CalculateZoomOutPosition(ctx, targets);
-
-            // Transition camera to zoom-out view
-            yield return StartCoroutine(TransitionCameraToPosition(cameraController, zoomOutPosition));
-
-            // Check if this is a charge effect (special timing)
-            bool hasChargeEffect = HasChargeEffect(ctx.ability);
-
-            if (hasChargeEffect)
-            {
-                yield return StartCoroutine(HandleChargeLineEffects(ctx, targets, cameraController));
-            }
-            else
-            {
-                // Play all effects simultaneously
-                yield return StartCoroutine(PlayTargetEffectsWithAnimation(ctx, targets));
-            }
-
-            // Return camera to caster's current position (may have moved if charge effect)
-            Vector3 finalCasterPosition = new Vector3(
-                this.transform.position.x,
-                this.transform.position.y + 2f,
-                this.transform.position.z - 3.5f
-            );
-            finalCasterPosition = cameraController.ClampToBounds(finalCasterPosition);
-
-            yield return StartCoroutine(TransitionCameraToPosition(cameraController, finalCasterPosition));
-        }
-
-        private IEnumerator HandleChargeLineEffects(AbilityContext ctx, List<Unit> targets, CameraController cameraController)
-        {
-            // Get charge effect to access charge speed
-            var chargeEffect = ctx.ability.effects.OfType<ChargeEffect>().FirstOrDefault();
-            float chargeSpeed = chargeEffect?.chargeSpeed ?? 8f;
-
-            // Calculate caster's starting position
-            Vector3 casterStartPosition = this.transform.position;
-
-            // Get the traversal tiles to understand the path
-            var traversalTiles = ctx.ability.targeting.GetTraversal(ctx);
-
-            // Apply effects to targets based on their distance from caster start
-            foreach (var target in targets)
-            {
-                if (target?.currentTile == null) continue;
-
-                // Calculate when this target should be affected based on charge timing
-                float distanceFromStart = GetTileDistanceInPath(traversalTiles, target.currentTile);
-                float timeToReachTarget = distanceFromStart / chargeSpeed;
-
-                // Start coroutine for this target's effects with appropriate delay
-                StartCoroutine(DelayedTargetEffects(ctx, target, timeToReachTarget));
-            }
-
-            // Wait for the charge to complete (time for caster to reach end of path)
-            float totalChargeTime = traversalTiles.Count / chargeSpeed;
-            yield return new WaitForSeconds(totalChargeTime);
-        }
-
-        private IEnumerator DelayedTargetEffects(AbilityContext ctx, Unit target, float delay)
-        {
-            yield return new WaitForSeconds(delay);
-
-            var singleTargetList = new List<Unit> { target };
-            yield return StartCoroutine(PlayTargetEffectsWithAnimation(ctx, singleTargetList));
-        }
-
-        private float GetTileDistanceInPath(List<Tile> path, Tile targetTile)
-        {
-            for (int i = 0; i < path.Count; i++)
-            {
-                if (path[i] == targetTile)
-                {
-                    return i + 1; // Distance is index + 1 (since we start from position 0)
-                }
-            }
-            return 0f; // Target not in path
-        }
-
-        private Vector3 CalculateZoomOutPosition(AbilityContext ctx, List<Unit> targets)
-        {
-            if (targets.Count == 0) return this.transform.position;
-
-            // For single target, use the standard close offset
-            if (targets.Count == 1)
-            {
-                var target = targets[0];
-                return new Vector3(
-                    target.transform.position.x,
-                    target.transform.position.y + 2f,
-                    target.transform.position.z - 3.5f
-                );
-            }
-
-            // For multiple targets, calculate bounds and zoom out appropriately
-            Vector3 min = targets[0].transform.position;
-            Vector3 max = targets[0].transform.position;
-
-            foreach (var target in targets)
-            {
-                Vector3 pos = target.transform.position;
-                min = Vector3.Min(min, pos);
-                max = Vector3.Max(max, pos);
-            }
-
-            // Calculate center point
-            Vector3 center = (min + max) * 0.5f;
-
-            // Calculate how far we need to pull back based on the spread of targets
-            float spread = Vector3.Distance(min, max);
-            float pullBackDistance = Mathf.Max(3.5f, spread * 0.8f + 2f); // Minimum 3.5, scale with spread
-            float heightOffset = Mathf.Max(2f, spread * 0.3f + 1f); // Minimum 2, scale with spread
-
-            return new Vector3(center.x, center.y + heightOffset, center.z - pullBackDistance);
+                this.transform.position.z - 3.5f))));
         }
 
         private IEnumerator TransitionCameraToUnit(CameraController cameraController, Unit targetUnit)
@@ -673,21 +520,27 @@ namespace DDD.TNFY.BRAWL
             {
                 var cameraController = FindAnyObjectByType<CameraController>();
 
-                foreach (var target in targets)
-                {
-                    PlayTargetAnimation(target, TargetAnimationType.Movement);
-                }
-
-                // Apply movement effects and follow with camera if needed
+                // Fire movement via Apply — this was already working and is left unchanged
                 foreach (var effect in movementEffects)
-                {
                     effect.Apply(ctx, targets);
-                }
 
-                // ALWAYS follow moved units with camera for movement effects
+                // Camera follow: track the first moving target's live position for the movement duration.
+                // The camera is already panned to the target by HandleSingleTargetingEffects, so the
+                // offset captured here is the correct one to maintain throughout the movement.
                 if (cameraController != null && targets.Count > 0)
                 {
-                    yield return StartCoroutine(FollowMovedUnits(targets, cameraController));
+                    var trackedTarget = targets[0];
+                    Vector3 cameraOffset = cameraController.transform.position - trackedTarget.transform.position;
+                    float trackDuration = movementEffects.Max(e => e.movementDurationPerTile * e.moveDistance) + 0.3f;
+                    float elapsed = 0f;
+
+                    while (elapsed < trackDuration)
+                    {
+                        cameraController.transform.position = cameraController.ClampToBounds(
+                            trackedTarget.transform.position + cameraOffset);
+                        elapsed += Time.deltaTime;
+                        yield return null;
+                    }
                 }
                 else
                 {
@@ -797,55 +650,6 @@ namespace DDD.TNFY.BRAWL
                 }
             }
             return false;
-        }
-
-        private IEnumerator FollowMovedUnits(List<Unit> targets, CameraController cameraController)
-        {
-            if (targets.Count == 0) yield break;
-
-            Vector3 cameraTarget;
-
-            if (targets.Count == 1)
-            {
-                // Single target - use standard close offset
-                var target = targets[0];
-                cameraTarget = new Vector3(
-                    target.transform.position.x,
-                    target.transform.position.y + 2f,
-                    target.transform.position.z - 3.5f
-                );
-            }
-            else
-            {
-                // Multiple targets - calculate appropriate zoom-out position
-                Vector3 min = targets[0].transform.position;
-                Vector3 max = targets[0].transform.position;
-
-                foreach (var target in targets)
-                {
-                    if (target?.currentTile != null)
-                    {
-                        Vector3 pos = target.transform.position;
-                        min = Vector3.Min(min, pos);
-                        max = Vector3.Max(max, pos);
-                    }
-                }
-
-                Vector3 center = (min + max) * 0.5f;
-                float spread = Vector3.Distance(min, max);
-                float pullBackDistance = Mathf.Max(3.5f, spread * 0.8f + 2f);
-                float heightOffset = Mathf.Max(2f, spread * 0.3f + 1f);
-
-                cameraTarget = new Vector3(center.x, center.y + heightOffset, center.z - pullBackDistance);
-            }
-
-            cameraTarget = cameraController.ClampToBounds(cameraTarget);
-
-            // Transition camera to follow moved units
-            yield return StartCoroutine(TransitionCameraToPosition(cameraController, cameraTarget));
-
-            // Brief pause to show the result
-            yield return new WaitForSeconds(0.8f);
         }
 
         // NEW METHOD: Proper coroutine for getting animation duration

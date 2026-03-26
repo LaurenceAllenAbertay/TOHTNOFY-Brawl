@@ -1,6 +1,7 @@
 using DDD.TNFY.BRAWL;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "TNFY Brawl/Effects/Charge Effect")]
@@ -14,118 +15,156 @@ public class ChargeEffect : AbilityEffect
     [Tooltip("If true, caster charges until blocked")]
     public bool chargeUntilBlocked = false;
 
+    [Header("Animation")]
+    [Tooltip("Animation state to play when the charge lands. Leave empty to return to Idle.")]
+    [SerializeField] private string stopAnimationState = "";
+
     public override void Apply(AbilityContext ctx, IReadOnlyList<Unit> targets)
     {
-        if (ctx?.caster == null) return;
-
-        // Calculate the movement destination based on our settings
-        Tile destination = CalculateDestination(ctx, targets);
-
-        if (destination != null && destination != ctx.caster.currentTile)
-        {
-            // NEW: Clear all tile highlights before starting charge animation
-            GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
-
-            // Start the charge movement animation - displacement will happen when we arrive
-            ctx.caster.StartCoroutine(AnimateChargeMovement(ctx.caster, destination, chargeSpeed, ctx.aimDir));
-        }
+        // Apply is intentionally unused in the new execution flow.
+        // Charge abilities are driven by Unit.ExecuteChargeSequence → ChargeEffect.ExecuteCharge.
+        Debug.LogWarning($"ChargeEffect.Apply was called directly on {ctx?.ability?.abilityName} — this should not happen. Use ExecuteCharge via ExecuteChargeSequence.");
     }
 
-    private IEnumerator AnimateChargeMovement(Unit caster, Tile destinationTile, float speed, Vector2Int aimDirection)
+    /// <summary>
+    /// Full charge execution coroutine: moves the caster, follows the camera in real-time,
+    /// triggers hurt animations on units the caster passes through, then plays the stop animation.
+    /// Called by Unit.ExecuteChargeSequence; not called via Apply.
+    /// </summary>
+    public IEnumerator ExecuteCharge(AbilityContext ctx, IReadOnlyList<Unit> targets, UnitAnimator casterAnimator, CameraController cameraController)
     {
-        // Store reference to combat manager for state management
+        if (ctx?.caster == null) yield break;
+
+        var caster = ctx.caster;
         var combatManager = Object.FindAnyObjectByType<CombatManager>();
         bool isPlayerUnit = caster is PlayerUnit;
 
-        // Store the unit that might need displacement (if any)
-        Unit unitToDisplace = null;
-        if (destinationTile.occupied && destinationTile.currentUnit != caster)
+        Tile destination = CalculateDestination(ctx, targets);
+        if (destination == null || destination == caster.currentTile)
         {
-            unitToDisplace = destinationTile.currentUnit;
+            RestoreHighlightingAfterCharge(caster, combatManager, isPlayerUnit);
+            yield break;
+        }
 
-            // Check if displacement is possible before starting animation
-            if (!CanDisplaceUnit(unitToDisplace, aimDirection))
+        // Check if the destination is occupied and we can displace
+        Unit unitToDisplace = null;
+        if (destination.occupied && destination.currentUnit != caster)
+        {
+            unitToDisplace = destination.currentUnit;
+            if (!CanDisplaceUnit(unitToDisplace, ctx.aimDir))
             {
-                Debug.LogWarning($"ChargeEffect: Cannot displace unit at {destinationTile.gridPosition}, charge blocked");
-                // Restore highlights since we're not moving
+                Debug.LogWarning($"ChargeEffect: Cannot displace unit at {destination.gridPosition}, charge blocked");
                 RestoreHighlightingAfterCharge(caster, combatManager, isPlayerUnit);
                 yield break;
             }
         }
 
+        GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
+
         Vector3 startPos = caster.transform.position;
-        Vector3 endPos = destinationTile.transform.position;
-
-        var cameraController = GameObject.FindAnyObjectByType<CameraController>();
-        bool shouldMoveCamera = cameraController != null;
-
-        Vector3 cameraStartPos = Vector3.zero;
-        Vector3 cameraTargetPos = Vector3.zero;
-
-        if (shouldMoveCamera)
-        {
-            cameraController.enabled = false;
-            cameraStartPos = cameraController.transform.position;
-            cameraTargetPos = new Vector3(
-                endPos.x,
-                cameraStartPos.y,
-                endPos.z - 6.5f
-            );
-            cameraTargetPos = cameraController.ClampToBounds(cameraTargetPos);
-        }
-
+        Vector3 endPos = destination.transform.position;
         float distance = Vector3.Distance(startPos, endPos);
-        float duration = distance / speed;
+        float duration = distance / chargeSpeed;
 
-        var unitAnimator = caster.GetComponent<UnitAnimator>();
-        bool hasAnimator = unitAnimator != null;
-
-        if (hasAnimator)
+        // Pre-calculate progress values at which the caster passes each target's tile
+        var traversalTiles = ctx.ability.targeting.GetTraversal(ctx);
+        var passProgressByTarget = new Dictionary<Unit, float>();
+        if (targets != null)
         {
-            unitAnimator.PlayMove();
+            for (int i = 0; i < traversalTiles.Count; i++)
+            {
+                var tileUnit = traversalTiles[i].currentUnit;
+                if (tileUnit != null && tileUnit != caster && targets.Contains(tileUnit))
+                {
+                    // Use the midpoint of the tile in the path so the hit fires as the caster crosses it
+                    passProgressByTarget[tileUnit] = (float)(i + 0.5f) / traversalTiles.Count;
+                }
+            }
         }
+        var triggeredTargets = new HashSet<Unit>();
+
+        // Disable camera controller so we can drive it manually
+        if (cameraController != null) cameraController.enabled = false;
+
+        // Capture the camera's current offset from the caster so we maintain the same
+        // distance and height the camera settled at after the initial pan.
+        Vector3 cameraOffset = cameraController != null
+            ? cameraController.transform.position - caster.transform.position
+            : new Vector3(0f, 0f, -6.5f);
 
         float elapsed = 0f;
         while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
-            float t = elapsed / duration;
+            float t = Mathf.Clamp01(elapsed / duration);
             float easedT = Mathf.Pow(t, 0.7f);
 
             caster.transform.position = Vector3.Lerp(startPos, endPos, easedT);
 
-            if (shouldMoveCamera)
+            // Camera follows the caster using the same offset it had when the charge started
+            if (cameraController != null)
             {
-                float smoothCameraT = Mathf.SmoothStep(0f, 1f, t);
-                cameraController.transform.position = Vector3.Lerp(cameraStartPos, cameraTargetPos, smoothCameraT);
+                Vector3 camPos = caster.transform.position + cameraOffset;
+                cameraController.transform.position = cameraController.ClampToBounds(camPos);
+            }
+
+            // Trigger hurt effects on targets as the caster reaches their tile position
+            foreach (var kvp in passProgressByTarget)
+            {
+                if (!triggeredTargets.Contains(kvp.Key) && t >= kvp.Value)
+                {
+                    triggeredTargets.Add(kvp.Key);
+                    TriggerPassThroughHit(ctx, kvp.Key);
+                }
             }
 
             yield return null;
         }
 
+        // Snap to final position and restore camera control
         caster.transform.position = endPos;
-        if (shouldMoveCamera)
-        {
-            cameraController.transform.position = cameraTargetPos;
-            cameraController.enabled = true;
-        }
+        if (cameraController != null) cameraController.enabled = true;
 
-        if (hasAnimator)
-        {
-            unitAnimator.PlayIdle();
-        }
+        // Play the stop animation (or return to idle if none configured)
+        if (!string.IsNullOrEmpty(stopAnimationState) && casterAnimator != null)
+            casterAnimator.PlayAnimation(stopAnimationState);
+        else if (casterAnimator != null)
+            casterAnimator.PlayIdle();
 
-        // NEW: Apply animated displacement AFTER arriving at the destination
+        // Displace any unit that was occupying the destination tile
         if (unitToDisplace != null)
+            yield return caster.StartCoroutine(ApplyChargeDisplacementWithAnimation(unitToDisplace, ctx.aimDir));
+
+        // Commit the caster's logical grid position now that all displacement is resolved
+        caster.SetCurrentTileLogical(destination);
+
+        RestoreHighlightingAfterCharge(caster, combatManager, isPlayerUnit);
+    }
+
+    /// <summary>
+    /// Applies a hurt animation, spawns the hit VFX, and applies damage effects to a unit
+    /// the caster passes through during the charge.
+    /// </summary>
+    private void TriggerPassThroughHit(AbilityContext ctx, Unit target)
+    {
+        // Play hurt animation on the target
+        target.GetComponent<UnitAnimator>()?.PlayHurt();
+
+        // Spawn hit VFX at the target's position
+        if (ctx.ability.HitEffectPrefab != null)
         {
-            yield return caster.StartCoroutine(ApplyChargeDisplacementWithAnimation(unitToDisplace, aimDirection));
+            var fx = Object.Instantiate(ctx.ability.HitEffectPrefab,
+                target.transform.position + ctx.ability.HitEffectOffset, Quaternion.identity);
+            Object.Destroy(fx, 2f);
         }
 
-        // Set the caster's logical position after displacement is handled
-        caster.SetCurrentTileLogical(destinationTile);
-
-        // Restore movement highlighting after charge completes
-        RestoreHighlightingAfterCharge(caster, combatManager, isPlayerUnit);
+        // Apply damage and any other per-target effects
+        var singleTarget = new List<Unit> { target };
+        foreach (var effect in ctx.ability.effects)
+        {
+            if (effect is DamageEffect || effect is StatusEffect)
+                effect.Apply(ctx, singleTarget);
+        }
     }
 
     /// <summary>

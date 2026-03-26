@@ -53,6 +53,22 @@ namespace DDD.TNFY.BRAWL
             }
         }
 
+        #region Animation Events
+
+        /// <summary>
+        /// Fired when the cast effect Animation Event is hit on a clip.
+        /// Subscribe in Unit before playing the animation; unsubscribe after.
+        /// </summary>
+        public event System.Action OnCastEffectEvent;
+
+        /// <summary>
+        /// Called by Unity Animation Events on clips — name must match exactly in the Animation window.
+        /// Add an Animation Event named "AnimEvent_CastEffect" at the desired frame of each ability clip.
+        /// </summary>
+        public void AnimEvent_CastEffect() => OnCastEffectEvent?.Invoke();
+
+        #endregion
+
         #region Public Animation Methods
 
         /// <summary>

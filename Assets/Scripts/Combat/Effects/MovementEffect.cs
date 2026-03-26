@@ -25,23 +25,17 @@ public class MovementEffect : AbilityEffect
 
         if (applyToCaster)
         {
-            // Apply to caster only (original SelfMovementEffect behavior)
             if (ctx.caster.currentTile != null)
-            {
                 ctx.caster.StartCoroutine(ApplyMovementWithAnimation(ctx, ctx.caster));
-            }
         }
         else
         {
-            // Apply to all targets
             if (targets != null)
             {
                 foreach (var target in targets)
                 {
                     if (target?.currentTile != null)
-                    {
                         ctx.caster.StartCoroutine(ApplyMovementWithAnimation(ctx, target));
-                    }
                 }
             }
         }

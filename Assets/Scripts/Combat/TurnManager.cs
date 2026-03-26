@@ -85,10 +85,15 @@ namespace DDD.TNFY.BRAWL
             });
 
             // Sort by initiative, break ties randomly
-            turnOrder = rolled
+            var sorted = rolled
                 .OrderByDescending(x => x.initiative)
                 .ThenBy(x => Random.value)
                 .Select(x => x.unit)
+                .ToList();
+
+            // Stable partition: goesFirst units keep their relative initiative order at the front
+            turnOrder = sorted.Where(u => u.goesFirst)
+                .Concat(sorted.Where(u => !u.goesFirst))
                 .ToList();
 
             // Debug Mode

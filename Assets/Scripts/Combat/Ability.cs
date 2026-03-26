@@ -13,15 +13,6 @@ namespace DDD.TNFY.BRAWL
         Custom          // anything unique
     }
 
-    [System.Serializable]
-    public class AbilityAnimationTiming
-    {
-        [Header("Animation Event Timing (as percentage of total animation)")]
-        [Range(0f, 1f)] public float castEffectTime = 0.8f;
-        [Range(0f, 1f)] public float hitEffectTime = 0.85f;
-        [Range(0f, 1f)] public float applyEffectsTime = 0.82f;
-    }
-
     [CreateAssetMenu(menuName = "TNFY Brawl/Ability")]
     public class Ability : ScriptableObject
     {
@@ -53,9 +44,6 @@ namespace DDD.TNFY.BRAWL
 
         [Header("Animation & Visual Effects")]
         [SerializeField] private string animationState = "Attack_Melee_1"; // Specific animation to play
-        [SerializeField] private AbilityAnimationTiming animationTiming = new AbilityAnimationTiming();
-
-        public AbilityAnimationTiming AnimationTiming => animationTiming;
 
         [Header("Cast Effect (when ability starts)")]
         [SerializeField] private GameObject castEffectPrefab;              // Effect when ability casts
