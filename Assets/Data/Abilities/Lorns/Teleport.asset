@@ -22,7 +22,7 @@ MonoBehaviour:
   canHitAllies: 0
   passThroughUnits: 1
   maxTargets: 1
-  canExecuteWithoutTargets: 0
+  canExecuteWithoutTargets: 1
   animationState: Teleport
   animationTiming:
     castEffectTime: 0.8
