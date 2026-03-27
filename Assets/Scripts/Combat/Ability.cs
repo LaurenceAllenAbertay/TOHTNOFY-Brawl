@@ -43,17 +43,17 @@ namespace DDD.TNFY.BRAWL
         public bool canExecuteWithoutTargets = false;
 
         [Header("Animation & Visual Effects")]
-        [SerializeField] private string animationState = "Attack_Melee_1"; // Specific animation to play
+        [SerializeField] private string animationState = "Attack_Melee_1";
 
         [Header("Cast Effect (when ability starts)")]
-        [SerializeField] private GameObject castEffectPrefab;              // Effect when ability casts
-        [SerializeField] private Vector3 castEffectOffset = Vector3.zero;  // Offset from caster position
-        [SerializeField] private bool parentCastEffectToCaster = false;     // Whether to parent the effect to the caster
+        [SerializeField] private GameObject castEffectPrefab;
+        [SerializeField] private Vector3 castEffectOffset = Vector3.zero;
+        [SerializeField] private bool parentCastEffectToCaster = false;
 
         [Header("Hit Effect (when ability impacts targets)")]
-        [SerializeField] private GameObject hitEffectPrefab;               // Effect when ability hits
-        [SerializeField] private Vector3 hitEffectOffset = Vector3.zero;   // Offset from target position
-        [SerializeField] private bool parentHitEffectToTarget = false;     // Whether to parent the effect to the target
+        [SerializeField] private GameObject hitEffectPrefab;
+        [SerializeField] private Vector3 hitEffectOffset = Vector3.zero;
+        [SerializeField] private bool parentHitEffectToTarget = false;
 
         [Header("Composition")]
         public AbilityTargeting targeting;
@@ -80,48 +80,39 @@ namespace DDD.TNFY.BRAWL
                 aimDir = aimDirection
             };
 
-            // Let targeting resolve the units (and/or tiles) to affect
             var targets = targeting.SelectTargets(ctx);
 
-            // Check if we can execute with the current target count
             if (targets.Count == 0 && !canExecuteWithoutTargets)
-                return false; // Ability was blocked - no execution
+                return false;
 
-            // Start the full execution sequence with proper timing
             caster.StartCoroutine(ExecuteAbilitySequence(ctx, targets));
-
-            return true; // Ability was successfully executed
+            return true;
         }
 
-        // Handle single-target abilities with context
         public bool ExecuteWithContext(AbilityContext ctx)
         {
             if (ctx == null || targeting == null || effects == null || effects.Count == 0)
                 return false;
 
-            // Let targeting resolve the units (and/or tiles) to affect
             var targets = targeting.SelectTargets(ctx);
 
-            // Check if we can execute with the current target count
             if (targets.Count == 0 && !canExecuteWithoutTargets)
-                return false; // Ability was blocked - no execution
+                return false;
 
-            // Start the full execution sequence with proper timing
             ctx.caster.StartCoroutine(ExecuteAbilitySequence(ctx, targets));
-
-            return true; // Ability was successfully executed
+            return true;
         }
 
         private IEnumerator ExecuteAbilitySequence(AbilityContext ctx, List<Unit> targets)
         {
-            // Step 0: Face the ability direction
+            // Face the ability direction, then hand off to Unit's animation pipeline.
+            // Unit.ExecuteAbilityAnimationSequence delegates to AbilitySequencer.BeginSequence
+            // and polls until the sequence is complete — no direct reference to AbilitySequencer
+            // needed here.
             ctx.caster.FaceDirection(ctx.aimDir);
-
-            // Use the timing-based animation system
             yield return ctx.caster.StartCoroutine(ctx.caster.ExecuteAbilityAnimationSequence(ctx, targets));
         }
 
-        // Validation method to check if ability can be used
         public bool CanExecute(Unit caster, Vector2Int aimDirection)
         {
             if (caster == null || targeting == null || effects == null || effects.Count == 0)
@@ -134,7 +125,6 @@ namespace DDD.TNFY.BRAWL
                 aimDir = aimDirection
             };
 
-            // Check if we have valid targets or can execute without targets
             var targets = targeting.SelectTargets(ctx);
             return targets.Count > 0 || canExecuteWithoutTargets;
         }

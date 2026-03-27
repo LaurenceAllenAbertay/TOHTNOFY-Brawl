@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 766006976195313626}
   - component: {fileID: 1182996032201788091}
   - component: {fileID: 6732153047357301430}
+  - component: {fileID: 1097064995507393991}
   - component: {fileID: 4699050981359284718}
   m_Layer: 0
   m_Name: Kallper
@@ -125,12 +126,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterData: {fileID: 11400000, guid: a2cfea01f0bb708488987177284d6666, type: 2}
+  goesFirst: 0
   currentHealth: 0
   currentAttack: 0
   currentDefense: 0
   currentTile: {fileID: 0}
   currentSpeed: 0
   canMove: 0
+  enableDebugLogging: 0
+--- !u!114 &1097064995507393991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7349237561839375101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b1256a2c94a2044ebb6021cdb059953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   enableDebugLogging: 0
 --- !u!114 &4699050981359284718
 MonoBehaviour:

@@ -151,12 +151,7 @@ public class ChargeEffect : AbilityEffect
         target.GetComponent<UnitAnimator>()?.PlayHurt();
 
         // Spawn hit VFX at the target's position
-        if (ctx.ability.HitEffectPrefab != null)
-        {
-            var fx = Object.Instantiate(ctx.ability.HitEffectPrefab,
-                target.transform.position + ctx.ability.HitEffectOffset, Quaternion.identity);
-            Object.Destroy(fx, 2f);
-        }
+        CombatVFXManager.Instance?.SpawnHitEffects(ctx, new List<Unit> { target });
 
         // Apply damage and any other per-target effects
         var singleTarget = new List<Unit> { target };

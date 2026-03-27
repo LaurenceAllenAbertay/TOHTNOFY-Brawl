@@ -1661,7 +1661,7 @@ GameObject:
   - component: {fileID: 179018510}
   - component: {fileID: 179018511}
   m_Layer: 0
-  m_Name: StatusEffectManager
+  m_Name: Status Effect Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4147,8 +4147,10 @@ GameObject:
   - component: {fileID: 400882047}
   - component: {fileID: 400882046}
   - component: {fileID: 400882045}
+  - component: {fileID: 400882049}
   - component: {fileID: 400882044}
   - component: {fileID: 400882043}
+  - component: {fileID: 400882048}
   m_Layer: 0
   m_Name: Evil Lorns (3)
   m_TagString: Untagged
@@ -4306,6 +4308,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &400882048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400882041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddea3100216f92f448f8216bc00fccb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &400882049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 400882041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b1256a2c94a2044ebb6021cdb059953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableDebugLogging: 0
 --- !u!1 &400907950
 GameObject:
   m_ObjectHideFlags: 0
@@ -5318,6 +5345,7 @@ MonoBehaviour:
   moveSpeed: 5
   focusTransitionDuration: 1
   cameraZOffset: 3.5
+  cameraYOffset: 2
   boundsBox: {fileID: 400907951}
   boundsPadding: 1
   visualizeBounds: 0
@@ -5900,7 +5928,7 @@ GameObject:
   - component: {fileID: 625940012}
   - component: {fileID: 625940013}
   m_Layer: 0
-  m_Name: GridManager
+  m_Name: Grid Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10015,7 +10043,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6732153047357301430, guid: e00964b9cdd292540adf00515fbcf420, type: 3}
       propertyPath: goesFirst
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6732153047357301430, guid: e00964b9cdd292540adf00515fbcf420, type: 3}
       propertyPath: currentTile
@@ -10477,7 +10505,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5277986403011658436, guid: ff3a7c448e9ed2d428a0d1c08b1514f9, type: 3}
       propertyPath: goesFirst
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5277986403011658436, guid: ff3a7c448e9ed2d428a0d1c08b1514f9, type: 3}
       propertyPath: currentTile
@@ -11487,8 +11515,10 @@ GameObject:
   - component: {fileID: 1243853702}
   - component: {fileID: 1243853701}
   - component: {fileID: 1243853700}
+  - component: {fileID: 1243853704}
   - component: {fileID: 1243853699}
   - component: {fileID: 1243853698}
+  - component: {fileID: 1243853703}
   m_Layer: 0
   m_Name: Evil Lorns (1)
   m_TagString: Untagged
@@ -11646,6 +11676,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1243853703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243853696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddea3100216f92f448f8216bc00fccb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1243853704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243853696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b1256a2c94a2044ebb6021cdb059953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableDebugLogging: 0
 --- !u!1 &1248295990
 GameObject:
   m_ObjectHideFlags: 0
@@ -11762,9 +11817,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1563940148}
+  - {fileID: 2045497088}
   - {fileID: 625940012}
   - {fileID: 1936361657}
-  - {fileID: 1563940148}
   - {fileID: 1655662497}
   - {fileID: 179018510}
   - {fileID: 1910240537}
@@ -11772,7 +11828,6 @@ Transform:
   - {fileID: 1914919402}
   - {fileID: 1360352214}
   - {fileID: 1364886960}
-  - {fileID: 2045497088}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1259476029
@@ -12500,7 +12555,7 @@ GameObject:
   - component: {fileID: 1360352214}
   - component: {fileID: 1360352215}
   m_Layer: 0
-  m_Name: JumpSystem
+  m_Name: Jump System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12546,7 +12601,7 @@ GameObject:
   - component: {fileID: 1364886960}
   - component: {fileID: 1364886961}
   m_Layer: 0
-  m_Name: DynamicMusicManager
+  m_Name: Dynamic Music Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14184,8 +14239,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1563940148}
   - component: {fileID: 1563940149}
+  - component: {fileID: 1563940152}
+  - component: {fileID: 1563940151}
+  - component: {fileID: 1563940150}
   m_Layer: 0
-  m_Name: CombatManager
+  m_Name: Combat Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14219,7 +14277,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
+--- !u!114 &1563940150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563940147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5a215c2011f7854daeee2c3020d49e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableDebugLogging: 0
+--- !u!114 &1563940151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563940147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b374f0670e7e907429d425ace6165d0d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   movementSpeed: 4
+--- !u!114 &1563940152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563940147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: afa9aee6bb1030f49aa53ef0c066f213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1569980351
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14810,7 +14905,7 @@ GameObject:
   - component: {fileID: 1655662497}
   - component: {fileID: 1655662498}
   m_Layer: 0
-  m_Name: UnitManager
+  m_Name: Unit Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15186,8 +15281,10 @@ GameObject:
   - component: {fileID: 1667463659}
   - component: {fileID: 1667463658}
   - component: {fileID: 1667463657}
+  - component: {fileID: 1667463661}
   - component: {fileID: 1667463656}
   - component: {fileID: 1667463655}
+  - component: {fileID: 1667463660}
   m_Layer: 0
   m_Name: Evil Lorns (2)
   m_TagString: Untagged
@@ -15345,6 +15442,31 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1667463660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667463653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddea3100216f92f448f8216bc00fccb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1667463661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667463653}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b1256a2c94a2044ebb6021cdb059953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableDebugLogging: 0
 --- !u!1 &1688223992
 GameObject:
   m_ObjectHideFlags: 0
@@ -16966,7 +17088,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3639828477509544535, guid: be2f2a38fd9d3804a84f23c51183ccc9, type: 3}
       propertyPath: goesFirst
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3639828477509544535, guid: be2f2a38fd9d3804a84f23c51183ccc9, type: 3}
       propertyPath: currentTile
@@ -17382,7 +17504,7 @@ GameObject:
   - component: {fileID: 1910240537}
   - component: {fileID: 1910240538}
   m_Layer: 0
-  m_Name: MapManager
+  m_Name: Map Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17427,7 +17549,7 @@ GameObject:
   - component: {fileID: 1914919402}
   - component: {fileID: 1914919403}
   m_Layer: 0
-  m_Name: InputManager
+  m_Name: Input Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17517,7 +17639,7 @@ GameObject:
   - component: {fileID: 1936361657}
   - component: {fileID: 1936361658}
   m_Layer: 0
-  m_Name: TurnManager
+  m_Name: Turn Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17563,7 +17685,7 @@ GameObject:
   - component: {fileID: 1948873168}
   - component: {fileID: 1948873169}
   m_Layer: 0
-  m_Name: UIUpdateSystem
+  m_Name: UI Update System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18389,8 +18511,10 @@ GameObject:
   m_Component:
   - component: {fileID: 2045497088}
   - component: {fileID: 2045497089}
+  - component: {fileID: 2045497091}
+  - component: {fileID: 2045497090}
   m_Layer: 0
-  m_Name: UIManager
+  m_Name: UI Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18426,12 +18550,24 @@ MonoBehaviour:
   turnUI: {fileID: 1365788363}
   turnUIRectTransform: {fileID: 1365788364}
   endTurnButton: {fileID: 1115502596}
-  turnIndicatorsParent: {fileID: 936871893}
-  turnIndicatorPrefab: {fileID: 868002260118508083, guid: e888c11272b105546aaf8adddf4ea560, type: 3}
   worldOffset: {x: 0, y: 0.5}
   baseUISize: 60
   referenceCameraDistance: 10
   maintainScreenSize: 0
+  debugMode: 0
+  forceShowUI: 0
+--- !u!114 &2045497090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045497087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59a4ec7b681935349bea03201bfef4e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   expandAbilitiesButton: {fileID: 213214476}
   abilitiesPanel: {fileID: 1003722443}
   abilityButtons:
@@ -18439,8 +18575,20 @@ MonoBehaviour:
   - {fileID: 661343665}
   - {fileID: 1380753923}
   abilityTooltipText: {fileID: 0}
-  debugMode: 0
-  forceShowUI: 0
+--- !u!114 &2045497091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045497087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5985d0bedef9e924eb2de1e3ebd2a2f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turnIndicatorsParent: {fileID: 936871893}
+  turnIndicatorPrefab: {fileID: 868002260118508083, guid: e888c11272b105546aaf8adddf4ea560, type: 3}
 --- !u!1 &2069295438
 GameObject:
   m_ObjectHideFlags: 0
@@ -19089,8 +19237,10 @@ GameObject:
   - component: {fileID: 7788296323361277060}
   - component: {fileID: 2504080511218114616}
   - component: {fileID: 7788296323361277062}
+  - component: {fileID: 7788296323361277064}
   - component: {fileID: 6921469947870252086}
   - component: {fileID: 7788296323361277061}
+  - component: {fileID: 7788296323361277063}
   m_Layer: 0
   m_Name: Evil Lorns
   m_TagString: Untagged
@@ -19211,6 +19361,31 @@ MonoBehaviour:
   currentSpeed: 0
   canMove: 0
   enableDebugLogging: 0
+--- !u!114 &7788296323361277063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4794786889987125860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddea3100216f92f448f8216bc00fccb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7788296323361277064
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4794786889987125860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b1256a2c94a2044ebb6021cdb059953, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableDebugLogging: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -19224,7 +19399,7 @@ SceneRoots:
   - {fileID: 486218434}
   - {fileID: 108551480}
   - {fileID: 1759227948}
-  - {fileID: 1257765763}
   - {fileID: 977020969}
   - {fileID: 489120139}
   - {fileID: 943965162}
+  - {fileID: 1257765763}
