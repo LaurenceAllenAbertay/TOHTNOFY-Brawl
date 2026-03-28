@@ -80,7 +80,8 @@ namespace DDD.TNFY.BRAWL
             Vector3 mouseWorld = GetMouseWorldPosition();
             if (mouseWorld == Vector3.zero) return;
 
-            Tile targetTile = GridManager.Instance.GetClosestTile(mouseWorld, MapManager.Instance.CurrentConfiguration.tileSpacing);
+            Tile targetTile = GridManager.Instance.GetTileAtScreenPosition(Camera.main, Input.mousePosition)
+                             ?? GridManager.Instance.GetTileAtPosition(mouseWorld);
 
             if (targetTile != hoveredTile)
             {

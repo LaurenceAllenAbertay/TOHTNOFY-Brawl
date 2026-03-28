@@ -61,6 +61,19 @@ namespace DDD.TNFY.BRAWL
         }
 
         /// <summary>
+        /// Computes the camera world-position that frames any world position
+        /// using the same offsets as unit focus.
+        /// </summary>
+        public Vector3 WorldFocusPosition(Vector3 worldPosition)
+        {
+            return ClampToBounds(new Vector3(
+                worldPosition.x,
+                worldPosition.y + cameraYOffset,
+                worldPosition.z - cameraZOffset
+            ));
+        }
+
+        /// <summary>
         /// Smoothly transitions the camera to targetPosition over duration seconds.
         /// Blocks manual camera movement for the duration of the transition.
         /// All camera-transition callers (Unit, CombatManager, UIManager) should use this

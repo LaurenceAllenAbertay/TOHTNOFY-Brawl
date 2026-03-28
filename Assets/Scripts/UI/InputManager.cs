@@ -128,7 +128,17 @@ namespace DDD.TNFY.BRAWL
         private Vector3 ScreenToWorld(Vector2 screenPos)
         {
             if (mainCamera == null) return Vector3.zero;
+
             Ray ray = mainCamera.ScreenPointToRay(screenPos);
+
+            // Prefer actual tile collider hit so hover targeting works correctly on multi-level maps.
+            if (GridManager.Instance != null &&
+                Physics.Raycast(ray, out RaycastHit tileHit, Mathf.Infinity, GridManager.Instance.tileLayer))
+            {
+                return tileHit.point;
+            }
+
+            // Fallback for non-tile contexts.
             if (new Plane(Vector3.up, Vector3.zero).Raycast(ray, out float dist))
                 return ray.GetPoint(dist);
             return Vector3.zero;

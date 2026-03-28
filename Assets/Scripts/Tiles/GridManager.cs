@@ -129,6 +129,23 @@ namespace DDD.TNFY.BRAWL
         }
 
         /// <summary>
+        /// Finds the tile directly under a screen position by raycasting against tile colliders.
+        /// Returns null when no tile collider is hit.
+        /// </summary>
+        public Tile GetTileAtScreenPosition(Camera camera, Vector2 screenPosition)
+        {
+            if (camera == null) return null;
+
+            Ray ray = camera.ScreenPointToRay(screenPosition);
+            if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, tileLayer))
+            {
+                return hit.collider.GetComponent<Tile>();
+            }
+
+            return null;
+        }
+
+        /// <summary>
         /// Finds the closest tile that's properly aligned to the 3D grid spacing
         /// </summary>
         private Tile GetClosestGridAlignedTile(Vector3 worldPos)

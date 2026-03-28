@@ -350,7 +350,7 @@ namespace DDD.TNFY.BRAWL
                 }
                 else
                 {
-                    effect.Apply(ctx, targets);
+                    yield return StartCoroutine(ApplyEffectWithOptionalTeleportCamera(ctx, targets, effect));
                 }
             }
         }
@@ -372,7 +372,7 @@ namespace DDD.TNFY.BRAWL
         {
             SpawnCastEffect(ctx);
             yield return new WaitForSeconds(0.1f);
-            ApplyAbilityEffects(ctx, targets);
+            yield return StartCoroutine(ApplyAbilityEffectsWithCamera(ctx, targets));
             yield return new WaitForSeconds(0.05f);
             SpawnHitEffects(ctx, targets);
             yield return new WaitForSeconds(0.1f);
@@ -387,6 +387,14 @@ namespace DDD.TNFY.BRAWL
             if (ctx?.ability == null || targets == null) return;
             foreach (var effect in ctx.ability.effects)
                 effect?.Apply(ctx, targets);
+        }
+
+        private IEnumerator ApplyAbilityEffectsWithCamera(AbilityContext ctx, List<Unit> targets)
+        {
+            if (ctx?.ability == null || targets == null) yield break;
+
+            foreach (var effect in ctx.ability.effects)
+                yield return StartCoroutine(ApplyEffectWithOptionalTeleportCamera(ctx, targets, effect));
         }
 
         private void ApplyAbilityEffectsToTargets(AbilityContext ctx, List<Unit> targets)
@@ -405,6 +413,24 @@ namespace DDD.TNFY.BRAWL
 
                 effect.Apply(ctx, targets);
             }
+        }
+
+        private IEnumerator ApplyEffectWithOptionalTeleportCamera(
+            AbilityContext ctx,
+            List<Unit> targets,
+            AbilityEffect effect)
+        {
+            if (effect == null) yield break;
+
+            if (cameraController != null &&
+                effect is TeleportEffect teleportEffect &&
+                teleportEffect.TryGetValidDestination(ctx, out var destinationTile))
+            {
+                Vector3 focusPosition = cameraController.WorldFocusPosition(destinationTile.transform.position);
+                yield return StartCoroutine(cameraController.TransitionTo(focusPosition, 0.5f));
+            }
+
+            effect.Apply(ctx, targets);
         }
 
         #endregion

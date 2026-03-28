@@ -38,6 +38,18 @@ namespace DDD.TNFY.BRAWL
             combatManager = GetComponent<CombatManager>();
         }
 
+        void OnEnable()
+        {
+            Tile.OnTileHovered     += HandleTileHovered;
+            Tile.OnTileHoverExited += HandleTileHoverExited;
+        }
+
+        void OnDisable()
+        {
+            Tile.OnTileHovered     -= HandleTileHovered;
+            Tile.OnTileHoverExited -= HandleTileHoverExited;
+        }
+
         #endregion
 
         #region Targeting Entry / Exit
@@ -102,9 +114,9 @@ namespace DDD.TNFY.BRAWL
             if (!IsTargetingAbility) return;
 
             if (currentAbility.targeting is SingleTargeting)
-                HandleSingleTargetingMouseMove(mouseWorldPosition, activeUnit);
+                ShowSingleTargetRangePreview(activeUnit);           // hoveredTile already set by OnMouseEnter
             else if (currentAbility.targeting is MultiTileSelectionTargeting)
-                HandleMultiTileSelectionMouseMove(mouseWorldPosition, activeUnit);
+                HandleMultiTileSelectionMouseMove(activeUnit);      // hoveredTile already set by OnMouseEnter
             else
                 HandleDirectionalTargetingMouseMove(mouseWorldPosition, activeUnit);
         }
@@ -173,16 +185,36 @@ namespace DDD.TNFY.BRAWL
 
         #region Single Targeting
 
-        private void HandleSingleTargetingMouseMove(Vector3 mouseWorldPosition, Unit activeUnit)
+        private void HandleTileHovered(Tile tile)
         {
-            Tile targetTile = GridManager.Instance.GetClosestTile(
-                mouseWorldPosition, MapManager.Instance.CurrentConfiguration.tileSpacing);
+            if (!IsTargetingAbility) return;
 
-            if (targetTile != hoveredTile)
+            hoveredTile = tile;
+
+            if (currentAbility.targeting is SingleTargeting)
             {
-                hoveredTile = targetTile;
-                ShowSingleTargetRangePreview(activeUnit);
+                ShowSingleTargetRangePreview(combatManager.CurrentActiveUnit);
             }
+            else if (currentAbility.targeting is MultiTileSelectionTargeting multiTargeting)
+            {
+                var ctx = new AbilityContext { caster = combatManager.CurrentActiveUnit, ability = currentAbility };
+                ShowMultiTileSelectionPreview(multiTargeting, ctx);
+                if (multiTargeting.IsValidSelection(hoveredTile, ctx))
+                    hoveredTile.Highlight(TileHighlightType.Occupied);
+            }
+        }
+
+        private void HandleTileHoverExited(Tile tile)
+        {
+            if (!IsTargetingAbility) return;
+            if (hoveredTile == tile)
+                hoveredTile = null;
+        }
+
+        private void HandleSingleTargetingMouseMove(Unit activeUnit)
+        {
+            // hoveredTile is kept current by HandleTileHovered/HandleTileHoverExited
+            ShowSingleTargetRangePreview(activeUnit);
         }
 
         private void ConfirmSingleTargetAbility(Tile targetTile, Unit activeUnit)
@@ -248,15 +280,9 @@ namespace DDD.TNFY.BRAWL
 
         #region Multi-Tile Selection Targeting
 
-        private void HandleMultiTileSelectionMouseMove(Vector3 mouseWorldPosition, Unit activeUnit)
+        private void HandleMultiTileSelectionMouseMove(Unit activeUnit)
         {
             if (!(currentAbility.targeting is MultiTileSelectionTargeting multiTargeting)) return;
-
-            Tile newHover = GridManager.Instance.GetClosestTile(
-                mouseWorldPosition, MapManager.Instance.CurrentConfiguration.tileSpacing);
-
-            if (newHover == hoveredTile) return;
-            hoveredTile = newHover;
 
             var ctx = new AbilityContext { caster = activeUnit, ability = currentAbility };
             ShowMultiTileSelectionPreview(multiTargeting, ctx);

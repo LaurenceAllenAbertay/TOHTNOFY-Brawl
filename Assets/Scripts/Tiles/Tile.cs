@@ -18,6 +18,8 @@ namespace DDD.TNFY.BRAWL
     public class Tile : MonoBehaviour
     {
         public static event Action<Tile> OnTileClicked;
+        public static event Action<Tile> OnTileHovered;
+        public static event Action<Tile> OnTileHoverExited;
 
         [Header("References")]
         [SerializeField] private Renderer tileRenderer;
@@ -294,6 +296,16 @@ namespace DDD.TNFY.BRAWL
         private void OnMouseDown()
         {
             OnTileClicked?.Invoke(this);
+        }
+
+        private void OnMouseEnter()
+        {
+            OnTileHovered?.Invoke(this);
+        }
+
+        private void OnMouseExit()
+        {
+            OnTileHoverExited?.Invoke(this);
         }
 
     }
