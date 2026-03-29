@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace DDD.TNFY.BRAWL
@@ -33,28 +32,52 @@ namespace DDD.TNFY.BRAWL
         #region Action Plan Execution
 
         /// <summary>
-        /// Executes the full action plan: movement and ability in the order the plan specifies.
+        /// Executes the full action plan in the plan's order.
         /// </summary>
         public IEnumerator ExecuteActionPlan(ActionPlan plan, float actionDelay)
         {
-            logger.LogActionExecution();
-
-            if (plan.movementTarget != null && plan.movementTarget != unit.currentTile && !plan.isAbilityFirst)
+            if (plan == null) yield break;
+            if (unit == null)
             {
-                yield return StartCoroutine(ExecuteMovement(plan));
-                yield return new WaitForSeconds(actionDelay);
+                Debug.LogError("[AIExecutor] ExecuteActionPlan called before Initialize.");
+                yield break;
             }
 
-            if (plan.abilityToUse != null)
+            logger?.LogActionExecution();
+
+            bool hasMovement = plan.movementTarget != null && plan.movementTarget != unit.currentTile;
+            bool hasAbility = plan.abilityToUse != null;
+
+            if (plan.isAbilityFirst)
             {
-                yield return StartCoroutine(ExecuteAbility(plan));
-                yield return new WaitForSeconds(actionDelay);
+                if (hasAbility)
+                {
+                    yield return StartCoroutine(ExecuteAbility(plan));
+                    yield return new WaitForSeconds(actionDelay);
+                }
+
+                if (hasMovement)
+                {
+                    yield return StartCoroutine(ExecuteMovement(plan));
+                    yield return new WaitForSeconds(actionDelay);
+                }
+            }
+            else
+            {
+                if (hasMovement)
+                {
+                    yield return StartCoroutine(ExecuteMovement(plan));
+                    yield return new WaitForSeconds(actionDelay);
+                }
+
+                if (hasAbility)
+                {
+                    yield return StartCoroutine(ExecuteAbility(plan));
+                    yield return new WaitForSeconds(actionDelay);
+                }
             }
 
-            if (plan.isAbilityFirst && plan.movementTarget != null && plan.movementTarget != unit.currentTile)
-                yield return StartCoroutine(ExecuteMovement(plan));
-
-            logger.LogActionComplete();
+            logger?.LogActionComplete();
         }
 
         #endregion
@@ -63,12 +86,14 @@ namespace DDD.TNFY.BRAWL
 
         private IEnumerator ExecuteMovement(ActionPlan plan)
         {
-            logger.LogMovement(plan.isJump ? "jumping" : "moving", plan.movementTarget);
+            logger?.LogMovement(plan.isJump ? "jumping" : "moving", plan.movementTarget);
 
             if (plan.isJump)
             {
                 if (jumpSystem != null)
+                {
                     yield return StartCoroutine(ExecuteAIJump(plan.movementTarget));
+                }
                 else
                 {
                     Debug.LogWarning($"[{unit.name}] JumpSystem not found - falling back to regular movement");
@@ -98,7 +123,7 @@ namespace DDD.TNFY.BRAWL
                     unit,
                     plan.movementTarget,
                     waypoints,
-                    followCamera: true));
+                    followCameraForAI: true));
             }
         }
 
@@ -144,7 +169,7 @@ namespace DDD.TNFY.BRAWL
         private IEnumerator ExecuteAbility(ActionPlan plan)
         {
             var ability = plan.abilityToUse;
-            logger.LogAbilityExecution(plan);
+            logger?.LogAbilityExecution(plan);
 
             var ctx = new AbilityContext
             {
@@ -159,10 +184,16 @@ namespace DDD.TNFY.BRAWL
                 ctx = new AbilityContext { caster = unit, ability = ability };
                 multiSel.BeginSelection(ctx);
                 foreach (var tile in plan.preSelectedTiles)
+                {
                     multiSel.TrySelectTile(tile, ctx);
+                }
             }
 
-            bool success = plan.targetTile != null
+            bool shouldUseContextExecution =
+                plan.targetTile != null ||
+                (ability.targeting is MultiTileSelectionTargeting && plan.preSelectedTiles != null);
+
+            bool success = shouldUseContextExecution
                 ? ability.ExecuteWithContext(ctx)
                 : ability.Execute(unit, plan.aimDirection);
 
@@ -181,11 +212,11 @@ namespace DDD.TNFY.BRAWL
                     yield return null;
                 }
 
-                logger.LogAbilitySuccess(ability);
+                logger?.LogAbilitySuccess(ability);
             }
             else
             {
-                logger.LogAbilityFailure(ability);
+                logger?.LogAbilityFailure(ability);
             }
         }
 

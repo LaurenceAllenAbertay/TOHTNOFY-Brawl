@@ -50,7 +50,7 @@ namespace DDD.TNFY.BRAWL
             Unit movingUnit,
             Tile destination,
             List<Tile> waypoints = null,
-            bool followCamera = false,
+            bool followCameraForAI = false,
             System.Action onMovementStarted = null,
             System.Action onMovementComplete = null)
         {
@@ -73,7 +73,7 @@ namespace DDD.TNFY.BRAWL
             if (unitAnimator != null)
                 unitAnimator.PlayMove();
 
-            if (followCamera)
+            if (followCameraForAI)
                 yield return StartCoroutine(MoveAlongWaypointsWithCamera(movingUnit, pathToUse, spriteRenderer));
             else
                 yield return StartCoroutine(MoveAlongWaypoints(movingUnit, pathToUse, spriteRenderer));

@@ -33,20 +33,10 @@ namespace DDD.TNFY.BRAWL
         {
             if (unit == null || combatManager == null) return false;
             if (!(unit is PlayerUnit)) return false;
-
-            // Check if it's the unit's turn and they can act
             if (combatManager.CurrentActiveUnit != unit) return false;
-            if (!combatManager.CanUseAbility) return false; // Need to be able to use abilities
-
-            // Player can jump as long as they haven't used ALL their movement
-            // We need to check if they still have tiles they can reach with remaining movement
-            return HasMovementRemaining(unit);
-        }
-
-        private bool HasMovementRemaining(Unit unit)
-        {
-            // Player must have at least jumpRange movement points remaining to jump
-            return combatManager.HasEnoughMovementForJump(jumpRange);
+            // Jump is a movement action — it is allowed only while the player still has
+            // movement points and has not yet used an ability this turn.
+            return combatManager.CanMove;
         }
 
         public void StartJumpTargeting()
@@ -67,10 +57,13 @@ namespace DDD.TNFY.BRAWL
 
             GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
 
-            // Restore movement highlights if player can still move
-            if (combatManager.HasEnoughMovementForJump(jumpRange) && combatManager.CurrentActiveUnit is PlayerUnit)
+            // Restore movement highlights if the player can still move
+            if (combatManager.CanMove && combatManager.CurrentActiveUnit is PlayerUnit)
             {
-                GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.Movement, combatManager.CurrentActiveUnit);
+                GridManager.Instance.SetHighlightMode(
+                    GridManager.HighlightMode.Movement,
+                    combatManager.CurrentActiveUnit,
+                    movementRangeOverride: combatManager.GetRemainingMovement());
             }
         }
 

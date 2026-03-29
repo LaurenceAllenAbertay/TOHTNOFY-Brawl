@@ -38,18 +38,6 @@ namespace DDD.TNFY.BRAWL
             combatManager = GetComponent<CombatManager>();
         }
 
-        void OnEnable()
-        {
-            Tile.OnTileHovered     += HandleTileHovered;
-            Tile.OnTileHoverExited += HandleTileHoverExited;
-        }
-
-        void OnDisable()
-        {
-            Tile.OnTileHovered     -= HandleTileHovered;
-            Tile.OnTileHoverExited -= HandleTileHoverExited;
-        }
-
         #endregion
 
         #region Targeting Entry / Exit
@@ -114,9 +102,9 @@ namespace DDD.TNFY.BRAWL
             if (!IsTargetingAbility) return;
 
             if (currentAbility.targeting is SingleTargeting)
-                ShowSingleTargetRangePreview(activeUnit);           // hoveredTile already set by OnMouseEnter
+                HandleSingleTargetingMouseMove(mouseWorldPosition, activeUnit);
             else if (currentAbility.targeting is MultiTileSelectionTargeting)
-                HandleMultiTileSelectionMouseMove(activeUnit);      // hoveredTile already set by OnMouseEnter
+                HandleMultiTileSelectionMouseMove(mouseWorldPosition, activeUnit);
             else
                 HandleDirectionalTargetingMouseMove(mouseWorldPosition, activeUnit);
         }
@@ -185,36 +173,15 @@ namespace DDD.TNFY.BRAWL
 
         #region Single Targeting
 
-        private void HandleTileHovered(Tile tile)
+        private void HandleSingleTargetingMouseMove(Vector3 mouseWorldPosition, Unit activeUnit)
         {
-            if (!IsTargetingAbility) return;
+            Tile targetTile = GetHoveredTile(mouseWorldPosition);
 
-            hoveredTile = tile;
-
-            if (currentAbility.targeting is SingleTargeting)
+            if (targetTile != hoveredTile)
             {
-                ShowSingleTargetRangePreview(combatManager.CurrentActiveUnit);
+                hoveredTile = targetTile;
+                ShowSingleTargetRangePreview(activeUnit);
             }
-            else if (currentAbility.targeting is MultiTileSelectionTargeting multiTargeting)
-            {
-                var ctx = new AbilityContext { caster = combatManager.CurrentActiveUnit, ability = currentAbility };
-                ShowMultiTileSelectionPreview(multiTargeting, ctx);
-                if (multiTargeting.IsValidSelection(hoveredTile, ctx))
-                    hoveredTile.Highlight(TileHighlightType.Occupied);
-            }
-        }
-
-        private void HandleTileHoverExited(Tile tile)
-        {
-            if (!IsTargetingAbility) return;
-            if (hoveredTile == tile)
-                hoveredTile = null;
-        }
-
-        private void HandleSingleTargetingMouseMove(Unit activeUnit)
-        {
-            // hoveredTile is kept current by HandleTileHovered/HandleTileHoverExited
-            ShowSingleTargetRangePreview(activeUnit);
         }
 
         private void ConfirmSingleTargetAbility(Tile targetTile, Unit activeUnit)
@@ -280,9 +247,14 @@ namespace DDD.TNFY.BRAWL
 
         #region Multi-Tile Selection Targeting
 
-        private void HandleMultiTileSelectionMouseMove(Unit activeUnit)
+        private void HandleMultiTileSelectionMouseMove(Vector3 mouseWorldPosition, Unit activeUnit)
         {
             if (!(currentAbility.targeting is MultiTileSelectionTargeting multiTargeting)) return;
+
+            Tile newHover = GetHoveredTile(mouseWorldPosition);
+
+            if (newHover == hoveredTile) return;
+            hoveredTile = newHover;
 
             var ctx = new AbilityContext { caster = activeUnit, ability = currentAbility };
             ShowMultiTileSelectionPreview(multiTargeting, ctx);
@@ -331,8 +303,13 @@ namespace DDD.TNFY.BRAWL
         {
             GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
 
-            if (activeUnit is PlayerUnit && combatManager != null && !combatManager.HasMovedThisTurn)
-                GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.Movement, activeUnit);
+            if (activeUnit is PlayerUnit && combatManager != null && combatManager.CanMove)
+            {
+                GridManager.Instance.SetHighlightMode(
+                    GridManager.HighlightMode.Movement,
+                    activeUnit,
+                    movementRangeOverride: combatManager.GetRemainingMovement());
+            }
         }
 
         /// <summary>Re-shows single-target range preview — called on failed execution to allow retry.</summary>
@@ -372,6 +349,18 @@ namespace DDD.TNFY.BRAWL
                 return dir.x > 0 ? Vector2Int.right : Vector2Int.left;
             else
                 return dir.z > 0 ? Vector2Int.up : Vector2Int.down;
+        }
+
+        private Tile GetHoveredTile(Vector3 fallbackMouseWorldPosition)
+        {
+            var camera = Camera.main;
+            var grid = GridManager.Instance;
+            if (grid == null) return null;
+
+            var tileFromCursor = grid.GetTileAtScreenPosition(camera, Input.mousePosition);
+            if (tileFromCursor != null) return tileFromCursor;
+
+            return grid.GetTileAtPosition(fallbackMouseWorldPosition);
         }
 
         #endregion

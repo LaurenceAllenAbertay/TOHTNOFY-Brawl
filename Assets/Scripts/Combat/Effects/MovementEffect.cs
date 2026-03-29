@@ -266,7 +266,10 @@ public class MovementEffect : AbilityEffect
         // Update movement highlights from the new position if player can still move
         if (combatManager.CanMove)
         {
-            GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.Movement, combatManager.CurrentActiveUnit);
+            GridManager.Instance.SetHighlightMode(
+                GridManager.HighlightMode.Movement,
+                combatManager.CurrentActiveUnit,
+                movementRangeOverride: combatManager.GetRemainingMovement());
         }
 
         // Trigger UI updates

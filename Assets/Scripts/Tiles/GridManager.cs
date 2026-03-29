@@ -732,7 +732,7 @@ namespace DDD.TNFY.BRAWL
         /// <summary>
         /// Sets the highlight mode and applies appropriate visual feedback
         /// </summary>
-        public void SetHighlightMode(HighlightMode mode, Unit unit = null, Ability ability = null, Vector2Int aimDir = default)
+        public void SetHighlightMode(HighlightMode mode, Unit unit = null, Ability ability = null, Vector2Int aimDir = default, int movementRangeOverride = -1)
         {
             ClearAllHighlights();
             currentHighlightMode = mode;
@@ -745,7 +745,7 @@ namespace DDD.TNFY.BRAWL
 
                 case HighlightMode.Movement:
                     if (unit != null)
-                        HighlightMovement(unit);
+                        HighlightMovement(unit, movementRangeOverride);
                     break;
 
                 case HighlightMode.AbilityPreview:
@@ -758,9 +758,10 @@ namespace DDD.TNFY.BRAWL
         /// <summary>
         /// Highlights all tiles within movement range of the unit
         /// </summary>
-        private void HighlightMovement(Unit unit)
+        private void HighlightMovement(Unit unit, int movementRangeOverride = -1)
         {
-            var reachableTiles = GetReachableTiles(unit.currentTile, unit.currentSpeed);
+            int movementRange = movementRangeOverride >= 0 ? movementRangeOverride : unit.currentSpeed;
+            var reachableTiles = GetReachableTiles(unit.currentTile, movementRange);
             foreach (var tile in reachableTiles)
             {
                 tile.Highlight(TileHighlightType.Moveable);

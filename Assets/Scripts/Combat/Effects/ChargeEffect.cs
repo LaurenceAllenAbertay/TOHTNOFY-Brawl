@@ -292,7 +292,10 @@ public class ChargeEffect : AbilityEffect
         // Update movement highlights from the new position if player can still move
         if (combatManager.CanMove)
         {
-            GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.Movement, displacedUnit);
+            GridManager.Instance.SetHighlightMode(
+                GridManager.HighlightMode.Movement,
+                displacedUnit,
+                movementRangeOverride: combatManager.GetRemainingMovement());
         }
 
         // Trigger UI updates
@@ -312,7 +315,10 @@ public class ChargeEffect : AbilityEffect
             // Check if the player can still move after the charge using the correct property
             if (combatManager.CanMove)
             {
-                GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.Movement, caster);
+                GridManager.Instance.SetHighlightMode(
+                    GridManager.HighlightMode.Movement,
+                    caster,
+                    movementRangeOverride: combatManager.GetRemainingMovement());
             }
         }
 

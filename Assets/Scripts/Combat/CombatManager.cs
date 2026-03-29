@@ -18,14 +18,14 @@ namespace DDD.TNFY.BRAWL
         #region Properties
 
         public bool CanMove => currentState == CombatState.WaitingForInput &&
-                               !hasMovedThisTurn && !isWaitingForAnimation && !isMoving;
+                               GetRemainingMovement() > 0 && !hasUsedAbilityThisTurn &&
+                               !isWaitingForAnimation && !isMoving;
         public bool CanUseAbility => currentState == CombatState.WaitingForInput &&
                                      !hasUsedAbilityThisTurn && !isWaitingForAnimation && !isMoving;
         public bool IsTargetingAbility => targetingController != null && targetingController.IsTargetingAbility;
         public bool IsExecutingAbility => isWaitingForAnimation;
         public bool IsMoving => isMoving;
         public bool IsBlockingAllInput => isBlockingAllInput;
-        public bool HasMovedThisTurn => hasMovedThisTurn;
         public Unit CurrentActiveUnit => currentActiveUnit;
 
         public bool CanEndTurn => currentState == CombatState.WaitingForInput &&
@@ -56,7 +56,6 @@ namespace DDD.TNFY.BRAWL
         private AbilityTargetingController targetingController;
 
         private Unit currentActiveUnit;
-        private bool hasMovedThisTurn;
         private bool hasUsedAbilityThisTurn;
 
         private int movementPointsUsed;
@@ -142,14 +141,18 @@ namespace DDD.TNFY.BRAWL
                 currentState = CombatState.CameraTransition;
                 StartCoroutine(WaitForCameraTransition());
             }
+            else
+            {
+                SetupTurnAfterCameraTransition();
+            }
         }
 
         private void ResetTurnState()
         {
-            hasMovedThisTurn = false;
             hasUsedAbilityThisTurn = false;
             isWaitingForAnimation = false;
             isMoving = false;
+            _turnTransitionPending = false;
         }
 
         private IEnumerator WaitForCameraTransition()
@@ -169,7 +172,10 @@ namespace DDD.TNFY.BRAWL
 
             if (currentActiveUnit is PlayerUnit)
             {
-                GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.Movement, currentActiveUnit);
+                GridManager.Instance.SetHighlightMode(
+                    GridManager.HighlightMode.Movement,
+                    currentActiveUnit,
+                    movementRangeOverride: GetRemainingMovement());
                 UIUpdateSystem.ForceImmediateUpdate(
                     UIUpdateSystem.UIUpdateFlags.TurnUI | UIUpdateSystem.UIUpdateFlags.AbilityButtons);
             }
@@ -257,7 +263,7 @@ namespace DDD.TNFY.BRAWL
                 return;
             }
 
-            if (!hasMovedThisTurn)
+            if (CanMove)
                 AttemptMovement(clickedTile);
         }
 
@@ -354,7 +360,7 @@ namespace DDD.TNFY.BRAWL
             }
             else
             {
-                yield return new WaitForSeconds(5f);
+                yield return new WaitForSeconds(0.5f);
             }
         }
 
@@ -373,13 +379,12 @@ namespace DDD.TNFY.BRAWL
                 currentActiveUnit.currentTile, targetTile, GetRemainingMovement());
 
             movementPointsUsed += fullPath.Count;
-            hasMovedThisTurn = true;
 
             StartCoroutine(UnitMovementController.Instance.ExecuteAnimatedMovement(
                 currentActiveUnit,
                 targetTile,
                 waypoints,
-                followCamera: true,
+                followCameraForAI: false,
                 onMovementStarted: () =>
                 {
                     currentState = CombatState.MovingUnit;
@@ -394,6 +399,16 @@ namespace DDD.TNFY.BRAWL
                     UIEvents.OnCombatStateChanged();
                     isMoving = false;
                     currentState = CombatState.WaitingForInput;
+
+                    // Restore movement highlights if the player still has points left
+                    // and hasn't used an ability yet this turn.
+                    if (currentActiveUnit is PlayerUnit && GetRemainingMovement() > 0 && !hasUsedAbilityThisTurn)
+                    {
+                        GridManager.Instance.SetHighlightMode(
+                            GridManager.HighlightMode.Movement,
+                            currentActiveUnit,
+                            movementRangeOverride: GetRemainingMovement());
+                    }
                 }
             ));
         }
@@ -404,7 +419,6 @@ namespace DDD.TNFY.BRAWL
         public void SetMovementUsed()
         {
             movementPointsUsed = totalMovementPoints;
-            hasMovedThisTurn = true;
             GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
             UIEvents.OnCombatStateChanged();
         }
