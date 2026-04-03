@@ -11,6 +11,12 @@ namespace DDD.TNFY.BRAWL
         [SerializeField] private float cameraZOffset = 3.5f;
         [SerializeField] private float cameraYOffset = 2f;
 
+        [Header("AOE Zoom Settings")]
+        [Tooltip("How much extra Y height to add per world-unit of ability radius when zooming out for RandomAOE")]
+        [SerializeField] private float aoeZoomYMultiplier = 0.8f;
+        [Tooltip("How much extra Z pullback to add per world-unit of ability radius when zooming out for RandomAOE. Needs to be larger than Y to cover tiles in front of the caster.")]
+        [SerializeField] private float aoeZoomZMultiplier = 2f;
+
         [Header("Bounds")]
         [SerializeField] private BoxCollider boundsBox;
         [SerializeField] private float boundsPadding = 1f;
@@ -122,6 +128,22 @@ namespace DDD.TNFY.BRAWL
         }
 
         public bool IsTransitioning => isTransitioning;
+
+        /// <summary>
+        /// Computes a camera position that frames a circular area of the given world-space
+        /// radius centred on a point — used by RandomAOE to show the full ability spread.
+        /// Y and Z pullback are separated because the camera needs to step back much further
+        /// on Z to keep forward tiles (in front of the caster) in frame.
+        /// Both multipliers are tunable in the Inspector under AOE Zoom Settings.
+        /// </summary>
+        public Vector3 FitRadius(Vector3 center, float worldRadius)
+        {
+            return ClampToBounds(new Vector3(
+                center.x,
+                center.y + cameraYOffset + worldRadius * aoeZoomYMultiplier,
+                center.z - cameraZOffset - worldRadius * aoeZoomZMultiplier
+            ));
+        }
 
         #endregion
 

@@ -773,8 +773,8 @@ namespace DDD.TNFY.BRAWL
         /// </summary>
         private void HighlightAbilityPreview(Unit unit, Ability ability, Vector2Int aimDir)
         {
-            if (ability.targeting is RandomAOETargeting)
-                return;
+            //if (ability.targeting is RandomAOETargeting)
+            //    return;
 
             var ctx = new AbilityContext
             {

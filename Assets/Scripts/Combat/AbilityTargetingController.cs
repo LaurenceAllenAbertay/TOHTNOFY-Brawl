@@ -62,6 +62,9 @@ namespace DDD.TNFY.BRAWL
             if (currentAbility.targeting is SingleTargeting)
                 ShowSingleTargetRangePreview(activeUnit);
 
+            if (currentAbility.targeting is RandomAOETargeting)
+                ShowRandomAOEPreview(activeUnit);
+
             if (currentAbility.targeting is MultiTileSelectionTargeting multiTargeting)
             {
                 var ctx = new AbilityContext { caster = activeUnit, ability = currentAbility };
@@ -75,8 +78,9 @@ namespace DDD.TNFY.BRAWL
         /// <summary>Cancels targeting and restores default highlights.</summary>
         public void CancelAbilityTargeting(Unit activeUnit)
         {
-            if (currentAbility?.targeting is RandomAOETargeting randomTargeting)
-                randomTargeting.OnTargetingCancelled();
+            // Note: RandomAOETargeting cache is intentionally NOT cleared here.
+            // The same random tiles must be shown for the entire turn — cancel/retarget
+            // should present the same selection. Cache is only reset at the start of a new turn.
 
             if (currentAbility?.targeting is MultiTileSelectionTargeting multiTargeting)
                 multiTargeting.CancelSelection();
@@ -105,6 +109,8 @@ namespace DDD.TNFY.BRAWL
                 HandleSingleTargetingMouseMove(mouseWorldPosition, activeUnit);
             else if (currentAbility.targeting is MultiTileSelectionTargeting)
                 HandleMultiTileSelectionMouseMove(mouseWorldPosition, activeUnit);
+            else if (currentAbility.targeting is RandomAOETargeting)
+                return; // Highlights are fixed for the turn — no update on mouse move
             else
                 HandleDirectionalTargetingMouseMove(mouseWorldPosition, activeUnit);
         }
@@ -115,6 +121,9 @@ namespace DDD.TNFY.BRAWL
 
             if (currentAbility.targeting is SingleTargeting)
                 return; // Single targeting uses tile click events, not raw mouse position
+
+            if (currentAbility.targeting is RandomAOETargeting)
+                return; // RandomAOE confirms via tile click — handled in HandleTileClicked
 
             HandleDirectionalAbilityClick(mouseWorldPosition, activeUnit);
         }
@@ -127,6 +136,8 @@ namespace DDD.TNFY.BRAWL
                 ConfirmSingleTargetAbility(clickedTile, activeUnit);
             else if (currentAbility.targeting is MultiTileSelectionTargeting multiTargeting)
                 HandleMultiTileSelectionClick(clickedTile, multiTargeting, activeUnit);
+            else if (currentAbility.targeting is RandomAOETargeting)
+                ConfirmRandomAOEAbility(activeUnit);
         }
 
         #endregion
@@ -292,6 +303,39 @@ namespace DDD.TNFY.BRAWL
 
             foreach (var tile in targeting.SelectedTiles)
                 tile.Highlight(TileHighlightType.AttackRange);
+        }
+
+        #endregion
+
+        #region Random AOE Targeting
+
+        private void ShowRandomAOEPreview(Unit activeUnit)
+        {
+            var ctx = new AbilityContext { caster = activeUnit, ability = currentAbility };
+            var tiles = currentAbility.targeting.GetTraversal(ctx);
+
+            GridManager.Instance.ClearAllHighlights();
+            foreach (var tile in tiles)
+            {
+                var u = tile.currentUnit;
+                if (u != null)
+                {
+                    bool isAlly = u is EnemyUnit == activeUnit is EnemyUnit;
+                    bool canHit = (isAlly && currentAbility.canHitAllies) || (!isAlly && currentAbility.canHitEnemies);
+                    tile.Highlight(canHit ? TileHighlightType.AttackRange : TileHighlightType.Danger);
+                }
+                else
+                {
+                    tile.Highlight(TileHighlightType.Danger);
+                }
+            }
+        }
+
+        private void ConfirmRandomAOEAbility(Unit activeUnit)
+        {
+            if (!ValidateAbilityExecution(currentAbility, activeUnit, null, Vector2Int.zero)) return;
+            GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
+            combatManager.StartAbilityExecution(currentAbility, null, isDirectional: false, Vector2Int.zero);
         }
 
         #endregion

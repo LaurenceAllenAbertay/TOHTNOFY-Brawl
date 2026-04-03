@@ -18,14 +18,14 @@ namespace DDD.TNFY.BRAWL
         #region Properties
 
         public bool CanMove => currentState == CombatState.WaitingForInput &&
-                               GetRemainingMovement() > 0 && !hasUsedAbilityThisTurn &&
-                               !isWaitingForAnimation && !isMoving;
+                               !hasMovedThisTurn && !isWaitingForAnimation && !isMoving;
         public bool CanUseAbility => currentState == CombatState.WaitingForInput &&
                                      !hasUsedAbilityThisTurn && !isWaitingForAnimation && !isMoving;
         public bool IsTargetingAbility => targetingController != null && targetingController.IsTargetingAbility;
         public bool IsExecutingAbility => isWaitingForAnimation;
         public bool IsMoving => isMoving;
         public bool IsBlockingAllInput => isBlockingAllInput;
+        public bool HasMovedThisTurn => hasMovedThisTurn;
         public Unit CurrentActiveUnit => currentActiveUnit;
 
         public bool CanEndTurn => currentState == CombatState.WaitingForInput &&
@@ -68,6 +68,7 @@ namespace DDD.TNFY.BRAWL
         private float turnStartTime;
         private const float turnStartProtectionDuration = 1.5f;
         private bool _turnTransitionPending;
+        private bool hasMovedThisTurn;
 
         #endregion
 
@@ -132,6 +133,7 @@ namespace DDD.TNFY.BRAWL
         {
             currentActiveUnit = activeUnit;
             ResetTurnState();
+            ResetAllRandomAOECaches();
             turnStartTime = Time.time;
             movementPointsUsed = 0;
             totalMovementPoints = activeUnit.currentSpeed;
@@ -144,6 +146,38 @@ namespace DDD.TNFY.BRAWL
             else
             {
                 SetupTurnAfterCameraTransition();
+            }
+        }
+
+        /// <summary>
+        /// Resets the cached random tile selection for every RandomAOETargeting ability
+        /// across all units. Called at the start of every turn so the roll is always
+        /// fresh — the selection changes each turn regardless of which unit is acting.
+        /// </summary>
+        private void ResetAllRandomAOECaches()
+        {
+            foreach (var unit in UnitManager.AllUnits)
+            {
+                if (unit?.characterData?.abilityLoadout == null) continue;
+                foreach (var ability in unit.characterData.abilityLoadout)
+                {
+                    if (ability?.targeting is RandomAOETargeting randomTargeting)
+                        randomTargeting.ResetForNewTurn();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Resets only the active unit's RandomAOETargeting cache after they move,
+        /// so the selection re-rolls relative to their new position.
+        /// </summary>
+        private void ResetCurrentUnitRandomAOECaches()
+        {
+            if (currentActiveUnit?.characterData?.abilityLoadout == null) return;
+            foreach (var ability in currentActiveUnit.characterData.abilityLoadout)
+            {
+                if (ability?.targeting is RandomAOETargeting randomTargeting)
+                    randomTargeting.ResetForNewTurn();
             }
         }
 
@@ -263,7 +297,7 @@ namespace DDD.TNFY.BRAWL
                 return;
             }
 
-            if (CanMove)
+            if (!hasMovedThisTurn)
                 AttemptMovement(clickedTile);
         }
 
@@ -303,8 +337,7 @@ namespace DDD.TNFY.BRAWL
             BlockAllInput();
             UIEvents.OnAbilityAnimationStarted();
 
-            if (ability?.targeting is RandomAOETargeting randomTargeting)
-                randomTargeting.OnAbilityExecuted();
+            bool isRandomAOE = ability?.targeting is RandomAOETargeting && cameraController != null;
 
             bool executionSuccessful;
             if (isDirectional)
@@ -317,7 +350,22 @@ namespace DDD.TNFY.BRAWL
             if (executionSuccessful)
             {
                 hasUsedAbilityThisTurn = true;
+
+                // Wait for the ability animation to fully complete before moving the camera.
                 yield return StartCoroutine(WaitForCompleteAbilitySequence(ability));
+
+                // After the animation, zoom out to frame the full range so the player can
+                // see where all the hits landed, then smoothly return to the caster.
+                if (isRandomAOE)
+                {
+                    Vector3 tileSpacing = GridManager.Instance.GetTileSpacing();
+                    float worldRadius = ability.range * Mathf.Max(tileSpacing.x, tileSpacing.z);
+                    yield return StartCoroutine(cameraController.TransitionTo(
+                        cameraController.FitRadius(currentActiveUnit.transform.position, worldRadius)));
+                    yield return StartCoroutine(cameraController.TransitionTo(
+                        cameraController.UnitFocusPosition(currentActiveUnit)));
+                }
+
                 targetingController?.RestoreDefaultHighlights(currentActiveUnit);
                 targetingController?.ClearAbilityTargeting();
                 UIEvents.OnAbilityUsed();
@@ -399,6 +447,9 @@ namespace DDD.TNFY.BRAWL
                     UIEvents.OnCombatStateChanged();
                     isMoving = false;
                     currentState = CombatState.WaitingForInput;
+
+                    // Re-roll RandomAOE selections relative to the unit's new position.
+                    ResetCurrentUnitRandomAOECaches();
 
                     // Restore movement highlights if the player still has points left
                     // and hasn't used an ability yet this turn.

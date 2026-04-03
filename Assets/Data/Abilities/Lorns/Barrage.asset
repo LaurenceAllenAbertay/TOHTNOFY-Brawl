@@ -10,27 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 538600722897cd54787bdb9601555fbf, type: 3}
-  m_Name: Recoil Shot
+  m_Name: Barrage
   m_EditorClassIdentifier: 
-  abilityName: Recoil Shot
+  abilityName: Barrage
   description: 
-  image: {fileID: 21300000, guid: 749d9fd5cc9ebd54f9e0d706f7d71ee7, type: 3}
-  rangeType: 0
-  range: 1
+  image: {fileID: 21300000, guid: a6a4ae2da7c02b745be67cef4b9d3e15, type: 3}
+  rangeType: 2
+  range: 4
   damage: 10
   canHitEnemies: 1
-  canHitAllies: 0
+  canHitAllies: 1
   passThroughUnits: 0
-  maxTargets: 1
-  canExecuteWithoutTargets: 0
-  animationState: Recoil_Shot
-  castEffectPrefab: {fileID: 1168242340067801985, guid: 549bc84e6e22c6a4a85d6d2e3a892fb4, type: 3}
-  castEffectOffset: {x: 0.7, y: 0.35, z: 0}
+  maxTargets: 8
+  canExecuteWithoutTargets: 1
+  animationState: Straight_Shot
+  castEffectPrefab: {fileID: 0}
+  castEffectOffset: {x: 0, y: 0, z: 0}
   parentCastEffectToCaster: 0
   hitEffectPrefab: {fileID: 0}
   hitEffectOffset: {x: 0, y: 0, z: 0}
   parentHitEffectToTarget: 0
-  targeting: {fileID: 11400000, guid: 2047dac3f0c1d6d4da0984b52201bc25, type: 2}
+  targeting: {fileID: 11400000, guid: 7e250200b6f8e1942ba35a67cc94f38a, type: 2}
   effects:
   - {fileID: 11400000, guid: 7bbe0b6e3f185f143b1c19342a3a4c8e, type: 2}
-  - {fileID: 11400000, guid: 4c5a2b8a1cb114349ab4d6aec5579ef9, type: 2}
