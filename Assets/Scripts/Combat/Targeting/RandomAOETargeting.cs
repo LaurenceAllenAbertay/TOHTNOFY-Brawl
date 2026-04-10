@@ -5,50 +5,35 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "TNFY Brawl/Targeting/Random AOE")]
 public class RandomAOETargeting : AbilityTargeting
 {
-    // Cache the last selection to prevent flickering during preview
+    // Cache tiles as absolute references. The selection is locked in for the turn
+    // and re-rolled when the caster moves (position change) or a new turn starts.
+    // Cancelling and re-entering targeting does NOT re-roll.
     private List<Tile> cachedSelection = new List<Tile>();
-    private Unit lastCaster;
     private Ability lastAbility;
-    private bool isInPreviewMode = false;
 
     public override List<Tile> GetTraversal(AbilityContext ctx)
     {
         if (ctx?.ability == null || ctx.caster == null)
             return new List<Tile>();
 
-        // Check if we need to regenerate the selection
-        if (ShouldRegenerateSelection(ctx))
+        if (cachedSelection.Count == 0 || lastAbility != ctx.ability)
         {
             cachedSelection = GenerateRandomSelection(ctx);
-            lastCaster = ctx.caster;
             lastAbility = ctx.ability;
-            isInPreviewMode = true;
         }
 
-        return new List<Tile>(cachedSelection); // Return a copy
-    }
-
-    private bool ShouldRegenerateSelection(AbilityContext ctx)
-    {
-        // Regenerate if this is the first call or if the context has meaningfully changed
-        return !isInPreviewMode ||
-               lastCaster != ctx.caster ||
-               lastAbility != ctx.ability;
-
-        // don't check aimDir because for random AOE, direction shouldn't matter
-        // If random AOE does depend on aim direction, add that check here
+        return new List<Tile>(cachedSelection);
     }
 
     /// <summary>
-    /// Clears the cached selection so a fresh roll is generated next time this ability
-    /// is opened for targeting. Called at the start of ANY unit's turn — not on cancel
-    /// or execution — so the same tiles stay consistent for the entire turn regardless
-    /// of cancel/retarget or movement.
+    /// Clears the cache so a fresh roll happens next time GetTraversal is called.
+    /// Call this on turn start (all units) and when the caster moves.
+    /// Do NOT call on cancel/retarget — the same tiles must persist.
     /// </summary>
     public void ResetForNewTurn()
     {
-        isInPreviewMode = false;
         cachedSelection.Clear();
+        lastAbility = null;
     }
 
     private List<Tile> GenerateRandomSelection(AbilityContext ctx)
@@ -56,13 +41,9 @@ public class RandomAOETargeting : AbilityTargeting
         var start = ctx.caster.currentTile;
         if (start == null) return new List<Tile>();
 
-        // All tiles within range are valid landing spots — unit filtering is handled
-        // downstream by SelectTargets. Picking from occupied-only tiles would mean
-        // the spread is dictated by where enemies stand rather than being truly random.
         var pool = GetAllTilesInRange(start, ctx.ability.range);
-        pool.Remove(start); // Never land on the caster's own tile
+        pool.Remove(start);
 
-        // Randomly select up to maxTargets distinct tiles from the pool
         var selectedTiles = new List<Tile>();
         int targetsToSelect = Mathf.Min(ctx.ability.maxTargets, pool.Count);
 
@@ -70,7 +51,7 @@ public class RandomAOETargeting : AbilityTargeting
         {
             int randomIndex = Random.Range(0, pool.Count);
             selectedTiles.Add(pool[randomIndex]);
-            pool.RemoveAt(randomIndex); // Remove to avoid duplicates
+            pool.RemoveAt(randomIndex);
         }
 
         return selectedTiles;
@@ -82,11 +63,6 @@ public class RandomAOETargeting : AbilityTargeting
 
         if (affectsOverGaps)
         {
-            // When affecting over gaps, do a direct distance check against every tile in the
-            // scene rather than a BFS through walkable terrain. This ensures gap tiles and
-            // tiles on different Y levels are all included in the pool, since BFS via
-            // GetAdjacentTiles only traverses passable XZ neighbours.
-            // Y distance is included so that a tile 3 across and 2 up costs 5 range.
             foreach (var tile in GridManager.Instance.AllTiles)
             {
                 if (tile == null || tile == startTile) continue;
@@ -97,7 +73,6 @@ public class RandomAOETargeting : AbilityTargeting
         }
         else
         {
-            // BFS through passable terrain only — gaps and impassable tiles are excluded.
             var queue = new Queue<(Tile tile, int distance)>();
             var visited = new HashSet<Tile>();
 

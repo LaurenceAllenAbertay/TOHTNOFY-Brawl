@@ -69,6 +69,28 @@ namespace DDD.TNFY.BRAWL
         }
 
         /// <summary>
+        /// Spawns the hit effect prefab on each tile in the list that has no unit on it.
+        /// Used when canExecuteWithoutTargets is true — empty tiles in the traversal
+        /// should still show an impact even if no unit was standing there.
+        /// </summary>
+        public void SpawnHitEffectsOnEmptyTiles(AbilityContext ctx, IReadOnlyList<Tile> tiles)
+        {
+            if (ctx?.ability == null || tiles == null) return;
+            if (ctx.ability.HitEffectPrefab == null) return;
+
+            foreach (var tile in tiles)
+            {
+                if (tile == null || tile.currentUnit != null) continue;
+
+                Vector3 spawnPos = tile.transform.position + ctx.ability.HitEffectOffset;
+                Destroy(Instantiate(ctx.ability.HitEffectPrefab, spawnPos, Quaternion.identity), 2f);
+            }
+
+            if (enableDebugLogging)
+                Debug.Log($"[CombatVFXManager] Spawned hit effects on empty tiles for {ctx.ability.abilityName}");
+        }
+
+        /// <summary>
         /// Spawns the hit effect prefab at each target's position, applying
         /// optional parenting as configured on the ability.
         /// </summary>

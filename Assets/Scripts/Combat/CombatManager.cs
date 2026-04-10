@@ -169,7 +169,7 @@ namespace DDD.TNFY.BRAWL
 
         /// <summary>
         /// Resets only the active unit's RandomAOETargeting cache after they move,
-        /// so the selection re-rolls relative to their new position.
+        /// so the selection re-rolls from the new position.
         /// </summary>
         private void ResetCurrentUnitRandomAOECaches()
         {
@@ -448,7 +448,7 @@ namespace DDD.TNFY.BRAWL
                     isMoving = false;
                     currentState = CombatState.WaitingForInput;
 
-                    // Re-roll RandomAOE selections relative to the unit's new position.
+                    // Re-roll RandomAOE selections from the unit's new position.
                     ResetCurrentUnitRandomAOECaches();
 
                     // Restore movement highlights if the player still has points left

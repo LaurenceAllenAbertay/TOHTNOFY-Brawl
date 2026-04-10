@@ -123,7 +123,10 @@ namespace DDD.TNFY.BRAWL
                 return; // Single targeting uses tile click events, not raw mouse position
 
             if (currentAbility.targeting is RandomAOETargeting)
-                return; // RandomAOE confirms via tile click — handled in HandleTileClicked
+            {
+                ConfirmRandomAOEAbility(activeUnit);
+                return;
+            }
 
             HandleDirectionalAbilityClick(mouseWorldPosition, activeUnit);
         }
@@ -136,8 +139,7 @@ namespace DDD.TNFY.BRAWL
                 ConfirmSingleTargetAbility(clickedTile, activeUnit);
             else if (currentAbility.targeting is MultiTileSelectionTargeting multiTargeting)
                 HandleMultiTileSelectionClick(clickedTile, multiTargeting, activeUnit);
-            else if (currentAbility.targeting is RandomAOETargeting)
-                ConfirmRandomAOEAbility(activeUnit);
+            // RandomAOE confirms via any left click (HandleMouseClicked), not a specific tile
         }
 
         #endregion
