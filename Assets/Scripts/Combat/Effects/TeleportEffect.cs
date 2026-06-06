@@ -5,6 +5,12 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "TNFY Brawl/Effects/Teleport Effect")]
 public class TeleportEffect : AbilityEffect
 {
+    public override EffectAnimationPhase AnimationPhase => EffectAnimationPhase.Displacement;
+    public override float ExpectedAnimationDuration => 0.5f;
+
+    public override bool NeedsCameraPreview(AbilityContext ctx, out Tile focusTile) =>
+        TryGetValidDestination(ctx, out focusTile);
+
     public bool TryGetValidDestination(AbilityContext ctx, out Tile destinationTile)
     {
         destinationTile = null;

@@ -17,6 +17,8 @@ namespace DDD.TNFY.BRAWL
         [Tooltip("The ability that will auto-execute on the caster's next turn.")]
         public Ability followUpAbility;
 
+        public override EffectAnimationPhase AnimationPhase => EffectAnimationPhase.PostEffect;
+
         public override void Apply(AbilityContext ctx, IReadOnlyList<Unit> targets)
         {
             if (ctx?.caster == null || followUpAbility == null) return;

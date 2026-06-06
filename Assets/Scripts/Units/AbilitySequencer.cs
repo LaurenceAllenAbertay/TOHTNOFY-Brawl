@@ -30,8 +30,6 @@ namespace DDD.TNFY.BRAWL
         [Header("Debug")]
         [SerializeField] private bool enableDebugLogging = false;
 
-        private enum TargetAnimationType { Hurt, Buff, Debuff, Knockback, Movement }
-
         #endregion
 
         #region Unity Lifecycle
@@ -200,7 +198,8 @@ namespace DDD.TNFY.BRAWL
             }
 
             bool shouldUseTransitions = ctx.ability.targeting is LineTargeting || ctx.ability.targeting is SingleTargeting;
-            bool hasMovementEffect = ctx.ability.effects.Any(e => e is MovementEffect me && !me.applyToCaster);
+            bool hasMovementEffect = ctx.ability.effects.Any(e =>
+                e.AnimationPhase == EffectAnimationPhase.Displacement && !e.IsSelfOnly(ctx));
 
             if (!shouldUseTransitions && !hasMovementEffect)
             {
@@ -233,28 +232,40 @@ namespace DDD.TNFY.BRAWL
 
         private IEnumerator PlayTargetEffectsWithAnimation(AbilityContext ctx, List<Unit> targets)
         {
-            var knockbackEffects = ctx.ability.effects.OfType<KnockbackEffect>()
-                .Where(kb => !kb.applyToSelf).ToList();
-            var damageEffects = ctx.ability.effects.OfType<DamageEffect>().ToList();
-            var movementEffects = ctx.ability.effects.OfType<MovementEffect>()
-                .Where(me => !me.applyToCaster).ToList();
-            var statusEffects = ctx.ability.effects.OfType<StatusEffect>().ToList();
-            var otherEffects = ctx.ability.effects.Where(e =>
-                !(e is KnockbackEffect || e is DamageEffect || e is MovementEffect || e is StatusEffect)).ToList();
+            // Group effects by their declared phase — no concrete-type inspection needed.
+            var displacementEffects = ctx.ability.effects
+                .Where(e => e.AnimationPhase == EffectAnimationPhase.Displacement && !e.IsSelfOnly(ctx))
+                .ToList();
+            var damageEffects = ctx.ability.effects
+                .Where(e => e.AnimationPhase == EffectAnimationPhase.Damage)
+                .ToList();
+            var statusEffects = ctx.ability.effects
+                .Where(e => e.AnimationPhase == EffectAnimationPhase.StatusBuff ||
+                            e.AnimationPhase == EffectAnimationPhase.StatusDebuff)
+                .ToList();
+            var postEffects = ctx.ability.effects
+                .Where(e => e.AnimationPhase == EffectAnimationPhase.PostEffect)
+                .ToList();
 
-            // Knockback
-            bool hasKnockback = knockbackEffects.Count > 0;
-            if (hasKnockback)
+            // --- Displacement (Knockback / Movement / Teleport) ---
+            bool hasDisplacement = displacementEffects.Count > 0;
+            if (hasDisplacement)
             {
-                foreach (var target in targets) PlayTargetAnimation(target, TargetAnimationType.Knockback);
-                foreach (var effect in knockbackEffects) effect.Apply(ctx, targets);
-                yield return new WaitForSeconds(1f);
+                foreach (var target in targets)
+                {
+                    var hint = displacementEffects[0].TargetAnimationHint;
+                    if (hint != null) PlayTargetAnimation(target, hint);
+                }
+                foreach (var effect in displacementEffects) effect.Apply(ctx, targets);
+
+                float dispDuration = displacementEffects.Max(e => e.ExpectedAnimationDuration);
+                if (dispDuration > 0f) yield return new WaitForSeconds(dispDuration);
             }
 
-            // Damage
-            if (!hasKnockback && damageEffects.Count > 0)
+            // --- Damage ---
+            if (!hasDisplacement && damageEffects.Count > 0)
             {
-                foreach (var target in targets) PlayTargetAnimation(target, TargetAnimationType.Hurt);
+                foreach (var target in targets) PlayTargetAnimation(target, "Hurt");
                 SpawnHitEffects(ctx, targets);
                 foreach (var effect in damageEffects) effect.Apply(ctx, targets);
                 yield return new WaitForSeconds(0.8f);
@@ -265,94 +276,65 @@ namespace DDD.TNFY.BRAWL
                 foreach (var effect in damageEffects) effect.Apply(ctx, targets);
             }
 
-            // Movement
-            if (movementEffects.Count > 0)
-            {
-                foreach (var effect in movementEffects) effect.Apply(ctx, targets);
+            // --- Status: Buffs then Debuffs ---
+            var buffStatusEffects   = statusEffects.Where(se => se.IsBuffEffect).ToList();
+            var debuffStatusEffects = statusEffects.Where(se => !se.IsBuffEffect).ToList();
 
-                if (cameraController != null && targets.Count > 0)
-                {
-                    var trackedTarget = targets[0];
-                    Vector3 cameraOffset = cameraController.transform.position - trackedTarget.transform.position;
-                    float trackDuration = movementEffects.Max(e => e.movementDurationPerTile * e.moveDistance) + 0.3f;
-                    float elapsed = 0f;
-
-                    while (elapsed < trackDuration)
-                    {
-                        cameraController.transform.position = cameraController.ClampToBounds(
-                            trackedTarget.transform.position + cameraOffset);
-                        elapsed += Time.deltaTime;
-                        yield return null;
-                    }
-                }
-                else
-                {
-                    yield return new WaitForSeconds(1f);
-                }
-            }
-
-            // Buffs
-            var buffStatusEffects = statusEffects.Where(se => HasBuffEffects(se)).ToList();
             if (buffStatusEffects.Count > 0)
             {
-                foreach (var target in targets) PlayTargetAnimation(target, TargetAnimationType.Buff);
+                foreach (var target in targets) PlayTargetAnimation(target, "Buff");
                 foreach (var effect in buffStatusEffects) effect.Apply(ctx, targets);
                 yield return new WaitForSeconds(0.6f);
             }
 
-            // Debuffs
-            var debuffStatusEffects = statusEffects.Where(se => !HasBuffEffects(se)).ToList();
             if (debuffStatusEffects.Count > 0)
             {
-                foreach (var target in targets) PlayTargetAnimation(target, TargetAnimationType.Debuff);
+                foreach (var target in targets) PlayTargetAnimation(target, "Debuff");
                 foreach (var effect in debuffStatusEffects) effect.Apply(ctx, targets);
                 yield return new WaitForSeconds(0.6f);
             }
 
-            // Other
-            if (otherEffects.Count > 0)
+            // --- PostEffect (QueuedAction, ApplyTileEffect, etc.) ---
+            if (postEffects.Count > 0)
             {
-                foreach (var effect in otherEffects) effect.Apply(ctx, targets);
+                foreach (var effect in postEffects) effect.Apply(ctx, targets);
                 yield return new WaitForSeconds(0.5f);
             }
         }
 
         private IEnumerator HandleRemainingEffects(AbilityContext ctx, List<Unit> targets)
         {
-            var processedTypes = new HashSet<System.Type>
-            {
-                typeof(KnockbackEffect),
-                typeof(ChargeEffect)
-            };
-
+            // Phases that have already been applied earlier in the sequence.
+            // Effects in these phases are skipped here to avoid double-application.
+            // Displacement and Damage are handled by PlayTargetEffectsWithAnimation
+            // (or ApplyAbilityEffectsToTargets for non-camera paths).
+            // PreEffect (self-knockback/caster-movement) fired before camera transitions.
+            // ChargeEffect is handled entirely via ExecuteChargeSequence — it never reaches Apply.
             bool usedCameraTransitions = ctx.ability.targeting is LineTargeting
                                       || ctx.ability.targeting is SingleTargeting;
-            if (usedCameraTransitions)
-            {
-                processedTypes.Add(typeof(DamageEffect));
-                processedTypes.Add(typeof(MovementEffect));
-                processedTypes.Add(typeof(StatusEffect));
-            }
 
             foreach (var effect in ctx.ability.effects)
             {
-                if (processedTypes.Contains(effect.GetType())) continue;
+                // Always skip PreEffect here — it ran before camera transitions.
+                if (effect.AnimationPhase == EffectAnimationPhase.PreEffect) continue;
 
-                if (effect is StatusEffect statusEffect)
+                // If we used per-target camera transitions, Displacement/Damage/Status were
+                // already applied inside PlayTargetEffectsWithAnimation — skip them.
+                if (usedCameraTransitions &&
+                    effect.AnimationPhase != EffectAnimationPhase.PostEffect) continue;
+
+                // ChargeEffect bypasses Apply entirely; skip it unconditionally.
+                if (effect is ChargeEffect) continue;
+
+                // If this effect has a self-cast component, apply it to the caster and
+                // play the appropriate animation. SelfCastAnimationHint returns null when
+                // the effect has no caster-targeting portion.
+                var selfHint = effect.SelfCastAnimationHint;
+                if (selfHint != null)
                 {
-                    var selfApplications = statusEffect.statusesToApply.Where(sa =>
-                        sa.applyTo == StatusEffect.ApplicationTarget.Caster ||
-                        sa.applyTo == StatusEffect.ApplicationTarget.Both).ToList();
-
-                    if (selfApplications.Count > 0)
-                    {
-                        effect.Apply(ctx, new List<Unit> { unit });
-                        bool isBuffEffect = selfApplications.Any(sa =>
-                            IsBuffEffectType(sa.statusEffectData.effectType));
-                        PlayTargetAnimation(unit,
-                            isBuffEffect ? TargetAnimationType.Buff : TargetAnimationType.Debuff);
-                        yield return new WaitForSeconds(0.6f);
-                    }
+                    effect.Apply(ctx, new List<Unit> { unit });
+                    PlayTargetAnimation(unit, selfHint);
+                    yield return new WaitForSeconds(0.6f);
                 }
                 else
                 {
@@ -363,12 +345,14 @@ namespace DDD.TNFY.BRAWL
 
         private IEnumerator HandleSelfKnockbackEffects(AbilityContext ctx)
         {
-            var selfKnockbackEffects = ctx.ability.effects.OfType<KnockbackEffect>()
-                .Where(kb => kb.applyToSelf).ToList();
-            if (selfKnockbackEffects.Count == 0) yield break;
+            // PreEffect-phase effects that apply to the caster — typically self-knockback.
+            var preEffects = ctx.ability.effects
+                .Where(e => e.AnimationPhase == EffectAnimationPhase.PreEffect)
+                .ToList();
+            if (preEffects.Count == 0) yield break;
 
             var selfTargetList = new List<Unit> { unit };
-            foreach (var effect in selfKnockbackEffects)
+            foreach (var effect in preEffects)
                 effect.Apply(ctx, selfTargetList);
 
             yield return new WaitForSeconds(1.5f);
@@ -407,15 +391,12 @@ namespace DDD.TNFY.BRAWL
         {
             foreach (var effect in ctx.ability.effects)
             {
-                if (effect is KnockbackEffect knockbackEffect && knockbackEffect.applyToSelf)
-                    continue;
+                // Skip PreEffect-phase effects (self-knockback, caster-movement) —
+                // they target the caster and are handled separately.
+                if (effect.AnimationPhase == EffectAnimationPhase.PreEffect) continue;
 
-                if (effect is StatusEffect statusEffect)
-                {
-                    bool isSelfOnly = statusEffect.statusesToApply.All(sa =>
-                        sa.applyTo == StatusEffect.ApplicationTarget.Caster);
-                    if (isSelfOnly) continue;
-                }
+                // Skip effects that only apply to the caster (e.g. Caster-only StatusEffect).
+                if (effect.IsSelfOnly(ctx)) continue;
 
                 effect.Apply(ctx, targets);
             }
@@ -428,11 +409,9 @@ namespace DDD.TNFY.BRAWL
         {
             if (effect == null) yield break;
 
-            if (cameraController != null &&
-                effect is TeleportEffect teleportEffect &&
-                teleportEffect.TryGetValidDestination(ctx, out var destinationTile))
+            if (cameraController != null && effect.NeedsCameraPreview(ctx, out var focusTile))
             {
-                Vector3 focusPosition = cameraController.WorldFocusPosition(destinationTile.transform.position);
+                Vector3 focusPosition = cameraController.WorldFocusPosition(focusTile.transform.position);
                 yield return StartCoroutine(cameraController.TransitionTo(focusPosition, 0.5f));
             }
 
@@ -473,30 +452,33 @@ namespace DDD.TNFY.BRAWL
 
         #region Animation Helpers
 
-        private void PlayTargetAnimation(Unit target, TargetAnimationType animationType)
+        private void PlayTargetAnimation(Unit target, string hint)
         {
-            if (target == null) return;
+            if (target == null || hint == null) return;
             var targetAnimator = target.GetComponent<UnitAnimator>();
             if (targetAnimator == null) return;
 
-            switch (animationType)
+            switch (hint)
             {
-                case TargetAnimationType.Hurt:
+                case "Hurt":
                     targetAnimator.PlayHurt();
                     break;
-                case TargetAnimationType.Buff:
+                case "Buff":
                     if (targetAnimator.HasState("Buff")) targetAnimator.PlayAnimation("Buff");
                     else targetAnimator.PlayHurt();
                     break;
-                case TargetAnimationType.Debuff:
+                case "Debuff":
                     if (targetAnimator.HasState("Debuff")) targetAnimator.PlayAnimation("Debuff");
                     else targetAnimator.PlayHurt();
                     break;
-                case TargetAnimationType.Knockback:
+                case "Knockback":
                     targetAnimator.PlayKnockbackStart();
                     break;
-                case TargetAnimationType.Movement:
+                case "Movement":
                     targetAnimator.PlayMove();
+                    break;
+                default:
+                    if (targetAnimator.HasState(hint)) targetAnimator.PlayAnimation(hint);
                     break;
             }
         }
@@ -511,38 +493,7 @@ namespace DDD.TNFY.BRAWL
         private bool HasSelfKnockbackEffect(Ability ability)
         {
             if (ability?.effects == null) return false;
-            return ability.effects.Any(e => e is KnockbackEffect kb && kb.applyToSelf);
-        }
-
-        private bool HasBuffEffects(StatusEffect statusEffect)
-        {
-            foreach (var sa in statusEffect.statusesToApply)
-            {
-                if (IsBuffEffectType(sa.statusEffectData.effectType))
-                    return true;
-            }
-            return false;
-        }
-
-        private bool IsBuffEffectType(StatusEffectType effectType)
-        {
-            switch (effectType)
-            {
-                case StatusEffectType.Shielded:
-                case StatusEffectType.Guarded:
-                case StatusEffectType.Untargetable:
-                case StatusEffectType.AttackUp:
-                case StatusEffectType.DefenseUp:
-                case StatusEffectType.SpeedUp:
-                case StatusEffectType.Hastened:
-                case StatusEffectType.Urged:
-                case StatusEffectType.Healthy:
-                case StatusEffectType.Saturated:
-                case StatusEffectType.Alerted:
-                    return true;
-                default:
-                    return false;
-            }
+            return ability.effects.Any(e => e.AnimationPhase == EffectAnimationPhase.PreEffect);
         }
 
         #endregion

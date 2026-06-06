@@ -1,5 +1,6 @@
 using DDD.TNFY.BRAWL;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [CreateAssetMenu(menuName = "TNFY Brawl/Effects/Status Effect")]
@@ -37,6 +38,47 @@ public class StatusEffect : AbilityEffect
     }
 
     public List<StatusApplication> statusesToApply = new List<StatusApplication>();
+
+    // The sequencer further sub-sorts within the Status phase (buff vs debuff) using IsBuffEffect.
+    // Phase here is StatusBuff as a sensible default; debuff-only StatusEffects will still be
+    // sorted correctly because PlayTargetEffectsWithAnimation partitions all status effects by
+    // IsBuffEffect regardless of this property.
+    public override EffectAnimationPhase AnimationPhase => EffectAnimationPhase.StatusBuff;
+    public override float ExpectedAnimationDuration => 0.6f;
+
+    /// <summary>
+    /// True when at least one status in this effect is a buff type.
+    /// Used by AbilitySequencer to choose Buff vs Debuff target animation.
+    /// </summary>
+    public override bool IsBuffEffect =>
+        statusesToApply.Any(sa => sa.statusEffectData != null &&
+                                  sa.statusEffectData.effectType.IsBuffType());
+
+    /// <summary>
+    /// Animation hint for the caster when self-application statuses are present.
+    /// Buff if any self-applied status is a buff type, Debuff otherwise.
+    /// </summary>
+    public override string SelfCastAnimationHint
+    {
+        get
+        {
+            var selfApps = statusesToApply.Where(sa =>
+                sa.applyTo == ApplicationTarget.Caster ||
+                sa.applyTo == ApplicationTarget.Both).ToList();
+            if (selfApps.Count == 0) return null;
+            bool isBuff = selfApps.Any(sa => sa.statusEffectData != null &&
+                                             sa.statusEffectData.effectType.IsBuffType());
+            return isBuff ? "Buff" : "Debuff";
+        }
+    }
+
+    /// <summary>
+    /// Returns true when every application in this status effect targets only the caster,
+    /// so the sequencer knows to skip it during the per-target pass.
+    /// </summary>
+    public override bool IsSelfOnly(AbilityContext ctx) =>
+        statusesToApply.Count > 0 &&
+        statusesToApply.All(sa => sa.applyTo == ApplicationTarget.Caster);
 
     public override void Apply(AbilityContext ctx, IReadOnlyList<Unit> targets)
     {

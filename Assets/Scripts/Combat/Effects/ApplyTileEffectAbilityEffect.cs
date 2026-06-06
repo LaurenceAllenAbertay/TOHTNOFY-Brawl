@@ -53,6 +53,8 @@ namespace DDD.TNFY.BRAWL
             OnTraversalTiles
         }
 
+        public override EffectAnimationPhase AnimationPhase => EffectAnimationPhase.PostEffect;
+
         public override void Apply(AbilityContext ctx, IReadOnlyList<Unit> targets)
         {
             if (tileEffectData == null)

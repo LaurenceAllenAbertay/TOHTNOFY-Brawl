@@ -44,7 +44,7 @@ namespace DDD.TNFY.BRAWL
                 if (source == cachedHandler.Owner) return power;
 
                 // Only boost buff-type effects, not debuffs or damage-over-time.
-                if (!IsBuffEffectType(effectData.effectType)) return power;
+                if (!effectData.effectType.IsBuffType()) return power;
 
                 return power + potencyBonus;
             };
@@ -63,29 +63,5 @@ namespace DDD.TNFY.BRAWL
             cachedHandler = null;
         }
 
-        /// <summary>
-        /// Mirrors the buff classification used by AbilitySequencer.IsBuffEffectType
-        /// so the two stay in sync. Update both if new buff types are added.
-        /// </summary>
-        private static bool IsBuffEffectType(StatusEffectType effectType)
-        {
-            switch (effectType)
-            {
-                case StatusEffectType.Shielded:
-                case StatusEffectType.Guarded:
-                case StatusEffectType.Untargetable:
-                case StatusEffectType.AttackUp:
-                case StatusEffectType.DefenseUp:
-                case StatusEffectType.SpeedUp:
-                case StatusEffectType.Hastened:
-                case StatusEffectType.Urged:
-                case StatusEffectType.Healthy:
-                case StatusEffectType.Saturated:
-                case StatusEffectType.Alerted:
-                    return true;
-                default:
-                    return false;
-            }
-        }
     }
 }

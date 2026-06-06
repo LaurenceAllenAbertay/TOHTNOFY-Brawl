@@ -19,6 +19,11 @@ public class ChargeEffect : AbilityEffect
     [Tooltip("Animation state to play when the charge lands. Leave empty to return to Idle.")]
     [SerializeField] private string stopAnimationState = "";
 
+    // ChargeEffect does not participate in the normal phase loop — the sequencer detects it
+    // via HasChargeEffect() and routes to ExecuteChargeSequence instead.  The phase is
+    // declared here so the type is self-documenting and any accidental Apply call is traceable.
+    public override EffectAnimationPhase AnimationPhase => EffectAnimationPhase.Displacement;
+
     public override void Apply(AbilityContext ctx, IReadOnlyList<Unit> targets)
     {
         // Apply is intentionally unused in the new execution flow.

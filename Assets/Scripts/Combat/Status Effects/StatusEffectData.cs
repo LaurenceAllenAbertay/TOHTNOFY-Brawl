@@ -96,10 +96,40 @@ namespace DDD.TNFY.BRAWL
         // Enemy AI receives a scoring bonus when evaluating this unit as a target.
         // Does not force targeting -- other factors like distance can still outweigh the bonus.
         Taunting,
-        
+
         // Stun: skips the affected unit's turn. stackCount = turns remaining.
         // Application chance drops 75% per consecutive use on the same target.
         // Counter resets when the unit goes a full turn without being stunned.
         Stunned
+    }
+
+    /// <summary>
+    /// Returns true when <paramref name="effectType"/> is a positive (buff) effect.
+    /// This is the single authoritative definition of "buff" for the whole codebase.
+    /// Add new buff types here — AbilitySequencer and SocialSpongePassive both
+    /// delegate to this method, so one edit covers both.
+    /// </summary>
+    public static class StatusEffectTypeExtensions
+    {
+        public static bool IsBuffType(this StatusEffectType effectType)
+        {
+            switch (effectType)
+            {
+                case StatusEffectType.Shielded:
+                case StatusEffectType.Guarded:
+                case StatusEffectType.Untargetable:
+                case StatusEffectType.AttackUp:
+                case StatusEffectType.DefenseUp:
+                case StatusEffectType.SpeedUp:
+                case StatusEffectType.Hastened:
+                case StatusEffectType.Urged:
+                case StatusEffectType.Healthy:
+                case StatusEffectType.Saturated:
+                case StatusEffectType.Alerted:
+                    return true;
+                default:
+                    return false;
+            }
+        }
     }
 }

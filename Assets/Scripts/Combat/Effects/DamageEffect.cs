@@ -5,6 +5,10 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "TNFY Brawl/Effects/Damage Effect")]
 public class DamageEffect : AbilityEffect
 {
+    public override EffectAnimationPhase AnimationPhase => EffectAnimationPhase.Damage;
+    public override string TargetAnimationHint => "Hurt";
+    public override float ExpectedAnimationDuration => 0.8f;
+
     public override void Apply(AbilityContext ctx, IReadOnlyList<Unit> targets)
     {
         if (ctx == null || ctx.ability == null || targets == null) return;

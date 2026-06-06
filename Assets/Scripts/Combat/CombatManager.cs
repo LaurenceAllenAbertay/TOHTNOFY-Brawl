@@ -567,6 +567,28 @@ namespace DDD.TNFY.BRAWL
         public void BlockAllInput() => isBlockingAllInput = true;
         public void UnblockAllInput() => isBlockingAllInput = false;
 
+        /// <summary>
+        /// Called by effects that manage their own animation timing (e.g. self-knockback,
+        /// movement effect, charge displacement) to acquire the animation block without going
+        /// through the full ExecuteAbilityWithAnimation flow.
+        /// Always pair with a corresponding ReleaseAnimationBlock call.
+        /// </summary>
+        public void BlockAnimationForEffect()
+        {
+            currentState = CombatState.ExecutingAction;
+            isWaitingForAnimation = true;
+        }
+
+        /// <summary>
+        /// Paired release for BlockAnimationForEffect. Clears the animation block and
+        /// returns the manager to WaitingForInput so the player can act again.
+        /// </summary>
+        public void ReleaseAnimationBlock()
+        {
+            isWaitingForAnimation = false;
+            currentState = CombatState.WaitingForInput;
+        }
+
         #endregion
     }
 }

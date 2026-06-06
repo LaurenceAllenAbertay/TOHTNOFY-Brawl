@@ -19,6 +19,11 @@ public class MovementEffect : AbilityEffect
     [Tooltip("How long the movement takes per tile")]
     public float movementDurationPerTile = 0.3f;
 
+    public override EffectAnimationPhase AnimationPhase =>
+        applyToCaster ? EffectAnimationPhase.PreEffect : EffectAnimationPhase.Displacement;
+    public override string TargetAnimationHint => applyToCaster ? null : "Movement";
+    public override float ExpectedAnimationDuration => movementDurationPerTile * moveDistance + 0.3f;
+
     public override void Apply(AbilityContext ctx, IReadOnlyList<Unit> targets)
     {
         if (ctx?.caster == null) return;

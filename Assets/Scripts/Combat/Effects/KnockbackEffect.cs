@@ -37,6 +37,11 @@ public class KnockbackEffect : AbilityEffect
     [Tooltip("Duration of the Knockback_End animation")]
     public float knockbackEndDuration = 0.5f;
 
+    public override EffectAnimationPhase AnimationPhase =>
+        applyToSelf ? EffectAnimationPhase.PreEffect : EffectAnimationPhase.Displacement;
+    public override string TargetAnimationHint => applyToSelf ? null : "Knockback";
+    public override float ExpectedAnimationDuration => 1f;
+
     public override void Apply(AbilityContext ctx, IReadOnlyList<Unit> targets)
     {
         if (ctx?.caster == null) return;
