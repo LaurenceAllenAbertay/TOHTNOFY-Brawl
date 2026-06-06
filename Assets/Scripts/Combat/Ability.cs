@@ -42,6 +42,9 @@ namespace DDD.TNFY.BRAWL
         [Tooltip("If true, ability can execute even when no valid targets are found")]
         public bool canExecuteWithoutTargets = false;
 
+        [Tooltip("If true, the caster's turn ends immediately after this ability executes.")]
+        public bool endTurnOnCast = false;
+
         [Header("Animation & Visual Effects")]
         [SerializeField] private string animationState = "Attack_Melee_1";
 

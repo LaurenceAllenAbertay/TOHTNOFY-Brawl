@@ -25,6 +25,10 @@ namespace DDD.TNFY.BRAWL
         // Set by passives (e.g. Cannoneer). Does not affect movement range.
         public int RangeModifier { get; set; }
 
+        // Queued follow-up action set by abilities like Chug.
+        // Checked at turn start: if set, auto-executes and ends turn immediately.
+        public PendingAction? pendingAction = null;
+
         [Header("Debug Settings")]
         [SerializeField] private bool enableDebugLogging = false;
 
@@ -95,6 +99,20 @@ namespace DDD.TNFY.BRAWL
             // Poll until the sequence finishes (CombatManager and UnitAI do the same check)
             while (abilitySequencer.CurrentAbilityContext != null)
                 yield return null;
+        }
+
+        /// <summary>
+        /// Executes an ability from a pre-built context (used by AI pending action).
+        /// Resolves targets, fires the sequence, and waits for completion.
+        /// </summary>
+        public IEnumerator ExecuteAbilityCoroutine(AbilityContext ctx)
+        {
+            if (ctx?.ability == null || ctx.ability.targeting == null) yield break;
+
+            var targets = ctx.ability.targeting.SelectTargets(ctx);
+            if (targets.Count == 0 && !ctx.ability.canExecuteWithoutTargets) yield break;
+
+            yield return StartCoroutine(ExecuteAbilityAnimationSequence(ctx, targets));
         }
 
         #endregion

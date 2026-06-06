@@ -399,9 +399,13 @@ namespace DDD.TNFY.BRAWL
         #region Highlight Helpers
 
         /// <summary>Restores default movement highlights after targeting ends.</summary>
-        public void RestoreDefaultHighlights(Unit activeUnit)
+        public void RestoreDefaultHighlights(Unit activeUnit, bool suppressMovement = false)
         {
             GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
+
+            // Suppress if caller requests it, or if a pending action is auto-executing.
+            if (suppressMovement) return;
+            if (combatManager != null && combatManager.IsExecutingPendingAction) return;
 
             if (activeUnit is PlayerUnit && combatManager != null && combatManager.CanMove)
             {

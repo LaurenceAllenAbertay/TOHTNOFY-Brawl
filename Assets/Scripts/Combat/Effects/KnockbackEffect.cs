@@ -342,26 +342,39 @@ public class KnockbackEffect : AbilityEffect
         var path = new List<Tile>();
         Tile currentTile = target.currentTile;
 
+        if (currentTile == null)
+        {
+            Debug.LogWarning($"[Knockback] {target.name} has no currentTile - cannot calculate path");
+            return path;
+        }
+
         for (int step = 1; step <= knockbackDistance; step++)
         {
-            Tile nextTile;
+            Tile nextTile = GridManager.Instance.GetTileInDirection(currentTile, knockbackDir);
 
-            nextTile = GridManager.Instance.GetTileInDirection(currentTile, knockbackDir);
-
-            // Stop at grid edge or impassable terrain.
-            if (nextTile == null || !nextTile.passableTerrain)
+            if (nextTile == null)
+            {
+                Debug.Log($"[Knockback] {target.name} step {step}: no tile in dir {knockbackDir} from {currentTile.name}");
                 break;
+            }
 
-            // Stop if the next tile has a unit on it.
-            // Always stop movement regardless of collision setting --
-            // enableCollisions only controls whether damage is dealt, not whether we stop.
+            if (!nextTile.passableTerrain)
+            {
+                Debug.Log($"[Knockback] {target.name} step {step}: tile {nextTile.name} is impassable");
+                break;
+            }
+
             if (nextTile.currentUnit != null && nextTile.currentUnit != target)
+            {
+                Debug.Log($"[Knockback] {target.name} step {step}: tile {nextTile.name} occupied by {nextTile.currentUnit.name}");
                 break;
+            }
 
             path.Add(nextTile);
             currentTile = nextTile;
         }
 
+        Debug.Log($"[Knockback] {target.name} path calculated: {path.Count} tiles in dir {knockbackDir}");
         return path;
     }
 

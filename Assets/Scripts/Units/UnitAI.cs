@@ -146,6 +146,24 @@ namespace DDD.TNFY.BRAWL
         {
             logger.LogTurnStart();
 
+            // Check for a queued follow-up action before normal AI evaluation.
+            if (unit.pendingAction.HasValue)
+            {
+                var pending = unit.pendingAction.Value;
+                unit.pendingAction = null;
+                Debug.Log($"[UnitAI] {unit.name} auto-executing queued {pending.ability.abilityName}");
+                var ctx = new AbilityContext
+                {
+                    caster = unit,
+                    ability = pending.ability,
+                    aimDir = pending.aimDir
+                };
+                yield return StartCoroutine(unit.ExecuteAbilityCoroutine(ctx));
+                yield return new WaitForSeconds(endTurnDelay);
+                turnManager.EndTurn();
+                yield break;
+            }
+
             yield return new WaitForSeconds(thinkingDelay);
 
             logger.LogEvaluationStart();

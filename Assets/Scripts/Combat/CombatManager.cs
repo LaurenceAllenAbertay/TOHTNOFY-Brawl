@@ -24,6 +24,7 @@ namespace DDD.TNFY.BRAWL
         public bool IsTargetingAbility => targetingController != null && targetingController.IsTargetingAbility;
         public bool IsExecutingAbility => isWaitingForAnimation;
         public bool IsMoving => isMoving;
+        public bool IsExecutingPendingAction => isExecutingPendingAction;
         public bool IsBlockingAllInput => isBlockingAllInput;
         public bool HasMovedThisTurn => hasMovedThisTurn;
         public Unit CurrentActiveUnit => currentActiveUnit;
@@ -64,6 +65,7 @@ namespace DDD.TNFY.BRAWL
         private bool isWaitingForAnimation;
         private bool isMoving;
         private bool isBlockingAllInput;
+        private bool isExecutingPendingAction;
 
         private float turnStartTime;
         private const float turnStartProtectionDuration = 1.5f;
@@ -204,9 +206,26 @@ namespace DDD.TNFY.BRAWL
         private void SetupTurnAfterCameraTransition()
         {
             _turnTransitionPending = false;
-            currentState = CombatState.WaitingForInput;
             targetingController?.ClearAbilityTargeting();
             GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
+
+            // Check for a queued follow-up action before giving control to the player.
+            if (currentActiveUnit.pendingAction.HasValue)
+            {
+                var pending = currentActiveUnit.pendingAction.Value;
+                currentActiveUnit.pendingAction = null;
+                currentState = CombatState.ExecutingAction;
+                var ctx = new AbilityContext
+                {
+                    caster = currentActiveUnit,
+                    ability = pending.ability,
+                    aimDir = pending.aimDir
+                };
+                StartCoroutine(ExecutePendingAction(ctx));
+                return;
+            }
+
+            currentState = CombatState.WaitingForInput;
 
             if (currentActiveUnit is PlayerUnit)
             {
@@ -219,6 +238,22 @@ namespace DDD.TNFY.BRAWL
             }
 
             UIEvents.OnActiveUnitChanged();
+        }
+
+        private IEnumerator ExecutePendingAction(AbilityContext ctx)
+        {
+            isExecutingPendingAction = true;
+
+            // Yield directly on the ability coroutine so we block until it fully completes,
+            // including all animations and knockback. No external state polling needed.
+            yield return StartCoroutine(
+                ExecuteAbilityWithAnimation(ctx.ability, ctx, isDirectional: true, ctx.aimDir));
+
+            isExecutingPendingAction = false;
+            GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
+            _turnTransitionPending = true;
+            currentState = CombatState.TurnEnding;
+            turnManager.EndTurn();
         }
 
         public void EndTurn()
@@ -390,7 +425,9 @@ namespace DDD.TNFY.BRAWL
                         cameraController.UnitFocusPosition(currentActiveUnit)));
                 }
 
-                targetingController?.RestoreDefaultHighlights(currentActiveUnit);
+                targetingController?.RestoreDefaultHighlights(
+                    currentActiveUnit,
+                    suppressMovement: ability.endTurnOnCast || isExecutingPendingAction);
                 targetingController?.ClearAbilityTargeting();
                 UIEvents.OnAbilityUsed();
             }
@@ -404,6 +441,16 @@ namespace DDD.TNFY.BRAWL
             UnblockAllInput();
             isWaitingForAnimation = false;
             currentState = CombatState.WaitingForInput;
+
+            // If the ability demands an immediate turn end (player-controlled cast only).
+            // ExecutePendingAction handles its own turn end after yielding on this coroutine.
+            if (ability.endTurnOnCast && !isExecutingPendingAction)
+            {
+                GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
+                _turnTransitionPending = true;
+                currentState = CombatState.TurnEnding;
+                turnManager.EndTurn();
+            }
         }
 
         private IEnumerator WaitForCompleteAbilitySequence(Ability ability)
@@ -422,7 +469,21 @@ namespace DDD.TNFY.BRAWL
                     bool cameraTransitioning = cameraController != null && cameraController.IsTransitioning;
                     bool abilityExecuting = currentActiveUnit.currentAbilityContext != null;
 
-                    if (!cameraTransitioning && !abilityExecuting) break;
+                    // Also wait for any knockback animations on target units to fully complete.
+                    // Knockback runs as a coroutine on the target, not the caster, so
+                    // currentAbilityContext clearing does not mean knockback is done.
+                    bool anyKnockbackPlaying = false;
+                    foreach (var unit in UnitManager.AllUnits)
+                    {
+                        var ua = unit.GetComponent<UnitAnimator>();
+                        if (ua != null && ua.IsInKnockbackSequence)
+                        {
+                            anyKnockbackPlaying = true;
+                            break;
+                        }
+                    }
+
+                    if (!cameraTransitioning && !abilityExecuting && !anyKnockbackPlaying) break;
 
                     elapsed += Time.deltaTime;
                     yield return null;

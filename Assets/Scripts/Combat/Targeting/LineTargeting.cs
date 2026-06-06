@@ -7,6 +7,10 @@ public class LineTargeting : AbilityTargeting
 {
     [Tooltip("If true, this ability can only be aimed left or right (horizontal only)")]
     public bool horizontalOnly = true;
+
+    [Tooltip("Number of tiles wide perpendicular to the aim direction. 1 = single line (default). ")]
+    public int width = 1;
+
     public override List<Tile> GetTraversal(AbilityContext ctx)
     {
         var tiles = new List<Tile>();
@@ -36,49 +40,39 @@ public class LineTargeting : AbilityTargeting
 
         int max = Mathf.Max(1, ctx.EffectiveRange);
 
-        Vector3 currentPos = start.transform.position;
+        // Perpendicular direction for width expansion.
+        // For horizontal aim (left/right), perp is up/down (Z axis).
+        // For vertical aim (up/down), perp is left/right (X axis).
+        Vector2Int perp = new Vector2Int(-dir.y, dir.x);
+
+        // Enforce odd width by rounding down even values.
+        int effectiveWidth = Mathf.Max(1, width % 2 == 0 ? width - 1 : width);
+        int halfWidth = effectiveWidth / 2;
+
         Vector3 tileSpacing = GridManager.Instance.GetTileSpacing();
 
         for (int i = 0; i < max; i++)
         {
-            currentPos += new Vector3(dir.x * tileSpacing.x, 0, dir.y * tileSpacing.z);
-            Tile nextTile = GridManager.Instance.GetTileAtPosition(currentPos);
+            // Step forward one tile in the aim direction.
+            Vector3 centerPos = start.transform.position +
+                new Vector3(dir.x * tileSpacing.x * (i + 1), 0, dir.y * tileSpacing.z * (i + 1));
 
-            if (nextTile == null)
+            // For each row, expand perpendicular by halfWidth on each side.
+            for (int w = -halfWidth; w <= halfWidth; w++)
             {
-                if (!affectsOverGaps)
+                Vector3 tilePos = centerPos +
+                    new Vector3(perp.x * tileSpacing.x * w, 0, perp.y * tileSpacing.z * w);
+
+                Tile nextTile = GridManager.Instance.GetTileAtPosition(tilePos);
+
+                if (nextTile == null)
                 {
-                    break;
+                    if (!affectsOverGaps) continue;
                 }
-                continue;
-            }
-
-            if (!affectsThroughWalls && tiles.Count > 0)
-            {
-                Tile lastTile = tiles[tiles.Count - 1];
-                if (IsBlockedByWall(lastTile, nextTile))
+                else if (!tiles.Contains(nextTile))
                 {
-                    break;
+                    tiles.Add(nextTile);
                 }
-            }
-            else if (!affectsThroughWalls && tiles.Count == 0)
-            {
-                if (IsBlockedByWall(start, nextTile))
-                {
-                    break;
-                }
-            }
-
-            tiles.Add(nextTile);
-
-            if (nextTile.currentUnit != null && !ctx.ability.passThroughUnits)
-            {
-                break;
-            }
-
-            if (!nextTile.passableTerrain && !affectsOverGaps)
-            {
-                break;
             }
         }
 

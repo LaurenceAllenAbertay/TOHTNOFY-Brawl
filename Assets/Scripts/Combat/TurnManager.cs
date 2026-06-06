@@ -129,11 +129,8 @@ namespace DDD.TNFY.BRAWL
             else if (current is EnemyUnit enemy)
                 enemy.StartTurn();
 
-            // Notify CombatManager about the new active unit
-            if (combatManager != null)
-                combatManager.OnTurnStarted(current);
-
             // FIRE THE EVENTS
+            // CombatManager subscribes to OnTurnStarted directly -- no separate direct call needed.
             OnTurnStarted?.Invoke(current);
             OnTotalTurnChanged?.Invoke(totalTurnCount);
         }
