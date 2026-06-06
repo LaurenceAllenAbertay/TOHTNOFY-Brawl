@@ -88,6 +88,12 @@ namespace DDD.TNFY.BRAWL
         public IEnumerator TransitionTo(Vector3 targetPosition, float duration = 1f)
         {
             targetPosition = ClampToBounds(targetPosition);
+
+            // Skip if already at the destination to avoid a full-duration pause
+            // when the camera is already on the caster before the ability fires.
+            if (Vector3.Distance(transform.position, targetPosition) < 0.01f)
+                yield break;
+
             isTransitioning = true;
             Vector3 startPosition = transform.position;
             float elapsed = 0f;

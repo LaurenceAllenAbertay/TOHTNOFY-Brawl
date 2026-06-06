@@ -15,8 +15,8 @@ MonoBehaviour:
   characterName: Brodie
   portrait: {fileID: -2051855900, guid: e531406b1ba316c4b88a0291c8240e66, type: 3}
   maxHealth: 200
-  attack: 2
-  defense: 1
+  attack: 0
+  defense: 0
   speed: 2
   abilityLoadout:
   - {fileID: 11400000, guid: 7126174003f5d844ea16ff7816f08e3c, type: 2}

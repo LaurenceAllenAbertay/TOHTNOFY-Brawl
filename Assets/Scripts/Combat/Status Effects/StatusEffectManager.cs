@@ -45,7 +45,12 @@ namespace DDD.TNFY.BRAWL
             if (!activeEffects.ContainsKey(target))
                 activeEffects[target] = new List<StatusEffectInstance>();
 
-            var existingEffect = FindExistingEffect(target, effectData);
+            // Unique effects always create a fresh independent instance with their own timer.
+            // Skip FindExistingEffect so each application stacks individually and expires
+            // independently (e.g. hit on turn 1 expires turn 4, hit on turn 2 expires turn 5).
+            bool isUnique = effectData.stackingBehavior == StatusEffectData.StackingBehavior.Unique;
+
+            var existingEffect = isUnique ? null : FindExistingEffect(target, effectData);
 
             if (existingEffect != null)
             {
@@ -243,6 +248,20 @@ namespace DDD.TNFY.BRAWL
                 case StatusEffectType.SpeedDown:
                     effect.target.currentSpeed -= Mathf.RoundToInt(effect.effectPower);
                     break;
+                case StatusEffectType.Intimidated:
+                    // Behavioural effect: no stat change on application.
+                    // Unit.CanTarget enforces the restriction at selection time.
+                    break;
+                case StatusEffectType.Taunting:
+                    // Register this unit as a likely target on all enemy AI units.
+                    // effectPower is the scoring bonus (configured on the StatusEffectData SO).
+                    foreach (var unit in UnitManager.AllUnits)
+                    {
+                        var ai = unit.GetComponent<DDD.TNFY.BRAWL.UnitAI>();
+                        if (ai != null)
+                            ai.AddTargetLikelyUnit(effect.target, effect.remainingDuration);
+                    }
+                    break;
             }
 
             // Spawn VFX if configured
@@ -259,7 +278,7 @@ namespace DDD.TNFY.BRAWL
         // **UPDATE** - Replace existing RemoveEffectModifiers method
         private void RemoveEffectModifiers(StatusEffectInstance effect)
         {
-            // Remove stat modifiers when effect ends
+            // Reverse stat modifiers when effect ends.
             switch (effect.effectData.effectType)
             {
                 case StatusEffectType.AttackUp:
@@ -279,6 +298,13 @@ namespace DDD.TNFY.BRAWL
                     break;
                 case StatusEffectType.SpeedDown:
                     effect.target.currentSpeed += Mathf.RoundToInt(effect.effectPower);
+                    break;
+                case StatusEffectType.Intimidated:
+                    // Nothing to reverse: restriction is checked live via Unit.CanTarget.
+                    break;
+                case StatusEffectType.Taunting:
+                    // Nothing to reverse: AddTargetLikelyUnit tracks its own duration
+                    // and clears itself via UpdateTargetingDurations in UnitAI.
                     break;
             }
 

@@ -83,12 +83,11 @@ namespace DDD.TNFY.BRAWL
             if (enableDebugLogging)
                 Debug.Log($"[AbilitySequencer:{unit.name}] Starting timed effects for {ctx.ability.AnimationState}");
 
-            // STEP 1: Pan camera to caster
+            // STEP 1: Pan camera to caster — animation begins as soon as the transition completes
             if (cameraController != null)
             {
                 yield return StartCoroutine(cameraController.TransitionTo(
                     cameraController.UnitFocusPosition(unit)));
-                yield return new WaitForSeconds(1.5f);
             }
 
             // STEP 2: Get animator
@@ -168,12 +167,11 @@ namespace DDD.TNFY.BRAWL
             var nonSelfTargets = targets.Where(t => t != unit).ToList();
             if (nonSelfTargets.Count > 0)
                 yield return StartCoroutine(HandleCameraTransitionsAndEffects(ctx, nonSelfTargets));
-            else if (ctx.ability.canExecuteWithoutTargets && CombatVFXManager.Instance != null)
+            else if (ctx.ability.canExecuteWithoutTargets)
             {
-                // No units were hit but the ability can still fire — spawn hit effects on
-                // the empty traversal tiles so the cast still has visual feedback.
-                var traversalTiles = ctx.ability.targeting.GetTraversal(ctx);
-                CombatVFXManager.Instance.SpawnHitEffectsOnEmptyTiles(ctx, traversalTiles);
+                // No units hit but the ability can still fire — spawn hit effects on
+                // empty traversal tiles so the cast still has visual feedback.
+                SpawnHitEffectsOnTraversalTiles(ctx);
             }
 
             yield return StartCoroutine(HandleRemainingEffects(ctx, targets));
@@ -208,6 +206,7 @@ namespace DDD.TNFY.BRAWL
             {
                 ApplyAbilityEffectsToTargets(ctx, targets);
                 SpawnHitEffects(ctx, targets);
+                SpawnHitEffectsOnTraversalTiles(ctx);
                 yield break;
             }
 
@@ -452,17 +451,22 @@ namespace DDD.TNFY.BRAWL
 
         private void SpawnHitEffects(AbilityContext ctx, IReadOnlyList<Unit> targets)
         {
+            if (CombatVFXManager.Instance != null)
+                CombatVFXManager.Instance.SpawnHitEffects(ctx, targets);
+        }
+
+        /// <summary>
+        /// Spawns hit effects on empty traversal tiles when the ability supports firing
+        /// without targets (e.g. Barrage hitting open ground).
+        /// No-op if canExecuteWithoutTargets is false or no HitEffectPrefab is set.
+        /// </summary>
+        private void SpawnHitEffectsOnTraversalTiles(AbilityContext ctx)
+        {
+            if (!ctx.ability.canExecuteWithoutTargets) return;
             if (CombatVFXManager.Instance == null) return;
 
-            CombatVFXManager.Instance.SpawnHitEffects(ctx, targets);
-
-            // When the ability can fire without targets (e.g. Barrage hitting empty ground),
-            // also spawn hit effects on the empty traversal tiles so the cast still looks impactful.
-            if (ctx.ability.canExecuteWithoutTargets)
-            {
-                var traversalTiles = ctx.ability.targeting.GetTraversal(ctx);
-                CombatVFXManager.Instance.SpawnHitEffectsOnEmptyTiles(ctx, traversalTiles);
-            }
+            var traversalTiles = ctx.ability.targeting.GetTraversal(ctx);
+            CombatVFXManager.Instance.SpawnHitEffectsOnEmptyTiles(ctx, traversalTiles);
         }
 
         #endregion

@@ -84,6 +84,16 @@ namespace DDD.TNFY.BRAWL
         // Control
         Controlled,
         Panicked,
-        Alerted
+        Alerted,
+
+        // Targeting Restrictions
+        // The affected unit cannot choose the source of this effect as a target.
+        // Does not prevent the source from being hit by AOE targeting another unit.
+        Intimidated,
+
+        // Targeting Priority
+        // Enemy AI receives a scoring bonus when evaluating this unit as a target.
+        // Does not force targeting -- other factors like distance can still outweigh the bonus.
+        Taunting
     }
 }

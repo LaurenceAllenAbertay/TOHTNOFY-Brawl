@@ -15,10 +15,10 @@ MonoBehaviour:
   characterName: Lorns
   portrait: {fileID: 215081699, guid: 85dd2a411dee5264ca097828f8075603, type: 3}
   maxHealth: 100
-  attack: 3
-  defense: 1
+  attack: 0
+  defense: 0
   speed: 4
   abilityLoadout:
-  - {fileID: 11400000, guid: 3bbfe97f2cec869489361a2d24c4a1c5, type: 2}
+  - {fileID: 11400000, guid: efa69723de63f1b4aaa9389d944cd2d6, type: 2}
   - {fileID: 11400000, guid: 7b5298c02649ca24194198c32229b6fd, type: 2}
   - {fileID: 11400000, guid: b76ac2ff104713646bdfe8a5a9ee6c37, type: 2}

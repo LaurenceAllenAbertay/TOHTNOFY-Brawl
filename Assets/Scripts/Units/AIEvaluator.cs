@@ -551,7 +551,9 @@ namespace DDD.TNFY.BRAWL
                 case StatusEffectType.SpeedDown: case StatusEffectType.Distracted:
                 case StatusEffectType.Ensnared: case StatusEffectType.Encumbered:
                 case StatusEffectType.Controlled: case StatusEffectType.Panicked:
+                case StatusEffectType.Intimidated:
                     return true;
+                case StatusEffectType.Taunting: return false; // buff on ally
                 default: return false;
             }
         }

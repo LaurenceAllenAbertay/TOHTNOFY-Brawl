@@ -10,26 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 538600722897cd54787bdb9601555fbf, type: 3}
-  m_Name: Barrage
+  m_Name: Mind Games
   m_EditorClassIdentifier: 
-  abilityName: Barrage
+  abilityName: Mind Games
   description: 
-  image: {fileID: 21300000, guid: a6a4ae2da7c02b745be67cef4b9d3e15, type: 3}
-  rangeType: 2
-  range: 4
-  damage: 10
+  image: {fileID: 21300000, guid: 0ad97a5ed1079334e9e87eeff0ae81a6, type: 3}
+  rangeType: 0
+  range: 5
+  damage: 0
   canHitEnemies: 1
-  canHitAllies: 1
+  canHitAllies: 0
   passThroughUnits: 0
-  maxTargets: 8
-  canExecuteWithoutTargets: 1
-  animationState: Straight_Shot
+  maxTargets: 1
+  canExecuteWithoutTargets: 0
+  animationState: Mind_Games
   castEffectPrefab: {fileID: 0}
   castEffectOffset: {x: 0, y: 0, z: 0}
   parentCastEffectToCaster: 0
-  hitEffectPrefab: {fileID: 5867664338593234846, guid: c4dc5994b0fc38747856b364b2022a3d, type: 3}
+  hitEffectPrefab: {fileID: 0}
   hitEffectOffset: {x: 0, y: 0, z: 0}
   parentHitEffectToTarget: 0
-  targeting: {fileID: 11400000, guid: 7e250200b6f8e1942ba35a67cc94f38a, type: 2}
+  targeting: {fileID: 11400000, guid: bda949f8acafd6f4aa0f4d49205933f6, type: 2}
   effects:
-  - {fileID: 11400000, guid: 7bbe0b6e3f185f143b1c19342a3a4c8e, type: 2}
+  - {fileID: 11400000, guid: c2b6178e4c37f114084a746f8b7c00fb, type: 2}

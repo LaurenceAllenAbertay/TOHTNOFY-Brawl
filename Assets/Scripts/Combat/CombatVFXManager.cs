@@ -70,8 +70,8 @@ namespace DDD.TNFY.BRAWL
 
         /// <summary>
         /// Spawns the hit effect prefab on each tile in the list that has no unit on it.
-        /// Used when canExecuteWithoutTargets is true — empty tiles in the traversal
-        /// should still show an impact even if no unit was standing there.
+        /// Used when canExecuteWithoutTargets is true so empty traversal tiles still show
+        /// an impact even when no unit was standing there (e.g. Barrage hitting open ground).
         /// </summary>
         public void SpawnHitEffectsOnEmptyTiles(AbilityContext ctx, IReadOnlyList<Tile> tiles)
         {

@@ -100,6 +100,8 @@ namespace DDD.TNFY.BRAWL
         private void SubscribeToEvents()
         {
             Tile.OnTileClicked += HandleTileClicked;
+            Tile.OnTileHovered += HandleTileHovered;
+            Tile.OnTileHoverExited += HandleTileHoverExited;
             TurnManager.OnTurnStarted += OnTurnStarted;
             InputManager.OnMouseMoved += HandleMouseMoved;
             InputManager.OnMouseClicked += HandleMouseClicked;
@@ -112,6 +114,8 @@ namespace DDD.TNFY.BRAWL
         private void UnsubscribeFromEvents()
         {
             Tile.OnTileClicked -= HandleTileClicked;
+            Tile.OnTileHovered -= HandleTileHovered;
+            Tile.OnTileHoverExited -= HandleTileHoverExited;
             TurnManager.OnTurnStarted -= OnTurnStarted;
 
             if (InputManager.Instance != null)
@@ -169,7 +173,7 @@ namespace DDD.TNFY.BRAWL
 
         /// <summary>
         /// Resets only the active unit's RandomAOETargeting cache after they move,
-        /// so the selection re-rolls from the new position.
+        /// so the selection re-rolls relative to their new position.
         /// </summary>
         private void ResetCurrentUnitRandomAOECaches()
         {
@@ -299,6 +303,26 @@ namespace DDD.TNFY.BRAWL
 
             if (!hasMovedThisTurn)
                 AttemptMovement(clickedTile);
+        }
+
+        private void HandleTileHovered(Tile hoveredTile)
+        {
+            if (ShouldBlockInput()) return;
+            if (InputManager.IsMouseOverUI_Static()) return;
+            if (jumpSystem != null && jumpSystem.IsTargetingJump) return;
+
+            if (IsTargetingAbility)
+                targetingController.HandleTileHovered(hoveredTile, currentActiveUnit);
+        }
+
+        private void HandleTileHoverExited(Tile exitedTile)
+        {
+            if (ShouldBlockInput()) return;
+            if (InputManager.IsMouseOverUI_Static()) return;
+            if (jumpSystem != null && jumpSystem.IsTargetingJump) return;
+
+            if (IsTargetingAbility)
+                targetingController.HandleTileHoverExited(exitedTile, currentActiveUnit);
         }
 
         #endregion
@@ -448,7 +472,7 @@ namespace DDD.TNFY.BRAWL
                     isMoving = false;
                     currentState = CombatState.WaitingForInput;
 
-                    // Re-roll RandomAOE selections from the unit's new position.
+                    // Re-roll RandomAOE selections relative to the unit's new position.
                     ResetCurrentUnitRandomAOECaches();
 
                     // Restore movement highlights if the player still has points left

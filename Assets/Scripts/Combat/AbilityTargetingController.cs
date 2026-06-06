@@ -101,12 +101,40 @@ namespace DDD.TNFY.BRAWL
 
         #region Mouse Input Handlers
 
+        /// <summary>
+        /// Called by CombatManager when a tile's OnMouseEnter fires.
+        /// Drives hoveredTile for single targeting via Unity's physics collider system,
+        /// which is consistent with OnMouseDown and correct on multi-level maps.
+        /// </summary>
+        public void HandleTileHovered(Tile tile, Unit activeUnit)
+        {
+            if (!IsTargetingAbility) return;
+            if (!(currentAbility.targeting is SingleTargeting)) return;
+
+            if (tile == hoveredTile) return;
+            hoveredTile = tile;
+            ShowSingleTargetRangePreview(activeUnit);
+        }
+
+        public void HandleTileHoverExited(Tile tile, Unit activeUnit)
+        {
+            if (!IsTargetingAbility) return;
+            if (!(currentAbility.targeting is SingleTargeting)) return;
+
+            // Only clear if the exited tile is the one we're tracking — OnMouseEnter on the
+            // next tile fires before OnMouseExit on the previous one in Unity, so if hoveredTile
+            // has already advanced we leave it alone.
+            if (tile != hoveredTile) return;
+            hoveredTile = null;
+            ShowSingleTargetRangePreview(activeUnit);
+        }
+
         public void HandleMouseMoved(Vector3 mouseWorldPosition, Unit activeUnit)
         {
             if (!IsTargetingAbility) return;
 
             if (currentAbility.targeting is SingleTargeting)
-                HandleSingleTargetingMouseMove(mouseWorldPosition, activeUnit);
+                return; // hoveredTile is driven by HandleTileHovered (OnMouseEnter) — no polling needed
             else if (currentAbility.targeting is MultiTileSelectionTargeting)
                 HandleMultiTileSelectionMouseMove(mouseWorldPosition, activeUnit);
             else if (currentAbility.targeting is RandomAOETargeting)
@@ -123,10 +151,7 @@ namespace DDD.TNFY.BRAWL
                 return; // Single targeting uses tile click events, not raw mouse position
 
             if (currentAbility.targeting is RandomAOETargeting)
-            {
-                ConfirmRandomAOEAbility(activeUnit);
-                return;
-            }
+                return; // RandomAOE confirms via tile click — handled in HandleTileClicked
 
             HandleDirectionalAbilityClick(mouseWorldPosition, activeUnit);
         }
@@ -139,7 +164,8 @@ namespace DDD.TNFY.BRAWL
                 ConfirmSingleTargetAbility(clickedTile, activeUnit);
             else if (currentAbility.targeting is MultiTileSelectionTargeting multiTargeting)
                 HandleMultiTileSelectionClick(clickedTile, multiTargeting, activeUnit);
-            // RandomAOE confirms via any left click (HandleMouseClicked), not a specific tile
+            else if (currentAbility.targeting is RandomAOETargeting)
+                ConfirmRandomAOEAbility(activeUnit);
         }
 
         #endregion
@@ -185,17 +211,6 @@ namespace DDD.TNFY.BRAWL
         #endregion
 
         #region Single Targeting
-
-        private void HandleSingleTargetingMouseMove(Vector3 mouseWorldPosition, Unit activeUnit)
-        {
-            Tile targetTile = GetHoveredTile(mouseWorldPosition);
-
-            if (targetTile != hoveredTile)
-            {
-                hoveredTile = targetTile;
-                ShowSingleTargetRangePreview(activeUnit);
-            }
-        }
 
         private void ConfirmSingleTargetAbility(Tile targetTile, Unit activeUnit)
         {

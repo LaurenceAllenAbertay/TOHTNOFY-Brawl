@@ -274,6 +274,16 @@ namespace DDD.TNFY.BRAWL
             if (StatusEffectManager.Instance != null &&
                 StatusEffectManager.Instance.HasStatusEffect(unit, StatusEffectType.Untargetable))
                 return false;
+
+            // Intimidated: this unit cannot target the source of the effect on it.
+            // Only the intimidated unit is blocked, not every unit in the game.
+            if (StatusEffectManager.Instance != null)
+            {
+                var intimidated = StatusEffectManager.Instance.GetStatusEffect(this, StatusEffectType.Intimidated);
+                if (intimidated != null && intimidated.source == unit)
+                    return false;
+            }
+
             return !IsAllyOf(unit);
         }
 

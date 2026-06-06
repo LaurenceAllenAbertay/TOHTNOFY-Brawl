@@ -5346,6 +5346,8 @@ MonoBehaviour:
   focusTransitionDuration: 1
   cameraZOffset: 3.5
   cameraYOffset: 2
+  aoeZoomYMultiplier: 0.8
+  aoeZoomZMultiplier: 2
   boundsBox: {fileID: 400907951}
   boundsPadding: 1
   visualizeBounds: 0
@@ -9011,6 +9013,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5339470617087333520, guid: 4c1c94adc781f264299ccca08e71bf9d, type: 3}
   m_PrefabInstance: {fileID: 946476440}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &946476442 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7506204126563411162, guid: 4c1c94adc781f264299ccca08e71bf9d, type: 3}
+  m_PrefabInstance: {fileID: 946476440}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca7b883aead5a024e9edaaf7678c5ad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &952964047
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10053,6 +10066,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kallper
       objectReference: {fileID: 0}
+    - target: {fileID: 7349237561839375101, guid: e00964b9cdd292540adf00515fbcf420, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8840272535475989188, guid: e00964b9cdd292540adf00515fbcf420, type: 3}
       propertyPath: m_LocalPosition.x
       value: -7.5
@@ -10515,6 +10532,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Oliver
       objectReference: {fileID: 0}
+    - target: {fileID: 8547975530932973090, guid: ff3a7c448e9ed2d428a0d1c08b1514f9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10938,17 +10959,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1180948880}
   m_CullTransparentMesh: 1
---- !u!114 &1185983776 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7506204126563411162, guid: 4c1c94adc781f264299ccca08e71bf9d, type: 3}
-  m_PrefabInstance: {fileID: 864890116}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ca7b883aead5a024e9edaaf7678c5ad9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1187165986
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17086,6 +17096,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Brodie
       objectReference: {fileID: 0}
+    - target: {fileID: 1853854094929722269, guid: be2f2a38fd9d3804a84f23c51183ccc9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3639828477509544535, guid: be2f2a38fd9d3804a84f23c51183ccc9, type: 3}
       propertyPath: goesFirst
       value: 0
@@ -17898,17 +17912,21 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -1534967443, guid: 878154ffaa839b148ba3c69578eda723, type: 3}
+    - target: {fileID: 4991065325652505081, guid: b78f1e0899f598a469c80980a0785bd8, type: 3}
+      propertyPath: enableDebugLogging
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5113337382802062388, guid: b78f1e0899f598a469c80980a0785bd8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 5113337382802062388, guid: b78f1e0899f598a469c80980a0785bd8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5113337382802062388, guid: b78f1e0899f598a469c80980a0785bd8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5113337382802062388, guid: b78f1e0899f598a469c80980a0785bd8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -17945,7 +17963,7 @@ PrefabInstance:
     - target: {fileID: 6458478419312437797, guid: b78f1e0899f598a469c80980a0785bd8, type: 3}
       propertyPath: currentTile
       value: 
-      objectReference: {fileID: 1185983776}
+      objectReference: {fileID: 946476442}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
