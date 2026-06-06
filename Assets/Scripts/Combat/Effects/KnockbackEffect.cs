@@ -41,17 +41,21 @@ public class KnockbackEffect : AbilityEffect
     {
         if (ctx?.caster == null) return;
 
+        // Camera follow only when a single unit is launched over multiple tiles.
+        bool singleTarget = (targets == null || targets.Count == 1) && !applyToSelf;
+        bool shouldFollowCamera = singleTarget && knockbackDistance > 1;
+
         if (applyToSelf)
         {
             // Apply knockback to the caster
-            ctx.caster.StartCoroutine(ApplyKnockbackWithAnimation(ctx, ctx.caster));
+            ctx.caster.StartCoroutine(ApplyKnockbackWithAnimation(ctx, ctx.caster, false));
         }
         else if (finalTargetOnly)
         {
             Unit displacedUnit = GetDisplacedUnit(ctx);
             if (displacedUnit != null)
             {
-                ctx.caster.StartCoroutine(ApplyKnockbackWithAnimation(ctx, displacedUnit));
+                ctx.caster.StartCoroutine(ApplyKnockbackWithAnimation(ctx, displacedUnit, shouldFollowCamera));
             }
         }
         else
@@ -61,13 +65,13 @@ public class KnockbackEffect : AbilityEffect
                 foreach (var target in targets)
                 {
                     if (target != null)
-                        ctx.caster.StartCoroutine(ApplyKnockbackWithAnimation(ctx, target));
+                        ctx.caster.StartCoroutine(ApplyKnockbackWithAnimation(ctx, target, shouldFollowCamera));
                 }
             }
         }
     }
 
-    private IEnumerator ApplyKnockbackWithAnimation(AbilityContext ctx, Unit target)
+    private IEnumerator ApplyKnockbackWithAnimation(AbilityContext ctx, Unit target, bool followCamera = false)
     {
         if (target?.currentTile == null) yield break;
 
@@ -163,10 +167,14 @@ public class KnockbackEffect : AbilityEffect
                 yield return null;
             }
 
-            // Check for collision at destination
-            if (enableCollisions && knockbackPath[0].currentUnit != null && knockbackPath[0].currentUnit != target)
+            // Check for a unit on the tile immediately beyond the landing spot.
+            // The launched unit now occupies knockbackPath[0], so any blocker
+            // is one step further in the knockback direction.
+            if (enableCollisions)
             {
-                HandleCollision(ctx, target, knockbackPath[0].currentUnit, knockbackDir);
+                Tile beyondTile = GridManager.Instance.GetTileInDirection(knockbackPath[0], knockbackDir);
+                if (beyondTile != null && beyondTile.currentUnit != null && beyondTile.currentUnit != target)
+                    HandleCollision(ctx, target, beyondTile.currentUnit, knockbackDir);
             }
 
             // Wait for remaining start animation time, then play end
@@ -187,6 +195,18 @@ public class KnockbackEffect : AbilityEffect
             // Multi-tile knockback: Start movement immediately and hold start animation
             Debug.Log($"Multi-tile knockback for {target.name} - {knockbackPath.Count} tiles");
 
+            // Cache camera once before the loop.
+            var camera = followCamera ? UnityEngine.Object.FindAnyObjectByType<CameraController>() : null;
+
+            // Fire one smooth camera transition covering the full movement distance.
+            // Duration matches total movement time so the camera arrives with the unit.
+            if (camera != null)
+            {
+                float totalDuration = knockbackPath.Count * movementDurationPerTile;
+                Vector3 finalFocus = camera.WorldFocusPosition(knockbackPath[knockbackPath.Count - 1].transform.position);
+                ctx.caster.StartCoroutine(camera.TransitionTo(finalFocus, totalDuration));
+            }
+
             // Brief delay to let knockback start animation begin
             yield return new WaitForSeconds(0.1f);
 
@@ -205,11 +225,15 @@ public class KnockbackEffect : AbilityEffect
                     yield return null;
                 }
 
-                // Check for collision
-                if (enableCollisions && knockbackPath[i].currentUnit != target)
+                // Check for a unit on the tile immediately beyond this step.
+                if (enableCollisions)
                 {
-                    HandleCollision(ctx, target, knockbackPath[i].currentUnit, knockbackDir);
-                    break; // Stop knockback on collision
+                    Tile beyondTile = GridManager.Instance.GetTileInDirection(knockbackPath[i], knockbackDir);
+                    if (beyondTile != null && beyondTile.currentUnit != null && beyondTile.currentUnit != target)
+                    {
+                        HandleCollision(ctx, target, beyondTile.currentUnit, knockbackDir);
+                        break;
+                    }
                 }
             }
 
@@ -322,48 +346,20 @@ public class KnockbackEffect : AbilityEffect
         {
             Tile nextTile;
 
-            if (forceKnockback)
-            {
-                // Original behavior - try alternative directions if primary is blocked
-                nextTile = FindValidKnockbackTile(currentTile, knockbackDir);
-            }
-            else
-            {
-                // New behavior - only move in exact knockback direction, no alternatives
-                nextTile = GridManager.Instance.GetTileInDirection(currentTile, knockbackDir);
+            nextTile = GridManager.Instance.GetTileInDirection(currentTile, knockbackDir);
 
-                // Validate the tile is actually moveable
-                if (nextTile == null || !nextTile.passableTerrain || nextTile.occupied)
-                {
-                    nextTile = null;
-                }
-            }
-
-            if (nextTile == null)
-            {
-                // Blocked - check if we should deal wall damage
-                if (path.Count == 0) // Couldn't move at all
-                {
-                    if (forceKnockback)
-                    {
-                        Debug.Log($"{target.name} is completely blocked - playing knockback animation but not moving");
-                    }
-                    else
-                    {
-                        Debug.Log($"{target.name} knockback blocked in exact direction - no movement or animation");
-                    }
-                }
+            // Stop at grid edge or impassable terrain.
+            if (nextTile == null || !nextTile.passableTerrain)
                 break;
-            }
+
+            // Stop if the next tile has a unit on it.
+            // Always stop movement regardless of collision setting --
+            // enableCollisions only controls whether damage is dealt, not whether we stop.
+            if (nextTile.currentUnit != null && nextTile.currentUnit != target)
+                break;
 
             path.Add(nextTile);
             currentTile = nextTile;
-
-            // Stop if we hit a unit (for collision handling)
-            if (enableCollisions && nextTile.occupied && nextTile.currentUnit != target)
-            {
-                break;
-            }
         }
 
         return path;

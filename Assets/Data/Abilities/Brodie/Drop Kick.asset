@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 538600722897cd54787bdb9601555fbf, type: 3}
-  m_Name: Double Prong
+  m_Name: Drop Kick
   m_EditorClassIdentifier: 
-  abilityName: Double Prong
+  abilityName: Drop Kick
   description: 
-  image: {fileID: 21300000, guid: 78f15f5f8ec77614498e18276f74881d, type: 3}
+  image: {fileID: 21300000, guid: 6f25e6eef642e084b85a4ece579731f3, type: 3}
   rangeType: 0
   range: 1
-  damage: 5
+  damage: 10
   canHitEnemies: 1
   canHitAllies: 0
   passThroughUnits: 0
@@ -33,4 +33,4 @@ MonoBehaviour:
   targeting: {fileID: 11400000, guid: 2047dac3f0c1d6d4da0984b52201bc25, type: 2}
   effects:
   - {fileID: 11400000, guid: 7bbe0b6e3f185f143b1c19342a3a4c8e, type: 2}
-  - {fileID: 11400000, guid: a6480283f5f0be1439dfe2d2d65a2cd6, type: 2}
+  - {fileID: 11400000, guid: 6340e8e8a0a9dc0458fd49d971f6ee18, type: 2}
