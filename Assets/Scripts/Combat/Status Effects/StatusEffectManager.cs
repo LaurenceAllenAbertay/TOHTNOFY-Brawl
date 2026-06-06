@@ -16,6 +16,11 @@ namespace DDD.TNFY.BRAWL
         public static event System.Action<Unit, StatusEffectInstance> OnStatusEffectRemoved;
         public static event System.Action<Unit, StatusEffectInstance> OnStatusEffectTriggered;
 
+        // Power modifier hook - passives register here to modify effectPower before application.
+        // Signature: (source, target, effectData, originalPower) -> modifiedPower.
+        // Multiple passives chain by each adding their delta to the incoming value.
+        public static event System.Func<Unit, Unit, StatusEffectData, float, float> OnModifyEffectPower;
+
         void Awake()
         {
             if (Instance != null && Instance != this)
@@ -59,6 +64,16 @@ namespace DDD.TNFY.BRAWL
             }
             else
             {
+                // Allow passives to modify the power before the instance is created.
+                if (OnModifyEffectPower != null)
+                {
+                    foreach (System.Func<Unit, Unit, StatusEffectData, float, float> modifier
+                             in OnModifyEffectPower.GetInvocationList())
+                    {
+                        power = modifier(source, target, effectData, power);
+                    }
+                }
+
                 // Create new effect instance
                 var newEffect = new StatusEffectInstance(effectData, source, target, duration, power);
                 activeEffects[target].Add(newEffect);
