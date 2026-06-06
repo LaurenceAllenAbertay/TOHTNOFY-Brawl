@@ -441,7 +441,7 @@ namespace DDD.TNFY.BRAWL
             if (walkingPath.Count == 0 || walkingPath.Count > unit.GetEffectiveMovementRange()) return true;
 
             int walkingCost = walkingPath.Count;
-            int jumpCost = 2;
+            int jumpCost = unit.JumpRange;
             if (jumpCost < walkingCost)
                 return IsJumpPositionTacticallyBetter(jumpDestination, walkingPath[walkingPath.Count - 1]);
             return false;
@@ -476,17 +476,23 @@ namespace DDD.TNFY.BRAWL
             var jumpableTiles = new List<Tile>();
             Tile startTile = unit.currentTile;
             if (startTile == null) return jumpableTiles;
-            const int jumpRange = 2;
+
+            int maxRange = unit.JumpRange;
+            const int minRange = 2;
 
             foreach (var tile in GridManager.Instance.AllTiles)
             {
                 if (tile == null || tile == startTile) continue;
+                if (!tile.passableTerrain) continue;
+
                 int distance = GridManager.Instance.GetGridDistance(startTile, tile, true);
-                if (distance == jumpRange && tile.passableTerrain && !tile.occupied)
-                {
-                    if (!IsJumpBlockedByWalls(startTile, tile))
-                        jumpableTiles.Add(tile);
-                }
+                if (distance < minRange || distance > maxRange) continue;
+
+                // Occupied tiles are only jumpable when the unit can stomp.
+                if (tile.occupied && !unit.CanStompOccupiedTiles) continue;
+
+                if (!IsJumpBlockedByWalls(startTile, tile))
+                    jumpableTiles.Add(tile);
             }
             return jumpableTiles;
         }

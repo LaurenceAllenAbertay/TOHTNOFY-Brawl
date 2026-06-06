@@ -145,10 +145,17 @@ namespace DDD.TNFY.BRAWL
         private bool CanAIJumpToTile(Tile targetTile)
         {
             if (targetTile == null) return false;
-            const int jumpRange = 2;
+
             int distance = GridManager.Instance.GetGridDistance(unit.currentTile, targetTile, true);
-            if (distance != jumpRange) return false;
-            if (targetTile.occupied || !targetTile.passableTerrain) return false;
+            int maxRange = unit.JumpRange;
+            const int minRange = 2;
+
+            if (distance < minRange || distance > maxRange) return false;
+            if (!targetTile.passableTerrain) return false;
+
+            // Occupied tiles are only valid when the unit can stomp.
+            if (targetTile.occupied && !unit.CanStompOccupiedTiles) return false;
+
             return !IsJumpBlockedByWalls(unit.currentTile, targetTile);
         }
 

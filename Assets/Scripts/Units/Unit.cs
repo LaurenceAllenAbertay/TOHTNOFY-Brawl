@@ -25,6 +25,16 @@ namespace DDD.TNFY.BRAWL
         // Set by passives (e.g. Cannoneer). Does not affect movement range.
         public int RangeModifier { get; set; }
 
+        // How far this unit can jump. Default is 2 (the universal minimum).
+        // Passives can raise this; units may always jump any distance from 2 up to this value.
+        // Read by JumpSystem, AIEvaluator, and AIExecutor — update all three via this field.
+        public int JumpRange { get; set; } = 2;
+
+        // When true, this unit may land on occupied tiles while jumping.
+        // The occupying unit takes damage and is knocked back 1 tile away from the landing point.
+        // Set by BrodieBootsPassive.
+        public bool CanStompOccupiedTiles { get; set; } = false;
+
         // Queued follow-up action set by abilities like Chug.
         // Checked at turn start: if set, auto-executes and ends turn immediately.
         public PendingAction? pendingAction = null;

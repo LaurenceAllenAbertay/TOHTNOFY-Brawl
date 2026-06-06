@@ -190,6 +190,7 @@ namespace DDD.TNFY.BRAWL
         private void ResetTurnState()
         {
             hasUsedAbilityThisTurn = false;
+            hasMovedThisTurn = false;
             isWaitingForAnimation = false;
             isMoving = false;
             _turnTransitionPending = false;
