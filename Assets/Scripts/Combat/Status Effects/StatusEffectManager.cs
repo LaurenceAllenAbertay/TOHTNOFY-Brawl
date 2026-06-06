@@ -175,6 +175,14 @@ namespace DDD.TNFY.BRAWL
 
             foreach (var effect in activeEffects[unit])
             {
+                // Duration -1 means indefinite (e.g. passive-managed effects).
+                // The owning system is responsible for removal; skip ticking.
+                if (effect.remainingDuration == -1)
+                {
+                    effect.hasTriggeredThisTurn = false;
+                    continue;
+                }
+
                 effect.remainingDuration--;
                 effect.hasTriggeredThisTurn = false;
 

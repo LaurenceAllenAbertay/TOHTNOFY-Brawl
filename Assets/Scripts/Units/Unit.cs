@@ -287,7 +287,7 @@ namespace DDD.TNFY.BRAWL
             return !IsAllyOf(unit);
         }
 
-        protected bool IsAllyOf(Unit other)
+        public bool IsAllyOf(Unit other)
         {
             if (other == null) return false;
             bool thisIsEnemy = this is EnemyUnit;

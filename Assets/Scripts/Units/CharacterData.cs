@@ -19,6 +19,9 @@ namespace DDD.TNFY.BRAWL
 
         [Header("Abilities")]
         public Ability[] abilityLoadout = new Ability[3];
+
+        [Header("Passive")]
+        public PassiveAbility passive;
     }
 
 }
