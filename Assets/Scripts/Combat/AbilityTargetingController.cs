@@ -65,6 +65,9 @@ namespace DDD.TNFY.BRAWL
             if (currentAbility.targeting is RandomAOETargeting)
                 ShowRandomAOEPreview(activeUnit);
 
+            if (currentAbility.targeting is SquareAOETargeting)
+                ShowSquareAOEPreview(activeUnit);
+
             if (currentAbility.targeting is MultiTileSelectionTargeting multiTargeting)
             {
                 var ctx = new AbilityContext { caster = activeUnit, ability = currentAbility };
@@ -139,6 +142,8 @@ namespace DDD.TNFY.BRAWL
                 HandleMultiTileSelectionMouseMove(mouseWorldPosition, activeUnit);
             else if (currentAbility.targeting is RandomAOETargeting)
                 return; // Highlights are fixed for the turn — no update on mouse move
+            else if (currentAbility.targeting is SquareAOETargeting)
+                return; // Highlights fixed to caster position — no update on mouse move
             else
                 HandleDirectionalTargetingMouseMove(mouseWorldPosition, activeUnit);
         }
@@ -153,6 +158,9 @@ namespace DDD.TNFY.BRAWL
             if (currentAbility.targeting is RandomAOETargeting)
                 return; // RandomAOE confirms via tile click — handled in HandleTileClicked
 
+            if (currentAbility.targeting is SquareAOETargeting)
+                return; // SquareAOE confirms via tile click — handled in HandleTileClicked
+
             HandleDirectionalAbilityClick(mouseWorldPosition, activeUnit);
         }
 
@@ -166,6 +174,8 @@ namespace DDD.TNFY.BRAWL
                 HandleMultiTileSelectionClick(clickedTile, multiTargeting, activeUnit);
             else if (currentAbility.targeting is RandomAOETargeting)
                 ConfirmRandomAOEAbility(activeUnit);
+            else if (currentAbility.targeting is SquareAOETargeting)
+                ConfirmSquareAOEAbility(activeUnit);
         }
 
         #endregion
@@ -348,7 +358,36 @@ namespace DDD.TNFY.BRAWL
             }
         }
 
+        private void ShowSquareAOEPreview(Unit activeUnit)
+        {
+            var ctx = new AbilityContext { caster = activeUnit, ability = currentAbility };
+            var tiles = currentAbility.targeting.GetTraversal(ctx);
+
+            GridManager.Instance.ClearAllHighlights();
+            foreach (var tile in tiles)
+            {
+                var u = tile.currentUnit;
+                if (u != null)
+                {
+                    bool isAlly = u is EnemyUnit == activeUnit is EnemyUnit;
+                    bool canHit = (isAlly && currentAbility.canHitAllies) || (!isAlly && currentAbility.canHitEnemies);
+                    tile.Highlight(canHit ? TileHighlightType.AttackRange : TileHighlightType.Danger);
+                }
+                else
+                {
+                    tile.Highlight(TileHighlightType.Danger);
+                }
+            }
+        }
+
         private void ConfirmRandomAOEAbility(Unit activeUnit)
+        {
+            if (!ValidateAbilityExecution(currentAbility, activeUnit, null, Vector2Int.zero)) return;
+            GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
+            combatManager.StartAbilityExecution(currentAbility, null, isDirectional: false, Vector2Int.zero);
+        }
+
+        private void ConfirmSquareAOEAbility(Unit activeUnit)
         {
             if (!ValidateAbilityExecution(currentAbility, activeUnit, null, Vector2Int.zero)) return;
             GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);

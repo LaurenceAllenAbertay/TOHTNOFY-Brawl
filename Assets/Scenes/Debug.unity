@@ -17081,6 +17081,10 @@ PrefabInstance:
       value: Brodie
       objectReference: {fileID: 0}
     - target: {fileID: 3639828477509544535, guid: be2f2a38fd9d3804a84f23c51183ccc9, type: 3}
+      propertyPath: goesFirst
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3639828477509544535, guid: be2f2a38fd9d3804a84f23c51183ccc9, type: 3}
       propertyPath: currentTile
       value: 
       objectReference: {fileID: 1558275887}
@@ -17875,6 +17879,10 @@ PrefabInstance:
     - target: {fileID: 2158351031061411466, guid: b78f1e0899f598a469c80980a0785bd8, type: 3}
       propertyPath: m_Name
       value: Lorns
+      objectReference: {fileID: 0}
+    - target: {fileID: 2158351031061411466, guid: b78f1e0899f598a469c80980a0785bd8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5113337382802062388, guid: b78f1e0899f598a469c80980a0785bd8, type: 3}
       propertyPath: m_LocalPosition.x

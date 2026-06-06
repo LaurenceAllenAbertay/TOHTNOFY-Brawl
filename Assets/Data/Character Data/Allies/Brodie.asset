@@ -20,5 +20,6 @@ MonoBehaviour:
   speed: 2
   abilityLoadout:
   - {fileID: 11400000, guid: 7126174003f5d844ea16ff7816f08e3c, type: 2}
+  - {fileID: 11400000, guid: 720bc8571d3f4854bb5c108dbefb42c6, type: 2}
   - {fileID: 0}
-  - {fileID: 0}
+  passive: {fileID: 0}

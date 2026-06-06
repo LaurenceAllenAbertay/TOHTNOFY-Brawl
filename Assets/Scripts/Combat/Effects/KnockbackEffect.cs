@@ -24,6 +24,9 @@ public class KnockbackEffect : AbilityEffect
     [Tooltip("If true, applies knockback to the caster instead of targets")]
     public bool applyToSelf = false;
 
+    [Tooltip("If true, each target is knocked away from the caster rather than in ctx.aimDir.")]
+    public bool radialKnockback = false;
+
     [Header("Animation Timing")]
     [Tooltip("Duration of the Knockback_Start animation")]
     public float knockbackStartDuration = 0.5f;
@@ -91,6 +94,20 @@ public class KnockbackEffect : AbilityEffect
                 ResetPlayerStateAfterKnockback(target);
             }
         }
+        else if (radialKnockback && ctx.caster?.currentTile != null && target.currentTile != null)
+        {
+            // Radial knockback: push each target away from the caster's tile.
+            // Direction is derived per-target so units scatter outward from the epicentre.
+            Vector3 diff = target.currentTile.transform.position -
+                           ctx.caster.currentTile.transform.position;
+            int dx = diff.x > 0.01f ? 1 : (diff.x < -0.01f ? -1 : 0);
+            int dz = diff.z > 0.01f ? 1 : (diff.z < -0.01f ? -1 : 0);
+            // Prefer the dominant axis so diagonal targets get a clean cardinal push.
+            if (Mathf.Abs(diff.x) >= Mathf.Abs(diff.z))
+                knockbackDir = new Vector2Int(dx, 0);
+            else
+                knockbackDir = new Vector2Int(0, dz);
+        }
         else
         {
             // For normal knockback, use aim direction
@@ -99,6 +116,9 @@ public class KnockbackEffect : AbilityEffect
 
         // Calculate the path first
         var knockbackPath = CalculateKnockbackPath(ctx, target, knockbackDir);
+
+        // Face the target toward the source of the knockback (inverse of push direction).
+        target.FaceDirection(new Vector2Int(-knockbackDir.x, -knockbackDir.y));
 
         if (!forceKnockback && knockbackPath.Count == 0)
         {
