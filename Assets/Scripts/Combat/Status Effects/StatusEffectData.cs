@@ -54,7 +54,6 @@ namespace DDD.TNFY.BRAWL
         // Damage Over Time
         Bleeding,
         Poison,
-        // Deals effectPower damage each trigger. Trigger Timing set on the SO.
         Fire,
 
         // Defensive
@@ -96,6 +95,11 @@ namespace DDD.TNFY.BRAWL
         // Targeting Priority
         // Enemy AI receives a scoring bonus when evaluating this unit as a target.
         // Does not force targeting -- other factors like distance can still outweigh the bonus.
-        Taunting
+        Taunting,
+        
+        // Stun: skips the affected unit's turn. stackCount = turns remaining.
+        // Application chance drops 75% per consecutive use on the same target.
+        // Counter resets when the unit goes a full turn without being stunned.
+        Stunned
     }
 }

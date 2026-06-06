@@ -11,6 +11,12 @@ namespace DDD.TNFY.BRAWL
         // Track all active status effects
         private Dictionary<Unit, List<StatusEffectInstance>> activeEffects = new Dictionary<Unit, List<StatusEffectInstance>>();
 
+        // Stunned escalation tracking.
+        // stunnedApplicationCount: how many consecutive times this unit has been stunned.
+        // stunnedThisTurn: units that received Stunned on the current turn (used to detect reset).
+        private Dictionary<Unit, int> stunnedApplicationCount = new Dictionary<Unit, int>();
+        private HashSet<Unit> stunnedThisTurn = new HashSet<Unit>();
+
         // Events
         public static event System.Action<Unit, StatusEffectInstance> OnStatusEffectApplied;
         public static event System.Action<Unit, StatusEffectInstance> OnStatusEffectRemoved;
@@ -64,6 +70,22 @@ namespace DDD.TNFY.BRAWL
             }
             else
             {
+                // Stunned escalating failure check.
+                // Each consecutive application on the same target has 75% higher chance to fail.
+                if (effectData.effectType == StatusEffectType.Stunned)
+                {
+                    int count = stunnedApplicationCount.ContainsKey(target) ? stunnedApplicationCount[target] : 0;
+                    float failChance = count * 0.75f;
+                    if (UnityEngine.Random.value < failChance)
+                    {
+                        Debug.Log($"[Stunned] Failed to apply to {target.name} (attempt {count + 1}, fail chance {failChance * 100}%)");
+                        return null;
+                    }
+                    // Succeeded -- record that this unit was stunned this turn.
+                    stunnedThisTurn.Add(target);
+                    stunnedApplicationCount[target] = count + 1;
+                }
+
                 // Allow passives to modify the power before the instance is created.
                 if (OnModifyEffectPower != null)
                 {
@@ -127,6 +149,13 @@ namespace DDD.TNFY.BRAWL
         {
             ProcessEffectsForTiming(unit, StatusEffectData.EffectTriggerTiming.EndOfTurn);
             UpdateEffectDurations(unit);
+
+            // If this unit was not stunned on this turn, reset their consecutive stun counter.
+            // This implements the "goes a full turn without being stunned" reset condition.
+            if (!stunnedThisTurn.Contains(unit))
+                stunnedApplicationCount.Remove(unit);
+
+            stunnedThisTurn.Remove(unit);
         }
 
         private void HandleUnitDied(Unit unit)
@@ -136,6 +165,8 @@ namespace DDD.TNFY.BRAWL
                 activeEffects[unit].Clear();
                 activeEffects.Remove(unit);
             }
+            stunnedApplicationCount.Remove(unit);
+            stunnedThisTurn.Remove(unit);
         }
 
         private void ProcessEffectsForTiming(Unit unit, StatusEffectData.EffectTriggerTiming timing)
@@ -289,6 +320,9 @@ namespace DDD.TNFY.BRAWL
                             ai.AddTargetLikelyUnit(effect.target, effect.remainingDuration);
                     }
                     break;
+                case StatusEffectType.Stunned:
+                    // Turn skip is handled in TriggerEffect at Start Of Turn.
+                    break;
             }
 
             // Spawn VFX if configured
@@ -332,6 +366,9 @@ namespace DDD.TNFY.BRAWL
                 case StatusEffectType.Taunting:
                     // Nothing to reverse: AddTargetLikelyUnit tracks its own duration
                     // and clears itself via UpdateTargetingDurations in UnitAI.
+                    break;
+                case StatusEffectType.Stunned:
+                    // Nothing to reverse: stun counter managed separately in stunnedApplicationCount.
                     break;
             }
 

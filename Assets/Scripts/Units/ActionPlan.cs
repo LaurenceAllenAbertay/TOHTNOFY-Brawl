@@ -736,6 +736,7 @@ namespace DDD.TNFY.BRAWL
                 case StatusEffectType.Controlled:
                 case StatusEffectType.Panicked:
                 case StatusEffectType.Intimidated:
+                case StatusEffectType.Stunned:
                     return true;
 
                 // Taunting is a buff applied to an ally, not a debuff on an enemy

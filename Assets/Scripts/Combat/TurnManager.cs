@@ -20,6 +20,7 @@ namespace DDD.TNFY.BRAWL
 
         // Reference to CombatManager for handling combat actions
         private CombatManager combatManager;
+        private CameraController cameraController;
 
         // Properties
         public Unit CurrentUnit => turnOrder.Count > 0 ? turnOrder[currentIndex] : null;
@@ -35,6 +36,7 @@ namespace DDD.TNFY.BRAWL
         void Start()
         {
             combatManager = FindAnyObjectByType<CombatManager>();
+            cameraController = FindAnyObjectByType<CameraController>();
             BuildTurnOrder();
             StartNextTurn();
         }
@@ -118,6 +120,16 @@ namespace DDD.TNFY.BRAWL
 
             Unit current = CurrentUnit;
 
+            // Check for stun BEFORE firing any events or starting camera transitions.
+            // Handling it here avoids coroutine conflicts between WaitForCameraTransition
+            // and EndTurnSequence that occur when stun is processed mid-event-dispatch.
+            if (StatusEffectManager.Instance != null &&
+                StatusEffectManager.Instance.HasStatusEffect(current, StatusEffectType.Stunned))
+            {
+                StartCoroutine(HandleStunnedTurn(current));
+                return;
+            }
+
             var unitAnimator = current.GetComponent<UnitAnimator>();
             if (unitAnimator != null)
             {
@@ -159,6 +171,22 @@ namespace DDD.TNFY.BRAWL
 
             // The rest of the sequence (index advancement, environment effects, next turn start)
             // runs as a coroutine so TriggerEnvironmentEffects can yield on animations.
+            StartCoroutine(EndTurnSequence());
+        }
+
+        private IEnumerator HandleStunnedTurn(Unit unit)
+        {
+            Debug.Log($"[TurnManager] {unit.name} is stunned - skipping turn");
+
+            // Pan camera to the stunned unit so the player can see whose turn it is.
+            if (cameraController != null)
+                yield return StartCoroutine(cameraController.TransitionTo(
+                    cameraController.UnitFocusPosition(unit)));
+
+            yield return new WaitForSeconds(3f);
+
+            // Fire turn ended so status effect durations tick correctly.
+            OnTurnEnded?.Invoke(unit);
             StartCoroutine(EndTurnSequence());
         }
 
