@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 538600722897cd54787bdb9601555fbf, type: 3}
+  m_Name: Toughen Up
+  m_EditorClassIdentifier: 
+  abilityName: Toughen Up
+  description: 
+  image: {fileID: 21300000, guid: f812caeaa4b6a1d4984dcf5385e65a8d, type: 3}
+  rangeType: 2
+  range: 2
+  damage: 0
+  canHitEnemies: 0
+  canHitAllies: 1
+  passThroughUnits: 1
+  maxTargets: 99
+  canExecuteWithoutTargets: 1
+  animationState: Attack_Melee_1
+  castEffectPrefab: {fileID: 0}
+  castEffectOffset: {x: 0, y: 0, z: 0}
+  parentCastEffectToCaster: 0
+  hitEffectPrefab: {fileID: 0}
+  hitEffectOffset: {x: 0, y: 0, z: 0}
+  parentHitEffectToTarget: 0
+  targeting: {fileID: 11400000, guid: 582d53873111b874593235a8e8e4c9a3, type: 2}
+  effects:
+  - {fileID: 11400000, guid: 85b1a5727b94f2040a15eb2a19e9302f, type: 2}
