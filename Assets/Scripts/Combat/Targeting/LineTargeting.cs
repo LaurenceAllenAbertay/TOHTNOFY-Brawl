@@ -34,7 +34,7 @@ public class LineTargeting : AbilityTargeting
             }
         }
 
-        int max = Mathf.Max(1, ctx.ability.range);
+        int max = Mathf.Max(1, ctx.EffectiveRange);
 
         Vector3 currentPos = start.transform.position;
         Vector3 tileSpacing = GridManager.Instance.GetTileSpacing();

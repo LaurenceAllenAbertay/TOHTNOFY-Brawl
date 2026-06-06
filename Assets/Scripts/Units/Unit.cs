@@ -21,6 +21,10 @@ namespace DDD.TNFY.BRAWL
         public int currentSpeed;
         public bool canMove;
 
+        // Flat bonus added to all ability ranges at targeting time.
+        // Set by passives (e.g. Cannoneer). Does not affect movement range.
+        public int RangeModifier { get; set; }
+
         [Header("Debug Settings")]
         [SerializeField] private bool enableDebugLogging = false;
 

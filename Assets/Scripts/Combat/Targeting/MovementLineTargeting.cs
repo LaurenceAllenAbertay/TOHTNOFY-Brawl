@@ -18,7 +18,7 @@ public class MovementLineTargeting : AbilityTargeting
         if (start == null) return tiles;
 
         var dir = ctx.aimDir;
-        int max = Mathf.Max(1, ctx.ability.range);
+        int max = Mathf.Max(1, ctx.EffectiveRange);
 
         Vector3 currentPos = start.transform.position;
         Vector3 tileSpacing = GridManager.Instance.GetTileSpacing();

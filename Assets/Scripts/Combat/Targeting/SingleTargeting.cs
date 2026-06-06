@@ -44,7 +44,7 @@ public class SingleTargeting : AbilityTargeting
             // Use GridManager's existing method to calculate grid distance
             int distance = GridManager.Instance.GetGridDistance(start, tile);
 
-            if (distance <= ctx.ability.range && distance > 0)
+            if (distance <= ctx.EffectiveRange && distance > 0)
             {
                 // Add tile to valid targets regardless of terrain when affectsOverGaps is true
                 if (affectsOverGaps || tile.passableTerrain)
@@ -78,7 +78,7 @@ public class SingleTargeting : AbilityTargeting
         // Use GridManager's existing method to calculate grid distance
         int distance = GridManager.Instance.GetGridDistance(start, targetTile);
 
-        if (distance > ctx.ability.range || distance <= 0)
+        if (distance > ctx.EffectiveRange || distance <= 0)
         {
             return false;
         }

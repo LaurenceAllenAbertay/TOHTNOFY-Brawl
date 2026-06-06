@@ -176,6 +176,10 @@ namespace DDD.TNFY.BRAWL
                                                             effect.target.characterData.maxHealth);
                     break;
 
+                case StatusEffectType.Fire:
+                    effect.target.ReceiveDamage(Mathf.RoundToInt(effect.effectPower));
+                    break;
+
                     // Add more cases as needed
             }
 

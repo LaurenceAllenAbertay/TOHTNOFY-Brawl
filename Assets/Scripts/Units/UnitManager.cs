@@ -12,6 +12,8 @@ namespace DDD.TNFY.BRAWL
         public static event System.Action<Unit> OnUnitUnregistered;
         public static event System.Action<Unit> OnUnitMoved;
         public static event System.Action<Unit> OnUnitDied;
+        // Fired by DamageEffect after each hit: (victim, attacker)
+        public static event System.Action<Unit, Unit> OnUnitDamaged;
 
         // Unit collections for fast access
         private readonly List<Unit> allUnits = new List<Unit>();
@@ -106,6 +108,11 @@ namespace DDD.TNFY.BRAWL
         /// <summary>
         /// Notify that a unit has died. Call this from Unit.ReceiveDamage() when health <= 0.
         /// </summary>
+        public static void NotifyUnitDamaged(Unit victim, Unit attacker)
+        {
+            OnUnitDamaged?.Invoke(victim, attacker);
+        }
+
         public static void NotifyUnitDied(Unit unit)
         {
             OnUnitDied?.Invoke(unit);

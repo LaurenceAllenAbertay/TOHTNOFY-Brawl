@@ -27,7 +27,7 @@ public class AOETargeting : AbilityTargeting
             var (current, distance) = queue.Dequeue();
 
             // Include this tile if it's within range and meets inclusion criteria
-            if (distance <= ctx.ability.range && (distance > 0 || includeSelf))
+            if (distance <= ctx.EffectiveRange && (distance > 0 || includeSelf))
             {
                 // Only include tiles with passable terrain (unless affectsOverGaps is true)
                 if (current.passableTerrain || affectsOverGaps)
@@ -37,7 +37,7 @@ public class AOETargeting : AbilityTargeting
             }
 
             // Continue searching neighbors if we haven't reached max range
-            if (distance < ctx.ability.range)
+            if (distance < ctx.EffectiveRange)
             {
                 var adjacentTiles = GridManager.Instance.GetAdjacentTiles(current);
 

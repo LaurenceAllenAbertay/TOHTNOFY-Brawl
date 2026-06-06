@@ -54,6 +54,8 @@ namespace DDD.TNFY.BRAWL
         // Damage Over Time
         Bleeding,
         Poison,
+        // Deals effectPower damage each trigger. Trigger Timing set on the SO.
+        Fire,
 
         // Defensive
         Shielded,

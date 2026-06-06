@@ -139,5 +139,9 @@ namespace DDD.TNFY.BRAWL
         public Tile targetTile;
 
         public Tile OriginTile => caster?.currentTile;
+
+        // ability.range plus any caster passive modifier (e.g. Cannoneer +1).
+        // All targeting scripts read this instead of ability.range directly.
+        public int EffectiveRange => ability.range + (caster?.RangeModifier ?? 0);
     }
 }

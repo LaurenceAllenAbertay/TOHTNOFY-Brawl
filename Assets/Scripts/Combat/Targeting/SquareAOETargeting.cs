@@ -19,7 +19,7 @@ public class SquareAOETargeting : AbilityTargeting
 
         // Get all tiles in a square pattern around the center
         var centerPos = center.transform.position;
-        var range = ctx.ability.range;
+        var range = ctx.EffectiveRange;
 
         foreach (var tile in GridManager.Instance.AllTiles)
         {

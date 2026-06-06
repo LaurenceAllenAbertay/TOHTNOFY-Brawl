@@ -91,13 +91,13 @@ namespace DDD.TNFY.BRAWL
             if (tile == null || !tile.passableTerrain) return false;
             if (!allowOccupiedTiles && tile.occupied) return false;
 
-            // Range check reads from ctx.ability.range, consistent with SingleTargeting.
+            // Range check reads from ctx.EffectiveRange, consistent with SingleTargeting.
             // affectsOverGaps and affectsThroughWalls are inherited from AbilityTargeting,
             // so wall and gap rules also behave identically to other targeting types.
             if (ctx?.caster?.currentTile != null && ctx.ability != null)
             {
                 int dist = GridManager.Instance.GetGridDistance(ctx.caster.currentTile, tile);
-                if (dist > ctx.ability.range || dist <= 0) return false;
+                if (dist > ctx.EffectiveRange || dist <= 0) return false;
 
                 if (!affectsOverGaps && !tile.passableTerrain) return false;
 

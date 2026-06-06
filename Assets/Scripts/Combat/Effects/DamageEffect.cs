@@ -19,6 +19,7 @@ public class DamageEffect : AbilityEffect
             if (u == null) continue;
             int dmg = Mathf.Max(1, baseDamage - u.currentDefense);
             u.ReceiveDamage(dmg);
+            UnitManager.NotifyUnitDamaged(u, ctx.caster);
         }
     }
 }
