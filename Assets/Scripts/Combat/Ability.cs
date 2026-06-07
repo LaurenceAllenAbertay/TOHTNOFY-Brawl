@@ -146,5 +146,10 @@ namespace DDD.TNFY.BRAWL
         // ability.range plus any caster passive modifier (e.g. Cannoneer +1).
         // All targeting scripts read this instead of ability.range directly.
         public int EffectiveRange => ability.range + (caster?.RangeModifier ?? 0);
+
+        // Total damage actually dealt to all targets during this cast (after defence subtraction).
+        // Written by DamageEffect.Apply; read by RecoilDamageEffect to calculate recoil.
+        // Accumulated across all targets so multi-hit abilities recoil correctly.
+        public int LastResolvedDamage;
     }
 }
