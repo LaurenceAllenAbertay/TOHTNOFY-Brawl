@@ -21,3 +21,23 @@ MonoBehaviour:
     - Try dodging?
     - Oh, phew, I thought they were aiming for me there.
     - Idiots, they were just the bait!
+  - trigger: 1
+    priority: 1
+    isGuaranteed: 0
+    lines:
+    - Are they cheating?!
+    - Low blow, low blow!
+    - What the hell?
+  - trigger: 2
+    priority: 0
+    isGuaranteed: 0
+    lines:
+    - "I\u2019m not afraid of you!"
+    - This team sucks!
+  - trigger: 3
+    priority: 1
+    isGuaranteed: 0
+    lines:
+    - I weakened them for you.
+    - "Hey! Don\u2019t kill steal!"
+    - "Woah, no way!\r"

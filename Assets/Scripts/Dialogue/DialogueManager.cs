@@ -117,19 +117,20 @@ namespace DDD.TNFY.BRAWL
             // Only react to player-unit deaths for ally-downed triggers.
             if (!(unit is PlayerUnit)) return;
 
-            // How many player units are left alive (the dead unit is already unregistered
-            // by the time OnUnitDied fires per UnitManager.NotifyUnitDied).
-            int survivingPlayerCount = UnitManager.PlayerUnits.Count;
+            // OnUnitDied fires BEFORE UnitManager.UnregisterUnit removes the unit from
+            // PlayerUnits, so the dying unit is still counted in PlayerUnits.Count here.
+            // Subtract 1 to get the true number of survivors.
+            int survivingPlayerCount = UnitManager.PlayerUnits.Count - 1;
 
-            if (survivingPlayerCount == 0)
+            if (survivingPlayerCount <= 0)
             {
-                // Last player just died — no one left to speak, do nothing.
+                // No survivors — no one left to speak, do nothing.
                 return;
             }
 
             if (survivingPlayerCount == 1)
             {
-                // One unit left — that unit is now the last alive.
+                // Exactly one unit left — they are now the last alive.
                 // Fire LastAllyAlive (the surviving unit is the speaker).
                 EnqueueTrigger(DialogueTrigger.LastAllyAlive, instigator: null);
                 return;

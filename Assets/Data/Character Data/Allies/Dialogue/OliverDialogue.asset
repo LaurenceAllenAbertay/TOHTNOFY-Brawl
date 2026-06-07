@@ -21,3 +21,22 @@ MonoBehaviour:
     - "I think they got em\u2019\u2026"
     - Are you okay?
     - How can one person have so much skill?!
+  - trigger: 1
+    priority: 1
+    isGuaranteed: 0
+    lines:
+    - "I can\u2019t believe you\u2019ve done this."
+    - "I'm panicking, I\u2019m panicking!"
+    - "Just take me\u2026"
+  - trigger: 2
+    priority: 0
+    isGuaranteed: 0
+    lines:
+    - "Wait, what\u2019s happening?"
+    - Is it just me?
+  - trigger: 3
+    priority: 1
+    isGuaranteed: 0
+    lines:
+    - Did you get him?
+    - "He\u2019s bouncin\u2019 out!"

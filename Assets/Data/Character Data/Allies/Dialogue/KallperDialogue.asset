@@ -21,3 +21,24 @@ MonoBehaviour:
     - Oh no!
     - "Blink twice if you\u2019re alive!"
     - Wait, time out, time out!
+  - trigger: 1
+    priority: 1
+    isGuaranteed: 0
+    lines:
+    - Are we gonna die?
+    - That was our best guy!
+    - "Oh man\u2026"
+  - trigger: 2
+    priority: 0
+    isGuaranteed: 0
+    lines:
+    - Where did everybody go?!
+    - "I\u2019m cornered, I\u2019m cornered!"
+  - trigger: 3
+    priority: 1
+    isGuaranteed: 0
+    lines:
+    - Keep going, Keep fighting!
+    - That was huge!
+    - I invented that technique.
+    - I was gonna do that.

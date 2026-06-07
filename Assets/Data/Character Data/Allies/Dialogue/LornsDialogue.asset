@@ -21,3 +21,23 @@ MonoBehaviour:
     - More turns for me.
     - Hey! I needed that!
     - Well, whatever.
+  - trigger: 1
+    priority: 1
+    isGuaranteed: 0
+    lines:
+    - "This isn\u2019t going as well as I thought."
+    - Just leave it to me.
+    - "It\u2019s fine, this is fine."
+  - trigger: 2
+    priority: 0
+    isGuaranteed: 0
+    lines:
+    - Time to do this my way.
+    - "Ohhh shit\u2026"
+  - trigger: 3
+    priority: 1
+    isGuaranteed: 0
+    lines:
+    - That was mostly me, but good job.
+    - Oh, we actually got one.
+    - All according to plan.
