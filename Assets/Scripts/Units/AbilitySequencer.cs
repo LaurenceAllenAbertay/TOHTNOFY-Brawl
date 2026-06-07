@@ -197,7 +197,7 @@ namespace DDD.TNFY.BRAWL
                 yield break;
             }
 
-            bool shouldUseTransitions = ctx.ability.targeting is LineTargeting || ctx.ability.targeting is SingleTargeting;
+            bool shouldUseTransitions = ctx.ability.targeting.UsesCameraTransitionsPerTarget;
             bool hasMovementEffect = ctx.ability.effects.Any(e =>
                 e.AnimationPhase == EffectAnimationPhase.Displacement && !e.IsSelfOnly(ctx));
 
@@ -310,8 +310,7 @@ namespace DDD.TNFY.BRAWL
             // (or ApplyAbilityEffectsToTargets for non-camera paths).
             // PreEffect (self-knockback/caster-movement) fired before camera transitions.
             // ChargeEffect is handled entirely via ExecuteChargeSequence — it never reaches Apply.
-            bool usedCameraTransitions = ctx.ability.targeting is LineTargeting
-                                      || ctx.ability.targeting is SingleTargeting;
+            bool usedCameraTransitions = ctx.ability.targeting.UsesCameraTransitionsPerTarget;
 
             foreach (var effect in ctx.ability.effects)
             {

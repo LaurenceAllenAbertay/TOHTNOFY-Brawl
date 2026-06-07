@@ -68,6 +68,7 @@ namespace DDD.TNFY.BRAWL
             RegisterWithTeam();
             TurnManager.OnTurnStarted += OnTurnStarted;
             TurnManager.OnTurnEnded += OnTurnEnded;
+            StatusEffectManager.OnStatusEffectApplied += OnStatusEffectApplied;
 
             if (enableDebugLogging)
                 Debug.Log($"[{gameObject.name}] UnitAI initialized");
@@ -97,6 +98,7 @@ namespace DDD.TNFY.BRAWL
             UnregisterFromTeam();
             TurnManager.OnTurnStarted -= OnTurnStarted;
             TurnManager.OnTurnEnded -= OnTurnEnded;
+            StatusEffectManager.OnStatusEffectApplied -= OnStatusEffectApplied;
         }
 
         #endregion
@@ -191,6 +193,18 @@ namespace DDD.TNFY.BRAWL
         #endregion
 
         #region Target Management
+
+        /// <summary>
+        /// Handles Taunting application: when any unit receives Taunting, this AI registers
+        /// that unit as a likely target for the effect's duration.
+        /// Decouples StatusEffectManager from UnitAI — the manager fires the existing
+        /// OnStatusEffectApplied event and each AI decides what to do with it.
+        /// </summary>
+        private void OnStatusEffectApplied(Unit target, StatusEffectInstance effect)
+        {
+            if (effect.effectData.effectType == StatusEffectType.Taunting)
+                AddTargetLikelyUnit(target, effect.remainingDuration);
+        }
 
         public List<Unit> GetPotentialTargets()
         {

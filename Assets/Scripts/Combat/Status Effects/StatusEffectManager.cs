@@ -311,14 +311,7 @@ namespace DDD.TNFY.BRAWL
                     // Unit.CanTarget enforces the restriction at selection time.
                     break;
                 case StatusEffectType.Taunting:
-                    // Register this unit as a likely target on all enemy AI units.
-                    // effectPower is the scoring bonus (configured on the StatusEffectData SO).
-                    foreach (var unit in UnitManager.AllUnits)
-                    {
-                        var ai = unit.GetComponent<DDD.TNFY.BRAWL.UnitAI>();
-                        if (ai != null)
-                            ai.AddTargetLikelyUnit(effect.target, effect.remainingDuration);
-                    }
+                    // Handled by UnitAI via OnStatusEffectApplied — no AI coupling here.
                     break;
                 case StatusEffectType.Stunned:
                     // Turn skip is handled in TriggerEffect at Start Of Turn.

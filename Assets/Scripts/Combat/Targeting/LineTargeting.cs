@@ -10,6 +10,7 @@ public class LineTargeting : AbilityTargeting
     // confirms on mouse click. No enter preview (direction not yet chosen).
 
     public override bool UsesDirectionalInput => true;
+    public override bool UsesCameraTransitionsPerTarget => true;
 
     [Tooltip("If true, this ability can only be aimed left or right (horizontal only)")]
     public bool horizontalOnly = true;

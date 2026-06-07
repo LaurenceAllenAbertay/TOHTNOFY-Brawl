@@ -139,7 +139,7 @@ namespace DDD.TNFY.BRAWL
         {
             currentActiveUnit = activeUnit;
             ResetTurnState();
-            ResetAllRandomAOECaches();
+            NotifyAllTargetingTurnStarted();
             turnStartTime = Time.time;
             movementPointsUsed = 0;
             totalMovementPoints = activeUnit.currentSpeed;
@@ -156,35 +156,31 @@ namespace DDD.TNFY.BRAWL
         }
 
         /// <summary>
-        /// Resets the cached random tile selection for every RandomAOETargeting ability
-        /// across all units. Called at the start of every turn so the roll is always
-        /// fresh — the selection changes each turn regardless of which unit is acting.
+        /// Notifies every ability's targeting system that a new turn has started.
+        /// Targeting types that cache per-turn state (e.g. RandomAOETargeting) override
+        /// ResetForNewTurn to refresh themselves; the base implementation is a no-op.
+        /// Called at the start of every turn so cached selections are always fresh.
         /// </summary>
-        private void ResetAllRandomAOECaches()
+        private void NotifyAllTargetingTurnStarted()
         {
             foreach (var unit in UnitManager.AllUnits)
             {
                 if (unit?.characterData?.abilityLoadout == null) continue;
                 foreach (var ability in unit.characterData.abilityLoadout)
-                {
-                    if (ability?.targeting is RandomAOETargeting randomTargeting)
-                        randomTargeting.ResetForNewTurn();
-                }
+                    ability?.targeting?.ResetForNewTurn();
             }
         }
 
         /// <summary>
-        /// Resets only the active unit's RandomAOETargeting cache after they move,
-        /// so the selection re-rolls relative to their new position.
+        /// Notifies only the active unit's targeting systems that a turn event occurred.
+        /// Called after the active unit moves so cached selections re-roll relative to
+        /// their new position.
         /// </summary>
-        private void ResetCurrentUnitRandomAOECaches()
+        private void NotifyCurrentUnitTargetingTurnStarted()
         {
             if (currentActiveUnit?.characterData?.abilityLoadout == null) return;
             foreach (var ability in currentActiveUnit.characterData.abilityLoadout)
-            {
-                if (ability?.targeting is RandomAOETargeting randomTargeting)
-                    randomTargeting.ResetForNewTurn();
-            }
+                ability?.targeting?.ResetForNewTurn();
         }
 
         private void ResetTurnState()
@@ -397,7 +393,7 @@ namespace DDD.TNFY.BRAWL
             BlockAllInput();
             UIEvents.OnAbilityAnimationStarted();
 
-            bool isRandomAOE = ability?.targeting is RandomAOETargeting && cameraController != null;
+            bool isRandomAOE = (ability?.targeting?.UsesCameraZoomAfterExecution == true) && cameraController != null;
 
             bool executionSuccessful;
             if (isDirectional)
@@ -546,8 +542,8 @@ namespace DDD.TNFY.BRAWL
                     isMoving = false;
                     currentState = CombatState.WaitingForInput;
 
-                    // Re-roll RandomAOE selections relative to the unit's new position.
-                    ResetCurrentUnitRandomAOECaches();
+                    // Re-roll targeting selections relative to the unit's new position.
+                    NotifyCurrentUnitTargetingTurnStarted();
 
                     // Restore movement highlights if the player still has points left
                     // and hasn't used an ability yet this turn.

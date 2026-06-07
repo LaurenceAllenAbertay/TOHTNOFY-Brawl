@@ -75,9 +75,11 @@ namespace DDD.TNFY.BRAWL
 
         void BuildTurnOrder()
         {
-            var allUnits = FindObjectsByType<Unit>(FindObjectsSortMode.None);
-            // Only include PlayerUnit and EnemyUnit
-            var validUnits = allUnits.Where(u => u is PlayerUnit || u is EnemyUnit);
+            // Use UnitManager as the single source of truth for the unit list.
+            // UnitManager.Awake runs RegisterExistingUnits() before TurnManager.Start,
+            // so AllUnits is already populated here. Script Execution Order in Project
+            // Settings should place UnitManager before TurnManager to make this explicit.
+            var validUnits = UnitManager.AllUnits.Where(u => u is PlayerUnit || u is EnemyUnit);
 
             // Roll initiative
             var rolled = validUnits.Select(u => new
@@ -130,16 +132,9 @@ namespace DDD.TNFY.BRAWL
                 return;
             }
 
-            var unitAnimator = current.GetComponent<UnitAnimator>();
-            if (unitAnimator != null)
-            {
-                unitAnimator.SetActiveTurn();
-            }
-
-            if (current is PlayerUnit player)
-                player.StartTurn();
-            else if (current is EnemyUnit enemy)
-                enemy.StartTurn();
+            // Unit.StartTurn() calls unitAnimator.SetActiveTurn() internally — no direct
+            // animator call needed here. The virtual dispatch handles PlayerUnit and EnemyUnit.
+            current.StartTurn();
 
             // FIRE THE EVENTS
             // CombatManager subscribes to OnTurnStarted directly -- no separate direct call needed.
@@ -151,19 +146,14 @@ namespace DDD.TNFY.BRAWL
         {
             Unit currentUnit = CurrentUnit;
 
-            var unitAnimator = currentUnit?.GetComponent<UnitAnimator>();
-            if (unitAnimator != null)
-            {
-                unitAnimator.SetInactiveTurn();
-            }
-
             // This forces the UI to collapse abilities and prepare for next unit
             if (currentUnit is PlayerUnit)
             {
                 UIEvents.OnTurnChanged();
             }
 
-            // Notify current unit that turn is ending
+            // Notify current unit that turn is ending. Unit.EndTurn() calls
+            // unitAnimator.SetInactiveTurn() internally — no direct animator call needed here.
             currentUnit?.EndTurn();
 
             // FIRE THE TURN ENDED EVENT

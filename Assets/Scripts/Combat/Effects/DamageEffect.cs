@@ -1,29 +1,31 @@
-using DDD.TNFY.BRAWL;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "TNFY Brawl/Effects/Damage Effect")]
-public class DamageEffect : AbilityEffect
+namespace DDD.TNFY.BRAWL
 {
-    public override EffectAnimationPhase AnimationPhase => EffectAnimationPhase.Damage;
-    public override string TargetAnimationHint => "Hurt";
-    public override float ExpectedAnimationDuration => 0.8f;
-
-    public override void Apply(AbilityContext ctx, IReadOnlyList<Unit> targets)
+    [CreateAssetMenu(menuName = "TNFY Brawl/Effects/Damage Effect")]
+    public class DamageEffect : AbilityEffect
     {
-        if (ctx == null || ctx.ability == null || targets == null) return;
+        public override EffectAnimationPhase AnimationPhase => EffectAnimationPhase.Damage;
+        public override string TargetAnimationHint => "Hurt";
+        public override float ExpectedAnimationDuration => 0.8f;
 
-        // Base damage is the ability's flat damage value plus the caster's current attack stat.
-        // Each target's currentDefense is then subtracted, clamped to a minimum of 1
-        // so damage abilities always deal at least 1 damage.
-        int baseDamage = ctx.ability.damage + (ctx.caster != null ? ctx.caster.currentAttack : 0);
-
-        foreach (var u in targets)
+        public override void Apply(AbilityContext ctx, IReadOnlyList<Unit> targets)
         {
-            if (u == null) continue;
-            int dmg = Mathf.Max(1, baseDamage - u.currentDefense);
-            u.ReceiveDamage(dmg);
-            UnitManager.NotifyUnitDamaged(u, ctx.caster);
+            if (ctx == null || ctx.ability == null || targets == null) return;
+
+            // Base damage is the ability's flat damage value plus the caster's current attack stat.
+            // Each target's currentDefense is then subtracted, clamped to a minimum of 1
+            // so damage abilities always deal at least 1 damage.
+            int baseDamage = ctx.ability.damage + (ctx.caster != null ? ctx.caster.currentAttack : 0);
+
+            foreach (var u in targets)
+            {
+                if (u == null) continue;
+                int dmg = Mathf.Max(1, baseDamage - u.currentDefense);
+                u.ReceiveDamage(dmg);
+                UnitManager.NotifyUnitDamaged(u, ctx.caster);
+            }
         }
     }
 }

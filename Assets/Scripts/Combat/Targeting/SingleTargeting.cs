@@ -11,6 +11,7 @@ public class SingleTargeting : AbilityTargeting
     public override bool UsesDirectionalInput => false;
     public override bool UsesHoverTracking    => true;
     public override bool ConfirmsOnTileClick  => true;
+    public override bool UsesCameraTransitionsPerTarget => true;
 
     // ── Preview ───────────────────────────────────────────────────────────────
 
