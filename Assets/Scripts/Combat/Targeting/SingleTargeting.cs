@@ -1,141 +1,143 @@
-using DDD.TNFY.BRAWL;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "TNFY Brawl/Targeting/Single Target")]
-public class SingleTargeting : AbilityTargeting
+namespace DDD.TNFY.BRAWL
 {
-    // ── Input behaviour ───────────────────────────────────────────────────────
-
-    public override bool UsesDirectionalInput => false;
-    public override bool UsesHoverTracking    => true;
-    public override bool ConfirmsOnTileClick  => true;
-    public override bool UsesCameraTransitionsPerTarget => true;
-
-    // ── Preview ───────────────────────────────────────────────────────────────
-
-    public override void ShowEnterPreview(AbilityContext ctx, Tile hoveredTile)
+    [CreateAssetMenu(menuName = "TNFY Brawl/Targeting/Single Target")]
+    public class SingleTargeting : AbilityTargeting
     {
-        var tilesInRange = GetTilesInRange(ctx);
+        // ── Input behaviour ───────────────────────────────────────────────────────
 
-        GridManager.Instance.ClearAllHighlights();
-        foreach (var tile in tilesInRange)
-            tile.Highlight(TileHighlightType.Danger);
+        public override bool UsesDirectionalInput => false;
+        public override bool UsesHoverTracking    => true;
+        public override bool ConfirmsOnTileClick  => true;
+        public override bool UsesCameraTransitionsPerTarget => true;
 
-        HighlightHoveredTile(ctx, hoveredTile, tilesInRange);
-    }
+        // ── Preview ───────────────────────────────────────────────────────────────
 
-    public override void ShowHoverPreview(AbilityContext ctx, Tile hoveredTile)
-    {
-        // Re-draw the full preview so the hover highlight updates correctly.
-        ShowEnterPreview(ctx, hoveredTile);
-    }
-
-    private void HighlightHoveredTile(AbilityContext ctx, Tile hoveredTile, List<Tile> tilesInRange)
-    {
-        if (hoveredTile == null || !tilesInRange.Contains(hoveredTile)) return;
-
-        bool requiresEmpty = ctx.ability.effects.Any(e => e.RequiresEmptyTargetTile);
-
-        if (requiresEmpty)
+        public override void ShowEnterPreview(AbilityContext ctx, Tile hoveredTile)
         {
-            if (hoveredTile.currentUnit == null && hoveredTile.passableTerrain)
-                hoveredTile.Highlight(TileHighlightType.AttackRange);
-        }
-        else if (hoveredTile.currentUnit != null)
-        {
-            bool isAlly = hoveredTile.currentUnit is EnemyUnit == ctx.caster is EnemyUnit;
-            bool canHit = (isAlly && ctx.ability.canHitAllies) ||
-                          (!isAlly && ctx.ability.canHitEnemies);
-            if (canHit) hoveredTile.Highlight(TileHighlightType.AttackRange);
-        }
-    }
+            var tilesInRange = GetTilesInRange(ctx);
 
-    // ── Confirmation ──────────────────────────────────────────────────────────
+            GridManager.Instance.ClearAllHighlights();
+            foreach (var tile in tilesInRange)
+                tile.Highlight(TileHighlightType.Danger);
 
-    public override bool OnTileClicked(Tile tile, AbilityContext ctx, out AbilityContext outCtx)
-    {
-        outCtx = null;
-        if (tile == null) return false;
-
-        if (!IsWithinRange(ctx, tile))
-        {
-            Debug.Log("Target tile is out of range. Try again.");
-            return false;
+            HighlightHoveredTile(ctx, hoveredTile, tilesInRange);
         }
 
-        bool requiresEmpty = ctx.ability.effects.Any(e => e.RequiresEmptyTargetTile);
-        if (requiresEmpty && (tile.occupied || !tile.passableTerrain))
+        public override void ShowHoverPreview(AbilityContext ctx, Tile hoveredTile)
         {
-            Debug.Log("Cannot target occupied or impassable tile. Try again.");
-            return false;
+            // Re-draw the full preview so the hover highlight updates correctly.
+            ShowEnterPreview(ctx, hoveredTile);
         }
 
-        outCtx = new AbilityContext
+        private void HighlightHoveredTile(AbilityContext ctx, Tile hoveredTile, List<Tile> tilesInRange)
         {
-            caster     = ctx.caster,
-            ability    = ctx.ability,
-            targetTile = tile
-        };
-        return true;
-    }
+            if (hoveredTile == null || !tilesInRange.Contains(hoveredTile)) return;
 
-    // ── Range query ───────────────────────────────────────────────────────────
+            bool requiresEmpty = ctx.ability.effects.Any(e => e.RequiresEmptyTargetTile);
 
-    public List<Tile> GetTilesInRange(AbilityContext ctx)
-    {
-        var tiles = new List<Tile>();
-        if (ctx?.ability == null || ctx.caster == null) return tiles;
-
-        var start = ctx.caster.currentTile;
-        if (start == null) return tiles;
-
-        foreach (var tile in GridManager.Instance.AllTiles)
-        {
-            if (tile == start) continue;
-
-            int distance = GridManager.Instance.GetGridDistance(start, tile);
-            if (distance <= ctx.EffectiveRange && distance > 0)
+            if (requiresEmpty)
             {
-                if (affectsOverGaps || tile.passableTerrain)
-                {
-                    if (!affectsThroughWalls && IsBlockedByWall(start, tile)) continue;
-                    tiles.Add(tile);
-                }
+                if (hoveredTile.currentUnit == null && hoveredTile.passableTerrain)
+                    hoveredTile.Highlight(TileHighlightType.AttackRange);
+            }
+            else if (hoveredTile.currentUnit != null)
+            {
+                bool isAlly = hoveredTile.currentUnit is EnemyUnit == ctx.caster is EnemyUnit;
+                bool canHit = (isAlly && ctx.ability.canHitAllies) ||
+                              (!isAlly && ctx.ability.canHitEnemies);
+                if (canHit) hoveredTile.Highlight(TileHighlightType.AttackRange);
             }
         }
 
-        return tiles;
-    }
+        // ── Confirmation ──────────────────────────────────────────────────────────
 
-    public override List<Tile> GetTraversal(AbilityContext ctx)
-    {
-        var tiles = new List<Tile>();
-        if (ctx?.ability == null || ctx.caster == null) return tiles;
+        public override bool OnTileClicked(Tile tile, AbilityContext ctx, out AbilityContext outCtx)
+        {
+            outCtx = null;
+            if (tile == null) return false;
 
-        var start = ctx.caster.currentTile;
-        if (start == null) return tiles;
+            if (!IsWithinRange(ctx, tile))
+            {
+                Debug.Log("Target tile is out of range. Try again.");
+                return false;
+            }
 
-        if (ctx.targetTile != null && IsWithinRange(ctx, ctx.targetTile))
-            tiles.Add(ctx.targetTile);
+            bool requiresEmpty = ctx.ability.effects.Any(e => e.RequiresEmptyTargetTile);
+            if (requiresEmpty && (tile.occupied || !tile.passableTerrain))
+            {
+                Debug.Log("Cannot target occupied or impassable tile. Try again.");
+                return false;
+            }
 
-        return tiles;
-    }
+            outCtx = new AbilityContext
+            {
+                caster     = ctx.caster,
+                ability    = ctx.ability,
+                targetTile = tile
+            };
+            return true;
+        }
 
-    public bool IsWithinRange(AbilityContext ctx, Tile targetTile)
-    {
-        if (ctx?.ability == null || ctx.caster == null || targetTile == null) return false;
+        // ── Range query ───────────────────────────────────────────────────────────
 
-        var start = ctx.caster.currentTile;
-        if (start == null) return false;
-        if (start == targetTile) return false;
+        public List<Tile> GetTilesInRange(AbilityContext ctx)
+        {
+            var tiles = new List<Tile>();
+            if (ctx?.ability == null || ctx.caster == null) return tiles;
 
-        int distance = GridManager.Instance.GetGridDistance(start, targetTile);
-        if (distance > ctx.EffectiveRange || distance <= 0) return false;
-        if (!affectsOverGaps && !targetTile.passableTerrain) return false;
-        if (!affectsThroughWalls && IsBlockedByWall(start, targetTile)) return false;
+            var start = ctx.caster.currentTile;
+            if (start == null) return tiles;
 
-        return true;
+            foreach (var tile in GridManager.Instance.AllTiles)
+            {
+                if (tile == start) continue;
+
+                int distance = GridManager.Instance.GetGridDistance(start, tile);
+                if (distance <= ctx.EffectiveRange && distance > 0)
+                {
+                    if (affectsOverGaps || tile.passableTerrain)
+                    {
+                        if (!affectsThroughWalls && IsBlockedByWall(start, tile)) continue;
+                        tiles.Add(tile);
+                    }
+                }
+            }
+
+            return tiles;
+        }
+
+        public override List<Tile> GetTraversal(AbilityContext ctx)
+        {
+            var tiles = new List<Tile>();
+            if (ctx?.ability == null || ctx.caster == null) return tiles;
+
+            var start = ctx.caster.currentTile;
+            if (start == null) return tiles;
+
+            if (ctx.targetTile != null && IsWithinRange(ctx, ctx.targetTile))
+                tiles.Add(ctx.targetTile);
+
+            return tiles;
+        }
+
+        public bool IsWithinRange(AbilityContext ctx, Tile targetTile)
+        {
+            if (ctx?.ability == null || ctx.caster == null || targetTile == null) return false;
+
+            var start = ctx.caster.currentTile;
+            if (start == null) return false;
+            if (start == targetTile) return false;
+
+            int distance = GridManager.Instance.GetGridDistance(start, targetTile);
+            if (distance > ctx.EffectiveRange || distance <= 0) return false;
+            if (!affectsOverGaps && !targetTile.passableTerrain) return false;
+            if (!affectsThroughWalls && IsBlockedByWall(start, targetTile)) return false;
+
+            return true;
+        }
     }
 }

@@ -35,46 +35,32 @@ namespace DDD.TNFY.BRAWL
             "through the following enemy turn, matching the '1 turn' description.")]
         public int defenseDuration = 2;
 
-        // Stored delegate reference so we can unsubscribe with the exact same instance.
-        private System.Action<Unit, Unit> onUnitDamagedHandler;
-
-        // Cached so the lambda can safely reference it without capturing a stale local.
-        private PassiveAbilityHandler cachedHandler;
-
         public override void Initialise(PassiveAbilityHandler handler)
         {
-            cachedHandler = handler;
-
-            onUnitDamagedHandler = (victim, attacker) =>
+            System.Action<Unit, Unit> onDamaged = (victim, attacker) =>
             {
                 // Only react when Rascal is the one dealing damage.
-                if (attacker != cachedHandler.Owner) return;
-
+                if (attacker != handler.Owner) return;
                 if (defenseUpData == null || StatusEffectManager.Instance == null) return;
 
                 // Apply the defense boost to Rascal himself.
                 // Source is also Rascal so OnModifyEffectPower passives that key on
                 // source (e.g. Mastermind) won't accidentally boost this.
                 StatusEffectManager.Instance.ApplyStatusEffect(
-                    cachedHandler.Owner,
+                    handler.Owner,
                     defenseUpData,
-                    source: cachedHandler.Owner,
+                    source: handler.Owner,
                     duration: defenseDuration,
                     power: defensePower);
             };
 
-            UnitManager.OnUnitDamaged += onUnitDamagedHandler;
+            UnitManager.OnUnitDamaged += onDamaged;
+            RegisterCleanup(() => UnitManager.OnUnitDamaged -= onDamaged);
         }
 
         public override void Cleanup(PassiveAbilityHandler handler)
         {
-            if (onUnitDamagedHandler != null)
-            {
-                UnitManager.OnUnitDamaged -= onUnitDamagedHandler;
-                onUnitDamagedHandler = null;
-            }
-
-            cachedHandler = null;
+            base.Cleanup(handler);
         }
     }
 }

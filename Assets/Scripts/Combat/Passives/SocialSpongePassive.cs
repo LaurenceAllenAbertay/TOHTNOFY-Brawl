@@ -25,43 +25,30 @@ namespace DDD.TNFY.BRAWL
         [Tooltip("Flat amount added to effectPower when an ally applies any buff to Brodie.")]
         public float potencyBonus = 2f;
 
-        // Stored delegate reference so we can unsubscribe with the exact same instance.
-        private System.Func<Unit, Unit, StatusEffectData, float, float> powerModifierHandler;
-
-        // Cached so the lambda can safely reference it without capturing a stale local.
-        private PassiveAbilityHandler cachedHandler;
-
         public override void Initialise(PassiveAbilityHandler handler)
         {
-            cachedHandler = handler;
+            System.Func<Unit, Unit, StatusEffectData, float, float> powerModifier =
+                (source, target, effectData, power) =>
+                {
+                    // Only boost effects being applied TO Brodie.
+                    if (target != handler.Owner) return power;
 
-            powerModifierHandler = (source, target, effectData, power) =>
-            {
-                // Only boost effects being applied TO Brodie.
-                if (target != cachedHandler.Owner) return power;
+                    // Exclude self-application — the passive only triggers when an ally buffs Brodie.
+                    if (source == handler.Owner) return power;
 
-                // Exclude self-application — the passive only triggers when an ally buffs Brodie.
-                if (source == cachedHandler.Owner) return power;
+                    // Only boost buff-type effects, not debuffs or damage-over-time.
+                    if (!effectData.effectType.IsBuffType()) return power;
 
-                // Only boost buff-type effects, not debuffs or damage-over-time.
-                if (!effectData.effectType.IsBuffType()) return power;
+                    return power + potencyBonus;
+                };
 
-                return power + potencyBonus;
-            };
-
-            StatusEffectManager.OnModifyEffectPower += powerModifierHandler;
+            StatusEffectManager.OnModifyEffectPower += powerModifier;
+            RegisterCleanup(() => StatusEffectManager.OnModifyEffectPower -= powerModifier);
         }
 
         public override void Cleanup(PassiveAbilityHandler handler)
         {
-            if (powerModifierHandler != null)
-            {
-                StatusEffectManager.OnModifyEffectPower -= powerModifierHandler;
-                powerModifierHandler = null;
-            }
-
-            cachedHandler = null;
+            base.Cleanup(handler);
         }
-
     }
 }

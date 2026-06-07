@@ -26,36 +26,29 @@ namespace DDD.TNFY.BRAWL
         public float attackPower = 3f;
         public int allyProximityRange = 3;
 
-        // Stored so we can unsubscribe with the exact same delegate instance.
-        private System.Action<Unit> onTurnEndedHandler;
-        private System.Action<Unit> onUnitMovedHandler;
-
         // Reference kept so we can remove the effect when an ally comes back in range.
         private StatusEffectInstance activeAttackBuff;
 
-        // Cached handler reference — needed to access Owner inside the lambda.
-        private PassiveAbilityHandler cachedHandler;
-
         public override void Initialise(PassiveAbilityHandler handler)
         {
-            cachedHandler = handler;
-
             // Effect 1: permanent speed bonus.
             handler.Owner.currentSpeed += speedBonus;
 
             // Effect 2: subscribe to turn end and unit movement to re-evaluate ally proximity.
             // OnUnitMoved covers Lorns moving, teleporting, being knocked back, etc.
-            onTurnEndedHandler = _ => EvaluateLoneWolf();
-            TurnManager.OnTurnEnded += onTurnEndedHandler;
+            System.Action<Unit> onTurnEnded = _ => EvaluateLoneWolf(handler.Owner);
+            TurnManager.OnTurnEnded += onTurnEnded;
+            RegisterCleanup(() => TurnManager.OnTurnEnded -= onTurnEnded);
 
-            onUnitMovedHandler = movedUnit =>
+            System.Action<Unit> onUnitMoved = movedUnit =>
             {
-                if (movedUnit == handler.Owner) EvaluateLoneWolf();
+                if (movedUnit == handler.Owner) EvaluateLoneWolf(handler.Owner);
             };
-            UnitManager.OnUnitMoved += onUnitMovedHandler;
+            UnitManager.OnUnitMoved += onUnitMoved;
+            RegisterCleanup(() => UnitManager.OnUnitMoved -= onUnitMoved);
 
             // Run an initial evaluation in case combat starts with no allies nearby.
-            EvaluateLoneWolf();
+            EvaluateLoneWolf(handler.Owner);
         }
 
         public override void Cleanup(PassiveAbilityHandler handler)
@@ -63,47 +56,33 @@ namespace DDD.TNFY.BRAWL
             // Reverse the speed bonus.
             handler.Owner.currentSpeed -= speedBonus;
 
-            // Unsubscribe to avoid dangling event references.
-            if (onTurnEndedHandler != null)
-            {
-                TurnManager.OnTurnEnded -= onTurnEndedHandler;
-                onTurnEndedHandler = null;
-            }
-
-            if (onUnitMovedHandler != null)
-            {
-                UnitManager.OnUnitMoved -= onUnitMovedHandler;
-                onUnitMovedHandler = null;
-            }
-
             // Remove the attack buff if it is still active.
-            RemoveAttackBuff();
+            RemoveAttackBuff(handler.Owner);
 
-            cachedHandler = null;
+            base.Cleanup(handler);
         }
 
-        private void EvaluateLoneWolf()
+        private void EvaluateLoneWolf(Unit owner)
         {
-            if (cachedHandler == null || cachedHandler.Owner == null) return;
+            if (owner == null) return;
 
-            bool allyNearby = IsAllyWithinRange();
+            bool allyNearby = IsAllyWithinRange(owner);
 
             if (!allyNearby && activeAttackBuff == null)
             {
                 // No ally nearby and buff not yet active — apply it.
-                ApplyAttackBuff();
+                ApplyAttackBuff(owner);
             }
             else if (allyNearby && activeAttackBuff != null)
             {
                 // Ally came within range — remove the buff.
-                RemoveAttackBuff();
+                RemoveAttackBuff(owner);
             }
             // If state hasn't changed, do nothing.
         }
 
-        private bool IsAllyWithinRange()
+        private bool IsAllyWithinRange(Unit owner)
         {
-            Unit owner = cachedHandler.Owner;
             if (owner.currentTile == null) return false;
 
             foreach (Unit unit in UnitManager.AllUnits)
@@ -120,23 +99,20 @@ namespace DDD.TNFY.BRAWL
             return false;
         }
 
-        private void ApplyAttackBuff()
+        private void ApplyAttackBuff(Unit owner)
         {
             if (attackUpData == null || StatusEffectManager.Instance == null) return;
-
-            Unit owner = cachedHandler.Owner;
 
             // Duration -1 signals indefinite — the passive manages removal itself.
             activeAttackBuff = StatusEffectManager.Instance.ApplyStatusEffect(
                 owner, attackUpData, owner, duration: -1, power: attackPower);
         }
 
-        private void RemoveAttackBuff()
+        private void RemoveAttackBuff(Unit owner)
         {
             if (activeAttackBuff == null || StatusEffectManager.Instance == null) return;
 
-            StatusEffectManager.Instance.RemoveStatusEffect(
-                cachedHandler?.Owner, activeAttackBuff);
+            StatusEffectManager.Instance.RemoveStatusEffect(owner, activeAttackBuff);
             activeAttackBuff = null;
         }
     }

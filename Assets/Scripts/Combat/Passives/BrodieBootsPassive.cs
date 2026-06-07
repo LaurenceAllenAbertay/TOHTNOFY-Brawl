@@ -34,6 +34,7 @@ namespace DDD.TNFY.BRAWL
         {
             handler.Owner.JumpRange -= jumpRangeBonus;
             handler.Owner.CanStompOccupiedTiles = false;
+            base.Cleanup(handler);
         }
     }
 }

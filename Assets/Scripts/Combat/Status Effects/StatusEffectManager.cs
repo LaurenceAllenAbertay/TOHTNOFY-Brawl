@@ -198,7 +198,10 @@ namespace DDD.TNFY.BRAWL
                     break;
 
                 case StatusEffectType.Poison:
-                    int poisonDamage = Mathf.RoundToInt(effect.effectPower * (effect.effectData.effectName.Length - effect.remainingDuration + 1));
+                    // Damage escalates each tick: tick 1 = effectPower, tick 2 = 2x, ..., final tick = initialDuration x.
+                    // initialDuration is stored on the instance so renaming the asset cannot change the formula.
+                    int tickNumber = effect.initialDuration - effect.remainingDuration + 1;
+                    int poisonDamage = Mathf.RoundToInt(effect.effectPower * tickNumber);
                     effect.target.ReceiveDamage(poisonDamage);
                     break;
 

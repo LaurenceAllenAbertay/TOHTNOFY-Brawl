@@ -34,53 +34,34 @@ namespace DDD.TNFY.BRAWL
         [Tooltip("SpeedUp StatusEffectData asset.")]
         public StatusEffectData speedUpData;
 
-        // Stored delegates for clean unsubscription.
-        private System.Func<Unit, Unit, StatusEffectData, float, float> powerModifierHandler;
-        private System.Action<Unit, StatusEffectInstance> statusAppliedHandler;
-
-        // Cached so inner lambdas can reference it without capturing a possibly-stale handler.
-        private PassiveAbilityHandler cachedHandler;
-
         public override void Initialise(PassiveAbilityHandler handler)
         {
-            cachedHandler = handler;
-
             // Part 1: register potency boost — only fires when Lorns is the source.
-            powerModifierHandler = (source, target, effectData, power) =>
-            {
-                if (source == cachedHandler.Owner)
-                    return power + potencyBonus;
-                return power;
-            };
-            StatusEffectManager.OnModifyEffectPower += powerModifierHandler;
+            System.Func<Unit, Unit, StatusEffectData, float, float> powerModifier =
+                (source, target, effectData, power) =>
+                {
+                    if (source == handler.Owner)
+                        return power + potencyBonus;
+                    return power;
+                };
+            StatusEffectManager.OnModifyEffectPower += powerModifier;
+            RegisterCleanup(() => StatusEffectManager.OnModifyEffectPower -= powerModifier);
 
             // Part 2: register mirror buff — fires whenever any status effect is applied.
-            statusAppliedHandler = (target, effect) => TryMirrorBuff(target, effect);
-            StatusEffectManager.OnStatusEffectApplied += statusAppliedHandler;
+            System.Action<Unit, StatusEffectInstance> statusApplied =
+                (target, effect) => TryMirrorBuff(handler.Owner, target, effect);
+            StatusEffectManager.OnStatusEffectApplied += statusApplied;
+            RegisterCleanup(() => StatusEffectManager.OnStatusEffectApplied -= statusApplied);
         }
 
         public override void Cleanup(PassiveAbilityHandler handler)
         {
-            if (powerModifierHandler != null)
-            {
-                StatusEffectManager.OnModifyEffectPower -= powerModifierHandler;
-                powerModifierHandler = null;
-            }
-
-            if (statusAppliedHandler != null)
-            {
-                StatusEffectManager.OnStatusEffectApplied -= statusAppliedHandler;
-                statusAppliedHandler = null;
-            }
-
-            cachedHandler = null;
+            base.Cleanup(handler);
         }
 
-        private void TryMirrorBuff(Unit target, StatusEffectInstance effect)
+        private void TryMirrorBuff(Unit lorns, Unit target, StatusEffectInstance effect)
         {
-            if (cachedHandler == null || cachedHandler.Owner == null) return;
-
-            Unit lorns = cachedHandler.Owner;
+            if (lorns == null) return;
 
             // Don't mirror buffs applied to Lorns himself.
             if (target == lorns) return;
