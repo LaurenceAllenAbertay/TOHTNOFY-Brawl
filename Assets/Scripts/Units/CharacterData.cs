@@ -22,6 +22,11 @@ namespace DDD.TNFY.BRAWL
 
         [Header("Passive")]
         public PassiveAbility passive;
+
+        [Header("Dialogue")]
+        [Tooltip("Per-character dialogue lines and trigger entries. " +
+                 "Create via Assets > Create > TNFY Brawl > Dialogue > Character Dialogue Data.")]
+        public CharacterDialogueData dialogueData;
     }
 
 }

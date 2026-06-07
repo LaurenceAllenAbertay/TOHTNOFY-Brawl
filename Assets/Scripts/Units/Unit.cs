@@ -344,5 +344,28 @@ namespace DDD.TNFY.BRAWL
         }
 
         #endregion
+
+#if UNITY_EDITOR
+        /// <summary>
+        /// Debug helper: instantly kills this unit via the normal death path so all
+        /// downstream systems (TurnManager, DialogueManager, StatusEffectManager) fire
+        /// exactly as they would during gameplay.
+        /// Right-click the Unit component in the Inspector and select "Debug: Kill Unit".
+        /// Only compiled into the Editor — stripped from release builds.
+        /// </summary>
+        [ContextMenu("Debug: Kill Unit")]
+        private void Debug_Die()
+        {
+            if (!Application.isPlaying)
+            {
+                Debug.LogWarning($"[Unit:{name}] Debug_Die called outside Play Mode — ignored.");
+                return;
+            }
+
+            Debug.Log($"[Unit:{name}] Debug_Die triggered.");
+            UnitManager.NotifyUnitDied(this);
+        }
+#endif
+
     }
 }
