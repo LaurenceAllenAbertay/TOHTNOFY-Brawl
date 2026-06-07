@@ -426,6 +426,15 @@ namespace DDD.TNFY.BRAWL
                         cameraController.UnitFocusPosition(currentActiveUnit)));
                 }
 
+                // Clear the animation block BEFORE restoring highlights so that CanMove
+                // evaluates correctly inside RestoreDefaultHighlights. Previously these
+                // were set after the call, which meant CanMove was always false at the
+                // point highlights were restored — causing movement tiles to never reappear
+                // after abilities that don't end the turn (e.g. Double Prong).
+                UnblockAllInput();
+                isWaitingForAnimation = false;
+                currentState = CombatState.WaitingForInput;
+
                 targetingController?.RestoreDefaultHighlights(
                     currentActiveUnit,
                     suppressMovement: ability.endTurnOnCast || isExecutingPendingAction);
@@ -439,6 +448,9 @@ namespace DDD.TNFY.BRAWL
 
             UIEvents.OnAbilityAnimationComplete();
             UIEvents.OnTargetingStateChanged();
+
+            // State already cleared above on the success path; clean up here only for
+            // the failed-execution path where the block above was skipped.
             UnblockAllInput();
             isWaitingForAnimation = false;
             currentState = CombatState.WaitingForInput;

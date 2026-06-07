@@ -5,6 +5,27 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "TNFY Brawl/Targeting/Random AOE")]
 public class RandomAOETargeting : AbilityTargeting
 {
+    // ── Input behaviour ───────────────────────────────────────────────────────
+
+    public override bool UsesDirectionalInput => false;
+    public override bool ConfirmsOnTileClick  => true;
+
+    // ── Preview ───────────────────────────────────────────────────────────────
+
+    public override void ShowEnterPreview(AbilityContext ctx, Tile hoveredTile)
+    {
+        ShowTraversalPreview(ctx);
+    }
+
+    // ── Confirmation ──────────────────────────────────────────────────────────
+
+    public override bool OnTileClicked(Tile tile, AbilityContext ctx, out AbilityContext outCtx)
+    {
+        // RandomAOE confirms on any tile click — the target selection is pre-rolled.
+        outCtx = null;
+        return true;
+    }
+
     // Cache the last selection to prevent flickering during preview
     private List<Tile> cachedSelection = new List<Tile>();
     private Unit lastCaster;
@@ -39,13 +60,15 @@ public class RandomAOETargeting : AbilityTargeting
         // If random AOE does depend on aim direction, add that check here
     }
 
+    public override bool UsesCameraZoomAfterExecution => true;
+
     /// <summary>
     /// Clears the cached selection so a fresh roll is generated next time this ability
     /// is opened for targeting. Called at the start of ANY unit's turn — not on cancel
     /// or execution — so the same tiles stay consistent for the entire turn regardless
     /// of cancel/retarget or movement.
     /// </summary>
-    public void ResetForNewTurn()
+    public override void ResetForNewTurn()
     {
         isInPreviewMode = false;
         cachedSelection.Clear();

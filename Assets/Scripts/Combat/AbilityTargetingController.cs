@@ -1,6 +1,4 @@
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 namespace DDD.TNFY.BRAWL
@@ -9,6 +7,11 @@ namespace DDD.TNFY.BRAWL
     /// Owns the ability targeting state machine: which ability is active, which tile
     /// is hovered, range-preview highlights, and confirmation/cancellation.
     /// Attach to the same GameObject as CombatManager.
+    ///
+    /// Input is routed via virtual properties on AbilityTargeting (UsesDirectionalInput,
+    /// UsesHoverTracking, ConfirmsOnTileClick) so this class never needs to know which
+    /// concrete targeting type is active. Adding a new targeting type requires zero
+    /// changes here.
     ///
     /// When an ability is confirmed it calls back to CombatManager.StartAbilityExecution
     /// so CombatManager remains the single owner of execution-state flags.
@@ -57,23 +60,11 @@ namespace DDD.TNFY.BRAWL
             }
 
             currentAbilitySlot = slot;
+            hoveredTile = null;
             GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
 
-            if (currentAbility.targeting is SingleTargeting)
-                ShowSingleTargetRangePreview(activeUnit);
-
-            if (currentAbility.targeting is RandomAOETargeting)
-                ShowRandomAOEPreview(activeUnit);
-
-            if (currentAbility.targeting is SquareAOETargeting)
-                ShowSquareAOEPreview(activeUnit);
-
-            if (currentAbility.targeting is MultiTileSelectionTargeting multiTargeting)
-            {
-                var ctx = new AbilityContext { caster = activeUnit, ability = currentAbility };
-                multiTargeting.BeginSelection(ctx);
-                ShowMultiTileSelectionPreview(multiTargeting, ctx);
-            }
+            var ctx = MakeContext(activeUnit);
+            currentAbility.targeting.ShowEnterPreview(ctx, hoveredTile);
 
             UIEvents.OnTargetingStateChanged();
         }
@@ -85,8 +76,11 @@ namespace DDD.TNFY.BRAWL
             // The same random tiles must be shown for the entire turn — cancel/retarget
             // should present the same selection. Cache is only reset at the start of a new turn.
 
-            if (currentAbility?.targeting is MultiTileSelectionTargeting multiTargeting)
-                multiTargeting.CancelSelection();
+            if (currentAbility != null)
+            {
+                var ctx = MakeContext(activeUnit);
+                currentAbility.targeting.OnCancel(ctx);
+            }
 
             ClearAbilityTargeting();
             RestoreDefaultHighlights(activeUnit);
@@ -106,83 +100,96 @@ namespace DDD.TNFY.BRAWL
 
         /// <summary>
         /// Called by CombatManager when a tile's OnMouseEnter fires.
-        /// Drives hoveredTile for single targeting via Unity's physics collider system,
-        /// which is consistent with OnMouseDown and correct on multi-level maps.
+        /// Only active for targeting types that use hover tracking (e.g. SingleTargeting).
         /// </summary>
         public void HandleTileHovered(Tile tile, Unit activeUnit)
         {
             if (!IsTargetingAbility) return;
-            if (!(currentAbility.targeting is SingleTargeting)) return;
-
+            if (!currentAbility.targeting.UsesHoverTracking) return;
             if (tile == hoveredTile) return;
+
             hoveredTile = tile;
-            ShowSingleTargetRangePreview(activeUnit);
+            var ctx = MakeContext(activeUnit);
+            currentAbility.targeting.ShowHoverPreview(ctx, hoveredTile);
         }
 
         public void HandleTileHoverExited(Tile tile, Unit activeUnit)
         {
             if (!IsTargetingAbility) return;
-            if (!(currentAbility.targeting is SingleTargeting)) return;
+            if (!currentAbility.targeting.UsesHoverTracking) return;
 
             // Only clear if the exited tile is the one we're tracking — OnMouseEnter on the
             // next tile fires before OnMouseExit on the previous one in Unity, so if hoveredTile
             // has already advanced we leave it alone.
             if (tile != hoveredTile) return;
+
             hoveredTile = null;
-            ShowSingleTargetRangePreview(activeUnit);
+            var ctx = MakeContext(activeUnit);
+            currentAbility.targeting.ShowHoverPreview(ctx, hoveredTile);
         }
 
         public void HandleMouseMoved(Vector3 mouseWorldPosition, Unit activeUnit)
         {
             if (!IsTargetingAbility) return;
 
-            if (currentAbility.targeting is SingleTargeting)
-                return; // hoveredTile is driven by HandleTileHovered (OnMouseEnter) — no polling needed
-            else if (currentAbility.targeting is MultiTileSelectionTargeting)
-                HandleMultiTileSelectionMouseMove(mouseWorldPosition, activeUnit);
-            else if (currentAbility.targeting is RandomAOETargeting)
-                return; // Highlights are fixed for the turn — no update on mouse move
-            else if (currentAbility.targeting is SquareAOETargeting)
-                return; // Highlights fixed to caster position — no update on mouse move
-            else
-                HandleDirectionalTargetingMouseMove(mouseWorldPosition, activeUnit);
+            var targeting = currentAbility.targeting;
+
+            if (targeting.UsesDirectionalInput)
+            {
+                // Directional types (Line, AOE, MovementLine) update the preview on mouse move.
+                HandleDirectionalMouseMove(mouseWorldPosition, activeUnit);
+            }
+            else if (!targeting.UsesHoverTracking)
+            {
+                // Non-directional, non-hover types (e.g. MultiTileSelection) get a generic
+                // mouse-moved notification so they can update their own preview state.
+                Tile newHover = GetHoveredTile(mouseWorldPosition);
+                if (newHover == hoveredTile) return;
+                hoveredTile = newHover;
+
+                var ctx = MakeContext(activeUnit);
+                targeting.OnMouseMoved(ctx, hoveredTile);
+            }
+            // UsesHoverTracking types (SingleTargeting) are driven by HandleTileHovered —
+            // no polling needed here.
         }
 
         public void HandleMouseClicked(Vector3 mouseWorldPosition, Unit activeUnit)
         {
             if (!IsTargetingAbility) return;
 
-            if (currentAbility.targeting is SingleTargeting)
-                return; // Single targeting uses tile click events, not raw mouse position
+            // Only directional targeting types confirm via raw mouse position.
+            // All others confirm via HandleTileClicked.
+            if (!currentAbility.targeting.UsesDirectionalInput) return;
 
-            if (currentAbility.targeting is RandomAOETargeting)
-                return; // RandomAOE confirms via tile click — handled in HandleTileClicked
-
-            if (currentAbility.targeting is SquareAOETargeting)
-                return; // SquareAOE confirms via tile click — handled in HandleTileClicked
-
-            HandleDirectionalAbilityClick(mouseWorldPosition, activeUnit);
+            HandleDirectionalMouseClick(mouseWorldPosition, activeUnit);
         }
 
         public void HandleTileClicked(Tile clickedTile, Unit activeUnit)
         {
             if (!IsTargetingAbility) return;
+            if (!currentAbility.targeting.ConfirmsOnTileClick) return;
 
-            if (currentAbility.targeting is SingleTargeting)
-                ConfirmSingleTargetAbility(clickedTile, activeUnit);
-            else if (currentAbility.targeting is MultiTileSelectionTargeting multiTargeting)
-                HandleMultiTileSelectionClick(clickedTile, multiTargeting, activeUnit);
-            else if (currentAbility.targeting is RandomAOETargeting)
-                ConfirmRandomAOEAbility(activeUnit);
-            else if (currentAbility.targeting is SquareAOETargeting)
-                ConfirmSquareAOEAbility(activeUnit);
+            var ctx = MakeContext(activeUnit);
+            bool confirmed = currentAbility.targeting.OnTileClicked(clickedTile, ctx, out var outCtx);
+
+            if (confirmed)
+            {
+                if (!ValidateAbilityExecution(currentAbility, activeUnit, outCtx))
+                    return;
+
+                GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
+                bool isDirectional = false;
+                combatManager.StartAbilityExecution(
+                    currentAbility, outCtx, isDirectional, Vector2Int.zero);
+            }
         }
 
         #endregion
 
         #region Directional Targeting
 
-        private void HandleDirectionalTargetingMouseMove(Vector3 mouseWorldPosition, Unit activeUnit)
+        private void HandleDirectionalMouseMove(Vector3 mouseWorldPosition, Unit activeUnit)
         {
             Vector3 dir = (mouseWorldPosition - activeUnit.transform.position);
             dir.y = 0;
@@ -198,7 +205,7 @@ namespace DDD.TNFY.BRAWL
             }
         }
 
-        private void HandleDirectionalAbilityClick(Vector3 mouseWorldPosition, Unit activeUnit)
+        private void HandleDirectionalMouseClick(Vector3 mouseWorldPosition, Unit activeUnit)
         {
             Vector3 dir = (mouseWorldPosition - activeUnit.transform.position);
             dir.y = 0;
@@ -212,186 +219,11 @@ namespace DDD.TNFY.BRAWL
 
         private void ConfirmDirectionalAbility(Vector2Int aimDir, Unit activeUnit)
         {
-            if (!ValidateAbilityExecution(currentAbility, activeUnit, null, aimDir)) return;
+            var ctx = MakeContext(activeUnit, aimDir: aimDir);
+            if (!ValidateAbilityExecution(currentAbility, activeUnit, ctx)) return;
 
             GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
             combatManager.StartAbilityExecution(currentAbility, null, isDirectional: true, aimDir);
-        }
-
-        #endregion
-
-        #region Single Targeting
-
-        private void ConfirmSingleTargetAbility(Tile targetTile, Unit activeUnit)
-        {
-            if (targetTile == null) return;
-            if (!(currentAbility.targeting is SingleTargeting singleTargeting)) return;
-
-            var ctx = new AbilityContext
-            {
-                caster = activeUnit,
-                ability = currentAbility,
-                targetTile = targetTile
-            };
-
-            if (!singleTargeting.IsWithinRange(ctx, targetTile))
-            {
-                Debug.Log("Target tile is out of range. Try again.");
-                return;
-            }
-
-            bool isTeleportAbility = currentAbility.effects.Exists(e => e is TeleportEffect);
-            if (isTeleportAbility && (targetTile.occupied || !targetTile.passableTerrain))
-            {
-                Debug.Log("Cannot teleport to occupied or impassable tile. Try again.");
-                return;
-            }
-
-            GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
-            combatManager.StartAbilityExecution(currentAbility, ctx, isDirectional: false, Vector2Int.zero);
-        }
-
-        private void ShowSingleTargetRangePreview(Unit activeUnit)
-        {
-            if (!(currentAbility.targeting is SingleTargeting singleTargeting)) return;
-
-            var ctx = new AbilityContext { caster = activeUnit, ability = currentAbility };
-            var tilesInRange = singleTargeting.GetTilesInRange(ctx);
-
-            GridManager.Instance.ClearAllHighlights();
-            foreach (var tile in tilesInRange)
-                tile.Highlight(TileHighlightType.Danger);
-
-            if (hoveredTile != null && tilesInRange.Contains(hoveredTile))
-            {
-                bool isTeleportAbility = currentAbility.effects.Exists(e => e is TeleportEffect);
-
-                if (isTeleportAbility)
-                {
-                    if (hoveredTile.currentUnit == null && hoveredTile.passableTerrain)
-                        hoveredTile.Highlight(TileHighlightType.AttackRange);
-                }
-                else if (hoveredTile.currentUnit != null)
-                {
-                    var unit = hoveredTile.currentUnit;
-                    bool isAlly = unit is EnemyUnit == activeUnit is EnemyUnit;
-                    bool canHit = (isAlly && currentAbility.canHitAllies) || (!isAlly && currentAbility.canHitEnemies);
-                    if (canHit) hoveredTile.Highlight(TileHighlightType.AttackRange);
-                }
-            }
-        }
-
-        #endregion
-
-        #region Multi-Tile Selection Targeting
-
-        private void HandleMultiTileSelectionMouseMove(Vector3 mouseWorldPosition, Unit activeUnit)
-        {
-            if (!(currentAbility.targeting is MultiTileSelectionTargeting multiTargeting)) return;
-
-            Tile newHover = GetHoveredTile(mouseWorldPosition);
-
-            if (newHover == hoveredTile) return;
-            hoveredTile = newHover;
-
-            var ctx = new AbilityContext { caster = activeUnit, ability = currentAbility };
-            ShowMultiTileSelectionPreview(multiTargeting, ctx);
-
-            if (hoveredTile != null && multiTargeting.IsValidSelection(hoveredTile, ctx))
-                hoveredTile.Highlight(TileHighlightType.Occupied);
-        }
-
-        private void HandleMultiTileSelectionClick(Tile clickedTile, MultiTileSelectionTargeting targeting, Unit activeUnit)
-        {
-            var ctx = new AbilityContext { caster = activeUnit, ability = currentAbility };
-
-            if (!targeting.TrySelectTile(clickedTile, ctx)) return;
-
-            if (targeting.IsComplete)
-            {
-                GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
-                combatManager.StartAbilityExecution(currentAbility, ctx, isDirectional: false, Vector2Int.zero);
-            }
-            else
-            {
-                ShowMultiTileSelectionPreview(targeting, ctx);
-            }
-        }
-
-        private void ShowMultiTileSelectionPreview(MultiTileSelectionTargeting targeting, AbilityContext ctx)
-        {
-            GridManager.Instance.ClearAllHighlights();
-
-            foreach (var tile in targeting.GetTilesInRange(ctx))
-            {
-                if (!targeting.SelectedTiles.Contains(tile))
-                    tile.Highlight(TileHighlightType.Moveable);
-            }
-
-            foreach (var tile in targeting.SelectedTiles)
-                tile.Highlight(TileHighlightType.AttackRange);
-        }
-
-        #endregion
-
-        #region Random AOE Targeting
-
-        private void ShowRandomAOEPreview(Unit activeUnit)
-        {
-            var ctx = new AbilityContext { caster = activeUnit, ability = currentAbility };
-            var tiles = currentAbility.targeting.GetTraversal(ctx);
-
-            GridManager.Instance.ClearAllHighlights();
-            foreach (var tile in tiles)
-            {
-                var u = tile.currentUnit;
-                if (u != null)
-                {
-                    bool isAlly = u is EnemyUnit == activeUnit is EnemyUnit;
-                    bool canHit = (isAlly && currentAbility.canHitAllies) || (!isAlly && currentAbility.canHitEnemies);
-                    tile.Highlight(canHit ? TileHighlightType.AttackRange : TileHighlightType.Danger);
-                }
-                else
-                {
-                    tile.Highlight(TileHighlightType.Danger);
-                }
-            }
-        }
-
-        private void ShowSquareAOEPreview(Unit activeUnit)
-        {
-            var ctx = new AbilityContext { caster = activeUnit, ability = currentAbility };
-            var tiles = currentAbility.targeting.GetTraversal(ctx);
-
-            GridManager.Instance.ClearAllHighlights();
-            foreach (var tile in tiles)
-            {
-                var u = tile.currentUnit;
-                if (u != null)
-                {
-                    bool isAlly = u is EnemyUnit == activeUnit is EnemyUnit;
-                    bool canHit = (isAlly && currentAbility.canHitAllies) || (!isAlly && currentAbility.canHitEnemies);
-                    tile.Highlight(canHit ? TileHighlightType.AttackRange : TileHighlightType.Danger);
-                }
-                else
-                {
-                    tile.Highlight(TileHighlightType.Danger);
-                }
-            }
-        }
-
-        private void ConfirmRandomAOEAbility(Unit activeUnit)
-        {
-            if (!ValidateAbilityExecution(currentAbility, activeUnit, null, Vector2Int.zero)) return;
-            GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
-            combatManager.StartAbilityExecution(currentAbility, null, isDirectional: false, Vector2Int.zero);
-        }
-
-        private void ConfirmSquareAOEAbility(Unit activeUnit)
-        {
-            if (!ValidateAbilityExecution(currentAbility, activeUnit, null, Vector2Int.zero)) return;
-            GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
-            combatManager.StartAbilityExecution(currentAbility, null, isDirectional: false, Vector2Int.zero);
         }
 
         #endregion
@@ -403,7 +235,6 @@ namespace DDD.TNFY.BRAWL
         {
             GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
 
-            // Suppress if caller requests it, or if a pending action is auto-executing.
             if (suppressMovement) return;
             if (combatManager != null && combatManager.IsExecutingPendingAction) return;
 
@@ -416,36 +247,46 @@ namespace DDD.TNFY.BRAWL
             }
         }
 
-        /// <summary>Re-shows single-target range preview — called on failed execution to allow retry.</summary>
+        /// <summary>
+        /// Re-shows the enter preview for the active targeting type.
+        /// Called after a failed execution attempt so the player can retry.
+        /// </summary>
         public void ShowRetryPreview(Unit activeUnit)
         {
-            if (currentAbility?.targeting is SingleTargeting)
-                ShowSingleTargetRangePreview(activeUnit);
+            if (!IsTargetingAbility) return;
+            var ctx = MakeContext(activeUnit);
+            currentAbility.targeting.ShowEnterPreview(ctx, hoveredTile);
         }
 
         #endregion
 
         #region Validation
 
-        private bool ValidateAbilityExecution(Ability ability, Unit activeUnit, Tile targetTile, Vector2Int aimDir)
+        private bool ValidateAbilityExecution(Ability ability, Unit activeUnit, AbilityContext ctx)
         {
             if (ability == null || ability.targeting == null) return false;
 
-            var ctx = new AbilityContext
-            {
-                caster = activeUnit,
-                ability = ability,
-                aimDir = aimDir,
-                targetTile = targetTile
-            };
+            // Build a temporary context for target resolution if one wasn't provided.
+            var evalCtx = ctx ?? MakeContext(activeUnit);
 
-            var targets = ability.targeting.SelectTargets(ctx);
+            var targets = ability.targeting.SelectTargets(evalCtx);
             return targets.Count > 0 || ability.canExecuteWithoutTargets;
         }
 
         #endregion
 
         #region Utilities
+
+        private AbilityContext MakeContext(Unit activeUnit, Tile targetTile = null, Vector2Int aimDir = default)
+        {
+            return new AbilityContext
+            {
+                caster     = activeUnit,
+                ability    = currentAbility,
+                targetTile = targetTile,
+                aimDir     = aimDir
+            };
+        }
 
         private Vector2Int GetCardinalDirection(Vector3 dir)
         {

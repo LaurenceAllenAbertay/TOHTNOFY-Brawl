@@ -5,6 +5,12 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "TNFY Brawl/Targeting/AOE")]
 public class AOETargeting : AbilityTargeting
 {
+    // ── Input behaviour ───────────────────────────────────────────────────────
+    // AOE is aimed by mouse direction — preview updates on mouse move,
+    // confirms on mouse click. No enter preview (direction not yet chosen).
+
+    public override bool UsesDirectionalInput => true;
+
     public bool includeSelf = false;
 
     public override List<Tile> GetTraversal(AbilityContext ctx)

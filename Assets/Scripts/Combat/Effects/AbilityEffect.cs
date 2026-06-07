@@ -48,6 +48,16 @@ namespace DDD.TNFY.BRAWL
         /// </summary>
         public virtual float ExpectedAnimationDuration => 0f;
 
+        // ── Target tile constraints ──────────────────────────────────────────────
+
+        /// <summary>
+        /// When true, the target tile must be unoccupied and passable terrain for this
+        /// effect to be valid. AbilityTargeting.ShowEnterPreview uses this to colour
+        /// hover highlights correctly, and SingleTargeting uses it to gate confirmation.
+        /// Override in effects that move the caster to the target tile (e.g. TeleportEffect).
+        /// </summary>
+        public virtual bool RequiresEmptyTargetTile => false;
+
         // ── Self-only filter ─────────────────────────────────────────────────────
 
         /// <summary>

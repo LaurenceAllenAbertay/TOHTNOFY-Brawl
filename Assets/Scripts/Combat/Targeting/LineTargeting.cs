@@ -5,6 +5,12 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "TNFY Brawl/Targeting/Line Targeting")]
 public class LineTargeting : AbilityTargeting
 {
+    // ── Input behaviour ───────────────────────────────────────────────────────
+    // Line targeting is aimed by mouse direction — preview updates on mouse move,
+    // confirms on mouse click. No enter preview (direction not yet chosen).
+
+    public override bool UsesDirectionalInput => true;
+
     [Tooltip("If true, this ability can only be aimed left or right (horizontal only)")]
     public bool horizontalOnly = true;
 

@@ -5,6 +5,27 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "TNFY Brawl/Targeting/Square AOE")]
 public class SquareAOETargeting : AbilityTargeting
 {
+    // ── Input behaviour ───────────────────────────────────────────────────────
+
+    public override bool UsesDirectionalInput => false;
+    public override bool ConfirmsOnTileClick  => true;
+
+    // ── Preview ───────────────────────────────────────────────────────────────
+
+    public override void ShowEnterPreview(AbilityContext ctx, Tile hoveredTile)
+    {
+        ShowTraversalPreview(ctx);
+    }
+
+    // ── Confirmation ──────────────────────────────────────────────────────────
+
+    public override bool OnTileClicked(Tile tile, AbilityContext ctx, out AbilityContext outCtx)
+    {
+        // SquareAOE always targets the area around the caster — confirm on any tile click.
+        outCtx = null;
+        return true;
+    }
+
     public bool includeSelf = false;
 
     public override List<Tile> GetTraversal(AbilityContext ctx)

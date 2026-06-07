@@ -127,6 +127,68 @@ namespace DDD.TNFY.BRAWL
 
         // ── AbilityTargeting overrides ────────────────────────────────────────────
 
+        public override bool UsesDirectionalInput => false;
+        public override bool ConfirmsOnTileClick  => true;
+
+        public override void ShowEnterPreview(AbilityContext ctx, Tile hoveredTile)
+        {
+            BeginSelection(ctx);
+            DrawSelectionHighlights(ctx, hoveredTile);
+        }
+
+        public override void ShowHoverPreview(AbilityContext ctx, Tile hoveredTile)
+        {
+            DrawSelectionHighlights(ctx, hoveredTile);
+        }
+
+        public override void OnMouseMoved(AbilityContext ctx, Tile hoveredTile)
+        {
+            DrawSelectionHighlights(ctx, hoveredTile);
+        }
+
+        public override bool OnTileClicked(Tile tile, AbilityContext ctx, out AbilityContext outCtx)
+        {
+            outCtx = null;
+            if (!TrySelectTile(tile, ctx)) return false;
+
+            if (IsComplete)
+            {
+                // Build a fresh context carrying the full selection via GetTraversal.
+                outCtx = new AbilityContext
+                {
+                    caster  = ctx.caster,
+                    ability = ctx.ability
+                };
+                return true;
+            }
+
+            // Not complete yet — update highlights and stay in targeting mode.
+            DrawSelectionHighlights(ctx, null);
+            return false;
+        }
+
+        public override void OnCancel(AbilityContext ctx)
+        {
+            CancelSelection();
+        }
+
+        private void DrawSelectionHighlights(AbilityContext ctx, Tile hoveredTile)
+        {
+            GridManager.Instance.ClearAllHighlights();
+
+            foreach (var tile in GetTilesInRange(ctx))
+            {
+                if (!_selectedTiles.Contains(tile))
+                    tile.Highlight(TileHighlightType.Moveable);
+            }
+
+            foreach (var tile in _selectedTiles)
+                tile.Highlight(TileHighlightType.AttackRange);
+
+            if (hoveredTile != null && IsValidSelection(hoveredTile, ctx))
+                hoveredTile.Highlight(TileHighlightType.Occupied);
+        }
+
         /// <summary>
         /// Returns the selected tiles as the traversal list so AbilityEffect subclasses
         /// (e.g. ApplyTileEffectAbilityEffect with OnTraversalTiles) receive them correctly.

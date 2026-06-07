@@ -5,6 +5,12 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "TNFY Brawl/Targeting/Movement Line")]
 public class MovementLineTargeting : AbilityTargeting
 {
+    // ── Input behaviour ───────────────────────────────────────────────────────
+    // Movement line (charge) is aimed by mouse direction — preview updates on mouse move,
+    // confirms on mouse click. No enter preview (direction not yet chosen).
+
+    public override bool UsesDirectionalInput => true;
+
     [Header("Charge Behavior")]
     [Tooltip("If true, stops traversal at first occupied tile")]
     public bool stopAtFirstUnit = true;
