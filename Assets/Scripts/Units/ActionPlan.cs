@@ -664,6 +664,11 @@ namespace DDD.TNFY.BRAWL
                     baseValue = effectPower * 2.5f;
                     break;
 
+                // Immune: complete damage negation for the turn — flat high value
+                case StatusEffectType.Immune:
+                    baseValue = 20f;
+                    break;
+
                 // Stat modifiers - value based on stat impact
                 case StatusEffectType.AttackUp:
                 case StatusEffectType.AttackDown:
@@ -747,6 +752,7 @@ namespace DDD.TNFY.BRAWL
                 case StatusEffectType.Shielded:
                 case StatusEffectType.Guarded:
                 case StatusEffectType.Untargetable:
+                case StatusEffectType.Immune:
                 case StatusEffectType.AttackUp:
                 case StatusEffectType.DefenseUp:
                 case StatusEffectType.SpeedUp:

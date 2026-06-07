@@ -241,6 +241,12 @@ namespace DDD.TNFY.BRAWL
                     return;
                 }
 
+                if (StatusEffectManager.Instance.HasStatusEffect(this, StatusEffectType.Immune))
+                {
+                    Debug.Log($"{name} is immune - no damage taken!");
+                    return;
+                }
+
                 if (StatusEffectManager.Instance.HasStatusEffect(this, StatusEffectType.Guarded))
                 {
                     var guardEffect = StatusEffectManager.Instance.GetStatusEffect(this, StatusEffectType.Guarded);

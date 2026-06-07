@@ -291,6 +291,15 @@ namespace DDD.TNFY.BRAWL
                 actions.Add(plan);
                 return 1;
             }
+            else if (ability.targeting is SelfTargeting)
+            {
+                // Self-cast abilities always apply to the caster — no target selection needed.
+                // Always valid; just create one plan and score it.
+                var plan = CreateActionPlan(ability, abilitySlot, fromPosition, movementTarget, Vector2Int.zero, null);
+                plan.CalculateScore(GetPublicProxy(), targets, teammates);
+                actions.Add(plan);
+                return 1;
+            }
             else
             {
                 if (!WouldAbilityBeUseful(ability, fromPosition, Vector2Int.zero, null, targets, teammates)) return 0;
@@ -400,6 +409,13 @@ namespace DDD.TNFY.BRAWL
         {
             foreach (var statusApp in statusEffect.statusesToApply)
             {
+                // Caster-only applications are valid when the target IS the caster.
+                if (statusApp.applyTo == StatusEffect.ApplicationTarget.Caster)
+                {
+                    if (target == unit) return true;
+                    continue;
+                }
+
                 if (statusApp.applyTo != StatusEffect.ApplicationTarget.Targets &&
                     statusApp.applyTo != StatusEffect.ApplicationTarget.Both)
                     continue;
@@ -561,6 +577,7 @@ namespace DDD.TNFY.BRAWL
                 case StatusEffectType.Stunned:
                     return true;
                 case StatusEffectType.Taunting: return false; // buff on ally
+                case StatusEffectType.Immune: return false;   // self-buff
                 default: return false;
             }
         }

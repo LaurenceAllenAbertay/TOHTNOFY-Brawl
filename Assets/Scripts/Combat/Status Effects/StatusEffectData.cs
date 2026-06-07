@@ -61,6 +61,11 @@ namespace DDD.TNFY.BRAWL
         Guarded,
         Untargetable,
 
+        // Immune: blocks all incoming damage for the duration.
+        // Application chance drops 75% per consecutive use on the same target.
+        // Counter resets when the unit goes a full turn without being made Immune.
+        Immune,
+
         // Stat Modifiers
         AttackUp,
         DefenseUp,
@@ -118,6 +123,7 @@ namespace DDD.TNFY.BRAWL
                 case StatusEffectType.Shielded:
                 case StatusEffectType.Guarded:
                 case StatusEffectType.Untargetable:
+                case StatusEffectType.Immune:
                 case StatusEffectType.AttackUp:
                 case StatusEffectType.DefenseUp:
                 case StatusEffectType.SpeedUp:

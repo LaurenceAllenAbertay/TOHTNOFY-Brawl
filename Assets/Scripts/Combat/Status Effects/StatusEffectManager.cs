@@ -17,6 +17,10 @@ namespace DDD.TNFY.BRAWL
         private Dictionary<Unit, int> stunnedApplicationCount = new Dictionary<Unit, int>();
         private HashSet<Unit> stunnedThisTurn = new HashSet<Unit>();
 
+        // Immune escalation tracking — same diminishing-returns pattern as Stunned.
+        private Dictionary<Unit, int> immuneApplicationCount = new Dictionary<Unit, int>();
+        private HashSet<Unit> immuneThisTurn = new HashSet<Unit>();
+
         // Events
         public static event System.Action<Unit, StatusEffectInstance> OnStatusEffectApplied;
         public static event System.Action<Unit, StatusEffectInstance> OnStatusEffectRemoved;
@@ -84,6 +88,21 @@ namespace DDD.TNFY.BRAWL
                     // Succeeded -- record that this unit was stunned this turn.
                     stunnedThisTurn.Add(target);
                     stunnedApplicationCount[target] = count + 1;
+                }
+
+                // Immune escalating failure check — same 75%-per-consecutive-use pattern as Stunned.
+                if (effectData.effectType == StatusEffectType.Immune)
+                {
+                    int count = immuneApplicationCount.ContainsKey(target) ? immuneApplicationCount[target] : 0;
+                    float failChance = count * 0.75f;
+                    if (UnityEngine.Random.value < failChance)
+                    {
+                        Debug.Log($"[Immune] Failed to apply to {target.name} (attempt {count + 1}, fail chance {failChance * 100}%)");
+                        return null;
+                    }
+                    // Succeeded -- record that this unit was made Immune this turn.
+                    immuneThisTurn.Add(target);
+                    immuneApplicationCount[target] = count + 1;
                 }
 
                 // Allow passives to modify the power before the instance is created.
@@ -156,6 +175,12 @@ namespace DDD.TNFY.BRAWL
                 stunnedApplicationCount.Remove(unit);
 
             stunnedThisTurn.Remove(unit);
+
+            // Same reset logic for Immune.
+            if (!immuneThisTurn.Contains(unit))
+                immuneApplicationCount.Remove(unit);
+
+            immuneThisTurn.Remove(unit);
         }
 
         private void HandleUnitDied(Unit unit)
@@ -167,6 +192,8 @@ namespace DDD.TNFY.BRAWL
             }
             stunnedApplicationCount.Remove(unit);
             stunnedThisTurn.Remove(unit);
+            immuneApplicationCount.Remove(unit);
+            immuneThisTurn.Remove(unit);
         }
 
         private void ProcessEffectsForTiming(Unit unit, StatusEffectData.EffectTriggerTiming timing)
@@ -319,6 +346,9 @@ namespace DDD.TNFY.BRAWL
                 case StatusEffectType.Stunned:
                     // Turn skip is handled in TriggerEffect at Start Of Turn.
                     break;
+                case StatusEffectType.Immune:
+                    // Behavioural effect: damage prevention is checked live in Unit.ReceiveDamage.
+                    break;
             }
 
             // Spawn VFX if configured
@@ -365,6 +395,9 @@ namespace DDD.TNFY.BRAWL
                     break;
                 case StatusEffectType.Stunned:
                     // Nothing to reverse: stun counter managed separately in stunnedApplicationCount.
+                    break;
+                case StatusEffectType.Immune:
+                    // Nothing to reverse: damage prevention is checked live in Unit.ReceiveDamage.
                     break;
             }
 

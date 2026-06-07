@@ -197,20 +197,7 @@ namespace DDD.TNFY.BRAWL
             var combatManager = Object.FindAnyObjectByType<CombatManager>();
 
             if (isPlayerUnit && combatManager != null && combatManager.CurrentActiveUnit == unitToDisplace)
-            {
-                // Block player input during displacement animation (similar to knockback)
-                combatManager.currentState = CombatState.ExecutingAction;
-
-                // Use reflection to set the private isWaitingForAnimation field
-                var combatManagerType = typeof(CombatManager);
-                var isWaitingForAnimationField = combatManagerType.GetField("isWaitingForAnimation",
-                    System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-
-                if (isWaitingForAnimationField != null)
-                {
-                    isWaitingForAnimationField.SetValue(combatManager, true);
-                }
-            }
+                combatManager.BlockAnimationForEffect();
 
             // Start knockback animation (same as knockback effect uses)
             unitAnimator.PlayKnockbackStart();
@@ -282,18 +269,8 @@ namespace DDD.TNFY.BRAWL
             // Wait an extra frame to ensure animation state is fully updated
             yield return null;
 
-            // Restore input state AND clear animation flag
-            combatManager.currentState = CombatState.WaitingForInput;
-
-            // Use reflection to clear the private isWaitingForAnimation field
-            var combatManagerType = typeof(CombatManager);
-            var isWaitingForAnimationField = combatManagerType.GetField("isWaitingForAnimation",
-                System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-
-            if (isWaitingForAnimationField != null)
-            {
-                isWaitingForAnimationField.SetValue(combatManager, false);
-            }
+            // Release the animation block — restores WaitingForInput and clears isWaitingForAnimation.
+            combatManager.ReleaseAnimationBlock();
 
             // Update movement highlights from the new position if player can still move
             if (combatManager.CanMove)

@@ -225,19 +225,7 @@ namespace DDD.TNFY.BRAWL
                     GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
                 }
 
-                // Block input during animation
-                combatManager.currentState = CombatState.ExecutingAction;
-
-                // Use reflection to set the private isWaitingForAnimation field
-                var combatManagerType = typeof(CombatManager);
-                var isWaitingForAnimationField = combatManagerType.GetField("isWaitingForAnimation",
-                    System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-
-                if (isWaitingForAnimationField != null)
-                {
-                    isWaitingForAnimationField.SetValue(combatManager, true);
-                }
-
+                combatManager.BlockAnimationForEffect();
                 Debug.Log("Blocked player input during movement effect");
             }
         }
@@ -256,18 +244,8 @@ namespace DDD.TNFY.BRAWL
             // Wait an extra frame to ensure animation is fully complete
             yield return null;
 
-            // Restore input state
-            combatManager.currentState = CombatState.WaitingForInput;
-
-            // Use reflection to clear the private isWaitingForAnimation field
-            var combatManagerType = typeof(CombatManager);
-            var isWaitingForAnimationField = combatManagerType.GetField("isWaitingForAnimation",
-                System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);
-
-            if (isWaitingForAnimationField != null)
-            {
-                isWaitingForAnimationField.SetValue(combatManager, false);
-            }
+            // Release the animation block — restores WaitingForInput and clears isWaitingForAnimation.
+            combatManager.ReleaseAnimationBlock();
 
             // Update movement highlights from the new position if player can still move
             if (combatManager.CanMove)

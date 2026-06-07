@@ -10,26 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 538600722897cd54787bdb9601555fbf, type: 3}
-  m_Name: Retreat!
+  m_Name: Bunker Down
   m_EditorClassIdentifier: 
-  abilityName: Retreat!
+  abilityName: Bunker Down
   description: 
   image: {fileID: 21300000, guid: edfc8b71ef54d5243bacfb7c37b8bd67, type: 3}
-  rangeType: 0
-  range: 7
+  rangeType: 3
+  range: 1
   damage: 0
   canHitEnemies: 0
   canHitAllies: 1
   passThroughUnits: 0
   maxTargets: 1
-  canExecuteWithoutTargets: 0
-  animationState: Retreat!
+  canExecuteWithoutTargets: 1
+  endTurnOnCast: 1
+  animationState: Attack_Melee_1
   castEffectPrefab: {fileID: 0}
   castEffectOffset: {x: 0, y: 0, z: 0}
   parentCastEffectToCaster: 0
   hitEffectPrefab: {fileID: 0}
   hitEffectOffset: {x: 0, y: 0, z: 0}
   parentHitEffectToTarget: 0
-  targeting: {fileID: 11400000, guid: bda949f8acafd6f4aa0f4d49205933f6, type: 2}
+  targeting: {fileID: 11400000, guid: eff857f44ac777b48b3469c6ecbcda2b, type: 2}
   effects:
-  - {fileID: 11400000, guid: fcfb14f9118f48742a7c35b796fc6133, type: 2}
+  - {fileID: 11400000, guid: 8666286d38253ff489dd2a129c966058, type: 2}
