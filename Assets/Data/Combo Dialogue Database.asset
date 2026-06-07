@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07ac065f24bdfc14d90caf907fe07658, type: 3}
+  m_Name: Combo Dialogue Database
+  m_EditorClassIdentifier: 
+  entries:
+  - requiredSurvivors:
+    - {fileID: 11400000, guid: 1e97e95d272eb8f449bd2b5c8cd1075a, type: 2}
+    - {fileID: 11400000, guid: a2cfea01f0bb708488987177284d6666, type: 2}
+    lines:
+    - speaker: {fileID: 11400000, guid: a2cfea01f0bb708488987177284d6666, type: 2}
+      line: Come on, Oliver, just me and you!
+    - speaker: {fileID: 11400000, guid: 1e97e95d272eb8f449bd2b5c8cd1075a, type: 2}
+      line: Ok, ok, ok!
+  - requiredSurvivors:
+    - {fileID: 11400000, guid: 8a567124c7e5c6b46b4a801dbbba341b, type: 2}
+    - {fileID: 11400000, guid: a2cfea01f0bb708488987177284d6666, type: 2}
+    lines:
+    - speaker: {fileID: 11400000, guid: a2cfea01f0bb708488987177284d6666, type: 2}
+      line: "Oh great, it\u2019s just us now."
+    - speaker: {fileID: 11400000, guid: 1e97e95d272eb8f449bd2b5c8cd1075a, type: 2}
+      line: Just stand back and let me handle this.
+  - requiredSurvivors:
+    - {fileID: 11400000, guid: 88a185d244b55a54cb36452b6bc6d1bb, type: 2}
+    - {fileID: 11400000, guid: a2cfea01f0bb708488987177284d6666, type: 2}
+    lines:
+    - speaker: {fileID: 11400000, guid: a2cfea01f0bb708488987177284d6666, type: 2}
+      line: This is all going to plan, right, Lorns?
+    - speaker: {fileID: 11400000, guid: 88a185d244b55a54cb36452b6bc6d1bb, type: 2}
+      line: No, not at all.
+  - requiredSurvivors:
+    - {fileID: 11400000, guid: 8a567124c7e5c6b46b4a801dbbba341b, type: 2}
+    - {fileID: 11400000, guid: 1e97e95d272eb8f449bd2b5c8cd1075a, type: 2}
+    lines:
+    - speaker: {fileID: 11400000, guid: 8a567124c7e5c6b46b4a801dbbba341b, type: 2}
+      line: ' Oliver, can you please start helping?'
+    - speaker: {fileID: 11400000, guid: 1e97e95d272eb8f449bd2b5c8cd1075a, type: 2}
+      line: "I\u2019m trying, Brodie!"
+  - requiredSurvivors:
+    - {fileID: 11400000, guid: 88a185d244b55a54cb36452b6bc6d1bb, type: 2}
+    - {fileID: 11400000, guid: 1e97e95d272eb8f449bd2b5c8cd1075a, type: 2}
+    lines:
+    - speaker: {fileID: 11400000, guid: 88a185d244b55a54cb36452b6bc6d1bb, type: 2}
+      line: Oh, god damn it.
+    - speaker: {fileID: 11400000, guid: 1e97e95d272eb8f449bd2b5c8cd1075a, type: 2}
+      line: "Don\u2019t worry Lorns, we got this!"
+  - requiredSurvivors:
+    - {fileID: 11400000, guid: 88a185d244b55a54cb36452b6bc6d1bb, type: 2}
+    - {fileID: 11400000, guid: 8a567124c7e5c6b46b4a801dbbba341b, type: 2}
+    lines:
+    - speaker: {fileID: 11400000, guid: 88a185d244b55a54cb36452b6bc6d1bb, type: 2}
+      line: "For the love of god, Brodie, don\u2019t do anything stupid."
+    - speaker: {fileID: 11400000, guid: 8a567124c7e5c6b46b4a801dbbba341b, type: 2}
+      line: When have I ever been stupid?

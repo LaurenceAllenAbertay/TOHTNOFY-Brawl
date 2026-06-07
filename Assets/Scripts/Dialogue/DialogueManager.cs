@@ -10,16 +10,20 @@ namespace DDD.TNFY.BRAWL
     ///
     /// Responsibilities
     /// ────────────────
-    /// • Subscribes to existing global events (UnitManager, TurnManager) and converts
-    ///   them into DialogueTrigger evaluations automatically.
+    /// • Subscribes to existing global events (UnitManager) and converts them into
+    ///   DialogueTrigger evaluations automatically.
     /// • Exposes a static Trigger() method for code sites that need to fire a trigger
-    ///   that isn't covered by an existing global event.
+    ///   not covered by an existing global event.
     /// • Selects a speaker from the correct pool (global random / specific unit /
     ///   exclude-instigator).
-    /// • Applies the DialogueChancePercent roll.
+    /// • For SubsequentAllyDowned: if a ComboDialogueDatabase entry exactly matches
+    ///   the current survivors, there is a 50/50 chance the combo sequence plays
+    ///   instead of the normal random line. If no combo matches, the normal line
+    ///   always plays.
+    /// • Applies the DialogueChancePercent roll for non-combo lines.
     /// • Maintains a priority queue so the most important line always plays first;
-    ///   equal-priority lines are played in the order they arrived.
-    /// • Hands the final (speaker, line, colour) tuple to DialogueBubbleUI for display.
+    ///   equal-priority lines are queued in arrival order.
+    /// • Hands each (speaker, line, colour) tuple to DialogueBubbleUI for display.
     ///
     /// Settings
     /// ────────
@@ -51,6 +55,11 @@ namespace DDD.TNFY.BRAWL
         [Header("References")]
         [Tooltip("The single DialogueBubbleUI in the scene that will display lines.")]
         [SerializeField] private DialogueBubbleUI bubbleUI;
+
+        [Tooltip("Optional database of context-sensitive multi-speaker combo dialogues. " +
+                 "Checked on SubsequentAllyDowned. If a combo matches the current survivors " +
+                 "there is a 50/50 chance it plays instead of the normal random line.")]
+        [SerializeField] private ComboDialogueDatabase comboDatabase;
 
         // ── Internal state ────────────────────────────────────────────────────
 
@@ -131,7 +140,6 @@ namespace DDD.TNFY.BRAWL
             if (survivingPlayerCount == 1)
             {
                 // Exactly one unit left — they are now the last alive.
-                // Fire LastAllyAlive (the surviving unit is the speaker).
                 EnqueueTrigger(DialogueTrigger.LastAllyAlive, instigator: null);
                 return;
             }
@@ -144,13 +152,16 @@ namespace DDD.TNFY.BRAWL
             }
             else
             {
-                EnqueueTrigger(DialogueTrigger.SubsequentAllyDowned, instigator: null, excludedUnit: unit);
+                // Try a combo first; fall back to normal line if no combo or lost the 50/50.
+                bool comboHandled = TryEnqueueCombo(excludedUnit: unit);
+                if (!comboHandled)
+                    EnqueueTrigger(DialogueTrigger.SubsequentAllyDowned, instigator: null, excludedUnit: unit);
             }
         }
 
         private void HandleUnitDamaged(Unit victim, Unit attacker)
         {
-            // Only track enemy units dropping below 50 % health.
+            // Only track enemy units dropping below 50% health.
             if (!(victim is EnemyUnit)) return;
             if (victim.characterData == null) return;
             if (_enemiesBelowHalfHealthFired.Contains(victim)) return;
@@ -159,9 +170,63 @@ namespace DDD.TNFY.BRAWL
             if (healthPercent <= 0.5f)
             {
                 _enemiesBelowHalfHealthFired.Add(victim);
-                // Global trigger — any surviving player unit can comment.
                 EnqueueTrigger(DialogueTrigger.EnemyBelowHalfHealth, instigator: null);
             }
+        }
+
+        // ── Combo dialogue ────────────────────────────────────────────────────
+
+        /// <summary>
+        /// Checks the ComboDialogueDatabase for an entry that exactly matches the
+        /// current set of surviving player units (excluding the unit that just died,
+        /// which is still in PlayerUnits at this point).
+        ///
+        /// If a match is found, rolls 50/50. On a win, enqueues the full combo
+        /// sequence and returns true. On a loss or no match, returns false so the
+        /// caller falls back to normal SubsequentAllyDowned dialogue.
+        /// </summary>
+        private bool TryEnqueueCombo(Unit excludedUnit)
+        {
+            // Global 0% check — nothing fires.
+            if (DialogueChancePercent <= 0f) return false;
+            if (comboDatabase == null) return false;
+
+            // Build the list of surviving CharacterData references.
+            // Exclude the unit that just died (still in PlayerUnits at this point).
+            var aliveCharacters = UnitManager.PlayerUnits
+                .Where(u => u != excludedUnit && u.characterData != null)
+                .Select(u => u.characterData)
+                .ToList();
+
+            ComboDialogueEntry match = comboDatabase.FindMatch(aliveCharacters);
+            if (match == null) return false;
+
+            // 50/50 roll — tails means fall back to normal dialogue.
+            if (Random.value < 0.5f) return false;
+
+            // Enqueue each line in the combo as a separate PendingDialogue.
+            // All share priority 0 so they queue in arrival order and play back-to-back.
+            foreach (var comboLine in match.lines)
+            {
+                if (comboLine.speaker == null || string.IsNullOrEmpty(comboLine.line)) continue;
+
+                // Find the live Unit whose characterData matches the speaker slot.
+                Unit speaker = UnitManager.PlayerUnits
+                    .FirstOrDefault(u => u.characterData == comboLine.speaker);
+
+                if (speaker == null) continue;
+
+                Color colour = comboLine.speaker.dialogueData != null
+                    ? comboLine.speaker.dialogueData.characterColour
+                    : Color.white;
+
+                InsertSorted(new PendingDialogue(speaker, comboLine.line, colour, priority: 0));
+            }
+
+            if (!_isPlaying && _queue.Count > 0)
+                StartCoroutine(DrainQueue());
+
+            return true;
         }
 
         // ── Queue management ──────────────────────────────────────────────────
@@ -169,29 +234,22 @@ namespace DDD.TNFY.BRAWL
         /// <summary>
         /// Resolves a trigger into a (speaker, line) pair, applies the chance roll,
         /// and inserts it into the priority queue.
-        ///
-        /// excludedUnit — unit that must not be chosen as speaker (e.g. the unit that
-        ///                just died, or the kill instigator for bystander-reaction triggers).
         /// </summary>
         private void EnqueueTrigger(DialogueTrigger trigger, Unit instigator, Unit excludedUnit = null)
         {
-            // 0% — nothing ever plays.
             if (DialogueChancePercent <= 0f) return;
 
-            // Build the candidate speaker pool based on trigger type.
             Unit speaker = ResolveSpeaker(trigger, instigator, excludedUnit);
             if (speaker == null) return;
 
-            // Retrieve this speaker's dialogue data.
             CharacterDialogueData data = speaker.characterData?.dialogueData;
             if (data == null) return;
 
             DialogueEntry entry = data.GetEntry(trigger);
             if (entry == null || entry.lines == null || entry.lines.Length == 0) return;
 
-            // Chance roll.
             bool shouldPlay = entry.isGuaranteed
-                ? DialogueChancePercent > 0f          // Guaranteed fires unless 0%
+                ? DialogueChancePercent > 0f
                 : Random.Range(0f, 100f) < DialogueChancePercent;
 
             if (!shouldPlay) return;
@@ -199,7 +257,6 @@ namespace DDD.TNFY.BRAWL
             string line = entry.lines[Random.Range(0, entry.lines.Length)];
             if (string.IsNullOrEmpty(line)) return;
 
-            // Insert into the priority queue (stable sort: lower priority int = higher priority).
             var pending = new PendingDialogue(speaker, line, data.characterColour, entry.priority);
             InsertSorted(pending);
 
@@ -209,8 +266,9 @@ namespace DDD.TNFY.BRAWL
 
         private void InsertSorted(PendingDialogue incoming)
         {
-            // Find the first item with a strictly higher priority number (i.e. lower importance)
-            // and insert before it, preserving arrival order for equal-priority items.
+            // Stable sort: lower priority number = higher importance.
+            // Equal-priority items are appended after existing equal-priority items
+            // so arrival order is preserved within a priority band.
             for (int i = 0; i < _queue.Count; i++)
             {
                 if (_queue[i].priority > incoming.priority)
@@ -240,15 +298,6 @@ namespace DDD.TNFY.BRAWL
 
         // ── Speaker resolution ────────────────────────────────────────────────
 
-        /// <summary>
-        /// Returns the unit that should deliver this line.
-        ///
-        /// Trigger-type rules:
-        ///   AllyDownsEnemy  → bystander reaction: random player unit EXCLUDING instigator
-        ///                     and excludedUnit (the downed unit, if supplied).
-        ///   LastAllyAlive   → specifically the sole surviving player unit.
-        ///   All others      → random surviving player unit, excluding excludedUnit.
-        /// </summary>
         private Unit ResolveSpeaker(DialogueTrigger trigger, Unit instigator, Unit excludedUnit)
         {
             // Cast to Unit here so every branch works with List<Unit> and PickRandom's
@@ -274,7 +323,7 @@ namespace DDD.TNFY.BRAWL
 
                 default:
                 {
-                    // Global trigger — any surviving player unit can speak.
+                    // Global trigger — any surviving player unit can speak, excluding the dead one.
                     var candidates = alivePlayers.Where(u => u != excludedUnit).ToList();
                     return PickRandom(candidates);
                 }
