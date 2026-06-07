@@ -42,6 +42,13 @@ namespace DDD.TNFY.BRAWL
         [Header("Debug Settings")]
         [SerializeField] private bool enableDebugLogging = false;
 
+        /// <summary>
+        /// Set to true the moment Die() is called so that ReceiveDamage, targeting, and
+        /// AI systems treat this unit as gone even before its GameObject is disabled.
+        /// Checked by CanTarget and ReceiveDamage to prevent double-death.
+        /// </summary>
+        public bool IsDead { get; private set; } = false;
+
         // Forwarding property — polled by CombatManager and UnitAI to detect sequence completion
         public AbilityContext currentAbilityContext => abilitySequencer?.CurrentAbilityContext;
 
@@ -231,8 +238,10 @@ namespace DDD.TNFY.BRAWL
 
         #region Combat and Status Effects
 
-        public virtual void ReceiveDamage(int amount)
+        public virtual void ReceiveDamage(int amount, Unit attacker = null)
         {
+            if (IsDead) return;
+
             if (StatusEffectManager.Instance != null)
             {
                 if (StatusEffectManager.Instance.HasStatusEffect(this, StatusEffectType.Shielded))
@@ -281,8 +290,48 @@ namespace DDD.TNFY.BRAWL
             if (currentHealth <= 0)
             {
                 Debug.Log($"{name} was defeated.");
-                UnitManager.NotifyUnitDied(this);
+                Die(attacker);
             }
+        }
+
+        /// <summary>
+        /// Marks this unit as dead, notifies all gameplay systems (UnitManager, TurnManager,
+        /// DialogueManager etc. via the OnUnitDied event), then enqueues the unit with
+        /// UnitDeathSequencer for the camera-pan + death-animation presentation.
+        ///
+        /// Call this instead of UnitManager.NotifyUnitDied directly — it is the single
+        /// authoritative death path for both player-controlled and AI-controlled units.
+        /// </summary>
+        public void Die(Unit killer = null)
+        {
+            if (IsDead) return;
+            IsDead = true;
+
+            // Vacate the tile immediately so pathfinding, knockback destinations, and
+            // targeting all see a free tile during the rest of this ability sequence.
+            // (UnitDeathSequencer cannot do this early enough — it runs after effects resolve.)
+            if (currentTile != null && currentTile.currentUnit == this)
+                currentTile.currentUnit = null;
+
+            // Fire AllyDownsEnemy dialogue when a player unit kills an enemy.
+            // Per DialogueTrigger.cs, this trigger is not covered by a global event —
+            // it must be called manually at the kill site.
+            if (this is EnemyUnit && killer is PlayerUnit)
+                DialogueManager.Trigger(DialogueTrigger.AllyDownsEnemy, instigator: killer);
+
+            // Notify all gameplay systems synchronously.  TurnManager removes this unit
+            // from the turn order; UnitManager unregisters it from targeting lists.
+            // This happens immediately so no subsequent turn or ability targets a dead unit.
+            UnitManager.NotifyUnitDied(this);
+
+            // Enqueue the visual presentation (camera pan + death animation) for later.
+            // UnitDeathSequencer.DrainDeathQueue() is called by AbilitySequencer and
+            // TurnManager after all effects in the current action are resolved, so multiple
+            // deaths from one ability are sequenced rather than played simultaneously.
+            if (UnitDeathSequencer.Instance != null)
+                UnitDeathSequencer.Instance.EnqueueDeath(this, killer);
+            else
+                gameObject.SetActive(false); // fallback: no sequencer in scene
         }
 
         public virtual bool CanMove()
@@ -309,6 +358,7 @@ namespace DDD.TNFY.BRAWL
         public virtual bool CanTarget(Unit unit)
         {
             if (unit == null || unit == this) return false;
+            if (unit.IsDead) return false;
             if (StatusEffectManager.Instance != null &&
                 StatusEffectManager.Instance.HasStatusEffect(unit, StatusEffectType.Untargetable))
                 return false;
@@ -363,7 +413,7 @@ namespace DDD.TNFY.BRAWL
             }
 
             Debug.Log($"[Unit:{name}] Debug_Die triggered.");
-            UnitManager.NotifyUnitDied(this);
+            Die(killer: null);
         }
 #endif
 

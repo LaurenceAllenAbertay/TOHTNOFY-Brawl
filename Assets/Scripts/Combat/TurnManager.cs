@@ -213,6 +213,12 @@ namespace DDD.TNFY.BRAWL
                 if (tile.HasActiveEffects)
                     yield return StartCoroutine(tile.TriggerEffects(currentRound));
             }
+
+            // Present any units that died from tile effects this round.
+            // No single killer to return to (tile damage) so we pass null — the camera
+            // stays on the last death position until the next turn-start pan takes over.
+            if (UnitDeathSequencer.Instance != null)
+                yield return StartCoroutine(UnitDeathSequencer.Instance.DrainDeathQueue(returnToUnit: null));
         }
 
         // Public method to reset total turn count (useful for new battles)

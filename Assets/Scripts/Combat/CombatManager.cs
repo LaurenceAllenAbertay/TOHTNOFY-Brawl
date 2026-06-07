@@ -196,7 +196,6 @@ namespace DDD.TNFY.BRAWL
         {
             while (cameraController != null && cameraController.IsTransitioning)
                 yield return null;
-            yield return null;
             SetupTurnAfterCameraTransition();
         }
 

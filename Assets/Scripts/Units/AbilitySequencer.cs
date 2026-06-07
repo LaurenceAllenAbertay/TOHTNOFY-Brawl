@@ -73,6 +73,13 @@ namespace DDD.TNFY.BRAWL
             else
                 yield return StartCoroutine(ExecuteImmediateEffects(ctx, targets));
 
+            // Present any units that died during this ability's effects one at a time,
+            // immediately after the ability resolves — before control returns to the caster.
+            // Pass ctx.caster as the return unit so the camera pans back to the killer
+            // once all death animations finish.
+            if (UnitDeathSequencer.Instance != null)
+                yield return StartCoroutine(UnitDeathSequencer.Instance.DrainDeathQueue(ctx.caster));
+
             ClearContext();
         }
 
@@ -220,6 +227,8 @@ namespace DDD.TNFY.BRAWL
 
         private IEnumerator HandleSingleTargetingEffects(AbilityContext ctx, List<Unit> targets)
         {
+            bool anyTargetDied = false;
+
             foreach (var target in targets)
             {
                 if (target == null) continue;
@@ -228,12 +237,27 @@ namespace DDD.TNFY.BRAWL
                     cameraController.UnitFocusPosition(target)));
 
                 yield return StartCoroutine(PlayTargetEffectsWithAnimation(ctx, new List<Unit> { target }));
-                yield return new WaitForSeconds(0.3f);
+
+                if (target.IsDead)
+                {
+                    // This target died — DrainDeathQueue in RunSequence will pan to them
+                    // and play the death animation from here. Don't pan back to the caster
+                    // now or the camera will bounce: caster → dead target → caster → dead target.
+                    anyTargetDied = true;
+                }
+                else
+                {
+                    yield return new WaitForSeconds(0.3f);
+                }
             }
 
-            // Return camera to caster
-            yield return StartCoroutine(cameraController.TransitionTo(
-                cameraController.UnitFocusPosition(unit)));
+            // Only return to the caster here if no targets died. If any died, DrainDeathQueue
+            // will return to the caster after the last death animation finishes.
+            if (!anyTargetDied)
+            {
+                yield return StartCoroutine(cameraController.TransitionTo(
+                    cameraController.UnitFocusPosition(unit)));
+            }
         }
 
         private IEnumerator PlayTargetEffectsWithAnimation(AbilityContext ctx, List<Unit> targets)

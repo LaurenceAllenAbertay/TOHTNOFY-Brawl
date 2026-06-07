@@ -17,17 +17,14 @@ MonoBehaviour:
   image: {fileID: 21300000, guid: 4b7093924c33dd945953bb657e41cfcc, type: 3}
   rangeType: 1
   range: 5
-  damage: 10
+  damage: 999
   canHitEnemies: 1
   canHitAllies: 0
   passThroughUnits: 0
   maxTargets: 1
   canExecuteWithoutTargets: 0
+  endTurnOnCast: 0
   animationState: Straight_Shot
-  animationTiming:
-    castEffectTime: 0.57575756
-    hitEffectTime: 0.7
-    applyEffectsTime: 0.7
   castEffectPrefab: {fileID: 1168242340067801985, guid: 5e6f3d405aeae91449afc37c03e4bfa9, type: 3}
   castEffectOffset: {x: 0.7, y: 0.35, z: 0}
   parentCastEffectToCaster: 0

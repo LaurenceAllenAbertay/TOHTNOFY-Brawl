@@ -210,6 +210,13 @@ namespace DDD.TNFY.BRAWL
 
             if (unitForThisTurn is PlayerUnit)
             {
+                // A new player turn always starts with a clean slate — no ability or movement
+                // animations are in flight. Reset these flags so SetUIVisibility is never
+                // blocked by state left over from the previous turn's death sequences or
+                // ability executions.
+                uiHiddenForAnimation = false;
+                uiHiddenForMovement  = false;
+
                 if (endTurnButton != null) endTurnButton.gameObject.SetActive(true);
                 SetUIVisibility(true);
                 abilityPanel?.UpdateAbilityDisplay();

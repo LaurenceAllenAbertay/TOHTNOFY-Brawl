@@ -3508,7 +3508,7 @@ MonoBehaviour:
   bubbleRect: {fileID: 331251559}
   textRect: {fileID: 1181156408}
   targetCamera: {fileID: 519420031}
-  baseDuration: 5
+  baseDuration: 3
   perCharacterDuration: 0.01
   edgePadding: 10
   worldHeightOffset: 1.1
@@ -7546,6 +7546,52 @@ Transform:
   - {fileID: 316929506}
   m_Father: {fileID: 943965162}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &743704171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 743704172}
+  - component: {fileID: 743704173}
+  m_Layer: 0
+  m_Name: UnitDeathSequencer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &743704172
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743704171}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1257765763}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &743704173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 743704171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4265ba0425bcc041ae0ecd30ad2cc1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lingerAfterDeathSeconds: 0.5
+  cameraTransitionDuration: 0.8
 --- !u!1 &753677266
 GameObject:
   m_ObjectHideFlags: 0
@@ -10955,7 +11001,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8547975530932973090, guid: ff3a7c448e9ed2d428a0d1c08b1514f9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -12454,6 +12500,7 @@ Transform:
   - {fileID: 1360352214}
   - {fileID: 1364886960}
   - {fileID: 1923468822}
+  - {fileID: 743704172}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1259476029
@@ -16020,7 +16067,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1667463654
 Transform:
   m_ObjectHideFlags: 0

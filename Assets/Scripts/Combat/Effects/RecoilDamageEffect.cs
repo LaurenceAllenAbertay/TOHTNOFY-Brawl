@@ -55,7 +55,7 @@ namespace DDD.TNFY.BRAWL
             if (ctx.caster.currentHealth <= 0)
             {
                 Debug.Log($"[RecoilDamageEffect] {ctx.caster.name} was defeated by recoil.");
-                UnitManager.NotifyUnitDied(ctx.caster);
+                ctx.caster.Die(killer: null); // recoil is self-inflicted — no external killer
             }
         }
     }

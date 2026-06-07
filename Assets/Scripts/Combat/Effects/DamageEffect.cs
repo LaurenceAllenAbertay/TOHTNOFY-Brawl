@@ -23,7 +23,7 @@ namespace DDD.TNFY.BRAWL
             {
                 if (u == null) continue;
                 int dmg = Mathf.Max(1, baseDamage - u.currentDefense);
-                u.ReceiveDamage(dmg);
+                u.ReceiveDamage(dmg, ctx.caster);
                 UnitManager.NotifyUnitDamaged(u, ctx.caster);
 
                 // Accumulate resolved damage so effects like RecoilDamageEffect can read it back.

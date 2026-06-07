@@ -130,7 +130,9 @@ namespace DDD.TNFY.BRAWL
         }
 
         /// <summary>
-        /// Play the death animation (plays once and stays on last frame)
+        /// Play the death animation (plays once and stays on last frame).
+        /// Forces animator speed to 1 so the animation plays at full speed regardless
+        /// of whether this unit was at inactive-turn speed when it died.
         /// </summary>
         public void PlayDeath()
         {
@@ -140,6 +142,10 @@ namespace DDD.TNFY.BRAWL
                 StopCoroutine(knockbackSequence);
                 isInKnockbackSequence = false;
             }
+
+            // Always play death at full speed — the unit may be at inactiveTurnSpeed.
+            if (animator != null)
+                animator.speed = 1f;
 
             PlayAnimation(DEATH_STATE, false);
         }
