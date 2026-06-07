@@ -669,6 +669,12 @@ namespace DDD.TNFY.BRAWL
                     baseValue = 20f;
                     break;
 
+                // Warned: can negate a full targeted attack; lower than Immune since it
+                // fails against AOE and requires a free adjacent tile.
+                case StatusEffectType.Warned:
+                    baseValue = 15f;
+                    break;
+
                 // Stat modifiers - value based on stat impact
                 case StatusEffectType.AttackUp:
                 case StatusEffectType.AttackDown:
@@ -753,6 +759,7 @@ namespace DDD.TNFY.BRAWL
                 case StatusEffectType.Guarded:
                 case StatusEffectType.Untargetable:
                 case StatusEffectType.Immune:
+                case StatusEffectType.Warned:
                 case StatusEffectType.AttackUp:
                 case StatusEffectType.DefenseUp:
                 case StatusEffectType.SpeedUp:

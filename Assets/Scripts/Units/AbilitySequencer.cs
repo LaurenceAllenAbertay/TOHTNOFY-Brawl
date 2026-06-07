@@ -96,6 +96,12 @@ namespace DDD.TNFY.BRAWL
                 yield break;
             }
 
+            // STEP 2.5: Process Warned dodges before the animation plays.
+            // Any target carrying Warned gets a chance to step to an adjacent free tile.
+            // If their new tile is outside the ability's traversal the attack misses them;
+            // they are removed from the targets list so no effects land on them.
+            yield return StartCoroutine(ProcessWarnedDodges(ctx, targets));
+
             // STEP 3: Play animation
             if (!string.IsNullOrEmpty(ctx.ability.AnimationState))
                 unitAnimator.PlayAnimation(ctx.ability.AnimationState);
@@ -493,6 +499,125 @@ namespace DDD.TNFY.BRAWL
         {
             if (ability?.effects == null) return false;
             return ability.effects.Any(e => e.AnimationPhase == EffectAnimationPhase.PreEffect);
+        }
+
+        /// <summary>
+        /// For each target carrying the Warned status, attempts to move them one tile away
+        /// before the ability animation plays. If the new tile is no longer in the ability's
+        /// traversal the target is removed from the active targets list (attack misses).
+        /// If the new tile is still covered (e.g. AOE) the target stays in the list but still
+        /// moves — they tried to dodge, they just couldn't escape.
+        /// </summary>
+        private IEnumerator ProcessWarnedDodges(AbilityContext ctx, List<Unit> targets)
+        {
+            if (StatusEffectManager.Instance == null) yield break;
+
+            // Iterate over a snapshot so we can safely modify `targets` mid-loop.
+            foreach (var target in targets.ToList())
+            {
+                if (target == null) continue;
+
+                // A unit only dodges INCOMING ATTACKS, never friendly buffs.
+                // If the target is an ally of the caster (same faction), skip the dodge —
+                // this prevents Heads Up from causing the warned ally to dodge the buff itself.
+                bool targetIsAlly = (target is EnemyUnit) == (ctx.caster is EnemyUnit);
+                if (targetIsAlly) continue;
+
+                var warned = StatusEffectManager.Instance.GetStatusEffect(target, StatusEffectType.Warned);
+                if (warned == null) continue;
+
+                // Mark as triggered whether or not the dodge succeeds — the unit reacted.
+                warned.wasTriggered = true;
+                StatusEffectManager.Instance.RemoveStatusEffect(target, warned);
+
+                // Pan camera to the warned unit so the dodge is visible.
+                if (cameraController != null)
+                    yield return StartCoroutine(cameraController.TransitionTo(
+                        cameraController.UnitFocusPosition(target)));
+
+                // Find a free adjacent tile to step to, preferring tiles outside the traversal.
+                Tile dodgeTile = FindDodgeTile(target, ctx);
+                if (dodgeTile == null)
+                {
+                    // Nowhere to go — dodge fails, they stay in the target list.
+                    Debug.Log($"[Warned] {target.name} tried to dodge but had no free adjacent tile.");
+
+                    // Pan back to caster before continuing to the next target.
+                    if (cameraController != null)
+                        yield return StartCoroutine(cameraController.TransitionTo(
+                            cameraController.UnitFocusPosition(unit)));
+                    continue;
+                }
+
+                // Animate the dodge — use the existing smooth movement on Unit.
+                if (enableDebugLogging)
+                    Debug.Log($"[Warned] {target.name} dodging to {dodgeTile.gridPosition}");
+
+                var targetAnimator = target.GetComponent<UnitAnimator>();
+                targetAnimator?.PlayMove();
+                target.AnimateToTile(dodgeTile, 0.25f, onComplete: () => targetAnimator?.PlayIdle());
+                yield return new WaitForSeconds(0.3f);
+
+                // Pan camera back to the caster ready for the attack animation.
+                if (cameraController != null)
+                    yield return StartCoroutine(cameraController.TransitionTo(
+                        cameraController.UnitFocusPosition(unit)));
+
+                // Re-evaluate traversal from the caster's current position after the dodge.
+                var traversalAfterDodge = ctx.ability.targeting.GetTraversal(ctx);
+                if (!traversalAfterDodge.Contains(dodgeTile))
+                {
+                    // New tile is outside the attack — remove from targets, attack misses.
+                    targets.Remove(target);
+                    Debug.Log($"[Warned] {target.name} successfully dodged out of range.");
+                }
+                else
+                {
+                    Debug.Log($"[Warned] {target.name} dodged but is still in the AOE.");
+                }
+            }
+        }
+
+        /// <summary>
+        /// Finds the best adjacent tile for a Warned unit to dodge to.
+        /// Prioritises tiles that are outside the ability's traversal so the dodge
+        /// actually takes the unit out of the line of fire. Falls back to any free
+        /// adjacent tile if all safe options are blocked.
+        /// </summary>
+        private Tile FindDodgeTile(Unit target, AbilityContext ctx)
+        {
+            if (target?.currentTile == null) return null;
+
+            // Snapshot the traversal so we know which tiles are dangerous.
+            var dangerTiles = new HashSet<Tile>(ctx.ability.targeting.GetTraversal(ctx));
+
+            Vector2Int[] dirs = { Vector2Int.up, Vector2Int.down, Vector2Int.left, Vector2Int.right };
+
+            // Shuffle so the dodge direction among equally safe options is unpredictable.
+            for (int i = dirs.Length - 1; i > 0; i--)
+            {
+                int j = UnityEngine.Random.Range(0, i + 1);
+                (dirs[i], dirs[j]) = (dirs[j], dirs[i]);
+            }
+
+            // First pass: find a free tile that is outside the traversal (safe dodge).
+            foreach (var dir in dirs)
+            {
+                var tile = GridManager.Instance.GetTileInDirection(target.currentTile, dir);
+                if (tile != null && tile.passableTerrain && !tile.occupied && !dangerTiles.Contains(tile))
+                    return tile;
+            }
+
+            // Second pass: no safe tile exists (e.g. surrounded or wide AOE) —
+            // fall back to any free adjacent tile so the unit at least tries to move.
+            foreach (var dir in dirs)
+            {
+                var tile = GridManager.Instance.GetTileInDirection(target.currentTile, dir);
+                if (tile != null && tile.passableTerrain && !tile.occupied)
+                    return tile;
+            }
+
+            return null;
         }
 
         #endregion

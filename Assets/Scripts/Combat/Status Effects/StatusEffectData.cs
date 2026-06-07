@@ -105,7 +105,13 @@ namespace DDD.TNFY.BRAWL
         // Stun: skips the affected unit's turn. stackCount = turns remaining.
         // Application chance drops 75% per consecutive use on the same target.
         // Counter resets when the unit goes a full turn without being stunned.
-        Stunned
+        Stunned,
+
+        // Warned: the affected ally attempts to dodge the next incoming targeted attack.
+        // Before the attacker's animation plays, the Warned unit steps to an adjacent free tile.
+        // If the new tile is outside the ability's traversal, the attack misses entirely.
+        // If it expires without being triggered (no attack came), applies DefenseDown instead.
+        Warned
     }
 
     /// <summary>
@@ -124,6 +130,7 @@ namespace DDD.TNFY.BRAWL
                 case StatusEffectType.Guarded:
                 case StatusEffectType.Untargetable:
                 case StatusEffectType.Immune:
+                case StatusEffectType.Warned:
                 case StatusEffectType.AttackUp:
                 case StatusEffectType.DefenseUp:
                 case StatusEffectType.SpeedUp:

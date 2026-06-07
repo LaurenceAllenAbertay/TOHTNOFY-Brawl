@@ -196,11 +196,19 @@ namespace DDD.TNFY.BRAWL
 
         private IEnumerator DelayedTurnUISetup()
         {
+            // Snapshot the unit this coroutine was created for.
+            // HandleTurnStarted overwrites the shared `currentPlayer` field every time a new
+            // turn begins (e.g. when endTurnOnCast fires and the next unit's OnTurnStarted
+            // arrives before this coroutine resumes). Without the snapshot the check below
+            // would evaluate against whichever unit is *currently* active, not the one whose
+            // turn this coroutine was spawned for — causing the UI to be silently skipped.
+            Unit unitForThisTurn = currentPlayer;
+
             yield return null;
             while (combatManager != null && combatManager.currentState == CombatState.CameraTransition)
                 yield return null;
 
-            if (currentPlayer is PlayerUnit)
+            if (unitForThisTurn is PlayerUnit)
             {
                 if (endTurnButton != null) endTurnButton.gameObject.SetActive(true);
                 SetUIVisibility(true);
@@ -309,7 +317,11 @@ namespace DDD.TNFY.BRAWL
 
             if (viewportPosition.z <= 0)
             {
-                SetUIVisibility(false);
+                // Only suppress the UI if the camera is settled. During a transition the
+                // unit may briefly fall behind the frustum — hiding it here would fight
+                // DelayedTurnUISetup and leave the UI permanently hidden.
+                if (combatManager == null || combatManager.currentState != CombatState.CameraTransition)
+                    SetUIVisibility(false);
                 return;
             }
 

@@ -578,6 +578,7 @@ namespace DDD.TNFY.BRAWL
                     return true;
                 case StatusEffectType.Taunting: return false; // buff on ally
                 case StatusEffectType.Immune: return false;   // self-buff
+                case StatusEffectType.Warned: return false;   // buff on ally
                 default: return false;
             }
         }

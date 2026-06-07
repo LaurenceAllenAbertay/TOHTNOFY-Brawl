@@ -36,6 +36,12 @@ namespace DDD.TNFY.BRAWL
             [Tooltip("If true, duration scales with ability damage (1 turn per X damage)")]
             public bool scaleDurationWithDamage = false;
             public float damagePerTurn = 10f; // If ability does 30 damage and this is 10, duration = 3
+
+            [Header("Warned Fallback")]
+            [Tooltip("Only used when statusEffectData is Warned. " +
+                     "If the Warned unit never dodges before the effect expires, " +
+                     "this StatusEffectData is applied instead (typically DefenseDown).")]
+            public StatusEffectData warnedFallbackEffect;
         }
 
         public List<StatusApplication> statusesToApply = new List<StatusApplication>();
@@ -114,7 +120,7 @@ namespace DDD.TNFY.BRAWL
                 // Apply to caster if needed
                 if (status.applyTo == ApplicationTarget.Caster || status.applyTo == ApplicationTarget.Both)
                 {
-                    ApplyToUnit(ctx.caster, status.statusEffectData, ctx.caster, finalDuration, finalPower);
+                    ApplyToUnit(ctx.caster, status, ctx.caster, finalDuration, finalPower);
                 }
 
                 // Apply to targets if needed
@@ -123,24 +129,33 @@ namespace DDD.TNFY.BRAWL
                     foreach (var target in targets)
                     {
                         if (target == null) continue;
-                        ApplyToUnit(target, status.statusEffectData, ctx.caster, finalDuration, finalPower);
+                        ApplyToUnit(target, status, ctx.caster, finalDuration, finalPower);
                     }
                 }
             }
         }
 
-        private void ApplyToUnit(Unit target, StatusEffectData effectData, Unit source, int duration, float power)
+        private void ApplyToUnit(Unit target, StatusApplication status, Unit source, int duration, float power)
         {
-            StatusEffectManager.Instance.ApplyStatusEffect(
+            var instance = StatusEffectManager.Instance.ApplyStatusEffect(
                 target,
-                effectData,
+                status.statusEffectData,
                 source,
                 duration,
                 power
             );
 
+            // For Warned effects, store the fallback StatusEffectData in customData so
+            // StatusEffectManager can apply it at expiry if the dodge never triggered.
+            if (instance != null &&
+                status.statusEffectData.effectType == StatusEffectType.Warned &&
+                status.warnedFallbackEffect != null)
+            {
+                instance.customData = status.warnedFallbackEffect;
+            }
+
             // Log based on effect type for clarity
-            string effectDescription = GetEffectDescription(effectData, power, duration);
+            string effectDescription = GetEffectDescription(status.statusEffectData, power, duration);
             Debug.Log($"{target.name} {effectDescription}");
         }
 

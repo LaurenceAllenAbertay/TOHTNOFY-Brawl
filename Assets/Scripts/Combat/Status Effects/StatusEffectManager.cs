@@ -349,6 +349,9 @@ namespace DDD.TNFY.BRAWL
                 case StatusEffectType.Immune:
                     // Behavioural effect: damage prevention is checked live in Unit.ReceiveDamage.
                     break;
+                case StatusEffectType.Warned:
+                    // Behavioural effect: dodge is handled in AbilitySequencer before animation plays.
+                    break;
             }
 
             // Spawn VFX if configured
@@ -398,6 +401,16 @@ namespace DDD.TNFY.BRAWL
                     break;
                 case StatusEffectType.Immune:
                     // Nothing to reverse: damage prevention is checked live in Unit.ReceiveDamage.
+                    break;
+                case StatusEffectType.Warned:
+                    // If Warned expired without the dodge ever firing, apply DefenseDown as the
+                    // penalty. The DefenseDown StatusEffectData is stored in customData by StatusEffect.
+                    if (!effect.wasTriggered && effect.customData is StatusEffectData defenseDownData)
+                    {
+                        ApplyStatusEffect(effect.target, defenseDownData, effect.source,
+                                          duration: 2, power: defenseDownData != null ? 0 : 0);
+                        Debug.Log($"[Warned] {effect.target.name} never dodged — applying DefenseDown.");
+                    }
                     break;
             }
 

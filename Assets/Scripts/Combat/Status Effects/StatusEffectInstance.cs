@@ -23,6 +23,13 @@ namespace DDD.TNFY.BRAWL
         // Timing flags
         public bool hasTriggeredThisTurn = false;
 
+        /// <summary>
+        /// Set to true when this effect activates its special behaviour during gameplay
+        /// (e.g. Warned fires its dodge). Checked at expiry to decide whether to apply
+        /// a fallback consequence (e.g. DefenseDown if Warned never triggered).
+        /// </summary>
+        public bool wasTriggered = false;
+
         public StatusEffectInstance(StatusEffectData data, Unit source, Unit target, int duration, float power = 0)
         {
             this.effectData        = data;

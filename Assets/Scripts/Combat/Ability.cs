@@ -46,7 +46,7 @@ namespace DDD.TNFY.BRAWL
         public bool endTurnOnCast = false;
 
         [Header("Animation & Visual Effects")]
-        [SerializeField] private string animationState = "Attack_Melee_1";
+        [SerializeField] private string animationState = "";
 
         [Header("Cast Effect (when ability starts)")]
         [SerializeField] private GameObject castEffectPrefab;
@@ -131,6 +131,21 @@ namespace DDD.TNFY.BRAWL
             var targets = targeting.SelectTargets(ctx);
             return targets.Count > 0 || canExecuteWithoutTargets;
         }
+
+#if UNITY_EDITOR
+        private void OnValidate()
+        {
+            if (string.IsNullOrWhiteSpace(animationState))
+            {
+                Debug.LogWarning(
+                    $"[Ability] '{abilityName}' has no Animation State set. " +
+                    $"The ability animation will not play and post-animation effects " +
+                    $"(camera pan, hit effects) will never trigger. " +
+                    $"Set an Animation State in the Inspector. ({name})",
+                    this);
+            }
+        }
+#endif
     }
 
     // Data passed through targeting/effects during one cast.
