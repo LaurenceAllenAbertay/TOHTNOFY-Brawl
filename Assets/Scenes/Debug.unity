@@ -4342,7 +4342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &400882042
 Transform:
   m_ObjectHideFlags: 0
@@ -12196,7 +12196,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1243853697
 Transform:
   m_ObjectHideFlags: 0
@@ -15021,6 +15021,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
+  debugMode: 0
 --- !u!114 &1563940150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15033,7 +15034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a215c2011f7854daeee2c3020d49e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableDebugLogging: 0
+  enableDebugLogging: 1
 --- !u!114 &1563940151
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16067,7 +16068,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1667463654
 Transform:
   m_ObjectHideFlags: 0
@@ -19580,7 +19581,7 @@ MonoBehaviour:
   baseUISize: 60
   referenceCameraDistance: 10
   maintainScreenSize: 0
-  debugMode: 0
+  debugMode: 1
   forceShowUI: 0
 --- !u!114 &2045497090
 MonoBehaviour:

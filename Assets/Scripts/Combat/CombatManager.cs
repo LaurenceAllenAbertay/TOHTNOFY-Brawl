@@ -47,6 +47,9 @@ namespace DDD.TNFY.BRAWL
         [Header("State")]
         public CombatState currentState = CombatState.WaitingForInput;
 
+        [Header("Debug")]
+        [SerializeField] private bool debugMode = false;
+
         #endregion
 
         #region Private Fields
@@ -194,8 +197,36 @@ namespace DDD.TNFY.BRAWL
 
         private IEnumerator WaitForCameraTransition()
         {
+            // Yield one frame before checking IsTransitioning.
+            // CameraController.OnTurnStarted starts its TransitionTo coroutine
+            // synchronously (sets isTransitioning = true up to its first yield),
+            // BUT only if its handler fires before this coroutine's first check.
+            // If Script Execution Order causes CombatManager to subscribe before
+            // CameraController, isTransitioning would still be false here without
+            // this guard — causing SetupTurnAfterCameraTransition to run early
+            // while the camera is still physically moving. The one-frame yield
+            // ensures CameraController has always had a chance to start its
+            // transition before we poll the flag.
+            if (debugMode)
+                Debug.Log($"[CombatManager] F={Time.frameCount:D6} T={Time.time:F3}s | " +
+                          $"WaitForCameraTransition START — yielding one frame before polling IsTransitioning");
+
+            yield return null;
+
+            int waitFrames = 0;
             while (cameraController != null && cameraController.IsTransitioning)
+            {
+                waitFrames++;
+                if (debugMode && waitFrames % 10 == 0)
+                    Debug.Log($"[CombatManager] F={Time.frameCount:D6} T={Time.time:F3}s | " +
+                              $"WaitForCameraTransition still waiting — frame {waitFrames} into poll");
                 yield return null;
+            }
+
+            if (debugMode)
+                Debug.Log($"[CombatManager] F={Time.frameCount:D6} T={Time.time:F3}s | " +
+                          $"WaitForCameraTransition DONE — waited {waitFrames} poll-frames, calling SetupTurnAfterCameraTransition");
+
             SetupTurnAfterCameraTransition();
         }
 
@@ -441,22 +472,31 @@ namespace DDD.TNFY.BRAWL
                 targetingController?.ShowRetryPreview(currentActiveUnit);
             }
 
-            UIEvents.OnAbilityAnimationComplete();
-            UIEvents.OnTargetingStateChanged();
-
             // State already cleared above on the success path; clean up here only for
             // the failed-execution path where the block above was skipped.
             UnblockAllInput();
             isWaitingForAnimation = false;
             currentState = CombatState.WaitingForInput;
 
+            // If the ability demands an immediate turn end, mark TurnEnding NOW — before
+            // firing UIEvents.OnAbilityAnimationComplete. UIManager's HandleAbilityAnimationComplete
+            // calls ShouldShowUI(), which would return true for a PlayerUnit in WaitingForInput.
+            // By moving to TurnEnding first, ShouldShowUI() sees the correct state and keeps
+            // the UI hidden, preventing a one-frame flash before EndTurn fires OnTurnStarted.
+            if (ability.endTurnOnCast && !isExecutingPendingAction)
+            {
+                _turnTransitionPending = true;
+                currentState = CombatState.TurnEnding;
+            }
+
+            UIEvents.OnAbilityAnimationComplete();
+            UIEvents.OnTargetingStateChanged();
+
             // If the ability demands an immediate turn end (player-controlled cast only).
             // ExecutePendingAction handles its own turn end after yielding on this coroutine.
             if (ability.endTurnOnCast && !isExecutingPendingAction)
             {
                 GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
-                _turnTransitionPending = true;
-                currentState = CombatState.TurnEnding;
                 turnManager.EndTurn();
             }
         }
