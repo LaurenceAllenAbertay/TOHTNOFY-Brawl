@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc194c45739c27a488e7f6200ef59a3f, type: 3}
+  m_Name: Evil Brodie
+  m_EditorClassIdentifier: 
+  characterName: Evil Brodie
+  portrait: {fileID: -533732562, guid: e531406b1ba316c4b88a0291c8240e66, type: 3}
+  prefab: {fileID: 0}
+  maxHealth: 200
+  attack: 0
+  defense: 0
+  speed: 2
+  availableAbilities:
+  - {fileID: 11400000, guid: 008eac43d54df864ab6cdff34a881e11, type: 2}
+  - {fileID: 11400000, guid: 7126174003f5d844ea16ff7816f08e3c, type: 2}
+  - {fileID: 11400000, guid: 4cfb28c2b36b0ca4da3b1db584b0a6db, type: 2}
+  - {fileID: 11400000, guid: 7130bfe3b1943dd46af3c9a535c70930, type: 2}
+  - {fileID: 11400000, guid: f0042d72a0ebd8f4fae98fd09bf43cb8, type: 2}
+  - {fileID: 11400000, guid: 301414d99915e044abbe4fd473e9b043, type: 2}
+  - {fileID: 11400000, guid: 720bc8571d3f4854bb5c108dbefb42c6, type: 2}
+  availablePassives:
+  - {fileID: 11400000, guid: 5dfeed738c598fa4ea415fbcfc9d197c, type: 2}
+  - {fileID: 11400000, guid: ed436482412c22d4db9374ae87bf9f07, type: 2}
+  - {fileID: 11400000, guid: 699d1c001879b6b489f3ed3550e1a565, type: 2}
+  dialogueData: {fileID: 11400000, guid: 4ce082129a219f24fad93f8ebbd9102c, type: 2}

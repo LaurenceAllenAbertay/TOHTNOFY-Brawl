@@ -23,7 +23,9 @@ namespace DDD.TNFY.BRAWL
     ///   TurnManager      → 0  (default)
     ///
     /// ── Spawn Tile Strategy ──────────────────────────────────────────────────
-    /// Drag Tile scene objects directly into the player/enemy spawn tile arrays.
+    /// Drag Tile scene objects into the player/enemy spawn tile arrays to define
+    /// the valid spawn zone for each side. Each unit picks a random unoccupied
+    /// tile from its pool — no two units will ever share a tile.
     /// Units are instantiated at tile.position + spawnOffset, then Unit.Awake()
     /// snaps each unit to that same tile via GridManager.GetTileAtPosition().
     /// Each character's prefab is read from CharacterData.prefab — assign it there.
@@ -73,12 +75,6 @@ namespace DDD.TNFY.BRAWL
             var playerSpawns = DebugSessionConfig.PlayerSpawns;
             for (int i = 0; i < playerSpawns.Count; i++)
             {
-                if (i >= playerSpawnTiles.Length)
-                {
-                    Debug.LogWarning($"[DebugMapSpawner] No spawn tile for player {i} — add more Player Spawn Tiles.");
-                    break;
-                }
-
                 var config = playerSpawns[i];
                 if (config.characterData == null)
                 {
@@ -86,19 +82,16 @@ namespace DDD.TNFY.BRAWL
                     continue;
                 }
 
-                SpawnPlayerUnit(config.characterData.prefab, config.characterData, playerSpawnTiles[i]);
+                var tile = PickRandomTile(playerSpawnTiles, config.characterData.characterName);
+                if (tile == null) break;
+
+                SpawnPlayerUnit(config.characterData.prefab, config.characterData, tile);
             }
 
             // Enemy units — each carries its own prefab reference from the lobby
             var enemySpawns = DebugSessionConfig.EnemySpawns;
             for (int i = 0; i < enemySpawns.Count; i++)
             {
-                if (i >= enemySpawnTiles.Length)
-                {
-                    Debug.LogWarning($"[DebugMapSpawner] No spawn tile for enemy {i} — add more Enemy Spawn Tiles.");
-                    break;
-                }
-
                 var config = enemySpawns[i];
                 if (config.prefab == null)
                 {
@@ -106,7 +99,10 @@ namespace DDD.TNFY.BRAWL
                     continue;
                 }
 
-                SpawnEnemyUnit(config.prefab, enemySpawnTiles[i]);
+                var tile = PickRandomTile(enemySpawnTiles, config.prefab.name);
+                if (tile == null) break;
+
+                SpawnEnemyUnit(config.prefab, tile);
             }
         }
 
@@ -118,40 +114,78 @@ namespace DDD.TNFY.BRAWL
 
             if (fallbackPlayerCharacters != null)
             {
-                for (int i = 0; i < fallbackPlayerCharacters.Length; i++)
+                foreach (var cd in fallbackPlayerCharacters)
                 {
-                    if (i >= playerSpawnTiles.Length) break;
-                    if (fallbackPlayerCharacters[i] == null) continue;
+                    if (cd == null) continue;
 
                     // Register a default loadout for fallback players so in-combat systems
                     // don't warn about missing loadout entries.
                     if (UnitLoadoutManager.Instance != null &&
-                        !UnitLoadoutManager.Instance.HasPlayerLoadout(fallbackPlayerCharacters[i]))
+                        !UnitLoadoutManager.Instance.HasPlayerLoadout(cd))
                     {
-                        // Use the first 3 availableAbilities as the fallback loadout
-                        var pool = fallbackPlayerCharacters[i].availableAbilities;
+                        var pool = cd.availableAbilities;
                         var fallbackAbilities = new Ability[3];
                         if (pool != null)
                             for (int s = 0; s < 3 && s < pool.Length; s++)
                                 fallbackAbilities[s] = pool[s];
 
-                        UnitLoadoutManager.Instance.SetPlayerLoadout(
-                            fallbackPlayerCharacters[i], fallbackAbilities, passive: null);
+                        UnitLoadoutManager.Instance.SetPlayerLoadout(cd, fallbackAbilities, passive: null);
                     }
 
-                    SpawnPlayerUnit(fallbackPlayerCharacters[i].prefab, fallbackPlayerCharacters[i], playerSpawnTiles[i]);
+                    var tile = PickRandomTile(playerSpawnTiles, cd.characterName);
+                    if (tile == null) break;
+
+                    SpawnPlayerUnit(cd.prefab, cd, tile);
                 }
             }
 
             if (fallbackEnemyPrefabs != null)
             {
-                for (int i = 0; i < fallbackEnemyPrefabs.Length; i++)
+                foreach (var prefab in fallbackEnemyPrefabs)
                 {
-                    if (i >= enemySpawnTiles.Length) break;
-                    if (fallbackEnemyPrefabs[i] == null) continue;
-                    SpawnEnemyUnit(fallbackEnemyPrefabs[i], enemySpawnTiles[i]);
+                    if (prefab == null) continue;
+
+                    var tile = PickRandomTile(enemySpawnTiles, prefab.name);
+                    if (tile == null) break;
+
+                    SpawnEnemyUnit(prefab, tile);
                 }
             }
+        }
+
+        // ── Tile selection ────────────────────────────────────────────────────
+
+        /// <summary>
+        /// Returns a random unoccupied tile from the given pool.
+        /// Because each SpawnPlayerUnit/SpawnEnemyUnit call activates the unit and triggers
+        /// Unit.Awake() (which calls SetCurrentTile), the tile's occupied flag is set
+        /// immediately — so subsequent calls to this method will never return the same tile.
+        /// Returns null and logs a warning if all tiles in the pool are taken.
+        /// </summary>
+        private Tile PickRandomTile(Tile[] pool, string unitName)
+        {
+            if (pool == null || pool.Length == 0)
+            {
+                Debug.LogWarning($"[DebugMapSpawner] Spawn tile pool is empty — cannot place '{unitName}'. Add tiles in the Inspector.");
+                return null;
+            }
+
+            // Collect all unoccupied tiles from the pool.
+            // Using a local list avoids modifying the serialised array.
+            var available = new System.Collections.Generic.List<Tile>(pool.Length);
+            foreach (var tile in pool)
+            {
+                if (tile != null && !tile.occupied)
+                    available.Add(tile);
+            }
+
+            if (available.Count == 0)
+            {
+                Debug.LogWarning($"[DebugMapSpawner] All spawn tiles are occupied — cannot place '{unitName}'. Add more tiles in the Inspector.");
+                return null;
+            }
+
+            return available[Random.Range(0, available.Count)];
         }
 
         // ── Spawn helpers ─────────────────────────────────────────────────────

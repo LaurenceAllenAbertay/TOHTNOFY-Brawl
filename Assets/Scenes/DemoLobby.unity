@@ -841,6 +841,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1e97e95d272eb8f449bd2b5c8cd1075a, type: 2}
   allEnemyPrefabs:
   - {fileID: 3963197675195542672, guid: 1f1284a26ffca4a439896715431ac139, type: 3}
+  - {fileID: 4885748180280455429, guid: 0f2a6b56aaaadd04b91a794e2b412f0f, type: 3}
+  - {fileID: 6696446961002669605, guid: 9407a4654bbdb9b408b519fb75b83a83, type: 3}
   characterCardContainer: {fileID: 746862019}
   characterCardPrefab: {fileID: 4905273611843481817, guid: 8ac59b1b19e06214690a326724b68745, type: 3}
   detailPanel: {fileID: 470949474}

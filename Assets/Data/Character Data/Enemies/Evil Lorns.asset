@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc194c45739c27a488e7f6200ef59a3f, type: 3}
+  m_Name: Evil Lorns
+  m_EditorClassIdentifier: 
+  characterName: Evil Lorns
+  portrait: {fileID: 1000542386, guid: 85dd2a411dee5264ca097828f8075603, type: 3}
+  prefab: {fileID: 3963197675195542672, guid: 1f1284a26ffca4a439896715431ac139, type: 3}
+  maxHealth: 100
+  attack: 0
+  defense: 0
+  speed: 4
+  availableAbilities:
+  - {fileID: 11400000, guid: eedbfca08973fdd47b54a7525675f82a, type: 2}
+  - {fileID: 11400000, guid: 7b5298c02649ca24194198c32229b6fd, type: 2}
+  - {fileID: 11400000, guid: b76ac2ff104713646bdfe8a5a9ee6c37, type: 2}
+  - {fileID: 11400000, guid: 3bbfe97f2cec869489361a2d24c4a1c5, type: 2}
+  - {fileID: 11400000, guid: efa69723de63f1b4aaa9389d944cd2d6, type: 2}
+  - {fileID: 11400000, guid: 56a9bf2666c41904dbe264fa8fb1c09f, type: 2}
+  availablePassives:
+  - {fileID: 11400000, guid: b102e4cd046cc0045b85375e0352a3d0, type: 2}
+  - {fileID: 11400000, guid: 7befbbbf25e6359448e7c61876e2e209, type: 2}
+  - {fileID: 11400000, guid: 01e4b1ba29e93c34c96abcf76fe22a46, type: 2}
+  dialogueData: {fileID: 11400000, guid: d2242ee6d89e8554ab7a1dff7802ede5, type: 2}

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 2985432743634409166}
   - component: {fileID: 6808859278931663867}
   - component: {fileID: 3239805607177353534}
+  - component: {fileID: -5667562654134815427}
   m_Layer: 0
   m_Name: Evil Lorns
   m_TagString: Untagged
@@ -83,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_Sprite: {fileID: 215081699, guid: 85dd2a411dee5264ca097828f8075603, type: 3}
-  m_Color: {r: 0.066037714, g: 0.066037714, b: 0.066037714, a: 1}
+  m_Color: {r: 0.13333334, g: 0.13333334, b: 0.13333334, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
@@ -198,3 +199,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddea3100216f92f448f8216bc00fccb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-5667562654134815427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3963197675195542672}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3e5802e6bf8374d49a08c9cb870363d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  abilityLoadout:
+  - {fileID: 11400000, guid: eedbfca08973fdd47b54a7525675f82a, type: 2}
+  - {fileID: 11400000, guid: b76ac2ff104713646bdfe8a5a9ee6c37, type: 2}
+  - {fileID: 11400000, guid: 7b5298c02649ca24194198c32229b6fd, type: 2}
+  passive: {fileID: 0}

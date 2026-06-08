@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc194c45739c27a488e7f6200ef59a3f, type: 3}
+  m_Name: Evil Kallper
+  m_EditorClassIdentifier: 
+  characterName: Evil Kallper
+  portrait: {fileID: 638187815, guid: af94e13e2cdf2ab408fa6c300759353d, type: 3}
+  prefab: {fileID: 0}
+  maxHealth: 50
+  attack: 0
+  defense: 0
+  speed: 2
+  availableAbilities:
+  - {fileID: 11400000, guid: 9afa847bfe46b1b44a626cf2feaebbc6, type: 2}
+  - {fileID: 11400000, guid: a5d7c40982c3a454b8bcda638659f5e4, type: 2}
+  - {fileID: 11400000, guid: b65c5eda89671b047b5d32a5862ef3b9, type: 2}
+  - {fileID: 11400000, guid: 4eb69a60d76d8c44bb70460bcb2bab37, type: 2}
+  - {fileID: 11400000, guid: 9e5b289da219a024fa81bd9df4ea3bac, type: 2}
+  - {fileID: 11400000, guid: 85faf533fe0ad414ea8b912794c08ae3, type: 2}
+  - {fileID: 11400000, guid: 6b193efc156c59c4f915470b0f9f6e67, type: 2}
+  availablePassives:
+  - {fileID: 11400000, guid: 5c3c95766e39bb24688d34dbdf40b299, type: 2}
+  - {fileID: 11400000, guid: 63af218fcae279a4482dc4639c9d1f34, type: 2}
+  dialogueData: {fileID: 11400000, guid: e5addc8a26e2771418b11ddf1b5c51eb, type: 2}

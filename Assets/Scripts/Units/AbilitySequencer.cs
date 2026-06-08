@@ -180,8 +180,19 @@ namespace DDD.TNFY.BRAWL
                 yield return StartCoroutine(HandleCameraTransitionsAndEffects(ctx, nonSelfTargets));
             else if (ctx.ability.canExecuteWithoutTargets)
             {
-                // No units hit but the ability can still fire — spawn hit effects on
-                // empty traversal tiles so the cast still has visual feedback.
+                // No units hit but the ability can still fire.
+                // Apply all non-PreEffect effects via the camera-preview path so that
+                // caster-targeting effects (e.g. TeleportEffect, which reads from ctx
+                // rather than the targets list) are executed correctly.
+                // SpawnHitEffectsOnTraversalTiles is called after so VFX still appear.
+                foreach (var effect in ctx.ability.effects)
+                {
+                    if (effect.AnimationPhase == EffectAnimationPhase.PreEffect) continue;
+                    // PostEffect phase is handled unconditionally by HandleRemainingEffects below.
+                    if (effect.AnimationPhase == EffectAnimationPhase.PostEffect) continue;
+                    if (effect is ChargeEffect) continue;
+                    yield return StartCoroutine(ApplyEffectWithOptionalTeleportCamera(ctx, targets, effect));
+                }
                 SpawnHitEffectsOnTraversalTiles(ctx);
             }
 
