@@ -45,6 +45,11 @@ namespace DDD.TNFY.BRAWL
         [Tooltip("If true, the caster's turn ends immediately after this ability executes.")]
         public bool endTurnOnCast = false;
 
+        [Tooltip("If true, the camera stays on the caster for the full ability sequence. " +
+                 "Overrides any per-target camera transitions that the targeting type would normally trigger. " +
+                 "Use for abilities like Wiring Fault where the effect drives its own animated sequence.")]
+        public bool suppressCameraTransitions = false;
+
         [Header("Animation & Visual Effects")]
         [SerializeField] private string animationState = "";
 
@@ -166,5 +171,10 @@ namespace DDD.TNFY.BRAWL
         // Written by DamageEffect.Apply; read by RecoilDamageEffect to calculate recoil.
         // Accumulated across all targets so multi-hit abilities recoil correctly.
         public int LastResolvedDamage;
+
+        // Unit pulled to the caster's tile by WiringFaultEffect (the hooked target).
+        // Written during the pull phase; read by downstream conditional logic within the
+        // same effect to confirm which unit was displaced before the self-knockback fires.
+        public Unit HookedUnit;
     }
 }

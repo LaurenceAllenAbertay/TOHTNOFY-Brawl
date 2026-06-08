@@ -122,11 +122,14 @@ namespace DDD.TNFY.BRAWL
 
             Unit current = CurrentUnit;
 
-            // Check for stun BEFORE firing any events or starting camera transitions.
-            // Handling it here avoids coroutine conflicts between WaitForCameraTransition
-            // and EndTurnSequence that occur when stun is processed mid-event-dispatch.
+            // Check for turn-skipping status effects BEFORE firing any events or starting
+            // camera transitions. Handling here avoids coroutine conflicts between
+            // WaitForCameraTransition and EndTurnSequence that occur when these are processed
+            // mid-event-dispatch. Shocked is checked after Stunned — both use the same
+            // HandleStunnedTurn coroutine since the visual behaviour is identical.
             if (StatusEffectManager.Instance != null &&
-                StatusEffectManager.Instance.HasStatusEffect(current, StatusEffectType.Stunned))
+                (StatusEffectManager.Instance.HasStatusEffect(current, StatusEffectType.Stunned) ||
+                 StatusEffectManager.Instance.HasStatusEffect(current, StatusEffectType.Shocked)))
             {
                 StartCoroutine(HandleStunnedTurn(current));
                 return;

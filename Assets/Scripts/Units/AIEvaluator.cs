@@ -393,6 +393,7 @@ namespace DDD.TNFY.BRAWL
             {
                 case DamageEffect _:
                 case KnockbackEffect _:
+                case WiringFaultEffect _:
                     return enemies.Contains(target);
                 case StatusEffect statusEffect:
                     return IsStatusEffectValidForTarget(statusEffect, target, enemies, teammates);
@@ -573,7 +574,7 @@ namespace DDD.TNFY.BRAWL
                 case StatusEffectType.SpeedDown: case StatusEffectType.Distracted:
                 case StatusEffectType.Ensnared: case StatusEffectType.Encumbered:
                 case StatusEffectType.Controlled: case StatusEffectType.Panicked:
-                case StatusEffectType.Intimidated:
+                case StatusEffectType.Intimidated: case StatusEffectType.Shocked:
                 case StatusEffectType.Stunned:
                     return true;
                 case StatusEffectType.Taunting: return false; // buff on ally

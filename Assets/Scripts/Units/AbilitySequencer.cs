@@ -210,6 +210,18 @@ namespace DDD.TNFY.BRAWL
                 yield break;
             }
 
+            // suppressCameraTransitions overrides everything — apply effects immediately
+            // without panning away from the caster, regardless of targeting type or
+            // whether a displacement effect is present (e.g. WiringFaultEffect manages
+            // its own animated sequence internally and must not be double-triggered here).
+            if (ctx.ability.suppressCameraTransitions)
+            {
+                ApplyAbilityEffectsToTargets(ctx, targets);
+                SpawnHitEffects(ctx, targets);
+                SpawnHitEffectsOnTraversalTiles(ctx);
+                yield break;
+            }
+
             bool shouldUseTransitions = ctx.ability.targeting.UsesCameraTransitionsPerTarget;
             bool hasMovementEffect = ctx.ability.effects.Any(e =>
                 e.AnimationPhase == EffectAnimationPhase.Displacement && !e.IsSelfOnly(ctx));
@@ -340,16 +352,23 @@ namespace DDD.TNFY.BRAWL
             // (or ApplyAbilityEffectsToTargets for non-camera paths).
             // PreEffect (self-knockback/caster-movement) fired before camera transitions.
             // ChargeEffect is handled entirely via ExecuteChargeSequence — it never reaches Apply.
-            bool usedCameraTransitions = ctx.ability.targeting.UsesCameraTransitionsPerTarget;
+            bool usedCameraTransitions = ctx.ability.targeting.UsesCameraTransitionsPerTarget
+                                         && !ctx.ability.suppressCameraTransitions;
+
+            // When suppressCameraTransitions is set, HandleCameraTransitionsAndEffects took
+            // the ApplyAbilityEffectsToTargets path, which already applied every non-PreEffect
+            // phase. Treat it the same as the camera-transition path so effects aren't double-fired.
+            bool effectsAlreadyApplied = usedCameraTransitions || ctx.ability.suppressCameraTransitions;
 
             foreach (var effect in ctx.ability.effects)
             {
                 // Always skip PreEffect here — it ran before camera transitions.
                 if (effect.AnimationPhase == EffectAnimationPhase.PreEffect) continue;
 
-                // If we used per-target camera transitions, Displacement/Damage/Status were
-                // already applied inside PlayTargetEffectsWithAnimation — skip them.
-                if (usedCameraTransitions &&
+                // If effects were already applied (per-target camera transitions, or
+                // suppressCameraTransitions took the immediate-apply path), skip
+                // Displacement/Damage/Status to avoid double-application.
+                if (effectsAlreadyApplied &&
                     effect.AnimationPhase != EffectAnimationPhase.PostEffect) continue;
 
                 // ChargeEffect bypasses Apply entirely; skip it unconditionally.

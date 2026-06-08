@@ -111,7 +111,12 @@ namespace DDD.TNFY.BRAWL
         // Before the attacker's animation plays, the Warned unit steps to an adjacent free tile.
         // If the new tile is outside the ability's traversal, the attack misses entirely.
         // If it expires without being triggered (no attack came), applies DefenseDown instead.
-        Warned
+        Warned,
+
+        // Shocked: inflicted by Wiring Fault.
+        // The precise gameplay effect (e.g. skip turn, stat penalty) is configured on the
+        // StatusEffectData asset — no hard-coded behaviour is required here.
+        Shocked
     }
 
     /// <summary>

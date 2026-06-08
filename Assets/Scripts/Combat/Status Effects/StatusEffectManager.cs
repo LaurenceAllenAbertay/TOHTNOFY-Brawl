@@ -241,6 +241,13 @@ namespace DDD.TNFY.BRAWL
                     effect.target.ReceiveDamage(Mathf.RoundToInt(effect.effectPower));
                     break;
 
+                case StatusEffectType.Shocked:
+                    // Deals flat damage each turn the unit is incapacitated.
+                    // The turn skip itself is enforced in TurnManager.StartNextTurn.
+                    effect.target.ReceiveDamage(Mathf.RoundToInt(effect.effectPower));
+                    Debug.Log($"[Shocked] {effect.target.name} takes {Mathf.RoundToInt(effect.effectPower)} shock damage.");
+                    break;
+
                     // Add more cases as needed
             }
 
@@ -352,6 +359,10 @@ namespace DDD.TNFY.BRAWL
                 case StatusEffectType.Warned:
                     // Behavioural effect: dodge is handled in AbilitySequencer before animation plays.
                     break;
+                case StatusEffectType.Shocked:
+                    // Turn skip is enforced in TurnManager.StartNextTurn.
+                    // Damage fires in TriggerEffect at StartOfTurn — nothing to apply immediately.
+                    break;
             }
 
             // Spawn VFX if configured
@@ -411,6 +422,9 @@ namespace DDD.TNFY.BRAWL
                                           duration: 2, power: defenseDownData != null ? 0 : 0);
                         Debug.Log($"[Warned] {effect.target.name} never dodged — applying DefenseDown.");
                     }
+                    break;
+                case StatusEffectType.Shocked:
+                    // Nothing to reverse: damage and turn-skip are both transient per-turn effects.
                     break;
             }
 
