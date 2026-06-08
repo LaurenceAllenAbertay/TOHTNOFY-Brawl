@@ -18,16 +18,15 @@ MonoBehaviour:
   rangeType: 1
   range: 99
   damage: 10
+  attackType: 1
   canHitEnemies: 1
   canHitAllies: 0
   passThroughUnits: 1
   maxTargets: 99
   canExecuteWithoutTargets: 0
+  endTurnOnCast: 0
+  suppressCameraTransitions: 0
   animationState: Horn_Rush
-  animationTiming:
-    castEffectTime: 0.8
-    hitEffectTime: 0.85
-    applyEffectsTime: 0.82
   castEffectPrefab: {fileID: 0}
   castEffectOffset: {x: 0, y: 0, z: 0}
   parentCastEffectToCaster: 0

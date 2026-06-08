@@ -18,6 +18,7 @@ MonoBehaviour:
   rangeType: 1
   range: 4
   damage: 10
+  attackType: 1
   canHitEnemies: 1
   canHitAllies: 0
   passThroughUnits: 1

@@ -240,14 +240,15 @@ namespace DDD.TNFY.BRAWL
 
         /// <summary>
         /// Fired after status-effect checks (Shielded, Immune, etc.) but before health is
-        /// subtracted. Subscribers receive (victim, incomingAmount) and return the final amount
-        /// to apply — return 0 to fully absorb the hit. Multiple subscribers chain: each receives
-        /// the value the previous returned. Passives like Big Moment use this to intercept
-        /// lethal damage without modifying ReceiveDamage itself.
+        /// subtracted. Subscribers receive (victim, attacker, sourceAbility, incomingAmount)
+        /// and return the final amount to apply — return 0 to fully absorb the hit.
+        /// Multiple subscribers chain: each receives the value the previous returned.
+        /// attacker and sourceAbility may be null for non-ability damage sources (tile effects,
+        /// recoil, etc.) — passives should guard against null before reading ability data.
         /// </summary>
-        public static event System.Func<Unit, int, int> OnPreReceiveDamage;
+        public static event System.Func<Unit, Unit, Ability, int, int> OnPreReceiveDamage;
 
-        public virtual void ReceiveDamage(int amount, Unit attacker = null)
+        public virtual void ReceiveDamage(int amount, Unit attacker = null, Ability sourceAbility = null)
         {
             if (IsDead) return;
 
@@ -296,8 +297,8 @@ namespace DDD.TNFY.BRAWL
             // Allow passives to intercept or modify the final damage amount.
             if (OnPreReceiveDamage != null)
             {
-                foreach (System.Func<Unit, int, int> modifier in OnPreReceiveDamage.GetInvocationList())
-                    amount = modifier(this, amount);
+                foreach (System.Func<Unit, Unit, Ability, int, int> modifier in OnPreReceiveDamage.GetInvocationList())
+                    amount = modifier(this, attacker, sourceAbility, amount);
             }
 
             if (amount <= 0) return;

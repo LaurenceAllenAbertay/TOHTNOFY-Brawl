@@ -13,6 +13,12 @@ namespace DDD.TNFY.BRAWL
         Custom          // anything unique
     }
 
+    public enum AttackType
+    {
+        Ranged, // Default — does not trigger Staticy or similar melee-reactive passives.
+        Melee,  // Close-contact attack — triggers Staticy and any other melee-reactive passives.
+    }
+
     [CreateAssetMenu(menuName = "TNFY Brawl/Ability")]
     public class Ability : ScriptableObject
     {
@@ -27,6 +33,9 @@ namespace DDD.TNFY.BRAWL
 
         [Header("Numbers")]
         public int damage = 10;
+
+        [Tooltip("Whether this ability counts as melee or ranged for passive interactions (e.g. Staticy).")]
+        public AttackType attackType = AttackType.Ranged;
 
         [Tooltip("Who can be targeted by this ability")]
         public bool canHitEnemies = true;

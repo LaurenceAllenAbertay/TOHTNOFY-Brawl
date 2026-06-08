@@ -44,7 +44,7 @@ namespace DDD.TNFY.BRAWL
             _triggered = false;
             _owner = handler.Owner;
 
-            System.Func<Unit, int, int> onPreDamage = InterceptDamage;
+            System.Func<Unit, Unit, Ability, int, int> onPreDamage = InterceptDamage;
             Unit.OnPreReceiveDamage += onPreDamage;
             RegisterCleanup(() => Unit.OnPreReceiveDamage -= onPreDamage);
         }
@@ -56,7 +56,7 @@ namespace DDD.TNFY.BRAWL
             base.Cleanup(handler);
         }
 
-        private int InterceptDamage(Unit victim, int amount)
+        private int InterceptDamage(Unit victim, Unit attacker, Ability sourceAbility, int amount)
         {
             // Only intercept damage aimed at our owner, only once, and only when lethal.
             if (_triggered) return amount;
