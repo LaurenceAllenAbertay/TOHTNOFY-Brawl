@@ -13,21 +13,20 @@ MonoBehaviour:
   m_Name: Teleport
   m_EditorClassIdentifier: 
   abilityName: Teleport
-  description: 
+  description: Teleports to any unoccupied tile within 4 tiles.
   image: {fileID: 21300000, guid: eb98ccdd2a0fb874b8066979cfed3f6b, type: 3}
   rangeType: 0
   range: 4
   damage: 0
+  attackType: 0
   canHitEnemies: 0
   canHitAllies: 0
   passThroughUnits: 1
   maxTargets: 1
   canExecuteWithoutTargets: 1
+  endTurnOnCast: 0
+  suppressCameraTransitions: 0
   animationState: Teleport
-  animationTiming:
-    castEffectTime: 0.8
-    hitEffectTime: 0.85
-    applyEffectsTime: 0.82
   castEffectPrefab: {fileID: 0}
   castEffectOffset: {x: 0, y: 0, z: 0}
   parentCastEffectToCaster: 0

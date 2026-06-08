@@ -168,8 +168,7 @@ namespace DDD.TNFY.BRAWL
         {
             foreach (var unit in UnitManager.AllUnits)
             {
-                if (unit?.characterData?.abilityLoadout == null) continue;
-                foreach (var ability in unit.characterData.abilityLoadout)
+                foreach (var ability in UnitLoadoutManager.GetAbilities(unit))
                     ability?.targeting?.ResetForNewTurn();
             }
         }
@@ -181,8 +180,8 @@ namespace DDD.TNFY.BRAWL
         /// </summary>
         private void NotifyCurrentUnitTargetingTurnStarted()
         {
-            if (currentActiveUnit?.characterData?.abilityLoadout == null) return;
-            foreach (var ability in currentActiveUnit.characterData.abilityLoadout)
+            if (currentActiveUnit == null) return;
+            foreach (var ability in UnitLoadoutManager.GetAbilities(currentActiveUnit))
                 ability?.targeting?.ResetForNewTurn();
         }
 

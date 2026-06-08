@@ -16,7 +16,5 @@ MonoBehaviour:
   mapDescription: 
   playerNaturalFacing: 1
   tileSpacing: {x: 1.5, y: 1, z: 1.5}
-  defaultCameraPosition: {x: 0, y: 2, z: -16}
+  defaultCameraPosition: {x: 0, y: 6, z: -16}
   defaultCameraRotation: {x: 20, y: 0, z: 0}
-  ambientLightColor: {r: 1, g: 1, b: 1, a: 1}
-  fogDensity: 0

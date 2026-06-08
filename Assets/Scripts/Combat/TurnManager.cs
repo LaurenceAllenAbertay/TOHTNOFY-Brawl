@@ -222,7 +222,7 @@ namespace DDD.TNFY.BRAWL
             OnTurnStarted?.Invoke(unit);
 
             // Collect non-null abilities from the unit's loadout.
-            var loadout = unit.characterData?.abilityLoadout;
+            var loadout = UnitLoadoutManager.GetAbilities(unit);
             if (loadout == null || loadout.Length == 0)
             {
                 Debug.Log($"[Dizzy] {unit.name} has no abilities — skipping.");

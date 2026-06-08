@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Brodie Boots
   m_EditorClassIdentifier: 
   passiveName: Brodie Boots
-  description: 
+  description: Increases jump range by 2. Landing on an occupied tile deals damage
+    to that unit and knocks them back.
   icon: {fileID: 0}
   jumpRangeBonus: 2

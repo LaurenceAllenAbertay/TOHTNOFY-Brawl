@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Kalpoeria
   m_EditorClassIdentifier: 
   abilityName: Kalpoeria
-  description: 
+  description: Charges forward up to 4 tiles, dealing melee damage to all units passed
+    through and making Kallper Dizzy.
   image: {fileID: 21300000, guid: 17b7e61ae60139347ac140d8564198f2, type: 3}
   rangeType: 1
   range: 4

@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Social Sponge
   m_EditorClassIdentifier: 
   passiveName: Social Sponge
-  description: 
+  description: Buffs applied to Brodie by allies have increased potency.
   icon: {fileID: 21300000, guid: 8804e446de3489b4d90e91e01c08b84e, type: 3}
   potencyBonus: 2

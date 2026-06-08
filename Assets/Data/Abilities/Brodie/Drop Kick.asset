@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Drop Kick
   m_EditorClassIdentifier: 
   abilityName: Drop Kick
-  description: 
+  description: Deals melee damage to an adjacent target and sends them flying back.
   image: {fileID: 21300000, guid: 6f25e6eef642e084b85a4ece579731f3, type: 3}
   rangeType: 0
   range: 1

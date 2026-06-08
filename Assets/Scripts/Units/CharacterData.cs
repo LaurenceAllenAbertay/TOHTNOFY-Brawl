@@ -11,6 +11,10 @@ namespace DDD.TNFY.BRAWL
         public string characterName;
         public Sprite portrait;
 
+        [Tooltip("The PlayerUnit prefab for this character. " +
+                 "Used by DebugMapSpawner to spawn the correct prefab per character.")]
+        public GameObject prefab;
+
         [Header("Stats")]
         public int maxHealth;
         public int attack;
@@ -18,15 +22,23 @@ namespace DDD.TNFY.BRAWL
         public int speed;
 
         [Header("Abilities")]
-        public Ability[] abilityLoadout = new Ability[3];
+        [Tooltip("The full pool of abilities this character can have equipped. " +
+                 "Used by the lobby to populate ability slot dropdowns. " +
+                 "Which 3 are actually equipped at runtime is stored in UnitLoadoutManager (for players) " +
+                 "or EnemyLoadout (for enemies).")]
+        public Ability[] availableAbilities = new Ability[0];
 
         [Header("Passive")]
-        public PassiveAbility passive;
+        [Tooltip("The passives this character can have equipped. " +
+                 "Used by the lobby to populate the passive dropdown — only these options " +
+                 "are shown, enforcing per-character passive pools. " +
+                 "Which one is actually equipped at runtime is stored in UnitLoadoutManager (for players) " +
+                 "or EnemyLoadout (for enemies).")]
+        public PassiveAbility[] availablePassives = new PassiveAbility[0];
 
         [Header("Dialogue")]
         [Tooltip("Per-character dialogue lines and trigger entries. " +
                  "Create via Assets > Create > TNFY Brawl > Dialogue > Character Dialogue Data.")]
         public CharacterDialogueData dialogueData;
     }
-
 }

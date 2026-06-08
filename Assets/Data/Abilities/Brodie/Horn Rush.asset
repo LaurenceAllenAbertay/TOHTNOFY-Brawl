@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Horn Rush
   m_EditorClassIdentifier: 
   abilityName: Horn Rush
-  description: 
+  description: Charge in a straight line, dealing melee damage to all units passed
+    through.
   image: {fileID: 21300000, guid: 7e4f8d45416e4ea4eacbc491d5a68cff, type: 3}
   rangeType: 1
   range: 99

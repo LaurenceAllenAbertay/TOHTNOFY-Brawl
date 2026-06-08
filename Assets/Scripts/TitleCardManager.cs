@@ -13,13 +13,13 @@ public class TitleCardManager : MonoBehaviour
 	{
 		if (Input.anyKeyDown)
 		{
-			SceneManager.LoadScene("Main Menu");
+			SceneManager.LoadScene("DemoLobby");
 		}
 	}
 
 	private IEnumerator MoveScene()
 	{
 		yield return new WaitForSeconds(8f);
-		SceneManager.LoadScene("Main Menu");
+		SceneManager.LoadScene("DemoLobby");
 	}
 }

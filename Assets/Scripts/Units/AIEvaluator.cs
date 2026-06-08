@@ -108,11 +108,11 @@ namespace DDD.TNFY.BRAWL
 
         private void EvaluateAbilityFirstStrategies(List<ActionPlan> actions, List<Unit> targets, List<UnitAI> teammates)
         {
-            if (unit.characterData?.abilityLoadout == null) return;
+            var abilityLoadout = UnitLoadoutManager.GetAbilities(unit);
 
-            for (int i = 0; i < unit.characterData.abilityLoadout.Length; i++)
+            for (int i = 0; i < abilityLoadout.Length; i++)
             {
-                var ability = unit.characterData.abilityLoadout[i];
+                var ability = abilityLoadout[i];
                 if (ability == null) continue;
 
                 int optionsForThisAbility = EvaluateAbilityFromPosition(actions, ability, i, unit.currentTile, targets, teammates);
@@ -167,11 +167,11 @@ namespace DDD.TNFY.BRAWL
 
         private void EvaluateAbilityOptions(List<ActionPlan> actions, List<Unit> targets, List<UnitAI> teammates)
         {
-            if (unit.characterData?.abilityLoadout == null) return;
+            var abilityLoadout = UnitLoadoutManager.GetAbilities(unit);
 
-            for (int i = 0; i < unit.characterData.abilityLoadout.Length; i++)
+            for (int i = 0; i < abilityLoadout.Length; i++)
             {
-                var ability = unit.characterData.abilityLoadout[i];
+                var ability = abilityLoadout[i];
                 if (ability == null) continue;
 
                 EvaluateAbilityFromPosition(actions, ability, i, unit.currentTile, targets, teammates);
@@ -200,10 +200,11 @@ namespace DDD.TNFY.BRAWL
                 jumpOnlyPlan.totalScore += 15f;
                 actions.Add(jumpOnlyPlan);
 
-                if (unit.characterData?.abilityLoadout == null) continue;
-                for (int i = 0; i < unit.characterData.abilityLoadout.Length; i++)
+                if (unit.GetEffectiveMovementRange() < 2) continue;
+                var abilityLoadout = UnitLoadoutManager.GetAbilities(unit);
+                for (int i = 0; i < abilityLoadout.Length; i++)
                 {
-                    var ability = unit.characterData.abilityLoadout[i];
+                    var ability = abilityLoadout[i];
                     if (ability == null) continue;
                     EvaluateAbilityFromPositionForJump(actions, ability, i, tile, targets, teammates);
                 }

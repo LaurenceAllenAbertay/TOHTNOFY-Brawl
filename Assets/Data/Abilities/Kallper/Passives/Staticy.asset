@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Staticy
   m_EditorClassIdentifier: 
   passiveName: Staticy
-  description: 
+  description: When Kallper is hit by a melee attack, the attacker takes flat damage
+    that bypasses their defences.
   icon: {fileID: 0}
   retaliationDamage: 5

@@ -13,17 +13,19 @@ MonoBehaviour:
   m_Name: Bunker Down
   m_EditorClassIdentifier: 
   abilityName: Bunker Down
-  description: 
+  description: Grants Immune to Kallper for 2 turns, ending the turn immediately.
   image: {fileID: 21300000, guid: c5637697247a3de4ebf28f3d74920a28, type: 3}
   rangeType: 3
   range: 1
   damage: 0
+  attackType: 0
   canHitEnemies: 0
   canHitAllies: 1
   passThroughUnits: 0
   maxTargets: 1
   canExecuteWithoutTargets: 1
   endTurnOnCast: 1
+  suppressCameraTransitions: 0
   animationState: Heads_Up
   castEffectPrefab: {fileID: 0}
   castEffectOffset: {x: 0, y: 0, z: 0}

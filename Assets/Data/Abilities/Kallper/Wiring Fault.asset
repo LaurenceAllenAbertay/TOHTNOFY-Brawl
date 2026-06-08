@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Wiring Fault
   m_EditorClassIdentifier: 
   abilityName: Wiring Fault
-  description: 
+  description: "Hooks the first enemy in a line and pulls them to Kallper's tile,
+    dealing melee damage on arrival. Kallper then recoils 2 tiles in the opposite
+    direction \u2014 hitting a unit behind inflicts double damage and Shocks them.
+    Missing shocks Kallper instead."
   image: {fileID: 21300000, guid: fcde35c9493a93e46b476cda68f3e75e, type: 3}
   rangeType: 0
   range: 6

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: No Survivors
   m_EditorClassIdentifier: 
   abilityName: No Survivors
-  description: 
+  description: Deals heavy melee damage to an adjacent target. The recoil damage
+    is dealt back to Kallper.
   image: {fileID: 6678830174249984675, guid: 6b33719b5ac9b544285e2453206cc828, type: 3}
   rangeType: 0
   range: 1

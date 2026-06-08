@@ -97,7 +97,7 @@ namespace DDD.TNFY.BRAWL
             var currentPlayer = getCurrentPlayer?.Invoke();
             if (currentPlayer?.characterData == null) return;
 
-            var abilities = currentPlayer.characterData.abilityLoadout;
+            var abilities = UnitLoadoutManager.GetAbilities(currentPlayer);
 
             if (expandAbilitiesButton != null)
             {
@@ -193,7 +193,7 @@ namespace DDD.TNFY.BRAWL
             if (combatManager == null || currentPlayer == null) return;
             if (!combatManager.CanUseAbility) return;
 
-            var abilities = currentPlayer.characterData.abilityLoadout;
+            var abilities = UnitLoadoutManager.GetAbilities(currentPlayer);
             if (slotIndex < 0 || slotIndex >= abilities.Length) return;
             if (abilities[slotIndex] == null) return;
 
@@ -208,9 +208,9 @@ namespace DDD.TNFY.BRAWL
         public void ShowAbilityTooltip(int slotIndex)
         {
             var currentPlayer = getCurrentPlayer?.Invoke();
-            if (currentPlayer?.characterData == null || abilityTooltipText == null) return;
+            if (currentPlayer == null || abilityTooltipText == null) return;
 
-            var abilities = currentPlayer.characterData.abilityLoadout;
+            var abilities = UnitLoadoutManager.GetAbilities(currentPlayer);
             if (slotIndex < 0 || slotIndex >= abilities.Length || abilities[slotIndex] == null) return;
 
             var ability = abilities[slotIndex];

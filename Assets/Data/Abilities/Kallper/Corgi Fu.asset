@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Corgi Fu
   m_EditorClassIdentifier: 
   abilityName: Corgi Fu
-  description: 
+  description: Deals melee damage to up to 4 enemies within 1 tile.
   image: {fileID: 21300000, guid: 1a06f992b1e07844cbc15fbf766abd41, type: 3}
   rangeType: 2
   range: 1

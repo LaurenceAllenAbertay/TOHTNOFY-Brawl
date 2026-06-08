@@ -7,16 +7,18 @@ namespace DDD.TNFY.BRAWL
     /// PassiveAbility ScriptableObject. Calls Initialise on Start and Cleanup on
     /// OnDestroy, and exposes the owning Unit for the passive to reference.
     ///
-    /// Add this component to any unit prefab that has a passive slot in CharacterData.
-    /// The passive SO is read directly from characterData.passive — no extra assignment needed.
+    /// Add this component to any unit prefab that should have a passive.
+    /// For PlayerUnits the passive is read from UnitLoadoutManager (keyed by CharacterData).
+    /// For EnemyUnits the passive is read from the EnemyLoadout component on the same GameObject.
     /// </summary>
     public class PassiveAbilityHandler : MonoBehaviour
     {
         // Owning unit — set in Awake so the passive can always safely reference it.
         public Unit Owner { get; private set; }
 
-        // Convenience accessor so passives don't need to cast Owner themselves.
-        public PassiveAbility Passive => Owner?.characterData?.passive;
+        // Routes through UnitLoadoutManager so both PlayerUnit and EnemyUnit are handled
+        // transparently — no call site needs to know which path was taken.
+        public PassiveAbility Passive => UnitLoadoutManager.GetPassive(Owner);
 
         private void Awake()
         {

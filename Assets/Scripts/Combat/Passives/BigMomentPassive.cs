@@ -14,9 +14,9 @@ namespace DDD.TNFY.BRAWL
     /// reset in both Initialise (combat start) and Cleanup (combat end) so it never
     /// carries over between runs.
     ///
-    /// Setup: assign this SO to Kallper's CharacterData.passive. Assign attackUpData to
-    /// the project's AttackUp StatusEffectData asset. Set attackPower and buffDuration
-    /// in the Inspector.
+    /// Setup: equip this SO through UnitLoadoutManager for players, or EnemyLoadout for
+    /// enemies. Assign attackUpData to the project's AttackUp StatusEffectData asset.
+    /// Set attackPower and buffDuration in the Inspector.
     ///
     /// Create via: Assets > Create > TNFY Brawl > Passives > Big Moment
     /// </summary>

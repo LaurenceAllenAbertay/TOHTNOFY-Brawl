@@ -50,9 +50,10 @@ namespace DDD.TNFY.BRAWL
         /// </summary>
         public void EnterAbilityTargeting(int slot, Unit activeUnit)
         {
-            if (activeUnit?.characterData?.abilityLoadout == null) return;
+            if (activeUnit == null) return;
 
-            currentAbility = activeUnit.characterData.abilityLoadout[slot];
+            var abilities = UnitLoadoutManager.GetAbilities(activeUnit);
+            currentAbility = (slot >= 0 && slot < abilities.Length) ? abilities[slot] : null;
             if (currentAbility == null || currentAbility.targeting == null)
             {
                 currentAbility = null;

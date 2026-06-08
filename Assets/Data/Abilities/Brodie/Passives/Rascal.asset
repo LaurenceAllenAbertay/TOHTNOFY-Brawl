@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Rascal
   m_EditorClassIdentifier: 
   passiveName: Rascal
-  description: 
+  description: Dealing damage grants a defence buff for 1 turn.
   icon: {fileID: 0}
   defenseUpData: {fileID: 11400000, guid: 7e12642285bc97240a9f054ca02e8efa, type: 2}
   defensePower: 2

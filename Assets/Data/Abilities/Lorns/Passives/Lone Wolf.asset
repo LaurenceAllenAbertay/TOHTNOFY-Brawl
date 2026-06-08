@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Lone Wolf
   m_EditorClassIdentifier: 
   passiveName: Lone Wolf
-  description: 
+  description: Permanently increases speed by 2. While no allies are within 3 tiles,
+    gains an attack buff. The buff is removed when an ally moves within range.
   icon: {fileID: 1423894714017569096, guid: 76e9067053def6345a2f96fff4a1f9c2, type: 3}
   speedBonus: 2
   attackUpData: {fileID: 11400000, guid: 18410f1fe61e1854ab2998a9b877482c, type: 2}

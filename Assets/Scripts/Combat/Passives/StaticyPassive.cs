@@ -14,8 +14,8 @@ namespace DDD.TNFY.BRAWL
     /// the Ability asset. This correctly includes high-range melee-looking moves and
     /// excludes close-range ranged attacks.
     ///
-    /// Setup: assign this SO to Kallper's CharacterData.passive.
-    /// Set retaliationDamage in the Inspector.
+    /// Setup: equip this SO through UnitLoadoutManager for players, or EnemyLoadout for
+    /// enemies. Set retaliationDamage in the Inspector.
     ///
     /// Create via: Assets > Create > TNFY Brawl > Passives > Staticy
     /// </summary>

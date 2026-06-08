@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Cannoneer
   m_EditorClassIdentifier: 
   passiveName: Cannoneer
-  description: 
+  description: Increases ability range by 1. Dealing damage applies a Fire status
+    effect to the target.
   icon: {fileID: 7744229032182871152, guid: fa50b0069b5a64f459da5877765f810b, type: 3}
   rangeBonus: 1
   fireData: {fileID: 11400000, guid: d273687b7add23c49945e6f295f3abb1, type: 2}

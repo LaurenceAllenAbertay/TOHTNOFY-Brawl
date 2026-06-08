@@ -242,15 +242,10 @@ namespace DDD.TNFY.BRAWL
                     float threat = enemy.currentAttack;
 
                     // Add ability threat
-                    if (enemy.characterData?.abilityLoadout != null)
+                    foreach (var ability in UnitLoadoutManager.GetAbilities(enemy))
                     {
-                        foreach (var ability in enemy.characterData.abilityLoadout)
-                        {
-                            if (ability != null)
-                            {
-                                threat += ability.damage * 0.5f;
-                            }
-                        }
+                        if (ability != null)
+                            threat += ability.damage * 0.5f;
                     }
 
                     totalDanger += threat;
@@ -258,21 +253,15 @@ namespace DDD.TNFY.BRAWL
                 else
                 {
                     // Check if enemy can hit us with ranged abilities
-                    if (enemy.characterData?.abilityLoadout != null)
+                    foreach (var ability in UnitLoadoutManager.GetAbilities(enemy))
                     {
-                        foreach (var ability in enemy.characterData.abilityLoadout)
+                        if (ability != null && ability.range > 1)
                         {
-                            if (ability != null && ability.range > 1)
-                            {
-                                float distance = Vector3.Distance(pos, enemy.transform.position);
-                                // Use horizontal spacing (X or Z) for range calculations
-                                float rangeInWorldUnits = ability.range * tileSpacing.x;
+                            float distance = Vector3.Distance(pos, enemy.transform.position);
+                            float rangeInWorldUnits = ability.range * tileSpacing.x;
 
-                                if (distance <= rangeInWorldUnits)
-                                {
-                                    totalDanger += ability.damage * 0.3f; // Ranged threat
-                                }
-                            }
+                            if (distance <= rangeInWorldUnits)
+                                totalDanger += ability.damage * 0.3f;
                         }
                     }
                 }
@@ -347,17 +336,14 @@ namespace DDD.TNFY.BRAWL
             foreach (var teammate in teammates)
             {
                 var teammateUnit = teammate.GetComponent<EnemyUnit>();
-                if (teammateUnit?.characterData?.abilityLoadout == null) continue;
+                if (teammateUnit == null) continue;
 
-                foreach (var teammateAbility in teammateUnit.characterData.abilityLoadout)
+                foreach (var teammateAbility in UnitLoadoutManager.GetAbilities(teammateUnit))
                 {
                     if (teammateAbility == null) continue;
 
-                    // Check if our action sets up a good position for teammate's ability
                     if (DoesActionSetupTeammate(ai, teammate, teammateAbility))
-                    {
                         teamworkScore += 5f;
-                    }
                 }
             }
 
@@ -560,12 +546,10 @@ namespace DDD.TNFY.BRAWL
 
         private float CalculateOptimalRange(EnemyUnit enemyUnit)
         {
-            if (enemyUnit.characterData?.abilityLoadout == null) return 2f;
-
             float avgRange = 0f;
             int abilityCount = 0;
 
-            foreach (var ability in enemyUnit.characterData.abilityLoadout)
+            foreach (var ability in UnitLoadoutManager.GetAbilities(enemyUnit))
             {
                 if (ability != null)
                 {
@@ -602,15 +586,10 @@ namespace DDD.TNFY.BRAWL
             threat += unit.currentAttack;
 
             // Additional threat from abilities
-            if (unit.characterData?.abilityLoadout != null)
+            foreach (var ability in UnitLoadoutManager.GetAbilities(unit))
             {
-                foreach (var ability in unit.characterData.abilityLoadout)
-                {
-                    if (ability != null)
-                    {
-                        threat += ability.damage * 0.8f; // Potential ability damage
-                    }
-                }
+                if (ability != null)
+                    threat += ability.damage * 0.8f;
             }
 
             // Reduce threat based on unit's current health (wounded units are less threatening)
