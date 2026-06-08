@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 538600722897cd54787bdb9601555fbf, type: 3}
+  m_Name: Corgi Fu
+  m_EditorClassIdentifier: 
+  abilityName: Corgi Fu
+  description: 
+  image: {fileID: 21300000, guid: 1a06f992b1e07844cbc15fbf766abd41, type: 3}
+  rangeType: 2
+  range: 1
+  damage: 40
+  canHitEnemies: 1
+  canHitAllies: 0
+  passThroughUnits: 1
+  maxTargets: 4
+  canExecuteWithoutTargets: 0
+  endTurnOnCast: 0
+  suppressCameraTransitions: 1
+  animationState: Heads_Up
+  castEffectPrefab: {fileID: 0}
+  castEffectOffset: {x: 0, y: 0, z: 0}
+  parentCastEffectToCaster: 0
+  hitEffectPrefab: {fileID: 0}
+  hitEffectOffset: {x: 0, y: 0, z: 0}
+  parentHitEffectToTarget: 0
+  targeting: {fileID: 11400000, guid: 94b073cd9dd6147438b93ffd24503b47, type: 2}
+  effects:
+  - {fileID: 11400000, guid: 7bbe0b6e3f185f143b1c19342a3a4c8e, type: 2}
