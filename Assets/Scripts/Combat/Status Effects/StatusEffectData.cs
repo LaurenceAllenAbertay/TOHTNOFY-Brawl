@@ -116,7 +116,12 @@ namespace DDD.TNFY.BRAWL
         // Shocked: inflicted by Wiring Fault.
         // The precise gameplay effect (e.g. skip turn, stat penalty) is configured on the
         // StatusEffectData asset — no hard-coded behaviour is required here.
-        Shocked
+        Shocked,
+
+        // Dizzy: inflicted by Kalpoeria.
+        // On the affected unit's turn, one of their abilities fires automatically
+        // at a random valid target in a random valid direction instead of normal input.
+        Dizzy
     }
 
     /// <summary>

@@ -363,6 +363,10 @@ namespace DDD.TNFY.BRAWL
                     // Turn skip is enforced in TurnManager.StartNextTurn.
                     // Damage fires in TriggerEffect at StartOfTurn — nothing to apply immediately.
                     break;
+                case StatusEffectType.Dizzy:
+                    // Random ability execution is handled in TurnManager.StartNextTurn.
+                    // Nothing to apply immediately.
+                    break;
             }
 
             // Spawn VFX if configured
@@ -425,6 +429,9 @@ namespace DDD.TNFY.BRAWL
                     break;
                 case StatusEffectType.Shocked:
                     // Nothing to reverse: damage and turn-skip are both transient per-turn effects.
+                    break;
+                case StatusEffectType.Dizzy:
+                    // Nothing to reverse: random-ability behaviour is transient per-turn.
                     break;
             }
 

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 538600722897cd54787bdb9601555fbf, type: 3}
+  m_Name: Kalpoeria
+  m_EditorClassIdentifier: 
+  abilityName: Kalpoeria
+  description: 
+  image: {fileID: 21300000, guid: 17b7e61ae60139347ac140d8564198f2, type: 3}
+  rangeType: 1
+  range: 4
+  damage: 10
+  canHitEnemies: 1
+  canHitAllies: 0
+  passThroughUnits: 1
+  maxTargets: 4
+  canExecuteWithoutTargets: 0
+  endTurnOnCast: 0
+  suppressCameraTransitions: 0
+  animationState: Heads_Up
+  castEffectPrefab: {fileID: 0}
+  castEffectOffset: {x: 0, y: 0, z: 0}
+  parentCastEffectToCaster: 0
+  hitEffectPrefab: {fileID: 0}
+  hitEffectOffset: {x: 0, y: 0, z: 0}
+  parentHitEffectToTarget: 0
+  targeting: {fileID: 11400000, guid: 7ac3bd4e810735e4fa8555ae8d43307b, type: 2}
+  effects:
+  - {fileID: 11400000, guid: 86bf0e209b398ec47991f220a0522eca, type: 2}
+  - {fileID: 11400000, guid: a45c04cdbb0fd504ba80b64db2dfd01e, type: 2}

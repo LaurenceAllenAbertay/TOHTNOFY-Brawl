@@ -17,6 +17,10 @@ namespace DDD.TNFY.BRAWL
         public bool chargeUntilBlocked = false;
 
         [Header("Animation")]
+        [Tooltip("Animation state to play while the caster is moving during the charge. " +
+                 "Leave empty to hold whatever state the cast animation left the unit in.")]
+        [SerializeField] private string moveAnimationState = "";
+
         [Tooltip("Animation state to play when the charge lands. Leave empty to return to Idle.")]
         [SerializeField] private string stopAnimationState = "";
 
@@ -97,6 +101,12 @@ namespace DDD.TNFY.BRAWL
             Vector3 cameraOffset = cameraController != null
                 ? cameraController.transform.position - caster.transform.position
                 : new Vector3(0f, 0f, -6.5f);
+
+            // Play the movement animation for the duration of the charge.
+            // ForcePlayAnimation bypasses the knockback-sequence guard and the
+            // "don't play same animation twice" check, ensuring a clean start.
+            if (!string.IsNullOrEmpty(moveAnimationState) && casterAnimator != null)
+                casterAnimator.ForcePlayAnimation(moveAnimationState);
 
             float elapsed = 0f;
             while (elapsed < duration)

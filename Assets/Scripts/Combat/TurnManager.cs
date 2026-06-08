@@ -135,6 +135,27 @@ namespace DDD.TNFY.BRAWL
                 return;
             }
 
+            // Check for turn-skipping status effects BEFORE firing any events or starting
+            // camera transitions. Handling here avoids coroutine conflicts between
+            // WaitForCameraTransition and EndTurnSequence that occur when these are processed
+            // mid-event-dispatch. Shocked is checked after Stunned — both use the same
+            // HandleStunnedTurn coroutine since the visual behaviour is identical.
+            if (StatusEffectManager.Instance != null &&
+                (StatusEffectManager.Instance.HasStatusEffect(current, StatusEffectType.Stunned) ||
+                 StatusEffectManager.Instance.HasStatusEffect(current, StatusEffectType.Shocked)))
+            {
+                StartCoroutine(HandleStunnedTurn(current));
+                return;
+            }
+
+            // Dizzy: unit fires a random ability at a random target instead of normal input.
+            if (StatusEffectManager.Instance != null &&
+                StatusEffectManager.Instance.HasStatusEffect(current, StatusEffectType.Dizzy))
+            {
+                StartCoroutine(HandleDizzyTurn(current));
+                return;
+            }
+
             // Unit.StartTurn() calls unitAnimator.SetActiveTurn() internally — no direct
             // animator call needed here. The virtual dispatch handles PlayerUnit and EnemyUnit.
             current.StartTurn();
@@ -179,6 +200,84 @@ namespace DDD.TNFY.BRAWL
             yield return new WaitForSeconds(3f);
 
             // Fire turn ended so status effect durations tick correctly.
+            OnTurnEnded?.Invoke(unit);
+            StartCoroutine(EndTurnSequence());
+        }
+
+        private IEnumerator HandleDizzyTurn(Unit unit)
+        {
+            Debug.Log($"[TurnManager] {unit.name} is dizzy — firing random ability.");
+
+            // Pan camera to the dizzy unit.
+            if (cameraController != null)
+                yield return StartCoroutine(cameraController.TransitionTo(
+                    cameraController.UnitFocusPosition(unit)));
+
+            // Brief pause so the player can register whose turn it is.
+            yield return new WaitForSeconds(1f);
+
+            // Fire turn-start events so status effects (including Dizzy's duration tick
+            // at end-of-turn) process correctly, and so UI hides for the dummy turn.
+            unit.StartTurn();
+            OnTurnStarted?.Invoke(unit);
+
+            // Collect non-null abilities from the unit's loadout.
+            var loadout = unit.characterData?.abilityLoadout;
+            if (loadout == null || loadout.Length == 0)
+            {
+                Debug.Log($"[Dizzy] {unit.name} has no abilities — skipping.");
+                OnTurnEnded?.Invoke(unit);
+                StartCoroutine(EndTurnSequence());
+                yield break;
+            }
+
+            // Shuffle the loadout order so even the ability choice feels random.
+            var shuffled = new System.Collections.Generic.List<Ability>(loadout);
+            for (int i = shuffled.Count - 1; i > 0; i--)
+            {
+                int j = UnityEngine.Random.Range(0, i + 1);
+                (shuffled[i], shuffled[j]) = (shuffled[j], shuffled[i]);
+            }
+
+            // Try each ability in shuffled order until one executes successfully.
+            bool fired = false;
+            Vector2Int[] cardinalDirs = { Vector2Int.right, Vector2Int.left, Vector2Int.up, Vector2Int.down };
+
+            foreach (var ability in shuffled)
+            {
+                if (ability == null) continue;
+
+                // Shuffle directions for directional abilities.
+                var dirs = new System.Collections.Generic.List<Vector2Int>(cardinalDirs);
+                for (int i = dirs.Count - 1; i > 0; i--)
+                {
+                    int j = UnityEngine.Random.Range(0, i + 1);
+                    (dirs[i], dirs[j]) = (dirs[j], dirs[i]);
+                }
+
+                foreach (var dir in dirs)
+                {
+                    if (!ability.CanExecute(unit, dir)) continue;
+
+                    Debug.Log($"[Dizzy] {unit.name} fires {ability.abilityName} in direction {dir}.");
+                    var ctx = new AbilityContext { caster = unit, ability = ability, aimDir = dir };
+                    yield return StartCoroutine(unit.ExecuteAbilityCoroutine(ctx));
+
+                    // Drain any deaths that occurred during the random ability.
+                    if (UnitDeathSequencer.Instance != null)
+                        yield return StartCoroutine(UnitDeathSequencer.Instance.DrainDeathQueue(unit));
+
+                    fired = true;
+                    break;
+                }
+
+                if (fired) break;
+            }
+
+            if (!fired)
+                Debug.Log($"[Dizzy] {unit.name} couldn't find a valid random ability to fire.");
+
+            unit.EndTurn();
             OnTurnEnded?.Invoke(unit);
             StartCoroutine(EndTurnSequence());
         }

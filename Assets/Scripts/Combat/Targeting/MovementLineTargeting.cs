@@ -16,6 +16,11 @@ namespace DDD.TNFY.BRAWL
         [Tooltip("If true, stops traversal at first occupied tile")]
         public bool stopAtFirstUnit = true;
 
+        [Tooltip("If true, the ability cannot be used if the final tile in the traversal is occupied. " +
+                 "SelectTargets returns empty when this check fails, blocking execution. " +
+                 "Use for abilities like Kalpoeria where the landing spot must be free.")]
+        public bool requireEmptyDestination = false;
+
         public override List<Tile> GetTraversal(AbilityContext ctx)
         {
             var tiles = new List<Tile>();
@@ -91,6 +96,16 @@ namespace DDD.TNFY.BRAWL
             if (ctx?.ability == null || ctx.caster == null) return result;
 
             var tiles = GetTraversal(ctx);
+
+            // If the destination must be empty and the final tile in the path is occupied,
+            // return an empty target list to block execution entirely (Ability.Execute checks
+            // targets.Count == 0 && !canExecuteWithoutTargets).
+            if (requireEmptyDestination && tiles.Count > 0)
+            {
+                var destination = tiles[tiles.Count - 1];
+                if (destination.occupied && destination.currentUnit != ctx.caster)
+                    return result;
+            }
 
             // Collect all valid targets in the path
             foreach (var tile in tiles)
