@@ -238,6 +238,15 @@ namespace DDD.TNFY.BRAWL
 
         #region Combat and Status Effects
 
+        /// <summary>
+        /// Fired after status-effect checks (Shielded, Immune, etc.) but before health is
+        /// subtracted. Subscribers receive (victim, incomingAmount) and return the final amount
+        /// to apply — return 0 to fully absorb the hit. Multiple subscribers chain: each receives
+        /// the value the previous returned. Passives like Big Moment use this to intercept
+        /// lethal damage without modifying ReceiveDamage itself.
+        /// </summary>
+        public static event System.Func<Unit, int, int> OnPreReceiveDamage;
+
         public virtual void ReceiveDamage(int amount, Unit attacker = null)
         {
             if (IsDead) return;
@@ -283,6 +292,15 @@ namespace DDD.TNFY.BRAWL
                     }
                 }
             }
+
+            // Allow passives to intercept or modify the final damage amount.
+            if (OnPreReceiveDamage != null)
+            {
+                foreach (System.Func<Unit, int, int> modifier in OnPreReceiveDamage.GetInvocationList())
+                    amount = modifier(this, amount);
+            }
+
+            if (amount <= 0) return;
 
             currentHealth -= amount;
             Debug.Log($"{name} took {amount} damage. HP now {currentHealth}");
