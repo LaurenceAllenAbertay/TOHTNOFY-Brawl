@@ -16057,7 +16057,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1667463654
 Transform:
   m_ObjectHideFlags: 0
@@ -18782,7 +18782,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2158351031061411466, guid: b78f1e0899f598a469c80980a0785bd8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5113337382802062388, guid: b78f1e0899f598a469c80980a0785bd8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -19570,7 +19570,7 @@ MonoBehaviour:
   baseUISize: 60
   referenceCameraDistance: 10
   maintainScreenSize: 0
-  debugMode: 1
+  debugMode: 0
   forceShowUI: 0
 --- !u!114 &2045497090
 MonoBehaviour:

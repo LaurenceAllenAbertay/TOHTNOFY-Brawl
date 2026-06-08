@@ -22,6 +22,11 @@ namespace DDD.TNFY.BRAWL
             public ApplicationTarget applyTo = ApplicationTarget.Targets;
             public int duration = 2;
 
+            [Tooltip("If non-zero, allies receive this duration instead of 'duration'. " +
+                     "Useful for abilities like Bass Riff that debuff allies briefly and enemies longer. " +
+                     "Leave at 0 to use 'duration' for everyone.")]
+            public int allyDuration = 0;
+
             [Header("Effect Power")]
             [Tooltip("Generic power value - damage for DoTs, stat change amount for buffs, shield HP for guards, etc.")]
             public float effectPower = 0;
@@ -129,7 +134,15 @@ namespace DDD.TNFY.BRAWL
                     foreach (var target in targets)
                     {
                         if (target == null) continue;
-                        ApplyToUnit(target, status, ctx.caster, finalDuration, finalPower);
+
+                        // Use allyDuration for allies when it has been explicitly set (non-zero).
+                        // Falls back to finalDuration for enemies and when allyDuration is unset.
+                        bool isAlly = target == ctx.caster || target.IsAllyOf(ctx.caster);
+                        int durationForTarget = (isAlly && status.allyDuration != 0)
+                            ? status.allyDuration
+                            : finalDuration;
+
+                        ApplyToUnit(target, status, ctx.caster, durationForTarget, finalPower);
                     }
                 }
             }
