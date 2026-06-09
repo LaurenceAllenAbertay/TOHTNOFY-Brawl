@@ -38,10 +38,9 @@ namespace DDD.TNFY.BRAWL
             if (center == null) return tiles;
 
             Vector3 tileSpacing = MapManager.Instance.CurrentConfiguration.tileSpacing;
-
-            // Get all tiles in a square pattern around the center
             var centerPos = center.transform.position;
             var range = ctx.EffectiveRange;
+            bool needsLayerCheck = affectsUpperLayers || affectsLowerLayers;
 
             foreach (var tile in GridManager.Instance.AllTiles)
             {
@@ -49,25 +48,28 @@ namespace DDD.TNFY.BRAWL
                 if (!includeSelf && tile == center) continue;
 
                 var tilePos = tile.transform.position;
-
-                // Calculate grid coordinates based on tile spacing
                 int gridX = Mathf.RoundToInt((tilePos.x - centerPos.x) / tileSpacing.x);
                 int gridZ = Mathf.RoundToInt((tilePos.z - centerPos.z) / tileSpacing.z);
 
-                // Check if tile is within the square bounds (using grid coordinates)
-                if (Mathf.Abs(gridX) <= range && Mathf.Abs(gridZ) <= range)
-                {
-                    // Check for wall blocking if affectsThroughWalls is false
-                    if (!affectsThroughWalls && tile != center)
-                    {
-                        if (IsBlockedByWall(center, tile))
-                        {
-                            continue; // Skip this tile if blocked by wall
-                        }
-                    }
+                // XZ square bounds — always required regardless of layer mode.
+                if (Mathf.Abs(gridX) > range || Mathf.Abs(gridZ) > range) continue;
 
-                    tiles.Add(tile);
+                if (needsLayerCheck)
+                {
+                    // With layer flags active, IsAllowedByLayerFlags gates direction and
+                    // returns the 3D Manhattan distance so Y cost eats into the range budget.
+                    if (!IsAllowedByLayerFlags(center, tile, out int dist)) continue;
+                    if (dist > range) continue;
                 }
+                else
+                {
+                    // No cross-layer reach — reject anything not on the same Y level.
+                    if (!GridManager.Instance.IsSameYLevel(center, tile)) continue;
+                }
+
+                if (!affectsThroughWalls && tile != center && IsBlockedByWall(center, tile)) continue;
+
+                tiles.Add(tile);
             }
 
             return tiles;

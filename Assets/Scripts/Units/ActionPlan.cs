@@ -142,6 +142,24 @@ namespace DDD.TNFY.BRAWL
                         }
                     }
                 }
+
+                // Penalise self-damage abilities (e.g. RecoilDamageEffect / No Survivors).
+                // Without this the AI never models the health cost, causing reckless use
+                // at low health. We estimate recoil from base damage; actual recoil resolves
+                // differently at runtime, but this is a fair planning-time approximation.
+                foreach (var effect in abilityToUse.effects)
+                {
+                    if (effect is RecoilDamageEffect recoilEffect)
+                    {
+                        float estimatedRecoil = abilityToUse.damage * recoilEffect.recoilFraction;
+                        float healthAfterRecoil = enemyUnit.currentHealth - estimatedRecoil;
+
+                        if (healthAfterRecoil <= 0f)
+                            damageScore -= 60f; // Would likely be lethal — strongly discourage.
+                        else if ((float)enemyUnit.currentHealth / enemyUnit.characterData.maxHealth < 0.3f)
+                            damageScore -= estimatedRecoil * 2f; // Already in danger — penalise proportionally.
+                    }
+                }
             }
             finally
             {
@@ -161,7 +179,11 @@ namespace DDD.TNFY.BRAWL
 
         private void CalculatePositionScore(UnitAI ai, EnemyUnit enemyUnit, List<Unit> potentialTargets)
         {
-            Tile finalPosition = movementTarget ?? enemyUnit.currentTile;
+            // For teleport plans GetEffectiveFinalTile returns the teleport destination (or the
+            // post-teleport walk target for ability-first plans) rather than the walking
+            // movementTarget, which is null for a pure teleport.  Without this fix every
+            // teleport plan was scored as "standing still" and always lost to a walk plan.
+            Tile finalPosition = GetEffectiveFinalTile(enemyUnit);
             Vector3 finalWorldPos = finalPosition.transform.position;
 
             // Score based on distance to targets
@@ -204,8 +226,14 @@ namespace DDD.TNFY.BRAWL
             // damaged or killed walking to it.
             if (movementTarget != null && enemyUnit?.currentTile != null)
             {
+                // For teleport-first plans the walking portion starts from the teleport
+                // destination, not the unit's current tile — adjust the origin accordingly.
+                Tile walkOrigin = (IsTeleportAbilityPlan() && isAbilityFirst && targetTile != null)
+                    ? targetTile
+                    : enemyUnit.currentTile;
+
                 var path = GridManager.Instance.FindPath(
-                    enemyUnit.currentTile,
+                    walkOrigin,
                     movementTarget,
                     enemyUnit.currentSpeed);
 
@@ -281,9 +309,14 @@ namespace DDD.TNFY.BRAWL
 
         private void CalculateSafetyScore(UnitAI ai, EnemyUnit enemyUnit, List<Unit> potentialTargets)
         {
-            if (movementTarget == null) return;
+            // For teleport plans movementTarget is null, so the old `if (movementTarget == null) return`
+            // caused every teleport plan to receive safetyScore = 0.  Use GetEffectiveFinalTile so
+            // pure-teleport plans are evaluated at the landing tile and teleport-then-walk plans
+            // are evaluated at the post-walk destination.
+            Tile evalTile = GetEffectiveFinalTile(enemyUnit);
+            if (evalTile == null || evalTile == enemyUnit.currentTile) return;
 
-            Vector3 newPosition = movementTarget.transform.position;
+            Vector3 newPosition = evalTile.transform.position;
 
             // Start with base safety score
             safetyScore = 10f;
@@ -297,7 +330,7 @@ namespace DDD.TNFY.BRAWL
 
                 // Check if target can reach us from their position
                 var reachableTiles = GridManager.Instance.GetReachableTiles(target.currentTile, target.currentSpeed);
-                bool canReachUs = reachableTiles.Contains(movementTarget);
+                bool canReachUs = reachableTiles.Contains(evalTile);
 
                 if (canReachUs)
                 {
@@ -322,7 +355,7 @@ namespace DDD.TNFY.BRAWL
             }
 
             // Penalty for being in dangerous terrain or near environmental hazards
-            if (IsNearEnvironmentalHazard(movementTarget))
+            if (IsNearEnvironmentalHazard(evalTile))
             {
                 safetyScore -= 8f;
             }
@@ -551,11 +584,13 @@ namespace DDD.TNFY.BRAWL
 
             foreach (var ability in UnitLoadoutManager.GetAbilities(enemyUnit))
             {
-                if (ability != null)
-                {
-                    avgRange += ability.range;
-                    abilityCount++;
-                }
+                if (ability == null) continue;
+                // Exclude pure repositioning abilities (e.g. Teleport).  Their range is a
+                // movement budget, not an attack range, so including them skews the ideal
+                // engagement distance away from where the unit can actually deal damage.
+                if (ability.effects.Any(e => e is TeleportEffect)) continue;
+                avgRange += ability.range;
+                abilityCount++;
             }
 
             return abilityCount > 0 ? avgRange / abilityCount : 2f;
@@ -603,6 +638,31 @@ namespace DDD.TNFY.BRAWL
         {
             var otherAI = otherUnit.GetComponent<UnitAI>();
             return otherAI != null && otherAI.TeamId == ai.TeamId;
+        }
+
+        /// <summary>True when the active ability uses <see cref="TeleportEffect"/>.</summary>
+        private bool IsTeleportAbilityPlan() =>
+            abilityToUse?.effects?.Any(e => e is TeleportEffect) == true;
+
+        /// <summary>
+        /// The tile where the unit will physically be standing once this full plan executes.
+        /// <para>
+        /// Teleport plans land on <see cref="targetTile"/>; ability-first teleport-then-walk
+        /// plans continue to <see cref="movementTarget"/> after landing; all other plans use
+        /// <see cref="movementTarget"/> or fall back to the unit's current tile.
+        /// </para>
+        /// </summary>
+        private Tile GetEffectiveFinalTile(EnemyUnit enemyUnit)
+        {
+            if (IsTeleportAbilityPlan())
+            {
+                // Ability-first: teleport to targetTile, then walk to movementTarget.
+                // Movement-first or pure teleport: targetTile IS the final position.
+                return isAbilityFirst
+                    ? (movementTarget ?? targetTile ?? enemyUnit.currentTile)
+                    : (targetTile ?? movementTarget ?? enemyUnit.currentTile);
+            }
+            return movementTarget ?? enemyUnit.currentTile;
         }
 
         private bool IsNearEnvironmentalHazard(Tile tile)

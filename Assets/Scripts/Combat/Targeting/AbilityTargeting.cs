@@ -12,6 +12,14 @@ namespace DDD.TNFY.BRAWL
         [Tooltip("If true, the ability can pass over gaps and impassable terrain")]
         public bool affectsOverGaps = true;
 
+        [Tooltip("If true, the ability reaches tiles on a higher Y level than the caster. " +
+                 "A tile that is 1 step across AND 1 step up costs 2 range, not 1.")]
+        public bool affectsUpperLayers = false;
+
+        [Tooltip("If true, the ability reaches tiles on a lower Y level than the caster. " +
+                 "A tile that is 1 step across AND 1 step down costs 2 range, not 1.")]
+        public bool affectsLowerLayers = false;
+
         // ── Input behaviour descriptors ───────────────────────────────────────────
         // AbilityTargetingController reads these to route input without type-checking.
 
@@ -178,6 +186,36 @@ namespace DDD.TNFY.BRAWL
 
             int wallsLayerMask = LayerMask.GetMask("Walls");
             return Physics.Raycast(startPos, direction, out _, distance * 0.9f, wallsLayerMask);
+        }
+
+        /// <summary>
+        /// Returns true when <paramref name="candidate"/> passes the layer flags on this targeting asset,
+        /// and sets <paramref name="dist3D"/> to the full 3D Manhattan distance (X + Z + Y steps).
+        /// Follows the same pattern as JumpSystem.GetJumpableTiles:
+        ///   - always uses GetGridDistance(includeYLevel: true) for cost
+        ///   - rejects tiles above the caster when affectsUpperLayers is false
+        ///   - rejects tiles below the caster when affectsLowerLayers is false
+        ///   - same-level tiles always pass (neither flag applies)
+        /// </summary>
+        protected bool IsAllowedByLayerFlags(Tile center, Tile candidate, out int dist3D)
+        {
+            dist3D = int.MaxValue;
+            if (center == null || candidate == null) return false;
+
+            // Use the same Y-level test that GridManager uses internally.
+            bool sameLevel = GridManager.Instance.IsSameYLevel(center, candidate);
+
+            if (!sameLevel)
+            {
+                bool candidateIsAbove = candidate.transform.position.y > center.transform.position.y;
+
+                if (candidateIsAbove && !affectsUpperLayers) return false;
+                if (!candidateIsAbove && !affectsLowerLayers) return false;
+            }
+
+            // Always measure using 3D Manhattan distance — same as JumpSystem does.
+            dist3D = GridManager.Instance.GetGridDistance(center, candidate, includeYLevel: true);
+            return true;
         }
     }
 }

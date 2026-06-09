@@ -844,7 +844,7 @@ namespace DDD.TNFY.BRAWL
             }
         }
 
-        private bool IsSameYLevel(Tile tile1, Tile tile2)
+        public bool IsSameYLevel(Tile tile1, Tile tile2)
         {
             if (tile1 == null || tile2 == null) return false;
 

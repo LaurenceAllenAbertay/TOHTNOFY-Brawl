@@ -12,6 +12,10 @@ namespace DDD.TNFY.BRAWL
 
         public override bool UsesDirectionalInput => true;
 
+        [Header("Direction")]
+        [Tooltip("If true, this ability can only be aimed left or right (horizontal only)")]
+        public bool horizontalOnly = false;
+
         [Header("Charge Behavior")]
         [Tooltip("If true, stops traversal at first occupied tile")]
         public bool stopAtFirstUnit = true;
@@ -30,6 +34,17 @@ namespace DDD.TNFY.BRAWL
             if (start == null) return tiles;
 
             var dir = ctx.aimDir;
+
+            // Restrict direction if horizontalOnly is enabled
+            if (horizontalOnly)
+            {
+                if (dir == Vector2Int.up || dir == Vector2Int.down)
+                    return tiles; // Return empty list — ability won't execute vertically
+
+                if (dir != Vector2Int.left && dir != Vector2Int.right)
+                    dir = Vector2Int.right; // Fallback for unexpected directions
+            }
+
             int max = Mathf.Max(1, ctx.EffectiveRange);
 
             Vector3 currentPos = start.transform.position;

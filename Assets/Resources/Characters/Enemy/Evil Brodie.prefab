@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 4753597041480976109}
   - component: {fileID: 6760930971082672950}
   - component: {fileID: 3635465470440769816}
+  - component: {fileID: 1897822839676078520}
   - component: {fileID: -5193970609984620637}
   m_Layer: 0
   m_Name: Evil Brodie
@@ -199,6 +200,18 @@ MonoBehaviour:
   thinkingDelay: 2.5
   actionDelay: 0.8
   endTurnDelay: 1
+--- !u!114 &1897822839676078520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4885748180280455429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddea3100216f92f448f8216bc00fccb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &-5193970609984620637
 MonoBehaviour:
   m_ObjectHideFlags: 0

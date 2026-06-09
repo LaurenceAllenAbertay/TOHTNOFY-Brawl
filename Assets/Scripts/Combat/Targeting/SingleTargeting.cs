@@ -95,16 +95,16 @@ namespace DDD.TNFY.BRAWL
             foreach (var tile in GridManager.Instance.AllTiles)
             {
                 if (tile == start) continue;
+                if (!affectsOverGaps && !tile.passableTerrain) continue;
+                if (!affectsThroughWalls && IsBlockedByWall(start, tile)) continue;
 
-                int distance = GridManager.Instance.GetGridDistance(start, tile);
-                if (distance <= ctx.EffectiveRange && distance > 0)
-                {
-                    if (affectsOverGaps || tile.passableTerrain)
-                    {
-                        if (!affectsThroughWalls && IsBlockedByWall(start, tile)) continue;
-                        tiles.Add(tile);
-                    }
-                }
+                // IsAllowedByLayerFlags rejects tiles above/below when the corresponding
+                // flag is off, and returns the correct 3D Manhattan distance when the tile
+                // is on a different Y level (same-level tiles use standard 2D distance).
+                if (!IsAllowedByLayerFlags(start, tile, out int dist)) continue;
+                if (dist <= 0 || dist > ctx.EffectiveRange) continue;
+
+                tiles.Add(tile);
             }
 
             return tiles;
@@ -132,10 +132,12 @@ namespace DDD.TNFY.BRAWL
             if (start == null) return false;
             if (start == targetTile) return false;
 
-            int distance = GridManager.Instance.GetGridDistance(start, targetTile);
-            if (distance > ctx.EffectiveRange || distance <= 0) return false;
             if (!affectsOverGaps && !targetTile.passableTerrain) return false;
             if (!affectsThroughWalls && IsBlockedByWall(start, targetTile)) return false;
+
+            // IsAllowedByLayerFlags handles Y-direction filtering and returns 3D distance.
+            if (!IsAllowedByLayerFlags(start, targetTile, out int dist)) return false;
+            if (dist <= 0 || dist > ctx.EffectiveRange) return false;
 
             return true;
         }

@@ -118,7 +118,16 @@ namespace DDD.TNFY.BRAWL
                 int optionsForThisAbility = EvaluateAbilityFromPosition(actions, ability, i, unit.currentTile, targets, teammates);
 
                 if (optionsForThisAbility > 0)
-                    EvaluatePostAbilityMovement(actions, ability, i, targets, teammates);
+                {
+                    // Teleport abilities need their own post-ability-movement evaluator:
+                    // EvaluatePostAbilityMovement iterates enemy tiles as targets which is
+                    // wrong for teleport (occupied tiles are invalid landing spots and the
+                    // combined teleport+walk distance is never modelled).
+                    if (HasTeleportEffect(ability))
+                        EvaluateTeleportThenMovement(actions, ability, i, targets, teammates);
+                    else
+                        EvaluatePostAbilityMovement(actions, ability, i, targets, teammates);
+                }
             }
         }
 
@@ -161,6 +170,59 @@ namespace DDD.TNFY.BRAWL
                         plan.CalculateScore(GetPublicProxy(), targets, teammates);
                         actions.Add(plan);
                     }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Generates "teleport to destination D, then walk from D" plans.
+        /// <para>
+        /// This gives any unit with a <see cref="TeleportEffect"/> ability (e.g. Lorns) the
+        /// full combined benefit of teleport range + walking range in a single turn, which
+        /// can be dramatically better than just walking.  Destinations are sorted by
+        /// proximity to enemies so the search budget is spent on the most promising tiles
+        /// first, especially at lower difficulty settings.
+        /// </para>
+        /// <para>
+        /// This replaces the <see cref="EvaluatePostAbilityMovement"/> path for teleport
+        /// abilities because that method iterates enemy tiles as the ability target, which
+        /// is semantically wrong (teleport lands on the destination tile, not on an enemy).
+        /// </para>
+        /// </summary>
+        private void EvaluateTeleportThenMovement(List<ActionPlan> actions, Ability teleportAbility, int abilitySlot, List<Unit> targets, List<UnitAI> teammates)
+        {
+            var teleportTiles = GetValidTeleportTiles(teleportAbility, unit.currentTile);
+
+            // Prioritise destinations closest to the nearest enemy so the most tactically
+            // valuable options fill the search budget first at lower difficulty settings.
+            var sortedDestinations = teleportTiles
+                .OrderBy(t => targets.Count > 0
+                    ? targets.Min(target => target.currentTile != null
+                        ? GridManager.Instance.GetGridDistance(t, target.currentTile)
+                        : int.MaxValue)
+                    : int.MaxValue)
+                .Take(GetSearchDepthByDifficulty());
+
+            foreach (var teleportDest in sortedDestinations)
+            {
+                var movableTiles = GridManager.Instance.GetReachableTiles(teleportDest, unit.GetEffectiveMovementRange());
+
+                foreach (var moveTile in movableTiles.Take(difficulty + 3))
+                {
+                    if (moveTile.occupied && moveTile.currentUnit != unit) continue;
+                    if (moveTile == teleportDest) continue;
+
+                    var plan = new ActionPlan
+                    {
+                        abilityToUse       = teleportAbility,
+                        abilitySlot        = abilitySlot,
+                        targetTile         = teleportDest,   // Where the teleport lands
+                        abilityFromPosition = unit.currentTile,
+                        movementTarget     = moveTile,       // Where the unit walks after landing
+                        isAbilityFirst     = true
+                    };
+                    plan.CalculateScore(GetPublicProxy(), targets, teammates);
+                    actions.Add(plan);
                 }
             }
         }
@@ -446,9 +508,29 @@ namespace DDD.TNFY.BRAWL
         private bool ShouldUseTeleportToTile(Tile teleportDestination, Tile fromPosition)
         {
             if (teleportDestination == null || fromPosition == null) return false;
+
+            // High-value case: teleporting here places us within attack range of at least
+            // one enemy with a non-teleport ability.  Worthwhile even if we could walk
+            // there, because teleport does not consume our movement action — we can still
+            // walk further on the same turn (see EvaluateTeleportThenMovement).
+            var abilityLoadout = UnitLoadoutManager.GetAbilities(unit);
+            foreach (var attackAbility in abilityLoadout)
+            {
+                if (attackAbility == null) continue;
+                if (attackAbility.effects.Any(e => e is TeleportEffect)) continue; // Skip self
+                foreach (var potentialTarget in UnitManager.AllUnits)
+                {
+                    if (!canTargetUnit(potentialTarget)) continue;
+                    if (potentialTarget.currentTile == null) continue;
+                    if (GridManager.Instance.GetGridDistance(teleportDestination, potentialTarget.currentTile) <= attackAbility.range)
+                        return true;
+                }
+            }
+
+            // Fallback: also valid when walking there would require more steps than
+            // the unit's movement range, or when no walking path exists at all.
             var walkingPath = GridManager.Instance.FindPath(fromPosition, teleportDestination, unit.GetEffectiveMovementRange());
             if (walkingPath.Count == 0) return true;
-            if (walkingPath.Count <= unit.GetEffectiveMovementRange()) return false;
             return walkingPath.Count > unit.GetEffectiveMovementRange();
         }
 
@@ -551,6 +633,8 @@ namespace DDD.TNFY.BRAWL
         private Vector2Int[] GetValidDirectionsForAbility(Ability ability)
         {
             if (ability.targeting is LineTargeting lt && lt.horizontalOnly)
+                return new[] { Vector2Int.left, Vector2Int.right };
+            if (ability.targeting is MovementLineTargeting mlt && mlt.horizontalOnly)
                 return new[] { Vector2Int.left, Vector2Int.right };
             return new[] { Vector2Int.up, Vector2Int.down, Vector2Int.left, Vector2Int.right };
         }

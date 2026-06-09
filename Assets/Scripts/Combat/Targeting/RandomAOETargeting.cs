@@ -104,24 +104,26 @@ namespace DDD.TNFY.BRAWL
         {
             var tilesInRange = new List<Tile>();
 
-            if (affectsOverGaps)
+            if (affectsOverGaps || affectsUpperLayers || affectsLowerLayers)
             {
-                // When affecting over gaps, do a direct distance check against every tile in the
-                // scene rather than a BFS through walkable terrain. This ensures gap tiles and
-                // tiles on different Y levels are all included in the pool, since BFS via
-                // GetAdjacentTiles only traverses passable XZ neighbours.
-                // Y distance is included so that a tile 3 across and 2 up costs 5 range.
+                // When affecting over gaps or other Y levels we can't BFS via GetAdjacentTiles
+                // (same-Y only). Iterate every tile and use IsAllowedByLayerFlags which:
+                //   • rejects tiles above  if affectsUpperLayers is false
+                //   • rejects tiles below  if affectsLowerLayers is false
+                //   • returns 3D Manhattan distance so Y cost is charged correctly.
                 foreach (var tile in GridManager.Instance.AllTiles)
                 {
                     if (tile == null || tile == startTile) continue;
-                    int dist = GridManager.Instance.GetGridDistance(startTile, tile, includeYLevel: true);
+                    if (!tile.passableTerrain && !affectsOverGaps) continue;
+
+                    if (!IsAllowedByLayerFlags(startTile, tile, out int dist)) continue;
                     if (dist <= range)
                         tilesInRange.Add(tile);
                 }
             }
             else
             {
-                // BFS through passable terrain only — gaps and impassable tiles are excluded.
+                // BFS through passable terrain only — gaps and off-level tiles excluded.
                 var queue = new Queue<(Tile tile, int distance)>();
                 var visited = new HashSet<Tile>();
 
