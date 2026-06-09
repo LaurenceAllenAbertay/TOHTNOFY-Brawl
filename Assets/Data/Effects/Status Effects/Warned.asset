@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectName: Warned
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: f54fa3e21e4662f42a28db2e51d6a94d, type: 3}
   effectColor: {r: 1, g: 1, b: 1, a: 1}
   effectType: 26
   stackingBehavior: 1

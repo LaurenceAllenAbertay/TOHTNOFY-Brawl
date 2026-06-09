@@ -108,6 +108,53 @@ namespace DDD.TNFY.BRAWL
                 Instance = null;
         }
 
+        // On PC, minimising/alt-tabbing fires OnApplicationFocus.
+        // On mobile, backgrounding fires OnApplicationPause.
+        // Both are handled so resyncing works across platforms.
+        private void OnApplicationFocus(bool hasFocus)
+        {
+            if (hasFocus && trackIsPlaying)
+                ResyncAllLayers();
+        }
+
+        private void OnApplicationPause(bool isPaused)
+        {
+            if (!isPaused && trackIsPlaying)
+                ResyncAllLayers();
+        }
+
+        // When the app regains focus the DSP clock has kept ticking while Unity's
+        // main thread was suspended, so each looping clip may have landed at a
+        // different position within its loop. Snap everything back to the first
+        // playing layer's normalised position so all clips share the same beat phase.
+        private void ResyncAllLayers()
+        {
+            if (currentTrack == null) return;
+
+            AudioSource reference = null;
+            foreach (var layer in currentTrack.layers)
+            {
+                if (layer.audioSource != null && layer.audioSource.isPlaying)
+                {
+                    reference = layer.audioSource;
+                    break;
+                }
+            }
+
+            if (reference == null) return;
+
+            foreach (var layer in currentTrack.layers)
+            {
+                if (layer.audioSource == null || layer.audioSource == reference) continue;
+                if (layer.audioClip == null || reference.clip == null) continue;
+
+                float normalizedPosition = (float)reference.timeSamples / reference.clip.samples;
+                layer.audioSource.timeSamples = Mathf.FloorToInt(normalizedPosition * layer.audioClip.samples);
+            }
+
+            Debug.Log("DynamicMusicManager: Resynced all layers after focus restored.");
+        }
+
         private void UnsubscribeFromEvents()
         {
             TurnManager.OnTurnStarted -= OnTurnStarted;
@@ -254,7 +301,7 @@ namespace DDD.TNFY.BRAWL
 
             // Don't start/stop playback - just fade volume
             layer.isEnabled = true;
-            StartCoroutine(FadeLayerVolume(layer, 0f, GetTargetVolume(layer), actualFadeTime));
+            FadeLayerVolume(layer, 0f, GetTargetVolume(layer), actualFadeTime);
         }
 
         public void DisableLayer(string layerName, float fadeTime = -1f)
@@ -268,7 +315,7 @@ namespace DDD.TNFY.BRAWL
 
             // Don't stop playback - just fade volume to 0
             layer.isEnabled = false;
-            StartCoroutine(FadeLayerVolume(layer, layer.audioSource.volume, 0f, actualFadeTime));
+            FadeLayerVolume(layer, layer.audioSource.volume, 0f, actualFadeTime);
         }
 
         public void TriggerCustomEvent(string eventName)
@@ -320,12 +367,18 @@ namespace DDD.TNFY.BRAWL
         {
             if (currentTrack == null) return;
 
-            // Start ALL AudioSources at exactly the same time for perfect sync
+            // Schedule ALL AudioSources to start at the exact same DSP time.
+            // PlayScheduled() guarantees sample-accurate sync at the audio thread level,
+            // unlike Play() which can drift due to each pooled GameObject being activated
+            // at a slightly different moment in the DSP clock.
+            // The 0.2s offset gives Unity's audio thread time to prepare all sources.
+            double dspStartTime = AudioSettings.dspTime + 0.2;
+
             foreach (var layer in currentTrack.layers)
             {
                 if (layer.audioSource != null)
                 {
-                    layer.audioSource.Play();
+                    layer.audioSource.PlayScheduled(dspStartTime);
                 }
             }
 
@@ -341,7 +394,7 @@ namespace DDD.TNFY.BRAWL
                     if (layer.startEnabled)
                     {
                         // Fade in enabled layers
-                        StartCoroutine(FadeLayerVolume(layer, 0f, GetTargetVolume(layer), layer.fadeInDuration));
+                        FadeLayerVolume(layer, 0f, GetTargetVolume(layer), layer.fadeInDuration);
                     }
                     else
                     {
@@ -354,10 +407,14 @@ namespace DDD.TNFY.BRAWL
             Debug.Log($"Started track '{currentTrack.trackName}' with {currentTrack.layers.Count} synchronized layers");
         }
 
-        private IEnumerator FadeLayerVolume(MusicLayer layer, float fromVolume, float toVolume, float duration)
+        private void FadeLayerVolume(MusicLayer layer, float fromVolume, float toVolume, float duration)
         {
-            if (layer.audioSource == null) yield break;
+            if (layer.audioSource == null) return;
 
+            // Stop the previous fade coroutine if one is running.
+            // Previously this was itself a coroutine, meaning fadeCoroutine held a reference
+            // to the outer wrapper rather than the actual FadeAudioSourceVolume coroutine —
+            // so StopCoroutine would stop the wrapper but leave the inner fade running.
             if (layer.fadeCoroutine != null)
                 StopCoroutine(layer.fadeCoroutine);
 

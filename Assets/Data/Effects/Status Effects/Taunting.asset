@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectName: Taunting
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 4c72c33874696df408cf9898c21319fc, type: 3}
   effectColor: {r: 1, g: 1, b: 1, a: 1}
   effectType: 24
   stackingBehavior: 1

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectName: Immune
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: b77a2594a3c08d349abc43ff7100084c, type: 3}
   effectColor: {r: 1, g: 1, b: 1, a: 1}
   effectType: 6
   stackingBehavior: 1

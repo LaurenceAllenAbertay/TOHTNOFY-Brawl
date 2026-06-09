@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectName: Speed Up
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: aacc00b0ee6cedf48ab497513b7e1cc2, type: 3}
   effectColor: {r: 1, g: 1, b: 1, a: 1}
   effectType: 9
   stackingBehavior: 5

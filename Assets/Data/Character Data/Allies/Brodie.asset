@@ -18,7 +18,7 @@ MonoBehaviour:
   maxHealth: 200
   attack: 0
   defense: 0
-  speed: 2
+  speed: 99
   availableAbilities:
   - {fileID: 11400000, guid: 008eac43d54df864ab6cdff34a881e11, type: 2}
   - {fileID: 11400000, guid: 7126174003f5d844ea16ff7816f08e3c, type: 2}

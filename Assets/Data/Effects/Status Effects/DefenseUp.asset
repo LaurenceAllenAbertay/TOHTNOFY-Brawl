@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectName: Defense Up
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 32f35b6e50853664e97af62c6d38b649, type: 3}
   effectColor: {r: 1, g: 1, b: 1, a: 1}
   effectType: 8
   stackingBehavior: 5

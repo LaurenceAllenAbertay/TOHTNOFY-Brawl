@@ -16,8 +16,10 @@ MonoBehaviour:
   - statusEffectData: {fileID: 11400000, guid: 7e12642285bc97240a9f054ca02e8efa, type: 2}
     applyTo: 2
     duration: 3
+    allyDuration: 3
     effectPower: 2
     useAbilityDamage: 0
     damageMultiplier: 0
     scaleDurationWithDamage: 0
     damagePerTurn: 0
+    warnedFallbackEffect: {fileID: 0}

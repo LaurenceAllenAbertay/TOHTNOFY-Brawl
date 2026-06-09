@@ -88,6 +88,15 @@ namespace DDD.TNFY.BRAWL
         {
             if (!UnitManager.AllUnits.Contains(this))
                 UnitManager.RegisterUnit(this);
+
+            // Assign the Event Camera on any World Space Canvas children (e.g. the status
+            // effect icon strip). Without this, GraphicRaycaster cannot raycast pointer
+            // events — hover tooltips on status icons will not work without it.
+            foreach (var canvas in GetComponentsInChildren<Canvas>())
+            {
+                if (canvas.renderMode == RenderMode.WorldSpace)
+                    canvas.worldCamera = Camera.main;
+            }
         }
 
         void OnDestroy()

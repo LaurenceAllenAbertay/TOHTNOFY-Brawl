@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectName: On Fire
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 035ac6f92e6aaa942a325a722842274e, type: 3}
   effectColor: {r: 1, g: 1, b: 1, a: 1}
   effectType: 2
   stackingBehavior: 1

@@ -216,6 +216,13 @@ namespace DDD.TNFY.BRAWL
                 positionScore += 5f;
             }
 
+            // Reward positions that fall within the buff range of a teammate's support ability.
+            // A unit standing where an ally can reach and buff them next turn is in a
+            // strategically superior position — they can receive AttackUp, shields, heals, etc.
+            // We check every ally's full reach (movement + ability range), mirroring the same
+            // move-then-cast logic that CalculateDangerAtPosition uses for enemies.
+            positionScore += CalculateAllyBuffProximityScore(ai, enemyUnit, finalPosition);
+
             // IMPORTANT: Safety consideration for final position
             // Penalize positions that leave us vulnerable after our action
             float dangerPenalty = CalculateDangerAtPosition(finalPosition, potentialTargets);
@@ -254,44 +261,44 @@ namespace DDD.TNFY.BRAWL
             if (position == null) return 0f;
 
             float totalDanger = 0f;
-            Vector3 pos = position.transform.position;
-            Vector3 tileSpacing = GridManager.Instance.GetTileSpacing();
 
             foreach (var enemy in enemies)
             {
                 if (enemy?.currentTile == null) continue;
 
-                // Check if enemy can reach this position
-                var enemyReachableTiles = GridManager.Instance.GetReachableTiles(enemy.currentTile, enemy.currentSpeed);
-                bool canReachUs = enemyReachableTiles.Contains(position);
+                int distanceToUs = GridManager.Instance.GetGridDistance(enemy.currentTile, position);
 
-                if (canReachUs)
+                foreach (var ability in UnitLoadoutManager.GetAbilities(enemy))
                 {
-                    float threat = enemy.currentAttack;
+                    if (ability == null || ability.damage <= 0) continue;
+                    if (!ability.canHitEnemies) continue; // from the enemy's perspective, we are their enemy
 
-                    // Add ability threat
-                    foreach (var ability in UnitLoadoutManager.GetAbilities(enemy))
+                    // An enemy can threaten our position if they can move close enough for
+                    // their ability to reach us. Combined threat radius = move range + ability range.
+                    // This correctly models "walk to edge of movement, then shoot" which is exactly
+                    // how the player AI and the enemy AI both operate.
+                    int combinedReach = enemy.currentSpeed + ability.range + enemy.RangeModifier;
+
+                    if (distanceToUs <= combinedReach)
                     {
-                        if (ability != null)
-                            threat += ability.damage * 0.5f;
-                    }
+                        // Scale the threat by how easily they can hit us:
+                        // - If they can reach us without moving (pure ability range): full threat.
+                        // - If they need to move first: slightly reduced, as movement costs their action.
+                        float movementRequired = Mathf.Max(0, distanceToUs - (ability.range + enemy.RangeModifier));
+                        float proximityFactor = movementRequired == 0 ? 1f : 0.75f;
 
-                    totalDanger += threat;
+                        float threat = (enemy.currentAttack + ability.damage) * proximityFactor;
+                        totalDanger += threat;
+                    }
                 }
-                else
-                {
-                    // Check if enemy can hit us with ranged abilities
-                    foreach (var ability in UnitLoadoutManager.GetAbilities(enemy))
-                    {
-                        if (ability != null && ability.range > 1)
-                        {
-                            float distance = Vector3.Distance(pos, enemy.transform.position);
-                            float rangeInWorldUnits = ability.range * tileSpacing.x;
 
-                            if (distance <= rangeInWorldUnits)
-                                totalDanger += ability.damage * 0.3f;
-                        }
-                    }
+                // An enemy with no damage abilities can still pose a melee threat
+                // via their base attack if they can walk to us directly.
+                var enemyAbilities = UnitLoadoutManager.GetAbilities(enemy);
+                bool hasAnyDamageAbility = enemyAbilities.Any(a => a != null && a.damage > 0 && a.canHitEnemies);
+                if (!hasAnyDamageAbility && distanceToUs <= enemy.currentSpeed)
+                {
+                    totalDanger += enemy.currentAttack;
                 }
             }
 
@@ -305,6 +312,79 @@ namespace DDD.TNFY.BRAWL
             }
 
             return totalDanger;
+        }
+
+        /// <summary>
+        /// Scores how well this final position is covered by teammate support abilities.
+        /// For each ally, we check whether they could reach us with a buff ability on their
+        /// next turn (movement range + ability range), and add a reward scaled by how
+        /// valuable that buff is. This encourages the AI to cluster within support range
+        /// of its most capable buffers, mirroring the move-then-cast model used throughout.
+        /// </summary>
+        private float CalculateAllyBuffProximityScore(UnitAI ai, EnemyUnit enemyUnit, Tile finalPosition)
+        {
+            if (finalPosition == null) return 0f;
+
+            float proximityScore = 0f;
+
+            var allEnemyUnits = UnitManager.AllUnits.OfType<EnemyUnit>()
+                .Where(u => u != enemyUnit && IsAlly(ai, u))
+                .ToList();
+
+            foreach (var ally in allEnemyUnits)
+            {
+                if (ally?.currentTile == null) continue;
+
+                int distanceToUs = GridManager.Instance.GetGridDistance(ally.currentTile, finalPosition);
+
+                foreach (var ability in UnitLoadoutManager.GetAbilities(ally))
+                {
+                    if (ability == null) continue;
+                    if (!ability.canHitAllies) continue; // Only count abilities that can target allies
+
+                    // Combined reach = ally move range + ability range (+ any range modifier).
+                    // This is the same move-then-cast model used in CalculateDangerAtPosition.
+                    int combinedReach = ally.currentSpeed + ability.range + ally.RangeModifier;
+                    if (distanceToUs > combinedReach) continue;
+
+                    // Only reward abilities that actually apply buffs to allies.
+                    float buffValue = 0f;
+                    foreach (var effect in ability.effects)
+                    {
+                        if (!(effect is StatusEffect statusEffect)) continue;
+                        foreach (var statusApp in statusEffect.statusesToApply)
+                        {
+                            if (statusApp.statusEffectData == null) continue;
+
+                            bool appliesToUs = statusApp.applyTo == StatusEffect.ApplicationTarget.Targets
+                                              || statusApp.applyTo == StatusEffect.ApplicationTarget.Both;
+                            if (!appliesToUs) continue;
+
+                            // Only count genuine buff types — debuffs on allies are not helpful.
+                            if (!statusApp.statusEffectData.effectType.IsBuffType()) continue;
+
+                            buffValue += CalculateStatusEffectValue(
+                                statusApp.statusEffectData.effectType,
+                                statusApp.effectPower);
+                        }
+                    }
+
+                    if (buffValue <= 0f) continue;
+
+                    // Apply the same ally-value multiplier used in CalculateStatusEffectScore
+                    // so the position reward is calibrated to the same scale as the buff score.
+                    float allyValue = CalculateAllyBuffValue(enemyUnit);
+
+                    // Reduce reward slightly when the ally needs to move to reach us — they
+                    // may choose a different action if a better target or position exists.
+                    float movementRequired = Mathf.Max(0, distanceToUs - (ability.range + ally.RangeModifier));
+                    float reachabilityFactor = movementRequired == 0 ? 1f : 0.7f;
+
+                    proximityScore += buffValue * allyValue * reachabilityFactor;
+                }
+            }
+
+            return proximityScore;
         }
 
         private void CalculateSafetyScore(UnitAI ai, EnemyUnit enemyUnit, List<Unit> potentialTargets)
@@ -391,54 +471,147 @@ namespace DDD.TNFY.BRAWL
         {
             if (abilityToUse == null) return;
 
-            // Check if ability applies status effects
             foreach (var effect in abilityToUse.effects)
             {
-                if (effect is StatusEffect statusEffect)
+                if (!(effect is StatusEffect statusEffect)) continue;
+
+                var ctx = new AbilityContext
                 {
-                    var ctx = new AbilityContext
+                    caster = enemyUnit,
+                    ability = abilityToUse,
+                    aimDir = aimDirection,
+                    targetTile = targetTile
+                };
+
+                var targets = abilityToUse.targeting.SelectTargets(ctx);
+
+                foreach (var statusApp in statusEffect.statusesToApply)
+                {
+                    if (statusApp.statusEffectData == null) continue;
+
+                    float baseEffectValue = CalculateStatusEffectValue(statusApp.statusEffectData.effectType, statusApp.effectPower);
+                    bool isDebuff = IsDebuff(statusApp.statusEffectData.effectType);
+
+                    // --- Target-directed applications ---
+                    if (statusApp.applyTo == StatusEffect.ApplicationTarget.Targets || statusApp.applyTo == StatusEffect.ApplicationTarget.Both)
                     {
-                        caster = enemyUnit,
-                        ability = abilityToUse,
-                        aimDir = aimDirection,
-                        targetTile = targetTile
-                    };
-
-                    var targets = abilityToUse.targeting.SelectTargets(ctx);
-
-                    foreach (var statusApp in statusEffect.statusesToApply)
-                    {
-                        float effectValue = CalculateStatusEffectValue(statusApp.statusEffectData.effectType, statusApp.effectPower);
-
-                        // Apply to appropriate targets based on effect type
-                        if (statusApp.applyTo == StatusEffect.ApplicationTarget.Targets || statusApp.applyTo == StatusEffect.ApplicationTarget.Both)
+                        foreach (var target in targets)
                         {
-                            foreach (var target in targets)
+                            if (target == null) continue;
+
+                            bool targetIsEnemy = potentialTargets.Contains(target);
+                            bool targetIsAlly = !targetIsEnemy && target != enemyUnit;
+
+                            if (targetIsEnemy)
                             {
-                                if (IsDebuff(statusApp.statusEffectData.effectType))
+                                if (isDebuff)
                                 {
-                                    // Debuffs are good on enemies
-                                    if (potentialTargets.Contains(target))
-                                        statusEffectScore += effectValue;
+                                    // Debuffing a strong, healthy enemy is worth more than debuffing
+                                    // one that is nearly dead. We measure threat by their current
+                                    // attack stat relative to their base, then scale by health so
+                                    // a near-dead unit is still worth debuffing but less so.
+                                    float targetThreat = CalculateThreatWeight(target);
+                                    statusEffectScore += baseEffectValue * targetThreat;
                                 }
                                 else
                                 {
-                                    // Buffs are bad on enemies
-                                    if (potentialTargets.Contains(target))
-                                        statusEffectScore -= effectValue;
+                                    // Accidentally buffing an enemy is always bad.
+                                    statusEffectScore -= baseEffectValue;
+                                }
+                            }
+                            else if (targetIsAlly)
+                            {
+                                if (!isDebuff)
+                                {
+                                    // Buffing a healthy, high-threat ally multiplies a lot of future
+                                    // value — scale the score up for strong allies and down for
+                                    // those near death (wasted investment).
+                                    float allyValue = CalculateAllyBuffValue(target);
+                                    statusEffectScore += baseEffectValue * allyValue;
+                                }
+                                else
+                                {
+                                    // Debuffing our own ally is always bad.
+                                    statusEffectScore -= baseEffectValue;
                                 }
                             }
                         }
+                    }
 
-                        if (statusApp.applyTo == StatusEffect.ApplicationTarget.Caster || statusApp.applyTo == StatusEffect.ApplicationTarget.Both)
+                    // --- Self-cast applications ---
+                    if (statusApp.applyTo == StatusEffect.ApplicationTarget.Caster || statusApp.applyTo == StatusEffect.ApplicationTarget.Both)
+                    {
+                        if (!isDebuff)
                         {
-                            // Self-buffs are generally good
-                            if (!IsDebuff(statusApp.statusEffectData.effectType))
-                                statusEffectScore += effectValue;
+                            // Self-buffs scale with our own remaining health — buffing ourselves when
+                            // we are nearly dead is poor value; at full health it pays off fully.
+                            float selfHealthPercent = (float)enemyUnit.currentHealth / enemyUnit.characterData.maxHealth;
+                            float selfHealthMultiplier = Mathf.Lerp(0.4f, 1.2f, selfHealthPercent);
+                            statusEffectScore += baseEffectValue * selfHealthMultiplier;
+                        }
+                        else
+                        {
+                            // Self-inflicted debuffs are always bad.
+                            statusEffectScore -= baseEffectValue;
                         }
                     }
                 }
             }
+        }
+
+        /// <summary>
+        /// Returns a [0.5 – 1.5] multiplier representing how much strategic value is gained
+        /// by debuffing this enemy target.
+        ///
+        /// Uses currentAttack and currentDefense — not base stats — so buffs and debuffs
+        /// already in play are reflected. A high-attack target is an immediate damage threat;
+        /// a high-defense target will survive longer, meaning the debuff compounds over more
+        /// turns. Both make debuffing them more worthwhile.
+        /// </summary>
+        private float CalculateThreatWeight(Unit target)
+        {
+            float healthPercent = (float)target.currentHealth / target.characterData.maxHealth;
+
+            // currentAttack vs base: >1.0 when buffed, <1.0 when already debuffed.
+            float attackWeight = target.characterData.attack > 0
+                ? (float)target.currentAttack / target.characterData.attack
+                : 1f;
+
+            // currentDefense vs base: high-defense targets survive longer, so debuffs
+            // on them have more turns to pay off.
+            float defenseWeight = target.characterData.defense > 0
+                ? (float)target.currentDefense / target.characterData.defense
+                : 1f;
+
+            // Blend all three into a 0–1 danger level, then remap to [0.5, 1.5].
+            float dangerLevel = (healthPercent + Mathf.Clamp01(attackWeight) + Mathf.Clamp01(defenseWeight)) / 3f;
+            return Mathf.Lerp(0.5f, 1.5f, dangerLevel);
+        }
+
+        /// <summary>
+        /// Returns a [0.4 – 1.4] multiplier representing how much strategic value is gained
+        /// by buffing this ally.
+        ///
+        /// Uses currentAttack and currentDefense — not base stats — so existing buffs and
+        /// debuffs are already baked in. A high-attack ally will hit harder with the buff;
+        /// a high-defense ally is more likely to survive long enough for the buff to pay off.
+        /// </summary>
+        private float CalculateAllyBuffValue(Unit ally)
+        {
+            float healthPercent = (float)ally.currentHealth / ally.characterData.maxHealth;
+
+            // currentAttack vs base: rewards buffing allies who are already hitting hard.
+            float attackWeight = ally.characterData.attack > 0
+                ? (float)ally.currentAttack / ally.characterData.attack
+                : 1f;
+
+            // currentDefense vs base: a tankier ally is more likely to survive and use the buff.
+            float defenseWeight = ally.characterData.defense > 0
+                ? (float)ally.currentDefense / ally.characterData.defense
+                : 1f;
+
+            float allyStrength = (healthPercent + Mathf.Clamp01(attackWeight) + Mathf.Clamp01(defenseWeight)) / 3f;
+            return Mathf.Lerp(0.4f, 1.4f, allyStrength);
         }
 
         #endregion
@@ -685,82 +858,108 @@ namespace DDD.TNFY.BRAWL
 
         private float CalculateStatusEffectValue(StatusEffectType effectType, float effectPower)
         {
-            // Base value calculation based on effect type and power
+            // Base value calculation based on effect type and power.
+            //
+            // These values are intentionally calibrated to sit in the same scoring
+            // range as a solid attack so that, before threat/ally multipliers are
+            // applied, a well-chosen status move can genuinely compete with damage.
+            // A typical attack scores roughly 20-40 points. Status moves should sit
+            // in the 15-35 range before the context multipliers push them up or down.
             float baseValue = 0f;
 
             switch (effectType)
             {
-                // Damage over time effects - value based on total potential damage
+                // Damage over time — value equals approximate total damage over 3 turns.
+                // Raised from *3 to *4 to reflect compounding value (enemy loses actions
+                // healing; AI gains free damage on future turns).
                 case StatusEffectType.Bleeding:
                 case StatusEffectType.Poison:
-                    baseValue = effectPower * 3f; // Assume average 3 turn duration
+                    baseValue = effectPower * 4f;
                     break;
 
-                // Defensive buffs - high value for survivability
+                // Defensive buffs — power represents HP-equivalent shielding.
                 case StatusEffectType.Shielded:
                 case StatusEffectType.Guarded:
                 case StatusEffectType.Untargetable:
-                    baseValue = effectPower * 2.5f;
+                    baseValue = effectPower * 3f;
                     break;
 
-                // Immune: complete damage negation for the turn — flat high value
+                // Immune: full damage negation — very high flat value.
                 case StatusEffectType.Immune:
-                    baseValue = 20f;
+                    baseValue = 30f;
                     break;
 
-                // Warned: can negate a full targeted attack; lower than Immune since it
-                // fails against AOE and requires a free adjacent tile.
+                // Warned: can negate a full targeted attack. Slightly lower than Immune
+                // since it fails against AOE and requires a free adjacent tile.
                 case StatusEffectType.Warned:
-                    baseValue = 15f;
+                    baseValue = 22f;
                     break;
 
-                // Stat modifiers - value based on stat impact
+                // Stun: skip a turn entirely — among the highest tactical value possible.
+                case StatusEffectType.Stunned:
+                    baseValue = 35f;
+                    break;
+
+                // Hard control: Controlled and Panicked rob the enemy of their action.
+                case StatusEffectType.Controlled:
+                case StatusEffectType.Panicked:
+                    baseValue = 30f;
+                    break;
+
+                // Stat modifiers — raised multipliers so stat swings compete with damage.
                 case StatusEffectType.AttackUp:
                 case StatusEffectType.AttackDown:
-                    baseValue = effectPower * 2f;
+                    baseValue = effectPower * 3f;
                     break;
 
                 case StatusEffectType.DefenseUp:
                 case StatusEffectType.DefenseDown:
-                    baseValue = effectPower * 1.8f;
+                    baseValue = effectPower * 2.5f;
                     break;
 
                 case StatusEffectType.SpeedUp:
                 case StatusEffectType.SpeedDown:
-                    baseValue = effectPower * 1.5f;
+                    baseValue = effectPower * 2f;
                     break;
 
-                // Movement control - high tactical value
+                // Movement denial — strong tactical value; raised to reflect positioning impact.
                 case StatusEffectType.Ensnared:
                 case StatusEffectType.Encumbered:
-                    baseValue = 15f; // Flat high value for movement denial
+                    baseValue = 22f;
                     break;
 
-                // Turn order manipulation
+                // Turn order manipulation — meaningful but not as decisive as full stuns.
                 case StatusEffectType.Hastened:
                 case StatusEffectType.Urged:
                 case StatusEffectType.Distracted:
+                    baseValue = 15f;
+                    break;
+
+                // Healing effects — value equals HP restored, which competes directly
+                // with the damage the opponent would deal.
+                case StatusEffectType.Healthy:
+                case StatusEffectType.Saturated:
+                    baseValue = effectPower * 2f;
+                    break;
+
+                // Alerted — reliable dodge chance; raised to reflect how much one
+                // negated attack is worth.
+                case StatusEffectType.Alerted:
+                    baseValue = 14f;
+                    break;
+
+                // Intimidated — prevents the target from choosing us; situationally useful.
+                case StatusEffectType.Intimidated:
                     baseValue = 10f;
                     break;
 
-                // Healing effects
-                case StatusEffectType.Healthy:
-                case StatusEffectType.Saturated:
-                    baseValue = effectPower * 1.5f;
-                    break;
-
-                // Control effects - very high value
-                case StatusEffectType.Controlled:
-                case StatusEffectType.Panicked:
-                    baseValue = 20f;
-                    break;
-
-                case StatusEffectType.Alerted:
-                    baseValue = 8f; // Dodge chance is valuable
+                // Taunting — redirects enemy AI targeting towards this ally.
+                case StatusEffectType.Taunting:
+                    baseValue = 12f;
                     break;
 
                 default:
-                    baseValue = effectPower; // Fallback for custom effects
+                    baseValue = effectPower * 1.5f; // Fallback for custom / future effects
                     break;
             }
 

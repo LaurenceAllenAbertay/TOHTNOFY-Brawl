@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   effectName: Intimidated
   description: 
-  icon: {fileID: 0}
+  icon: {fileID: 21300000, guid: 914de98b89b5c664d9c76123d7bbf02c, type: 3}
   effectColor: {r: 1, g: 1, b: 1, a: 1}
   effectType: 23
   stackingBehavior: 1

@@ -259,7 +259,6 @@ namespace DDD.TNFY.BRAWL
 
                 var jumpOnlyPlan = new ActionPlan { isJump = true, movementTarget = tile };
                 jumpOnlyPlan.CalculateScore(GetPublicProxy(), targets, teammates);
-                jumpOnlyPlan.totalScore += 15f;
                 actions.Add(jumpOnlyPlan);
 
                 if (unit.GetEffectiveMovementRange() < 2) continue;
@@ -389,7 +388,6 @@ namespace DDD.TNFY.BRAWL
                         abilitySlot = abilitySlot, aimDirection = direction, abilityFromPosition = jumpDestination
                     };
                     plan.CalculateScore(GetPublicProxy(), targets, teammates);
-                    plan.totalScore += 20f;
                     actions.Add(plan);
                 }
             }
@@ -405,7 +403,6 @@ namespace DDD.TNFY.BRAWL
                         abilitySlot = abilitySlot, targetTile = target.currentTile, abilityFromPosition = jumpDestination
                     };
                     plan.CalculateScore(GetPublicProxy(), targets, teammates);
-                    plan.totalScore += 20f;
                     actions.Add(plan);
                 }
             }
@@ -633,8 +630,6 @@ namespace DDD.TNFY.BRAWL
         private Vector2Int[] GetValidDirectionsForAbility(Ability ability)
         {
             if (ability.targeting is LineTargeting lt && lt.horizontalOnly)
-                return new[] { Vector2Int.left, Vector2Int.right };
-            if (ability.targeting is MovementLineTargeting mlt && mlt.horizontalOnly)
                 return new[] { Vector2Int.left, Vector2Int.right };
             return new[] { Vector2Int.up, Vector2Int.down, Vector2Int.left, Vector2Int.right };
         }

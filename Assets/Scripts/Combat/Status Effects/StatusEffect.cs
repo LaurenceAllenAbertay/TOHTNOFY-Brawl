@@ -135,6 +135,11 @@ namespace DDD.TNFY.BRAWL
                     {
                         if (target == null) continue;
 
+                        // When applyTo is Both, the caster was already handled by the block above.
+                        // Skip them here to prevent a double application when the caster falls
+                        // within their own AOE (e.g. Toughen Up buffing allies within range 2).
+                        if (status.applyTo == ApplicationTarget.Both && target == ctx.caster) continue;
+
                         // Use allyDuration for allies when it has been explicitly set (non-zero).
                         // Falls back to finalDuration for enemies and when allyDuration is unset.
                         bool isAlly = target == ctx.caster || target.IsAllyOf(ctx.caster);
