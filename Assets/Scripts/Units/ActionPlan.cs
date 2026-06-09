@@ -737,12 +737,14 @@ namespace DDD.TNFY.BRAWL
 
         private void ApplyComplexityPenalty(int difficulty)
         {
-            // Penalize overly complex plans for lower difficulty AIs
-            bool isComplexPlan = (movementTarget != null && abilityToUse != null) || isJump;
+            // Penalize overly complex plans for lower difficulty AIs.
+            // Jump plans are never penalised — jumping is a required game mechanic, not an
+            // advanced strategy, so the AI should always be willing to use it regardless of difficulty.
+            bool isComplexPlan = !isJump && movementTarget != null && abilityToUse != null;
 
             if (isComplexPlan && difficulty < 5)
             {
-                totalScore *= 0.8f; // 20% penalty for complex plans on low difficulty
+                totalScore *= 0.8f; // 20% penalty for combined walk+ability plans on low difficulty
             }
         }
 

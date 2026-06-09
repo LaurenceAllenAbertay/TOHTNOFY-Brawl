@@ -18,14 +18,14 @@ MonoBehaviour:
   image: {fileID: 21300000, guid: 17b7e61ae60139347ac140d8564198f2, type: 3}
   rangeType: 1
   range: 4
-  damage: 10
+  damage: 20
   attackType: 1
   canHitEnemies: 1
   canHitAllies: 0
   passThroughUnits: 1
   maxTargets: 4
   canExecuteWithoutTargets: 0
-  endTurnOnCast: 0
+  endTurnOnCast: 1
   suppressCameraTransitions: 0
   animationState: Heads_Up
   castEffectPrefab: {fileID: 0}

@@ -249,7 +249,9 @@ namespace DDD.TNFY.BRAWL
 
         private void EvaluateJumpOptions(List<ActionPlan> actions, List<Unit> targets, List<UnitAI> teammates)
         {
-            if (unit.GetEffectiveMovementRange() < 2) return;
+            // Jump eligibility is governed by JumpRange, not movement range — they are
+            // independent stats and may be modified separately by passives.
+            if (unit.JumpRange < 2) return;
 
             var jumpableTiles = GetJumpableTiles();
 
@@ -261,7 +263,9 @@ namespace DDD.TNFY.BRAWL
                 jumpOnlyPlan.CalculateScore(GetPublicProxy(), targets, teammates);
                 actions.Add(jumpOnlyPlan);
 
-                if (unit.GetEffectiveMovementRange() < 2) continue;
+                // Post-jump ability evaluation still requires meaningful movement range so
+                // the unit can reach a useful firing position after landing.
+                if (unit.GetEffectiveMovementRange() < 1) continue;
                 var abilityLoadout = UnitLoadoutManager.GetAbilities(unit);
                 for (int i = 0; i < abilityLoadout.Length; i++)
                 {

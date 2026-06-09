@@ -257,6 +257,26 @@ namespace DDD.TNFY.BRAWL
         /// </summary>
         public static event System.Func<Unit, Unit, Ability, int, int> OnPreReceiveDamage;
 
+        /// <summary>
+        /// Fired whenever this unit's currentHealth changes for any reason (damage, recoil,
+        /// tile effects, healing). Passes the unit whose health changed.
+        /// Subscribe here rather than to UnitManager.OnUnitDamaged — that event is only
+        /// fired by DamageEffect and would miss recoil and tile-effect damage paths.
+        /// </summary>
+        public static event System.Action<Unit> OnHealthChanged;
+
+        /// <summary>
+        /// Fires OnHealthChanged for the given unit. Use this from outside the Unit class
+        /// (e.g. RecoilDamageEffect) when currentHealth is mutated directly rather than
+        /// via ReceiveDamage. C# events can only be invoked from within their declaring class,
+        /// so this method acts as the authorised external trigger — matching the pattern
+        /// UnitManager uses for NotifyUnitDamaged.
+        /// </summary>
+        public static void NotifyHealthChanged(Unit unit)
+        {
+            OnHealthChanged?.Invoke(unit);
+        }
+
         public virtual void ReceiveDamage(int amount, Unit attacker = null, Ability sourceAbility = null)
         {
             if (IsDead) return;
@@ -314,6 +334,8 @@ namespace DDD.TNFY.BRAWL
 
             currentHealth -= amount;
             Debug.Log($"{name} took {amount} damage. HP now {currentHealth}");
+
+            OnHealthChanged?.Invoke(this);
 
             if (currentHealth <= 0)
             {

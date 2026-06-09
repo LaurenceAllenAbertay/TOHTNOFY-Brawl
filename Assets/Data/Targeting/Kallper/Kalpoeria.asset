@@ -14,5 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   affectsThroughWalls: 0
   affectsOverGaps: 0
+  affectsUpperLayers: 0
+  affectsLowerLayers: 0
+  horizontalOnly: 1
   stopAtFirstUnit: 0
   requireEmptyDestination: 1

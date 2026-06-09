@@ -52,6 +52,9 @@ namespace DDD.TNFY.BRAWL
             Debug.Log($"[RecoilDamageEffect] {ctx.caster.name} took {recoil} recoil " +
                       $"({recoilFraction * 100}% of {resolvedDamage} damage dealt).");
 
+            // Notify UI — direct subtract bypasses ReceiveDamage so we fire the event manually.
+            Unit.NotifyHealthChanged(ctx.caster);
+
             if (ctx.caster.currentHealth <= 0)
             {
                 Debug.Log($"[RecoilDamageEffect] {ctx.caster.name} was defeated by recoil.");
