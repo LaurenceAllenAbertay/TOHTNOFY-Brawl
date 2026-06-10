@@ -36,5 +36,5 @@ MonoBehaviour:
   parentHitEffectToTarget: 0
   targeting: {fileID: 11400000, guid: c06b082a8cb41314c9bfe82df8a61b58, type: 2}
   effects:
-  - {fileID: 11400000, guid: 7bbe0b6e3f185f143b1c19342a3a4c8e, type: 2}
   - {fileID: 11400000, guid: b0855072ea95b7c43b6ca9d2b6e663c4, type: 2}
+  - {fileID: 11400000, guid: 7bbe0b6e3f185f143b1c19342a3a4c8e, type: 2}

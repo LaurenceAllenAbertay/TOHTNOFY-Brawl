@@ -18,6 +18,12 @@ namespace DDD.TNFY.BRAWL
         [Header("Object Pool")]
         [SerializeField] private int poolSize = 10;
 
+        [Header("Sync Debugging")]
+        [Tooltip("Logs sudden position jumps and sustained drift between layers (Editor/Dev builds only).")]
+        [SerializeField] private bool logSyncDiagnostics = true;
+        [Tooltip("Offset (in samples) treated as genuinely out of sync. Transient differences of ~1 DSP buffer are normal read noise.")]
+        [SerializeField] private int driftThresholdSamples = 2048;
+
         // Object Pool - pre-created AudioSource objects
         private Queue<AudioSource> audioSourcePool = new Queue<AudioSource>();
         private List<AudioSource> activeAudioSources = new List<AudioSource>();
@@ -25,6 +31,12 @@ namespace DDD.TNFY.BRAWL
         // Runtime data
         private Dictionary<string, MusicLayer> layerLookup = new Dictionary<string, MusicLayer>();
         private bool trackIsPlaying = false;
+
+        // Sync tracking
+        private double scheduledDspStartTime;
+        private int lastKnownReferenceSamples;   // Updated every frame while playing, used to
+        private int lastKnownReferenceFrequency; // restore musical position after a device change
+        private readonly Dictionary<string, long> lastLayerOffsets = new Dictionary<string, long>();
 
         // Game state tracking
         private int currentTurnNumber = 0;
@@ -65,7 +77,14 @@ namespace DDD.TNFY.BRAWL
                 source.playOnAwake = false;
                 source.loop = false;
                 source.volume = 0f;
-                source.priority = 64;
+
+                // Priority 0 = highest. The Unity manual explicitly recommends 0 for music
+                // so the voice manager never virtualizes it. Disabled layers sit at volume 0,
+                // which previously made them the FIRST voices stolen whenever combat SFX
+                // pushed the real-voice count over the limit — and a devirtualized source
+                // resumes at an ESTIMATED position, not a sample-exact one. That is a prime
+                // candidate for the sudden positional jumps we're hunting.
+                source.priority = 0;
 
                 poolObj.SetActive(false); // Inactive by default
                 audioSourcePool.Enqueue(source);
@@ -98,6 +117,12 @@ namespace DDD.TNFY.BRAWL
             TurnManager.OnTurnEnded += OnTurnEnded;
             TurnManager.OnTurnNumberChanged += OnTurnNumberChanged;
             UnitManager.OnUnitDied += OnUnitDied;
+
+            // Fires when the output device or audio configuration changes
+            // (headphones plugged/unplugged, Bluetooth connect/disconnect, sample
+            // rate change). Unity restarts the audio engine when this happens and
+            // sources can stop or resume at inconsistent positions — a SUDDEN jump.
+            AudioSettings.OnAudioConfigurationChanged += OnAudioConfigurationChanged;
         }
 
         private void OnDestroy()
@@ -108,51 +133,134 @@ namespace DDD.TNFY.BRAWL
                 Instance = null;
         }
 
+        private void OnAudioConfigurationChanged(bool deviceWasChanged)
+        {
+            LogSync($"AUDIO CONFIG CHANGED (deviceWasChanged={deviceWasChanged}) — audio engine restarted by Unity.");
+
+            if (trackIsPlaying)
+            {
+                // Wait one frame so the restarted audio engine is ready before rescheduling.
+                StartCoroutine(ResyncNextFrame());
+            }
+        }
+
+        private IEnumerator ResyncNextFrame()
+        {
+            yield return null;
+            ResyncAllLayers("audio configuration change");
+        }
+
         // On PC, minimising/alt-tabbing fires OnApplicationFocus.
         // On mobile, backgrounding fires OnApplicationPause.
-        // Both are handled so resyncing works across platforms.
+        // NOTE: normal focus loss does NOT desync layers — the audio engine either
+        // keeps all sources playing in lockstep (Run In Background on) or suspends
+        // them all together (off). We only intervene if a source actually STOPPED,
+        // which happens on mobile audio-session interruptions (e.g. a phone call).
+        // We still log every event so jumps can be correlated against them.
         private void OnApplicationFocus(bool hasFocus)
         {
+            LogSync($"OnApplicationFocus({hasFocus})");
+
             if (hasFocus && trackIsPlaying)
-                ResyncAllLayers();
+                ResyncIfPlaybackInterrupted();
         }
 
         private void OnApplicationPause(bool isPaused)
         {
+            LogSync($"OnApplicationPause({isPaused})");
+
             if (!isPaused && trackIsPlaying)
-                ResyncAllLayers();
+                ResyncIfPlaybackInterrupted();
         }
 
-        // When the app regains focus the DSP clock has kept ticking while Unity's
-        // main thread was suspended, so each looping clip may have landed at a
-        // different position within its loop. Snap everything back to the first
-        // playing layer's normalised position so all clips share the same beat phase.
-        private void ResyncAllLayers()
+        private void ResyncIfPlaybackInterrupted()
         {
             if (currentTrack == null) return;
+
+            foreach (var layer in currentTrack.layers)
+            {
+                if (layer.audioSource != null && !layer.audioSource.isPlaying)
+                {
+                    ResyncAllLayers("playback interruption detected on focus/pause resume");
+                    return;
+                }
+            }
+
+            LogSync("Focus regained, all sources still playing — no resync needed.");
+        }
+
+        // Hard resync: writes to timeSamples on a PLAYING source are applied at
+        // independent audio buffer boundaries and are NOT sample-accurate (the old
+        // version of this method smeared layers apart by up to a buffer or two per
+        // call). Instead: stop everything, set positions while stopped (exact,
+        // integer-only), then PlayScheduled all sources at one shared DSP time.
+        private void ResyncAllLayers(string reason)
+        {
+            if (currentTrack == null) return;
+
+            // Find a playing reference; fall back to the last known position if the
+            // interruption stopped everything (e.g. after a device change).
+            int referenceSamples;
+            int referenceFrequency;
 
             AudioSource reference = null;
             foreach (var layer in currentTrack.layers)
             {
-                if (layer.audioSource != null && layer.audioSource.isPlaying)
+                if (layer.audioSource != null && layer.audioSource.isPlaying && layer.audioSource.clip != null)
                 {
                     reference = layer.audioSource;
                     break;
                 }
             }
 
-            if (reference == null) return;
+            if (reference != null)
+            {
+                referenceSamples = reference.timeSamples;
+                referenceFrequency = reference.clip.frequency;
+            }
+            else if (lastKnownReferenceFrequency > 0)
+            {
+                referenceSamples = lastKnownReferenceSamples;
+                referenceFrequency = lastKnownReferenceFrequency;
+                LogSync("No layer currently playing — resyncing from last known position.");
+            }
+            else
+            {
+                LogSync("Resync requested but no reference position available — restarting from 0.");
+                referenceSamples = 0;
+                referenceFrequency = 0;
+            }
+
+            // Stop first — positions set on stopped sources are exact.
+            foreach (var layer in currentTrack.layers)
+                layer.audioSource?.Stop();
+
+            double dspStartTime = AudioSettings.dspTime + 0.1;
+            scheduledDspStartTime = dspStartTime;
 
             foreach (var layer in currentTrack.layers)
             {
-                if (layer.audioSource == null || layer.audioSource == reference) continue;
-                if (layer.audioClip == null || reference.clip == null) continue;
+                var source = layer.audioSource;
+                if (source == null || source.clip == null) continue;
 
-                float normalizedPosition = (float)reference.timeSamples / reference.clip.samples;
-                layer.audioSource.timeSamples = Mathf.FloorToInt(normalizedPosition * layer.audioClip.samples);
+                // Integer arithmetic only — no float normalisation. Convert through
+                // sample rate in case a stem was imported at a different frequency,
+                // and modulo by clip length so a mismatched stem can't index out of range.
+                if (referenceFrequency > 0)
+                {
+                    long target = (long)referenceSamples * source.clip.frequency / referenceFrequency;
+                    source.timeSamples = (int)(target % source.clip.samples);
+                }
+                else
+                {
+                    source.timeSamples = 0;
+                }
+
+                source.PlayScheduled(dspStartTime);
             }
 
-            Debug.Log("DynamicMusicManager: Resynced all layers after focus restored.");
+            lastLayerOffsets.Clear(); // Old offsets are meaningless after a resync
+            LogSync($"Hard-resynced all layers ({reason}). Scheduled dspTime={dspStartTime:F4}");
         }
 
         private void UnsubscribeFromEvents()
@@ -161,7 +269,167 @@ namespace DDD.TNFY.BRAWL
             TurnManager.OnTurnEnded -= OnTurnEnded;
             TurnManager.OnTurnNumberChanged -= OnTurnNumberChanged;
             UnitManager.OnUnitDied -= OnUnitDied;
+
+            AudioSettings.OnAudioConfigurationChanged -= OnAudioConfigurationChanged;
         }
+
+        #region Sync Diagnostics
+
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+        private void LateUpdate()
+        {
+            if (!logSyncDiagnostics || !trackIsPlaying || currentTrack == null) return;
+
+            // Reference = first playing layer with a clip.
+            AudioSource reference = null;
+            foreach (var layer in currentTrack.layers)
+            {
+                var src = layer.audioSource;
+                if (src != null && src.isPlaying && src.clip != null)
+                {
+                    reference = src;
+                    break;
+                }
+            }
+            if (reference == null) return;
+
+            // Keep a recovery position for device-change resyncs.
+            lastKnownReferenceSamples = reference.timeSamples;
+            lastKnownReferenceFrequency = reference.clip.frequency;
+
+            long referenceLen = reference.clip.samples;
+            bool anyProblem = false;
+
+            foreach (var layer in currentTrack.layers)
+            {
+                var src = layer.audioSource;
+                if (src == null || src.clip == null || src == reference) continue;
+
+                if (!src.isPlaying)
+                {
+                    // A layer that should be looping forever has stopped — that alone
+                    // is a smoking gun (virtualization, voice steal, or config change).
+                    if (!lastLayerOffsets.ContainsKey(layer.layerName) || lastLayerOffsets[layer.layerName] != long.MinValue)
+                    {
+                        LogSync($"LAYER STOPPED: '{layer.layerName}' is no longer playing!");
+                        DumpLayerSnapshot("layer stopped");
+                        lastLayerOffsets[layer.layerName] = long.MinValue;
+                    }
+                    continue;
+                }
+
+                // Phase offset vs reference, in the layer's own sample domain,
+                // wrapped to the nearer half of the loop.
+                long refInLayerDomain = (long)reference.timeSamples * src.clip.frequency / reference.clip.frequency;
+                long diff = src.timeSamples - refInLayerDomain;
+                long len = src.clip.samples;
+                diff = ((diff % len) + len) % len;
+                if (diff > len / 2) diff -= len;
+
+                bool hadPrevious = lastLayerOffsets.TryGetValue(layer.layerName, out long previousDiff)
+                                   && previousDiff != long.MinValue;
+
+                // SUDDEN JUMP: the offset changed by more than the noise floor since
+                // last frame. This is the exact signature you described — log the
+                // moment it happens with full context.
+                if (hadPrevious && System.Math.Abs(diff - previousDiff) > driftThresholdSamples)
+                {
+                    anyProblem = true;
+                    LogSync($"SUDDEN JUMP: '{layer.layerName}' offset changed {previousDiff} -> {diff} samples " +
+                            $"({(diff - previousDiff) / (float)src.clip.frequency * 1000f:F1}ms shift) vs '{reference.clip.name}'");
+                }
+                // SUSTAINED DRIFT: newly out of tolerance without a recorded jump.
+                else if (!hadPrevious && System.Math.Abs(diff) > driftThresholdSamples)
+                {
+                    anyProblem = true;
+                    LogSync($"OUT OF SYNC: '{layer.layerName}' is {diff} samples " +
+                            $"({diff / (float)src.clip.frequency * 1000f:F1}ms) off reference '{reference.clip.name}'");
+                }
+
+                lastLayerOffsets[layer.layerName] = diff;
+            }
+
+            if (anyProblem)
+                DumpLayerSnapshot("desync detected");
+        }
+
+        private void DumpLayerSnapshot(string context)
+        {
+            var sb = new System.Text.StringBuilder();
+            sb.AppendLine($"[MusicDebug] === Snapshot ({context}) ===");
+            sb.AppendLine($"frame={Time.frameCount} realtime={Time.realtimeSinceStartup:F3} dspTime={AudioSettings.dspTime:F4} scheduledStart={scheduledDspStartTime:F4}");
+            AudioSettings.GetDSPBufferSize(out int bufferLength, out int numBuffers);
+            sb.AppendLine($"dspBuffer={bufferLength}x{numBuffers} outputSampleRate={AudioSettings.outputSampleRate}");
+
+            foreach (var layer in currentTrack.layers)
+            {
+                var src = layer.audioSource;
+                if (src == null)
+                {
+                    sb.AppendLine($"  {layer.layerName}: <no source>");
+                    continue;
+                }
+                sb.AppendLine($"  {layer.layerName}: playing={src.isPlaying} timeSamples={src.timeSamples}" +
+                              $" clipSamples={(src.clip != null ? src.clip.samples : 0)}" +
+                              $" freq={(src.clip != null ? src.clip.frequency : 0)}" +
+                              $" vol={src.volume:F2} enabled={layer.isEnabled} priority={src.priority}");
+            }
+
+            Debug.LogWarning(sb.ToString());
+        }
+#endif
+
+        private void LogSync(string message)
+        {
+#if UNITY_EDITOR || DEVELOPMENT_BUILD
+            if (logSyncDiagnostics)
+                Debug.Log($"[MusicDebug] f{Time.frameCount} t{Time.realtimeSinceStartup:F3} dsp{AudioSettings.dspTime:F4} | {message}");
+#endif
+        }
+
+        // Catches the import-settings class of bug at the source: stems with unequal
+        // decoded sample counts (classic with MP3 encoder padding) drift one loop
+        // boundary at a time, and clips that aren't preloaded can start late.
+        private void ValidateLayerSync()
+        {
+            if (currentTrack == null || currentTrack.layers.Count == 0) return;
+
+            AudioClip first = null;
+            string firstName = null;
+
+            foreach (var layer in currentTrack.layers)
+            {
+                var clip = layer.audioClip;
+                if (clip == null)
+                {
+                    Debug.LogWarning($"[MusicDebug] Layer '{layer.layerName}' has no AudioClip assigned.");
+                    continue;
+                }
+
+                if (first == null)
+                {
+                    first = clip;
+                    firstName = layer.layerName;
+                }
+                else if (clip.samples != first.samples || clip.frequency != first.frequency)
+                {
+                    Debug.LogError(
+                        $"[MusicDebug] LOOP LENGTH MISMATCH: '{layer.layerName}' is {clip.samples} samples @ {clip.frequency}Hz " +
+                        $"but '{firstName}' is {first.samples} @ {first.frequency}Hz. " +
+                        "Unequal loop lengths WILL desync one loop boundary at a time. " +
+                        "Fix the source audio or import settings (avoid MP3 — encoder padding changes length).");
+                }
+
+                if (!layer.looping)
+                    Debug.LogWarning($"[MusicDebug] Layer '{layer.layerName}' has looping disabled in a synced track — it will fall silent and lose phase.");
+
+                if (clip.loadState != AudioDataLoadState.Loaded)
+                    Debug.LogWarning($"[MusicDebug] Clip '{clip.name}' not preloaded (loadState={clip.loadState}) — PlayScheduled may start late. " +
+                        "Enable 'Preload Audio Data' in the clip's import settings, and avoid Load Type: Streaming for synced layers.");
+            }
+        }
+
+        #endregion
 
         #region Object Pool Management
 
@@ -265,6 +533,8 @@ namespace DDD.TNFY.BRAWL
 
             currentTrack = track;
             layerLookup.Clear();
+            lastLayerOffsets.Clear();
+            lastKnownReferenceFrequency = 0;
 
             // Create audio sources for each layer using object pool
             foreach (var layer in track.layers)
@@ -272,6 +542,9 @@ namespace DDD.TNFY.BRAWL
                 CreateLayerAudioSource(layer);
                 layerLookup[layer.layerName] = layer;
             }
+
+            // Catch loop-length / import-settings problems before they become drift
+            ValidateLayerSync();
 
             // Start ALL layers simultaneously for perfect sync
             StartAllLayersSynchronized();
@@ -288,6 +561,7 @@ namespace DDD.TNFY.BRAWL
             }
 
             layerLookup.Clear();
+            lastLayerOffsets.Clear();
         }
 
         public void EnableLayer(string layerName, float fadeTime = -1f)
@@ -298,6 +572,8 @@ namespace DDD.TNFY.BRAWL
             if (layer.isEnabled) return;
 
             float actualFadeTime = fadeTime >= 0 ? fadeTime : layer.fadeInDuration;
+
+            LogSync($"EnableLayer('{layerName}') fade={actualFadeTime:F2}s");
 
             // Don't start/stop playback - just fade volume
             layer.isEnabled = true;
@@ -312,6 +588,8 @@ namespace DDD.TNFY.BRAWL
             if (!layer.isEnabled) return;
 
             float actualFadeTime = fadeTime >= 0 ? fadeTime : layer.fadeOutDuration;
+
+            LogSync($"DisableLayer('{layerName}') fade={actualFadeTime:F2}s");
 
             // Don't stop playback - just fade volume to 0
             layer.isEnabled = false;
@@ -373,6 +651,7 @@ namespace DDD.TNFY.BRAWL
             // at a slightly different moment in the DSP clock.
             // The 0.2s offset gives Unity's audio thread time to prepare all sources.
             double dspStartTime = AudioSettings.dspTime + 0.2;
+            scheduledDspStartTime = dspStartTime;
 
             foreach (var layer in currentTrack.layers)
             {
@@ -404,7 +683,7 @@ namespace DDD.TNFY.BRAWL
                 }
             }
 
-            Debug.Log($"Started track '{currentTrack.trackName}' with {currentTrack.layers.Count} synchronized layers");
+            LogSync($"Started track '{currentTrack.trackName}' with {currentTrack.layers.Count} layers, scheduled dspTime={dspStartTime:F4}");
         }
 
         private void FadeLayerVolume(MusicLayer layer, float fromVolume, float toVolume, float duration)
@@ -585,7 +864,6 @@ namespace DDD.TNFY.BRAWL
 
                     if (condition(trigger) && !layer.isEnabled)
                     {
-                        // Debug.Log($"Music trigger activated: Enabling layer '{layer.layerName}' due to {trigger.triggerType} trigger");
                         EnableLayer(layer.layerName);
 
                         // Mark as activated if it's a one-time trigger
@@ -605,7 +883,6 @@ namespace DDD.TNFY.BRAWL
 
                     if (condition(trigger) && layer.isEnabled)
                     {
-                        // Debug.Log($"Music trigger activated: Disabling layer '{layer.layerName}' due to {trigger.triggerType} trigger");
                         DisableLayer(layer.layerName);
 
                         // Mark as activated if it's a one-time trigger

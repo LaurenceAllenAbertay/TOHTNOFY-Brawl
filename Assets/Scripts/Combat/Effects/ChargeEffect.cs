@@ -169,12 +169,18 @@ namespace DDD.TNFY.BRAWL
             // Spawn hit VFX at the target's position
             CombatVFXManager.Instance?.SpawnHitEffects(ctx, new List<Unit> { target });
 
-            // Apply damage and any other per-target effects
+            // Apply all effects that belong to the per-target hit phases.
+            // Displacement effects (Knockback, Teleport, etc.) and the ChargeEffect itself
+            // are intentionally excluded — displacement of pass-through units is handled
+            // separately by ApplyChargeDisplacementWithAnimation on the destination unit only.
             var singleTarget = new List<Unit> { target };
             foreach (var effect in ctx.ability.effects)
             {
-                if (effect is DamageEffect || effect is StatusEffect)
-                    effect.Apply(ctx, singleTarget);
+                if (effect == null) continue;
+                if (effect.AnimationPhase == EffectAnimationPhase.Displacement) continue;
+                if (effect.AnimationPhase == EffectAnimationPhase.PreEffect) continue;
+                if (effect.IsSelfOnly(ctx)) continue;
+                effect.Apply(ctx, singleTarget);
             }
         }
 

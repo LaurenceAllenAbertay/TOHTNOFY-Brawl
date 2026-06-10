@@ -324,16 +324,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71024218b10efc34d9ec8ad2d09d1f89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  difficulty: 4
-  personality: 1
   teamId: 1
   hostileToAllNonTeam: 0
-  enableDebugLogging: 1
-  logDetailedScoring: 1
-  topActionsToLog: 5
+  aggressionBias: 0.8
+  lookAheadSteps: 2
   thinkingDelay: 2.5
   actionDelay: 0.8
   endTurnDelay: 1
+  enableDebugLogging: 0
+  logDetailedScoring: 0
+  topActionsToLog: 5
 --- !u!114 &-2197407118727056976
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -59,6 +59,11 @@ namespace DDD.TNFY.BRAWL
 
             Vector3 tileSpacing = GridManager.Instance.GetTileSpacing();
 
+            // Track which perpendicular lanes have been blocked by a wall.
+            // Each lane (w offset) is independent — a wall in the centre lane
+            // does not stop the outer lanes.
+            bool[] laneBlocked = new bool[effectiveWidth];
+
             for (int i = 0; i < max; i++)
             {
                 // Step forward one tile in the aim direction.
@@ -68,6 +73,11 @@ namespace DDD.TNFY.BRAWL
                 // For each row, expand perpendicular by halfWidth on each side.
                 for (int w = -halfWidth; w <= halfWidth; w++)
                 {
+                    int laneIndex = w + halfWidth;
+
+                    // Skip this lane entirely if a wall already blocked it.
+                    if (laneBlocked[laneIndex]) continue;
+
                     Vector3 tilePos = centerPos +
                         new Vector3(perp.x * tileSpacing.x * w, 0, perp.y * tileSpacing.z * w);
 
@@ -77,9 +87,36 @@ namespace DDD.TNFY.BRAWL
                     {
                         if (!affectsOverGaps) continue;
                     }
-                    else if (!tiles.Contains(nextTile))
+                    else
                     {
-                        tiles.Add(nextTile);
+                        // Determine the tile one step behind in this lane so we can raycast
+                        // from it (or from the caster tile on the first step).
+                        Tile prevTile;
+                        if (i == 0)
+                        {
+                            prevTile = start;
+                        }
+                        else
+                        {
+                            Vector3 prevPos = start.transform.position +
+                                new Vector3(dir.x * tileSpacing.x * i, 0, dir.y * tileSpacing.z * i) +
+                                new Vector3(perp.x * tileSpacing.x * w, 0, perp.y * tileSpacing.z * w);
+                            prevTile = GridManager.Instance.GetTileAtPosition(prevPos);
+                        }
+
+                        // If there is a wall between the previous tile and this one,
+                        // block this lane for all remaining steps (unless the ability
+                        // is flagged to pass through walls).
+                        if (!affectsThroughWalls && IsBlockedByWall(prevTile, nextTile))
+                        {
+                            laneBlocked[laneIndex] = true;
+                            continue;
+                        }
+
+                        if (!tiles.Contains(nextTile))
+                        {
+                            tiles.Add(nextTile);
+                        }
                     }
                 }
             }

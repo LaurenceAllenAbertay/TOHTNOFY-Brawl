@@ -5,160 +5,170 @@ using UnityEngine;
 
 namespace DDD.TNFY.BRAWL
 {
+    /// <summary>
+    /// Orchestrates an AI unit's turn.
+    ///
+    /// Responsibilities:
+    ///   • Holds all designer-facing configuration.
+    ///   • Listens to TurnManager events and launches the turn coroutine.
+    ///   • Builds the target list and hands it to AIPlanner.
+    ///   • Passes the resulting ActionPlan to AIExecutor.
+    ///
+    /// What this class does NOT do:
+    ///   • Score or evaluate actions — that is AIPlanner's job.
+    ///   • Execute movement or abilities — that is AIExecutor's job.
+    /// </summary>
     public class UnitAI : MonoBehaviour
     {
-        #region Enums
-
-        [System.Serializable]
-        public enum AIPersonality { Aggressive, Defensive, Supportive, Balanced }
-
-        #endregion
-
         #region Inspector Settings
 
-        [Header("AI Configuration")]
-        [Range(1, 10)] [SerializeField] private int difficulty = 5;
-        [SerializeField] private AIPersonality personality = AIPersonality.Balanced;
+        [Header("Team")]
+        [Tooltip("Units with the same teamId are allies and will not target each other.")]
         [SerializeField] private int teamId = 1;
+
+        [Tooltip("When true this unit is hostile to every unit not on its team, " +
+                 "including other enemy teams. When false it only targets PlayerUnits.")]
         [SerializeField] private bool hostileToAllNonTeam = false;
 
-        [Header("Debug Settings")]
-        [SerializeField] private bool enableDebugLogging = true;
-        [SerializeField] private bool logDetailedScoring = false;
-        [SerializeField] private int topActionsToLog = 3;
+        [Header("AI Behaviour")]
+        [Tooltip("0 = cautious (picks the safest tile that still advances toward the target). " +
+                 "1 = aggressive (always moves as close to the target as possible). " +
+                 "Does not affect ability priority — the unit will always attack when it can.")]
+        [Range(0f, 1f)]
+        [SerializeField] private float aggressionBias = 1f;
+
+        [Tooltip("1 = score only the current turn. " +
+                 "2 = also reward positions that will be in ability range next turn.")]
+        [Range(1, 2)]
+        [SerializeField] private int lookAheadSteps = 1;
 
         [Header("Timing")]
+        [Tooltip("Pause before the unit begins evaluating — gives the player time to read the board.")]
         [SerializeField] private float thinkingDelay = 1.5f;
+
+        [Tooltip("Short pause between movement and ability execution.")]
         [SerializeField] private float actionDelay = 0.8f;
+
+        [Tooltip("Pause after all actions are complete before the turn formally ends.")]
         [SerializeField] private float endTurnDelay = 1.0f;
+
+        [Header("Debug")]
+        [SerializeField] private bool enableDebugLogging = true;
+        [SerializeField] private bool logDetailedScoring = false;
+        [SerializeField] private int  topActionsToLog    = 3;
 
         #endregion
 
         #region Private Fields
 
-        private Unit unit;
-        private TurnManager turnManager;
-        private JumpSystem jumpSystem;
+        private Unit         unit;
+        private TurnManager  turnManager;
+        private JumpSystem   jumpSystem;
 
         private AIDebugLogger logger;
-        private AIEvaluator evaluator;
-        private AIExecutor executor;
+        private AIPlanner     planner;
+        private AIExecutor    executor;
 
-        // Targeting overrides — shared state that target management methods modify
-        private Dictionary<Unit, int> untargetableUnits = new Dictionary<Unit, int>();
-        private Dictionary<Unit, int> targetLikelyUnits = new Dictionary<Unit, int>();
+        // Per-unit targeting overrides — set externally by status effects (e.g. Taunting).
+        private readonly Dictionary<Unit, int> untargetableUnits  = new Dictionary<Unit, int>();
+        private readonly Dictionary<Unit, int> targetLikelyUnits  = new Dictionary<Unit, int>();
 
-        // Team coordination — static, shared across all AI instances
-        private static Dictionary<int, List<UnitAI>> teamGroups = new Dictionary<int, List<UnitAI>>();
+        // Static team registry — shared across all UnitAI instances so we can cheaply
+        // identify allies without a scene search every turn.
+        private static readonly Dictionary<int, List<UnitAI>> teamGroups
+            = new Dictionary<int, List<UnitAI>>();
 
         #endregion
 
         #region Unity Lifecycle
 
-        void Awake()
+        private void Awake()
         {
             unit = GetComponent<Unit>();
             if (unit == null)
             {
-                Debug.LogError($"UnitAI on {gameObject.name} requires a Unit component!");
+                Debug.LogError($"[UnitAI] {gameObject.name} requires a Unit component.");
                 enabled = false;
                 return;
             }
 
             RegisterWithTeam();
-            TurnManager.OnTurnStarted += OnTurnStarted;
-            TurnManager.OnTurnEnded += OnTurnEnded;
-            StatusEffectManager.OnStatusEffectApplied += OnStatusEffectApplied;
 
-            if (enableDebugLogging)
-                Debug.Log($"[{gameObject.name}] UnitAI initialized");
+            TurnManager.OnTurnStarted           += OnTurnStarted;
+            TurnManager.OnTurnEnded             += OnTurnEnded;
+            StatusEffectManager.OnStatusEffectApplied += OnStatusEffectApplied;
         }
 
-        void Start()
+        private void Start()
         {
             turnManager = FindAnyObjectByType<TurnManager>();
-            jumpSystem = FindAnyObjectByType<JumpSystem>();
+            jumpSystem  = FindAnyObjectByType<JumpSystem>();
 
-            // Construct helpers — each gets only what it needs
-            logger = new AIDebugLogger(unit, enableDebugLogging, logDetailedScoring, topActionsToLog);
-            evaluator = new AIEvaluator(unit, difficulty, personality, CanTargetUnit, IsAlly, logger);
+            logger  = new AIDebugLogger(unit, enableDebugLogging, logDetailedScoring, topActionsToLog);
+            planner = new AIPlanner(unit, aggressionBias, lookAheadSteps, CanTargetUnit, IsAlly, logger);
 
             executor = GetComponent<AIExecutor>();
             if (executor == null)
             {
-                Debug.LogError($"[{gameObject.name}] AIExecutor component is missing. Add it to the same prefab as UnitAI.");
+                Debug.LogError($"[UnitAI] {gameObject.name} is missing an AIExecutor component.");
                 enabled = false;
                 return;
             }
             executor.Initialize(unit, jumpSystem, logger);
         }
 
-        void OnDestroy()
+        private void OnDestroy()
         {
             UnregisterFromTeam();
-            TurnManager.OnTurnStarted -= OnTurnStarted;
-            TurnManager.OnTurnEnded -= OnTurnEnded;
+            TurnManager.OnTurnStarted                 -= OnTurnStarted;
+            TurnManager.OnTurnEnded                   -= OnTurnEnded;
             StatusEffectManager.OnStatusEffectApplied -= OnStatusEffectApplied;
         }
 
         #endregion
 
-        #region Team Management
-
-        private void RegisterWithTeam()
-        {
-            if (!teamGroups.ContainsKey(teamId))
-                teamGroups[teamId] = new List<UnitAI>();
-            if (!teamGroups[teamId].Contains(this))
-                teamGroups[teamId].Add(this);
-        }
-
-        private void UnregisterFromTeam()
-        {
-            if (teamGroups.ContainsKey(teamId))
-            {
-                teamGroups[teamId].Remove(this);
-                if (teamGroups[teamId].Count == 0)
-                    teamGroups.Remove(teamId);
-            }
-        }
-
-        private List<UnitAI> GetTeammates() =>
-            teamGroups.ContainsKey(teamId)
-                ? teamGroups[teamId].Where(ai => ai != this && ai != null).ToList()
-                : new List<UnitAI>();
-
-        #endregion
-
         #region Turn Orchestration
 
-        private void OnTurnStarted(Unit _unit)
+        private void OnTurnStarted(Unit activeUnit)
         {
-            if (_unit == unit)
-                StartCoroutine(ExecuteAITurn());
+            if (activeUnit != unit) return;
+
+            // TurnManager already handles Stunned, Shocked, and Dizzy in its own coroutines.
+            // Guard here so UnitAI never races against those.
+            if (StatusEffectManager.Instance != null)
+            {
+                if (StatusEffectManager.Instance.HasStatusEffect(unit, StatusEffectType.Stunned)  ||
+                    StatusEffectManager.Instance.HasStatusEffect(unit, StatusEffectType.Shocked)  ||
+                    StatusEffectManager.Instance.HasStatusEffect(unit, StatusEffectType.Dizzy))
+                    return;
+            }
+
+            StartCoroutine(ExecuteAITurn());
         }
 
-        private void OnTurnEnded(Unit _unit)
+        private void OnTurnEnded(Unit activeUnit)
         {
-            if (_unit == unit)
-                UpdateTargetingDurations();
+            if (activeUnit == unit)
+                TickTargetingDurations();
         }
 
         private IEnumerator ExecuteAITurn()
         {
             logger.LogTurnStart();
 
-            // Check for a queued follow-up action before normal AI evaluation.
+            // A pending action (e.g. set by Chug) takes priority over normal planning.
             if (unit.pendingAction.HasValue)
             {
-                var pending = unit.pendingAction.Value;
+                var pending      = unit.pendingAction.Value;
                 unit.pendingAction = null;
-                Debug.Log($"[UnitAI] {unit.name} auto-executing queued {pending.ability.abilityName}");
+
+                Debug.Log($"[UnitAI] {unit.name} executing queued action: {pending.ability.abilityName}");
+
                 var ctx = new AbilityContext
                 {
-                    caster = unit,
-                    ability = pending.ability,
-                    aimDir = pending.aimDir
+                    caster   = unit,
+                    ability  = pending.ability,
+                    aimDir   = pending.aimDir
                 };
                 yield return StartCoroutine(unit.ExecuteAbilityCoroutine(ctx));
                 yield return new WaitForSeconds(endTurnDelay);
@@ -168,17 +178,14 @@ namespace DDD.TNFY.BRAWL
 
             yield return new WaitForSeconds(thinkingDelay);
 
-            logger.LogEvaluationStart();
-            var targets = GetPotentialTargets();
-            var teammates = GetTeammates();
-            var evaluatedActions = evaluator.EvaluateAllActions(targets, teammates);
-            logger.LogEvaluationResults(evaluatedActions);
+            var targets      = GetTargets();
+            logger.LogTargetsAndTeammates(targets, new List<UnitAI>());
 
-            var selectedPlan = evaluator.SelectBestAction(evaluatedActions);
-            logger.LogSelectedAction(selectedPlan);
+            var plan = planner.Plan(targets);
+            logger.LogSelectedAction(plan);
 
-            if (selectedPlan != null)
-                yield return StartCoroutine(executor.ExecuteActionPlan(selectedPlan, actionDelay));
+            if (plan != null)
+                yield return StartCoroutine(executor.ExecuteActionPlan(plan, actionDelay));
             else
             {
                 logger.LogNoValidActions();
@@ -192,102 +199,144 @@ namespace DDD.TNFY.BRAWL
 
         #endregion
 
-        #region Target Management
+        #region Target List
 
         /// <summary>
-        /// Handles Taunting application: when any unit receives Taunting, this AI registers
-        /// that unit as a likely target for the effect's duration.
-        /// Decouples StatusEffectManager from UnitAI — the manager fires the existing
-        /// OnStatusEffectApplied event and each AI decides what to do with it.
+        /// Builds the list of units this AI should consider targeting this turn.
+        /// Respects team affiliation, untargetable overrides, and Taunting priority.
         /// </summary>
-        private void OnStatusEffectApplied(Unit target, StatusEffectInstance effect)
-        {
-            if (effect.effectData.effectType == StatusEffectType.Taunting)
-                AddTargetLikelyUnit(target, effect.remainingDuration);
-        }
-
-        public List<Unit> GetPotentialTargets()
+        private List<Unit> GetTargets()
         {
             var targets = new List<Unit>();
-            foreach (var targetUnit in UnitManager.AllUnits)
+
+            foreach (var candidate in UnitManager.AllUnits)
             {
-                if (targetUnit is EnemyUnit) continue;
-                if (!ShouldTargetUnit(targetUnit)) continue;
-                targets.Add(targetUnit);
+                if (candidate == null || candidate.IsDead) continue;
+                if (!ShouldTarget(candidate)) continue;
+                if (!CanTargetUnit(candidate)) continue;
+                targets.Add(candidate);
             }
+
+            // If any unit has Taunting, restrict the target list to them.
+            var taunting = targets.Where(t => targetLikelyUnits.ContainsKey(t)).ToList();
+            if (taunting.Count > 0) return taunting;
+
             return targets;
         }
 
-        private bool ShouldTargetUnit(Unit targetUnit)
+        private bool ShouldTarget(Unit candidate)
         {
-            if (targetUnit is EnemyUnit enemyTarget)
-            {
-                var targetAI = enemyTarget.GetComponent<UnitAI>();
-                if (targetAI != null && targetAI.teamId == teamId) return false;
-            }
-            return hostileToAllNonTeam || targetUnit is PlayerUnit;
-        }
+            // Never target self.
+            if (candidate == unit) return false;
 
-        public bool CanTargetUnit(Unit target) =>
-            unit.CanTarget(target) && !untargetableUnits.ContainsKey(target);
+            // Never target dead units.
+            if (candidate.IsDead) return false;
 
-        public bool IsAlly(Unit testUnit)
-        {
-            if (testUnit is EnemyUnit enemyUnit)
-            {
-                var enemyAI = enemyUnit.GetComponent<UnitAI>();
-                return enemyAI != null && enemyAI.teamId == teamId;
-            }
-            return false;
-        }
+            // Never target allies.
+            if (IsAlly(candidate)) return false;
 
-        public void AddUntargetableUnit(Unit targetUnit, int duration)
-        {
-            if (targetUnit == null) return;
-            if (untargetableUnits.ContainsKey(targetUnit))
-                untargetableUnits[targetUnit] = Mathf.Max(untargetableUnits[targetUnit], duration);
-            else
-                untargetableUnits[targetUnit] = duration;
-        }
+            // When hostileToAllNonTeam is false, only PlayerUnits are valid targets.
+            if (!hostileToAllNonTeam && !(candidate is PlayerUnit)) return false;
 
-        public void AddTargetLikelyUnit(Unit targetUnit, int duration)
-        {
-            if (targetUnit == null) return;
-            if (targetLikelyUnits.ContainsKey(targetUnit))
-                targetLikelyUnits[targetUnit] = Mathf.Max(targetLikelyUnits[targetUnit], duration);
-            else
-                targetLikelyUnits[targetUnit] = duration;
-        }
-
-        public bool IsLikelyTarget(Unit targetUnit) =>
-            targetUnit != null && targetLikelyUnits.ContainsKey(targetUnit);
-
-        private void UpdateTargetingDurations()
-        {
-            DecrementDurations(untargetableUnits);
-            DecrementDurations(targetLikelyUnits);
-        }
-
-        private static void DecrementDurations(Dictionary<Unit, int> dict)
-        {
-            var toRemove = new List<Unit>();
-            foreach (var key in new List<Unit>(dict.Keys))
-            {
-                if (key == null) { toRemove.Add(key); continue; }
-                dict[key]--;
-                if (dict[key] <= 0) toRemove.Add(key);
-            }
-            foreach (var key in toRemove) dict.Remove(key);
+            return true;
         }
 
         #endregion
 
-        #region Public Properties
+        #region Targeting Predicates (passed to AIPlanner)
 
-        public int Difficulty => difficulty;
-        public AIPersonality Personality => personality;
-        public int TeamId => teamId;
-        public bool HostileToAllNonTeam => hostileToAllNonTeam;
+        /// <summary>True when this unit is permitted to target the given unit this turn.</summary>
+        public bool CanTargetUnit(Unit target)
+            => unit.CanTarget(target) && !untargetableUnits.ContainsKey(target);
+
+        /// <summary>True when the given unit is an ally (same team, or explicitly allied).</summary>
+        public bool IsAlly(Unit candidate)
+        {
+            if (candidate is EnemyUnit enemy)
+            {
+                var ai = enemy.GetComponent<UnitAI>();
+                return ai != null && ai.teamId == teamId;
+            }
+            return false;
+        }
+
+        #endregion
+
+        #region Targeting Overrides (set by external systems, e.g. StatusEffectManager)
+
+        /// <summary>
+        /// Marks a unit as untargetable for the specified number of turns.
+        /// If already present, the longer duration is kept.
+        /// </summary>
+        public void AddUntargetableUnit(Unit target, int duration)
+        {
+            if (target == null) return;
+            if (untargetableUnits.TryGetValue(target, out int existing))
+                untargetableUnits[target] = Mathf.Max(existing, duration);
+            else
+                untargetableUnits[target] = duration;
+        }
+
+        /// <summary>
+        /// Marks a unit as a priority target (e.g. Taunting) for the specified turns.
+        /// </summary>
+        public void AddTargetLikelyUnit(Unit target, int duration)
+        {
+            if (target == null) return;
+            if (targetLikelyUnits.TryGetValue(target, out int existing))
+                targetLikelyUnits[target] = Mathf.Max(existing, duration);
+            else
+                targetLikelyUnits[target] = duration;
+        }
+
+        /// <summary>Decrements all targeting override durations. Called at end of each turn.</summary>
+        private void TickTargetingDurations()
+        {
+            DecrementAndClean(untargetableUnits);
+            DecrementAndClean(targetLikelyUnits);
+        }
+
+        private static void DecrementAndClean(Dictionary<Unit, int> dict)
+        {
+            var keys = new List<Unit>(dict.Keys);
+            foreach (var key in keys)
+            {
+                dict[key]--;
+                if (dict[key] <= 0)
+                    dict.Remove(key);
+            }
+        }
+
+        #endregion
+
+        #region Status Effect Responses
+
+        private void OnStatusEffectApplied(Unit target, StatusEffectInstance effect)
+        {
+            // When Taunting is applied to any unit, register that unit as a priority target.
+            if (effect.effectData.effectType == StatusEffectType.Taunting)
+                AddTargetLikelyUnit(target, effect.remainingDuration);
+        }
+
+        #endregion
+
+        #region Team Registry
+
+        private void RegisterWithTeam()
+        {
+            if (!teamGroups.ContainsKey(teamId))
+                teamGroups[teamId] = new List<UnitAI>();
+            if (!teamGroups[teamId].Contains(this))
+                teamGroups[teamId].Add(this);
+        }
+
+        private void UnregisterFromTeam()
+        {
+            if (!teamGroups.ContainsKey(teamId)) return;
+            teamGroups[teamId].Remove(this);
+            if (teamGroups[teamId].Count == 0)
+                teamGroups.Remove(teamId);
+        }
 
         #endregion
     }

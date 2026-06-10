@@ -6,7 +6,7 @@ namespace DDD.TNFY.BRAWL
 {
     /// <summary>
     /// Plain class that owns all AI debug logging.
-    /// Instantiated by UnitAI and passed to AIEvaluator and AIExecutor.
+    /// Instantiated by UnitAI and passed to AIPlanner and AIExecutor.
     /// Contains no Unity lifecycle methods — not a MonoBehaviour.
     /// </summary>
     public class AIDebugLogger
@@ -14,15 +14,17 @@ namespace DDD.TNFY.BRAWL
         private readonly Unit unit;
         private readonly bool enableDebugLogging;
         private readonly bool logDetailedScoring;
-        private readonly int topActionsToLog;
+        private readonly int  topActionsToLog;
 
         public AIDebugLogger(Unit unit, bool enableDebugLogging, bool logDetailedScoring = false, int topActionsToLog = 3)
         {
-            this.unit = unit;
+            this.unit               = unit;
             this.enableDebugLogging = enableDebugLogging;
             this.logDetailedScoring = logDetailedScoring;
-            this.topActionsToLog = topActionsToLog;
+            this.topActionsToLog    = topActionsToLog;
         }
+
+        // ── Turn lifecycle ────────────────────────────────────────────────────────
 
         public void LogTurnStart()
         {
@@ -32,11 +34,13 @@ namespace DDD.TNFY.BRAWL
             Debug.Log($"[{unit.name}] Health: {unit.currentHealth}/{unit.characterData.maxHealth}");
         }
 
-        public void LogEvaluationStart()
+        public void LogTurnEnd()
         {
             if (!enableDebugLogging) return;
-            Debug.Log($"[{unit.name}] Starting action evaluation...");
+            Debug.Log($"[{unit.name}] === TURN END ===");
         }
+
+        // ── Planning ──────────────────────────────────────────────────────────────
 
         public void LogTargetsAndTeammates(List<Unit> targets, List<UnitAI> teammates)
         {
@@ -55,43 +59,42 @@ namespace DDD.TNFY.BRAWL
             if (teammates.Count > 0)
             {
                 string names = string.Join(", ", teammates.Select(t => t.name));
-                Debug.Log($"[{unit.name}] Found {teammates.Count} teammates: {names}");
+                Debug.Log($"[{unit.name}] Teammates: {names}");
             }
         }
 
-        public void LogEvaluationResults(List<ActionPlan> evaluatedActions)
+        /// <summary>
+        /// Logs the plan chosen by AIPlanner, including the reason it was selected.
+        /// Replaces the old score-based LogSelectedAction.
+        /// </summary>
+        public void LogSelectedAction(ActionPlan plan)
         {
             if (!enableDebugLogging) return;
-            Debug.Log($"[{unit.name}] Evaluation complete. Generated {evaluatedActions.Count} total action options");
 
-            if (evaluatedActions.Count > 0)
+            if (plan == null)
             {
-                Debug.Log($"[{unit.name}] TOP {Mathf.Min(topActionsToLog, evaluatedActions.Count)} ACTION OPTIONS:");
-                for (int i = 0; i < Mathf.Min(topActionsToLog, evaluatedActions.Count); i++)
-                {
-                    var action = evaluatedActions[i];
-                    Debug.Log($"[{unit.name}] #{i + 1}: {GetActionDescription(action, unit)} | Total: {action.totalScore:F1}{GetScoreBreakdown(action)}");
-                }
+                Debug.Log($"[{unit.name}] No plan selected.");
+                return;
             }
+
+            Debug.Log($"[{unit.name}] SELECTED PLAN: {GetActionDescription(plan, unit)}" +
+                      $"{(string.IsNullOrEmpty(plan.debugReason) ? "" : $" | Reason: {plan.debugReason}")}");
         }
 
-        public void LogSelectedAction(ActionPlan selectedPlan)
-        {
-            if (!enableDebugLogging || selectedPlan == null) return;
-            Debug.Log($"[{unit.name}] SELECTED ACTION: {GetActionDescription(selectedPlan, unit)} (Score: {selectedPlan.totalScore:F1})");
-        }
-
+        /// <summary>Logs the reason a particular planning stage was chosen.</summary>
         public void LogSelectionReason(string reason)
         {
             if (!enableDebugLogging) return;
-            Debug.Log($"[{unit.name}] Selection logic: {reason}");
+            Debug.Log($"[{unit.name}] Planner: {reason}");
         }
 
         public void LogNoValidActions()
         {
             if (!enableDebugLogging) return;
-            Debug.Log($"[{unit.name}] No valid actions available - ending turn");
+            Debug.Log($"[{unit.name}] No valid actions available — ending turn");
         }
+
+        // ── Execution ─────────────────────────────────────────────────────────────
 
         public void LogActionExecution()
         {
@@ -99,27 +102,35 @@ namespace DDD.TNFY.BRAWL
             Debug.Log($"[{unit.name}] === EXECUTING ACTION ===");
         }
 
-        public void LogAbilityExecution(ActionPlan plan)
+        public void LogMovement(string movementType, Tile destination)
         {
             if (!enableDebugLogging) return;
+            Debug.Log($"[{unit.name}] {movementType} to {destination?.name ?? "null"}");
+        }
+
+        public void LogAbilityExecution(ActionPlan plan)
+        {
+            if (!enableDebugLogging || plan?.abilityToUse == null) return;
+
             string targetInfo = "";
-            if (plan.targetTile != null && plan.targetTile.currentUnit != null)
+            if (plan.targetTile?.currentUnit != null)
                 targetInfo = $" targeting {plan.targetTile.currentUnit.name}";
             else if (plan.aimDirection != Vector2Int.zero)
                 targetInfo = $" aimed {GetDirectionName(plan.aimDirection)}";
-            Debug.Log($"[{unit.name}] Using ability '{plan.abilityToUse.abilityName}'{targetInfo}");
+
+            Debug.Log($"[{unit.name}] Using '{plan.abilityToUse.abilityName}'{targetInfo}");
         }
 
         public void LogAbilitySuccess(Ability ability)
         {
             if (!enableDebugLogging) return;
-            Debug.Log($"[{unit.name}] Ability '{ability.abilityName}' executed successfully");
+            Debug.Log($"[{unit.name}] '{ability.abilityName}' executed successfully");
         }
 
         public void LogAbilityFailure(Ability ability)
         {
             if (!enableDebugLogging) return;
-            Debug.LogWarning($"[{unit.name}] Ability '{ability.abilityName}' failed to execute");
+            Debug.LogWarning($"[{unit.name}] '{ability.abilityName}' failed to execute");
         }
 
         public void LogActionComplete()
@@ -128,72 +139,55 @@ namespace DDD.TNFY.BRAWL
             Debug.Log($"[{unit.name}] Action execution complete");
         }
 
-        public void LogTurnEnd()
-        {
-            if (!enableDebugLogging) return;
-            Debug.Log($"[{unit.name}] === TURN END ===");
-        }
+        // ── Static helpers ────────────────────────────────────────────────────────
 
-        public void LogMovement(string movementType, Tile destination)
+        /// <summary>
+        /// Builds a human-readable description of a plan for log output.
+        /// Works for both ability-first and move-first plans.
+        /// </summary>
+        public static string GetActionDescription(ActionPlan plan, Unit unit)
         {
-            if (!enableDebugLogging) return;
-            Debug.Log($"[{unit.name}] {movementType} to {destination?.name}");
-        }
+            if (plan == null) return "None";
 
-        // ── Static helpers ───────────────────────────────────────────────────────
-
-        public static string GetActionDescription(ActionPlan action, Unit unit)
-        {
             var parts = new List<string>();
 
-            if (action.isAbilityFirst)
+            if (plan.isAbilityFirst)
             {
-                if (action.abilityToUse != null)
-                {
-                    string desc = $"Use '{action.abilityToUse.abilityName}'";
-                    if (action.targetTile?.currentUnit != null) desc += $" on {action.targetTile.currentUnit.name}";
-                    else if (action.aimDirection != Vector2Int.zero) desc += $" {GetDirectionName(action.aimDirection)}";
-                    parts.Add(desc);
-                }
-                if (action.movementTarget != null && action.movementTarget != action.abilityFromPosition)
-                    parts.Add($"then {(action.isJump ? "Jump" : "Move")} to {action.movementTarget.name}");
+                if (plan.abilityToUse != null)
+                    parts.Add(FormatAbilityPart(plan));
+
+                if (plan.movementTarget != null && plan.movementTarget != unit.currentTile)
+                    parts.Add($"then {(plan.isJump ? "Jump" : "Move")} to {plan.movementTarget.name}");
             }
             else
             {
-                if (action.movementTarget != null && action.movementTarget != unit.currentTile)
-                    parts.Add($"{(action.isJump ? "Jump" : "Move")} to {action.movementTarget.name}");
+                if (plan.movementTarget != null && plan.movementTarget != unit.currentTile)
+                    parts.Add($"{(plan.isJump ? "Jump" : "Move")} to {plan.movementTarget.name}");
                 else
                     parts.Add("Stay in place");
 
-                if (action.abilityToUse != null)
-                {
-                    string desc = $"Use '{action.abilityToUse.abilityName}'";
-                    if (action.targetTile?.currentUnit != null) desc += $" on {action.targetTile.currentUnit.name}";
-                    else if (action.aimDirection != Vector2Int.zero) desc += $" {GetDirectionName(action.aimDirection)}";
-                    parts.Add(desc);
-                }
+                if (plan.abilityToUse != null)
+                    parts.Add(FormatAbilityPart(plan));
             }
 
-            return string.Join(" + ", parts);
+            return parts.Count > 0 ? string.Join(" + ", parts) : "No action";
         }
 
-        private string GetScoreBreakdown(ActionPlan action)
+        private static string FormatAbilityPart(ActionPlan plan)
         {
-            if (!logDetailedScoring) return "";
-            var breakdown = new List<string>();
-            if (action.damageScore != 0) breakdown.Add($"Dmg:{action.damageScore:F1}");
-            if (action.positionScore != 0) breakdown.Add($"Pos:{action.positionScore:F1}");
-            if (action.safetyScore != 0) breakdown.Add($"Saf:{action.safetyScore:F1}");
-            if (action.teamworkScore != 0) breakdown.Add($"Team:{action.teamworkScore:F1}");
-            if (action.statusEffectScore != 0) breakdown.Add($"Eff:{action.statusEffectScore:F1}");
-            return breakdown.Count > 0 ? $" ({string.Join(", ", breakdown)})" : "";
+            string desc = $"Use '{plan.abilityToUse.abilityName}'";
+            if (plan.targetTile?.currentUnit != null)
+                desc += $" on {plan.targetTile.currentUnit.name}";
+            else if (plan.aimDirection != Vector2Int.zero)
+                desc += $" {GetDirectionName(plan.aimDirection)}";
+            return desc;
         }
 
         public static string GetDirectionName(Vector2Int direction)
         {
-            if (direction == Vector2Int.up) return "North";
-            if (direction == Vector2Int.down) return "South";
-            if (direction == Vector2Int.left) return "West";
+            if (direction == Vector2Int.up)    return "North";
+            if (direction == Vector2Int.down)  return "South";
+            if (direction == Vector2Int.left)  return "West";
             if (direction == Vector2Int.right) return "East";
             return "Unknown";
         }
