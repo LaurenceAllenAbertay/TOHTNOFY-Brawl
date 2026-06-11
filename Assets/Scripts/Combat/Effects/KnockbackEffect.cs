@@ -132,7 +132,13 @@ namespace DDD.TNFY.BRAWL
 
             if (!forceKnockback && knockbackPath.Count == 0)
             {
-                // Restore player state if this was a player self-knockback
+                // No valid tile to move to, but still play the animation so the player
+                // gets visual feedback that knockback was blocked (e.g. wall behind caster).
+                unitAnimator.PlayKnockbackStart();
+                yield return new WaitForSeconds(knockbackStartDuration);
+                unitAnimator.PlayKnockbackEnd();
+                yield return new WaitForSeconds(knockbackEndDuration);
+
                 if (isPlayerSelfKnockback)
                 {
                     RestorePlayerStateAfterKnockback(target);
@@ -341,6 +347,16 @@ namespace DDD.TNFY.BRAWL
                     break;
                 }
 
+                int currentLevel = GridManager.Instance.GetYLevel(currentTile);
+                int nextLevel    = GridManager.Instance.GetYLevel(nextTile);
+
+                // Upper layers are treated as walls — knockback cannot go up.
+                if (nextLevel > currentLevel)
+                {
+                    Debug.Log($"[Knockback] {target.name} step {step}: tile {nextTile.name} is on a higher layer ({nextLevel} > {currentLevel}) - treating as wall");
+                    break;
+                }
+
                 if (!nextTile.passableTerrain)
                 {
                     Debug.Log($"[Knockback] {target.name} step {step}: tile {nextTile.name} is impassable");
@@ -353,8 +369,17 @@ namespace DDD.TNFY.BRAWL
                     break;
                 }
 
+                // Lower layers are valid and count as 1 step — once we drop a layer
+                // the unit has landed, so stop here regardless of remaining distance.
+                bool isDropDown = nextLevel < currentLevel;
                 path.Add(nextTile);
                 currentTile = nextTile;
+
+                if (isDropDown)
+                {
+                    Debug.Log($"[Knockback] {target.name} step {step}: knocked down to lower layer {nextTile.name} - stopping");
+                    break;
+                }
             }
 
             Debug.Log($"[Knockback] {target.name} path calculated: {path.Count} tiles in dir {knockbackDir}");
@@ -395,7 +420,22 @@ namespace DDD.TNFY.BRAWL
                     break;
                 }
 
+                int currentLevel = GridManager.Instance.GetYLevel(target.currentTile);
+                int nextLevel    = GridManager.Instance.GetYLevel(nextTile);
+
+                // Upper layers are treated as walls — knockback cannot go up.
+                if (nextLevel > currentLevel)
+                {
+                    Debug.Log($"[Knockback Immediate] {target.name}: tile {nextTile.name} is on a higher layer - treating as wall");
+                    break;
+                }
+
+                bool isDropDown = nextLevel < currentLevel;
                 target.SetCurrentTile(nextTile);
+
+                // Lower layer counts as 1 step — the unit has landed, stop here.
+                if (isDropDown)
+                    break;
             }
         }
 
@@ -407,10 +447,14 @@ namespace DDD.TNFY.BRAWL
             {
                 Tile targetTile = GridManager.Instance.GetTileInDirection(fromTile, direction);
 
-                if (targetTile != null && targetTile.passableTerrain && !targetTile.occupied)
-                {
-                    return targetTile;
-                }
+                if (targetTile == null || !targetTile.passableTerrain || targetTile.occupied)
+                    continue;
+
+                // Never allow knockback up to a higher layer.
+                if (GridManager.Instance.GetYLevel(targetTile) > GridManager.Instance.GetYLevel(fromTile))
+                    continue;
+
+                return targetTile;
             }
 
             return null;
@@ -426,7 +470,11 @@ namespace DDD.TNFY.BRAWL
             // Knockback the collided unit by 1 tile
             Tile newDestination = GridManager.Instance.GetTileInDirection(collidedUnit.currentTile, knockbackDirection);
 
-            if (newDestination != null && newDestination.passableTerrain && !newDestination.occupied)
+            // Secondary knockback also respects the no-upward-layer rule.
+            bool destinationIsHigher = newDestination != null &&
+                GridManager.Instance.GetYLevel(newDestination) > GridManager.Instance.GetYLevel(collidedUnit.currentTile);
+
+            if (newDestination != null && newDestination.passableTerrain && !newDestination.occupied && !destinationIsHigher)
             {
                 var collidedAnimator = collidedUnit.GetComponent<UnitAnimator>();
                 if (collidedAnimator != null)

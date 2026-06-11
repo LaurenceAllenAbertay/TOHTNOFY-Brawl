@@ -130,8 +130,6 @@ MonoBehaviour:
   characterData: {fileID: 11400000, guid: 88a185d244b55a54cb36452b6bc6d1bb, type: 2}
   goesFirst: 1
   currentHealth: 0
-  currentAttack: 0
-  currentDefense: 0
   currentTile: {fileID: 0}
   currentSpeed: 0
   canMove: 0
