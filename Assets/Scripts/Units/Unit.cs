@@ -15,11 +15,32 @@ namespace DDD.TNFY.BRAWL
 
         [Header("Runtime Stats")]
         public int currentHealth;
-        public int currentAttack;
-        public int currentDefense;
         public Tile currentTile;
         public int currentSpeed;
         public bool canMove;
+
+        // Base stats set once from CharacterData at initialisation.
+        // Never modified after that — status effects are layered on top via multipliers.
+        private int _baseAttack;
+        private int _baseDefense;
+
+        /// <summary>
+        /// The unit's effective attack stat this turn.
+        /// Computed from the base stat and any active AttackUp/AttackDown multipliers.
+        /// Each point of effectPower on an attack modifier is worth ±10% of the base value.
+        /// Reading this value is always safe and always reflects the current game state.
+        /// </summary>
+        public int currentAttack
+            => Mathf.Max(0, Mathf.RoundToInt(_baseAttack * StatusEffectManager.GetAttackMultiplier(this)));
+
+        /// <summary>
+        /// The unit's effective defense stat this turn.
+        /// Computed from the base stat and any active DefenseUp/DefenseDown multipliers.
+        /// Each point of effectPower on a defense modifier is worth ±10% of the base value.
+        /// Reading this value is always safe and always reflects the current game state.
+        /// </summary>
+        public int currentDefense
+            => Mathf.Max(0, Mathf.RoundToInt(_baseDefense * StatusEffectManager.GetDefenseMultiplier(this)));
 
         // Flat bonus added to all ability ranges at targeting time.
         // Set by passives (e.g. Cannoneer). Does not affect movement range.
@@ -66,10 +87,10 @@ namespace DDD.TNFY.BRAWL
 
             if (characterData)
             {
-                currentHealth = characterData.maxHealth;
-                currentAttack = characterData.attack;
-                currentDefense = characterData.defense;
-                currentSpeed = characterData.speed;
+                currentHealth  = characterData.maxHealth;
+                _baseAttack    = characterData.attack;
+                _baseDefense   = characterData.defense;
+                currentSpeed   = characterData.speed;
             }
 
             if (currentTile == null)

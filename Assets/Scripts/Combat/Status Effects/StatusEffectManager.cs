@@ -326,16 +326,16 @@ namespace DDD.TNFY.BRAWL
             switch (effect.effectData.effectType)
             {
                 case StatusEffectType.AttackUp:
-                    effect.target.currentAttack += Mathf.RoundToInt(effect.effectPower);
-                    break;
                 case StatusEffectType.AttackDown:
-                    effect.target.currentAttack -= Mathf.RoundToInt(effect.effectPower);
+                    // Attack is now a computed property on Unit (base * multiplier).
+                    // The StatusEffectInstance existing in activeEffects is sufficient —
+                    // no direct stat mutation required.
                     break;
                 case StatusEffectType.DefenseUp:
-                    effect.target.currentDefense += Mathf.RoundToInt(effect.effectPower);
-                    break;
                 case StatusEffectType.DefenseDown:
-                    effect.target.currentDefense -= Mathf.RoundToInt(effect.effectPower);
+                    // Defense is now a computed property on Unit (base * multiplier).
+                    // The StatusEffectInstance existing in activeEffects is sufficient —
+                    // no direct stat mutation required.
                     break;
                 case StatusEffectType.SpeedUp:
                     effect.target.currentSpeed += Mathf.RoundToInt(effect.effectPower);
@@ -387,16 +387,14 @@ namespace DDD.TNFY.BRAWL
             switch (effect.effectData.effectType)
             {
                 case StatusEffectType.AttackUp:
-                    effect.target.currentAttack -= Mathf.RoundToInt(effect.effectPower);
-                    break;
                 case StatusEffectType.AttackDown:
-                    effect.target.currentAttack += Mathf.RoundToInt(effect.effectPower);
+                    // Attack is a computed property — removing the instance from activeEffects
+                    // (done by the caller) is all that is needed. No manual revert required.
                     break;
                 case StatusEffectType.DefenseUp:
-                    effect.target.currentDefense -= Mathf.RoundToInt(effect.effectPower);
-                    break;
                 case StatusEffectType.DefenseDown:
-                    effect.target.currentDefense += Mathf.RoundToInt(effect.effectPower);
+                    // Defense is a computed property — removing the instance from activeEffects
+                    // (done by the caller) is all that is needed. No manual revert required.
                     break;
                 case StatusEffectType.SpeedUp:
                     effect.target.currentSpeed -= Mathf.RoundToInt(effect.effectPower);
@@ -443,6 +441,56 @@ namespace DDD.TNFY.BRAWL
                                     Quaternion.identity);
                 Destroy(vfx, 2f);
             }
+        }
+
+        /// <summary>
+        /// Returns the combined attack multiplier for <paramref name="unit"/> based on all
+        /// currently active AttackUp and AttackDown effects.
+        /// Each point of effectPower contributes ±10% (e.g. effectPower 2 = ±20%).
+        /// Returns 1.0 when no modifiers are active, so the base stat is unchanged.
+        /// Clamped to a minimum of 0 so attack can never go negative.
+        /// Called by Unit.currentAttack — do not call this inside StatusEffectManager
+        /// methods that already hold the activeEffects lock.
+        /// </summary>
+        public static float GetAttackMultiplier(Unit unit)
+        {
+            if (Instance == null || unit == null) return 1f;
+            if (!Instance.activeEffects.TryGetValue(unit, out var effects)) return 1f;
+
+            float multiplier = 1f;
+            foreach (var effect in effects)
+            {
+                if (effect.effectData.effectType == StatusEffectType.AttackUp)
+                    multiplier += effect.effectPower * 0.1f;
+                else if (effect.effectData.effectType == StatusEffectType.AttackDown)
+                    multiplier -= effect.effectPower * 0.1f;
+            }
+            return Mathf.Max(0f, multiplier);
+        }
+
+        /// <summary>
+        /// Returns the combined defense multiplier for <paramref name="unit"/> based on all
+        /// currently active DefenseUp and DefenseDown effects.
+        /// Each point of effectPower contributes ±10% (e.g. effectPower 2 = ±20%).
+        /// Returns 1.0 when no modifiers are active, so the base stat is unchanged.
+        /// Clamped to a minimum of 0 so defense can never go negative.
+        /// Called by Unit.currentDefense — do not call this inside StatusEffectManager
+        /// methods that already hold the activeEffects lock.
+        /// </summary>
+        public static float GetDefenseMultiplier(Unit unit)
+        {
+            if (Instance == null || unit == null) return 1f;
+            if (!Instance.activeEffects.TryGetValue(unit, out var effects)) return 1f;
+
+            float multiplier = 1f;
+            foreach (var effect in effects)
+            {
+                if (effect.effectData.effectType == StatusEffectType.DefenseUp)
+                    multiplier += effect.effectPower * 0.1f;
+                else if (effect.effectData.effectType == StatusEffectType.DefenseDown)
+                    multiplier -= effect.effectPower * 0.1f;
+            }
+            return Mathf.Max(0f, multiplier);
         }
     }
 }
