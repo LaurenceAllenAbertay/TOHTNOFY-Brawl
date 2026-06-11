@@ -85,7 +85,13 @@ namespace DDD.TNFY.BRAWL
 
                     if (nextTile == null)
                     {
-                        if (!affectsOverGaps) continue;
+                        // No tile at this position (gap).
+                        // If the ability shoots over gaps, keep stepping — tiles beyond
+                        // the gap are still valid targets.  If it can't, leave the lane
+                        // open so a later tile at the same w-offset can still be reached
+                        // (walls block lanes, gaps don't unless explicitly disallowed).
+                        if (!affectsOverGaps) laneBlocked[laneIndex] = true;
+                        continue;
                     }
                     else
                     {
@@ -107,7 +113,10 @@ namespace DDD.TNFY.BRAWL
                         // If there is a wall between the previous tile and this one,
                         // block this lane for all remaining steps (unless the ability
                         // is flagged to pass through walls).
-                        if (!affectsThroughWalls && IsBlockedByWall(prevTile, nextTile))
+                        // prevTile can be null when the previous step was a gap — in that
+                        // case IsBlockedByWall would return true on the null, falsely
+                        // blocking the lane. Skip the wall check when we flew over a gap.
+                        if (!affectsThroughWalls && prevTile != null && IsBlockedByWall(prevTile, nextTile))
                         {
                             laneBlocked[laneIndex] = true;
                             continue;
