@@ -16,10 +16,11 @@ namespace DDD.TNFY.BRAWL
     ///   not covered by an existing global event.
     /// • Selects a speaker from the correct pool (global random / specific unit /
     ///   exclude-instigator).
-    /// • For SubsequentAllyDowned: if a ComboDialogueDatabase entry exactly matches
-    ///   the current survivors, there is a 50/50 chance the combo sequence plays
-    ///   instead of the normal random line. If no combo matches, the normal line
-    ///   always plays.
+    /// • For FirstAllyDowned and SubsequentAllyDowned: checks the ComboDialogueDatabase
+    ///   for entries that match both the current survivors and the downed characters this
+    ///   combat. If any match, one is chosen at random with equal probability and there is
+    ///   a 50/50 chance it plays instead of the normal random line. If no match is found,
+    ///   the normal line always plays.
     /// • Applies the DialogueChancePercent roll for non-combo lines.
     /// • Maintains a priority queue so the most important line always plays first;
     ///   equal-priority lines are queued in arrival order.
@@ -57,14 +58,20 @@ namespace DDD.TNFY.BRAWL
         [SerializeField] private DialogueBubbleUI bubbleUI;
 
         [Tooltip("Optional database of context-sensitive multi-speaker combo dialogues. " +
-                 "Checked on SubsequentAllyDowned. If a combo matches the current survivors " +
-                 "there is a 50/50 chance it plays instead of the normal random line.")]
+                 "Checked on FirstAllyDowned and SubsequentAllyDowned. All entries that match " +
+                 "the current survivors and downed characters are collected; one is picked at " +
+                 "random with equal probability. There is then a 50/50 chance the combo plays " +
+                 "instead of the normal random line.")]
         [SerializeField] private ComboDialogueDatabase comboDatabase;
 
         // ── Internal state ────────────────────────────────────────────────────
 
         // Tracks whether the very first player-unit death has occurred this combat.
         private bool _firstAllyDownedThisCombat = false;
+
+        // Accumulates the CharacterData of every player unit downed this combat.
+        // Used by TryEnqueueCombo to match entries that require a specific downed character.
+        private readonly List<CharacterData> _downedCharactersThisCombat = new List<CharacterData>();
 
         // Tracks which enemies have already had their sub-50% line fired this combat
         // so it only ever fires once per enemy.
@@ -126,6 +133,12 @@ namespace DDD.TNFY.BRAWL
             // Only react to player-unit deaths for ally-downed triggers.
             if (!(unit is PlayerUnit)) return;
 
+            // Record this character as downed for combo matching.
+            // Done before the combo check so the dying unit's CharacterData is
+            // included in the downed list when IsMatch evaluates this death.
+            if (unit.characterData != null)
+                _downedCharactersThisCombat.Add(unit.characterData);
+
             // OnUnitDied fires BEFORE UnitManager.UnregisterUnit removes the unit from
             // PlayerUnits, so the dying unit is still counted in PlayerUnits.Count here.
             // Subtract 1 to get the true number of survivors.
@@ -140,23 +153,24 @@ namespace DDD.TNFY.BRAWL
             if (survivingPlayerCount == 1)
             {
                 // Exactly one unit left — they are now the last alive.
-                EnqueueTrigger(DialogueTrigger.LastAllyAlive, instigator: null);
+                // Pass the dying unit as excludedUnit: OnUnitDied fires before UnregisterUnit,
+                // so the dead unit is still in PlayerUnits and must be explicitly excluded here.
+                EnqueueTrigger(DialogueTrigger.LastAllyAlive, instigator: null, excludedUnit: unit);
                 return;
             }
 
-            // Multiple units still alive.
-            if (!_firstAllyDownedThisCombat)
+            // Multiple units still alive. Try a combo first on every death (first or
+            // subsequent) — combos can now match on first-death scenarios too.
+            bool comboHandled = TryEnqueueCombo(excludedUnit: unit);
+            if (!comboHandled)
             {
-                _firstAllyDownedThisCombat = true;
-                EnqueueTrigger(DialogueTrigger.FirstAllyDowned, instigator: null, excludedUnit: unit);
-            }
-            else
-            {
-                // Try a combo first; fall back to normal line if no combo or lost the 50/50.
-                bool comboHandled = TryEnqueueCombo(excludedUnit: unit);
-                if (!comboHandled)
+                if (!_firstAllyDownedThisCombat)
+                    EnqueueTrigger(DialogueTrigger.FirstAllyDowned, instigator: null, excludedUnit: unit);
+                else
                     EnqueueTrigger(DialogueTrigger.SubsequentAllyDowned, instigator: null, excludedUnit: unit);
             }
+
+            _firstAllyDownedThisCombat = true;
         }
 
         private void HandleUnitDamaged(Unit victim, Unit attacker)
@@ -177,13 +191,14 @@ namespace DDD.TNFY.BRAWL
         // ── Combo dialogue ────────────────────────────────────────────────────
 
         /// <summary>
-        /// Checks the ComboDialogueDatabase for an entry that exactly matches the
-        /// current set of surviving player units (excluding the unit that just died,
-        /// which is still in PlayerUnits at this point).
+        /// Checks the ComboDialogueDatabase for all entries that match the current
+        /// survivors and downed characters, then picks one at random with equal
+        /// probability. Rolls 50/50 on whether a combo plays at all.
         ///
-        /// If a match is found, rolls 50/50. On a win, enqueues the full combo
-        /// sequence and returns true. On a loss or no match, returns false so the
-        /// caller falls back to normal SubsequentAllyDowned dialogue.
+        /// Returns true if a combo was enqueued (caller should not also fire the
+        /// normal FirstAllyDowned / SubsequentAllyDowned line).
+        /// Returns false if no matches exist or the 50/50 roll failed, so the caller
+        /// falls back to normal dialogue.
         /// </summary>
         private bool TryEnqueueCombo(Unit excludedUnit)
         {
@@ -198,19 +213,24 @@ namespace DDD.TNFY.BRAWL
                 .Select(u => u.characterData)
                 .ToList();
 
-            ComboDialogueEntry match = comboDatabase.FindMatch(aliveCharacters);
-            if (match == null) return false;
+            var matches = comboDatabase.FindMatches(aliveCharacters, _downedCharactersThisCombat);
+            if (matches.Count == 0) return false;
 
             // 50/50 roll — tails means fall back to normal dialogue.
             if (Random.value < 0.5f) return false;
 
+            // Pick one matching entry at random with equal probability.
+            ComboDialogueEntry chosen = matches[Random.Range(0, matches.Count)];
+
             // Enqueue each line in the combo as a separate PendingDialogue.
             // All share priority 0 so they queue in arrival order and play back-to-back.
-            foreach (var comboLine in match.lines)
+            foreach (var comboLine in chosen.lines)
             {
                 if (comboLine.speaker == null || string.IsNullOrEmpty(comboLine.line)) continue;
 
                 // Find the live Unit whose characterData matches the speaker slot.
+                // A combo speaker may be the downed unit (e.g. single-speaker "directed at"
+                // combos) — search all PlayerUnits including the still-registered dying unit.
                 Unit speaker = UnitManager.PlayerUnits
                     .FirstOrDefault(u => u.characterData == comboLine.speaker);
 
@@ -317,8 +337,10 @@ namespace DDD.TNFY.BRAWL
 
                 case DialogueTrigger.LastAllyAlive:
                 {
-                    // Exactly one player unit should be alive; just pick the first (and only) one.
-                    return alivePlayers.Count == 1 ? alivePlayers[0] : PickRandom(alivePlayers);
+                    // The dying unit is still in PlayerUnits when this fires (unregistration
+                    // happens after OnUnitDied). Exclude it so only the true survivor speaks.
+                    var candidates = alivePlayers.Where(u => u != excludedUnit).ToList();
+                    return candidates.Count == 1 ? candidates[0] : PickRandom(candidates);
                 }
 
                 default:

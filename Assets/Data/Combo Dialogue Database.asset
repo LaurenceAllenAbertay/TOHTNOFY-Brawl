@@ -16,6 +16,8 @@ MonoBehaviour:
   - requiredSurvivors:
     - {fileID: 11400000, guid: 1e97e95d272eb8f449bd2b5c8cd1075a, type: 2}
     - {fileID: 11400000, guid: a2cfea01f0bb708488987177284d6666, type: 2}
+    exactSurvivorsMatch: 1
+    requiredDowned: []
     lines:
     - speaker: {fileID: 11400000, guid: a2cfea01f0bb708488987177284d6666, type: 2}
       line: Come on, Oliver, just me and you!
@@ -24,6 +26,8 @@ MonoBehaviour:
   - requiredSurvivors:
     - {fileID: 11400000, guid: 8a567124c7e5c6b46b4a801dbbba341b, type: 2}
     - {fileID: 11400000, guid: a2cfea01f0bb708488987177284d6666, type: 2}
+    exactSurvivorsMatch: 1
+    requiredDowned: []
     lines:
     - speaker: {fileID: 11400000, guid: a2cfea01f0bb708488987177284d6666, type: 2}
       line: "Oh great, it\u2019s just us now."
@@ -32,6 +36,8 @@ MonoBehaviour:
   - requiredSurvivors:
     - {fileID: 11400000, guid: 88a185d244b55a54cb36452b6bc6d1bb, type: 2}
     - {fileID: 11400000, guid: a2cfea01f0bb708488987177284d6666, type: 2}
+    exactSurvivorsMatch: 1
+    requiredDowned: []
     lines:
     - speaker: {fileID: 11400000, guid: a2cfea01f0bb708488987177284d6666, type: 2}
       line: This is all going to plan, right, Lorns?
@@ -40,6 +46,8 @@ MonoBehaviour:
   - requiredSurvivors:
     - {fileID: 11400000, guid: 8a567124c7e5c6b46b4a801dbbba341b, type: 2}
     - {fileID: 11400000, guid: 1e97e95d272eb8f449bd2b5c8cd1075a, type: 2}
+    exactSurvivorsMatch: 1
+    requiredDowned: []
     lines:
     - speaker: {fileID: 11400000, guid: 8a567124c7e5c6b46b4a801dbbba341b, type: 2}
       line: ' Oliver, can you please start helping?'
@@ -48,6 +56,8 @@ MonoBehaviour:
   - requiredSurvivors:
     - {fileID: 11400000, guid: 88a185d244b55a54cb36452b6bc6d1bb, type: 2}
     - {fileID: 11400000, guid: 1e97e95d272eb8f449bd2b5c8cd1075a, type: 2}
+    exactSurvivorsMatch: 1
+    requiredDowned: []
     lines:
     - speaker: {fileID: 11400000, guid: 88a185d244b55a54cb36452b6bc6d1bb, type: 2}
       line: Oh, god damn it.
@@ -56,8 +66,20 @@ MonoBehaviour:
   - requiredSurvivors:
     - {fileID: 11400000, guid: 88a185d244b55a54cb36452b6bc6d1bb, type: 2}
     - {fileID: 11400000, guid: 8a567124c7e5c6b46b4a801dbbba341b, type: 2}
+    exactSurvivorsMatch: 1
+    requiredDowned: []
     lines:
     - speaker: {fileID: 11400000, guid: 88a185d244b55a54cb36452b6bc6d1bb, type: 2}
       line: "For the love of god, Brodie, don\u2019t do anything stupid."
     - speaker: {fileID: 11400000, guid: 8a567124c7e5c6b46b4a801dbbba341b, type: 2}
       line: When have I ever been stupid?
+  - requiredSurvivors:
+    - {fileID: 11400000, guid: a2cfea01f0bb708488987177284d6666, type: 2}
+    - {fileID: 11400000, guid: 8a567124c7e5c6b46b4a801dbbba341b, type: 2}
+    exactSurvivorsMatch: 0
+    requiredDowned: []
+    lines:
+    - speaker: {fileID: 11400000, guid: 8a567124c7e5c6b46b4a801dbbba341b, type: 2}
+      line: "No! Why couldn\u2019t it have been Kallper?!"
+    - speaker: {fileID: 11400000, guid: a2cfea01f0bb708488987177284d6666, type: 2}
+      line: What? Screw you, Brodie!
