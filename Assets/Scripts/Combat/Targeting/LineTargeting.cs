@@ -86,8 +86,6 @@ namespace DDD.TNFY.BRAWL
                     if (nextTile == null)
                     {
                         if (!affectsOverGaps) continue;
-                        // Gap tile — nothing to add, but the lane stays open so the
-                        // line can reach targets on the far side of the gap.
                     }
                     else
                     {
@@ -106,10 +104,10 @@ namespace DDD.TNFY.BRAWL
                             prevTile = GridManager.Instance.GetTileAtPosition(prevPos);
                         }
 
-                        // If the previous step was a gap (prevTile == null), there can't be
-                        // a wall in that empty space — skip the wall check entirely for this step.
-                        // If there IS a solid tile behind this one and a wall between them, block.
-                        if (prevTile != null && !affectsThroughWalls && IsBlockedByWall(prevTile, nextTile))
+                        // If there is a wall between the previous tile and this one,
+                        // block this lane for all remaining steps (unless the ability
+                        // is flagged to pass through walls).
+                        if (!affectsThroughWalls && IsBlockedByWall(prevTile, nextTile))
                         {
                             laneBlocked[laneIndex] = true;
                             continue;
@@ -125,6 +123,8 @@ namespace DDD.TNFY.BRAWL
 
             return tiles;
         }
+
+        public override bool IsValidAimDirection(Vector2Int aimDir) => IsValidDirection(aimDir);
 
         /// <summary>
         /// Checks if the given direction is valid for this targeting type

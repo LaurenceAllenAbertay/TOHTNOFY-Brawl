@@ -111,6 +111,15 @@ namespace DDD.TNFY.BRAWL
 
         // ── Core targeting ────────────────────────────────────────────────────────
 
+        /// <summary>
+        /// Returns true when <paramref name="aimDir"/> is a valid firing direction for
+        /// this targeting type. The default implementation allows all directions; override
+        /// in types that restrict aim (e.g. horizontalOnly LineTargeting).
+        /// AbilityTargetingController calls this before previewing or confirming so invalid
+        /// directions are silently ignored rather than firing with an empty traversal.
+        /// </summary>
+        public virtual bool IsValidAimDirection(Vector2Int aimDir) => true;
+
         public abstract List<Tile> GetTraversal(AbilityContext ctx);
 
         // Resolve which units to actually hit, respecting filters / pass-through / maxTargets.

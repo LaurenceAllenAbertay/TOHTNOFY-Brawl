@@ -198,6 +198,15 @@ namespace DDD.TNFY.BRAWL
             if (dir.sqrMagnitude > 0.1f)
             {
                 Vector2Int aimDir = GetCardinalDirection(dir.normalized);
+
+                // If the targeting type restricts valid directions (e.g. horizontalOnly),
+                // clear any stale highlight rather than leaving the previous valid preview lit.
+                if (!currentAbility.targeting.IsValidAimDirection(aimDir))
+                {
+                    GridManager.Instance.ClearAllHighlights();
+                    return;
+                }
+
                 GridManager.Instance.SetHighlightMode(
                     GridManager.HighlightMode.AbilityPreview,
                     activeUnit,
@@ -214,6 +223,10 @@ namespace DDD.TNFY.BRAWL
             if (dir.sqrMagnitude > 0.1f)
             {
                 Vector2Int aimDir = GetCardinalDirection(dir.normalized);
+
+                // Silently ignore clicks in directions this targeting type doesn't allow.
+                if (!currentAbility.targeting.IsValidAimDirection(aimDir)) return;
+
                 ConfirmDirectionalAbility(aimDir, activeUnit);
             }
         }

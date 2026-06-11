@@ -25,6 +25,12 @@ namespace DDD.TNFY.BRAWL
                  "Use for abilities like Kalpoeria where the landing spot must be free.")]
         public bool requireEmptyDestination = false;
 
+        public override bool IsValidAimDirection(Vector2Int aimDir)
+        {
+            if (!horizontalOnly) return true;
+            return aimDir == Vector2Int.left || aimDir == Vector2Int.right;
+        }
+
         public override List<Tile> GetTraversal(AbilityContext ctx)
         {
             var tiles = new List<Tile>();
