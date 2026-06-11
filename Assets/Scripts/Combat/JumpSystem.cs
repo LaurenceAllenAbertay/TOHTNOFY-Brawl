@@ -45,6 +45,11 @@ namespace DDD.TNFY.BRAWL
         {
             if (!CanUseJump(combatManager.CurrentActiveUnit)) return;
 
+            // If ability targeting is active, cancel it before entering jump targeting.
+            // The two modes are mutually exclusive — both own tile highlights and input.
+            if (combatManager.IsTargetingAbility)
+                combatManager.CancelAbilityTargeting();
+
             isTargetingJump = true;
 
             // Clear current highlights and show jump range

@@ -394,6 +394,12 @@ namespace DDD.TNFY.BRAWL
         {
             if (ShouldBlockInput()) return;
             if (hasUsedAbilityThisTurn) return;
+
+            // If jump targeting is active, cancel it before entering ability targeting.
+            // The two modes are mutually exclusive — both own tile highlights and input.
+            if (jumpSystem != null && jumpSystem.IsTargetingJump)
+                jumpSystem.CancelJumpTargeting();
+
             targetingController?.EnterAbilityTargeting(slot, currentActiveUnit);
         }
 
