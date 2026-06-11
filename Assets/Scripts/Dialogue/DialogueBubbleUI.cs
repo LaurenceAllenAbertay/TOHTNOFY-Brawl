@@ -22,7 +22,8 @@ namespace DDD.TNFY.BRAWL
     ///
     /// Display duration
     /// ────────────────
-    ///   baseDuration + line.Length * perCharacterDuration  (defaults: 5 s + 0.01 s/char)
+    ///   Typewriter phase: typewriterDuration seconds (default 1 s). Set to 0 for instant.
+    ///   Hold phase:       baseDuration + line.Length * perCharacterDuration  (defaults: 5 s + 0.01 s/char)
     /// </summary>
     public class DialogueBubbleUI : MonoBehaviour
     {
@@ -42,7 +43,12 @@ namespace DDD.TNFY.BRAWL
         [SerializeField] private Camera targetCamera;
 
         [Header("Timing")]
+        [Tooltip("Total seconds to type out the full line. Set to 0 to show it instantly.")]
+        [SerializeField] private float typewriterDuration = 1f;
+
+        [Tooltip("Seconds the fully-typed line stays visible before the bubble hides.")]
         [SerializeField] private float baseDuration = 5f;
+
         [SerializeField] private float perCharacterDuration = 0.01f;
 
         [Header("Screen Edge")]
@@ -94,21 +100,53 @@ namespace DDD.TNFY.BRAWL
 
             if (dialogueText != null)
             {
-                dialogueText.text  = line;
-                dialogueText.color = colour;
+                // Set the full string upfront so ContentSizeFitter can measure the
+                // final bubble height before we start revealing characters.
+                dialogueText.text             = line;
+                dialogueText.color            = colour;
+                dialogueText.maxVisibleCharacters = 0;
             }
 
             // Show first so the Canvas layout pass can run this frame.
             SetVisible(true);
 
             // Yield one frame so ContentSizeFitter on the Text child resizes itself
-            // to fit the new text before we read textRect.rect for clamping.
+            // to fit the complete text before we read textRect.rect for clamping.
             yield return null;
 
             UpdateBubblePosition(speaker);
 
-            float duration = baseDuration + line.Length * perCharacterDuration;
-            yield return new WaitForSeconds(duration);
+            // ── Typewriter reveal ─────────────────────────────────────────────
+            if (dialogueText != null)
+            {
+                int charCount = line.Length;
+
+                if (typewriterDuration <= 0f || charCount == 0)
+                {
+                    // Instant reveal — skip the animation entirely.
+                    dialogueText.maxVisibleCharacters = charCount;
+                }
+                else
+                {
+                    float elapsed       = 0f;
+                    float perCharDelay  = typewriterDuration / charCount;
+
+                    while (elapsed < typewriterDuration)
+                    {
+                        elapsed += Time.deltaTime;
+                        int charsToShow = Mathf.Clamp(Mathf.FloorToInt(elapsed / perCharDelay), 0, charCount);
+                        dialogueText.maxVisibleCharacters = charsToShow;
+                        yield return null;
+                    }
+
+                    // Guarantee all characters are visible at the end.
+                    dialogueText.maxVisibleCharacters = charCount;
+                }
+            }
+
+            // ── Hold the fully-typed line ─────────────────────────────────────
+            float holdDuration = baseDuration + line.Length * perCharacterDuration;
+            yield return new WaitForSeconds(holdDuration);
 
             SetVisible(false);
             _currentSpeaker = null;

@@ -414,8 +414,6 @@ MonoBehaviour:
   characterData: {fileID: 11400000, guid: 1e97e95d272eb8f449bd2b5c8cd1075a, type: 2}
   goesFirst: 0
   currentHealth: 0
-  currentAttack: 0
-  currentDefense: 0
   currentTile: {fileID: 0}
   currentSpeed: 0
   canMove: 0

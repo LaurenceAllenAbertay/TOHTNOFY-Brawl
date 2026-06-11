@@ -3596,7 +3596,8 @@ MonoBehaviour:
   bubbleRect: {fileID: 331251559}
   textRect: {fileID: 1181156408}
   targetCamera: {fileID: 519420031}
-  baseDuration: 3
+  typewriterDuration: 1
+  baseDuration: 4
   perCharacterDuration: 0.01
   edgePadding: 10
   worldHeightOffset: 1.1
@@ -6394,6 +6395,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 8a567124c7e5c6b46b4a801dbbba341b, type: 2}
   - {fileID: 11400000, guid: a2cfea01f0bb708488987177284d6666, type: 2}
   - {fileID: 11400000, guid: 88a185d244b55a54cb36452b6bc6d1bb, type: 2}
+  - {fileID: 11400000, guid: 1e97e95d272eb8f449bd2b5c8cd1075a, type: 2}
   fallbackEnemyPrefabs:
   - {fileID: 3963197675195542672, guid: 1f1284a26ffca4a439896715431ac139, type: 3}
   - {fileID: 4885748180280455429, guid: 0f2a6b56aaaadd04b91a794e2b412f0f, type: 3}
@@ -18327,8 +18329,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1923468821}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 434.03088, y: 312.6185, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
