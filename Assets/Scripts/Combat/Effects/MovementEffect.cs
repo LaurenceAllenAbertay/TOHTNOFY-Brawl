@@ -137,9 +137,6 @@ namespace DDD.TNFY.BRAWL
                 unitAnimator.PlayIdle();
             }
 
-            // Return to natural facing after movement
-            unitToMove.ReturnToNaturalFacing();
-
             // Restore player state if this was the active player
             if (isActivePlayer)
             {

@@ -34,14 +34,5 @@ namespace DDD.TNFY.BRAWL
 
             // You can add more settings here
         }
-
-        public static Vector2Int GetNaturalFacing(Unit unit)
-        {
-            if (Instance == null || Instance.currentMapConfiguration == null)
-                return Vector2Int.right;
-
-            bool isPlayer = unit is PlayerUnit;
-            return Instance.currentMapConfiguration.GetFacingAsVector2Int(isPlayer);
-        }
     }
 }

@@ -19,6 +19,13 @@ namespace DDD.TNFY.BRAWL
         public int currentSpeed;
         public bool canMove;
 
+        /// <summary>
+        /// The direction this unit is currently facing.
+        /// Updated by FaceDirection and persists until the next call.
+        /// Used as the default aim direction seed for abilities.
+        /// </summary>
+        public Vector2Int currentFacing = Vector2Int.right;
+
         // Base stats set once from CharacterData at initialisation.
         // Never modified after that — status effects are layered on top via multipliers.
         private int _baseAttack;
@@ -184,7 +191,6 @@ namespace DDD.TNFY.BRAWL
         public virtual void StartTurn()
         {
             canMove = true;
-            ReturnToNaturalFacing();
 
             if (unitAnimator != null)
                 unitAnimator.SetActiveTurn();
@@ -192,16 +198,8 @@ namespace DDD.TNFY.BRAWL
 
         public virtual void EndTurn()
         {
-            StartCoroutine(ReturnToNaturalFacingDelayed(0.1f));
-
             if (unitAnimator != null)
                 unitAnimator.SetInactiveTurn();
-        }
-
-        private IEnumerator ReturnToNaturalFacingDelayed(float delay)
-        {
-            yield return new WaitForSeconds(delay);
-            ReturnToNaturalFacing();
         }
 
         #endregion
@@ -212,16 +210,12 @@ namespace DDD.TNFY.BRAWL
         {
             if (unitSpriteRenderer == null) return;
 
+            currentFacing = direction;
+
             if (direction == Vector2Int.left)
                 unitSpriteRenderer.flipX = true;
             else if (direction == Vector2Int.right)
                 unitSpriteRenderer.flipX = false;
-        }
-
-        public void ReturnToNaturalFacing()
-        {
-            Vector2Int naturalFacing = MapManager.GetNaturalFacing(this);
-            FaceDirection(naturalFacing);
         }
 
         public void SetCurrentTile(Tile newTile)

@@ -329,16 +329,9 @@ namespace DDD.TNFY.BRAWL
                 yield return null;
             }
 
-            // End the knockback sequence and return to natural facing
+            // End the knockback sequence
             isInKnockbackSequence = false;
             knockbackSequence = null;
-
-            // NOW return to natural facing when knockback is truly complete
-            var unit = GetComponent<Unit>();
-            if (unit != null && currentAnimation != DEATH_STATE)
-            {
-                unit.ReturnToNaturalFacing();
-            }
 
             // Return to idle
             if (currentAnimation != DEATH_STATE)

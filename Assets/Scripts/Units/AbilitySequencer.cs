@@ -681,15 +681,6 @@ namespace DDD.TNFY.BRAWL
         private void ClearContext()
         {
             CurrentAbilityContext = null;
-
-            if (unitAnimator != null && !unitAnimator.IsInKnockbackSequence)
-                StartCoroutine(ReturnToNaturalFacingDelayed(0.1f));
-        }
-
-        private IEnumerator ReturnToNaturalFacingDelayed(float delay)
-        {
-            yield return new WaitForSeconds(delay);
-            unit.ReturnToNaturalFacing();
         }
 
         #endregion

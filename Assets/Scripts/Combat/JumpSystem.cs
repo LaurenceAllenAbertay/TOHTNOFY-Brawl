@@ -9,7 +9,6 @@ namespace DDD.TNFY.BRAWL
         [Header("Jump Settings")]
         // jumpRange is now read from Unit.JumpRange so passives can modify it per-unit.
         // The minimum jump distance is always 2 (the base value on Unit).
-        [SerializeField] private float facingReturnDelay = 1.0f;
 
         private CombatManager combatManager;
         private CameraController cameraController;
@@ -311,12 +310,6 @@ namespace DDD.TNFY.BRAWL
             {
                 ExecuteStomp(unit, stompTarget, startPos, endPos);
             }
-
-            // Wait for the delay before returning to natural facing
-            yield return new WaitForSeconds(facingReturnDelay);
-
-            // Return to natural facing after delay
-            unit.ReturnToNaturalFacing();
         }
 
 

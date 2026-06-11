@@ -82,7 +82,6 @@ namespace DDD.TNFY.BRAWL
                 unitAnimator.PlayIdle();
 
             movingUnit.SetCurrentTile(destination);
-            movingUnit.ReturnToNaturalFacing();
 
             onMovementComplete?.Invoke();
         }
