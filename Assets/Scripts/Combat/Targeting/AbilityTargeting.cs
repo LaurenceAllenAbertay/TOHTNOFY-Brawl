@@ -134,8 +134,23 @@ namespace DDD.TNFY.BRAWL
                 var u = t.currentUnit;
                 if (u == null) continue;
 
-                bool isAlly = IsAlly(ctx.caster, u);
-                if ((isAlly && ctx.ability.canHitAllies) || (!isAlly && ctx.ability.canHitEnemies))
+                bool accepted = false;
+
+                if (u.IsNeutral)
+                {
+                    // Neutral units (bodies, future map objects) are only valid targets
+                    // when the ability explicitly opts in via canTargetNeutral.
+                    if (ctx.ability.canTargetNeutral)
+                        accepted = true;
+                }
+                else
+                {
+                    bool isAlly = IsAlly(ctx.caster, u);
+                    if ((isAlly && ctx.ability.canHitAllies) || (!isAlly && ctx.ability.canHitEnemies))
+                        accepted = true;
+                }
+
+                if (accepted)
                 {
                     result.Add(u);
 
@@ -172,9 +187,15 @@ namespace DDD.TNFY.BRAWL
                 var u = tile.currentUnit;
                 if (u != null)
                 {
-                    bool isAlly = IsAlly(ctx.caster, u);
-                    bool canHit = (isAlly && ctx.ability.canHitAllies) ||
-                                  (!isAlly && ctx.ability.canHitEnemies);
+                    bool canHit;
+                    if (u.IsNeutral)
+                        canHit = ctx.ability.canTargetNeutral;
+                    else
+                    {
+                        bool isAlly = IsAlly(ctx.caster, u);
+                        canHit = (isAlly && ctx.ability.canHitAllies) ||
+                                 (!isAlly && ctx.ability.canHitEnemies);
+                    }
                     tile.Highlight(canHit ? TileHighlightType.AttackRange : TileHighlightType.Danger);
                 }
                 else

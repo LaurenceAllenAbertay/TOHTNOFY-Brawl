@@ -81,6 +81,22 @@ namespace DDD.TNFY.BRAWL
         {
             if (target?.currentTile == null) yield break;
 
+            // Bodies have no animator state to drive — just move them silently to their
+            // destination with no animation. CalculateKnockbackPath still runs so walls,
+            // gaps, and other units correctly block the body's movement.
+            if (target.IsBody)
+            {
+                var bodyPath = CalculateKnockbackPath(ctx, target, ctx.aimDir);
+                if (bodyPath.Count > 0)
+                {
+                    bool bodyMoveComplete = false;
+                    target.AnimateToTile(bodyPath[bodyPath.Count - 1], movementDurationPerTile * bodyPath.Count,
+                        () => bodyMoveComplete = true);
+                    while (!bodyMoveComplete) yield return null;
+                }
+                yield break;
+            }
+
             var unitAnimator = target.GetComponent<UnitAnimator>();
             if (unitAnimator == null)
             {
@@ -462,12 +478,16 @@ namespace DDD.TNFY.BRAWL
 
         private void HandleCollision(AbilityContext ctx, Unit knockingUnit, Unit collidedUnit, Vector2Int knockbackDirection)
         {
-            // Deal collision damage
-            int damageAmount = collisionDamage >= 0 ? collisionDamage : ctx.ability.damage;
-            collidedUnit.ReceiveDamage(damageAmount);
-            Debug.Log($"{collidedUnit.name} takes {damageAmount} collision damage!");
+            // Bodies are immortal — skip damage entirely. The body can still be displaced
+            // by the collision if there is a free tile behind it.
+            if (!collidedUnit.IsBody)
+            {
+                int damageAmount = collisionDamage >= 0 ? collisionDamage : ctx.ability.damage;
+                collidedUnit.ReceiveDamage(damageAmount);
+                Debug.Log($"{collidedUnit.name} takes {damageAmount} collision damage!");
+            }
 
-            // Knockback the collided unit by 1 tile
+            // Knock the collided unit back 1 tile in the same direction.
             Tile newDestination = GridManager.Instance.GetTileInDirection(collidedUnit.currentTile, knockbackDirection);
 
             // Secondary knockback also respects the no-upward-layer rule.
@@ -476,16 +496,31 @@ namespace DDD.TNFY.BRAWL
 
             if (newDestination != null && newDestination.passableTerrain && !newDestination.occupied && !destinationIsHigher)
             {
-                var collidedAnimator = collidedUnit.GetComponent<UnitAnimator>();
-                if (collidedAnimator != null)
+                if (collidedUnit.IsBody)
                 {
-                    ctx.caster.StartCoroutine(SecondaryKnockback(collidedUnit, newDestination, collidedAnimator));
+                    // Bodies move silently — no knockback animation.
+                    ctx.caster.StartCoroutine(SilentBodyDisplace(collidedUnit, newDestination));
                 }
                 else
                 {
-                    collidedUnit.SetCurrentTile(newDestination);
+                    var collidedAnimator = collidedUnit.GetComponent<UnitAnimator>();
+                    if (collidedAnimator != null)
+                        ctx.caster.StartCoroutine(SecondaryKnockback(collidedUnit, newDestination, collidedAnimator));
+                    else
+                        collidedUnit.SetCurrentTile(newDestination);
                 }
             }
+        }
+
+        /// <summary>
+        /// Silently moves a body to a destination tile with no animation.
+        /// Used when a body is displaced by a collision during another unit's knockback.
+        /// </summary>
+        private IEnumerator SilentBodyDisplace(Unit body, Tile destination)
+        {
+            bool moveComplete = false;
+            body.AnimateToTile(destination, movementDurationPerTile, () => moveComplete = true);
+            while (!moveComplete) yield return null;
         }
 
         private IEnumerator SecondaryKnockback(Unit unit, Tile destination, UnitAnimator animator)

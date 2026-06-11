@@ -46,9 +46,18 @@ namespace DDD.TNFY.BRAWL
             }
             else if (hoveredTile.currentUnit != null)
             {
-                bool isAlly = hoveredTile.currentUnit is EnemyUnit == ctx.caster is EnemyUnit;
-                bool canHit = (isAlly && ctx.ability.canHitAllies) ||
-                              (!isAlly && ctx.ability.canHitEnemies);
+                var unit = hoveredTile.currentUnit;
+                bool canHit;
+
+                if (unit.IsNeutral)
+                    canHit = ctx.ability.canTargetNeutral;
+                else
+                {
+                    bool isAlly = unit is EnemyUnit == ctx.caster is EnemyUnit;
+                    canHit = (isAlly && ctx.ability.canHitAllies) ||
+                             (!isAlly && ctx.ability.canHitEnemies);
+                }
+
                 if (canHit) hoveredTile.Highlight(TileHighlightType.AttackRange);
             }
         }

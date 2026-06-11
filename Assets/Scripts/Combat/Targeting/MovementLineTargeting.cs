@@ -134,18 +134,23 @@ namespace DDD.TNFY.BRAWL
                 var unit = tile.currentUnit;
                 if (unit == null || unit == ctx.caster) continue;
 
-                bool isAlly = IsAlly(ctx.caster, unit);
-                bool canHit = (isAlly && ctx.ability.canHitAllies) || (!isAlly && ctx.ability.canHitEnemies);
+                bool canHit;
+
+                if (unit.IsNeutral)
+                    canHit = ctx.ability.canTargetNeutral;
+                else
+                {
+                    bool isAlly = IsAlly(ctx.caster, unit);
+                    canHit = (isAlly && ctx.ability.canHitAllies) || (!isAlly && ctx.ability.canHitEnemies);
+                }
 
                 if (canHit)
                 {
                     result.Add(unit);
 
-                    // Stop if we've hit max targets
                     if (result.Count >= ctx.ability.maxTargets)
                         break;
 
-                    // Stop at first unit if configured to do so
                     if (stopAtFirstUnit)
                         break;
                 }

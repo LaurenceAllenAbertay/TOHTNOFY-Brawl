@@ -7751,7 +7751,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4265ba0425bcc041ae0ecd30ad2cc1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lingerAfterDeathSeconds: 0.5
+  lingerAfterDeathSeconds: 0.3
   cameraTransitionDuration: 0.8
 --- !u!1 &753677266
 GameObject:
@@ -13303,6 +13303,8 @@ MonoBehaviour:
   globalMusicVolume: 0.2
   enableDynamicMusic: 1
   poolSize: 10
+  logSyncDiagnostics: 1
+  driftThresholdSamples: 2048
 --- !u!1 &1365788363
 GameObject:
   m_ObjectHideFlags: 0

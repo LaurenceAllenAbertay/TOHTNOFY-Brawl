@@ -11,6 +11,12 @@ namespace DDD.TNFY.BRAWL
     /// here before unregistering the unit from gameplay systems.  The unit's GameObject
     /// remains active until DrainDeathQueue has played its death animation.
     ///
+    /// After the animation, one of two things happens depending on the unit type:
+    ///   • PlayerUnits and EnemyUnits with leavesBodyOnDeath = true call Unit.BecomeBody(),
+    ///     freezing on the last death frame and remaining on the map as a neutral obstacle.
+    ///   • EnemyUnits with leavesBodyOnDeath = false are fully unregistered and hidden —
+    ///     the original "vanish on death" behaviour for minions, summons, etc.
+    ///
     /// DrainDeathQueue is called from two places:
     ///   • AbilitySequencer.RunSequence  — after all ability effects resolve, passing ctx.caster
     ///     as the unit to return the camera to afterwards.
@@ -119,8 +125,8 @@ namespace DDD.TNFY.BRAWL
 
         /// <summary>
         /// Pans camera to the victim, plays their death animation to completion,
-        /// lingers briefly, then disables the GameObject.
-        /// The tile is already vacated by Unit.Die() before this runs.
+        /// lingers briefly, then either transitions the unit into a body or fully
+        /// hides it depending on whether it should leave a body on the map.
         /// </summary>
         private IEnumerator PresentDeath(Unit victim)
         {
@@ -146,8 +152,27 @@ namespace DDD.TNFY.BRAWL
             // ── 3. Linger so the player can register what happened ─────────────
             yield return new WaitForSeconds(lingerAfterDeathSeconds);
 
-            // ── 4. Hide the unit — keep the GameObject alive so nothing null-refs ─
-            victim.gameObject.SetActive(false);
+            // ── 4. Become a body, or vanish entirely ──────────────────────────
+            // PlayerUnits always leave a body (they can be revived).
+            // EnemyUnits leave a body only when leavesBodyOnDeath is true — designers
+            // can disable this for summons, minions, or any enemy that should vanish cleanly.
+            bool shouldLeaveBody = victim is PlayerUnit ||
+                                   (victim is EnemyUnit enemy && enemy.leavesBodyOnDeath);
+
+            if (shouldLeaveBody)
+            {
+                // Freeze on the last frame of the death animation and remain on the map
+                // as a neutral obstacle. BecomeBody() re-occupies the tile and notifies
+                // UnitManager so targeting and pathfinding see the body correctly.
+                victim.BecomeBody();
+            }
+            else
+            {
+                // Fully remove from all manager lists and hide the GameObject.
+                // This is the original behaviour for enemies that should disappear on death.
+                UnitManager.UnregisterUnit(victim);
+                victim.gameObject.SetActive(false);
+            }
         }
 
         /// <summary>

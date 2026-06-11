@@ -70,6 +70,21 @@ namespace DDD.TNFY.BRAWL
         /// </summary>
         public bool IsDead { get; private set; } = false;
 
+        /// <summary>
+        /// Set to true by UnitDeathSequencer after the death animation completes, when this
+        /// unit transitions into a downed body. The unit remains on its tile, blocking
+        /// movement and pathfinding, but takes no damage, has no turn, and is ignored by AI.
+        /// </summary>
+        public bool IsBody { get; private set; } = false;
+
+        /// <summary>
+        /// True when this unit should be treated as a neutral object on the map — neither
+        /// player nor enemy. Currently this covers downed bodies (IsBody) and will also
+        /// cover future neutral map objects (barrels, crates, etc.) via NeutralUnit.
+        /// Abilities opt-in to targeting neutrals via the canTargetNeutral flag.
+        /// </summary>
+        public virtual bool IsNeutral => IsBody;
+
         // Forwarding property — polled by CombatManager and UnitAI to detect sequence completion
         public AbilityContext currentAbilityContext => abilitySequencer?.CurrentAbilityContext;
 
@@ -302,6 +317,11 @@ namespace DDD.TNFY.BRAWL
         {
             if (IsDead) return;
 
+            // Bodies are immortal — they cannot be damaged or killed again.
+            // No animation, no numbers, no response. Knockback still works because
+            // it bypasses ReceiveDamage entirely (uses AnimateToTile directly).
+            if (IsBody) return;
+
             if (StatusEffectManager.Instance != null)
             {
                 if (StatusEffectManager.Instance.HasStatusEffect(this, StatusEffectType.Shielded))
@@ -405,6 +425,25 @@ namespace DDD.TNFY.BRAWL
                 gameObject.SetActive(false); // fallback: no sequencer in scene
         }
 
+        /// <summary>
+        /// Called by UnitDeathSequencer after the death animation finishes.
+        /// Transitions the unit from "dead and being removed" to "downed body on the map".
+        /// The tile occupancy is restored here so the body blocks movement and pathfinding.
+        /// </summary>
+        public void BecomeBody()
+        {
+            IsBody = true;
+
+            // Re-occupy the tile. Die() cleared it so gameplay systems saw a free tile
+            // during the ability sequence — now that the sequence is over, the body
+            // takes up space again.
+            if (currentTile != null && currentTile.currentUnit == null)
+                currentTile.currentUnit = this;
+
+            UnitManager.NotifyBodySpawned(this);
+            Debug.Log($"{name} is now a body on {currentTile?.name}.");
+        }
+
         public virtual bool CanMove()
         {
             if (!canMove) return false;
@@ -429,7 +468,13 @@ namespace DDD.TNFY.BRAWL
         public virtual bool CanTarget(Unit unit)
         {
             if (unit == null || unit == this) return false;
-            if (unit.IsDead) return false;
+
+            // Dead units (mid-death-sequence, before becoming a body) are never targetable.
+            // Bodies are handled separately: SelectTargets checks canTargetNeutral so that
+            // targeting decisions are ability-specific rather than unit-specific.
+            if (unit.IsDead && !unit.IsBody) return false;
+            if (unit.IsBody) return false; // Bodies filtered at SelectTargets level, not here.
+
             if (StatusEffectManager.Instance != null &&
                 StatusEffectManager.Instance.HasStatusEffect(unit, StatusEffectType.Untargetable))
                 return false;

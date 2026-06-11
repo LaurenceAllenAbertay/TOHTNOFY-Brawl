@@ -21,6 +21,7 @@ MonoBehaviour:
   attackType: 0
   canHitEnemies: 1
   canHitAllies: 1
+  canTargetNeutral: 1
   passThroughUnits: 0
   maxTargets: 8
   canExecuteWithoutTargets: 1

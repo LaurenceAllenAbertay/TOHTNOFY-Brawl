@@ -83,3 +83,34 @@ MonoBehaviour:
       line: "No! Why couldn\u2019t it have been Kallper?!"
     - speaker: {fileID: 11400000, guid: a2cfea01f0bb708488987177284d6666, type: 2}
       line: What? Screw you, Brodie!
+  - requiredSurvivors:
+    - {fileID: 11400000, guid: 88a185d244b55a54cb36452b6bc6d1bb, type: 2}
+    - {fileID: 11400000, guid: 1e97e95d272eb8f449bd2b5c8cd1075a, type: 2}
+    exactSurvivorsMatch: 0
+    requiredDowned: []
+    lines:
+    - speaker: {fileID: 11400000, guid: 1e97e95d272eb8f449bd2b5c8cd1075a, type: 2}
+      line: We got one!
+    - speaker: {fileID: 11400000, guid: 88a185d244b55a54cb36452b6bc6d1bb, type: 2}
+      line: That was one of ours, Oliver.
+  - requiredSurvivors:
+    - {fileID: 11400000, guid: a2cfea01f0bb708488987177284d6666, type: 2}
+    - {fileID: 11400000, guid: 8a567124c7e5c6b46b4a801dbbba341b, type: 2}
+    exactSurvivorsMatch: 0
+    requiredDowned:
+    - {fileID: 11400000, guid: 8a567124c7e5c6b46b4a801dbbba341b, type: 2}
+    lines:
+    - speaker: {fileID: 11400000, guid: a2cfea01f0bb708488987177284d6666, type: 2}
+      line: Nice moves, Brodie.
+  - requiredSurvivors:
+    - {fileID: 11400000, guid: a2cfea01f0bb708488987177284d6666, type: 2}
+    - {fileID: 11400000, guid: 8a567124c7e5c6b46b4a801dbbba341b, type: 2}
+    - {fileID: 11400000, guid: 1e97e95d272eb8f449bd2b5c8cd1075a, type: 2}
+    exactSurvivorsMatch: 0
+    requiredDowned:
+    - {fileID: 11400000, guid: 1e97e95d272eb8f449bd2b5c8cd1075a, type: 2}
+    lines:
+    - speaker: {fileID: 11400000, guid: a2cfea01f0bb708488987177284d6666, type: 2}
+      line: They got Oliver! What are we gonna do?
+    - speaker: {fileID: 11400000, guid: 8a567124c7e5c6b46b4a801dbbba341b, type: 2}
+      line: What we were already doing, I guess.

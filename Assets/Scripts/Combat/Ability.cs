@@ -41,6 +41,12 @@ namespace DDD.TNFY.BRAWL
         public bool canHitEnemies = true;
         public bool canHitAllies = false;
 
+        [Tooltip("If true, this ability can target neutral units — downed bodies and future neutral " +
+                 "map objects (barrels, crates, etc.). Use for knockback abilities, AOEs, or any " +
+                 "ability that should affect everything in its path regardless of faction. " +
+                 "Leave false for buffs, heals, and status effects that should never land on bodies.")]
+        public bool canTargetNeutral = false;
+
         [Tooltip("If true, ability keeps travelling through units and can hit more than one.")]
         public bool passThroughUnits = false;
 

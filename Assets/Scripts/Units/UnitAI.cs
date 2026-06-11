@@ -211,7 +211,10 @@ namespace DDD.TNFY.BRAWL
 
             foreach (var candidate in UnitManager.AllUnits)
             {
-                if (candidate == null || candidate.IsDead) continue;
+                if (candidate == null) continue;
+                // Bodies remain in AllUnits so canTargetNeutral abilities can find them,
+                // but AI never considers them as targets.
+                if (candidate.IsDead || candidate.IsNeutral) continue;
                 if (!ShouldTarget(candidate)) continue;
                 if (!CanTargetUnit(candidate)) continue;
                 targets.Add(candidate);
@@ -231,6 +234,11 @@ namespace DDD.TNFY.BRAWL
 
             // Never target dead units.
             if (candidate.IsDead) return false;
+
+            // Never target neutral units (bodies, map objects). AI always ignores these.
+            // TODO: If a future enemy ability should target neutrals, add a per-ability
+            // canTargetNeutral check here and pass the ability context through from GetTargets.
+            if (candidate.IsNeutral) return false;
 
             // Never target allies.
             if (IsAlly(candidate)) return false;
