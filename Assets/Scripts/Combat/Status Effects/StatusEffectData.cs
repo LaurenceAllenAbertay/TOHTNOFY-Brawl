@@ -108,8 +108,9 @@ namespace DDD.TNFY.BRAWL
         Stunned,
 
         // Warned: the affected ally attempts to dodge the next incoming targeted attack.
-        // Before the attacker's animation plays, the Warned unit steps to an adjacent free tile.
-        // If the new tile is outside the ability's traversal, the attack misses entirely.
+        // Before the attacker's animation plays, the Warned unit walks to the closest tile
+        // outside the full ability traversal (no jumping; no movement cost).
+        // If fully walled in with no walkable escape, damage is negated entirely and the unit stays put.
         // If it expires without being triggered (no attack came), applies DefenseDown instead.
         Warned,
 

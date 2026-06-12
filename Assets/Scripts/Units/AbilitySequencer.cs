@@ -556,11 +556,12 @@ namespace DDD.TNFY.BRAWL
         }
 
         /// <summary>
-        /// For each target carrying the Warned status, attempts to move them one tile away
-        /// before the ability animation plays. If the new tile is no longer in the ability's
-        /// traversal the target is removed from the active targets list (attack misses).
-        /// If the new tile is still covered (e.g. AOE) the target stays in the list but still
-        /// moves — they tried to dodge, they just couldn't escape.
+        /// For each target carrying the Warned status, attempts to walk them to the closest
+        /// tile outside the full ability traversal before the animation plays.
+        /// - If a safe tile is reachable by walking (no jumping), the unit walks there and
+        ///   the attack misses them entirely.
+        /// - If every path out is physically blocked (walled in), damage is negated and the
+        ///   unit stays put — they couldn't escape but the warning still protected them.
         /// </summary>
         private IEnumerator ProcessWarnedDodges(AbilityContext ctx, List<Unit> targets)
         {
@@ -580,98 +581,158 @@ namespace DDD.TNFY.BRAWL
                 var warned = StatusEffectManager.Instance.GetStatusEffect(target, StatusEffectType.Warned);
                 if (warned == null) continue;
 
-                // Mark as triggered whether or not the dodge succeeds — the unit reacted.
+                // Mark as triggered — the unit reacted to the warning regardless of outcome.
                 warned.wasTriggered = true;
                 StatusEffectManager.Instance.RemoveStatusEffect(target, warned);
 
-                // Pan camera to the warned unit so the dodge is visible.
+                // Find the closest safe tile reachable by walking (no jumping).
+                // Returns null only when the unit is completely walled in.
+                var (dodgeTile, dodgePath) = FindWalkDodgeTile(target, ctx);
+
+                if (dodgeTile == null)
+                {
+                    // Completely blocked — negate the damage by removing from targets.
+                    // The unit stays put but the warning still protected them.
+                    targets.Remove(target);
+                    Debug.Log($"[Warned] {target.name} is fully blocked — damage negated, unit stays.");
+                    continue;
+                }
+
+                // Pan camera to the warned unit so the walk is visible.
                 if (cameraController != null)
                     yield return StartCoroutine(cameraController.TransitionTo(
                         cameraController.UnitFocusPosition(target)));
 
-                // Find a free adjacent tile to step to, preferring tiles outside the traversal.
-                Tile dodgeTile = FindDodgeTile(target, ctx);
-                if (dodgeTile == null)
-                {
-                    // Nowhere to go — dodge fails, they stay in the target list.
-                    Debug.Log($"[Warned] {target.name} tried to dodge but had no free adjacent tile.");
-
-                    // Pan back to caster before continuing to the next target.
-                    if (cameraController != null)
-                        yield return StartCoroutine(cameraController.TransitionTo(
-                            cameraController.UnitFocusPosition(unit)));
-                    continue;
-                }
-
-                // Animate the dodge — use the existing smooth movement on Unit.
                 if (enableDebugLogging)
-                    Debug.Log($"[Warned] {target.name} dodging to {dodgeTile.gridPosition}");
+                    Debug.Log($"[Warned] {target.name} walking to {dodgeTile.gridPosition} ({dodgePath.Count} steps)");
 
-                var targetAnimator = target.GetComponent<UnitAnimator>();
-                targetAnimator?.PlayMove();
-                target.AnimateToTile(dodgeTile, 0.25f, onComplete: () => targetAnimator?.PlayIdle());
-                yield return new WaitForSeconds(0.3f);
+                // Walk the unit along the path using the standard movement system.
+                // followCameraForAI=true so the camera tracks the unit during the walk.
+                if (UnitMovementController.Instance != null)
+                    yield return StartCoroutine(UnitMovementController.Instance.ExecuteAnimatedMovement(
+                        target,
+                        dodgeTile,
+                        waypoints: dodgePath,
+                        followCameraForAI: true));
 
                 // Pan camera back to the caster ready for the attack animation.
                 if (cameraController != null)
                     yield return StartCoroutine(cameraController.TransitionTo(
                         cameraController.UnitFocusPosition(unit)));
 
-                // Re-evaluate traversal from the caster's current position after the dodge.
-                var traversalAfterDodge = ctx.ability.targeting.GetTraversal(ctx);
-                if (!traversalAfterDodge.Contains(dodgeTile))
-                {
-                    // New tile is outside the attack — remove from targets, attack misses.
-                    targets.Remove(target);
-                    Debug.Log($"[Warned] {target.name} successfully dodged out of range.");
-                }
-                else
-                {
-                    Debug.Log($"[Warned] {target.name} dodged but is still in the AOE.");
-                }
+                // The dodge tile was chosen because it is outside the traversal, so the
+                // attack always misses — remove the target from the list.
+                targets.Remove(target);
+                Debug.Log($"[Warned] {target.name} successfully walked out of range.");
             }
         }
 
         /// <summary>
-        /// Finds the best adjacent tile for a Warned unit to dodge to.
-        /// Prioritises tiles that are outside the ability's traversal so the dodge
-        /// actually takes the unit out of the line of fire. Falls back to any free
-        /// adjacent tile if all safe options are blocked.
+        /// BFS outward from the warned unit's tile to find the closest tile that is both:
+        ///   • outside the full ability traversal (danger zone), and
+        ///   • reachable by walking — no jumping, no passing through occupied tiles.
+        ///
+        /// Among tiles at equal BFS distance, the one whose direction from the unit is
+        /// furthest from the attacker is preferred.
+        ///
+        /// Returns (null, empty) only when the unit is completely walled in with no
+        /// walkable path to any safe tile at all.
         /// </summary>
-        private Tile FindDodgeTile(Unit target, AbilityContext ctx)
+        private (Tile tile, List<Tile> path) FindWalkDodgeTile(Unit target, AbilityContext ctx)
         {
-            if (target?.currentTile == null) return null;
+            if (target?.currentTile == null) return (null, null);
 
-            // Snapshot the traversal so we know which tiles are dangerous.
+            // Snapshot the full traversal — every tile the ability can reach is dangerous.
             var dangerTiles = new HashSet<Tile>(ctx.ability.targeting.GetTraversal(ctx));
 
-            Vector2Int[] dirs = { Vector2Int.up, Vector2Int.down, Vector2Int.left, Vector2Int.right };
-
-            // Shuffle so the dodge direction among equally safe options is unpredictable.
-            for (int i = dirs.Length - 1; i > 0; i--)
+            // Pre-compute the direction away from the attacker for tiebreaking.
+            // Higher dot product with this vector = further from attacker = preferred.
+            Vector3 awayFromAttacker = Vector3.zero;
+            if (ctx.caster?.currentTile != null)
             {
-                int j = UnityEngine.Random.Range(0, i + 1);
-                (dirs[i], dirs[j]) = (dirs[j], dirs[i]);
+                awayFromAttacker = (target.currentTile.transform.position
+                                  - ctx.caster.currentTile.transform.position).normalized;
             }
 
-            // First pass: find a free tile that is outside the traversal (safe dodge).
-            foreach (var dir in dirs)
+            // BFS — no step limit, walk only (occupied tiles block the path).
+            // We track the first-step from the origin for each visited tile so we can
+            // reconstruct the full path once we find a safe destination.
+            var cameFrom   = new Dictionary<Tile, Tile>();
+            var queue      = new Queue<Tile>();
+            var visited    = new HashSet<Tile>();
+
+            queue.Enqueue(target.currentTile);
+            visited.Add(target.currentTile);
+            cameFrom[target.currentTile] = null;
+
+            // Collect ALL safe tiles at the minimum BFS depth found, then tiebreak.
+            int       bestDepth     = int.MaxValue;
+            var       safeCandidates = new List<Tile>();
+
+            while (queue.Count > 0)
             {
-                var tile = GridManager.Instance.GetTileInDirection(target.currentTile, dir);
-                if (tile != null && tile.passableTerrain && !tile.occupied && !dangerTiles.Contains(tile))
-                    return tile;
+                var current = queue.Dequeue();
+
+                // Compute BFS depth for this tile.
+                int depth = 0;
+                {
+                    var step = current;
+                    while (cameFrom[step] != null) { step = cameFrom[step]; depth++; }
+                }
+
+                // If we are already deeper than the best depth found, no point going further.
+                if (depth > bestDepth) continue;
+
+                // Is this tile safe (outside the danger zone)?
+                // We never dodge to our own current tile.
+                if (current != target.currentTile && !dangerTiles.Contains(current))
+                {
+                    if (depth < bestDepth)
+                    {
+                        bestDepth = depth;
+                        safeCandidates.Clear();
+                    }
+                    safeCandidates.Add(current);
+                    // Do NOT enqueue neighbours — we already have the shortest distance.
+                    continue;
+                }
+
+                // Expand neighbours (walk only — same Y level, passable, unoccupied).
+                foreach (var neighbour in GridManager.Instance.GetAdjacentTiles(current, includeDiagonals: false))
+                {
+                    if (neighbour == null || visited.Contains(neighbour)) continue;
+                    if (!neighbour.passableTerrain || neighbour.occupied)           continue;
+
+                    visited.Add(neighbour);
+                    cameFrom[neighbour] = current;
+                    queue.Enqueue(neighbour);
+                }
             }
 
-            // Second pass: no safe tile exists (e.g. surrounded or wide AOE) —
-            // fall back to any free adjacent tile so the unit at least tries to move.
-            foreach (var dir in dirs)
+            if (safeCandidates.Count == 0) return (null, null);
+
+            // Tiebreak: among equally close safe tiles, prefer the one furthest from the attacker.
+            Tile best = safeCandidates[0];
+            float bestScore = float.MinValue;
+            foreach (var candidate in safeCandidates)
             {
-                var tile = GridManager.Instance.GetTileInDirection(target.currentTile, dir);
-                if (tile != null && tile.passableTerrain && !tile.occupied)
-                    return tile;
+                Vector3 toCandidate = (candidate.transform.position
+                                     - target.currentTile.transform.position).normalized;
+                float score = Vector3.Dot(toCandidate, awayFromAttacker);
+                if (score > bestScore) { bestScore = score; best = candidate; }
             }
 
-            return null;
+            // Reconstruct the walk path from origin to best tile.
+            var path = new List<Tile>();
+            var cursor = best;
+            while (cameFrom[cursor] != null)
+            {
+                path.Add(cursor);
+                cursor = cameFrom[cursor];
+            }
+            path.Reverse();
+
+            return (best, path);
         }
 
         #endregion

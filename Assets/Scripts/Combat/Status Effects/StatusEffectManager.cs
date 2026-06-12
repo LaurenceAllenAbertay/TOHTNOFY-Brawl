@@ -357,7 +357,9 @@ namespace DDD.TNFY.BRAWL
                     // Behavioural effect: damage prevention is checked live in Unit.ReceiveDamage.
                     break;
                 case StatusEffectType.Warned:
-                    // Behavioural effect: dodge is handled in AbilitySequencer before animation plays.
+                    // Behavioural effect: walk-dodge is handled in AbilitySequencer before animation plays.
+                    // If a safe tile is reachable by walking, the unit walks there and the attack misses.
+                    // If fully blocked, damage is negated and the unit stays put.
                     break;
                 case StatusEffectType.Shocked:
                     // Turn skip is enforced in TurnManager.StartNextTurn.
