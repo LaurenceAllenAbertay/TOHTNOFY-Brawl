@@ -403,6 +403,7 @@ MonoBehaviour:
   currentTile: {fileID: 0}
   currentSpeed: 0
   canMove: 0
+  currentFacing: {x: 1, y: 0}
   enableDebugLogging: 0
 --- !u!114 &7748723909159697864
 MonoBehaviour:
