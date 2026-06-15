@@ -12,29 +12,48 @@ namespace DDD.TNFY.BRAWL
         [SerializeField] private float inactiveTurnSpeed = 0.3f;
 
         private Animator animator;
-        private string currentAnimation;
+        private Unit     _unit;
+        private string   currentAnimation;
 
         // Knockback state tracking
         private bool isInKnockbackSequence = false;
         private Coroutine knockbackSequence;
 
-        // Animation state names (these should match your Animator states)
-        private const string IDLE_STATE = "Idle";
-        private const string MOVE_STATE = "Move";
-        private const string ATTACK_STATE = "Recoil_Shot";
-        private const string HURT_STATE = "Hurt";
-        private const string DEATH_STATE = "Death";
+        // ── Idle tier state ───────────────────────────────────────────────────
+
+        private bool _isTalking      = false;
+        private bool _isHurtIdle     = false;   // unit HP < 25 %
+        private bool _isBadIdle      = false;   // 2+ bodies AND outnumbered
+
+        // ── Animation state names ─────────────────────────────────────────────
+
+        // Contextual idle states — checked with HasState() so missing states
+        // fall back gracefully to Idle_Good / Idle_Good_Talking.
+        private const string IDLE_GOOD          = "Idle_Good";
+        private const string IDLE_GOOD_TALKING  = "Idle_Good_Talking";
+        private const string IDLE_BAD           = "Idle_Bad";
+        private const string IDLE_BAD_TALKING   = "Idle_Bad_Talking";
+        private const string IDLE_HURT          = "Idle_Hurt";
+        private const string IDLE_HURT_TALKING  = "Idle_Hurt_Talking";
+
+        private const string MOVE_STATE           = "Move";
+        private const string ATTACK_STATE         = "Recoil_Shot";
+        private const string HURT_STATE           = "Hurt";
+        private const string DEATH_STATE          = "Death";
         private const string KNOCKBACK_START_STATE = "Knockback_Start";
-        private const string KNOCKBACK_END_STATE = "Knockback_End";
+        private const string KNOCKBACK_END_STATE   = "Knockback_End";
 
         // Animation state tracking
         public bool IsAnimating => animator != null && animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f;
         public bool IsInKnockbackSequence => isInKnockbackSequence;
         public string CurrentAnimation => currentAnimation;
 
+        // ── Unity lifecycle ───────────────────────────────────────────────────
+
         void Awake()
         {
             animator = GetComponent<Animator>();
+            _unit    = GetComponentInParent<Unit>();
 
             if (animator == null)
             {
@@ -47,10 +66,162 @@ namespace DDD.TNFY.BRAWL
 
         void Start()
         {
+            // Evaluate the initial idle tier before subscribing so the first
+            // PlayIdle() call uses the correct state.
+            EvaluateIdleTier();
+
             if (playIdleOnStart)
-            {
                 PlayIdle();
+
+            SubscribeToEvents();
+        }
+
+        void OnDestroy()
+        {
+            UnsubscribeFromEvents();
+        }
+
+        // ── Event subscriptions ───────────────────────────────────────────────
+
+        private void SubscribeToEvents()
+        {
+            Unit.OnHealthChanged              += HandleHealthChanged;
+            UnitManager.OnUnitDied            += HandleRosterChanged;
+            UnitManager.OnBodySpawned         += HandleRosterChanged;
+            UnitManager.OnUnitUnregistered    += HandleRosterChanged;
+            DialogueBubbleUI.OnDialogueStarted += HandleDialogueStarted;
+            DialogueBubbleUI.OnDialogueEnded   += HandleDialogueEnded;
+        }
+
+        private void UnsubscribeFromEvents()
+        {
+            Unit.OnHealthChanged              -= HandleHealthChanged;
+            UnitManager.OnUnitDied            -= HandleRosterChanged;
+            UnitManager.OnBodySpawned         -= HandleRosterChanged;
+            UnitManager.OnUnitUnregistered    -= HandleRosterChanged;
+            DialogueBubbleUI.OnDialogueStarted -= HandleDialogueStarted;
+            DialogueBubbleUI.OnDialogueEnded   -= HandleDialogueEnded;
+        }
+
+        // ── Idle tier evaluation ──────────────────────────────────────────────
+
+        /// <summary>
+        /// Re-evaluates which idle tier this unit belongs to and refreshes the
+        /// idle animation if the unit is currently idling.
+        /// </summary>
+        private void EvaluateIdleTier()
+        {
+            if (_unit == null) return;
+
+            bool wasHurt = _isHurtIdle;
+            bool wasBad  = _isBadIdle;
+
+            // Hurt check — below 25 % max health.
+            int maxHp = _unit.characterData != null ? _unit.characterData.maxHealth : 0;
+            _isHurtIdle = maxHp > 0 && _unit.currentHealth < maxHp * 0.25f;
+
+            // Bad check — 2+ player bodies AND remaining players < remaining enemies.
+            int bodyCount     = UnitManager.AllBodies.Count;
+            int playerCount   = UnitManager.PlayerUnits.Count;
+            int enemyCount    = UnitManager.EnemyUnits.Count;
+            _isBadIdle = bodyCount >= 2 && playerCount < enemyCount;
+
+            // Only refresh idle if the tier actually changed and the unit is currently
+            // playing some variety of idle (so we don't interrupt attacks, etc.).
+            if ((_isHurtIdle != wasHurt || _isBadIdle != wasBad) && IsCurrentlyIdling())
+                PlayIdle();
+        }
+
+        /// <summary>Returns true when the currently playing animation is any idle variant.</summary>
+        private bool IsCurrentlyIdling()
+        {
+            return currentAnimation == IDLE_GOOD         ||
+                   currentAnimation == IDLE_GOOD_TALKING ||
+                   currentAnimation == IDLE_BAD          ||
+                   currentAnimation == IDLE_BAD_TALKING  ||
+                   currentAnimation == IDLE_HURT         ||
+                   currentAnimation == IDLE_HURT_TALKING;
+        }
+
+        /// <summary>
+        /// Returns the correct idle state name for the current tier and talking flag,
+        /// falling back to Idle_Good / Idle_Good_Talking when the specific state is absent.
+        /// </summary>
+        private string ResolveIdleState(bool talking)
+        {
+            if (_isHurtIdle)
+            {
+                string s = talking ? IDLE_HURT_TALKING : IDLE_HURT;
+                if (HasState(s)) return s;
             }
+            else if (_isBadIdle)
+            {
+                string s = talking ? IDLE_BAD_TALKING : IDLE_BAD;
+                if (HasState(s)) return s;
+            }
+
+            // Good tier — always present.
+            return talking ? IDLE_GOOD_TALKING : IDLE_GOOD;
+        }
+
+        // ── Event handlers ────────────────────────────────────────────────────
+
+        private void HandleHealthChanged(Unit changed)
+        {
+            if (changed != _unit) return;
+            EvaluateIdleTier();
+        }
+
+        private void HandleRosterChanged(Unit _)
+        {
+            // Any change to the live/body roster may flip the Bad condition.
+            EvaluateIdleTier();
+        }
+
+        private void HandleDialogueStarted(Unit speaker)
+        {
+            if (speaker != _unit) return;
+            _isTalking = true;
+
+            // Only swap if we're currently idling — don't interrupt an attack.
+            if (!IsCurrentlyIdling()) return;
+
+            // Swap to the talking variant at the exact normalised time we're at
+            // so the animation continues seamlessly from the same frame.
+            float normalizedTime = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+            string talkingState  = ResolveIdleState(talking: true);
+            PlayIdleAtTime(talkingState, normalizedTime);
+        }
+
+        private void HandleDialogueEnded(Unit speaker)
+        {
+            if (speaker != _unit) return;
+            _isTalking = false;
+
+            if (!IsCurrentlyIdling()) return;
+
+            float normalizedTime  = animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+            string nonTalkState   = ResolveIdleState(talking: false);
+            PlayIdleAtTime(nonTalkState, normalizedTime);
+        }
+
+        // ── Private idle helpers ──────────────────────────────────────────────
+
+        /// <summary>
+        /// Plays an idle state at a specific normalised time so the sprite sheet
+        /// continues from the same frame rather than restarting.
+        /// Bypasses the canInterrupt guard intentionally — idle↔talking swaps always apply.
+        /// </summary>
+        private void PlayIdleAtTime(string stateName, float normalizedTime)
+        {
+            if (animator == null) return;
+            if (!HasState(stateName)) return;
+            if (currentAnimation == DEATH_STATE) return;
+
+            // Use frac to keep the time within [0, 1) for a looping clip.
+            float frac = normalizedTime % 1f;
+            animator.Play(stateName, 0, frac);
+            currentAnimation = stateName;
         }
 
         #region Animation Events
@@ -72,12 +243,14 @@ namespace DDD.TNFY.BRAWL
         #region Public Animation Methods
 
         /// <summary>
-        /// Play the idle animation (loops continuously)
+        /// Plays the contextually correct idle animation for this unit's current tier
+        /// (Hurt → Bad → Good) and talking state.
         /// </summary>
         public void PlayIdle()
         {
-            if (!isInKnockbackSequence) // Don't interrupt knockback sequences
-                PlayAnimation(IDLE_STATE, true);
+            if (isInKnockbackSequence) return;
+            string idleState = ResolveIdleState(_isTalking);
+            PlayAnimation(idleState, true);
         }
 
         /// <summary>

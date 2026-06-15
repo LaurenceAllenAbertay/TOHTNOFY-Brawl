@@ -1,0 +1,2108 @@
+fileFormatVersion: 2
+guid: b05f5302ab30b6643bb0c0bc6b2558c8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3578270633594679641
+    second: Kallper_Idle_Good_0
+  - first:
+      213: -4412751961946319503
+    second: Kallper_Idle_Good_1
+  - first:
+      213: -3497107023201340054
+    second: Kallper_Idle_Good_2
+  - first:
+      213: -5781320905668122160
+    second: Kallper_Idle_Good_3
+  - first:
+      213: -6457569662330685235
+    second: Kallper_Idle_Good_4
+  - first:
+      213: 3989643435210343762
+    second: Kallper_Idle_Good_5
+  - first:
+      213: 4537230092899842908
+    second: Kallper_Idle_Good_6
+  - first:
+      213: 3635927359399509608
+    second: Kallper_Idle_Good_7
+  - first:
+      213: -153862545087880187
+    second: Kallper_Idle_Good_8
+  - first:
+      213: 7595392894937002132
+    second: Kallper_Idle_Good_9
+  - first:
+      213: -7287301175364311522
+    second: Kallper_Idle_Good_10
+  - first:
+      213: 3482322842837917294
+    second: Kallper_Idle_Good_11
+  - first:
+      213: -2798956204853136620
+    second: Kallper_Idle_Good_12
+  - first:
+      213: 3071491192334820516
+    second: Kallper_Idle_Good_13
+  - first:
+      213: 4324814215117054533
+    second: Kallper_Idle_Good_14
+  - first:
+      213: 8195851257526249513
+    second: Kallper_Idle_Good_15
+  - first:
+      213: -7073082477898038205
+    second: Kallper_Idle_Good_16
+  - first:
+      213: 9132057915199764517
+    second: Kallper_Idle_Good_17
+  - first:
+      213: -8638783093563267077
+    second: Kallper_Idle_Good_18
+  - first:
+      213: 5012187373945794226
+    second: Kallper_Idle_Good_19
+  - first:
+      213: -4111030941011078203
+    second: Kallper_Idle_Good_20
+  - first:
+      213: -3561150977119775150
+    second: Kallper_Idle_Good_21
+  - first:
+      213: 3901493694808937563
+    second: Kallper_Idle_Good_22
+  - first:
+      213: 2860111425643193266
+    second: Kallper_Idle_Good_23
+  - first:
+      213: -9074172323792955520
+    second: Kallper_Idle_Good_24
+  - first:
+      213: 3936236556904986249
+    second: Kallper_Idle_Good_25
+  - first:
+      213: 9171762070830584538
+    second: Kallper_Idle_Good_26
+  - first:
+      213: -4082354262533554727
+    second: Kallper_Idle_Good_27
+  - first:
+      213: 4133578738001209316
+    second: Kallper_Idle_Good_28
+  - first:
+      213: -4867769955817504333
+    second: Kallper_Idle_Good_29
+  - first:
+      213: -1078853897199144048
+    second: Kallper_Idle_Good_30
+  - first:
+      213: -7998875928133687482
+    second: Kallper_Idle_Good_31
+  - first:
+      213: -6144847525905647648
+    second: Kallper_Idle_Good_32
+  - first:
+      213: -4963126320881600812
+    second: Kallper_Idle_Good_33
+  - first:
+      213: 2917946055516411226
+    second: Kallper_Idle_Good_34
+  - first:
+      213: 48390800361307790
+    second: Kallper_Idle_Good_35
+  - first:
+      213: -4347063726396234861
+    second: Kallper_Idle_Good_36
+  - first:
+      213: -3189294930999414717
+    second: Kallper_Idle_Good_37
+  - first:
+      213: 7755750005175976139
+    second: Kallper_Idle_Good_38
+  - first:
+      213: -1752746022913108679
+    second: Kallper_Idle_Good_39
+  - first:
+      213: -5000512828945168896
+    second: Kallper_Idle_Good_40
+  - first:
+      213: 7579434836541170138
+    second: Kallper_Idle_Good_41
+  - first:
+      213: 6041062142895513201
+    second: Kallper_Idle_Good_42
+  - first:
+      213: 1823352933972904414
+    second: Kallper_Idle_Good_43
+  - first:
+      213: 5419638702307864630
+    second: Kallper_Idle_Good_44
+  - first:
+      213: -768582377364769603
+    second: Kallper_Idle_Good_45
+  - first:
+      213: 7169270976523341138
+    second: Kallper_Idle_Good_46
+  - first:
+      213: 6909867924135769848
+    second: Kallper_Idle_Good_47
+  - first:
+      213: -4157762226431573346
+    second: Kallper_Idle_Good_48
+  - first:
+      213: 4944973174750572610
+    second: Kallper_Idle_Good_49
+  - first:
+      213: 9038760898235733291
+    second: Kallper_Idle_Good_50
+  - first:
+      213: 5732146924023326236
+    second: Kallper_Idle_Good_51
+  - first:
+      213: -5940757498575826781
+    second: Kallper_Idle_Good_52
+  - first:
+      213: 8338263553622590775
+    second: Kallper_Idle_Good_53
+  - first:
+      213: 2755885231723676331
+    second: Kallper_Idle_Good_54
+  - first:
+      213: 5127581004891721096
+    second: Kallper_Idle_Good_55
+  - first:
+      213: -2141541890631388335
+    second: Kallper_Idle_Good_56
+  - first:
+      213: -8631767787801894859
+    second: Kallper_Idle_Good_57
+  - first:
+      213: -4288436010904821158
+    second: Kallper_Idle_Good_58
+  - first:
+      213: -6590026838178003268
+    second: Kallper_Idle_Good_59
+  - first:
+      213: 2992167063966584069
+    second: Kallper_Idle_Good_60
+  - first:
+      213: 3903907066693844695
+    second: Kallper_Idle_Good_61
+  - first:
+      213: 4686235857610112944
+    second: Kallper_Idle_Good_62
+  - first:
+      213: -3589314752285142548
+    second: Kallper_Idle_Good_63
+  - first:
+      213: 6069248452021706157
+    second: Kallper_Idle_Good_64
+  - first:
+      213: -3851989449974743941
+    second: Kallper_Idle_Good_65
+  - first:
+      213: -8207523108935268040
+    second: Kallper_Idle_Good_66
+  - first:
+      213: -19971241747159389
+    second: Kallper_Idle_Good_67
+  - first:
+      213: -1774180811425468273
+    second: Kallper_Idle_Good_68
+  - first:
+      213: 4350242339985723283
+    second: Kallper_Idle_Good_69
+  - first:
+      213: 55799930246207106
+    second: Kallper_Idle_Good_70
+  - first:
+      213: -5287408300002047892
+    second: Kallper_Idle_Good_71
+  - first:
+      213: -2672638257314745594
+    second: Kallper_Idle_Good_72
+  - first:
+      213: 2857058412343013172
+    second: Kallper_Idle_Good_73
+  - first:
+      213: 6163075693243876418
+    second: Kallper_Idle_Good_74
+  - first:
+      213: 8956902367261921663
+    second: Kallper_Idle_Good_75
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11358
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9517f99ce2298a130800000000000000
+      internalID: 3578270633594679641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_1
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 11358
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 175184a6871c2c2c0800000000000000
+      internalID: -4412751961946319503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_2
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 11358
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a657f8cd0b7c77fc0800000000000000
+      internalID: -3497107023201340054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_3
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 11358
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d9ac1d544f94cfa0800000000000000
+      internalID: -5781320905668122160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10727
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc8b0741b9a1266a0800000000000000
+      internalID: -6457569662330685235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_5
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 10727
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2558e28f09f0e5730800000000000000
+      internalID: 3989643435210343762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_6
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 10727
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5bf18feaba77fe30800000000000000
+      internalID: 4537230092899842908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_7
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 10727
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86eb12e5ba8657230800000000000000
+      internalID: 3635927359399509608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10096
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 504acc794de5dddf0800000000000000
+      internalID: -153862545087880187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_9
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 10096
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 490fe388891486960800000000000000
+      internalID: 7595392894937002132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_10
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 10096
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e16af17d03e4eda90800000000000000
+      internalID: -7287301175364311522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_11
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 10096
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6e1598ec22b35030800000000000000
+      internalID: 3482322842837917294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9465
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4137ad3492c1829d0800000000000000
+      internalID: -2798956204853136620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_13
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 9465
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a4abd947f020aa20800000000000000
+      internalID: 3071491192334820516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_14
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 9465
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 542ac936d93d40c30800000000000000
+      internalID: 4324814215117054533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_15
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 9465
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9286ac49b438db170800000000000000
+      internalID: 8195851257526249513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8834
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34409dd06fc57dd90800000000000000
+      internalID: -7073082477898038205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_17
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 8834
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 528b6c74a469bbe70800000000000000
+      internalID: 9132057915199764517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_18
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 8834
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf7e280fb80ec1880800000000000000
+      internalID: -8638783093563267077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_19
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 8834
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2beacb36cddde8540800000000000000
+      internalID: 5012187373945794226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8203
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c3156ce32fa2f6c0800000000000000
+      internalID: -4111030941011078203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_21
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 8203
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2569d39dd00449ec0800000000000000
+      internalID: -3561150977119775150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_22
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 8203
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b54538c28d3e42630800000000000000
+      internalID: 3901493694808937563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_23
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 8203
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b3af77203821b720800000000000000
+      internalID: 2860111425643193266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7572
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 087d3a93950121280800000000000000
+      internalID: -9074172323792955520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_25
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 7572
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9867a3e1b4250a630800000000000000
+      internalID: 3936236556904986249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_26
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 7572
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad212446205a84f70800000000000000
+      internalID: 9171762070830584538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_27
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 7572
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ddb26e6d609857c0800000000000000
+      internalID: -4082354262533554727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6941
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e76ba926fb6d5930800000000000000
+      internalID: 4133578738001209316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_29
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 6941
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b1cd270405327cb0800000000000000
+      internalID: -4867769955817504333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_30
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 6941
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09336e4b8142701f0800000000000000
+      internalID: -1078853897199144048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_31
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 6941
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6472b2529b84ef090800000000000000
+      internalID: -7998875928133687482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6310
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e7b4736bbd19baa0800000000000000
+      internalID: -6144847525905647648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_33
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 6310
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d6f57c28ee6f1bb0800000000000000
+      internalID: -4963126320881600812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_34
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 6310
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a55dec04a70ae7820800000000000000
+      internalID: 2917946055516411226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_35
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 6310
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8ebee13d2beba000800000000000000
+      internalID: 48390800361307790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5679
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 393aa2492902ca3c0800000000000000
+      internalID: -4347063726396234861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_37
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 5679
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34073d968295db3d0800000000000000
+      internalID: -3189294930999414717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_38
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 5679
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc08f39b985f1ab60800000000000000
+      internalID: 7755750005175976139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_39
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 5679
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93519c257cefca7e0800000000000000
+      internalID: -1752746022913108679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5048
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00680ff631c9a9ab0800000000000000
+      internalID: -5000512828945168896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_41
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 5048
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad1e14683df8f2960800000000000000
+      internalID: 7579434836541170138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_42
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 5048
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17ed855130a26d350800000000000000
+      internalID: 6041062142895513201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_43
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 5048
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed90f9935d9dd4910800000000000000
+      internalID: 1823352933972904414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4417
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 630f40e6fac663b40800000000000000
+      internalID: 5419638702307864630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_45
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 4417
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db43c8066627555f0800000000000000
+      internalID: -768582377364769603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_46
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 4417
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25d013ef7fd5e7360800000000000000
+      internalID: 7169270976523341138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_47
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 4417
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f67af65448c4ef50800000000000000
+      internalID: 6909867924135769848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3786
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e924209a849ac46c0800000000000000
+      internalID: -4157762226431573346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_49
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 3786
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 240f7d027e210a440800000000000000
+      internalID: 4944973174750572610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_50
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 3786
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b251805c521207d70800000000000000
+      internalID: 9038760898235733291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_51
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 3786
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1622c6d14dac8f40800000000000000
+      internalID: 5732146924023326236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3155
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a056a0d7803e8da0800000000000000
+      internalID: -5940757498575826781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_53
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 3155
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 735c245268677b370800000000000000
+      internalID: 8338263553622590775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_54
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 3155
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba282a6540fde3620800000000000000
+      internalID: 2755885231723676331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_55
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 3155
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88d8c91c1c3d82740800000000000000
+      internalID: 5127581004891721096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2524
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1533c413ff6b742e0800000000000000
+      internalID: -2141541890631388335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_57
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 2524
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 530a8681eecc53880800000000000000
+      internalID: -8631767787801894859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_58
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 2524
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5266005b2a6c74c0800000000000000
+      internalID: -4288436010904821158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_59
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 2524
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb60c1291858b84a0800000000000000
+      internalID: -6590026838178003268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1893
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50d0a5c6710568920800000000000000
+      internalID: 2992167063966584069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_61
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 1893
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7de7c6a1bc67d2630800000000000000
+      internalID: 3903907066693844695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_62
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 1893
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bf7c8a0faad80140800000000000000
+      internalID: 4686235857610112944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_63
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 1893
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce199f2ff31303ec0800000000000000
+      internalID: -3589314752285142548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1262
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dadd7549f4d4a3450800000000000000
+      internalID: 6069248452021706157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_65
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 1262
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7cf3b3010cfa8ac0800000000000000
+      internalID: -3851989449974743941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_66
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 1262
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8398a1eb735091e80800000000000000
+      internalID: -8207523108935268040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_67
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 1262
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a6efede24c09bff0800000000000000
+      internalID: -19971241747159389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_68
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 631
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f80bba7b3f7d067e0800000000000000
+      internalID: -1774180811425468273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_69
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 631
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39f86b11c5a2f5c30800000000000000
+      internalID: 4350242339985723283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_70
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 631
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28611dcadbd36c000800000000000000
+      internalID: 55799930246207106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_71
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 631
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c680def3a2a5f96b0800000000000000
+      internalID: -5287408300002047892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 603b2ab4aa1e8ead0800000000000000
+      internalID: -2672638257314745594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_73
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 0
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43f2f3a1d7f46a720800000000000000
+      internalID: 2857058412343013172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_74
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 0
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24445ab80b4a78550800000000000000
+      internalID: 6163075693243876418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Good_75
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 0
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7190805f3f4d4c70800000000000000
+      internalID: 8956902367261921663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 00d9170c0dd922843b13f5b0dc2aef5c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":19.0},"gridSpriteSize":{"x":517.0,"y":631.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Kallper_Idle_Good_0: 3578270633594679641
+      Kallper_Idle_Good_1: -4412751961946319503
+      Kallper_Idle_Good_10: -7287301175364311522
+      Kallper_Idle_Good_11: 3482322842837917294
+      Kallper_Idle_Good_12: -2798956204853136620
+      Kallper_Idle_Good_13: 3071491192334820516
+      Kallper_Idle_Good_14: 4324814215117054533
+      Kallper_Idle_Good_15: 8195851257526249513
+      Kallper_Idle_Good_16: -7073082477898038205
+      Kallper_Idle_Good_17: 9132057915199764517
+      Kallper_Idle_Good_18: -8638783093563267077
+      Kallper_Idle_Good_19: 5012187373945794226
+      Kallper_Idle_Good_2: -3497107023201340054
+      Kallper_Idle_Good_20: -4111030941011078203
+      Kallper_Idle_Good_21: -3561150977119775150
+      Kallper_Idle_Good_22: 3901493694808937563
+      Kallper_Idle_Good_23: 2860111425643193266
+      Kallper_Idle_Good_24: -9074172323792955520
+      Kallper_Idle_Good_25: 3936236556904986249
+      Kallper_Idle_Good_26: 9171762070830584538
+      Kallper_Idle_Good_27: -4082354262533554727
+      Kallper_Idle_Good_28: 4133578738001209316
+      Kallper_Idle_Good_29: -4867769955817504333
+      Kallper_Idle_Good_3: -5781320905668122160
+      Kallper_Idle_Good_30: -1078853897199144048
+      Kallper_Idle_Good_31: -7998875928133687482
+      Kallper_Idle_Good_32: -6144847525905647648
+      Kallper_Idle_Good_33: -4963126320881600812
+      Kallper_Idle_Good_34: 2917946055516411226
+      Kallper_Idle_Good_35: 48390800361307790
+      Kallper_Idle_Good_36: -4347063726396234861
+      Kallper_Idle_Good_37: -3189294930999414717
+      Kallper_Idle_Good_38: 7755750005175976139
+      Kallper_Idle_Good_39: -1752746022913108679
+      Kallper_Idle_Good_4: -6457569662330685235
+      Kallper_Idle_Good_40: -5000512828945168896
+      Kallper_Idle_Good_41: 7579434836541170138
+      Kallper_Idle_Good_42: 6041062142895513201
+      Kallper_Idle_Good_43: 1823352933972904414
+      Kallper_Idle_Good_44: 5419638702307864630
+      Kallper_Idle_Good_45: -768582377364769603
+      Kallper_Idle_Good_46: 7169270976523341138
+      Kallper_Idle_Good_47: 6909867924135769848
+      Kallper_Idle_Good_48: -4157762226431573346
+      Kallper_Idle_Good_49: 4944973174750572610
+      Kallper_Idle_Good_5: 3989643435210343762
+      Kallper_Idle_Good_50: 9038760898235733291
+      Kallper_Idle_Good_51: 5732146924023326236
+      Kallper_Idle_Good_52: -5940757498575826781
+      Kallper_Idle_Good_53: 8338263553622590775
+      Kallper_Idle_Good_54: 2755885231723676331
+      Kallper_Idle_Good_55: 5127581004891721096
+      Kallper_Idle_Good_56: -2141541890631388335
+      Kallper_Idle_Good_57: -8631767787801894859
+      Kallper_Idle_Good_58: -4288436010904821158
+      Kallper_Idle_Good_59: -6590026838178003268
+      Kallper_Idle_Good_6: 4537230092899842908
+      Kallper_Idle_Good_60: 2992167063966584069
+      Kallper_Idle_Good_61: 3903907066693844695
+      Kallper_Idle_Good_62: 4686235857610112944
+      Kallper_Idle_Good_63: -3589314752285142548
+      Kallper_Idle_Good_64: 6069248452021706157
+      Kallper_Idle_Good_65: -3851989449974743941
+      Kallper_Idle_Good_66: -8207523108935268040
+      Kallper_Idle_Good_67: -19971241747159389
+      Kallper_Idle_Good_68: -1774180811425468273
+      Kallper_Idle_Good_69: 4350242339985723283
+      Kallper_Idle_Good_7: 3635927359399509608
+      Kallper_Idle_Good_70: 55799930246207106
+      Kallper_Idle_Good_71: -5287408300002047892
+      Kallper_Idle_Good_72: -2672638257314745594
+      Kallper_Idle_Good_73: 2857058412343013172
+      Kallper_Idle_Good_74: 6163075693243876418
+      Kallper_Idle_Good_75: 8956902367261921663
+      Kallper_Idle_Good_8: -153862545087880187
+      Kallper_Idle_Good_9: 7595392894937002132
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

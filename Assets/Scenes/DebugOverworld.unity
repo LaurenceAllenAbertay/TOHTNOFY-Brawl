@@ -296,21 +296,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1154381824}
     - target: {fileID: 8036135132565468779, guid: ed5171bb55a18bf4f946bdf77e3b1d92, type: 3}
-      propertyPath: smoothTime
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 8036135132565468779, guid: ed5171bb55a18bf4f946bdf77e3b1d92, type: 3}
       propertyPath: followTarget
       value: 
       objectReference: {fileID: 326585988}
-    - target: {fileID: 8036135132565468779, guid: ed5171bb55a18bf4f946bdf77e3b1d92, type: 3}
-      propertyPath: idleSpreadRadius
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 8036135132565468779, guid: ed5171bb55a18bf4f946bdf77e3b1d92, type: 3}
-      propertyPath: idleSpreadMinRadius
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8775086324359477080, guid: ed5171bb55a18bf4f946bdf77e3b1d92, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.21
@@ -642,21 +630,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1154381824}
     - target: {fileID: 7382723897980185538, guid: 04bef15e28affd14caa39021d5917fc2, type: 3}
-      propertyPath: smoothTime
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 7382723897980185538, guid: 04bef15e28affd14caa39021d5917fc2, type: 3}
       propertyPath: followTarget
       value: 
       objectReference: {fileID: 1154381828}
-    - target: {fileID: 7382723897980185538, guid: 04bef15e28affd14caa39021d5917fc2, type: 3}
-      propertyPath: idleSpreadRadius
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7382723897980185538, guid: 04bef15e28affd14caa39021d5917fc2, type: 3}
-      propertyPath: idleSpreadMinRadius
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 8468779021554782505, guid: 04bef15e28affd14caa39021d5917fc2, type: 3}
       propertyPath: m_Name
       value: Overworld_Brodie
@@ -723,21 +699,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1154381824}
     - target: {fileID: 6435763245314680403, guid: e4ddbbcc4ba2fc64ab537aeae8f63f99, type: 3}
-      propertyPath: smoothTime
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6435763245314680403, guid: e4ddbbcc4ba2fc64ab537aeae8f63f99, type: 3}
       propertyPath: followTarget
       value: 
       objectReference: {fileID: 816686528}
-    - target: {fileID: 6435763245314680403, guid: e4ddbbcc4ba2fc64ab537aeae8f63f99, type: 3}
-      propertyPath: idleSpreadRadius
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 6435763245314680403, guid: e4ddbbcc4ba2fc64ab537aeae8f63f99, type: 3}
-      propertyPath: idleSpreadMinRadius
-      value: 0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

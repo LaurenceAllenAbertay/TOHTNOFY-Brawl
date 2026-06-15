@@ -1,0 +1,2108 @@
+fileFormatVersion: 2
+guid: 0ca79e91a37b71e48be60f340ee10122
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7693972152816286111
+    second: Kallper_Idle_hurt_Talking_0
+  - first:
+      213: 6959725777391534075
+    second: Kallper_Idle_hurt_Talking_1
+  - first:
+      213: -5146890103895419857
+    second: Kallper_Idle_hurt_Talking_2
+  - first:
+      213: 2478042585844263274
+    second: Kallper_Idle_hurt_Talking_3
+  - first:
+      213: 918366450840835096
+    second: Kallper_Idle_hurt_Talking_4
+  - first:
+      213: 1196541637239838754
+    second: Kallper_Idle_hurt_Talking_5
+  - first:
+      213: -4747311808037936167
+    second: Kallper_Idle_hurt_Talking_6
+  - first:
+      213: -8726113893763699396
+    second: Kallper_Idle_hurt_Talking_7
+  - first:
+      213: -693150149361666275
+    second: Kallper_Idle_hurt_Talking_8
+  - first:
+      213: -956059493807162061
+    second: Kallper_Idle_hurt_Talking_9
+  - first:
+      213: -4877274447070559484
+    second: Kallper_Idle_hurt_Talking_10
+  - first:
+      213: -4883198459598386532
+    second: Kallper_Idle_hurt_Talking_11
+  - first:
+      213: -8618254781732606470
+    second: Kallper_Idle_hurt_Talking_12
+  - first:
+      213: 4181895727256640941
+    second: Kallper_Idle_hurt_Talking_13
+  - first:
+      213: -978877736757688645
+    second: Kallper_Idle_hurt_Talking_14
+  - first:
+      213: -684178359590621724
+    second: Kallper_Idle_hurt_Talking_15
+  - first:
+      213: -1199113334426565915
+    second: Kallper_Idle_hurt_Talking_16
+  - first:
+      213: 6033465074664083426
+    second: Kallper_Idle_hurt_Talking_17
+  - first:
+      213: 4163066568426056531
+    second: Kallper_Idle_hurt_Talking_18
+  - first:
+      213: -4858145370710691843
+    second: Kallper_Idle_hurt_Talking_19
+  - first:
+      213: 2543618573947926512
+    second: Kallper_Idle_hurt_Talking_20
+  - first:
+      213: -8329127688698509845
+    second: Kallper_Idle_hurt_Talking_21
+  - first:
+      213: -2001543460892859654
+    second: Kallper_Idle_hurt_Talking_22
+  - first:
+      213: 4235879862739529647
+    second: Kallper_Idle_hurt_Talking_23
+  - first:
+      213: -7802198441671235408
+    second: Kallper_Idle_hurt_Talking_24
+  - first:
+      213: -6184710836664153291
+    second: Kallper_Idle_hurt_Talking_25
+  - first:
+      213: -5921879293933565167
+    second: Kallper_Idle_hurt_Talking_26
+  - first:
+      213: -5518240894819443384
+    second: Kallper_Idle_hurt_Talking_27
+  - first:
+      213: 5450263149973142549
+    second: Kallper_Idle_hurt_Talking_28
+  - first:
+      213: -1768297682084657248
+    second: Kallper_Idle_hurt_Talking_29
+  - first:
+      213: 6311868496183606768
+    second: Kallper_Idle_hurt_Talking_30
+  - first:
+      213: -8279536536083005900
+    second: Kallper_Idle_hurt_Talking_31
+  - first:
+      213: 3720766977869226860
+    second: Kallper_Idle_hurt_Talking_32
+  - first:
+      213: -1956914181850482632
+    second: Kallper_Idle_hurt_Talking_33
+  - first:
+      213: 7585443607012457462
+    second: Kallper_Idle_hurt_Talking_34
+  - first:
+      213: 6380086394426369912
+    second: Kallper_Idle_hurt_Talking_35
+  - first:
+      213: 7887609532415259829
+    second: Kallper_Idle_hurt_Talking_36
+  - first:
+      213: -3245235319731004851
+    second: Kallper_Idle_hurt_Talking_37
+  - first:
+      213: 5916905353754155941
+    second: Kallper_Idle_hurt_Talking_38
+  - first:
+      213: 7151898615828723132
+    second: Kallper_Idle_hurt_Talking_39
+  - first:
+      213: 6823787866443873451
+    second: Kallper_Idle_hurt_Talking_40
+  - first:
+      213: -4869024933915872660
+    second: Kallper_Idle_hurt_Talking_41
+  - first:
+      213: 1835822632565196905
+    second: Kallper_Idle_hurt_Talking_42
+  - first:
+      213: 7024721614101607160
+    second: Kallper_Idle_hurt_Talking_43
+  - first:
+      213: -6121688073218375483
+    second: Kallper_Idle_hurt_Talking_44
+  - first:
+      213: -5965125429617393209
+    second: Kallper_Idle_hurt_Talking_45
+  - first:
+      213: 5828116654269505494
+    second: Kallper_Idle_hurt_Talking_46
+  - first:
+      213: -76493542213415922
+    second: Kallper_Idle_hurt_Talking_47
+  - first:
+      213: -81246692428331593
+    second: Kallper_Idle_hurt_Talking_48
+  - first:
+      213: -6901106049103587119
+    second: Kallper_Idle_hurt_Talking_49
+  - first:
+      213: -7977844692785829717
+    second: Kallper_Idle_hurt_Talking_50
+  - first:
+      213: -3399684985634583131
+    second: Kallper_Idle_hurt_Talking_51
+  - first:
+      213: 6822597614800492217
+    second: Kallper_Idle_hurt_Talking_52
+  - first:
+      213: -9139248887480848966
+    second: Kallper_Idle_hurt_Talking_53
+  - first:
+      213: -1319328508580791612
+    second: Kallper_Idle_hurt_Talking_54
+  - first:
+      213: 917896732197997408
+    second: Kallper_Idle_hurt_Talking_55
+  - first:
+      213: -4011701572401952994
+    second: Kallper_Idle_hurt_Talking_56
+  - first:
+      213: 7672997992850230800
+    second: Kallper_Idle_hurt_Talking_57
+  - first:
+      213: -7701746081229033944
+    second: Kallper_Idle_hurt_Talking_58
+  - first:
+      213: -5607125104104948295
+    second: Kallper_Idle_hurt_Talking_59
+  - first:
+      213: -2872554919772531706
+    second: Kallper_Idle_hurt_Talking_60
+  - first:
+      213: 955908479004686890
+    second: Kallper_Idle_hurt_Talking_61
+  - first:
+      213: 1318072990267791520
+    second: Kallper_Idle_hurt_Talking_62
+  - first:
+      213: 6790363451894580209
+    second: Kallper_Idle_hurt_Talking_63
+  - first:
+      213: -4242033151040955842
+    second: Kallper_Idle_hurt_Talking_64
+  - first:
+      213: -5475928842406950846
+    second: Kallper_Idle_hurt_Talking_65
+  - first:
+      213: -398600488938178037
+    second: Kallper_Idle_hurt_Talking_66
+  - first:
+      213: 7671311639271085689
+    second: Kallper_Idle_hurt_Talking_67
+  - first:
+      213: -3980837918895612450
+    second: Kallper_Idle_hurt_Talking_68
+  - first:
+      213: -4793860897393012547
+    second: Kallper_Idle_hurt_Talking_69
+  - first:
+      213: -2199860922031450018
+    second: Kallper_Idle_hurt_Talking_70
+  - first:
+      213: 668288939335836087
+    second: Kallper_Idle_hurt_Talking_71
+  - first:
+      213: -5454362863063087115
+    second: Kallper_Idle_hurt_Talking_72
+  - first:
+      213: -1856014694408787706
+    second: Kallper_Idle_hurt_Talking_73
+  - first:
+      213: -7325039670738501681
+    second: Kallper_Idle_hurt_Talking_74
+  - first:
+      213: 6271354693975428947
+    second: Kallper_Idle_hurt_Talking_75
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11358
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84ae88af057677249ae7c5dceefab87e
+      internalID: 1163863059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_1
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 11358
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 508bd47d12fc4f64e97f2fb047ad672c
+      internalID: 209645458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_2
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 11358
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c664d56eea0814bb12a67833f1e432
+      internalID: -2097027471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_3
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 11358
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a9ee071dae18c84097779c40a983a8f
+      internalID: 331907720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10727
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adc131fc01f3b5443b6c63b4e1d669d4
+      internalID: -2126739189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_5
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 10727
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b39310a9b67ef3845a105ba9f0cd9e8d
+      internalID: -304511838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_6
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 10727
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e64648fcf3b355542bb65afc052a96f4
+      internalID: -225403733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_7
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 10727
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ff796b79fd84bc45a08bb6d002fa1b5
+      internalID: 477308579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10096
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe25dd4cc6b0e84fbb43d18f7ac2593
+      internalID: 245868023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_9
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 10096
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4705d9440ad7abc4dbaf40b613443e2e
+      internalID: 1051749508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_10
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 10096
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3030c8ddfaab97146884366086a4b3d5
+      internalID: 112972926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_11
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 10096
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe8059088c0c8d74284e2f4e0e38a92d
+      internalID: -1450662935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9465
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffefb4c7786832f4fa8bff05fd26df71
+      internalID: -150163184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_13
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 9465
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd8be8cfe4f78c14499c863db1f495c6
+      internalID: -1093629816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_14
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 9465
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bb1a5da83d29864297050dafb41d56a
+      internalID: 684649406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_15
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 9465
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fc83207e359b1e41813283022fbe0a9
+      internalID: 663196856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8834
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27dc177e75400584599b96606829ebdb
+      internalID: 1798515834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_17
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 8834
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57de777f9a3dd80489996ab5a4c7f3f9
+      internalID: 513734314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_18
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 8834
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4271f317bfa056844a55783e0ddfe0f0
+      internalID: 1787663051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_19
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 8834
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7cbc4449c668a4409304e5bcb3a3685
+      internalID: -1323449302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8203
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d601f3d2fc4efc34daafc28f1060e372
+      internalID: -244359994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_21
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 8203
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f9b54b4ee5b3614d835ec0af88c3ab7
+      internalID: -1931508660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_22
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 8203
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e87725937111356409e14a2d51cb7fe6
+      internalID: 654750732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_23
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 8203
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd70754da0922ac469136996f36f8c12
+      internalID: -632831160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7572
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 228b59fa300b50b4dbee54943c2cd14e
+      internalID: 382058171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_25
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 7572
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2dc460aeab91f8747851ec3b17eefb17
+      internalID: 1224624538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_26
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 7572
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 786da9610d124e94b8fe4a158310b31e
+      internalID: 1530298636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_27
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 7572
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80f58091cdeb45e44879a16361d23717
+      internalID: 351322678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6941
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcacc366253f1a24daf34df9ee09f1a8
+      internalID: 256838084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_29
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 6941
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d5d550a872b1a4cac15feda3658786
+      internalID: 766924729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_30
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 6941
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4db0e13c254820745a2b310041699b37
+      internalID: -1833422229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_31
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 6941
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f115a601b42aa4445a569e62bd8710d4
+      internalID: -1920617374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6310
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc97dddcb39644e49b132f5c146f2a45
+      internalID: -1905170388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_33
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 6310
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8244f28d3df91147a5a4a26e1f8dd05
+      internalID: -1198306022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_34
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 6310
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b2d78534b5c4cc46b0c15d87f3bccbd
+      internalID: 916531289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_35
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 6310
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 277c1f0881bc0c044958c5a736cfc47b
+      internalID: 633363525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5679
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427e6b369ac4f8c45b0012bf6fd8ea19
+      internalID: 319975306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_37
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 5679
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3acfcb0344621f14db7830700c201d14
+      internalID: 2109087250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_38
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 5679
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18d8dd94053eef548806ff087c2d5827
+      internalID: 1181431482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_39
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 5679
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b36e2f2f8343dea42bbf1f1aafe8ec02
+      internalID: 887184623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5048
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f8cfe1edd0612d48a62c19b46be6d6d
+      internalID: 119195465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_41
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 5048
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7aa159fca1331141881d8bcd70ee65a
+      internalID: 1813458714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_42
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 5048
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b291b406f6fc8bb40a2ba5f4e0b982db
+      internalID: 1363345646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_43
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 5048
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 333af0981dac1d349bac5b2680a5eb44
+      internalID: -2046265661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4417
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc8da4fe600153947beacb8f8587897d
+      internalID: 1812215974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_45
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 4417
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 988c0d41afdd6d64fad1da141b30adde
+      internalID: -1394388531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_46
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 4417
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e52cea31887cbd4fb1a42865ee99546
+      internalID: 1270603480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_47
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 4417
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1effca28f76ebdd4e852298a9feaebbd
+      internalID: -455137939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3786
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 118f7fa4809f5344181d46466d98f2e3
+      internalID: 507816646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_49
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 3786
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4bf135959fa9814fa06269ab95c5e57
+      internalID: 1544320998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_50
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 3786
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be01daf8045a7d4479f0660d46448e8e
+      internalID: -1396897408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_51
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 3786
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abb0e84b3b82dd84ab1c09ffeade6724
+      internalID: -911607899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3155
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8912446b842be3341bf465c3acf1557b
+      internalID: -200092985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_53
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 3155
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1266d4f0e3e47fa439c933a1bd620401
+      internalID: 854944591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_54
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 3155
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb4ec1cafd02bc049a6f2100c1637d33
+      internalID: 1638584525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_55
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 3155
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67ea3e1eef41114ca52432f4c6170f7
+      internalID: -250472727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2524
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cb0da875583615478e63874b0cc80c8
+      internalID: -1141078145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_57
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 2524
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeda15e2d3ca4094f995103e2286b45e
+      internalID: -969488558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_58
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 2524
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f32d0631de35e4c810deec0148528a
+      internalID: -1261672715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_59
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 2524
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ad9235b10467244ea0e41ff4db4458d
+      internalID: -1984733913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1893
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c68f040ce306dd5438a18a1015b03808
+      internalID: 1282022612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_61
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 1893
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dcae29b0ecff0c468a108d357d4800f
+      internalID: -1173077557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_62
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 1893
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2282b30cc89cfb74d9f44d911726129e
+      internalID: -1840634058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_63
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 1893
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33e9ad0ca09d7ec4d82db6ad7699356c
+      internalID: 927603843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1262
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 402f0b2c8361c9746ad0596c2441131c
+      internalID: -368855376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_65
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 1262
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ee4ed26fbb8c44eaffa0314e1b5470
+      internalID: -228980080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_66
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 1262
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 511c03fad55621e4686a9a1d77a5f9de
+      internalID: -1909705115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_67
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 1262
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 405d8a45b7c1d1b4bb8b3ed456bd0f5b
+      internalID: -1312601923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_68
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 631
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d90aaa954de843e488293b3abe47691f
+      internalID: 1412342438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_69
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 631
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 637b5285494708540884aac5a8aac07e
+      internalID: 1817493680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_70
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 631
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59833104e9fe3ff449fc6a43ea5b6065
+      internalID: -1194658491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_71
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 631
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb5e64947e4b0bd4689f3b3faf340dfb
+      internalID: 81595829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81d601107cd2c6f4abd0876eed6ac54d
+      internalID: -1101443989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_73
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 0
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efa8e44cfaa02c64a9cb6b5a3a4f61ed
+      internalID: -28303936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_74
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 0
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1889fdb169ac45a4db944a5d5f16c13c
+      internalID: 1325989007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kallper_Idle_Hurt_Talking_75
+      rect:
+        serializedVersion: 2
+        x: 1551
+        y: 0
+        width: 517
+        height: 631
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e275c39060b84b418afde2bca06d2f8
+      internalID: 274582157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9905ca3434d0cde4a89ffb5b7670f0f7
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":19.0},"gridSpriteSize":{"x":517.0,"y":631.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":7,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Kallper_Idle_Hurt_Talking_0: 1163863059
+      Kallper_Idle_Hurt_Talking_1: 209645458
+      Kallper_Idle_Hurt_Talking_10: 112972926
+      Kallper_Idle_Hurt_Talking_11: -1450662935
+      Kallper_Idle_Hurt_Talking_12: -150163184
+      Kallper_Idle_Hurt_Talking_13: -1093629816
+      Kallper_Idle_Hurt_Talking_14: 684649406
+      Kallper_Idle_Hurt_Talking_15: 663196856
+      Kallper_Idle_Hurt_Talking_16: 1798515834
+      Kallper_Idle_Hurt_Talking_17: 513734314
+      Kallper_Idle_Hurt_Talking_18: 1787663051
+      Kallper_Idle_Hurt_Talking_19: -1323449302
+      Kallper_Idle_Hurt_Talking_2: -2097027471
+      Kallper_Idle_Hurt_Talking_20: -244359994
+      Kallper_Idle_Hurt_Talking_21: -1931508660
+      Kallper_Idle_Hurt_Talking_22: 654750732
+      Kallper_Idle_Hurt_Talking_23: -632831160
+      Kallper_Idle_Hurt_Talking_24: 382058171
+      Kallper_Idle_Hurt_Talking_25: 1224624538
+      Kallper_Idle_Hurt_Talking_26: 1530298636
+      Kallper_Idle_Hurt_Talking_27: 351322678
+      Kallper_Idle_Hurt_Talking_28: 256838084
+      Kallper_Idle_Hurt_Talking_29: 766924729
+      Kallper_Idle_Hurt_Talking_3: 331907720
+      Kallper_Idle_Hurt_Talking_30: -1833422229
+      Kallper_Idle_Hurt_Talking_31: -1920617374
+      Kallper_Idle_Hurt_Talking_32: -1905170388
+      Kallper_Idle_Hurt_Talking_33: -1198306022
+      Kallper_Idle_Hurt_Talking_34: 916531289
+      Kallper_Idle_Hurt_Talking_35: 633363525
+      Kallper_Idle_Hurt_Talking_36: 319975306
+      Kallper_Idle_Hurt_Talking_37: 2109087250
+      Kallper_Idle_Hurt_Talking_38: 1181431482
+      Kallper_Idle_Hurt_Talking_39: 887184623
+      Kallper_Idle_Hurt_Talking_4: -2126739189
+      Kallper_Idle_Hurt_Talking_40: 119195465
+      Kallper_Idle_Hurt_Talking_41: 1813458714
+      Kallper_Idle_Hurt_Talking_42: 1363345646
+      Kallper_Idle_Hurt_Talking_43: -2046265661
+      Kallper_Idle_Hurt_Talking_44: 1812215974
+      Kallper_Idle_Hurt_Talking_45: -1394388531
+      Kallper_Idle_Hurt_Talking_46: 1270603480
+      Kallper_Idle_Hurt_Talking_47: -455137939
+      Kallper_Idle_Hurt_Talking_48: 507816646
+      Kallper_Idle_Hurt_Talking_49: 1544320998
+      Kallper_Idle_Hurt_Talking_5: -304511838
+      Kallper_Idle_Hurt_Talking_50: -1396897408
+      Kallper_Idle_Hurt_Talking_51: -911607899
+      Kallper_Idle_Hurt_Talking_52: -200092985
+      Kallper_Idle_Hurt_Talking_53: 854944591
+      Kallper_Idle_Hurt_Talking_54: 1638584525
+      Kallper_Idle_Hurt_Talking_55: -250472727
+      Kallper_Idle_Hurt_Talking_56: -1141078145
+      Kallper_Idle_Hurt_Talking_57: -969488558
+      Kallper_Idle_Hurt_Talking_58: -1261672715
+      Kallper_Idle_Hurt_Talking_59: -1984733913
+      Kallper_Idle_Hurt_Talking_6: -225403733
+      Kallper_Idle_Hurt_Talking_60: 1282022612
+      Kallper_Idle_Hurt_Talking_61: -1173077557
+      Kallper_Idle_Hurt_Talking_62: -1840634058
+      Kallper_Idle_Hurt_Talking_63: 927603843
+      Kallper_Idle_Hurt_Talking_64: -368855376
+      Kallper_Idle_Hurt_Talking_65: -228980080
+      Kallper_Idle_Hurt_Talking_66: -1909705115
+      Kallper_Idle_Hurt_Talking_67: -1312601923
+      Kallper_Idle_Hurt_Talking_68: 1412342438
+      Kallper_Idle_Hurt_Talking_69: 1817493680
+      Kallper_Idle_Hurt_Talking_7: 477308579
+      Kallper_Idle_Hurt_Talking_70: -1194658491
+      Kallper_Idle_Hurt_Talking_71: 81595829
+      Kallper_Idle_Hurt_Talking_72: -1101443989
+      Kallper_Idle_Hurt_Talking_73: -28303936
+      Kallper_Idle_Hurt_Talking_74: 1325989007
+      Kallper_Idle_Hurt_Talking_75: 274582157
+      Kallper_Idle_Hurt_Talking_8: 245868023
+      Kallper_Idle_Hurt_Talking_9: 1051749508
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -59,6 +59,20 @@ namespace DDD.TNFY.BRAWL
         [Tooltip("World-space units to raise the anchor above the unit's pivot.")]
         [SerializeField] private float worldHeightOffset = 1.5f;
 
+        // ── Dialogue animation events ─────────────────────────────────────────
+
+        /// <summary>
+        /// Fired when a unit's dialogue bubble becomes visible.
+        /// UnitAnimator subscribes to this to swap to the talking idle variant.
+        /// </summary>
+        public static event System.Action<Unit> OnDialogueStarted;
+
+        /// <summary>
+        /// Fired when a unit's dialogue bubble is hidden.
+        /// UnitAnimator subscribes to this to swap back to the non-talking idle variant.
+        /// </summary>
+        public static event System.Action<Unit> OnDialogueEnded;
+
         // ── Private state ─────────────────────────────────────────────────────
 
         private Unit   _currentSpeaker;
@@ -107,6 +121,10 @@ namespace DDD.TNFY.BRAWL
                 dialogueText.maxVisibleCharacters = 0;
             }
 
+            // Notify animators before the bubble appears so the talking swap
+            // happens on the same frame as the bubble becoming visible.
+            OnDialogueStarted?.Invoke(speaker);
+
             // Show first so the Canvas layout pass can run this frame.
             SetVisible(true);
 
@@ -149,6 +167,7 @@ namespace DDD.TNFY.BRAWL
             yield return new WaitForSeconds(holdDuration);
 
             SetVisible(false);
+            OnDialogueEnded?.Invoke(speaker);
             _currentSpeaker = null;
         }
 

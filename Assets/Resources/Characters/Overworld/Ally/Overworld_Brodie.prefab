@@ -245,9 +245,9 @@ MonoBehaviour:
   leader: {fileID: 0}
   followDistance: 0.2
   followSpeed: 10
-  idleSpreadRadius: 1.5
-  idleSpreadMinRadius: 0.6
-  smoothTime: 0.25
+  idleSpreadRadius: 0.7
+  idleSpreadMinRadius: 0.5
+  smoothTime: 0.2
   arrivalThreshold: 0.1
   unitAnimator: {fileID: 6062878351173850020}
   spriteRenderer: {fileID: 1717029866386309786}
