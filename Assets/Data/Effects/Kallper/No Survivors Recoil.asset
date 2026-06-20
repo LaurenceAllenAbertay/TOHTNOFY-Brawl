@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dfdb9a005841a7f4381a91dc218816dc, type: 3}
   m_Name: No Survivors Recoil
   m_EditorClassIdentifier: 
+  midAnimationEventIndex: 1
   recoilFraction: 0.25

@@ -98,6 +98,26 @@ namespace DDD.TNFY.BRAWL
             return false;
         }
 
+        // ── Mid-animation event dispatch ─────────────────────────────────────────
+
+        /// <summary>
+        /// When set to 0 or higher, this effect fires mid-animation via an Animation Event
+        /// rather than in the post-animation phase loop.
+        ///
+        /// Only takes effect when the ability has suppressCameraTransitions = true (i.e.
+        /// the camera stays on the caster for the full animation). The value here must match
+        /// the slot fired by the corresponding AnimEvent_AbilityEffectN method on UnitAnimator
+        /// — for example, midAnimationEventIndex = 1 fires when AnimEvent_AbilityEffect1 is
+        /// called by the animation clip.
+        ///
+        /// Leave at -1 (the default) for all existing effects — they continue to fire in the
+        /// normal post-animation phase loop with no change in behaviour.
+        /// </summary>
+        [Tooltip("Slot index (0–3) that triggers this effect mid-animation via an Animation Event. " +
+                 "Only used when the ability has suppressCameraTransitions enabled. " +
+                 "Set to -1 to use the normal post-animation phase loop.")]
+        public int midAnimationEventIndex = -1;
+
         // ── Core ─────────────────────────────────────────────────────────────────
 
         public abstract void Apply(AbilityContext ctx, IReadOnlyList<Unit> targets);

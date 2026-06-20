@@ -277,6 +277,11 @@ namespace DDD.TNFY.BRAWL
 
             isExecutingPendingAction = false;
             GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
+
+            // If the caster killed themselves during this action (e.g. recoil damage),
+            // TurnManager.HandleUnitDied has already flagged _activeUnitDiedThisTurn and
+            // adjusted the turn index. TurnManager.EndTurn() is safe to call — it will
+            // detect the flag and skip the erroneous CurrentUnit?.EndTurn() call.
             _turnTransitionPending = true;
             currentState = CombatState.TurnEnding;
             turnManager.EndTurn();
@@ -455,6 +460,22 @@ namespace DDD.TNFY.BRAWL
                         cameraController.FitRadius(currentActiveUnit.transform.position, worldRadius)));
                     yield return StartCoroutine(cameraController.TransitionTo(
                         cameraController.UnitFocusPosition(currentActiveUnit)));
+                }
+
+                // If the caster killed themselves during this ability (e.g. recoil damage),
+                // skip restoring WaitingForInput — that would let the dead unit act again.
+                // Go straight to TurnEnding so EndTurn() can advance to the next unit.
+                if (currentActiveUnit != null && currentActiveUnit.IsDead)
+                {
+                    UnblockAllInput();
+                    isWaitingForAnimation = false;
+                    _turnTransitionPending = true;
+                    currentState = CombatState.TurnEnding;
+                    UIEvents.OnAbilityAnimationComplete();
+                    UIEvents.OnTargetingStateChanged();
+                    GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
+                    turnManager.EndTurn();
+                    yield break;
                 }
 
                 // Clear the animation block BEFORE restoring highlights so that CanMove

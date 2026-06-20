@@ -75,10 +75,15 @@ namespace DDD.TNFY.BRAWL
 
             // Present any units that died during this ability's effects one at a time,
             // immediately after the ability resolves — before control returns to the caster.
-            // Pass ctx.caster as the return unit so the camera pans back to the killer
-            // once all death animations finish.
+            // If the caster is still alive, pass them as the return unit so the camera pans
+            // back to them after all death animations finish.
+            // If the caster died (e.g. recoil damage), pass null — the camera stays on the
+            // last death position; the next turn's StartNextTurn pan handles the transition.
             if (UnitDeathSequencer.Instance != null)
-                yield return StartCoroutine(UnitDeathSequencer.Instance.DrainDeathQueue(ctx.caster));
+            {
+                Unit returnTo = (ctx.caster != null && !ctx.caster.IsDead) ? ctx.caster : null;
+                yield return StartCoroutine(UnitDeathSequencer.Instance.DrainDeathQueue(returnTo));
+            }
 
             ClearContext();
         }
@@ -124,11 +129,44 @@ namespace DDD.TNFY.BRAWL
             }
             unitAnimator.OnCastEffectEvent += OnCastEffect;
 
+            // STEP 4.5: When suppressCameraTransitions is set, subscribe to mid-animation
+            // effect events. Each slot fires the matching effects immediately as the
+            // animation clip reaches that frame, rather than batching everything post-animation.
+            // Track which effects have already fired so HandleRemainingEffects skips them.
+            var midAnimFiredEffects = new HashSet<AbilityEffect>();
+            void OnAbilityEffect(int slot)
+            {
+                if (!ctx.ability.suppressCameraTransitions) return;
+
+                var slotEffects = ctx.ability.effects
+                    .Where(e => e.midAnimationEventIndex == slot)
+                    .ToList();
+
+                if (slotEffects.Count == 0)
+                {
+                    if (enableDebugLogging)
+                        Debug.LogWarning($"[AbilitySequencer] AnimEvent_AbilityEffect{slot} fired but no effects have midAnimationEventIndex = {slot}");
+                    return;
+                }
+
+                if (enableDebugLogging)
+                    Debug.Log($"[AbilitySequencer] AnimEvent_AbilityEffect{slot} fired — applying {slotEffects.Count} effect(s)");
+
+                foreach (var effect in slotEffects)
+                {
+                    effect.Apply(ctx, targets);
+                    SpawnHitEffects(ctx, targets);
+                    midAnimFiredEffects.Add(effect);
+                }
+            }
+            unitAnimator.OnAbilityEffectEvent += OnAbilityEffect;
+
             // STEP 5: Charge abilities bypass the wait-for-animation-start logic
             if (HasChargeEffect(ctx.ability))
             {
                 yield return StartCoroutine(ExecuteChargeSequence(ctx, targets));
                 unitAnimator.OnCastEffectEvent -= OnCastEffect;
+                unitAnimator.OnAbilityEffectEvent -= OnAbilityEffect;
                 if (!castEffectTriggered) SpawnCastEffect(ctx);
                 yield break;
             }
@@ -145,6 +183,7 @@ namespace DDD.TNFY.BRAWL
             {
                 Debug.LogWarning($"[AbilitySequencer] Animation {ctx.ability.AnimationState} never started, using immediate effects");
                 unitAnimator.OnCastEffectEvent -= OnCastEffect;
+                unitAnimator.OnAbilityEffectEvent -= OnAbilityEffect;
                 yield return StartCoroutine(ExecuteImmediateEffects(ctx, targets));
                 yield break;
             }
@@ -159,6 +198,7 @@ namespace DDD.TNFY.BRAWL
             }
 
             unitAnimator.OnCastEffectEvent -= OnCastEffect;
+            unitAnimator.OnAbilityEffectEvent -= OnAbilityEffect;
 
             if (!castEffectTriggered)
             {
@@ -167,10 +207,10 @@ namespace DDD.TNFY.BRAWL
             }
 
             // STEP 7: Post-animation — camera pan + effects
-            yield return StartCoroutine(HandlePostAnimationEffects(ctx, targets));
+            yield return StartCoroutine(HandlePostAnimationEffects(ctx, targets, midAnimFiredEffects));
         }
 
-        private IEnumerator HandlePostAnimationEffects(AbilityContext ctx, List<Unit> targets)
+        private IEnumerator HandlePostAnimationEffects(AbilityContext ctx, List<Unit> targets, HashSet<AbilityEffect> midAnimFiredEffects = null)
         {
             if (HasSelfKnockbackEffect(ctx.ability))
                 StartCoroutine(HandleSelfKnockbackEffects(ctx));
@@ -191,12 +231,14 @@ namespace DDD.TNFY.BRAWL
                     // PostEffect phase is handled unconditionally by HandleRemainingEffects below.
                     if (effect.AnimationPhase == EffectAnimationPhase.PostEffect) continue;
                     if (effect is ChargeEffect) continue;
+                    // Skip effects already dispatched mid-animation.
+                    if (midAnimFiredEffects != null && midAnimFiredEffects.Contains(effect)) continue;
                     yield return StartCoroutine(ApplyEffectWithOptionalTeleportCamera(ctx, targets, effect));
                 }
                 SpawnHitEffectsOnTraversalTiles(ctx);
             }
 
-            yield return StartCoroutine(HandleRemainingEffects(ctx, targets));
+            yield return StartCoroutine(HandleRemainingEffects(ctx, targets, midAnimFiredEffects));
         }
 
         private IEnumerator ExecuteChargeSequence(AbilityContext ctx, List<Unit> targets)
@@ -355,7 +397,7 @@ namespace DDD.TNFY.BRAWL
             }
         }
 
-        private IEnumerator HandleRemainingEffects(AbilityContext ctx, List<Unit> targets)
+        private IEnumerator HandleRemainingEffects(AbilityContext ctx, List<Unit> targets, HashSet<AbilityEffect> midAnimFiredEffects = null)
         {
             // Phases that have already been applied earlier in the sequence.
             // Effects in these phases are skipped here to avoid double-application.
@@ -384,6 +426,9 @@ namespace DDD.TNFY.BRAWL
 
                 // ChargeEffect bypasses Apply entirely; skip it unconditionally.
                 if (effect is ChargeEffect) continue;
+
+                // Skip effects that already fired mid-animation via an Animation Event.
+                if (midAnimFiredEffects != null && midAnimFiredEffects.Contains(effect)) continue;
 
                 // If this effect has a self-cast component, apply it to the caster and
                 // play the appropriate animation. SelfCastAnimationHint returns null when

@@ -27,8 +27,8 @@ MonoBehaviour:
   maxTargets: 1
   canExecuteWithoutTargets: 0
   endTurnOnCast: 0
-  suppressCameraTransitions: 0
-  animationState: Heads_Up
+  suppressCameraTransitions: 1
+  animationState: No_Survivors
   castEffectPrefab: {fileID: 0}
   castEffectOffset: {x: 0, y: 0, z: 0}
   parentCastEffectToCaster: 0
@@ -37,5 +37,5 @@ MonoBehaviour:
   parentHitEffectToTarget: 0
   targeting: {fileID: 11400000, guid: 2047dac3f0c1d6d4da0984b52201bc25, type: 2}
   effects:
-  - {fileID: 11400000, guid: 7bbe0b6e3f185f143b1c19342a3a4c8e, type: 2}
+  - {fileID: 11400000, guid: 7652eaac4de11674a91ce2fa40dff84d, type: 2}
   - {fileID: 11400000, guid: 13bcaf704fbc70e48bbdd470f868668c, type: 2}

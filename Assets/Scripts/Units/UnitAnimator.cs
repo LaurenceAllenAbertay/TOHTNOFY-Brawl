@@ -238,6 +238,25 @@ namespace DDD.TNFY.BRAWL
         /// </summary>
         public void AnimEvent_CastEffect() => OnCastEffectEvent?.Invoke();
 
+        /// <summary>
+        /// Fired mid-animation to trigger one or more ability effects by slot index.
+        /// AbilitySequencer subscribes to this when suppressCameraTransitions is true and
+        /// dispatches every AbilityEffect whose midAnimationEventIndex matches the slot fired.
+        /// </summary>
+        public event System.Action<int> OnAbilityEffectEvent;
+
+        /// <summary>
+        /// Called by Unity Animation Events on ability clips.
+        /// Place an Animation Event named "AnimEvent_AbilityEffect0" at the frame where
+        /// slot-0 effects should fire, "AnimEvent_AbilityEffect1" for slot 1, and so on.
+        /// The integer maps to AbilityEffect.midAnimationEventIndex on each effect asset.
+        /// Only add as many slots as your animations actually need — four is the supported maximum.
+        /// </summary>
+        public void AnimEvent_AbilityEffect0() => OnAbilityEffectEvent?.Invoke(0);
+        public void AnimEvent_AbilityEffect1() => OnAbilityEffectEvent?.Invoke(1);
+        public void AnimEvent_AbilityEffect2() => OnAbilityEffectEvent?.Invoke(2);
+        public void AnimEvent_AbilityEffect3() => OnAbilityEffectEvent?.Invoke(3);
+
         #endregion
 
         #region Public Animation Methods

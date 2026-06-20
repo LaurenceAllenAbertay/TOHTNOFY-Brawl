@@ -192,6 +192,13 @@ namespace DDD.TNFY.BRAWL
             {
                 TurnLifecycleLog($"[2/4] HandleTurnStarted → PlayerUnit confirmed, " +
                                  $"launching DelayedTurnUISetup coroutine");
+
+                // Hide the button and HUD immediately so they don't linger during the
+                // camera transition. DelayedTurnUISetup will re-show them once the
+                // camera has settled on the new active unit.
+                if (endTurnButton != null) endTurnButton.gameObject.SetActive(false);
+                SetUIVisibility(false);
+
                 abilityPanel?.HandleTurnStarted();
                 StartCoroutine(DelayedTurnUISetup());
                 StartCoroutine(TurnUIWatchdog(unit));

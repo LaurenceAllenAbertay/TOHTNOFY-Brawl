@@ -33,6 +33,12 @@ namespace DDD.TNFY.BRAWL
         // 0 means "not currently in environment effects — use live turnOrder.Count".
         private int _stableRoundCount = 0;
 
+        // Set when the unit whose turn it currently is dies during their own turn (e.g. recoil
+        // damage). EndTurn() checks this flag so it can skip calling CurrentUnit?.EndTurn() —
+        // which would incorrectly target whoever inherited currentIndex after the removal — and
+        // instead just advances the sequence. Cleared at the start of every new turn.
+        private bool _activeUnitDiedThisTurn = false;
+
         void Start()
         {
             combatManager = FindAnyObjectByType<CombatManager>();
@@ -60,6 +66,12 @@ namespace DDD.TNFY.BRAWL
         {
             int diedIndex = turnOrder.IndexOf(unit);
             if (diedIndex < 0) return; // Not in our turn order
+
+            // If the unit that just died is the one currently taking their turn, flag it.
+            // EndTurn() will skip calling CurrentUnit?.EndTurn() (which would land on the
+            // wrong unit after the index shifts) and will just advance the sequence instead.
+            if (diedIndex == currentIndex)
+                _activeUnitDiedThisTurn = true;
 
             turnOrder.RemoveAt(diedIndex);
 
@@ -120,6 +132,10 @@ namespace DDD.TNFY.BRAWL
             // Increment total turn count at the start of each turn
             totalTurnCount++;
 
+            // Clear the self-death flag from the previous turn. A fresh unit is now active
+            // so any death that occurs from here belongs to a different context.
+            _activeUnitDiedThisTurn = false;
+
             Unit current = CurrentUnit;
 
             // Check for turn-skipping status effects BEFORE firing any events or starting
@@ -168,6 +184,22 @@ namespace DDD.TNFY.BRAWL
 
         public void EndTurn()
         {
+            // If the active unit died during their own turn (e.g. recoil damage), currentIndex
+            // has already been adjusted by HandleUnitDied to point at the next unit. Calling
+            // CurrentUnit?.EndTurn() here would incorrectly end the *next* unit's turn before
+            // it has even started.
+            //
+            // We also skip firing OnTurnEnded — the dead unit's status effects were already
+            // cleared by StatusEffectManager.HandleUnitDied, so duration ticking is not needed,
+            // and passing null would throw NullReferenceExceptions in handlers that use the
+            // unit as a dictionary key (e.g. StatusEffectManager, LoneWolfPassive).
+            if (_activeUnitDiedThisTurn)
+            {
+                Debug.Log("[TurnManager] Active unit died during their own turn — skipping EndTurn calls and advancing sequence.");
+                StartCoroutine(EndTurnSequence());
+                return;
+            }
+
             Unit currentUnit = CurrentUnit;
 
             // This forces the UI to collapse abilities and prepare for next unit

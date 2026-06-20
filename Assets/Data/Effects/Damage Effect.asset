@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 254cb940665c9864cba521acb3bd9c72, type: 3}
   m_Name: Damage Effect
   m_EditorClassIdentifier: 
+  midAnimationEventIndex: 0
