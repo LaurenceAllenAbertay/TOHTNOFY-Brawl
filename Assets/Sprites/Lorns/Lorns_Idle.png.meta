@@ -1,7 +1,235 @@
 fileFormatVersion: 2
-guid: 85dd2a411dee5264ca097828f8075603
+guid: 9908dfb7f1f738945ace6af0c6ce05fd
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 8706584262617090772
+    second: Lorns_Idle 1_0
+  - first:
+      213: -1315272981929009379
+    second: Lorns_Idle 1_1
+  - first:
+      213: -3210833713097731598
+    second: Lorns_Idle 1_2
+  - first:
+      213: -3456350818320773691
+    second: Lorns_Idle 1_3
+  - first:
+      213: -5879489607028427686
+    second: Lorns_Idle 1_4
+  - first:
+      213: 2880203197892972565
+    second: Lorns_Idle 1_5
+  - first:
+      213: 7204278546894245244
+    second: Lorns_Idle 1_6
+  - first:
+      213: 4856918118836062474
+    second: Lorns_Idle 1_7
+  - first:
+      213: -5045569986004683993
+    second: Lorns_Idle 1_8
+  - first:
+      213: -7388471936963931120
+    second: Lorns_Idle 1_9
+  - first:
+      213: 6495467889229142564
+    second: Lorns_Idle 1_10
+  - first:
+      213: 8837832200573633728
+    second: Lorns_Idle 1_11
+  - first:
+      213: 2298231728934222881
+    second: Lorns_Idle 1_12
+  - first:
+      213: 7302957128707084599
+    second: Lorns_Idle 1_13
+  - first:
+      213: -3729187299827537714
+    second: Lorns_Idle 1_14
+  - first:
+      213: 8941159687379254604
+    second: Lorns_Idle 1_15
+  - first:
+      213: 3808465124224497770
+    second: Lorns_Idle 1_16
+  - first:
+      213: -5783799596987562789
+    second: Lorns_Idle 1_17
+  - first:
+      213: -274652939543026654
+    second: Lorns_Idle 1_18
+  - first:
+      213: 1118904663183898936
+    second: Lorns_Idle 1_19
+  - first:
+      213: -8061264905161303563
+    second: Lorns_Idle 1_20
+  - first:
+      213: -1734391404050751134
+    second: Lorns_Idle 1_21
+  - first:
+      213: -5408276522494279804
+    second: Lorns_Idle 1_22
+  - first:
+      213: 7949714360328949971
+    second: Lorns_Idle 1_23
+  - first:
+      213: 6539191975274236860
+    second: Lorns_Idle 1_24
+  - first:
+      213: -2696198954830897156
+    second: Lorns_Idle 1_25
+  - first:
+      213: 4408589933352627661
+    second: Lorns_Idle 1_26
+  - first:
+      213: -6031217910036322170
+    second: Lorns_Idle 1_27
+  - first:
+      213: -7705244742304492202
+    second: Lorns_Idle 1_28
+  - first:
+      213: -9072896919957256649
+    second: Lorns_Idle 1_29
+  - first:
+      213: -6206357789425753592
+    second: Lorns_Idle 1_30
+  - first:
+      213: -2321832145014301963
+    second: Lorns_Idle 1_31
+  - first:
+      213: 3339645444741822859
+    second: Lorns_Idle 1_32
+  - first:
+      213: 921485561957719499
+    second: Lorns_Idle 1_33
+  - first:
+      213: 5656701676159522051
+    second: Lorns_Idle 1_34
+  - first:
+      213: -6935792336049327381
+    second: Lorns_Idle 1_35
+  - first:
+      213: 6988873742041620263
+    second: Lorns_Idle 1_36
+  - first:
+      213: -3343387062109055011
+    second: Lorns_Idle 1_37
+  - first:
+      213: -571485502428841054
+    second: Lorns_Idle 1_38
+  - first:
+      213: -3292329114863192714
+    second: Lorns_Idle 1_39
+  - first:
+      213: -1644137790323933047
+    second: Lorns_Idle 1_40
+  - first:
+      213: -783831198649294537
+    second: Lorns_Idle 1_41
+  - first:
+      213: -8740287667802421968
+    second: Lorns_Idle 1_42
+  - first:
+      213: 3466059664434057390
+    second: Lorns_Idle 1_43
+  - first:
+      213: 2885274907785885393
+    second: Lorns_Idle 1_44
+  - first:
+      213: -8691740701603533070
+    second: Lorns_Idle 1_45
+  - first:
+      213: 7144040975619000401
+    second: Lorns_Idle 1_46
+  - first:
+      213: 5629626737420598029
+    second: Lorns_Idle 1_47
+  - first:
+      213: 7738796394328792122
+    second: Lorns_Idle 1_48
+  - first:
+      213: 3757595341085633059
+    second: Lorns_Idle 1_49
+  - first:
+      213: 2772061234764735387
+    second: Lorns_Idle 1_50
+  - first:
+      213: 2242984396966350785
+    second: Lorns_Idle 1_51
+  - first:
+      213: -5267256299415933445
+    second: Lorns_Idle 1_52
+  - first:
+      213: 2082679045705632478
+    second: Lorns_Idle 1_53
+  - first:
+      213: -6300584978773539765
+    second: Lorns_Idle 1_54
+  - first:
+      213: 7771815498868677884
+    second: Lorns_Idle 1_55
+  - first:
+      213: 688851135627961447
+    second: Lorns_Idle 1_56
+  - first:
+      213: 7340511645755293
+    second: Lorns_Idle 1_57
+  - first:
+      213: 1562670183303522393
+    second: Lorns_Idle 1_58
+  - first:
+      213: -2766342114809781878
+    second: Lorns_Idle 1_59
+  - first:
+      213: 6239723646659154467
+    second: Lorns_Idle 1_60
+  - first:
+      213: 6184261120450768188
+    second: Lorns_Idle 1_61
+  - first:
+      213: -5690802346122843708
+    second: Lorns_Idle 1_62
+  - first:
+      213: 2358023454361342630
+    second: Lorns_Idle 1_63
+  - first:
+      213: -1600132285940716516
+    second: Lorns_Idle 1_64
+  - first:
+      213: 4737576633416206193
+    second: Lorns_Idle 1_65
+  - first:
+      213: 8953278044815434131
+    second: Lorns_Idle 1_66
+  - first:
+      213: -2875337548889745055
+    second: Lorns_Idle 1_67
+  - first:
+      213: -4455788091818300421
+    second: Lorns_Idle 1_68
+  - first:
+      213: -3248959348993033096
+    second: Lorns_Idle 1_69
+  - first:
+      213: 8927064869116660486
+    second: Lorns_Idle 1_70
+  - first:
+      213: 2554437966828227760
+    second: Lorns_Idle 1_71
+  - first:
+      213: 8870653950286347869
+    second: Lorns_Idle 1_72
+  - first:
+      213: 4131620603370205327
+    second: Lorns_Idle 1_73
+  - first:
+      213: -6400489813868337221
+    second: Lorns_Idle 1_74
+  - first:
+      213: -4979551233921760783
+    second: Lorns_Idle 1_75
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -67,20 +295,20 @@ TextureImporter:
   swizzle: 50462976
   cookieLightType: 0
   platformSettings:
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 4096
+    maxTextureSize: 16384
     resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 2
-    compressionQuality: 90
-    crunchedCompression: 1
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -93,21 +321,8 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -127,18 +342,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 6566
-        width: 727
-        height: 938
+        y: 12006
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94a497790e2de37469d43d9b87480841
-      internalID: 215081699
+      spriteID: 8738411c7e63293409d2fc07d1792d43
+      internalID: -1876006886
       vertices: []
       indices: 
       edges: []
@@ -147,19 +363,20 @@ TextureImporter:
       name: Lorns_Idle_1
       rect:
         serializedVersion: 2
-        x: 727
-        y: 6566
-        width: 727
-        height: 938
+        x: 502
+        y: 12006
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 561065d24236d35499997bf2119409b4
-      internalID: 1383992041
+      spriteID: 5b144bb52434ea3409fd80fe2692c05b
+      internalID: 935721593
       vertices: []
       indices: 
       edges: []
@@ -168,19 +385,20 @@ TextureImporter:
       name: Lorns_Idle_2
       rect:
         serializedVersion: 2
-        x: 1454
-        y: 6566
-        width: 727
-        height: 938
+        x: 1004
+        y: 12006
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dc62d74f5532d9e45831f2dc78c6968c
-      internalID: 1972676978
+      spriteID: adeb6d32533d9934eb82b710a3cc6dc9
+      internalID: -1378462533
       vertices: []
       indices: 
       edges: []
@@ -189,19 +407,20 @@ TextureImporter:
       name: Lorns_Idle_3
       rect:
         serializedVersion: 2
-        x: 2181
-        y: 6566
-        width: 727
-        height: 938
+        x: 1506
+        y: 12006
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1fb2fd71e41da645a9f55501db272ce
-      internalID: -253577304
+      spriteID: a400a1949f5e26748b827c1037d7ab49
+      internalID: 1949464552
       vertices: []
       indices: 
       edges: []
@@ -210,19 +429,20 @@ TextureImporter:
       name: Lorns_Idle_4
       rect:
         serializedVersion: 2
-        x: 2908
-        y: 6566
-        width: 727
-        height: 938
+        x: 0
+        y: 11339
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 791113ecd85851c45937f9b44dfb3615
-      internalID: 1775809259
+      spriteID: e3d3b20371094bb42805f249023c2aae
+      internalID: -1609844781
       vertices: []
       indices: 
       edges: []
@@ -231,19 +451,20 @@ TextureImporter:
       name: Lorns_Idle_5
       rect:
         serializedVersion: 2
-        x: 3635
-        y: 6566
-        width: 727
-        height: 938
+        x: 502
+        y: 11339
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b6e063b894cdf94eb731d7a4cd3025e
-      internalID: 556674609
+      spriteID: ef5406da0fff5224989692e1e9b10859
+      internalID: 1321961397
       vertices: []
       indices: 
       edges: []
@@ -252,19 +473,20 @@ TextureImporter:
       name: Lorns_Idle_6
       rect:
         serializedVersion: 2
-        x: 4362
-        y: 6566
-        width: 727
-        height: 938
+        x: 1004
+        y: 11339
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50b4438a310263143a4781959bb6873e
-      internalID: -1005898932
+      spriteID: d19f8b80bfc140145a69c1ebecf87796
+      internalID: 222713341
       vertices: []
       indices: 
       edges: []
@@ -273,19 +495,20 @@ TextureImporter:
       name: Lorns_Idle_7
       rect:
         serializedVersion: 2
-        x: 5089
-        y: 6566
-        width: 727
-        height: 938
+        x: 1506
+        y: 11339
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 395be2355254c524ea63fe8237d7f0b2
-      internalID: -938068153
+      spriteID: 3adf50fcdd657094bb3758712a14c9e5
+      internalID: -714033929
       vertices: []
       indices: 
       edges: []
@@ -295,18 +518,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 5628
-        width: 727
-        height: 938
+        y: 10672
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c63e0000731ce6e4985c2bf122448d34
-      internalID: 1388845356
+      spriteID: e19e0ccb74ddc6d4bb2ef9f554ba1684
+      internalID: 618356539
       vertices: []
       indices: 
       edges: []
@@ -315,19 +539,20 @@ TextureImporter:
       name: Lorns_Idle_9
       rect:
         serializedVersion: 2
-        x: 727
-        y: 5628
-        width: 727
-        height: 938
+        x: 502
+        y: 10672
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d91bcb785d85aa346a01193c2ddd4c1e
-      internalID: 875863936
+      spriteID: 38b7e4fe9032f4e4d82fc0d3a7060205
+      internalID: 1595099621
       vertices: []
       indices: 
       edges: []
@@ -336,19 +561,20 @@ TextureImporter:
       name: Lorns_Idle_10
       rect:
         serializedVersion: 2
-        x: 1454
-        y: 5628
-        width: 727
-        height: 938
+        x: 1004
+        y: 10672
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a1d9df64e1ad2fd4fafb9c77c3cc217e
-      internalID: 1720094059
+      spriteID: ccc95625248c3d540a7c738aeb53934e
+      internalID: -167290288
       vertices: []
       indices: 
       edges: []
@@ -357,19 +583,20 @@ TextureImporter:
       name: Lorns_Idle_11
       rect:
         serializedVersion: 2
-        x: 2181
-        y: 5628
-        width: 727
-        height: 938
+        x: 1506
+        y: 10672
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35906b965511d3c4b8f16d4592aaaaec
-      internalID: 524801172
+      spriteID: aa3120c634bcfeb4f97f786148214afa
+      internalID: 926576718
       vertices: []
       indices: 
       edges: []
@@ -378,19 +605,20 @@ TextureImporter:
       name: Lorns_Idle_12
       rect:
         serializedVersion: 2
-        x: 2908
-        y: 5628
-        width: 727
-        height: 938
+        x: 0
+        y: 10005
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b0f85d6b1d67894eb4e79374ff9a652
-      internalID: -1553091700
+      spriteID: b7e4a8d4d2d67304686b60083b413dce
+      internalID: -920150449
       vertices: []
       indices: 
       edges: []
@@ -399,19 +627,20 @@ TextureImporter:
       name: Lorns_Idle_13
       rect:
         serializedVersion: 2
-        x: 3635
-        y: 5628
-        width: 727
-        height: 938
+        x: 502
+        y: 10005
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 05ab51f782a1ca84e9b500b96ae04fd9
-      internalID: 490755880
+      spriteID: 23078c621f14b4e4487b05a125d60896
+      internalID: 1899682093
       vertices: []
       indices: 
       edges: []
@@ -420,19 +649,20 @@ TextureImporter:
       name: Lorns_Idle_14
       rect:
         serializedVersion: 2
-        x: 4362
-        y: 5628
-        width: 727
-        height: 938
+        x: 1004
+        y: 10005
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 306380a929f52d34da05b7a54c5590d5
-      internalID: -108985048
+      spriteID: e3c88f57d4ca34f4291af103e9661673
+      internalID: 116466503
       vertices: []
       indices: 
       edges: []
@@ -441,19 +671,20 @@ TextureImporter:
       name: Lorns_Idle_15
       rect:
         serializedVersion: 2
-        x: 5089
-        y: 5628
-        width: 727
-        height: 938
+        x: 1506
+        y: 10005
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 053968de02d844a48bc7ba383ef09cb5
-      internalID: 905387467
+      spriteID: 3a999822948dc4c4c9efb522be2e5d0c
+      internalID: -2121713591
       vertices: []
       indices: 
       edges: []
@@ -463,18 +694,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 4690
-        width: 727
-        height: 938
+        y: 9338
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 056ad0406ad585c4797ca61287a8dff0
-      internalID: -1616098707
+      spriteID: 290b40f5e18ea884698e666b72f682f0
+      internalID: -606112019
       vertices: []
       indices: 
       edges: []
@@ -483,19 +715,20 @@ TextureImporter:
       name: Lorns_Idle_17
       rect:
         serializedVersion: 2
-        x: 727
-        y: 4690
-        width: 727
-        height: 938
+        x: 502
+        y: 9338
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f484fd194b5e0914cae8c7212f0b9578
-      internalID: -281641783
+      spriteID: 8b61a6409eef1dc47b3ffb34dcb6417d
+      internalID: 2069852815
       vertices: []
       indices: 
       edges: []
@@ -504,19 +737,20 @@ TextureImporter:
       name: Lorns_Idle_18
       rect:
         serializedVersion: 2
-        x: 1454
-        y: 4690
-        width: 727
-        height: 938
+        x: 1004
+        y: 9338
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 266243c558aef8f4f8b8df6635f8695f
-      internalID: 602125087
+      spriteID: b597322bcf8df334583b65777a6763fb
+      internalID: 888860733
       vertices: []
       indices: 
       edges: []
@@ -525,19 +759,20 @@ TextureImporter:
       name: Lorns_Idle_19
       rect:
         serializedVersion: 2
-        x: 2181
-        y: 4690
-        width: 727
-        height: 938
+        x: 1506
+        y: 9338
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cb869b4a33e10ff49889ead73c02de87
-      internalID: -1303867983
+      spriteID: 72a47a0bf7fa9484faba2b2338683021
+      internalID: 857202396
       vertices: []
       indices: 
       edges: []
@@ -546,19 +781,20 @@ TextureImporter:
       name: Lorns_Idle_20
       rect:
         serializedVersion: 2
-        x: 2908
-        y: 4690
-        width: 727
-        height: 938
+        x: 0
+        y: 8671
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4b6a63d32eb7674497f76de55d78959
-      internalID: -1887637603
+      spriteID: ec0fec05f4721954f81f270063f78dea
+      internalID: -1797302060
       vertices: []
       indices: 
       edges: []
@@ -567,19 +803,20 @@ TextureImporter:
       name: Lorns_Idle_21
       rect:
         serializedVersion: 2
-        x: 3635
-        y: 4690
-        width: 727
-        height: 938
+        x: 502
+        y: 8671
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a85f971ce5380d4aa027985b55fc528
-      internalID: -661769092
+      spriteID: 0601df402c234494dbd0528d88956bc4
+      internalID: 1418904659
       vertices: []
       indices: 
       edges: []
@@ -588,19 +825,20 @@ TextureImporter:
       name: Lorns_Idle_22
       rect:
         serializedVersion: 2
-        x: 4362
-        y: 4690
-        width: 727
-        height: 938
+        x: 1004
+        y: 8671
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7007e9122a776a440acfbf9b37f6f84f
-      internalID: 1000542386
+      spriteID: ee48b9e973f9cb34da5a5b74e0214c52
+      internalID: -328412018
       vertices: []
       indices: 
       edges: []
@@ -609,19 +847,20 @@ TextureImporter:
       name: Lorns_Idle_23
       rect:
         serializedVersion: 2
-        x: 5089
-        y: 4690
-        width: 727
-        height: 938
+        x: 1506
+        y: 8671
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1980302c17586d4ebf55707ccef8d28
-      internalID: 414666901
+      spriteID: 7eb20459e72dcc4439aff42ba97b695d
+      internalID: -664331792
       vertices: []
       indices: 
       edges: []
@@ -631,18 +870,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 3752
-        width: 727
-        height: 938
+        y: 8004
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cd1dddc8c7e057241afd89662eccf32b
-      internalID: 1454403999
+      spriteID: 5ee9eb7e8a2d1674da469c698af66427
+      internalID: 325154384
       vertices: []
       indices: 
       edges: []
@@ -651,19 +891,20 @@ TextureImporter:
       name: Lorns_Idle_25
       rect:
         serializedVersion: 2
-        x: 727
-        y: 3752
-        width: 727
-        height: 938
+        x: 502
+        y: 8004
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ae13d3a17065d194abf4d2321843ed6a
-      internalID: -936843298
+      spriteID: 7d1a1cad529c7c14f8843d7709c45ce4
+      internalID: -328984011
       vertices: []
       indices: 
       edges: []
@@ -672,19 +913,20 @@ TextureImporter:
       name: Lorns_Idle_26
       rect:
         serializedVersion: 2
-        x: 1454
-        y: 3752
-        width: 727
-        height: 938
+        x: 1004
+        y: 8004
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 063a49bdf1883ad46bd8acc85aa70ea2
-      internalID: -901525980
+      spriteID: ec1290929d4bd2947b358303a7799b00
+      internalID: -1447683138
       vertices: []
       indices: 
       edges: []
@@ -693,19 +935,20 @@ TextureImporter:
       name: Lorns_Idle_27
       rect:
         serializedVersion: 2
-        x: 2181
-        y: 3752
-        width: 727
-        height: 938
+        x: 1506
+        y: 8004
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ea6c9ea5726cef4d9aae313f8b806bf
-      internalID: 1556086591
+      spriteID: 337a776c74e8c9f46831b060edf8bbea
+      internalID: 1867309120
       vertices: []
       indices: 
       edges: []
@@ -714,19 +957,20 @@ TextureImporter:
       name: Lorns_Idle_28
       rect:
         serializedVersion: 2
-        x: 2908
-        y: 3752
-        width: 727
-        height: 938
+        x: 0
+        y: 7337
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9af2af08d8134694bbcd073857698368
-      internalID: 1391665618
+      spriteID: 471d6e9f5dbcf11418e4c4ba11c5225e
+      internalID: 2016184413
       vertices: []
       indices: 
       edges: []
@@ -735,19 +979,20 @@ TextureImporter:
       name: Lorns_Idle_29
       rect:
         serializedVersion: 2
-        x: 3635
-        y: 3752
-        width: 727
-        height: 938
+        x: 502
+        y: 7337
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7bd02ef1f553d9d4ba155fe82ef30dce
-      internalID: -167403519
+      spriteID: cb35c339714ab5b42a9b570c915fe846
+      internalID: -2058232256
       vertices: []
       indices: 
       edges: []
@@ -756,19 +1001,20 @@ TextureImporter:
       name: Lorns_Idle_30
       rect:
         serializedVersion: 2
-        x: 4362
-        y: 3752
-        width: 727
-        height: 938
+        x: 1004
+        y: 7337
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 982f3b86370b8a64f91c2f523aa4d770
-      internalID: 2023522494
+      spriteID: d6a6bd1595e176a4383516c65571d81b
+      internalID: -1576354142
       vertices: []
       indices: 
       edges: []
@@ -777,19 +1023,20 @@ TextureImporter:
       name: Lorns_Idle_31
       rect:
         serializedVersion: 2
-        x: 5089
-        y: 3752
-        width: 727
-        height: 938
+        x: 1506
+        y: 7337
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 82e7c04f673efd841ba3ee0749dc2a77
-      internalID: -2118112001
+      spriteID: 3739144d425b3754ca868c1ade5ca3e3
+      internalID: -1777056046
       vertices: []
       indices: 
       edges: []
@@ -799,18 +1046,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 2814
-        width: 727
-        height: 938
+        y: 6670
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2a6f85fe06ae1b4c978d22d1bd374a4
-      internalID: -1394675124
+      spriteID: d35c52814fe568b40bee9e86926f8b0d
+      internalID: -447586100
       vertices: []
       indices: 
       edges: []
@@ -819,19 +1067,20 @@ TextureImporter:
       name: Lorns_Idle_33
       rect:
         serializedVersion: 2
-        x: 727
-        y: 2814
-        width: 727
-        height: 938
+        x: 502
+        y: 6670
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8de8d3efc78c2c840aa847e697d75919
-      internalID: 1457497213
+      spriteID: ef6da7486a7966f44b3aaab5d94e2c0a
+      internalID: 377491193
       vertices: []
       indices: 
       edges: []
@@ -840,19 +1089,20 @@ TextureImporter:
       name: Lorns_Idle_34
       rect:
         serializedVersion: 2
-        x: 1454
-        y: 2814
-        width: 727
-        height: 938
+        x: 1004
+        y: 6670
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbfea456f36308a45b2edc9749963d45
-      internalID: 631326254
+      spriteID: 0608847bbcbfbd344a48ede98ec99a21
+      internalID: 1419240167
       vertices: []
       indices: 
       edges: []
@@ -861,19 +1111,20 @@ TextureImporter:
       name: Lorns_Idle_35
       rect:
         serializedVersion: 2
-        x: 2181
-        y: 2814
-        width: 727
-        height: 938
+        x: 1506
+        y: 6670
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 206d2541eb2c99b42ac4eb8348e74f12
-      internalID: 776735994
+      spriteID: 37de3fc87341ba844b33300c5b016a81
+      internalID: 1213327089
       vertices: []
       indices: 
       edges: []
@@ -882,19 +1133,20 @@ TextureImporter:
       name: Lorns_Idle_36
       rect:
         serializedVersion: 2
-        x: 2908
-        y: 2814
-        width: 727
-        height: 938
+        x: 0
+        y: 6003
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0368421a0c4927a4985c32554278898d
-      internalID: 2068944769
+      spriteID: 295a01b857a74da42a88c22203d8b124
+      internalID: -822344115
       vertices: []
       indices: 
       edges: []
@@ -903,19 +1155,20 @@ TextureImporter:
       name: Lorns_Idle_37
       rect:
         serializedVersion: 2
-        x: 3635
-        y: 2814
-        width: 727
-        height: 938
+        x: 502
+        y: 6003
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10e50d1b275a3e543a2d729339bc945b
-      internalID: -662313469
+      spriteID: 1a7ba6954ecee25498459b481557ebe7
+      internalID: -1594910243
       vertices: []
       indices: 
       edges: []
@@ -924,19 +1177,20 @@ TextureImporter:
       name: Lorns_Idle_38
       rect:
         serializedVersion: 2
-        x: 4362
-        y: 2814
-        width: 727
-        height: 938
+        x: 1004
+        y: 6003
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1d04ee73bca67e4aaa6bb81e3181b6e
-      internalID: 2093055036
+      spriteID: 9e5809c5390169e4682066be028d3c27
+      internalID: -1678764600
       vertices: []
       indices: 
       edges: []
@@ -945,19 +1199,20 @@ TextureImporter:
       name: Lorns_Idle_39
       rect:
         serializedVersion: 2
-        x: 5089
-        y: 2814
-        width: 727
-        height: 938
+        x: 1506
+        y: 6003
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a49699fc066e0eb4498cab96414b2a72
-      internalID: -684762686
+      spriteID: 54426deaa0a843b469b9374c18c211b4
+      internalID: 992403140
       vertices: []
       indices: 
       edges: []
@@ -967,18 +1222,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 1876
-        width: 727
-        height: 938
+        y: 5336
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 851598e6419040046a739be33927fba6
-      internalID: 2071422081
+      spriteID: 29e1436227e3b994e89a3625b0353d44
+      internalID: -890540235
       vertices: []
       indices: 
       edges: []
@@ -987,19 +1243,20 @@ TextureImporter:
       name: Lorns_Idle_41
       rect:
         serializedVersion: 2
-        x: 727
-        y: 1876
-        width: 727
-        height: 938
+        x: 502
+        y: 5336
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f439e2836e56af940ab99350146cd45d
-      internalID: 1900299980
+      spriteID: 1a5ba4f09772b5d46828505a1f079baa
+      internalID: -205402709
       vertices: []
       indices: 
       edges: []
@@ -1008,19 +1265,20 @@ TextureImporter:
       name: Lorns_Idle_42
       rect:
         serializedVersion: 2
-        x: 1454
-        y: 1876
-        width: 727
-        height: 938
+        x: 1004
+        y: 5336
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b6a189b42abb5742add8a5fbd19b811
-      internalID: 101045334
+      spriteID: 4af12dd490284a84c99dd335b0c33c1e
+      internalID: -357041686
       vertices: []
       indices: 
       edges: []
@@ -1029,19 +1287,20 @@ TextureImporter:
       name: Lorns_Idle_43
       rect:
         serializedVersion: 2
-        x: 2181
-        y: 1876
-        width: 727
-        height: 938
+        x: 1506
+        y: 5336
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b25be792928922840a227576d8b5e157
-      internalID: -491926245
+      spriteID: bd32f2705fc76004fb1c886014383aea
+      internalID: -1236676872
       vertices: []
       indices: 
       edges: []
@@ -1050,19 +1309,20 @@ TextureImporter:
       name: Lorns_Idle_44
       rect:
         serializedVersion: 2
-        x: 2908
-        y: 1876
-        width: 727
-        height: 938
+        x: 0
+        y: 4669
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e4b9f92e66789446b1a1ac32dac3059
-      internalID: -2064352153
+      spriteID: 4b04638f226031e449f67d234d056584
+      internalID: 2043959238
       vertices: []
       indices: 
       edges: []
@@ -1071,19 +1331,20 @@ TextureImporter:
       name: Lorns_Idle_45
       rect:
         serializedVersion: 2
-        x: 3635
-        y: 1876
-        width: 727
-        height: 938
+        x: 502
+        y: 4669
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8c2d9711ef6318b4bb4e024df44138b9
-      internalID: 629314030
+      spriteID: 42392bb3855359f41802c3852d20ed08
+      internalID: -706500181
       vertices: []
       indices: 
       edges: []
@@ -1092,19 +1353,20 @@ TextureImporter:
       name: Lorns_Idle_46
       rect:
         serializedVersion: 2
-        x: 4362
-        y: 1876
-        width: 727
-        height: 938
+        x: 1004
+        y: 4669
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a4d65560496ad7649930ffa05c7484c1
-      internalID: 201362014
+      spriteID: cdb2c7be6a415fc4fba80f8dca094cb1
+      internalID: -1446776395
       vertices: []
       indices: 
       edges: []
@@ -1113,19 +1375,20 @@ TextureImporter:
       name: Lorns_Idle_47
       rect:
         serializedVersion: 2
-        x: 5089
-        y: 1876
-        width: 727
-        height: 938
+        x: 1506
+        y: 4669
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a55c5a62f9c427a408ed30009ae0fe2d
-      internalID: 31524540
+      spriteID: 9ce564c76b3071f4090d03911ac8a2fc
+      internalID: -2050700310
       vertices: []
       indices: 
       edges: []
@@ -1135,18 +1398,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 938
-        width: 727
-        height: 938
+        y: 4002
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b213cf53a3e36e345940af4c8005d045
-      internalID: -325768004
+      spriteID: fa4695fad743ae147b7c4b1d591ce51b
+      internalID: -1855844248
       vertices: []
       indices: 
       edges: []
@@ -1155,19 +1419,20 @@ TextureImporter:
       name: Lorns_Idle_49
       rect:
         serializedVersion: 2
-        x: 727
-        y: 938
-        width: 727
-        height: 938
+        x: 502
+        y: 4002
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6977257331dfad2449e7b2bb96a6c2a8
-      internalID: -548167952
+      spriteID: 12c4f3af566439344a09480b918d0044
+      internalID: -620007803
       vertices: []
       indices: 
       edges: []
@@ -1176,19 +1441,20 @@ TextureImporter:
       name: Lorns_Idle_50
       rect:
         serializedVersion: 2
-        x: 1454
-        y: 938
-        width: 727
-        height: 938
+        x: 1004
+        y: 4002
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1b1601dda3c93254f85a6fa3510e0cd5
-      internalID: -985819759
+      spriteID: bc97717a5850fd04eaeb51aafe58b488
+      internalID: 1338383507
       vertices: []
       indices: 
       edges: []
@@ -1197,19 +1463,20 @@ TextureImporter:
       name: Lorns_Idle_51
       rect:
         serializedVersion: 2
-        x: 2181
-        y: 938
-        width: 727
-        height: 938
+        x: 1506
+        y: 4002
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4bc7f9c8f6b0e5d48bfed5cda673d679
-      internalID: -763035295
+      spriteID: 683c6602ba3617349b7d0614a5f39078
+      internalID: -1857443742
       vertices: []
       indices: 
       edges: []
@@ -1218,19 +1485,20 @@ TextureImporter:
       name: Lorns_Idle_52
       rect:
         serializedVersion: 2
-        x: 2908
-        y: 938
-        width: 727
-        height: 938
+        x: 0
+        y: 3335
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2689ce4d794632941a6e37b3089da66b
-      internalID: 1392407304
+      spriteID: 31d529e37dc34f843b57b264e38df33b
+      internalID: -825876791
       vertices: []
       indices: 
       edges: []
@@ -1239,19 +1507,20 @@ TextureImporter:
       name: Lorns_Idle_53
       rect:
         serializedVersion: 2
-        x: 3635
-        y: 938
-        width: 727
-        height: 938
+        x: 502
+        y: 3335
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91e82a90849d0484494b22bb96fe7ac5
-      internalID: -185258256
+      spriteID: 37a60180dab055f4da463ddfa019638a
+      internalID: 1051192089
       vertices: []
       indices: 
       edges: []
@@ -1260,19 +1529,20 @@ TextureImporter:
       name: Lorns_Idle_54
       rect:
         serializedVersion: 2
-        x: 4362
-        y: 938
-        width: 727
-        height: 938
+        x: 1004
+        y: 3335
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1bffef1fffd4cd541a3081ba0ee90583
-      internalID: 791362463
+      spriteID: 8772b6fed3573bb49ba332f91bd4908f
+      internalID: -172787639
       vertices: []
       indices: 
       edges: []
@@ -1281,19 +1551,20 @@ TextureImporter:
       name: Lorns_Idle_55
       rect:
         serializedVersion: 2
-        x: 5089
-        y: 938
-        width: 727
-        height: 938
+        x: 1506
+        y: 3335
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7e5470cf81b18a44294108a6d0c3c33e
-      internalID: -2083728292
+      spriteID: b067784261ac61445bbbec48472bcb57
+      internalID: -1075336252
       vertices: []
       indices: 
       edges: []
@@ -1303,18 +1574,19 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 727
-        height: 938
+        y: 2668
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 346e9e4efc3a42345823470a8c291c35
-      internalID: -1233370527
+      spriteID: 01e301b1ccd472d4ca95d94e66db8067
+      internalID: 1578923430
       vertices: []
       indices: 
       edges: []
@@ -1323,19 +1595,20 @@ TextureImporter:
       name: Lorns_Idle_57
       rect:
         serializedVersion: 2
-        x: 727
-        y: 0
-        width: 727
-        height: 938
+        x: 502
+        y: 2668
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 99ec054bad24c12418e642e753c6233e
-      internalID: 455731423
+      spriteID: 57be12304e5667747afcb072890378d5
+      internalID: 598141350
       vertices: []
       indices: 
       edges: []
@@ -1344,19 +1617,20 @@ TextureImporter:
       name: Lorns_Idle_58
       rect:
         serializedVersion: 2
-        x: 1454
-        y: 0
-        width: 727
-        height: 938
+        x: 1004
+        y: 2668
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ed7edf96c6275049ae992bed052e801
-      internalID: -1260873108
+      spriteID: 71a42a908a274824982b75de698b4cd8
+      internalID: 1813018816
       vertices: []
       indices: 
       edges: []
@@ -1365,19 +1639,20 @@ TextureImporter:
       name: Lorns_Idle_59
       rect:
         serializedVersion: 2
-        x: 2181
-        y: 0
-        width: 727
-        height: 938
+        x: 1506
+        y: 2668
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aca9adb011cebfd4ba26ad805b63594f
-      internalID: -528972071
+      spriteID: 7e8bd46e693384e488613d66740e52da
+      internalID: 352522762
       vertices: []
       indices: 
       edges: []
@@ -1386,19 +1661,20 @@ TextureImporter:
       name: Lorns_Idle_60
       rect:
         serializedVersion: 2
-        x: 2908
-        y: 0
-        width: 727
-        height: 938
+        x: 0
+        y: 2001
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f29aa1383ad588b4294b50d92499cbb4
-      internalID: 1071852008
+      spriteID: 8bb7e08af0a38284ab6260fda610e520
+      internalID: -645241097
       vertices: []
       indices: 
       edges: []
@@ -1407,19 +1683,20 @@ TextureImporter:
       name: Lorns_Idle_61
       rect:
         serializedVersion: 2
-        x: 3635
-        y: 0
-        width: 727
-        height: 938
+        x: 502
+        y: 2001
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1c411bc113baffc44b5d5a7408a10ad0
-      internalID: 877999896
+      spriteID: 7fd117c9bb6869541a947313fc408f1b
+      internalID: -1642810286
       vertices: []
       indices: 
       edges: []
@@ -1428,19 +1705,20 @@ TextureImporter:
       name: Lorns_Idle_62
       rect:
         serializedVersion: 2
-        x: 4362
-        y: 0
-        width: 727
-        height: 938
+        x: 1004
+        y: 2001
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73c7721f401885c4fa60070b069d7f55
-      internalID: -1491637924
+      spriteID: e83e5d8a6c74cd441a279301a191a849
+      internalID: 1519668167
       vertices: []
       indices: 
       edges: []
@@ -1449,98 +1727,380 @@ TextureImporter:
       name: Lorns_Idle_63
       rect:
         serializedVersion: 2
-        x: 5089
-        y: 0
-        width: 727
-        height: 938
+        x: 1506
+        y: 2001
+        width: 502
+        height: 667
       alignment: 9
-      pivot: {x: 0.41, y: 0.02}
+      pivot: {x: 0.55, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fb03d704c8b7b9499764fb287368c61
-      internalID: 1450991470
+      spriteID: a7db255100aa89a4db29f625d322f27b
+      internalID: -1414904202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1334
+        width: 502
+        height: 667
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65dd892111d775047962e5551f257b45
+      internalID: -2119997195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_65
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 1334
+        width: 502
+        height: 667
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b91c00f70dc65f478801c14e793d955
+      internalID: 1599316379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_66
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 1334
+        width: 502
+        height: 667
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2583a66ccbf3fdd46a3c2a0de416cedc
+      internalID: 850349206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_67
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 1334
+        width: 502
+        height: 667
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 369f503415bdcb8409314a17bc69567d
+      internalID: -20284099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_68
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 667
+        width: 502
+        height: 667
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd1ca12047ded94b93c87a9970475e1
+      internalID: -629240134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_69
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 667
+        width: 502
+        height: 667
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4452ac0300f82945ba3989d4fd553f5
+      internalID: -1522311265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_70
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 667
+        width: 502
+        height: 667
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a322158316fae64095286c599ee917c
+      internalID: -1453238815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_71
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 667
+        width: 502
+        height: 667
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ca4077bfb4a1b84aad0966526f84530
+      internalID: 1306248039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 502
+        height: 667
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 231432b6d7ef4854e8cf41b11ca4378c
+      internalID: 840252288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_73
+      rect:
+        serializedVersion: 2
+        x: 502
+        y: 0
+        width: 502
+        height: 667
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3d17d85b945db740a368797986fbeb6
+      internalID: -1143331845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_74
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 0
+        width: 502
+        height: 667
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99d5c789badb1334288d2fa0688b6106
+      internalID: 188151042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_75
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 0
+        width: 502
+        height: 667
+      alignment: 9
+      pivot: {x: 0.55, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d73073ce432ead44b91004236728ae9
+      internalID: 1898571049
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
+    customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: f34a3dddbc337ca45b225ebba5b13208
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":19.0},"gridSpriteSize":{"x":502.0,"y":667.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.550000011920929,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Lorns_Idle_0: 215081699
-      Lorns_Idle_1: 1383992041
-      Lorns_Idle_10: 1720094059
-      Lorns_Idle_11: 524801172
-      Lorns_Idle_12: -1553091700
-      Lorns_Idle_13: 490755880
-      Lorns_Idle_14: -108985048
-      Lorns_Idle_15: 905387467
-      Lorns_Idle_16: -1616098707
-      Lorns_Idle_17: -281641783
-      Lorns_Idle_18: 602125087
-      Lorns_Idle_19: -1303867983
-      Lorns_Idle_2: 1972676978
-      Lorns_Idle_20: -1887637603
-      Lorns_Idle_21: -661769092
-      Lorns_Idle_22: 1000542386
-      Lorns_Idle_23: 414666901
-      Lorns_Idle_24: 1454403999
-      Lorns_Idle_25: -936843298
-      Lorns_Idle_26: -901525980
-      Lorns_Idle_27: 1556086591
-      Lorns_Idle_28: 1391665618
-      Lorns_Idle_29: -167403519
-      Lorns_Idle_3: -253577304
-      Lorns_Idle_30: 2023522494
-      Lorns_Idle_31: -2118112001
-      Lorns_Idle_32: -1394675124
-      Lorns_Idle_33: 1457497213
-      Lorns_Idle_34: 631326254
-      Lorns_Idle_35: 776735994
-      Lorns_Idle_36: 2068944769
-      Lorns_Idle_37: -662313469
-      Lorns_Idle_38: 2093055036
-      Lorns_Idle_39: -684762686
-      Lorns_Idle_4: 1775809259
-      Lorns_Idle_40: 2071422081
-      Lorns_Idle_41: 1900299980
-      Lorns_Idle_42: 101045334
-      Lorns_Idle_43: -491926245
-      Lorns_Idle_44: -2064352153
-      Lorns_Idle_45: 629314030
-      Lorns_Idle_46: 201362014
-      Lorns_Idle_47: 31524540
-      Lorns_Idle_48: -325768004
-      Lorns_Idle_49: -548167952
-      Lorns_Idle_5: 556674609
-      Lorns_Idle_50: -985819759
-      Lorns_Idle_51: -763035295
-      Lorns_Idle_52: 1392407304
-      Lorns_Idle_53: -185258256
-      Lorns_Idle_54: 791362463
-      Lorns_Idle_55: -2083728292
-      Lorns_Idle_56: -1233370527
-      Lorns_Idle_57: 455731423
-      Lorns_Idle_58: -1260873108
-      Lorns_Idle_59: -528972071
-      Lorns_Idle_6: -1005898932
-      Lorns_Idle_60: 1071852008
-      Lorns_Idle_61: 877999896
-      Lorns_Idle_62: -1491637924
-      Lorns_Idle_63: 1450991470
-      Lorns_Idle_7: -938068153
-      Lorns_Idle_8: 1388845356
-      Lorns_Idle_9: 875863936
+      Lorns_Idle_0: -1876006886
+      Lorns_Idle_1: 935721593
+      Lorns_Idle_10: -167290288
+      Lorns_Idle_11: 926576718
+      Lorns_Idle_12: -920150449
+      Lorns_Idle_13: 1899682093
+      Lorns_Idle_14: 116466503
+      Lorns_Idle_15: -2121713591
+      Lorns_Idle_16: -606112019
+      Lorns_Idle_17: 2069852815
+      Lorns_Idle_18: 888860733
+      Lorns_Idle_19: 857202396
+      Lorns_Idle_2: -1378462533
+      Lorns_Idle_20: -1797302060
+      Lorns_Idle_21: 1418904659
+      Lorns_Idle_22: -328412018
+      Lorns_Idle_23: -664331792
+      Lorns_Idle_24: 325154384
+      Lorns_Idle_25: -328984011
+      Lorns_Idle_26: -1447683138
+      Lorns_Idle_27: 1867309120
+      Lorns_Idle_28: 2016184413
+      Lorns_Idle_29: -2058232256
+      Lorns_Idle_3: 1949464552
+      Lorns_Idle_30: -1576354142
+      Lorns_Idle_31: -1777056046
+      Lorns_Idle_32: -447586100
+      Lorns_Idle_33: 377491193
+      Lorns_Idle_34: 1419240167
+      Lorns_Idle_35: 1213327089
+      Lorns_Idle_36: -822344115
+      Lorns_Idle_37: -1594910243
+      Lorns_Idle_38: -1678764600
+      Lorns_Idle_39: 992403140
+      Lorns_Idle_4: -1609844781
+      Lorns_Idle_40: -890540235
+      Lorns_Idle_41: -205402709
+      Lorns_Idle_42: -357041686
+      Lorns_Idle_43: -1236676872
+      Lorns_Idle_44: 2043959238
+      Lorns_Idle_45: -706500181
+      Lorns_Idle_46: -1446776395
+      Lorns_Idle_47: -2050700310
+      Lorns_Idle_48: -1855844248
+      Lorns_Idle_49: -620007803
+      Lorns_Idle_5: 1321961397
+      Lorns_Idle_50: 1338383507
+      Lorns_Idle_51: -1857443742
+      Lorns_Idle_52: -825876791
+      Lorns_Idle_53: 1051192089
+      Lorns_Idle_54: -172787639
+      Lorns_Idle_55: -1075336252
+      Lorns_Idle_56: 1578923430
+      Lorns_Idle_57: 598141350
+      Lorns_Idle_58: 1813018816
+      Lorns_Idle_59: 352522762
+      Lorns_Idle_6: 222713341
+      Lorns_Idle_60: -645241097
+      Lorns_Idle_61: -1642810286
+      Lorns_Idle_62: 1519668167
+      Lorns_Idle_63: -1414904202
+      Lorns_Idle_64: -2119997195
+      Lorns_Idle_65: 1599316379
+      Lorns_Idle_66: 850349206
+      Lorns_Idle_67: -20284099
+      Lorns_Idle_68: -629240134
+      Lorns_Idle_69: -1522311265
+      Lorns_Idle_7: -714033929
+      Lorns_Idle_70: -1453238815
+      Lorns_Idle_71: 1306248039
+      Lorns_Idle_72: 840252288
+      Lorns_Idle_73: -1143331845
+      Lorns_Idle_74: 188151042
+      Lorns_Idle_75: 1898571049
+      Lorns_Idle_8: 618356539
+      Lorns_Idle_9: 1595099621
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

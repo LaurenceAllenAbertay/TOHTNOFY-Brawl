@@ -125,6 +125,10 @@ namespace DDD.TNFY.BRAWL
             {
                 SetCurrentTile(currentTile);
             }
+
+            // Set default facing based on unit type.
+            // Source art faces left, so enemies face left (no flip) and players face right (flipped).
+            FaceDirection(this is PlayerUnit ? Vector2Int.right : Vector2Int.left);
         }
 
         void Start()
@@ -212,10 +216,12 @@ namespace DDD.TNFY.BRAWL
 
             currentFacing = direction;
 
+            // Source art faces left, so no flip is needed for left-facing.
+            // Flipping is only required when the unit should face right.
             if (direction == Vector2Int.left)
-                unitSpriteRenderer.flipX = true;
-            else if (direction == Vector2Int.right)
                 unitSpriteRenderer.flipX = false;
+            else if (direction == Vector2Int.right)
+                unitSpriteRenderer.flipX = true;
         }
 
         public void SetCurrentTile(Tile newTile)

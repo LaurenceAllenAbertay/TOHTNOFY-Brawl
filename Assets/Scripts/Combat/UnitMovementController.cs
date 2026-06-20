@@ -56,6 +56,9 @@ namespace DDD.TNFY.BRAWL
         {
             if (movingUnit == null || destination == null) yield break;
 
+            // Capture the origin tile before movement begins — used for final facing on single-step paths.
+            Tile originTile = movingUnit.currentTile;
+
             // Build path if not provided
             List<Tile> pathToUse = waypoints;
             if (pathToUse == null || pathToUse.Count == 0)
@@ -82,6 +85,25 @@ namespace DDD.TNFY.BRAWL
                 unitAnimator.PlayIdle();
 
             movingUnit.SetCurrentTile(destination);
+
+            // Persist the final facing direction through FaceDirection so currentFacing
+            // stays in sync with the flipX that UpdateSpriteFacing set during the walk.
+            if (pathToUse.Count >= 2)
+            {
+                Vector3 secondLast = pathToUse[pathToUse.Count - 2].transform.position;
+                Vector3 last       = pathToUse[pathToUse.Count - 1].transform.position;
+                float dx = last.x - secondLast.x;
+                if (Mathf.Abs(dx) > 0.01f)
+                    movingUnit.FaceDirection(dx > 0 ? Vector2Int.right : Vector2Int.left);
+            }
+            else if (pathToUse.Count == 1)
+            {
+                // Single-step path: use the captured origin tile so we aren't reading
+                // a position that SetCurrentTile has already snapped to the destination.
+                float dx = pathToUse[0].transform.position.x - originTile.transform.position.x;
+                if (Mathf.Abs(dx) > 0.01f)
+                    movingUnit.FaceDirection(dx > 0 ? Vector2Int.right : Vector2Int.left);
+            }
 
             onMovementComplete?.Invoke();
         }
@@ -207,8 +229,9 @@ namespace DDD.TNFY.BRAWL
         {
             if (sr == null) return;
             Vector3 dir = (to - from).normalized;
+            // Source art faces left — flip when moving right, not left.
             if (Mathf.Abs(dir.x) > 0.1f)
-                sr.flipX = dir.x < 0;
+                sr.flipX = dir.x > 0;
         }
 
         #endregion

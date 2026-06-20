@@ -1,0 +1,5122 @@
+fileFormatVersion: 2
+guid: 34afdf99b6e27b14a834a972a34212e5
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3876165941575313409
+    second: NoSurvivors_0
+  - first:
+      213: -5684141792822675152
+    second: NoSurvivors_1
+  - first:
+      213: -6677916512892305744
+    second: NoSurvivors_2
+  - first:
+      213: -8190348059107631065
+    second: NoSurvivors_3
+  - first:
+      213: -4050581425520598053
+    second: NoSurvivors_4
+  - first:
+      213: -5354718221154301974
+    second: NoSurvivors_5
+  - first:
+      213: -7293242432243595369
+    second: NoSurvivors_6
+  - first:
+      213: 2100749693070038048
+    second: NoSurvivors_7
+  - first:
+      213: -3624570243050220168
+    second: NoSurvivors_8
+  - first:
+      213: 1857712569043720398
+    second: NoSurvivors_9
+  - first:
+      213: -4369353740155546598
+    second: NoSurvivors_10
+  - first:
+      213: -8287321175674537720
+    second: NoSurvivors_11
+  - first:
+      213: 9110299040824800211
+    second: NoSurvivors_12
+  - first:
+      213: 1214961377506239606
+    second: NoSurvivors_13
+  - first:
+      213: 3152577958774614362
+    second: NoSurvivors_14
+  - first:
+      213: -1763104831856328847
+    second: NoSurvivors_15
+  - first:
+      213: 2178126900351213792
+    second: NoSurvivors_16
+  - first:
+      213: 82314387185613559
+    second: NoSurvivors_17
+  - first:
+      213: 6844633543997757125
+    second: NoSurvivors_18
+  - first:
+      213: 6227737473930018884
+    second: NoSurvivors_19
+  - first:
+      213: 7788049414900038431
+    second: NoSurvivors_20
+  - first:
+      213: 2070710561901851410
+    second: NoSurvivors_21
+  - first:
+      213: 8909708681092711847
+    second: NoSurvivors_22
+  - first:
+      213: -4995371519903183935
+    second: NoSurvivors_23
+  - first:
+      213: -7160632487400176105
+    second: NoSurvivors_24
+  - first:
+      213: 472473166122210274
+    second: NoSurvivors_25
+  - first:
+      213: 5851542713783769889
+    second: NoSurvivors_26
+  - first:
+      213: -3310150242105116370
+    second: NoSurvivors_27
+  - first:
+      213: -7536182484835492924
+    second: NoSurvivors_28
+  - first:
+      213: -7944616095165944025
+    second: NoSurvivors_29
+  - first:
+      213: 2444395470439041869
+    second: NoSurvivors_30
+  - first:
+      213: 8582651691029583891
+    second: NoSurvivors_31
+  - first:
+      213: 5279138457351954622
+    second: NoSurvivors_32
+  - first:
+      213: -1652215786508140075
+    second: NoSurvivors_33
+  - first:
+      213: 4229637049481797554
+    second: NoSurvivors_34
+  - first:
+      213: 2950919150061003024
+    second: NoSurvivors_35
+  - first:
+      213: 3690169352012639671
+    second: NoSurvivors_36
+  - first:
+      213: -8002605284338292533
+    second: NoSurvivors_37
+  - first:
+      213: 8187177325170254969
+    second: NoSurvivors_38
+  - first:
+      213: -7991465133214596045
+    second: NoSurvivors_39
+  - first:
+      213: -6133296801600775539
+    second: NoSurvivors_40
+  - first:
+      213: 356522648279306784
+    second: NoSurvivors_41
+  - first:
+      213: -9205641055086409155
+    second: NoSurvivors_42
+  - first:
+      213: 5391392302494784782
+    second: NoSurvivors_43
+  - first:
+      213: 2656293376520424104
+    second: NoSurvivors_44
+  - first:
+      213: 8853812232650631427
+    second: NoSurvivors_45
+  - first:
+      213: 1737310632363708231
+    second: NoSurvivors_46
+  - first:
+      213: -1289765773905988663
+    second: NoSurvivors_47
+  - first:
+      213: -963304381181221825
+    second: NoSurvivors_48
+  - first:
+      213: 3017680561823035758
+    second: NoSurvivors_49
+  - first:
+      213: 4672683908981267357
+    second: NoSurvivors_50
+  - first:
+      213: -2202823702736307153
+    second: NoSurvivors_51
+  - first:
+      213: 6655902661400142809
+    second: NoSurvivors_52
+  - first:
+      213: 1042960450567854419
+    second: NoSurvivors_53
+  - first:
+      213: 5492099919615070233
+    second: NoSurvivors_54
+  - first:
+      213: -3534919279017706312
+    second: NoSurvivors_55
+  - first:
+      213: 9006846666465198729
+    second: NoSurvivors_56
+  - first:
+      213: 8909622830267216771
+    second: NoSurvivors_57
+  - first:
+      213: -8178089517646901235
+    second: NoSurvivors_58
+  - first:
+      213: 1454246275799050232
+    second: NoSurvivors_59
+  - first:
+      213: 9107762797256623438
+    second: NoSurvivors_60
+  - first:
+      213: 8220325033988408670
+    second: NoSurvivors_61
+  - first:
+      213: -4108973948519097472
+    second: NoSurvivors_62
+  - first:
+      213: -7611541166719306968
+    second: NoSurvivors_63
+  - first:
+      213: -2150840773334430981
+    second: NoSurvivors_64
+  - first:
+      213: 1422791906756810375
+    second: NoSurvivors_65
+  - first:
+      213: -7863261889299138934
+    second: NoSurvivors_66
+  - first:
+      213: -619211283763100435
+    second: NoSurvivors_67
+  - first:
+      213: -1051268366465726326
+    second: NoSurvivors_68
+  - first:
+      213: -6058518510876497397
+    second: NoSurvivors_69
+  - first:
+      213: 2432032155781520404
+    second: NoSurvivors_70
+  - first:
+      213: -9101142989641799882
+    second: NoSurvivors_71
+  - first:
+      213: -3622189743527859559
+    second: NoSurvivors_72
+  - first:
+      213: -4969560498561522052
+    second: NoSurvivors_73
+  - first:
+      213: -1284927935670375958
+    second: NoSurvivors_74
+  - first:
+      213: -5421817337851515796
+    second: NoSurvivors_75
+  - first:
+      213: 3473728511244023481
+    second: NoSurvivors_76
+  - first:
+      213: -7066865759564770756
+    second: NoSurvivors_77
+  - first:
+      213: 2925232035777058288
+    second: NoSurvivors_78
+  - first:
+      213: 1226673967912321573
+    second: NoSurvivors_79
+  - first:
+      213: 7414032338212436262
+    second: NoSurvivors_80
+  - first:
+      213: 1665172007865695243
+    second: NoSurvivors_81
+  - first:
+      213: 3710622507505967218
+    second: NoSurvivors_82
+  - first:
+      213: -2433902682188618610
+    second: NoSurvivors_83
+  - first:
+      213: 8473391892668556912
+    second: NoSurvivors_84
+  - first:
+      213: -8010847767937766434
+    second: NoSurvivors_85
+  - first:
+      213: 91032885462438372
+    second: NoSurvivors_86
+  - first:
+      213: 5932049092638071734
+    second: NoSurvivors_87
+  - first:
+      213: 1453156984147942496
+    second: NoSurvivors_88
+  - first:
+      213: 7260106964359873870
+    second: NoSurvivors_89
+  - first:
+      213: -107447125681737043
+    second: NoSurvivors_90
+  - first:
+      213: -7572664946283940427
+    second: NoSurvivors_91
+  - first:
+      213: -885252700334654360
+    second: NoSurvivors_92
+  - first:
+      213: 1947950872973234533
+    second: NoSurvivors_93
+  - first:
+      213: 6228726135670431404
+    second: NoSurvivors_94
+  - first:
+      213: -5985108938833098734
+    second: NoSurvivors_95
+  - first:
+      213: -4904162523015147053
+    second: NoSurvivors_96
+  - first:
+      213: -8453059356985262754
+    second: NoSurvivors_97
+  - first:
+      213: -784751976741314603
+    second: NoSurvivors_98
+  - first:
+      213: 1545591878938725685
+    second: NoSurvivors_99
+  - first:
+      213: 182775568957911612
+    second: NoSurvivors_100
+  - first:
+      213: 8945255066107068005
+    second: NoSurvivors_101
+  - first:
+      213: 5518091661072104357
+    second: NoSurvivors_102
+  - first:
+      213: 4732103421577664002
+    second: NoSurvivors_103
+  - first:
+      213: -5097769092233579612
+    second: NoSurvivors_104
+  - first:
+      213: -7033870546751961623
+    second: NoSurvivors_105
+  - first:
+      213: -5057423894398290785
+    second: NoSurvivors_106
+  - first:
+      213: -6667507452512168544
+    second: NoSurvivors_107
+  - first:
+      213: 3054199429620048252
+    second: NoSurvivors_108
+  - first:
+      213: -1585424377033899961
+    second: NoSurvivors_109
+  - first:
+      213: -978604896652961812
+    second: NoSurvivors_110
+  - first:
+      213: 5854165795713410727
+    second: NoSurvivors_111
+  - first:
+      213: 4353968936099536415
+    second: NoSurvivors_112
+  - first:
+      213: -34929332828510193
+    second: NoSurvivors_113
+  - first:
+      213: -4077874917093816450
+    second: NoSurvivors_114
+  - first:
+      213: 7865097932911202101
+    second: NoSurvivors_115
+  - first:
+      213: -4204280894227236302
+    second: NoSurvivors_116
+  - first:
+      213: -6610155228943359028
+    second: NoSurvivors_117
+  - first:
+      213: 7632137587545975135
+    second: NoSurvivors_118
+  - first:
+      213: 1228572801138096609
+    second: NoSurvivors_119
+  - first:
+      213: 455403787561218426
+    second: NoSurvivors_120
+  - first:
+      213: 3655353040155887499
+    second: NoSurvivors_121
+  - first:
+      213: -6195990245253825343
+    second: NoSurvivors_122
+  - first:
+      213: -2066360393977789266
+    second: NoSurvivors_123
+  - first:
+      213: -5789654858869833563
+    second: NoSurvivors_124
+  - first:
+      213: 2115340857431233510
+    second: NoSurvivors_125
+  - first:
+      213: -8014801459573336991
+    second: NoSurvivors_126
+  - first:
+      213: -8195075498805651169
+    second: NoSurvivors_127
+  - first:
+      213: -1666421533456413420
+    second: NoSurvivors_128
+  - first:
+      213: 373186194319609046
+    second: NoSurvivors_129
+  - first:
+      213: 7175454048601362693
+    second: NoSurvivors_130
+  - first:
+      213: 7375022859925399476
+    second: NoSurvivors_131
+  - first:
+      213: 2743420617309361657
+    second: NoSurvivors_132
+  - first:
+      213: -5315192968187571061
+    second: NoSurvivors_133
+  - first:
+      213: -6979541011558954663
+    second: NoSurvivors_134
+  - first:
+      213: 7120717621261258924
+    second: NoSurvivors_135
+  - first:
+      213: 2208846741309104416
+    second: NoSurvivors_136
+  - first:
+      213: 1602300244817708548
+    second: NoSurvivors_137
+  - first:
+      213: -6523266956157808840
+    second: NoSurvivors_138
+  - first:
+      213: 7622868928765101705
+    second: NoSurvivors_139
+  - first:
+      213: 8399440107872353739
+    second: NoSurvivors_140
+  - first:
+      213: -7577373691384970286
+    second: NoSurvivors_141
+  - first:
+      213: -854089539144454873
+    second: NoSurvivors_142
+  - first:
+      213: 4710386605527668427
+    second: NoSurvivors_143
+  - first:
+      213: -756525272373512828
+    second: NoSurvivors_144
+  - first:
+      213: 5909168233863308359
+    second: NoSurvivors_145
+  - first:
+      213: 5876405182832569679
+    second: NoSurvivors_146
+  - first:
+      213: -1006178377864991355
+    second: NoSurvivors_147
+  - first:
+      213: 7376041164171443391
+    second: NoSurvivors_148
+  - first:
+      213: -695170238460767109
+    second: NoSurvivors_149
+  - first:
+      213: 636406029349616276
+    second: NoSurvivors_150
+  - first:
+      213: -4054555550449514262
+    second: NoSurvivors_151
+  - first:
+      213: 2566513233814623303
+    second: NoSurvivors_152
+  - first:
+      213: 7768821048303555195
+    second: NoSurvivors_153
+  - first:
+      213: -7744542353234865087
+    second: NoSurvivors_154
+  - first:
+      213: 7892232159827102112
+    second: NoSurvivors_155
+  - first:
+      213: 7150884171412188952
+    second: NoSurvivors_156
+  - first:
+      213: -808492110206880696
+    second: NoSurvivors_157
+  - first:
+      213: -6598254847909523892
+    second: NoSurvivors_158
+  - first:
+      213: 6954771758304102125
+    second: NoSurvivors_159
+  - first:
+      213: -2680924811829190542
+    second: NoSurvivors_160
+  - first:
+      213: -3991193370791012198
+    second: NoSurvivors_161
+  - first:
+      213: -4432680423344383125
+    second: NoSurvivors_162
+  - first:
+      213: -5537795999520201594
+    second: NoSurvivors_163
+  - first:
+      213: 3057902569286115181
+    second: NoSurvivors_164
+  - first:
+      213: -3537059137994087399
+    second: NoSurvivors_165
+  - first:
+      213: -1817927147036090364
+    second: NoSurvivors_166
+  - first:
+      213: 6546273315798310474
+    second: NoSurvivors_167
+  - first:
+      213: 9014412356223957337
+    second: NoSurvivors_168
+  - first:
+      213: -467476664303737600
+    second: NoSurvivors_169
+  - first:
+      213: 5238312788464672497
+    second: NoSurvivors_170
+  - first:
+      213: -4918437579285946811
+    second: NoSurvivors_171
+  - first:
+      213: 8857839463279517619
+    second: NoSurvivors_172
+  - first:
+      213: 6451310036696120057
+    second: NoSurvivors_173
+  - first:
+      213: 6910822173880864286
+    second: NoSurvivors_174
+  - first:
+      213: -8628618962375075230
+    second: NoSurvivors_175
+  - first:
+      213: -9197524595830352568
+    second: NoSurvivors_176
+  - first:
+      213: 2832620278924747347
+    second: NoSurvivors_177
+  - first:
+      213: -8811390829418419869
+    second: NoSurvivors_178
+  - first:
+      213: -1338944921146982821
+    second: NoSurvivors_179
+  - first:
+      213: 4761617612014583451
+    second: NoSurvivors_180
+  - first:
+      213: -2472330765453688905
+    second: NoSurvivors_181
+  - first:
+      213: 1036791847631665203
+    second: NoSurvivors_182
+  - first:
+      213: 6017605859631699425
+    second: NoSurvivors_183
+  - first:
+      213: -6873478028320839511
+    second: NoSurvivors_184
+  - first:
+      213: -5789669487914246859
+    second: NoSurvivors_185
+  - first:
+      213: 7029324669460095823
+    second: NoSurvivors_186
+  - first:
+      213: -7076408081220482475
+    second: NoSurvivors_187
+  - first:
+      213: 9206890098844931570
+    second: NoSurvivors_188
+  - first:
+      213: 1233368713548480127
+    second: NoSurvivors_189
+  - first:
+      213: 1522410120334334056
+    second: NoSurvivors_190
+  - first:
+      213: -7063686262408957793
+    second: NoSurvivors_191
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: NoSurvivors_0
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 29633
+        width: 460
+        height: 613
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff79fe9ec97153ac0800000000000000
+      internalID: -3876165941575313409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_1
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 29633
+        width: 460
+        height: 613
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0393ad1c72fdd11b0800000000000000
+      internalID: -5684141792822675152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_2
+      rect:
+        serializedVersion: 2
+        x: 2592
+        y: 29633
+        width: 464
+        height: 613
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0beb65900564353a0800000000000000
+      internalID: -6677916512892305744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_3
+      rect:
+        serializedVersion: 2
+        x: 3728
+        y: 29633
+        width: 464
+        height: 613
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7206416a5d9065e80800000000000000
+      internalID: -8190348059107631065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_4
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 28928
+        width: 466
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd3ac0687a179c7c0800000000000000
+      internalID: -4050581425520598053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_5
+      rect:
+        serializedVersion: 2
+        x: 1455
+        y: 28928
+        width: 466
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae749cbf52830b5b0800000000000000
+      internalID: -5354718221154301974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_6
+      rect:
+        serializedVersion: 2
+        x: 2591
+        y: 28928
+        width: 467
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 797805d26a239ca90800000000000000
+      internalID: -7293242432243595369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_7
+      rect:
+        serializedVersion: 2
+        x: 3727
+        y: 28928
+        width: 467
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 024537137bc572d10800000000000000
+      internalID: 2100749693070038048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_8
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 28223
+        width: 464
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8755a875190f2bdc0800000000000000
+      internalID: -3624570243050220168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_9
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 28223
+        width: 464
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec811ac2dbbe7c910800000000000000
+      internalID: 1857712569043720398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_10
+      rect:
+        serializedVersion: 2
+        x: 2603
+        y: 28223
+        width: 459
+        height: 611
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1411045cefec53c0800000000000000
+      internalID: -4369353740155546598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_11
+      rect:
+        serializedVersion: 2
+        x: 3739
+        y: 28223
+        width: 459
+        height: 611
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 809b8508c458dfc80800000000000000
+      internalID: -8287321175674537720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_12
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 27518
+        width: 462
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d3b1fd85b84e6e70800000000000000
+      internalID: 9110299040824800211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_13
+      rect:
+        serializedVersion: 2
+        x: 1473
+        y: 27518
+        width: 462
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 674241a8fe86cd010800000000000000
+      internalID: 1214961377506239606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_14
+      rect:
+        serializedVersion: 2
+        x: 2594
+        y: 27518
+        width: 478
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a59ac7f43f430cb20800000000000000
+      internalID: 3152577958774614362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_15
+      rect:
+        serializedVersion: 2
+        x: 3730
+        y: 27518
+        width: 478
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17fbd6b2f713887e0800000000000000
+      internalID: -1763104831856328847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_16
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 26816
+        width: 475
+        height: 606
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e0282b20e24a3e10800000000000000
+      internalID: 2178126900351213792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_17
+      rect:
+        serializedVersion: 2
+        x: 1460
+        y: 26816
+        width: 475
+        height: 606
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fa3a10cf70742100800000000000000
+      internalID: 82314387185613559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_18
+      rect:
+        serializedVersion: 2
+        x: 2580
+        y: 26816
+        width: 492
+        height: 606
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c695bf91f50dfe50800000000000000
+      internalID: 6844633543997757125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_19
+      rect:
+        serializedVersion: 2
+        x: 3716
+        y: 26816
+        width: 492
+        height: 606
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 440ccff8c3e5d6650800000000000000
+      internalID: 6227737473930018884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_20
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 26111
+        width: 488
+        height: 606
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1b3e441ea5b41c60800000000000000
+      internalID: 7788049414900038431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_21
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 26111
+        width: 488
+        height: 606
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2133fc2f844acbc10800000000000000
+      internalID: 2070710561901851410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_22
+      rect:
+        serializedVersion: 2
+        x: 2584
+        y: 26111
+        width: 485
+        height: 606
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a5cebcf6d4a5ab70800000000000000
+      internalID: 8909708681092711847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_23
+      rect:
+        serializedVersion: 2
+        x: 3720
+        y: 26111
+        width: 485
+        height: 606
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cb411bb110ecaab0800000000000000
+      internalID: -4995371519903183935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_24
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 25403
+        width: 483
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 716046df0b250ac90800000000000000
+      internalID: -7160632487400176105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_25
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 25403
+        width: 483
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e35e9067df8e8600800000000000000
+      internalID: 472473166122210274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_26
+      rect:
+        serializedVersion: 2
+        x: 2584
+        y: 25406
+        width: 467
+        height: 606
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12b5b1b681bd43150800000000000000
+      internalID: 5851542713783769889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_27
+      rect:
+        serializedVersion: 2
+        x: 3720
+        y: 25406
+        width: 467
+        height: 606
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e29b62a84ebff02d0800000000000000
+      internalID: -3310150242105116370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_28
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 24698
+        width: 458
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cb1cdc55f91a6790800000000000000
+      internalID: -7536182484835492924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_29
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 24698
+        width: 458
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72f68caf0cd0fb190800000000000000
+      internalID: -7944616095165944025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_30
+      rect:
+        serializedVersion: 2
+        x: 2584
+        y: 24698
+        width: 455
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4bc71ababc3ce120800000000000000
+      internalID: 2444395470439041869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_31
+      rect:
+        serializedVersion: 2
+        x: 3720
+        y: 24698
+        width: 455
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31859ba7d34bb1770800000000000000
+      internalID: 8582651691029583891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_32
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 23993
+        width: 456
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb02196f474434940800000000000000
+      internalID: 5279138457351954622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_33
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 23993
+        width: 456
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d1c3e8fe762219e0800000000000000
+      internalID: -1652215786508140075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_34
+      rect:
+        serializedVersion: 2
+        x: 2585
+        y: 23993
+        width: 457
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bf9137ac70b2ba30800000000000000
+      internalID: 4229637049481797554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_35
+      rect:
+        serializedVersion: 2
+        x: 3721
+        y: 23993
+        width: 457
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 011a8441555c3f820800000000000000
+      internalID: 2950919150061003024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_36
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 23288
+        width: 463
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd2fbb697d163330800000000000000
+      internalID: 3690169352012639671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_37
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 23288
+        width: 463
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc82a5db4e801f090800000000000000
+      internalID: -8002605284338292533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_38
+      rect:
+        serializedVersion: 2
+        x: 2585
+        y: 23288
+        width: 468
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 974e7e35662be9170800000000000000
+      internalID: 8187177325170254969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_39
+      rect:
+        serializedVersion: 2
+        x: 3721
+        y: 23288
+        width: 468
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33403db4dcc981190800000000000000
+      internalID: -7991465133214596045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_40
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 22583
+        width: 500
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8adb86fd0722eaa0800000000000000
+      internalID: -6133296801600775539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_41
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 22583
+        width: 500
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 022d11da57f92f400800000000000000
+      internalID: 356522648279306784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_42
+      rect:
+        serializedVersion: 2
+        x: 2585
+        y: 22583
+        width: 472
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3a82d5eb3efe3080800000000000000
+      internalID: -9205641055086409155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_43
+      rect:
+        serializedVersion: 2
+        x: 3721
+        y: 22583
+        width: 472
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0d1afafbb212da40800000000000000
+      internalID: 5391392302494784782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_44
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 21878
+        width: 489
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8aa09b690cc0dd420800000000000000
+      internalID: 2656293376520424104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_45
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 21878
+        width: 489
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 309262be05f0fda70800000000000000
+      internalID: 8853812232650631427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_46
+      rect:
+        serializedVersion: 2
+        x: 2585
+        y: 21878
+        width: 529
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74f4c82c0da2c1810800000000000000
+      internalID: 1737310632363708231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_47
+      rect:
+        serializedVersion: 2
+        x: 3721
+        y: 21878
+        width: 529
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c370e2bcd4d91ee0800000000000000
+      internalID: -1289765773905988663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_48
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 21173
+        width: 488
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f34ad15e4c7a1a2f0800000000000000
+      internalID: -963304381181221825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_49
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 21173
+        width: 488
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e61301d8b74f0e920800000000000000
+      internalID: 3017680561823035758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_50
+      rect:
+        serializedVersion: 2
+        x: 2585
+        y: 21173
+        width: 516
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9b138e1245b8d040800000000000000
+      internalID: 4672683908981267357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_51
+      rect:
+        serializedVersion: 2
+        x: 3721
+        y: 21173
+        width: 516
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2c779f638ffd61e0800000000000000
+      internalID: -2202823702736307153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_52
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 20468
+        width: 529
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d32550c4348e5c50800000000000000
+      internalID: 6655902661400142809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_53
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 20468
+        width: 529
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 359d0e20107597e00800000000000000
+      internalID: 1042960450567854419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_54
+      rect:
+        serializedVersion: 2
+        x: 2585
+        y: 20468
+        width: 555
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9109b9b47cbd73c40800000000000000
+      internalID: 5492099919615070233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_55
+      rect:
+        serializedVersion: 2
+        x: 3721
+        y: 20468
+        width: 555
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bc387005a171fec0800000000000000
+      internalID: -3534919279017706312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_56
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 19763
+        width: 560
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 982c115a25fbefc70800000000000000
+      internalID: 9006846666465198729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_57
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 19763
+        width: 560
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 383b9c842c655ab70800000000000000
+      internalID: 8909622830267216771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_58
+      rect:
+        serializedVersion: 2
+        x: 2585
+        y: 19763
+        width: 568
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d009f4fb9e6918e80800000000000000
+      internalID: -8178089517646901235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_59
+      rect:
+        serializedVersion: 2
+        x: 3721
+        y: 19763
+        width: 568
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f7efec68458e2410800000000000000
+      internalID: 1454246275799050232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_60
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 19058
+        width: 578
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e45cff45206456e70800000000000000
+      internalID: 9107762797256623438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_61
+      rect:
+        serializedVersion: 2
+        x: 1446
+        y: 19058
+        width: 578
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e554125b016741270800000000000000
+      internalID: 8220325033988408670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_62
+      rect:
+        serializedVersion: 2
+        x: 2597
+        y: 19058
+        width: 543
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08b5f2fc6fdf9f6c0800000000000000
+      internalID: -4108973948519097472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_63
+      rect:
+        serializedVersion: 2
+        x: 3733
+        y: 19058
+        width: 543
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 823fe64f2af5e5690800000000000000
+      internalID: -7611541166719306968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_64
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 18353
+        width: 537
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfa89f856bda622e0800000000000000
+      internalID: -2150840773334430981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_65
+      rect:
+        serializedVersion: 2
+        x: 1461
+        y: 18353
+        width: 537
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7865a8f63b5ceb310800000000000000
+      internalID: 1422791906756810375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_66
+      rect:
+        serializedVersion: 2
+        x: 2595
+        y: 18353
+        width: 537
+        height: 606
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a86357819f410e290800000000000000
+      internalID: -7863261889299138934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_67
+      rect:
+        serializedVersion: 2
+        x: 3731
+        y: 18353
+        width: 537
+        height: 606
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de4036e3e9e1867f0800000000000000
+      internalID: -619211283763100435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_68
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 17648
+        width: 528
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8884359df42961f0800000000000000
+      internalID: -1051268366465726326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_69
+      rect:
+        serializedVersion: 2
+        x: 1456
+        y: 17648
+        width: 528
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0ae3168381dbeba0800000000000000
+      internalID: -6058518510876497397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_70
+      rect:
+        serializedVersion: 2
+        x: 2594
+        y: 17648
+        width: 529
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41c5fa73c5050c120800000000000000
+      internalID: 2432032155781520404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_71
+      rect:
+        serializedVersion: 2
+        x: 3730
+        y: 17648
+        width: 529
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6372d5cbbae32b180800000000000000
+      internalID: -9101142989641799882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_72
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 16943
+        width: 517
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99a65f39e956bbdc0800000000000000
+      internalID: -3622189743527859559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_73
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 16943
+        width: 517
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c766d617e03980bb0800000000000000
+      internalID: -4969560498561522052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_74
+      rect:
+        serializedVersion: 2
+        x: 2594
+        y: 16943
+        width: 543
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae92460b9d40b2ee0800000000000000
+      internalID: -1284927935670375958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_75
+      rect:
+        serializedVersion: 2
+        x: 3730
+        y: 16943
+        width: 543
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6c6e447bd5d1c4b0800000000000000
+      internalID: -5421817337851515796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_76
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 16238
+        width: 517
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b6b8d62da9253030800000000000000
+      internalID: 3473728511244023481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_77
+      rect:
+        serializedVersion: 2
+        x: 1458
+        y: 16238
+        width: 517
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3255c598037ded90800000000000000
+      internalID: -7066865759564770756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_78
+      rect:
+        serializedVersion: 2
+        x: 2594
+        y: 16238
+        width: 523
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f5951ab903889820800000000000000
+      internalID: 2925232035777058288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_79
+      rect:
+        serializedVersion: 2
+        x: 3730
+        y: 16238
+        width: 523
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52202a08975060110800000000000000
+      internalID: 1226673967912321573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_80
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 15533
+        width: 531
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6293960612fe3e660800000000000000
+      internalID: 7414032338212436262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_81
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 15533
+        width: 531
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0c32c26e11eb1710800000000000000
+      internalID: 1665172007865695243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_82
+      rect:
+        serializedVersion: 2
+        x: 2607
+        y: 15533
+        width: 524
+        height: 602
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2706677c287ce7330800000000000000
+      internalID: 3710622507505967218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_83
+      rect:
+        serializedVersion: 2
+        x: 3743
+        y: 15533
+        width: 524
+        height: 602
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e84e64ae76a093ed0800000000000000
+      internalID: -2433902682188618610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_84
+      rect:
+        serializedVersion: 2
+        x: 341
+        y: 14828
+        width: 516
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0762f2d4809879570800000000000000
+      internalID: 8473391892668556912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_85
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 14828
+        width: 516
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edba65af560c3d090800000000000000
+      internalID: -8010847767937766434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_86
+      rect:
+        serializedVersion: 2
+        x: 2575
+        y: 14854
+        width: 575
+        height: 599
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e11ed05de9634100800000000000000
+      internalID: 91032885462438372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_87
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 14854
+        width: 575
+        height: 599
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6bbdedc683fd25250800000000000000
+      internalID: 5932049092638071734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_88
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 14155
+        width: 541
+        height: 651
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06c1403f396aa2410800000000000000
+      internalID: 1453156984147942496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_89
+      rect:
+        serializedVersion: 2
+        x: 1364
+        y: 14155
+        width: 541
+        height: 651
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e45820281d411c460800000000000000
+      internalID: 7260106964359873870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_90
+      rect:
+        serializedVersion: 2
+        x: 2316
+        y: 14446
+        width: 93
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da27a919865428ef0800000000000000
+      internalID: -107447125681737043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_91
+      rect:
+        serializedVersion: 2
+        x: 2408
+        y: 14145
+        width: 502
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b571b16a5d78e690800000000000000
+      internalID: -7572664946283940427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_92
+      rect:
+        serializedVersion: 2
+        x: 3452
+        y: 14446
+        width: 93
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86cf81cfb53f6b3f0800000000000000
+      internalID: -885252700334654360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_93
+      rect:
+        serializedVersion: 2
+        x: 3544
+        y: 14145
+        width: 502
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5615b7f8ff2880b10800000000000000
+      internalID: 1947950872973234533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_94
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 13440
+        width: 634
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caed3df4b61e07650800000000000000
+      internalID: 6228726135670431404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_95
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 14051
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21886de612f90fca0800000000000000
+      internalID: -5985108938833098734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_96
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 13440
+        width: 634
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d116ee2b2ae0fbb0800000000000000
+      internalID: -4904162523015147053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_97
+      rect:
+        serializedVersion: 2
+        x: 1693
+        y: 14051
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5df9911d43b0ba80800000000000000
+      internalID: -8453059356985262754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_98
+      rect:
+        serializedVersion: 2
+        x: 2271
+        y: 13952
+        width: 65
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5df5c852c300c15f0800000000000000
+      internalID: -784751976741314603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_99
+      rect:
+        serializedVersion: 2
+        x: 2413
+        y: 13457
+        width: 507
+        height: 602
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53d0fdfff9b037510800000000000000
+      internalID: 1545591878938725685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_100
+      rect:
+        serializedVersion: 2
+        x: 3407
+        y: 13952
+        width: 65
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c323b5d5969598200800000000000000
+      internalID: 182775568957911612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_101
+      rect:
+        serializedVersion: 2
+        x: 3549
+        y: 13457
+        width: 507
+        height: 602
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56e3390b61ee32c70800000000000000
+      internalID: 8945255066107068005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_102
+      rect:
+        serializedVersion: 2
+        x: 346
+        y: 12758
+        width: 569
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ab7f303123349c40800000000000000
+      internalID: 5518091661072104357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_103
+      rect:
+        serializedVersion: 2
+        x: 1482
+        y: 12758
+        width: 569
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2061c8b7dfecba140800000000000000
+      internalID: 4732103421577664002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_104
+      rect:
+        serializedVersion: 2
+        x: 2671
+        y: 12714
+        width: 639
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a3b37e05061149b0800000000000000
+      internalID: -5097769092233579612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_105
+      rect:
+        serializedVersion: 2
+        x: 3807
+        y: 12714
+        width: 639
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e544c8310ca26e90800000000000000
+      internalID: -7033870546751961623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_106
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 12009
+        width: 575
+        height: 574
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9431df63cb60d9b0800000000000000
+      internalID: -5057423894398290785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_107
+      rect:
+        serializedVersion: 2
+        x: 1569
+        y: 12009
+        width: 575
+        height: 574
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a51eb34c414873a0800000000000000
+      internalID: -6667507452512168544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_108
+      rect:
+        serializedVersion: 2
+        x: 2757
+        y: 12008
+        width: 590
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7124bb0332b26a20800000000000000
+      internalID: 3054199429620048252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_109
+      rect:
+        serializedVersion: 2
+        x: 3893
+        y: 12008
+        width: 590
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74046a4dde07ff9e0800000000000000
+      internalID: -1585424377033899961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_110
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 11303
+        width: 625
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce7da87080c4b62f0800000000000000
+      internalID: -978604896652961812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_111
+      rect:
+        serializedVersion: 2
+        x: 1616
+        y: 11303
+        width: 625
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a66db546cc2e3150800000000000000
+      internalID: 5854165795713410727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_112
+      rect:
+        serializedVersion: 2
+        x: 2747
+        y: 11303
+        width: 662
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1e5c47dda76c6c30800000000000000
+      internalID: 4353968936099536415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_113
+      rect:
+        serializedVersion: 2
+        x: 3883
+        y: 11303
+        width: 661
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f08e384f4f7e38ff0800000000000000
+      internalID: -34929332828510193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_114
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 10598
+        width: 634
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e77c5205e5a7867c0800000000000000
+      internalID: -4077874917093816450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_115
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 10598
+        width: 634
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53fc4de16e0762d60800000000000000
+      internalID: 7865097932911202101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_116
+      rect:
+        serializedVersion: 2
+        x: 2757
+        y: 10598
+        width: 608
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23abf9b4dc467a5c0800000000000000
+      internalID: -4204280894227236302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_117
+      rect:
+        serializedVersion: 2
+        x: 3893
+        y: 10598
+        width: 608
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc3e3a467d20444a0800000000000000
+      internalID: -6610155228943359028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_118
+      rect:
+        serializedVersion: 2
+        x: 490
+        y: 9893
+        width: 563
+        height: 602
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f59a596f2bccae960800000000000000
+      internalID: 7632137587545975135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_119
+      rect:
+        serializedVersion: 2
+        x: 1626
+        y: 9893
+        width: 563
+        height: 602
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e9fa801474cc0110800000000000000
+      internalID: 1228572801138096609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_120
+      rect:
+        serializedVersion: 2
+        x: 2761
+        y: 9893
+        width: 535
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7134faf45be15600800000000000000
+      internalID: 455403787561218426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_121
+      rect:
+        serializedVersion: 2
+        x: 3897
+        y: 9893
+        width: 535
+        height: 603
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b87c22f193c6ab230800000000000000
+      internalID: 3655353040155887499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_122
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 9188
+        width: 533
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cc3cdf13bb630aa0800000000000000
+      internalID: -6195990245253825343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_123
+      rect:
+        serializedVersion: 2
+        x: 1613
+        y: 9188
+        width: 533
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea484037b20d253e0800000000000000
+      internalID: -2066360393977789266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_124
+      rect:
+        serializedVersion: 2
+        x: 2743
+        y: 9188
+        width: 505
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a003fca49307afa0800000000000000
+      internalID: -5789654858869833563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_125
+      rect:
+        serializedVersion: 2
+        x: 3879
+        y: 9188
+        width: 505
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e31f026d433b5d10800000000000000
+      internalID: 2115340857431233510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_126
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 8483
+        width: 466
+        height: 606
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16459d86984b5c090800000000000000
+      internalID: -8014801459573336991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_127
+      rect:
+        serializedVersion: 2
+        x: 1602
+        y: 8483
+        width: 466
+        height: 606
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f199e22d04e354e80800000000000000
+      internalID: -8195075498805651169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_128
+      rect:
+        serializedVersion: 2
+        x: 2623
+        y: 8945
+        width: 65
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41dc444c17eafd8e0800000000000000
+      internalID: -1666421533456413420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_129
+      rect:
+        serializedVersion: 2
+        x: 2687
+        y: 8991
+        width: 26
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6dc0083ddd2dd2500800000000000000
+      internalID: 373186194319609046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_130
+      rect:
+        serializedVersion: 2
+        x: 2789
+        y: 8483
+        width: 519
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 501d505a075549360800000000000000
+      internalID: 7175454048601362693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_131
+      rect:
+        serializedVersion: 2
+        x: 3759
+        y: 8945
+        width: 65
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b72d307738595660800000000000000
+      internalID: 7375022859925399476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_132
+      rect:
+        serializedVersion: 2
+        x: 3823
+        y: 8991
+        width: 26
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f515342486921620800000000000000
+      internalID: 2743420617309361657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_133
+      rect:
+        serializedVersion: 2
+        x: 3925
+        y: 8483
+        width: 519
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8496821824ac36b0800000000000000
+      internalID: -5315192968187571061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_134
+      rect:
+        serializedVersion: 2
+        x: 326
+        y: 8217
+        width: 87
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95902cedd60b32f90800000000000000
+      internalID: -6979541011558954663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_135
+      rect:
+        serializedVersion: 2
+        x: 391
+        y: 8282
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca0542903fed1d260800000000000000
+      internalID: 7120717621261258924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_136
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 7777
+        width: 503
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0212203886667ae10800000000000000
+      internalID: 2208846741309104416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_137
+      rect:
+        serializedVersion: 2
+        x: 1462
+        y: 8217
+        width: 87
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40681e355938c3610800000000000000
+      internalID: 1602300244817708548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_138
+      rect:
+        serializedVersion: 2
+        x: 1527
+        y: 8282
+        width: 22
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83f8b2fd343b875a0800000000000000
+      internalID: -6523266956157808840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_139
+      rect:
+        serializedVersion: 2
+        x: 1612
+        y: 7777
+        width: 503
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 986086c27eed9c960800000000000000
+      internalID: 7622868928765101705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_140
+      rect:
+        serializedVersion: 2
+        x: 2759
+        y: 7777
+        width: 493
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcd76e5a64ec09470800000000000000
+      internalID: 8399440107872353739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_141
+      rect:
+        serializedVersion: 2
+        x: 3895
+        y: 7777
+        width: 493
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d3cb9a36c2c7d690800000000000000
+      internalID: -7577373691384970286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_142
+      rect:
+        serializedVersion: 2
+        x: 2595
+        y: 8167
+        width: 52
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72deaecd61aa524f0800000000000000
+      internalID: -854089539144454873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_143
+      rect:
+        serializedVersion: 2
+        x: 3731
+        y: 8167
+        width: 52
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc61c3939a7ae5140800000000000000
+      internalID: 4710386605527668427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_144
+      rect:
+        serializedVersion: 2
+        x: 321
+        y: 7457
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4853294e5484085f0800000000000000
+      internalID: -756525272373512828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_145
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 7072
+        width: 611
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 744e1795335910250800000000000000
+      internalID: 5909168233863308359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_146
+      rect:
+        serializedVersion: 2
+        x: 1457
+        y: 7457
+        width: 37
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4deff6116f2d8150800000000000000
+      internalID: 5876405182832569679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_147
+      rect:
+        serializedVersion: 2
+        x: 1515
+        y: 7072
+        width: 611
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58dada6a8165902f0800000000000000
+      internalID: -1006178377864991355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_148
+      rect:
+        serializedVersion: 2
+        x: 2750
+        y: 7072
+        width: 512
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbcf81fdb56fc5660800000000000000
+      internalID: 7376041164171443391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_149
+      rect:
+        serializedVersion: 2
+        x: 3886
+        y: 7072
+        width: 512
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b745f1ee9524a56f0800000000000000
+      internalID: -695170238460767109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_150
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 6367
+        width: 579
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49afc4079e7f4d800800000000000000
+      internalID: 636406029349616276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_151
+      rect:
+        serializedVersion: 2
+        x: 1547
+        y: 6367
+        width: 579
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae84e5575335bb7c0800000000000000
+      internalID: -4054555550449514262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_152
+      rect:
+        serializedVersion: 2
+        x: 2623
+        y: 6360
+        width: 131
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7441cdc20361e9320800000000000000
+      internalID: 2566513233814623303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_153
+      rect:
+        serializedVersion: 2
+        x: 2657
+        y: 6344
+        width: 101
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7216bb159560db60800000000000000
+      internalID: 7768821048303555195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_154
+      rect:
+        serializedVersion: 2
+        x: 2761
+        y: 6367
+        width: 487
+        height: 585
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 144d77713cbd58490800000000000000
+      internalID: -7744542353234865087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_155
+      rect:
+        serializedVersion: 2
+        x: 3759
+        y: 6360
+        width: 131
+        height: 163
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a98863a557d68d60800000000000000
+      internalID: 7892232159827102112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_156
+      rect:
+        serializedVersion: 2
+        x: 3793
+        y: 6344
+        width: 101
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81facf2544b0d3360800000000000000
+      internalID: 7150884171412188952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_157
+      rect:
+        serializedVersion: 2
+        x: 3897
+        y: 6367
+        width: 487
+        height: 585
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 844b96795b8a7c4f0800000000000000
+      internalID: -808492110206880696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_158
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 5663
+        width: 466
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4e8ad4cc2a4e64a0800000000000000
+      internalID: -6598254847909523892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_159
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 5663
+        width: 466
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de682a3f010548060800000000000000
+      internalID: 6954771758304102125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_160
+      rect:
+        serializedVersion: 2
+        x: 2743
+        y: 5664
+        width: 438
+        height: 598
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 270e36976117bcad0800000000000000
+      internalID: -2680924811829190542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_161
+      rect:
+        serializedVersion: 2
+        x: 3879
+        y: 5664
+        width: 438
+        height: 598
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a989b1886ce6c98c0800000000000000
+      internalID: -3991193370791012198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_162
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 4958
+        width: 467
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6bdabbe3a4fb72c0800000000000000
+      internalID: -4432680423344383125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_163
+      rect:
+        serializedVersion: 2
+        x: 1564
+        y: 4958
+        width: 467
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 684e40201ebc523b0800000000000000
+      internalID: -5537795999520201594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_164
+      rect:
+        serializedVersion: 2
+        x: 2691
+        y: 4961
+        width: 465
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6f9d007f2adf6a20800000000000000
+      internalID: 3057902569286115181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_165
+      rect:
+        serializedVersion: 2
+        x: 3827
+        y: 4961
+        width: 465
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91420524477d9eec0800000000000000
+      internalID: -3537059137994087399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_166
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 4256
+        width: 466
+        height: 583
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 400ef5d34ec65c6e0800000000000000
+      internalID: -1817927147036090364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_167
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 4256
+        width: 466
+        height: 583
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4ed6c6a5e809da50800000000000000
+      internalID: 6546273315798310474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_168
+      rect:
+        serializedVersion: 2
+        x: 2643
+        y: 4251
+        width: 460
+        height: 593
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 959fe9f0740a91d70800000000000000
+      internalID: 9014412356223957337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_169
+      rect:
+        serializedVersion: 2
+        x: 3779
+        y: 4251
+        width: 460
+        height: 593
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 005246b53703389f0800000000000000
+      internalID: -467476664303737600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_170
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 3546
+        width: 409
+        height: 593
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fe92d23ab932b840800000000000000
+      internalID: 5238312788464672497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_171
+      rect:
+        serializedVersion: 2
+        x: 1559
+        y: 3546
+        width: 409
+        height: 593
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54e9ab4a4133ebbb0800000000000000
+      internalID: -4918437579285946811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_172
+      rect:
+        serializedVersion: 2
+        x: 2713
+        y: 3546
+        width: 410
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bf563e9f0e5dea70800000000000000
+      internalID: 8857839463279517619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_173
+      rect:
+        serializedVersion: 2
+        x: 3849
+        y: 3546
+        width: 410
+        height: 592
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fa3f214c48a78950800000000000000
+      internalID: 6451310036696120057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_174
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 2846
+        width: 407
+        height: 588
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1ecf0ce62c28ef50800000000000000
+      internalID: 6910822173880864286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_175
+      rect:
+        serializedVersion: 2
+        x: 1595
+        y: 2846
+        width: 407
+        height: 588
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26a1f6525ccf04880800000000000000
+      internalID: -8628618962375075230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_176
+      rect:
+        serializedVersion: 2
+        x: 2737
+        y: 2846
+        width: 402
+        height: 594
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8451d945c14db5080800000000000000
+      internalID: -9197524595830352568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_177
+      rect:
+        serializedVersion: 2
+        x: 3873
+        y: 2846
+        width: 402
+        height: 594
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 352a0e4c22d7f4720800000000000000
+      internalID: 2832620278924747347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_178
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 2138
+        width: 402
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3696163b9b6a7b580800000000000000
+      internalID: -8811390829418419869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_179
+      rect:
+        serializedVersion: 2
+        x: 1583
+        y: 2138
+        width: 402
+        height: 605
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5e783130bc1b6de0800000000000000
+      internalID: -1338944921146982821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_180
+      rect:
+        serializedVersion: 2
+        x: 2701
+        y: 2138
+        width: 454
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9e7f507df9a41240800000000000000
+      internalID: 4761617612014583451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_181
+      rect:
+        serializedVersion: 2
+        x: 3837
+        y: 2138
+        width: 454
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bffcdd844480bdd0800000000000000
+      internalID: -2472330765453688905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_182
+      rect:
+        serializedVersion: 2
+        x: 429
+        y: 1433
+        width: 466
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3383b1831bc636e00800000000000000
+      internalID: 1036791847631665203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_183
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 1433
+        width: 466
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e518ad85a4d28350800000000000000
+      internalID: 6017605859631699425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_184
+      rect:
+        serializedVersion: 2
+        x: 2702
+        y: 1434
+        width: 471
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a8eb7686208c90a0800000000000000
+      internalID: -6873478028320839511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_185
+      rect:
+        serializedVersion: 2
+        x: 3838
+        y: 1434
+        width: 471
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53d14f59646f6afa0800000000000000
+      internalID: -5789669487914246859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_186
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 729
+        width: 465
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f432f0e3b8d2d8160800000000000000
+      internalID: 7029324669460095823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_187
+      rect:
+        serializedVersion: 2
+        x: 1575
+        y: 729
+        width: 465
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55a4621b75c8bcd90800000000000000
+      internalID: -7076408081220482475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_188
+      rect:
+        serializedVersion: 2
+        x: 2704
+        y: 726
+        width: 469
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f596b3c3c175cf70800000000000000
+      internalID: 9206890098844931570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_189
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 726
+        width: 469
+        height: 610
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7e33207f4ecd1110800000000000000
+      internalID: 1233368713548480127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_190
+      rect:
+        serializedVersion: 2
+        x: 434
+        y: 21
+        width: 460
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 868dcf830ffa02510800000000000000
+      internalID: 1522410120334334056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_191
+      rect:
+        serializedVersion: 2
+        x: 1570
+        y: 21
+        width: 460
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f90be44f4ceb8fd90800000000000000
+      internalID: -7063686262408957793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      NoSurvivors_0: -3876165941575313409
+      NoSurvivors_1: -5684141792822675152
+      NoSurvivors_10: -4369353740155546598
+      NoSurvivors_100: 182775568957911612
+      NoSurvivors_101: 8945255066107068005
+      NoSurvivors_102: 5518091661072104357
+      NoSurvivors_103: 4732103421577664002
+      NoSurvivors_104: -5097769092233579612
+      NoSurvivors_105: -7033870546751961623
+      NoSurvivors_106: -5057423894398290785
+      NoSurvivors_107: -6667507452512168544
+      NoSurvivors_108: 3054199429620048252
+      NoSurvivors_109: -1585424377033899961
+      NoSurvivors_11: -8287321175674537720
+      NoSurvivors_110: -978604896652961812
+      NoSurvivors_111: 5854165795713410727
+      NoSurvivors_112: 4353968936099536415
+      NoSurvivors_113: -34929332828510193
+      NoSurvivors_114: -4077874917093816450
+      NoSurvivors_115: 7865097932911202101
+      NoSurvivors_116: -4204280894227236302
+      NoSurvivors_117: -6610155228943359028
+      NoSurvivors_118: 7632137587545975135
+      NoSurvivors_119: 1228572801138096609
+      NoSurvivors_12: 9110299040824800211
+      NoSurvivors_120: 455403787561218426
+      NoSurvivors_121: 3655353040155887499
+      NoSurvivors_122: -6195990245253825343
+      NoSurvivors_123: -2066360393977789266
+      NoSurvivors_124: -5789654858869833563
+      NoSurvivors_125: 2115340857431233510
+      NoSurvivors_126: -8014801459573336991
+      NoSurvivors_127: -8195075498805651169
+      NoSurvivors_128: -1666421533456413420
+      NoSurvivors_129: 373186194319609046
+      NoSurvivors_13: 1214961377506239606
+      NoSurvivors_130: 7175454048601362693
+      NoSurvivors_131: 7375022859925399476
+      NoSurvivors_132: 2743420617309361657
+      NoSurvivors_133: -5315192968187571061
+      NoSurvivors_134: -6979541011558954663
+      NoSurvivors_135: 7120717621261258924
+      NoSurvivors_136: 2208846741309104416
+      NoSurvivors_137: 1602300244817708548
+      NoSurvivors_138: -6523266956157808840
+      NoSurvivors_139: 7622868928765101705
+      NoSurvivors_14: 3152577958774614362
+      NoSurvivors_140: 8399440107872353739
+      NoSurvivors_141: -7577373691384970286
+      NoSurvivors_142: -854089539144454873
+      NoSurvivors_143: 4710386605527668427
+      NoSurvivors_144: -756525272373512828
+      NoSurvivors_145: 5909168233863308359
+      NoSurvivors_146: 5876405182832569679
+      NoSurvivors_147: -1006178377864991355
+      NoSurvivors_148: 7376041164171443391
+      NoSurvivors_149: -695170238460767109
+      NoSurvivors_15: -1763104831856328847
+      NoSurvivors_150: 636406029349616276
+      NoSurvivors_151: -4054555550449514262
+      NoSurvivors_152: 2566513233814623303
+      NoSurvivors_153: 7768821048303555195
+      NoSurvivors_154: -7744542353234865087
+      NoSurvivors_155: 7892232159827102112
+      NoSurvivors_156: 7150884171412188952
+      NoSurvivors_157: -808492110206880696
+      NoSurvivors_158: -6598254847909523892
+      NoSurvivors_159: 6954771758304102125
+      NoSurvivors_16: 2178126900351213792
+      NoSurvivors_160: -2680924811829190542
+      NoSurvivors_161: -3991193370791012198
+      NoSurvivors_162: -4432680423344383125
+      NoSurvivors_163: -5537795999520201594
+      NoSurvivors_164: 3057902569286115181
+      NoSurvivors_165: -3537059137994087399
+      NoSurvivors_166: -1817927147036090364
+      NoSurvivors_167: 6546273315798310474
+      NoSurvivors_168: 9014412356223957337
+      NoSurvivors_169: -467476664303737600
+      NoSurvivors_17: 82314387185613559
+      NoSurvivors_170: 5238312788464672497
+      NoSurvivors_171: -4918437579285946811
+      NoSurvivors_172: 8857839463279517619
+      NoSurvivors_173: 6451310036696120057
+      NoSurvivors_174: 6910822173880864286
+      NoSurvivors_175: -8628618962375075230
+      NoSurvivors_176: -9197524595830352568
+      NoSurvivors_177: 2832620278924747347
+      NoSurvivors_178: -8811390829418419869
+      NoSurvivors_179: -1338944921146982821
+      NoSurvivors_18: 6844633543997757125
+      NoSurvivors_180: 4761617612014583451
+      NoSurvivors_181: -2472330765453688905
+      NoSurvivors_182: 1036791847631665203
+      NoSurvivors_183: 6017605859631699425
+      NoSurvivors_184: -6873478028320839511
+      NoSurvivors_185: -5789669487914246859
+      NoSurvivors_186: 7029324669460095823
+      NoSurvivors_187: -7076408081220482475
+      NoSurvivors_188: 9206890098844931570
+      NoSurvivors_189: 1233368713548480127
+      NoSurvivors_19: 6227737473930018884
+      NoSurvivors_190: 1522410120334334056
+      NoSurvivors_191: -7063686262408957793
+      NoSurvivors_2: -6677916512892305744
+      NoSurvivors_20: 7788049414900038431
+      NoSurvivors_21: 2070710561901851410
+      NoSurvivors_22: 8909708681092711847
+      NoSurvivors_23: -4995371519903183935
+      NoSurvivors_24: -7160632487400176105
+      NoSurvivors_25: 472473166122210274
+      NoSurvivors_26: 5851542713783769889
+      NoSurvivors_27: -3310150242105116370
+      NoSurvivors_28: -7536182484835492924
+      NoSurvivors_29: -7944616095165944025
+      NoSurvivors_3: -8190348059107631065
+      NoSurvivors_30: 2444395470439041869
+      NoSurvivors_31: 8582651691029583891
+      NoSurvivors_32: 5279138457351954622
+      NoSurvivors_33: -1652215786508140075
+      NoSurvivors_34: 4229637049481797554
+      NoSurvivors_35: 2950919150061003024
+      NoSurvivors_36: 3690169352012639671
+      NoSurvivors_37: -8002605284338292533
+      NoSurvivors_38: 8187177325170254969
+      NoSurvivors_39: -7991465133214596045
+      NoSurvivors_4: -4050581425520598053
+      NoSurvivors_40: -6133296801600775539
+      NoSurvivors_41: 356522648279306784
+      NoSurvivors_42: -9205641055086409155
+      NoSurvivors_43: 5391392302494784782
+      NoSurvivors_44: 2656293376520424104
+      NoSurvivors_45: 8853812232650631427
+      NoSurvivors_46: 1737310632363708231
+      NoSurvivors_47: -1289765773905988663
+      NoSurvivors_48: -963304381181221825
+      NoSurvivors_49: 3017680561823035758
+      NoSurvivors_5: -5354718221154301974
+      NoSurvivors_50: 4672683908981267357
+      NoSurvivors_51: -2202823702736307153
+      NoSurvivors_52: 6655902661400142809
+      NoSurvivors_53: 1042960450567854419
+      NoSurvivors_54: 5492099919615070233
+      NoSurvivors_55: -3534919279017706312
+      NoSurvivors_56: 9006846666465198729
+      NoSurvivors_57: 8909622830267216771
+      NoSurvivors_58: -8178089517646901235
+      NoSurvivors_59: 1454246275799050232
+      NoSurvivors_6: -7293242432243595369
+      NoSurvivors_60: 9107762797256623438
+      NoSurvivors_61: 8220325033988408670
+      NoSurvivors_62: -4108973948519097472
+      NoSurvivors_63: -7611541166719306968
+      NoSurvivors_64: -2150840773334430981
+      NoSurvivors_65: 1422791906756810375
+      NoSurvivors_66: -7863261889299138934
+      NoSurvivors_67: -619211283763100435
+      NoSurvivors_68: -1051268366465726326
+      NoSurvivors_69: -6058518510876497397
+      NoSurvivors_7: 2100749693070038048
+      NoSurvivors_70: 2432032155781520404
+      NoSurvivors_71: -9101142989641799882
+      NoSurvivors_72: -3622189743527859559
+      NoSurvivors_73: -4969560498561522052
+      NoSurvivors_74: -1284927935670375958
+      NoSurvivors_75: -5421817337851515796
+      NoSurvivors_76: 3473728511244023481
+      NoSurvivors_77: -7066865759564770756
+      NoSurvivors_78: 2925232035777058288
+      NoSurvivors_79: 1226673967912321573
+      NoSurvivors_8: -3624570243050220168
+      NoSurvivors_80: 7414032338212436262
+      NoSurvivors_81: 1665172007865695243
+      NoSurvivors_82: 3710622507505967218
+      NoSurvivors_83: -2433902682188618610
+      NoSurvivors_84: 8473391892668556912
+      NoSurvivors_85: -8010847767937766434
+      NoSurvivors_86: 91032885462438372
+      NoSurvivors_87: 5932049092638071734
+      NoSurvivors_88: 1453156984147942496
+      NoSurvivors_89: 7260106964359873870
+      NoSurvivors_9: 1857712569043720398
+      NoSurvivors_90: -107447125681737043
+      NoSurvivors_91: -7572664946283940427
+      NoSurvivors_92: -885252700334654360
+      NoSurvivors_93: 1947950872973234533
+      NoSurvivors_94: 6228726135670431404
+      NoSurvivors_95: -5985108938833098734
+      NoSurvivors_96: -4904162523015147053
+      NoSurvivors_97: -8453059356985262754
+      NoSurvivors_98: -784751976741314603
+      NoSurvivors_99: 1545591878938725685
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

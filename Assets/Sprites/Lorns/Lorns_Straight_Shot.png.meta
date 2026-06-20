@@ -1,0 +1,1888 @@
+fileFormatVersion: 2
+guid: 2b6d9190b91da49488c187126b100ecb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2182187928463099437
+    second: StraightShot_0
+  - first:
+      213: -344759739993481014
+    second: StraightShot_1
+  - first:
+      213: 707040199369434331
+    second: StraightShot_2
+  - first:
+      213: -6736562241781019376
+    second: StraightShot_3
+  - first:
+      213: 4921695712855577787
+    second: StraightShot_4
+  - first:
+      213: 1162689675895479887
+    second: StraightShot_5
+  - first:
+      213: -8750440918567436482
+    second: StraightShot_6
+  - first:
+      213: 2758553776229061645
+    second: StraightShot_7
+  - first:
+      213: 2654109592024578413
+    second: StraightShot_8
+  - first:
+      213: 1072592565402832830
+    second: StraightShot_9
+  - first:
+      213: -3145442018772303793
+    second: StraightShot_10
+  - first:
+      213: -5008880276932543207
+    second: StraightShot_11
+  - first:
+      213: -4366626253900944476
+    second: StraightShot_12
+  - first:
+      213: -2015474472752860041
+    second: StraightShot_13
+  - first:
+      213: -8383508753278366676
+    second: StraightShot_14
+  - first:
+      213: -5844464297968630682
+    second: StraightShot_15
+  - first:
+      213: 3314610900106882051
+    second: StraightShot_16
+  - first:
+      213: 8018710748501540382
+    second: StraightShot_17
+  - first:
+      213: 3158801578832008491
+    second: StraightShot_18
+  - first:
+      213: 5742617760337962172
+    second: StraightShot_19
+  - first:
+      213: 3102848863507976212
+    second: StraightShot_20
+  - first:
+      213: -5660838202667822745
+    second: StraightShot_21
+  - first:
+      213: 6304294550338779402
+    second: StraightShot_22
+  - first:
+      213: 4988421517201737712
+    second: StraightShot_23
+  - first:
+      213: 5680844371861687336
+    second: StraightShot_24
+  - first:
+      213: -8217252251193160650
+    second: StraightShot_25
+  - first:
+      213: 6585730379036994154
+    second: StraightShot_26
+  - first:
+      213: -5955469843999531187
+    second: StraightShot_27
+  - first:
+      213: -9012044577231349633
+    second: StraightShot_28
+  - first:
+      213: 4924424264153630524
+    second: StraightShot_29
+  - first:
+      213: 8377020548112964086
+    second: StraightShot_30
+  - first:
+      213: 998623344298886884
+    second: StraightShot_31
+  - first:
+      213: -6449875130846960894
+    second: StraightShot_32
+  - first:
+      213: -7406277972547501035
+    second: StraightShot_33
+  - first:
+      213: -7420212219759427223
+    second: StraightShot_34
+  - first:
+      213: 2446671460183066300
+    second: StraightShot_35
+  - first:
+      213: -7466564078784366372
+    second: StraightShot_36
+  - first:
+      213: 703360026031287259
+    second: StraightShot_37
+  - first:
+      213: 6825435729727788390
+    second: StraightShot_38
+  - first:
+      213: 850572592559257969
+    second: StraightShot_39
+  - first:
+      213: 7663637265034919030
+    second: StraightShot_40
+  - first:
+      213: -807421370192797669
+    second: StraightShot_41
+  - first:
+      213: -3919286692745319002
+    second: StraightShot_42
+  - first:
+      213: 6284229081664505553
+    second: StraightShot_43
+  - first:
+      213: 3762017360604204937
+    second: StraightShot_44
+  - first:
+      213: 4573592821536955587
+    second: StraightShot_45
+  - first:
+      213: 8539776628685007524
+    second: StraightShot_46
+  - first:
+      213: 3518926067616127094
+    second: StraightShot_47
+  - first:
+      213: 5456625709589624980
+    second: StraightShot_48
+  - first:
+      213: -1896549745934929485
+    second: StraightShot_49
+  - first:
+      213: 1547223624900075904
+    second: StraightShot_50
+  - first:
+      213: 5258791500885733697
+    second: StraightShot_51
+  - first:
+      213: 4189420426569687338
+    second: StraightShot_52
+  - first:
+      213: -5854035331815439085
+    second: StraightShot_53
+  - first:
+      213: 1832525647687529243
+    second: StraightShot_54
+  - first:
+      213: 5957020442971682513
+    second: StraightShot_55
+  - first:
+      213: -875722540983175843
+    second: StraightShot_56
+  - first:
+      213: -5680465909294895475
+    second: StraightShot_57
+  - first:
+      213: 4426903914517356374
+    second: StraightShot_58
+  - first:
+      213: 4621048728612592613
+    second: StraightShot_59
+  - first:
+      213: -8029356160452664900
+    second: StraightShot_60
+  - first:
+      213: 4330991493024911446
+    second: StraightShot_61
+  - first:
+      213: 668763005305797960
+    second: StraightShot_62
+  - first:
+      213: 6976117188433923044
+    second: StraightShot_63
+  - first:
+      213: -1202679913197206059
+    second: StraightShot_64
+  - first:
+      213: 6786472063759993585
+    second: StraightShot_65
+  - first:
+      213: 6346259598772219083
+    second: StraightShot_66
+  - first:
+      213: 4738848989327266824
+    second: StraightShot_67
+  - first:
+      213: -1442515144360637858
+    second: StraightShot_68
+  - first:
+      213: 6002735720314953585
+    second: StraightShot_69
+  - first:
+      213: -1937606068779358487
+    second: StraightShot_70
+  - first:
+      213: -6094249696924417774
+    second: StraightShot_71
+  - first:
+      213: -3138598056393091016
+    second: StraightShot_72
+  - first:
+      213: 620732677246222266
+    second: StraightShot_73
+  - first:
+      213: -1515141355256569682
+    second: StraightShot_74
+  - first:
+      213: 9111143753730598866
+    second: StraightShot_75
+  - first:
+      213: 6990865258908854524
+    second: StraightShot_76
+  - first:
+      213: 5417618030379437529
+    second: StraightShot_77
+  - first:
+      213: -9213295437530375835
+    second: StraightShot_78
+  - first:
+      213: -948949259411593819
+    second: StraightShot_79
+  - first:
+      213: 435329067444632569
+    second: StraightShot_80
+  - first:
+      213: -8510476156327674970
+    second: StraightShot_81
+  - first:
+      213: -7280138196214472007
+    second: StraightShot_82
+  - first:
+      213: 7700423836303974474
+    second: StraightShot_83
+  - first:
+      213: 7832724935244533450
+    second: StraightShot_84
+  - first:
+      213: 4066617534872957185
+    second: StraightShot_85
+  - first:
+      213: -5529177815849524637
+    second: StraightShot_86
+  - first:
+      213: -8811443617330473936
+    second: StraightShot_87
+  - first:
+      213: 654092640017468625
+    second: StraightShot_88
+  - first:
+      213: 2889471742957730366
+    second: StraightShot_89
+  - first:
+      213: 4658794531020593272
+    second: StraightShot_90
+  - first:
+      213: 4771310221020234332
+    second: StraightShot_91
+  - first:
+      213: -3223661785234126296
+    second: StraightShot_92
+  - first:
+      213: -1856341837259878914
+    second: StraightShot_93
+  - first:
+      213: 3849296669072559332
+    second: StraightShot_94
+  - first:
+      213: -7505018960858287672
+    second: StraightShot_95
+  - first:
+      213: -8390033794684158080
+    second: StraightShot_96
+  - first:
+      213: 9096853993069566725
+    second: StraightShot_97
+  - first:
+      213: -8805635310167822520
+    second: StraightShot_98
+  - first:
+      213: 2980628236944482423
+    second: StraightShot_99
+  - first:
+      213: 6544964803960822240
+    second: StraightShot_100
+  - first:
+      213: -7859958161024819427
+    second: StraightShot_101
+  - first:
+      213: 6193307487862310510
+    second: StraightShot_102
+  - first:
+      213: -7512740062127496277
+    second: StraightShot_103
+  - first:
+      213: -2738233749801314801
+    second: StraightShot_104
+  - first:
+      213: 70753989922525097
+    second: StraightShot_105
+  - first:
+      213: -3176964070640731039
+    second: StraightShot_106
+  - first:
+      213: 5824228703112736325
+    second: StraightShot_107
+  - first:
+      213: -3969212933389715562
+    second: StraightShot_108
+  - first:
+      213: -7441293821747450050
+    second: StraightShot_109
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10320
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8ea7aa6699b30248860c68615aa19f3
+      internalID: -222553800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_1
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 10320
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db8e7ee04603c7c4cb75a3f5f6cb4297
+      internalID: 1832049102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_2
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 10320
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b110e41ad091c2e4e9663dc3f87db81f
+      internalID: 1157632299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_3
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 10320
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79ab1bfa444f8604487b5194f9afe9b6
+      internalID: 838128484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9632
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a16f45fb557614784c74f76c1cb13f
+      internalID: -423095704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_5
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 9632
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d94b6685f04a140ae54b6d146d9a13
+      internalID: -445781838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_6
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 9632
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23a9a7cd74fdf464d810ac85968a0f31
+      internalID: -671494275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_7
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 9632
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f940391069d6e40a8b11e54e5a73eb
+      internalID: -170117673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8944
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc4af17a0da397c4596c95cf178c1132
+      internalID: 386383691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_9
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 8944
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9aadc7a1e0e63349b966131736d509d
+      internalID: -1956059974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_10
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 8944
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0a74550f4cf3444598ee5450648a593
+      internalID: 1811743322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_11
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 8944
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eeded3cc86efa6c42ad640091fabe0a9
+      internalID: 1080802053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8256
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb69e13bcc41511499401ff99b390d0f
+      internalID: 1374024795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_13
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 8256
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8675e22572878b448aee787800e62bd5
+      internalID: -1000615025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_14
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 8256
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebba1fb865a479447b1b60755ab137d2
+      internalID: -652438274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_15
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 8256
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd802e10c54801847923efc9166adcc2
+      internalID: 1347554641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7568
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c004e9140fcf5304588bec7f3ad7a835
+      internalID: -1466073466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_17
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 7568
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2673f5da4c88c4049b8835de240fc604
+      internalID: 755910865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_18
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 7568
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b6671885d09f4348a91a74dc595e949
+      internalID: -1514186032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_19
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 7568
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed1aa81da1db13d4a9570ed9dbc4d0ed
+      internalID: -1977350653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6880
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab00084b0820e14ab5c2ea3c3ef1124
+      internalID: -1299277217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_21
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 6880
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1b8bacb9c95d92478ef5de9d610a6e5
+      internalID: 220310312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_22
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 6880
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd46c2e30a9377438650435e7a7bb16
+      internalID: 567168019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_23
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 6880
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66039a84de122974c95b01a5b1741b4b
+      internalID: -553476572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6192
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0044a446c1cb68c40a5840d52cd20819
+      internalID: 1552693150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_25
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 6192
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 001cdc57ed898354a9b3349071dc5e29
+      internalID: 1899131451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_26
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 6192
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7da2051dbc0562f4a9e82852998153dd
+      internalID: 639343083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_27
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 6192
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 708e555f53acc634a819ae578f214d44
+      internalID: -1878795500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5504
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c5b2afeb1c7535488391bcb924bcc58
+      internalID: -1123140678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_29
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 5504
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 216e62f22addae044a1cfd40461f2bc4
+      internalID: -1523651080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_30
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 5504
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98bb8b3bdd2145c47933ca1a0eeee5f5
+      internalID: -55524109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_31
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 5504
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b80e40202b00b0f4391ccfe4976b0473
+      internalID: -1358306821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4816
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c4946b73ef667341ae4e7f2f7297d51
+      internalID: 436093303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_33
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 4816
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ddc807c5d1ad0548a3b33a328bdf9b9
+      internalID: -805243352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_34
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 4816
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84e94c509fe63794c837bfe497220647
+      internalID: 121888548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_35
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 4816
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0aa859bb0f32dde4d9cb27eb4b87dca4
+      internalID: -814306403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4128
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4c4360b5505964488000063659f861b
+      internalID: -585827870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_37
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 4128
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75c30b7838afab641a77109abbb7a266
+      internalID: 320148718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_38
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 4128
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 994585636a1bba845aac2f1753a3a1b6
+      internalID: 1270425359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_39
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 4128
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9459505f01d2e749b7c23ec05c9e6bc
+      internalID: 111190518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3440
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b146d3dd88efa7f40b60fa52937862fd
+      internalID: -941786330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_41
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 3440
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74a112dbbeb81734d824343f58a9cd6b
+      internalID: 1318561948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_42
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 3440
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b6324ab4122dec4d8bda9a6d4a05d38
+      internalID: 331986159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_43
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 3440
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52d9d0291ff4711499e40f580d968337
+      internalID: -935830427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2752
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc23502a498b4d8429f168e0c3e4032c
+      internalID: -1783370381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_45
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 2752
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34aa5bf988399e94bb9207f52542c309
+      internalID: 678884074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_46
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 2752
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9fb30422baa1e1489058da68b7fe5f7
+      internalID: -770563245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_47
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 2752
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82ada948bca0fd94aa027605f721c521
+      internalID: -1069248618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2064
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 984fa97da3d199843af81ee10ba4b78c
+      internalID: 278216464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_49
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 2064
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48c6214627bba1c43a2c0fbbc9a02acb
+      internalID: -33341739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_50
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 2064
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b508fc8509cb8e41a2bd2e5422c6df7
+      internalID: 337596728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_51
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 2064
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4a702eede178454fbd53edb0c907e81
+      internalID: 237349920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_52
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1376
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb074ecc64093c34ca4022d962cba5f8
+      internalID: -1870338145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_53
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 1376
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9664a4627ec2db441bfb488c6c8ca8ff
+      internalID: 1458332089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_54
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 1376
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36b79b8ccc39ced4f8b6c98867f3aeda
+      internalID: 1524108982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_55
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 1376
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0a2332147dde4b4890b1317f65a584f
+      internalID: -83895870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 688
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 146cd50567a04044aa665d24bf7a1a38
+      internalID: -623873750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_57
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 688
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8ddf06e822009f4fba00eaea501c058
+      internalID: 1918952650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_58
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 688
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c37f7302b496d8541acc4fb1907e5f29
+      internalID: 2095811707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_59
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 688
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bc4f5b1db8d65c40a8bf6137f347010
+      internalID: -272425875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 823161cea68b1a14d985ee8704f1755c
+      internalID: -1224521477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Straight_Shot_61
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 0
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.73, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a928f30dec463c45b5c211d0948526e
+      internalID: 1852744832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f9f30a1034834a040adaa42652a37ae6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":16.0},"gridSpriteSize":{"x":847.0,"y":688.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.7300000190734863,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Lorns_Straight_Shot_0: -222553800
+      Lorns_Straight_Shot_1: 1832049102
+      Lorns_Straight_Shot_10: 1811743322
+      Lorns_Straight_Shot_11: 1080802053
+      Lorns_Straight_Shot_12: 1374024795
+      Lorns_Straight_Shot_13: -1000615025
+      Lorns_Straight_Shot_14: -652438274
+      Lorns_Straight_Shot_15: 1347554641
+      Lorns_Straight_Shot_16: -1466073466
+      Lorns_Straight_Shot_17: 755910865
+      Lorns_Straight_Shot_18: -1514186032
+      Lorns_Straight_Shot_19: -1977350653
+      Lorns_Straight_Shot_2: 1157632299
+      Lorns_Straight_Shot_20: -1299277217
+      Lorns_Straight_Shot_21: 220310312
+      Lorns_Straight_Shot_22: 567168019
+      Lorns_Straight_Shot_23: -553476572
+      Lorns_Straight_Shot_24: 1552693150
+      Lorns_Straight_Shot_25: 1899131451
+      Lorns_Straight_Shot_26: 639343083
+      Lorns_Straight_Shot_27: -1878795500
+      Lorns_Straight_Shot_28: -1123140678
+      Lorns_Straight_Shot_29: -1523651080
+      Lorns_Straight_Shot_3: 838128484
+      Lorns_Straight_Shot_30: -55524109
+      Lorns_Straight_Shot_31: -1358306821
+      Lorns_Straight_Shot_32: 436093303
+      Lorns_Straight_Shot_33: -805243352
+      Lorns_Straight_Shot_34: 121888548
+      Lorns_Straight_Shot_35: -814306403
+      Lorns_Straight_Shot_36: -585827870
+      Lorns_Straight_Shot_37: 320148718
+      Lorns_Straight_Shot_38: 1270425359
+      Lorns_Straight_Shot_39: 111190518
+      Lorns_Straight_Shot_4: -423095704
+      Lorns_Straight_Shot_40: -941786330
+      Lorns_Straight_Shot_41: 1318561948
+      Lorns_Straight_Shot_42: 331986159
+      Lorns_Straight_Shot_43: -935830427
+      Lorns_Straight_Shot_44: -1783370381
+      Lorns_Straight_Shot_45: 678884074
+      Lorns_Straight_Shot_46: -770563245
+      Lorns_Straight_Shot_47: -1069248618
+      Lorns_Straight_Shot_48: 278216464
+      Lorns_Straight_Shot_49: -33341739
+      Lorns_Straight_Shot_5: -445781838
+      Lorns_Straight_Shot_50: 337596728
+      Lorns_Straight_Shot_51: 237349920
+      Lorns_Straight_Shot_52: -1870338145
+      Lorns_Straight_Shot_53: 1458332089
+      Lorns_Straight_Shot_54: 1524108982
+      Lorns_Straight_Shot_55: -83895870
+      Lorns_Straight_Shot_56: -623873750
+      Lorns_Straight_Shot_57: 1918952650
+      Lorns_Straight_Shot_58: 2095811707
+      Lorns_Straight_Shot_59: -272425875
+      Lorns_Straight_Shot_6: -671494275
+      Lorns_Straight_Shot_60: -1224521477
+      Lorns_Straight_Shot_61: 1852744832
+      Lorns_Straight_Shot_7: -170117673
+      Lorns_Straight_Shot_8: 386383691
+      Lorns_Straight_Shot_9: -1956059974
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

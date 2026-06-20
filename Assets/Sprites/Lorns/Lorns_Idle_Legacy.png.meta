@@ -1,0 +1,1628 @@
+fileFormatVersion: 2
+guid: 85dd2a411dee5264ca097828f8075603
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 90
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 90
+    crunchedCompression: 1
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Lorns_Idle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6566
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94a497790e2de37469d43d9b87480841
+      internalID: 215081699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_1
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 6566
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 561065d24236d35499997bf2119409b4
+      internalID: 1383992041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_2
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 6566
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc62d74f5532d9e45831f2dc78c6968c
+      internalID: 1972676978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_3
+      rect:
+        serializedVersion: 2
+        x: 2181
+        y: 6566
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1fb2fd71e41da645a9f55501db272ce
+      internalID: -253577304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_4
+      rect:
+        serializedVersion: 2
+        x: 2908
+        y: 6566
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 791113ecd85851c45937f9b44dfb3615
+      internalID: 1775809259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_5
+      rect:
+        serializedVersion: 2
+        x: 3635
+        y: 6566
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6e063b894cdf94eb731d7a4cd3025e
+      internalID: 556674609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_6
+      rect:
+        serializedVersion: 2
+        x: 4362
+        y: 6566
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50b4438a310263143a4781959bb6873e
+      internalID: -1005898932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_7
+      rect:
+        serializedVersion: 2
+        x: 5089
+        y: 6566
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 395be2355254c524ea63fe8237d7f0b2
+      internalID: -938068153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5628
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c63e0000731ce6e4985c2bf122448d34
+      internalID: 1388845356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_9
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 5628
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d91bcb785d85aa346a01193c2ddd4c1e
+      internalID: 875863936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_10
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 5628
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1d9df64e1ad2fd4fafb9c77c3cc217e
+      internalID: 1720094059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_11
+      rect:
+        serializedVersion: 2
+        x: 2181
+        y: 5628
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35906b965511d3c4b8f16d4592aaaaec
+      internalID: 524801172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_12
+      rect:
+        serializedVersion: 2
+        x: 2908
+        y: 5628
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b0f85d6b1d67894eb4e79374ff9a652
+      internalID: -1553091700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_13
+      rect:
+        serializedVersion: 2
+        x: 3635
+        y: 5628
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05ab51f782a1ca84e9b500b96ae04fd9
+      internalID: 490755880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_14
+      rect:
+        serializedVersion: 2
+        x: 4362
+        y: 5628
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 306380a929f52d34da05b7a54c5590d5
+      internalID: -108985048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_15
+      rect:
+        serializedVersion: 2
+        x: 5089
+        y: 5628
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 053968de02d844a48bc7ba383ef09cb5
+      internalID: 905387467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4690
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 056ad0406ad585c4797ca61287a8dff0
+      internalID: -1616098707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_17
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 4690
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f484fd194b5e0914cae8c7212f0b9578
+      internalID: -281641783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_18
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 4690
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 266243c558aef8f4f8b8df6635f8695f
+      internalID: 602125087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_19
+      rect:
+        serializedVersion: 2
+        x: 2181
+        y: 4690
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb869b4a33e10ff49889ead73c02de87
+      internalID: -1303867983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_20
+      rect:
+        serializedVersion: 2
+        x: 2908
+        y: 4690
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4b6a63d32eb7674497f76de55d78959
+      internalID: -1887637603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_21
+      rect:
+        serializedVersion: 2
+        x: 3635
+        y: 4690
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a85f971ce5380d4aa027985b55fc528
+      internalID: -661769092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_22
+      rect:
+        serializedVersion: 2
+        x: 4362
+        y: 4690
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7007e9122a776a440acfbf9b37f6f84f
+      internalID: 1000542386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_23
+      rect:
+        serializedVersion: 2
+        x: 5089
+        y: 4690
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1980302c17586d4ebf55707ccef8d28
+      internalID: 414666901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3752
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd1dddc8c7e057241afd89662eccf32b
+      internalID: 1454403999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_25
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 3752
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae13d3a17065d194abf4d2321843ed6a
+      internalID: -936843298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_26
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 3752
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 063a49bdf1883ad46bd8acc85aa70ea2
+      internalID: -901525980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_27
+      rect:
+        serializedVersion: 2
+        x: 2181
+        y: 3752
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea6c9ea5726cef4d9aae313f8b806bf
+      internalID: 1556086591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_28
+      rect:
+        serializedVersion: 2
+        x: 2908
+        y: 3752
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af2af08d8134694bbcd073857698368
+      internalID: 1391665618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_29
+      rect:
+        serializedVersion: 2
+        x: 3635
+        y: 3752
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bd02ef1f553d9d4ba155fe82ef30dce
+      internalID: -167403519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_30
+      rect:
+        serializedVersion: 2
+        x: 4362
+        y: 3752
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 982f3b86370b8a64f91c2f523aa4d770
+      internalID: 2023522494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_31
+      rect:
+        serializedVersion: 2
+        x: 5089
+        y: 3752
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82e7c04f673efd841ba3ee0749dc2a77
+      internalID: -2118112001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2814
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a6f85fe06ae1b4c978d22d1bd374a4
+      internalID: -1394675124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_33
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 2814
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8de8d3efc78c2c840aa847e697d75919
+      internalID: 1457497213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_34
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 2814
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbfea456f36308a45b2edc9749963d45
+      internalID: 631326254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_35
+      rect:
+        serializedVersion: 2
+        x: 2181
+        y: 2814
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 206d2541eb2c99b42ac4eb8348e74f12
+      internalID: 776735994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_36
+      rect:
+        serializedVersion: 2
+        x: 2908
+        y: 2814
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0368421a0c4927a4985c32554278898d
+      internalID: 2068944769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_37
+      rect:
+        serializedVersion: 2
+        x: 3635
+        y: 2814
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10e50d1b275a3e543a2d729339bc945b
+      internalID: -662313469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_38
+      rect:
+        serializedVersion: 2
+        x: 4362
+        y: 2814
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1d04ee73bca67e4aaa6bb81e3181b6e
+      internalID: 2093055036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_39
+      rect:
+        serializedVersion: 2
+        x: 5089
+        y: 2814
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a49699fc066e0eb4498cab96414b2a72
+      internalID: -684762686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1876
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 851598e6419040046a739be33927fba6
+      internalID: 2071422081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_41
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 1876
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f439e2836e56af940ab99350146cd45d
+      internalID: 1900299980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_42
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 1876
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b6a189b42abb5742add8a5fbd19b811
+      internalID: 101045334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_43
+      rect:
+        serializedVersion: 2
+        x: 2181
+        y: 1876
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b25be792928922840a227576d8b5e157
+      internalID: -491926245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_44
+      rect:
+        serializedVersion: 2
+        x: 2908
+        y: 1876
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e4b9f92e66789446b1a1ac32dac3059
+      internalID: -2064352153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_45
+      rect:
+        serializedVersion: 2
+        x: 3635
+        y: 1876
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c2d9711ef6318b4bb4e024df44138b9
+      internalID: 629314030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_46
+      rect:
+        serializedVersion: 2
+        x: 4362
+        y: 1876
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4d65560496ad7649930ffa05c7484c1
+      internalID: 201362014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_47
+      rect:
+        serializedVersion: 2
+        x: 5089
+        y: 1876
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a55c5a62f9c427a408ed30009ae0fe2d
+      internalID: 31524540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 938
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b213cf53a3e36e345940af4c8005d045
+      internalID: -325768004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_49
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 938
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6977257331dfad2449e7b2bb96a6c2a8
+      internalID: -548167952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_50
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 938
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b1601dda3c93254f85a6fa3510e0cd5
+      internalID: -985819759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_51
+      rect:
+        serializedVersion: 2
+        x: 2181
+        y: 938
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bc7f9c8f6b0e5d48bfed5cda673d679
+      internalID: -763035295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_52
+      rect:
+        serializedVersion: 2
+        x: 2908
+        y: 938
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2689ce4d794632941a6e37b3089da66b
+      internalID: 1392407304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_53
+      rect:
+        serializedVersion: 2
+        x: 3635
+        y: 938
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91e82a90849d0484494b22bb96fe7ac5
+      internalID: -185258256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_54
+      rect:
+        serializedVersion: 2
+        x: 4362
+        y: 938
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bffef1fffd4cd541a3081ba0ee90583
+      internalID: 791362463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_55
+      rect:
+        serializedVersion: 2
+        x: 5089
+        y: 938
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e5470cf81b18a44294108a6d0c3c33e
+      internalID: -2083728292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 346e9e4efc3a42345823470a8c291c35
+      internalID: -1233370527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_57
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 0
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99ec054bad24c12418e642e753c6233e
+      internalID: 455731423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_58
+      rect:
+        serializedVersion: 2
+        x: 1454
+        y: 0
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ed7edf96c6275049ae992bed052e801
+      internalID: -1260873108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_59
+      rect:
+        serializedVersion: 2
+        x: 2181
+        y: 0
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aca9adb011cebfd4ba26ad805b63594f
+      internalID: -528972071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_60
+      rect:
+        serializedVersion: 2
+        x: 2908
+        y: 0
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f29aa1383ad588b4294b50d92499cbb4
+      internalID: 1071852008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_61
+      rect:
+        serializedVersion: 2
+        x: 3635
+        y: 0
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c411bc113baffc44b5d5a7408a10ad0
+      internalID: 877999896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_62
+      rect:
+        serializedVersion: 2
+        x: 4362
+        y: 0
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73c7721f401885c4fa60070b069d7f55
+      internalID: -1491637924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lorns_Idle_63
+      rect:
+        serializedVersion: 2
+        x: 5089
+        y: 0
+        width: 727
+        height: 938
+      alignment: 9
+      pivot: {x: 0.41, y: 0.02}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fb03d704c8b7b9499764fb287368c61
+      internalID: 1450991470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Lorns_Idle_0: 215081699
+      Lorns_Idle_1: 1383992041
+      Lorns_Idle_10: 1720094059
+      Lorns_Idle_11: 524801172
+      Lorns_Idle_12: -1553091700
+      Lorns_Idle_13: 490755880
+      Lorns_Idle_14: -108985048
+      Lorns_Idle_15: 905387467
+      Lorns_Idle_16: -1616098707
+      Lorns_Idle_17: -281641783
+      Lorns_Idle_18: 602125087
+      Lorns_Idle_19: -1303867983
+      Lorns_Idle_2: 1972676978
+      Lorns_Idle_20: -1887637603
+      Lorns_Idle_21: -661769092
+      Lorns_Idle_22: 1000542386
+      Lorns_Idle_23: 414666901
+      Lorns_Idle_24: 1454403999
+      Lorns_Idle_25: -936843298
+      Lorns_Idle_26: -901525980
+      Lorns_Idle_27: 1556086591
+      Lorns_Idle_28: 1391665618
+      Lorns_Idle_29: -167403519
+      Lorns_Idle_3: -253577304
+      Lorns_Idle_30: 2023522494
+      Lorns_Idle_31: -2118112001
+      Lorns_Idle_32: -1394675124
+      Lorns_Idle_33: 1457497213
+      Lorns_Idle_34: 631326254
+      Lorns_Idle_35: 776735994
+      Lorns_Idle_36: 2068944769
+      Lorns_Idle_37: -662313469
+      Lorns_Idle_38: 2093055036
+      Lorns_Idle_39: -684762686
+      Lorns_Idle_4: 1775809259
+      Lorns_Idle_40: 2071422081
+      Lorns_Idle_41: 1900299980
+      Lorns_Idle_42: 101045334
+      Lorns_Idle_43: -491926245
+      Lorns_Idle_44: -2064352153
+      Lorns_Idle_45: 629314030
+      Lorns_Idle_46: 201362014
+      Lorns_Idle_47: 31524540
+      Lorns_Idle_48: -325768004
+      Lorns_Idle_49: -548167952
+      Lorns_Idle_5: 556674609
+      Lorns_Idle_50: -985819759
+      Lorns_Idle_51: -763035295
+      Lorns_Idle_52: 1392407304
+      Lorns_Idle_53: -185258256
+      Lorns_Idle_54: 791362463
+      Lorns_Idle_55: -2083728292
+      Lorns_Idle_56: -1233370527
+      Lorns_Idle_57: 455731423
+      Lorns_Idle_58: -1260873108
+      Lorns_Idle_59: -528972071
+      Lorns_Idle_6: -1005898932
+      Lorns_Idle_60: 1071852008
+      Lorns_Idle_61: 877999896
+      Lorns_Idle_62: -1491637924
+      Lorns_Idle_63: 1450991470
+      Lorns_Idle_7: -938068153
+      Lorns_Idle_8: 1388845356
+      Lorns_Idle_9: 875863936
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -93,9 +93,10 @@ namespace DDD.TNFY.BRAWL
                 if (spriteRenderer != null)
                 {
                     Vector3 direction = (segmentEnd - segmentStart).normalized;
+                    // Source art faces left — flip when moving right, not left.
                     if (Mathf.Abs(direction.x) > 0.1f)
                     {
-                        spriteRenderer.flipX = direction.x < 0;
+                        spriteRenderer.flipX = direction.x > 0;
                     }
                 }
 

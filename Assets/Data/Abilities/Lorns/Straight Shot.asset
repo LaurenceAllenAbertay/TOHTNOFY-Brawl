@@ -28,7 +28,7 @@ MonoBehaviour:
   endTurnOnCast: 0
   suppressCameraTransitions: 0
   animationState: Straight_Shot
-  castEffectPrefab: {fileID: 1168242340067801985, guid: 5e6f3d405aeae91449afc37c03e4bfa9, type: 3}
+  castEffectPrefab: {fileID: 0}
   castEffectOffset: {x: 0.7, y: 0.35, z: 0}
   parentCastEffectToCaster: 0
   hitEffectPrefab: {fileID: 0}
