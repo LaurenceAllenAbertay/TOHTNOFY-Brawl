@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -47,16 +48,28 @@ namespace DDD.TNFY.BRAWL
                  "Must have Image Type = Filled, Fill Method = Horizontal, Fill Origin = Left.")]
         [SerializeField] private Image healthBarImage;
 
+        [Tooltip("Optional TMP label that displays 'currentHP / maxHP'. Leave unassigned to skip.")]
+        [SerializeField] private TMP_Text healthNumberLabel;
+
         // The unit this bar belongs to — resolved at Start via GetComponentInParent.
         private Unit _unit;
 
         // ── Colour gradient ───────────────────────────────────────────────────
-        // Transitions from green (#1FF200) to red (#FF0000) between 20 % and 80 % health.
-        // Below 20 % the bar is fully red; above 80 % it is fully green.
-        private static readonly Color HealthColourHigh = new Color(0x1F / 255f, 0xF2 / 255f, 0x00 / 255f); // #1FF200
-        private static readonly Color HealthColourLow  = new Color(1f,           0f,           0f);           // #FF0000
-        private const float ColourThresholdLow  = 0.20f;
-        private const float ColourThresholdHigh = 0.80f;
+        // Shifts hue in HSV space from green (120deg) down to red (0deg) as health drops.
+        // This sweeps cleanly through yellow at 50% health — the industry standard used
+        // by Pokemon, most JRPGs, and strategy games — avoiding the muddy brown that
+        // appears when lerping green->red directly in RGB space.
+        // Saturation and Value are held constant so only the hue moves.
+        private const float HueGreen     = 120f / 360f; // 0.333...
+        private const float HueRed       =   0f / 360f; // 0.0
+        private const float BarSaturation = 1.0f;
+        private const float BarValue      = 0.9f;
+
+        [Header("Colour Thresholds")]
+        [Tooltip("Health fraction at or below which the bar is always fully red.")]
+        [SerializeField] [Range(0f, 0.5f)] private float redThreshold    = 0.15f;
+        [Tooltip("Health fraction at or above which the bar is always fully green.")]
+        [SerializeField] [Range(0.5f, 1f)] private float greenThreshold  = 0.85f;
 
         // ── Tween ─────────────────────────────────────────────────────────────
         [Header("Animation")]
@@ -143,16 +156,24 @@ namespace DDD.TNFY.BRAWL
         }
 
         /// <summary>
-        /// Slides fillAmount and color from their current values to the target fraction
-        /// over tweenDuration seconds using SmoothStep easing.
+        /// Slides fillAmount, colour, and the health number label from their current
+        /// values to the target over tweenDuration seconds using SmoothStep easing.
+        /// The number is lerped between the HP value at the start of this tween and
+        /// the unit's real currentHealth, so it rolls in perfect sync with the bar
+        /// and always lands on the exact integer.
         /// </summary>
         private IEnumerator AnimateBar(float targetFraction)
         {
             float startFill   = healthBarImage.fillAmount;
             Color startColour = healthBarImage.color;
 
-            float targetColourT = Mathf.InverseLerp(ColourThresholdHigh, ColourThresholdLow, targetFraction);
-            Color targetColour  = Color.Lerp(HealthColourHigh, HealthColourLow, targetColourT);
+            Color targetColour = ColourForFraction(targetFraction);
+
+            // Capture the HP the label is currently showing so we can roll from there,
+            // not from the unit's already-updated currentHealth.
+            int maxHealth    = _unit.characterData.maxHealth;
+            int targetHealth = _unit.currentHealth;
+            int startHealth  = Mathf.RoundToInt(startFill * maxHealth);
 
             float elapsed = 0f;
             while (elapsed < tweenDuration)
@@ -160,8 +181,11 @@ namespace DDD.TNFY.BRAWL
                 elapsed += Time.deltaTime;
                 float t = Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(elapsed / tweenDuration));
 
-                healthBarImage.fillAmount = Mathf.Lerp(startFill, targetFraction, t);
-                healthBarImage.color      = Color.Lerp(startColour, targetColour, t);
+                float currentFraction     = Mathf.Lerp(startFill, targetFraction, t);
+                healthBarImage.fillAmount = currentFraction;
+                healthBarImage.color      = ColourForFraction(currentFraction);
+
+                SetHealthNumberText(Mathf.RoundToInt(Mathf.Lerp(startHealth, targetHealth, t)), maxHealth);
 
                 yield return null;
             }
@@ -171,13 +195,39 @@ namespace DDD.TNFY.BRAWL
             _tweenCoroutine = null;
         }
 
-        /// <summary>Immediately sets fill and colour with no animation.</summary>
+        /// <summary>Immediately sets fill, colour, and number label with no animation.</summary>
         private void ApplyBarValues(float fraction)
         {
             healthBarImage.fillAmount = fraction;
 
-            float colourT = Mathf.InverseLerp(ColourThresholdHigh, ColourThresholdLow, fraction);
-            healthBarImage.color = Color.Lerp(HealthColourHigh, HealthColourLow, colourT);
+            healthBarImage.color = ColourForFraction(fraction);
+
+            SetHealthNumberText(_unit.currentHealth, _unit.characterData.maxHealth);
+        }
+
+        /// <summary>
+        /// Returns the bar colour for a given health fraction by shifting the hue in
+        /// HSV space from green (120 deg, full health) down to red (0 deg, empty).
+        /// InverseLerp remaps the fraction into the active gradient window
+        /// [redThreshold, greenThreshold], so the bar locks to full red below
+        /// redThreshold and full green above greenThreshold.
+        /// </summary>
+        private Color ColourForFraction(float fraction)
+        {
+            float t   = Mathf.InverseLerp(redThreshold, greenThreshold, fraction);
+            float hue = Mathf.Lerp(HueRed, HueGreen, t);
+            return Color.HSVToRGB(hue, BarSaturation, BarValue);
+        }
+
+        /// <summary>
+        /// Writes "current / max" to the optional health number label.
+        /// Accepts the values directly so it can be called both mid-tween (with a
+        /// lerped value) and at snap points (with the real currentHealth).
+        /// </summary>
+        private void SetHealthNumberText(int current, int max)
+        {
+            if (healthNumberLabel == null) return;
+            healthNumberLabel.text = $"{current}/{max}";
         }
 
         // ── Sequencer API ─────────────────────────────────────────────────────

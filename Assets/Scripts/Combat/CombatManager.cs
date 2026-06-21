@@ -312,6 +312,7 @@ namespace DDD.TNFY.BRAWL
             if (isBlockingAllInput) return true;
             if (currentState != CombatState.WaitingForInput) return true;
             if (currentActiveUnit == null) return true;
+            if (!(currentActiveUnit is PlayerUnit)) return true;
             if (isWaitingForAnimation || isMoving) return true;
 
             var unitAnimator = currentActiveUnit.GetComponent<UnitAnimator>();
