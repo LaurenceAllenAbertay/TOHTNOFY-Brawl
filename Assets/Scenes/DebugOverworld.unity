@@ -513,6 +513,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1379566069103134745, guid: 5ac354fc51b23e04984bba32fb6442d2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379566069103134745, guid: 5ac354fc51b23e04984bba32fb6442d2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 1379566069103134745, guid: 5ac354fc51b23e04984bba32fb6442d2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -556,6 +564,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Overworld_Lorns
       objectReference: {fileID: 0}
+    - target: {fileID: 4167529142144353560, guid: 5ac354fc51b23e04984bba32fb6442d2, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 222713341, guid: 9908dfb7f1f738945ace6af0c6ce05fd, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -693,6 +705,22 @@ PrefabInstance:
     - target: {fileID: 1048228900617914572, guid: e4ddbbcc4ba2fc64ab537aeae8f63f99, type: 3}
       propertyPath: m_Name
       value: Overworld_Kallper
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319815132823038000, guid: e4ddbbcc4ba2fc64ab537aeae8f63f99, type: 3}
+      propertyPath: m_Size.x
+      value: 5.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319815132823038000, guid: e4ddbbcc4ba2fc64ab537aeae8f63f99, type: 3}
+      propertyPath: m_Size.y
+      value: 6.31
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319815132823038000, guid: e4ddbbcc4ba2fc64ab537aeae8f63f99, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7755750005175976139, guid: b05f5302ab30b6643bb0c0bc6b2558c8, type: 3}
+    - target: {fileID: 2319815132823038000, guid: e4ddbbcc4ba2fc64ab537aeae8f63f99, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6435763245314680403, guid: e4ddbbcc4ba2fc64ab537aeae8f63f99, type: 3}
       propertyPath: leader

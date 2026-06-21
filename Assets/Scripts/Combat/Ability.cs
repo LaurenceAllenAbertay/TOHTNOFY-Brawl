@@ -68,6 +68,10 @@ namespace DDD.TNFY.BRAWL
         [Header("Animation & Visual Effects")]
         [SerializeField] private string animationState = "";
 
+        [Tooltip("Animation state to play when the caster is in the hurt idle tier (HP < 25%). " +
+                 "Leave empty to fall back to the standard Animation State.")]
+        [SerializeField] private string animationStateHurt = "";
+
         [Header("Cast Effect (when ability starts)")]
         [SerializeField] private GameObject castEffectPrefab;
         [SerializeField] private Vector3 castEffectOffset = Vector3.zero;
@@ -84,6 +88,7 @@ namespace DDD.TNFY.BRAWL
 
         // Public properties for external access
         public string AnimationState => animationState;
+        public string AnimationStateHurt => animationStateHurt;
         public GameObject CastEffectPrefab => castEffectPrefab;
         public Vector3 CastEffectOffset => castEffectOffset;
         public bool ParentCastEffectToCaster => parentCastEffectToCaster;

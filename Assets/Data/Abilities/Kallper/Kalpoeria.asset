@@ -29,6 +29,7 @@ MonoBehaviour:
   endTurnOnCast: 1
   suppressCameraTransitions: 0
   animationState: Heads_Up
+  animationStateHurt: Heads_Up
   castEffectPrefab: {fileID: 0}
   castEffectOffset: {x: 0, y: 0, z: 0}
   parentCastEffectToCaster: 0

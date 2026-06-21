@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 83954646e7b20d34cb35d23828a5c575
+guid: 4dacc7d5ca719a749a6ba0a37b32ce10
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -8,6 +8,9 @@ TextureImporter:
   - first:
       213: 419399098797981143
     second: Button_EndTurn_1
+  - first:
+      213: -8536324067301848253
+    second: Button_EndTurn_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -78,9 +81,9 @@ TextureImporter:
     maxTextureSize: 16384
     resizeAlgorithm: 0
     textureFormat: 4
-    textureCompression: 2
-    compressionQuality: 0
-    crunchedCompression: 1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
     ignorePlatformSupport: 0
@@ -119,10 +122,10 @@ TextureImporter:
       name: Button_EndTurn_0
       rect:
         serializedVersion: 2
-        x: 1
+        x: 0
         y: 0
-        width: 472
-        height: 248
+        width: 391
+        height: 235
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +144,10 @@ TextureImporter:
       name: Button_EndTurn_1
       rect:
         serializedVersion: 2
-        x: 474
+        x: 392
         y: 0
-        width: 473
-        height: 248
+        width: 390
+        height: 235
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,20 +166,20 @@ TextureImporter:
       name: Button_EndTurn_2
       rect:
         serializedVersion: 2
-        x: 946
+        x: 783
         y: 0
-        width: 473
-        height: 248
+        width: 390
+        height: 235
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 2ea44775e46196645b14f7d6fc4cad63
-      internalID: -452306542
+      spriteID: 34b0bd8fc72e88980800000000000000
+      internalID: -8536324067301848253
       vertices: []
       indices: 
       edges: []
@@ -185,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a7db65c5677ac5043ad5fa7ce64e07c1
+    spriteID: d41e970acbe805141a4c4f08d9162197
     internalID: 0
     vertices: []
     indices: 
@@ -195,11 +198,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":473.0,"y":248.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":391.0,"y":235.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Button_EndTurn_0: -2146675894205436065
       Button_EndTurn_1: 419399098797981143
-      Button_EndTurn_2: -452306542
+      Button_EndTurn_2: -8536324067301848253
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

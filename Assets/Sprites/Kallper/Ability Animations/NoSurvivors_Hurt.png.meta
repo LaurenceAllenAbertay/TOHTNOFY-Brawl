@@ -1,0 +1,4676 @@
+fileFormatVersion: 2
+guid: c6cc647e9e1e5f0458e2bfdf23929524
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7096563941071459868
+    second: NoSurvivors_Hurt_0
+  - first:
+      213: 7105291423557217318
+    second: NoSurvivors_Hurt_1
+  - first:
+      213: 2727053674254304681
+    second: NoSurvivors_Hurt_2
+  - first:
+      213: -2415612088310603779
+    second: NoSurvivors_Hurt_3
+  - first:
+      213: 8717498313741457680
+    second: NoSurvivors_Hurt_4
+  - first:
+      213: -77337328504765773
+    second: NoSurvivors_Hurt_5
+  - first:
+      213: 3374526429139753571
+    second: NoSurvivors_Hurt_6
+  - first:
+      213: -5567994709946071937
+    second: NoSurvivors_Hurt_7
+  - first:
+      213: 6349817193361892831
+    second: NoSurvivors_Hurt_8
+  - first:
+      213: -5334082292221513678
+    second: NoSurvivors_Hurt_9
+  - first:
+      213: 406903322143340549
+    second: NoSurvivors_Hurt_10
+  - first:
+      213: 3589342513116743638
+    second: NoSurvivors_Hurt_11
+  - first:
+      213: -1409747675912732409
+    second: NoSurvivors_Hurt_12
+  - first:
+      213: -5669270430505223729
+    second: NoSurvivors_Hurt_13
+  - first:
+      213: -3092133667566634742
+    second: NoSurvivors_Hurt_14
+  - first:
+      213: -6647166772499116529
+    second: NoSurvivors_Hurt_15
+  - first:
+      213: -1120750786270735792
+    second: NoSurvivors_Hurt_16
+  - first:
+      213: -4360753026596401479
+    second: NoSurvivors_Hurt_17
+  - first:
+      213: -5203049108119809668
+    second: NoSurvivors_Hurt_18
+  - first:
+      213: -7346104912910053343
+    second: NoSurvivors_Hurt_19
+  - first:
+      213: -2414172872692319185
+    second: NoSurvivors_Hurt_20
+  - first:
+      213: -2153121776352401608
+    second: NoSurvivors_Hurt_21
+  - first:
+      213: 1727274188518259522
+    second: NoSurvivors_Hurt_22
+  - first:
+      213: 6449448033623156332
+    second: NoSurvivors_Hurt_23
+  - first:
+      213: 2332470291199655734
+    second: NoSurvivors_Hurt_24
+  - first:
+      213: 8075248193375203656
+    second: NoSurvivors_Hurt_25
+  - first:
+      213: -2930866742056392062
+    second: NoSurvivors_Hurt_26
+  - first:
+      213: -5608889021728499866
+    second: NoSurvivors_Hurt_27
+  - first:
+      213: -5028118607206999741
+    second: NoSurvivors_Hurt_28
+  - first:
+      213: -2616294064819086125
+    second: NoSurvivors_Hurt_29
+  - first:
+      213: 9100275250832411442
+    second: NoSurvivors_Hurt_30
+  - first:
+      213: -7123630969409573618
+    second: NoSurvivors_Hurt_31
+  - first:
+      213: 1047568153102963841
+    second: NoSurvivors_Hurt_32
+  - first:
+      213: -8326101379359821859
+    second: NoSurvivors_Hurt_33
+  - first:
+      213: 885522236196813705
+    second: NoSurvivors_Hurt_34
+  - first:
+      213: 797996467663725408
+    second: NoSurvivors_Hurt_35
+  - first:
+      213: -6605257946397454188
+    second: NoSurvivors_Hurt_36
+  - first:
+      213: 9197986745658716637
+    second: NoSurvivors_Hurt_37
+  - first:
+      213: -6021367862287381693
+    second: NoSurvivors_Hurt_38
+  - first:
+      213: -5175973440206857386
+    second: NoSurvivors_Hurt_39
+  - first:
+      213: 2967583095080902855
+    second: NoSurvivors_Hurt_40
+  - first:
+      213: -8306998998771566158
+    second: NoSurvivors_Hurt_41
+  - first:
+      213: -4719063052892176766
+    second: NoSurvivors_Hurt_42
+  - first:
+      213: 5043548187159225381
+    second: NoSurvivors_Hurt_43
+  - first:
+      213: -8449757132618058703
+    second: NoSurvivors_Hurt_44
+  - first:
+      213: -7371956582951096176
+    second: NoSurvivors_Hurt_45
+  - first:
+      213: 3621989878563942069
+    second: NoSurvivors_Hurt_46
+  - first:
+      213: -5513950888480464472
+    second: NoSurvivors_Hurt_47
+  - first:
+      213: -4700720853228499291
+    second: NoSurvivors_Hurt_48
+  - first:
+      213: -461453164452860645
+    second: NoSurvivors_Hurt_49
+  - first:
+      213: -5914912866831764243
+    second: NoSurvivors_Hurt_50
+  - first:
+      213: -4572209019577890477
+    second: NoSurvivors_Hurt_51
+  - first:
+      213: 4919103495151174889
+    second: NoSurvivors_Hurt_52
+  - first:
+      213: 6586364688875586142
+    second: NoSurvivors_Hurt_53
+  - first:
+      213: 3914760211975018931
+    second: NoSurvivors_Hurt_54
+  - first:
+      213: 1724004959601542354
+    second: NoSurvivors_Hurt_55
+  - first:
+      213: -9001420255999394614
+    second: NoSurvivors_Hurt_56
+  - first:
+      213: 7175492420153362420
+    second: NoSurvivors_Hurt_57
+  - first:
+      213: 8167327223891890215
+    second: NoSurvivors_Hurt_58
+  - first:
+      213: -8795426033759359003
+    second: NoSurvivors_Hurt_59
+  - first:
+      213: 3341702844650673272
+    second: NoSurvivors_Hurt_60
+  - first:
+      213: -5043574217723893018
+    second: NoSurvivors_Hurt_61
+  - first:
+      213: 9008680522998275573
+    second: NoSurvivors_Hurt_62
+  - first:
+      213: -5419169589177750370
+    second: NoSurvivors_Hurt_63
+  - first:
+      213: -8142879538791442130
+    second: NoSurvivors_Hurt_64
+  - first:
+      213: -5097502068612579383
+    second: NoSurvivors_Hurt_65
+  - first:
+      213: 1833053584644951736
+    second: NoSurvivors_Hurt_66
+  - first:
+      213: -774130260388575476
+    second: NoSurvivors_Hurt_67
+  - first:
+      213: 3219185936261102862
+    second: NoSurvivors_Hurt_68
+  - first:
+      213: 7307066819618306608
+    second: NoSurvivors_Hurt_69
+  - first:
+      213: 2552329123592584628
+    second: NoSurvivors_Hurt_70
+  - first:
+      213: -8625072767643618701
+    second: NoSurvivors_Hurt_71
+  - first:
+      213: 6884523660418708503
+    second: NoSurvivors_Hurt_72
+  - first:
+      213: -5664702783659612094
+    second: NoSurvivors_Hurt_73
+  - first:
+      213: 6090063404515476827
+    second: NoSurvivors_Hurt_74
+  - first:
+      213: 7585043490718427284
+    second: NoSurvivors_Hurt_75
+  - first:
+      213: -3353995862193734287
+    second: NoSurvivors_Hurt_76
+  - first:
+      213: -2241184223830470432
+    second: NoSurvivors_Hurt_77
+  - first:
+      213: -3340346215855275597
+    second: NoSurvivors_Hurt_78
+  - first:
+      213: -8711576660485043814
+    second: NoSurvivors_Hurt_79
+  - first:
+      213: 2706984680271734576
+    second: NoSurvivors_Hurt_80
+  - first:
+      213: 1495466088787384177
+    second: NoSurvivors_Hurt_81
+  - first:
+      213: -2373562759553175158
+    second: NoSurvivors_Hurt_82
+  - first:
+      213: 7967158375200084525
+    second: NoSurvivors_Hurt_83
+  - first:
+      213: 4000798128871842650
+    second: NoSurvivors_Hurt_84
+  - first:
+      213: 648176494778974312
+    second: NoSurvivors_Hurt_85
+  - first:
+      213: 8688272359801829023
+    second: NoSurvivors_Hurt_86
+  - first:
+      213: 6302639400409492698
+    second: NoSurvivors_Hurt_87
+  - first:
+      213: -414921811844165080
+    second: NoSurvivors_Hurt_88
+  - first:
+      213: 7468184530321730274
+    second: NoSurvivors_Hurt_89
+  - first:
+      213: -3987853884819504927
+    second: NoSurvivors_Hurt_90
+  - first:
+      213: 4367014431785298869
+    second: NoSurvivors_Hurt_91
+  - first:
+      213: -4050553206016766028
+    second: NoSurvivors_Hurt_92
+  - first:
+      213: 5955601820779756987
+    second: NoSurvivors_Hurt_93
+  - first:
+      213: 8953964710993533844
+    second: NoSurvivors_Hurt_94
+  - first:
+      213: 4836017845148606282
+    second: NoSurvivors_Hurt_95
+  - first:
+      213: -8635812055795800485
+    second: NoSurvivors_Hurt_96
+  - first:
+      213: 7230387139979823366
+    second: NoSurvivors_Hurt_97
+  - first:
+      213: 7180698502081483578
+    second: NoSurvivors_Hurt_98
+  - first:
+      213: -4606872373409984712
+    second: NoSurvivors_Hurt_99
+  - first:
+      213: -5735193479665572271
+    second: NoSurvivors_Hurt_100
+  - first:
+      213: -8032277407106649651
+    second: NoSurvivors_Hurt_101
+  - first:
+      213: -5844502016081134358
+    second: NoSurvivors_Hurt_102
+  - first:
+      213: -944751258225942914
+    second: NoSurvivors_Hurt_103
+  - first:
+      213: 5222501199219761765
+    second: NoSurvivors_Hurt_104
+  - first:
+      213: -1370106728240346663
+    second: NoSurvivors_Hurt_105
+  - first:
+      213: 1262560167272587094
+    second: NoSurvivors_Hurt_106
+  - first:
+      213: -3275061281490509382
+    second: NoSurvivors_Hurt_107
+  - first:
+      213: 4046457122719430923
+    second: NoSurvivors_Hurt_108
+  - first:
+      213: 8477515023395086316
+    second: NoSurvivors_Hurt_109
+  - first:
+      213: 3719275943089000046
+    second: NoSurvivors_Hurt_110
+  - first:
+      213: -3915081872901245858
+    second: NoSurvivors_Hurt_111
+  - first:
+      213: 800935235603622754
+    second: NoSurvivors_Hurt_112
+  - first:
+      213: -3683865577428131024
+    second: NoSurvivors_Hurt_113
+  - first:
+      213: 8474494836226868128
+    second: NoSurvivors_Hurt_114
+  - first:
+      213: 3278341574967839959
+    second: NoSurvivors_Hurt_115
+  - first:
+      213: -480507276756840564
+    second: NoSurvivors_Hurt_116
+  - first:
+      213: 7172763476045614559
+    second: NoSurvivors_Hurt_117
+  - first:
+      213: 4761340232171436963
+    second: NoSurvivors_Hurt_118
+  - first:
+      213: -1808747630739236254
+    second: NoSurvivors_Hurt_119
+  - first:
+      213: -2787727056038700754
+    second: NoSurvivors_Hurt_120
+  - first:
+      213: -3054660782623830950
+    second: NoSurvivors_Hurt_121
+  - first:
+      213: -1629981126349506212
+    second: NoSurvivors_Hurt_122
+  - first:
+      213: 7310981010260079928
+    second: NoSurvivors_Hurt_123
+  - first:
+      213: -5905190671828623393
+    second: NoSurvivors_Hurt_124
+  - first:
+      213: -6466080995013131999
+    second: NoSurvivors_Hurt_125
+  - first:
+      213: -217184658640232537
+    second: NoSurvivors_Hurt_126
+  - first:
+      213: -1403046777635112255
+    second: NoSurvivors_Hurt_127
+  - first:
+      213: 1142704154936187058
+    second: NoSurvivors_Hurt_128
+  - first:
+      213: 2926121927551947047
+    second: NoSurvivors_Hurt_129
+  - first:
+      213: 4418572933339179676
+    second: NoSurvivors_Hurt_130
+  - first:
+      213: 4230418972910225946
+    second: NoSurvivors_Hurt_131
+  - first:
+      213: 7495078900098632083
+    second: NoSurvivors_Hurt_132
+  - first:
+      213: -3228439466250078319
+    second: NoSurvivors_Hurt_133
+  - first:
+      213: 1274307639330457413
+    second: NoSurvivors_Hurt_134
+  - first:
+      213: -9045650267903407194
+    second: NoSurvivors_Hurt_135
+  - first:
+      213: 6145447217677596908
+    second: NoSurvivors_Hurt_136
+  - first:
+      213: -4770246227997388710
+    second: NoSurvivors_Hurt_137
+  - first:
+      213: -3980649686124346949
+    second: NoSurvivors_Hurt_138
+  - first:
+      213: -8992866412550331427
+    second: NoSurvivors_Hurt_139
+  - first:
+      213: -6908316076799125339
+    second: NoSurvivors_Hurt_140
+  - first:
+      213: 6237875593069202958
+    second: NoSurvivors_Hurt_141
+  - first:
+      213: -3366811576419992054
+    second: NoSurvivors_Hurt_142
+  - first:
+      213: -127315963461738972
+    second: NoSurvivors_Hurt_143
+  - first:
+      213: 5518155755200080852
+    second: NoSurvivors_Hurt_144
+  - first:
+      213: -7331173831668270301
+    second: NoSurvivors_Hurt_145
+  - first:
+      213: 5547993841549709382
+    second: NoSurvivors_Hurt_146
+  - first:
+      213: 2774435564551577809
+    second: NoSurvivors_Hurt_147
+  - first:
+      213: 4793820153785003025
+    second: NoSurvivors_Hurt_148
+  - first:
+      213: 5169588165226912287
+    second: NoSurvivors_Hurt_149
+  - first:
+      213: -5215223030327739732
+    second: NoSurvivors_Hurt_150
+  - first:
+      213: -4763178151977956281
+    second: NoSurvivors_Hurt_151
+  - first:
+      213: -450163466167730431
+    second: NoSurvivors_Hurt_152
+  - first:
+      213: -855512009615953850
+    second: NoSurvivors_Hurt_153
+  - first:
+      213: 2553541104905619192
+    second: NoSurvivors_Hurt_154
+  - first:
+      213: 5296662940388474379
+    second: NoSurvivors_Hurt_155
+  - first:
+      213: 1024529602142135903
+    second: NoSurvivors_Hurt_156
+  - first:
+      213: -9140075862192099040
+    second: NoSurvivors_Hurt_157
+  - first:
+      213: -2479435146476331796
+    second: NoSurvivors_Hurt_158
+  - first:
+      213: 5012460682301720498
+    second: NoSurvivors_Hurt_159
+  - first:
+      213: 5267846352880010953
+    second: NoSurvivors_Hurt_160
+  - first:
+      213: 1701144095005764998
+    second: NoSurvivors_Hurt_161
+  - first:
+      213: -5463217119013432882
+    second: NoSurvivors_Hurt_162
+  - first:
+      213: 205137923106352109
+    second: NoSurvivors_Hurt_163
+  - first:
+      213: 3166620866238457614
+    second: NoSurvivors_Hurt_164
+  - first:
+      213: 9008602818371487051
+    second: NoSurvivors_Hurt_165
+  - first:
+      213: -2005322352999058352
+    second: NoSurvivors_Hurt_166
+  - first:
+      213: -6828222300623594001
+    second: NoSurvivors_Hurt_167
+  - first:
+      213: 2593466117392415700
+    second: NoSurvivors_Hurt_168
+  - first:
+      213: -3417140897975838306
+    second: NoSurvivors_Hurt_169
+  - first:
+      213: 8425237245450203057
+    second: NoSurvivors_Hurt_170
+  - first:
+      213: 5273937980370154324
+    second: NoSurvivors_Hurt_171
+  - first:
+      213: 1854552005590452208
+    second: NoSurvivors_Hurt_172
+  - first:
+      213: -2605786135329122471
+    second: NoSurvivors_Hurt_173
+  - first:
+      213: 1130689417843238096
+    second: NoSurvivors_Hurt_174
+  - first:
+      213: -2218294285763098838
+    second: NoSurvivors_Hurt_175
+  - first:
+      213: 7841213294009361698
+    second: NoSurvivors_Hurt_176
+  - first:
+      213: 5653236827345299991
+    second: NoSurvivors_Hurt_177
+  - first:
+      213: -3035443121990126628
+    second: NoSurvivors_Hurt_178
+  - first:
+      213: 6534968202680038966
+    second: NoSurvivors_Hurt_179
+  - first:
+      213: -1221618377214198122
+    second: NoSurvivors_Hurt_180
+  - first:
+      213: -8884671903815923899
+    second: NoSurvivors_Hurt_181
+  - first:
+      213: 7611219011241439173
+    second: NoSurvivors_Hurt_182
+  - first:
+      213: 550469556076477922
+    second: NoSurvivors_Hurt_183
+  - first:
+      213: -558197961641085966
+    second: NoSurvivors_Hurt_184
+  - first:
+      213: -4130227803527726419
+    second: NoSurvivors_Hurt_185
+  - first:
+      213: -6533986570398007383
+    second: NoSurvivors_Hurt_186
+  - first:
+      213: 8524180966948122730
+    second: NoSurvivors_Hurt_187
+  - first:
+      213: 4417904636510101932
+    second: NoSurvivors_Hurt_188
+  - first:
+      213: -7934889839717821073
+    second: NoSurvivors_Hurt_189
+  - first:
+      213: -223274805501716756
+    second: NoSurvivors_Hurt_190
+  - first:
+      213: -6332391823711356265
+    second: NoSurvivors_Hurt_191
+  - first:
+      213: 8717412695600841947
+    second: NoSurvivors_Hurt_192
+  - first:
+      213: 4628051343379712167
+    second: NoSurvivors_Hurt_193
+  - first:
+      213: 2419547256011175821
+    second: NoSurvivors_Hurt_194
+  - first:
+      213: 61335557417015285
+    second: NoSurvivors_Hurt_195
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13414
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1619612e4f0c7260800000000000000
+      internalID: 7096563941071459868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_1
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 13414
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62ce1ce77e01b9260800000000000000
+      internalID: 7105291423557217318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_2
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 13414
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a50a514ed078d520800000000000000
+      internalID: 2727053674254304681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_3
+      rect:
+        serializedVersion: 2
+        x: 3429
+        y: 13414
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dff5b19aa950a7ed0800000000000000
+      internalID: -2415612088310603779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_4
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 13414
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01950a07786caf870800000000000000
+      internalID: 8717498313741457680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_5
+      rect:
+        serializedVersion: 2
+        x: 5715
+        y: 13414
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b288960c1e3deef0800000000000000
+      internalID: -77337328504765773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_6
+      rect:
+        serializedVersion: 2
+        x: 6858
+        y: 13414
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36ada0688e9b4de20800000000000000
+      internalID: 3374526429139753571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_7
+      rect:
+        serializedVersion: 2
+        x: 8001
+        y: 13414
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f740962df428ab2b0800000000000000
+      internalID: -5567994709946071937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_8
+      rect:
+        serializedVersion: 2
+        x: 9144
+        y: 13414
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd5e00738151f1850800000000000000
+      internalID: 6349817193361892831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12708
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2307f699a6889f5b0800000000000000
+      internalID: -5334082292221513678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_10
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 12708
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 508b7466a6c95a500800000000000000
+      internalID: 406903322143340549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_11
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 12708
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d7088f9ff7efc130800000000000000
+      internalID: 3589342513116743638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_12
+      rect:
+        serializedVersion: 2
+        x: 3429
+        y: 12708
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7010a4a35f19f6ce0800000000000000
+      internalID: -1409747675912732409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_13
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 12708
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc93c1e9494b251b0800000000000000
+      internalID: -5669270430505223729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_14
+      rect:
+        serializedVersion: 2
+        x: 5715
+        y: 12708
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a093aaaefc88615d0800000000000000
+      internalID: -3092133667566634742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_15
+      rect:
+        serializedVersion: 2
+        x: 6858
+        y: 12708
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0e0962e90580c3a0800000000000000
+      internalID: -6647166772499116529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_16
+      rect:
+        serializedVersion: 2
+        x: 8001
+        y: 12708
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 052d79e091b4270f0800000000000000
+      internalID: -1120750786270735792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_17
+      rect:
+        serializedVersion: 2
+        x: 9144
+        y: 12708
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9be03800a3e7b73c0800000000000000
+      internalID: -4360753026596401479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12002
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c711b91376e0bc7b0800000000000000
+      internalID: -5203049108119809668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_19
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 12002
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1209e37c0846d0a90800000000000000
+      internalID: -7346104912910053343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_20
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 12002
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2c3ac820922f7ed0800000000000000
+      internalID: -2414172872692319185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_21
+      rect:
+        serializedVersion: 2
+        x: 3429
+        y: 12002
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8376b52f6239e12e0800000000000000
+      internalID: -2153121776352401608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_22
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 12002
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24bf45419b288f710800000000000000
+      internalID: 1727274188518259522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_23
+      rect:
+        serializedVersion: 2
+        x: 5715
+        y: 12002
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c662371e0da018950800000000000000
+      internalID: 6449448033623156332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_24
+      rect:
+        serializedVersion: 2
+        x: 6858
+        y: 12002
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63f7b143f599e5020800000000000000
+      internalID: 2332470291199655734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_25
+      rect:
+        serializedVersion: 2
+        x: 8001
+        y: 12002
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8417e37827b011070800000000000000
+      internalID: 8075248193375203656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_26
+      rect:
+        serializedVersion: 2
+        x: 9144
+        y: 12002
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28ae8bbf9387357d0800000000000000
+      internalID: -2930866742056392062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11296
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 667d843e6293922b0800000000000000
+      internalID: -5608889021728499866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_28
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 11296
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34915e054c8883ab0800000000000000
+      internalID: -5028118607206999741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_29
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 11296
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dcde76e86e01bbd0800000000000000
+      internalID: -2616294064819086125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_30
+      rect:
+        serializedVersion: 2
+        x: 3429
+        y: 11296
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23b0524102caa4e70800000000000000
+      internalID: 9100275250832411442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_31
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 11296
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0dee5d3067c32d90800000000000000
+      internalID: -7123630969409573618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_32
+      rect:
+        serializedVersion: 2
+        x: 5715
+        y: 11296
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 184d6bb5fa5b98e00800000000000000
+      internalID: 1047568153102963841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_33
+      rect:
+        serializedVersion: 2
+        x: 6858
+        y: 11296
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddf2e57b8eeb37c80800000000000000
+      internalID: -8326101379359821859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_34
+      rect:
+        serializedVersion: 2
+        x: 8001
+        y: 11296
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98b783938c10a4c00800000000000000
+      internalID: 885522236196813705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_35
+      rect:
+        serializedVersion: 2
+        x: 9144
+        y: 11296
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 063ec133f8d031b00800000000000000
+      internalID: 797996467663725408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10590
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4905727d4e86554a0800000000000000
+      internalID: -6605257946397454188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_37
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 10590
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd13dbf4630d5af70800000000000000
+      internalID: 9197986745658716637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_38
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 10590
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34b4862f4ddcf6ca0800000000000000
+      internalID: -6021367862287381693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_39
+      rect:
+        serializedVersion: 2
+        x: 3429
+        y: 10590
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65b1d91649f3b28b0800000000000000
+      internalID: -5175973440206857386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_40
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 10590
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c060cf1a19fe2920800000000000000
+      internalID: 2967583095080902855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_41
+      rect:
+        serializedVersion: 2
+        x: 5715
+        y: 10590
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b9f1b84c6c97bc80800000000000000
+      internalID: -8306998998771566158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_42
+      rect:
+        serializedVersion: 2
+        x: 6858
+        y: 10590
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28ef0b3f725828eb0800000000000000
+      internalID: -4719063052892176766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_43
+      rect:
+        serializedVersion: 2
+        x: 8001
+        y: 10590
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 524e037ba584ef540800000000000000
+      internalID: 5043548187159225381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_44
+      rect:
+        serializedVersion: 2
+        x: 9144
+        y: 10590
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1343af718ae6cba80800000000000000
+      internalID: -8449757132618058703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9884
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 090f89dcb8c81b990800000000000000
+      internalID: -7371956582951096176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_46
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 9884
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5be2ddbba94e34230800000000000000
+      internalID: 3621989878563942069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_47
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 9884
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a12c2f81e28a73b0800000000000000
+      internalID: -5513950888480464472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_48
+      rect:
+        serializedVersion: 2
+        x: 3429
+        y: 9884
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ae4b0b1a4fa3ceb0800000000000000
+      internalID: -4700720853228499291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_49
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 9884
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1dae44bac69899f0800000000000000
+      internalID: -461453164452860645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_50
+      rect:
+        serializedVersion: 2
+        x: 5715
+        y: 9884
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de4fa1f06120aeda0800000000000000
+      internalID: -5914912866831764243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_51
+      rect:
+        serializedVersion: 2
+        x: 6858
+        y: 9884
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 359093d0f104c80c0800000000000000
+      internalID: -4572209019577890477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_52
+      rect:
+        serializedVersion: 2
+        x: 8001
+        y: 9884
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e44ed9f09a244440800000000000000
+      internalID: 4919103495151174889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_53
+      rect:
+        serializedVersion: 2
+        x: 9144
+        y: 9884
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e520b99d9c7776b50800000000000000
+      internalID: 6586364688875586142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9178
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b99a97eba5045630800000000000000
+      internalID: 3914760211975018931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_55
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 9178
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d4cf086065ece710800000000000000
+      internalID: 1724004959601542354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_56
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 9178
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acc762ff7f7841380800000000000000
+      internalID: -9001420255999394614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_57
+      rect:
+        serializedVersion: 2
+        x: 3429
+        y: 9178
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f7cfb7b658749360800000000000000
+      internalID: 7175492420153362420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_58
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 9178
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 720147876dc285170800000000000000
+      internalID: 8167327223891890215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_59
+      rect:
+        serializedVersion: 2
+        x: 5715
+        y: 9178
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5efec895f9e50f580800000000000000
+      internalID: -8795426033759359003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_60
+      rect:
+        serializedVersion: 2
+        x: 6858
+        y: 9178
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 874d058380d106e20800000000000000
+      internalID: 3341702844650673272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_61
+      rect:
+        serializedVersion: 2
+        x: 8001
+        y: 9178
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eaaf3298ff910ab0800000000000000
+      internalID: -5043574217723893018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_62
+      rect:
+        serializedVersion: 2
+        x: 9144
+        y: 9178
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fdda44a433450d70800000000000000
+      internalID: 9008680522998275573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8472
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9ce57b78fd3bc4b0800000000000000
+      internalID: -5419169589177750370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_64
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 8472
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e291a89c33eaefe80800000000000000
+      internalID: -8142879538791442130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_65
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 8472
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cf378650e80249b0800000000000000
+      internalID: -5097502068612579383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_66
+      rect:
+        serializedVersion: 2
+        x: 3429
+        y: 8472
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bec407f580507910800000000000000
+      internalID: 1833053584644951736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_67
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 8472
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0788a331acb145f0800000000000000
+      internalID: -774130260388575476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_68
+      rect:
+        serializedVersion: 2
+        x: 5715
+        y: 8472
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0db6c49d88dcac20800000000000000
+      internalID: 3219185936261102862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_69
+      rect:
+        serializedVersion: 2
+        x: 6858
+        y: 8472
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03a7465de8ae76560800000000000000
+      internalID: 7307066819618306608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_70
+      rect:
+        serializedVersion: 2
+        x: 8001
+        y: 8472
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bdbe99a0d1bb6320800000000000000
+      internalID: 2552329123592584628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_71
+      rect:
+        serializedVersion: 2
+        x: 9144
+        y: 8472
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 372f4b2f3069d4880800000000000000
+      internalID: -8625072767643618701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7766
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 714770b1bcdba8f50800000000000000
+      internalID: 6884523660418708503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_73
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 7766
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2486dc5c4dee261b0800000000000000
+      internalID: -5664702783659612094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_74
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 7766
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5540cd5660448450800000000000000
+      internalID: 6090063404515476827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_75
+      rect:
+        serializedVersion: 2
+        x: 3429
+        y: 7766
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49829261edc734960800000000000000
+      internalID: 7585043490718427284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_76
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 7766
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17dffc798863471d0800000000000000
+      internalID: -3353995862193734287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_77
+      rect:
+        serializedVersion: 2
+        x: 5715
+        y: 7766
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e0106e92d6b5e0e0800000000000000
+      internalID: -2241184223830470432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_78
+      rect:
+        serializedVersion: 2
+        x: 6858
+        y: 7766
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b1402980d4b4a1d0800000000000000
+      internalID: -3340346215855275597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_79
+      rect:
+        serializedVersion: 2
+        x: 8001
+        y: 7766
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a998436ee234a1780800000000000000
+      internalID: -8711576660485043814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_80
+      rect:
+        serializedVersion: 2
+        x: 9144
+        y: 7766
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03765087934219520800000000000000
+      internalID: 2706984680271734576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_81
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7060
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17790d30c76f0c410800000000000000
+      internalID: 1495466088787384177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_82
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 7060
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a81bcb0fe396f0fd0800000000000000
+      internalID: -2373562759553175158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_83
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 7060
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2254179458019e60800000000000000
+      internalID: 7967158375200084525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_84
+      rect:
+        serializedVersion: 2
+        x: 3429
+        y: 7060
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a53247973b0b58730800000000000000
+      internalID: 4000798128871842650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_85
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 7060
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8600f0b7619cef800800000000000000
+      internalID: 648176494778974312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_86
+      rect:
+        serializedVersion: 2
+        x: 5715
+        y: 7060
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9635d5cda1f29870800000000000000
+      internalID: 8688272359801829023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_87
+      rect:
+        serializedVersion: 2
+        x: 6858
+        y: 7060
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adce9c05429777750800000000000000
+      internalID: 6302639400409492698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_88
+      rect:
+        serializedVersion: 2
+        x: 8001
+        y: 7060
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 822977b7fc6ed3af0800000000000000
+      internalID: -414921811844165080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_89
+      rect:
+        serializedVersion: 2
+        x: 9144
+        y: 7060
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eae4ee134254a760800000000000000
+      internalID: 7468184530321730274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6354
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e00c23350c48a8c0800000000000000
+      internalID: -3987853884819504927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_91
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 6354
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bb219ffc70ca9c30800000000000000
+      internalID: 4367014431785298869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_92
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 6354
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bf0d83e15b89c7c0800000000000000
+      internalID: -4050553206016766028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_93
+      rect:
+        serializedVersion: 2
+        x: 3429
+        y: 6354
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbd3f374d4c86a250800000000000000
+      internalID: 5955601820779756987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_94
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 6354
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49b172ae67fd24c70800000000000000
+      internalID: 8953964710993533844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_95
+      rect:
+        serializedVersion: 2
+        x: 5715
+        y: 6354
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4f588b9b9cfc1340800000000000000
+      internalID: 4836017845148606282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_96
+      rect:
+        serializedVersion: 2
+        x: 6858
+        y: 6354
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b56614390be672880800000000000000
+      internalID: -8635812055795800485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_97
+      rect:
+        serializedVersion: 2
+        x: 8001
+        y: 6354
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 609cc0babce775460800000000000000
+      internalID: 7230387139979823366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_98
+      rect:
+        serializedVersion: 2
+        x: 9144
+        y: 6354
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a331fbf1e37f6a360800000000000000
+      internalID: 7180698502081483578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_99
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5648
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83f46511cf91110c0800000000000000
+      internalID: -4606872373409984712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_100
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 5648
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 156a566aaef7860b0800000000000000
+      internalID: -5735193479665572271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_101
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 5648
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc1330c414e978090800000000000000
+      internalID: -8032277407106649651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_102
+      rect:
+        serializedVersion: 2
+        x: 3429
+        y: 5648
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aecfd62c16824eea0800000000000000
+      internalID: -5844502016081134358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_103
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 5648
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7ed6547cb193e2f0800000000000000
+      internalID: -944751258225942914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_104
+      rect:
+        serializedVersion: 2
+        x: 5715
+        y: 5648
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 562ab82bb2d0a7840800000000000000
+      internalID: 5222501199219761765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_105
+      rect:
+        serializedVersion: 2
+        x: 6858
+        y: 5648
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d98cd690376cfce0800000000000000
+      internalID: -1370106728240346663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_106
+      rect:
+        serializedVersion: 2
+        x: 8001
+        y: 5648
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65f17d568c3858110800000000000000
+      internalID: 1262560167272587094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_107
+      rect:
+        serializedVersion: 2
+        x: 9144
+        y: 5648
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab16f13dd15ac82d0800000000000000
+      internalID: -3275061281490509382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4942
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b097a866057e72830800000000000000
+      internalID: 4046457122719430923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_109
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 4942
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cef508b7ffe26a570800000000000000
+      internalID: 8477515023395086316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_110
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 4942
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6ec971c3c58d9330800000000000000
+      internalID: 3719275943089000046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_111
+      rect:
+        serializedVersion: 2
+        x: 3429
+        y: 4942
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e54762397c5daa9c0800000000000000
+      internalID: -3915081872901245858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_112
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 4942
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26b6f3e6a5e7d1b00800000000000000
+      internalID: 800935235603622754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_113
+      rect:
+        serializedVersion: 2
+        x: 5715
+        y: 4942
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0336b1976c740ecc0800000000000000
+      internalID: -3683865577428131024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_114
+      rect:
+        serializedVersion: 2
+        x: 6858
+        y: 4942
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a34f2c57247b9570800000000000000
+      internalID: 8474494836226868128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_115
+      rect:
+        serializedVersion: 2
+        x: 8001
+        y: 4942
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7dc4a540b420f7d20800000000000000
+      internalID: 3278341574967839959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_116
+      rect:
+        serializedVersion: 2
+        x: 9144
+        y: 4942
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8f0be87d25e459f0800000000000000
+      internalID: -480507276756840564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_117
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4236
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdd4897e066ca8360800000000000000
+      internalID: 7172763476045614559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_118
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 4236
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3abba59e6bda31240800000000000000
+      internalID: 4761340232171436963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_119
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 4236
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26a557dec9906e6e0800000000000000
+      internalID: -1808747630739236254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_120
+      rect:
+        serializedVersion: 2
+        x: 3429
+        y: 4236
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e29511633010059d0800000000000000
+      internalID: -2787727056038700754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_121
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 4236
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5cc366d33aab95d0800000000000000
+      internalID: -3054660782623830950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_122
+      rect:
+        serializedVersion: 2
+        x: 5715
+        y: 4236
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c59b8553dc42169e0800000000000000
+      internalID: -1629981126349506212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_123
+      rect:
+        serializedVersion: 2
+        x: 6858
+        y: 4236
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 835bd2c5e72d57560800000000000000
+      internalID: 7310981010260079928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_124
+      rect:
+        serializedVersion: 2
+        x: 8001
+        y: 4236
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdf54bafe5c8c0ea0800000000000000
+      internalID: -5905190671828623393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_125
+      rect:
+        serializedVersion: 2
+        x: 9144
+        y: 4236
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1218653089dd346a0800000000000000
+      internalID: -6466080995013131999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3530
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7af951324b76cfcf0800000000000000
+      internalID: -217184658640232537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_127
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 3530
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ca7dcfa360678ce0800000000000000
+      internalID: -1403046777635112255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_128
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 3530
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b89556ef53bbdf00800000000000000
+      internalID: 1142704154936187058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_129
+      rect:
+        serializedVersion: 2
+        x: 3429
+        y: 3530
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 721173dc36cab9820800000000000000
+      internalID: 2926121927551947047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_130
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 3530
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9a66d91cace15d30800000000000000
+      internalID: 4418572933339179676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_131
+      rect:
+        serializedVersion: 2
+        x: 5715
+        y: 3530
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1a036364a775ba30800000000000000
+      internalID: 4230418972910225946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_132
+      rect:
+        serializedVersion: 2
+        x: 6858
+        y: 3530
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39987eb8c8ed30860800000000000000
+      internalID: 7495078900098632083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_133
+      rect:
+        serializedVersion: 2
+        x: 8001
+        y: 3530
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 197ff4319674233d0800000000000000
+      internalID: -3228439466250078319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_134
+      rect:
+        serializedVersion: 2
+        x: 9144
+        y: 3530
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 547cbd0eb004fa110800000000000000
+      internalID: 1274307639330457413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_135
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2824
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ab433bd105677280800000000000000
+      internalID: -9045650267903407194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_136
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 2824
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce8f59b3fa3094550800000000000000
+      internalID: 6145447217677596908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_137
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 2824
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a509119545eaccdb0800000000000000
+      internalID: -4770246227997388710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_138
+      rect:
+        serializedVersion: 2
+        x: 3429
+        y: 2824
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb1c94b6334e1c8c0800000000000000
+      internalID: -3980649686124346949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_139
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 2824
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd3656fd4abe23380800000000000000
+      internalID: -8992866412550331427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_140
+      rect:
+        serializedVersion: 2
+        x: 5715
+        y: 2824
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a89446412bb020a0800000000000000
+      internalID: -6908316076799125339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_141
+      rect:
+        serializedVersion: 2
+        x: 6858
+        y: 2824
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0e08fd5dc2619650800000000000000
+      internalID: 6237875593069202958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_142
+      rect:
+        serializedVersion: 2
+        x: 8001
+        y: 2824
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0e30d995bea641d0800000000000000
+      internalID: -3366811576419992054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_143
+      rect:
+        serializedVersion: 2
+        x: 9144
+        y: 2824
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42e50a74eceab3ef0800000000000000
+      internalID: -127315963461738972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_144
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2118
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4db6af34c6d649c40800000000000000
+      internalID: 5518155755200080852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_145
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 2118
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32bf5c80e30724a90800000000000000
+      internalID: -7331173831668270301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_146
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 2118
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64010ad110f6efc40800000000000000
+      internalID: 5547993841549709382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_147
+      rect:
+        serializedVersion: 2
+        x: 3429
+        y: 2118
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d0ae454276c08620800000000000000
+      internalID: 2774435564551577809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_148
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 2118
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11ca677f702178240800000000000000
+      internalID: 4793820153785003025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_149
+      rect:
+        serializedVersion: 2
+        x: 5715
+        y: 2118
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1ad96feb011eb740800000000000000
+      internalID: 5169588165226912287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_150
+      rect:
+        serializedVersion: 2
+        x: 6858
+        y: 2118
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caaf0ec094ecf97b0800000000000000
+      internalID: -5215223030327739732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_151
+      rect:
+        serializedVersion: 2
+        x: 8001
+        y: 2118
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74cc37905bac5edb0800000000000000
+      internalID: -4763178151977956281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_152
+      rect:
+        serializedVersion: 2
+        x: 9144
+        y: 2118
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10fb63c66b2b0c9f0800000000000000
+      internalID: -450163466167730431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_153
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1412
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 640b2c52c5c9024f0800000000000000
+      internalID: -855512009615953850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_154
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 1412
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f6024d0b10007320800000000000000
+      internalID: 2553541104905619192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_155
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 1412
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0eb4d0a1e6818940800000000000000
+      internalID: 5296662940388474379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_156
+      rect:
+        serializedVersion: 2
+        x: 3429
+        y: 1412
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f56ed85be3cd73e00800000000000000
+      internalID: 1024529602142135903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_157
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 1412
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 021fae5fd6de72180800000000000000
+      internalID: -9140075862192099040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_158
+      rect:
+        serializedVersion: 2
+        x: 5715
+        y: 1412
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cecd8a2fed6479dd0800000000000000
+      internalID: -2479435146476331796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_159
+      rect:
+        serializedVersion: 2
+        x: 6858
+        y: 1412
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b7c433fe66df8540800000000000000
+      internalID: 5012460682301720498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_160
+      rect:
+        serializedVersion: 2
+        x: 8001
+        y: 1412
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c600c209562b1940800000000000000
+      internalID: 5267846352880010953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_161
+      rect:
+        serializedVersion: 2
+        x: 9144
+        y: 1412
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68d62969a8dab9710800000000000000
+      internalID: 1701144095005764998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_162
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 706
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec11f52c9f0ce24b0800000000000000
+      internalID: -5463217119013432882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_163
+      rect:
+        serializedVersion: 2
+        x: 1143
+        y: 706
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deb27bcaadbc8d200800000000000000
+      internalID: 205137923106352109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_164
+      rect:
+        serializedVersion: 2
+        x: 2286
+        y: 706
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e07ab7e76e812fb20800000000000000
+      internalID: 3166620866238457614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_165
+      rect:
+        serializedVersion: 2
+        x: 3429
+        y: 706
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b458d9f988cf40d70800000000000000
+      internalID: 9008602818371487051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_166
+      rect:
+        serializedVersion: 2
+        x: 4572
+        y: 706
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0543751d1f9ab24e0800000000000000
+      internalID: -2005322352999058352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_167
+      rect:
+        serializedVersion: 2
+        x: 5715
+        y: 706
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fed1eebbef74d31a0800000000000000
+      internalID: -6828222300623594001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_168
+      rect:
+        serializedVersion: 2
+        x: 6858
+        y: 706
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dbbf2861b7ddf320800000000000000
+      internalID: 2593466117392415700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_169
+      rect:
+        serializedVersion: 2
+        x: 8001
+        y: 706
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e99d0b44570e390d0800000000000000
+      internalID: -3417140897975838306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_170
+      rect:
+        serializedVersion: 2
+        x: 9144
+        y: 706
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bf237bc2a47ce470800000000000000
+      internalID: 8425237245450203057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: NoSurvivors_Hurt_171
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1143
+        height: 706
+      alignment: 9
+      pivot: {x: 0.58, y: 0.03}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 453776f86aac03940800000000000000
+      internalID: 5273937980370154324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 32629f1d4e91b4a4992a6255cf6a8760
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":9.0,"y":20.0},"gridSpriteSize":{"x":1143.0,"y":706.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5799999833106995,"y":0.029999999329447748},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      NoSurvivors_Hurt_0: 7096563941071459868
+      NoSurvivors_Hurt_1: 7105291423557217318
+      NoSurvivors_Hurt_10: 406903322143340549
+      NoSurvivors_Hurt_100: -5735193479665572271
+      NoSurvivors_Hurt_101: -8032277407106649651
+      NoSurvivors_Hurt_102: -5844502016081134358
+      NoSurvivors_Hurt_103: -944751258225942914
+      NoSurvivors_Hurt_104: 5222501199219761765
+      NoSurvivors_Hurt_105: -1370106728240346663
+      NoSurvivors_Hurt_106: 1262560167272587094
+      NoSurvivors_Hurt_107: -3275061281490509382
+      NoSurvivors_Hurt_108: 4046457122719430923
+      NoSurvivors_Hurt_109: 8477515023395086316
+      NoSurvivors_Hurt_11: 3589342513116743638
+      NoSurvivors_Hurt_110: 3719275943089000046
+      NoSurvivors_Hurt_111: -3915081872901245858
+      NoSurvivors_Hurt_112: 800935235603622754
+      NoSurvivors_Hurt_113: -3683865577428131024
+      NoSurvivors_Hurt_114: 8474494836226868128
+      NoSurvivors_Hurt_115: 3278341574967839959
+      NoSurvivors_Hurt_116: -480507276756840564
+      NoSurvivors_Hurt_117: 7172763476045614559
+      NoSurvivors_Hurt_118: 4761340232171436963
+      NoSurvivors_Hurt_119: -1808747630739236254
+      NoSurvivors_Hurt_12: -1409747675912732409
+      NoSurvivors_Hurt_120: -2787727056038700754
+      NoSurvivors_Hurt_121: -3054660782623830950
+      NoSurvivors_Hurt_122: -1629981126349506212
+      NoSurvivors_Hurt_123: 7310981010260079928
+      NoSurvivors_Hurt_124: -5905190671828623393
+      NoSurvivors_Hurt_125: -6466080995013131999
+      NoSurvivors_Hurt_126: -217184658640232537
+      NoSurvivors_Hurt_127: -1403046777635112255
+      NoSurvivors_Hurt_128: 1142704154936187058
+      NoSurvivors_Hurt_129: 2926121927551947047
+      NoSurvivors_Hurt_13: -5669270430505223729
+      NoSurvivors_Hurt_130: 4418572933339179676
+      NoSurvivors_Hurt_131: 4230418972910225946
+      NoSurvivors_Hurt_132: 7495078900098632083
+      NoSurvivors_Hurt_133: -3228439466250078319
+      NoSurvivors_Hurt_134: 1274307639330457413
+      NoSurvivors_Hurt_135: -9045650267903407194
+      NoSurvivors_Hurt_136: 6145447217677596908
+      NoSurvivors_Hurt_137: -4770246227997388710
+      NoSurvivors_Hurt_138: -3980649686124346949
+      NoSurvivors_Hurt_139: -8992866412550331427
+      NoSurvivors_Hurt_14: -3092133667566634742
+      NoSurvivors_Hurt_140: -6908316076799125339
+      NoSurvivors_Hurt_141: 6237875593069202958
+      NoSurvivors_Hurt_142: -3366811576419992054
+      NoSurvivors_Hurt_143: -127315963461738972
+      NoSurvivors_Hurt_144: 5518155755200080852
+      NoSurvivors_Hurt_145: -7331173831668270301
+      NoSurvivors_Hurt_146: 5547993841549709382
+      NoSurvivors_Hurt_147: 2774435564551577809
+      NoSurvivors_Hurt_148: 4793820153785003025
+      NoSurvivors_Hurt_149: 5169588165226912287
+      NoSurvivors_Hurt_15: -6647166772499116529
+      NoSurvivors_Hurt_150: -5215223030327739732
+      NoSurvivors_Hurt_151: -4763178151977956281
+      NoSurvivors_Hurt_152: -450163466167730431
+      NoSurvivors_Hurt_153: -855512009615953850
+      NoSurvivors_Hurt_154: 2553541104905619192
+      NoSurvivors_Hurt_155: 5296662940388474379
+      NoSurvivors_Hurt_156: 1024529602142135903
+      NoSurvivors_Hurt_157: -9140075862192099040
+      NoSurvivors_Hurt_158: -2479435146476331796
+      NoSurvivors_Hurt_159: 5012460682301720498
+      NoSurvivors_Hurt_16: -1120750786270735792
+      NoSurvivors_Hurt_160: 5267846352880010953
+      NoSurvivors_Hurt_161: 1701144095005764998
+      NoSurvivors_Hurt_162: -5463217119013432882
+      NoSurvivors_Hurt_163: 205137923106352109
+      NoSurvivors_Hurt_164: 3166620866238457614
+      NoSurvivors_Hurt_165: 9008602818371487051
+      NoSurvivors_Hurt_166: -2005322352999058352
+      NoSurvivors_Hurt_167: -6828222300623594001
+      NoSurvivors_Hurt_168: 2593466117392415700
+      NoSurvivors_Hurt_169: -3417140897975838306
+      NoSurvivors_Hurt_17: -4360753026596401479
+      NoSurvivors_Hurt_170: 8425237245450203057
+      NoSurvivors_Hurt_171: 5273937980370154324
+      NoSurvivors_Hurt_18: -5203049108119809668
+      NoSurvivors_Hurt_19: -7346104912910053343
+      NoSurvivors_Hurt_2: 2727053674254304681
+      NoSurvivors_Hurt_20: -2414172872692319185
+      NoSurvivors_Hurt_21: -2153121776352401608
+      NoSurvivors_Hurt_22: 1727274188518259522
+      NoSurvivors_Hurt_23: 6449448033623156332
+      NoSurvivors_Hurt_24: 2332470291199655734
+      NoSurvivors_Hurt_25: 8075248193375203656
+      NoSurvivors_Hurt_26: -2930866742056392062
+      NoSurvivors_Hurt_27: -5608889021728499866
+      NoSurvivors_Hurt_28: -5028118607206999741
+      NoSurvivors_Hurt_29: -2616294064819086125
+      NoSurvivors_Hurt_3: -2415612088310603779
+      NoSurvivors_Hurt_30: 9100275250832411442
+      NoSurvivors_Hurt_31: -7123630969409573618
+      NoSurvivors_Hurt_32: 1047568153102963841
+      NoSurvivors_Hurt_33: -8326101379359821859
+      NoSurvivors_Hurt_34: 885522236196813705
+      NoSurvivors_Hurt_35: 797996467663725408
+      NoSurvivors_Hurt_36: -6605257946397454188
+      NoSurvivors_Hurt_37: 9197986745658716637
+      NoSurvivors_Hurt_38: -6021367862287381693
+      NoSurvivors_Hurt_39: -5175973440206857386
+      NoSurvivors_Hurt_4: 8717498313741457680
+      NoSurvivors_Hurt_40: 2967583095080902855
+      NoSurvivors_Hurt_41: -8306998998771566158
+      NoSurvivors_Hurt_42: -4719063052892176766
+      NoSurvivors_Hurt_43: 5043548187159225381
+      NoSurvivors_Hurt_44: -8449757132618058703
+      NoSurvivors_Hurt_45: -7371956582951096176
+      NoSurvivors_Hurt_46: 3621989878563942069
+      NoSurvivors_Hurt_47: -5513950888480464472
+      NoSurvivors_Hurt_48: -4700720853228499291
+      NoSurvivors_Hurt_49: -461453164452860645
+      NoSurvivors_Hurt_5: -77337328504765773
+      NoSurvivors_Hurt_50: -5914912866831764243
+      NoSurvivors_Hurt_51: -4572209019577890477
+      NoSurvivors_Hurt_52: 4919103495151174889
+      NoSurvivors_Hurt_53: 6586364688875586142
+      NoSurvivors_Hurt_54: 3914760211975018931
+      NoSurvivors_Hurt_55: 1724004959601542354
+      NoSurvivors_Hurt_56: -9001420255999394614
+      NoSurvivors_Hurt_57: 7175492420153362420
+      NoSurvivors_Hurt_58: 8167327223891890215
+      NoSurvivors_Hurt_59: -8795426033759359003
+      NoSurvivors_Hurt_6: 3374526429139753571
+      NoSurvivors_Hurt_60: 3341702844650673272
+      NoSurvivors_Hurt_61: -5043574217723893018
+      NoSurvivors_Hurt_62: 9008680522998275573
+      NoSurvivors_Hurt_63: -5419169589177750370
+      NoSurvivors_Hurt_64: -8142879538791442130
+      NoSurvivors_Hurt_65: -5097502068612579383
+      NoSurvivors_Hurt_66: 1833053584644951736
+      NoSurvivors_Hurt_67: -774130260388575476
+      NoSurvivors_Hurt_68: 3219185936261102862
+      NoSurvivors_Hurt_69: 7307066819618306608
+      NoSurvivors_Hurt_7: -5567994709946071937
+      NoSurvivors_Hurt_70: 2552329123592584628
+      NoSurvivors_Hurt_71: -8625072767643618701
+      NoSurvivors_Hurt_72: 6884523660418708503
+      NoSurvivors_Hurt_73: -5664702783659612094
+      NoSurvivors_Hurt_74: 6090063404515476827
+      NoSurvivors_Hurt_75: 7585043490718427284
+      NoSurvivors_Hurt_76: -3353995862193734287
+      NoSurvivors_Hurt_77: -2241184223830470432
+      NoSurvivors_Hurt_78: -3340346215855275597
+      NoSurvivors_Hurt_79: -8711576660485043814
+      NoSurvivors_Hurt_8: 6349817193361892831
+      NoSurvivors_Hurt_80: 2706984680271734576
+      NoSurvivors_Hurt_81: 1495466088787384177
+      NoSurvivors_Hurt_82: -2373562759553175158
+      NoSurvivors_Hurt_83: 7967158375200084525
+      NoSurvivors_Hurt_84: 4000798128871842650
+      NoSurvivors_Hurt_85: 648176494778974312
+      NoSurvivors_Hurt_86: 8688272359801829023
+      NoSurvivors_Hurt_87: 6302639400409492698
+      NoSurvivors_Hurt_88: -414921811844165080
+      NoSurvivors_Hurt_89: 7468184530321730274
+      NoSurvivors_Hurt_9: -5334082292221513678
+      NoSurvivors_Hurt_90: -3987853884819504927
+      NoSurvivors_Hurt_91: 4367014431785298869
+      NoSurvivors_Hurt_92: -4050553206016766028
+      NoSurvivors_Hurt_93: 5955601820779756987
+      NoSurvivors_Hurt_94: 8953964710993533844
+      NoSurvivors_Hurt_95: 4836017845148606282
+      NoSurvivors_Hurt_96: -8635812055795800485
+      NoSurvivors_Hurt_97: 7230387139979823366
+      NoSurvivors_Hurt_98: 7180698502081483578
+      NoSurvivors_Hurt_99: -4606872373409984712
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

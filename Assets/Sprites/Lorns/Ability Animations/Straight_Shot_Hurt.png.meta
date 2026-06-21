@@ -1,0 +1,1882 @@
+fileFormatVersion: 2
+guid: 91a814acc3fa6914f968a8bb6703dba6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4773565703572187347
+    second: StraightShot_Hurt_0
+  - first:
+      213: -3004159554020136888
+    second: StraightShot_Hurt_1
+  - first:
+      213: 3918657540486946136
+    second: StraightShot_Hurt_2
+  - first:
+      213: -2361570320842745010
+    second: StraightShot_Hurt_3
+  - first:
+      213: 8519367227684896003
+    second: StraightShot_Hurt_4
+  - first:
+      213: 7178577184094395751
+    second: StraightShot_Hurt_5
+  - first:
+      213: -7349867731171065601
+    second: StraightShot_Hurt_6
+  - first:
+      213: -2066030274200390092
+    second: StraightShot_Hurt_7
+  - first:
+      213: 214066935663649481
+    second: StraightShot_Hurt_8
+  - first:
+      213: 9175167311481882090
+    second: StraightShot_Hurt_9
+  - first:
+      213: 4303716320997579934
+    second: StraightShot_Hurt_10
+  - first:
+      213: -2929158123052485124
+    second: StraightShot_Hurt_11
+  - first:
+      213: -8153675214320711606
+    second: StraightShot_Hurt_12
+  - first:
+      213: -1614791162419831331
+    second: StraightShot_Hurt_13
+  - first:
+      213: -9154256826679194608
+    second: StraightShot_Hurt_14
+  - first:
+      213: -5486746786147818384
+    second: StraightShot_Hurt_15
+  - first:
+      213: -3744919210805511038
+    second: StraightShot_Hurt_16
+  - first:
+      213: 8956006537472094123
+    second: StraightShot_Hurt_17
+  - first:
+      213: 8201382432470720227
+    second: StraightShot_Hurt_18
+  - first:
+      213: -969084941317695794
+    second: StraightShot_Hurt_19
+  - first:
+      213: -6006826408266418201
+    second: StraightShot_Hurt_20
+  - first:
+      213: 1549732634675504526
+    second: StraightShot_Hurt_21
+  - first:
+      213: 2322537856451440309
+    second: StraightShot_Hurt_22
+  - first:
+      213: 8618577926173596964
+    second: StraightShot_Hurt_23
+  - first:
+      213: 4987751154843058062
+    second: StraightShot_Hurt_24
+  - first:
+      213: -5648207134265615783
+    second: StraightShot_Hurt_25
+  - first:
+      213: -8045137810550074847
+    second: StraightShot_Hurt_26
+  - first:
+      213: 906223840440750510
+    second: StraightShot_Hurt_27
+  - first:
+      213: 6196414598029621095
+    second: StraightShot_Hurt_28
+  - first:
+      213: 6212115782775953099
+    second: StraightShot_Hurt_29
+  - first:
+      213: 8606349444140673097
+    second: StraightShot_Hurt_30
+  - first:
+      213: 5915011284999948863
+    second: StraightShot_Hurt_31
+  - first:
+      213: 3871748109733236732
+    second: StraightShot_Hurt_32
+  - first:
+      213: -5743988019194435605
+    second: StraightShot_Hurt_33
+  - first:
+      213: -8990396187980538284
+    second: StraightShot_Hurt_34
+  - first:
+      213: -4561328938783326791
+    second: StraightShot_Hurt_35
+  - first:
+      213: 5266745623475125905
+    second: StraightShot_Hurt_36
+  - first:
+      213: 2264709339057862017
+    second: StraightShot_Hurt_37
+  - first:
+      213: -1688157744127656789
+    second: StraightShot_Hurt_38
+  - first:
+      213: 664160548534865091
+    second: StraightShot_Hurt_39
+  - first:
+      213: -8625043930029247795
+    second: StraightShot_Hurt_40
+  - first:
+      213: 6590938985997656628
+    second: StraightShot_Hurt_41
+  - first:
+      213: -7863902694309763513
+    second: StraightShot_Hurt_42
+  - first:
+      213: 3606694964614400115
+    second: StraightShot_Hurt_43
+  - first:
+      213: -5397408465990837623
+    second: StraightShot_Hurt_44
+  - first:
+      213: 7974818141746355472
+    second: StraightShot_Hurt_45
+  - first:
+      213: -8158916287688312726
+    second: StraightShot_Hurt_46
+  - first:
+      213: 7357736919113753863
+    second: StraightShot_Hurt_47
+  - first:
+      213: -1590628270143736376
+    second: StraightShot_Hurt_48
+  - first:
+      213: -1673029372409568049
+    second: StraightShot_Hurt_49
+  - first:
+      213: -7865008215467171582
+    second: StraightShot_Hurt_50
+  - first:
+      213: 8657033050546626314
+    second: StraightShot_Hurt_51
+  - first:
+      213: -6222102505321166664
+    second: StraightShot_Hurt_52
+  - first:
+      213: -4346335935948971064
+    second: StraightShot_Hurt_53
+  - first:
+      213: 5361969982585598488
+    second: StraightShot_Hurt_54
+  - first:
+      213: 6416705990374905609
+    second: StraightShot_Hurt_55
+  - first:
+      213: 442242349611056107
+    second: StraightShot_Hurt_56
+  - first:
+      213: 4521001938176169232
+    second: StraightShot_Hurt_57
+  - first:
+      213: 448842239839222322
+    second: StraightShot_Hurt_58
+  - first:
+      213: 3592074131793897769
+    second: StraightShot_Hurt_59
+  - first:
+      213: -7723745875599696588
+    second: StraightShot_Hurt_60
+  - first:
+      213: 9126509386185945206
+    second: StraightShot_Hurt_61
+  - first:
+      213: 1628654622942625745
+    second: StraightShot_Hurt_62
+  - first:
+      213: -8317528774451478175
+    second: StraightShot_Hurt_63
+  - first:
+      213: 1214989404365976191
+    second: StraightShot_Hurt_64
+  - first:
+      213: -7595790984571913160
+    second: StraightShot_Hurt_65
+  - first:
+      213: 8183328637814858119
+    second: StraightShot_Hurt_66
+  - first:
+      213: 3867910176292957152
+    second: StraightShot_Hurt_67
+  - first:
+      213: -879284524773284241
+    second: StraightShot_Hurt_68
+  - first:
+      213: 6308108208768542393
+    second: StraightShot_Hurt_69
+  - first:
+      213: -4091198608339008128
+    second: StraightShot_Hurt_70
+  - first:
+      213: -5929215403328860367
+    second: StraightShot_Hurt_71
+  - first:
+      213: 4533452594465339957
+    second: StraightShot_Hurt_72
+  - first:
+      213: -3147329600086098059
+    second: StraightShot_Hurt_73
+  - first:
+      213: 1214921624802533710
+    second: StraightShot_Hurt_74
+  - first:
+      213: -6207684562700978831
+    second: StraightShot_Hurt_75
+  - first:
+      213: -5323398308341879013
+    second: StraightShot_Hurt_76
+  - first:
+      213: 5568276877432583155
+    second: StraightShot_Hurt_77
+  - first:
+      213: -1291470350767539056
+    second: StraightShot_Hurt_78
+  - first:
+      213: -7826271980376171476
+    second: StraightShot_Hurt_79
+  - first:
+      213: -528464795617138750
+    second: StraightShot_Hurt_80
+  - first:
+      213: 6363036052094638243
+    second: StraightShot_Hurt_81
+  - first:
+      213: -2924992056062616288
+    second: StraightShot_Hurt_82
+  - first:
+      213: 1880941808767159452
+    second: StraightShot_Hurt_83
+  - first:
+      213: -156810269701173852
+    second: StraightShot_Hurt_84
+  - first:
+      213: 4328294402241345837
+    second: StraightShot_Hurt_85
+  - first:
+      213: -1164177464581604122
+    second: StraightShot_Hurt_86
+  - first:
+      213: -3879596343177404252
+    second: StraightShot_Hurt_87
+  - first:
+      213: -7749721330970400724
+    second: StraightShot_Hurt_88
+  - first:
+      213: 5669359055930375742
+    second: StraightShot_Hurt_89
+  - first:
+      213: -1629574677956248365
+    second: StraightShot_Hurt_90
+  - first:
+      213: 8744867321658970102
+    second: StraightShot_Hurt_91
+  - first:
+      213: -2405010657036312811
+    second: StraightShot_Hurt_92
+  - first:
+      213: -657361956858939915
+    second: StraightShot_Hurt_93
+  - first:
+      213: 1224498177763859501
+    second: StraightShot_Hurt_94
+  - first:
+      213: 3903029670071237868
+    second: StraightShot_Hurt_95
+  - first:
+      213: 4825520283688713473
+    second: StraightShot_Hurt_96
+  - first:
+      213: -6354299599606582751
+    second: StraightShot_Hurt_97
+  - first:
+      213: 8680248237924971523
+    second: StraightShot_Hurt_98
+  - first:
+      213: 4089088654903557202
+    second: StraightShot_Hurt_99
+  - first:
+      213: 3501318193954977251
+    second: StraightShot_Hurt_100
+  - first:
+      213: -5601385573211254713
+    second: StraightShot_Hurt_101
+  - first:
+      213: 3798507228412750743
+    second: StraightShot_Hurt_102
+  - first:
+      213: -4770412339904538837
+    second: StraightShot_Hurt_103
+  - first:
+      213: -4108166587624909888
+    second: StraightShot_Hurt_104
+  - first:
+      213: -4967373159163344024
+    second: StraightShot_Hurt_105
+  - first:
+      213: 9090220825641132265
+    second: StraightShot_Hurt_106
+  - first:
+      213: 1442621985693916255
+    second: StraightShot_Hurt_107
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6880
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71dc1be0fc04c724a80fd79f33b189d0
+      internalID: 1289112373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_1
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 6880
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97d984370c8ff0f4bb3445a35f3356de
+      internalID: 1186469031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_2
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 6880
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3382887db1a904f4e86f6464cffbd8fd
+      internalID: -934216938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_3
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 6880
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b43ad9e6503b664d8fe4b52129dc5db
+      internalID: -327878113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_4
+      rect:
+        serializedVersion: 2
+        x: 3388
+        y: 6880
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 813d10cf9a2ee334da1c32d796076327
+      internalID: -72959783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_5
+      rect:
+        serializedVersion: 2
+        x: 4235
+        y: 6880
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 128776b2978f15041a150825fe3af196
+      internalID: 1355589838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6192
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a33fbb680093a854bad5c0c83aa9cfb7
+      internalID: 1424147278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_7
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 6192
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 676718c4c59d86943a8e9f0b92326909
+      internalID: 1553451628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_8
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 6192
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b3a103ef32514d4d9896f4e5c30155c
+      internalID: -1317875744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_9
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 6192
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0f6993c8832f42449566c5fa3163c01
+      internalID: -2080622998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_10
+      rect:
+        serializedVersion: 2
+        x: 3388
+        y: 6192
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bac142d30fcc5804d8e53d7dd295b835
+      internalID: -2146162453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_11
+      rect:
+        serializedVersion: 2
+        x: 4235
+        y: 6192
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36180c4e3fdaa98478187d6e8340316c
+      internalID: -239631169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5504
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0760eed937337d44e9a3df4c0f05027d
+      internalID: 1740811989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_13
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 5504
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 091947aac3543654db008372a83ae13d
+      internalID: 779822279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_14
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 5504
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2930e7a90076cc34bbd7edb6e5588b4e
+      internalID: 1854369499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_15
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 5504
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a731af09b6c562f4f950cd97c3885de1
+      internalID: -1201614354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_16
+      rect:
+        serializedVersion: 2
+        x: 3388
+        y: 5504
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6105832b7de8e43bf560989f32610e
+      internalID: -1988249579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_17
+      rect:
+        serializedVersion: 2
+        x: 4235
+        y: 5504
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 013564902f84963478f819bc0da65225
+      internalID: 685519945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4816
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66fd3b0315a9a0142ab2a8f7b35517ec
+      internalID: -815603546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_19
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 4816
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 305d27ee08cd3e540bf4bd63b1dc65b3
+      internalID: -1226183212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_20
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 4816
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ece499f737de604584f08a21bf7aac7
+      internalID: 1509927066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_21
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 4816
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c72ec39798facf4a8f74971a8cc4a06
+      internalID: -1775029273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_22
+      rect:
+        serializedVersion: 2
+        x: 3388
+        y: 4816
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 271f5fb5f73af774e8ae0dfe8ac8ff62
+      internalID: 31258907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_23
+      rect:
+        serializedVersion: 2
+        x: 4235
+        y: 4816
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 094c47a32f6389d43a5a38c4c34c4b60
+      internalID: 863114873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4128
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a4634945e6b4584397aef09be2d713a
+      internalID: 1514764971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_25
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 4128
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 449094424239f554da5317e9fb55b5c2
+      internalID: 1917280422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_26
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 4128
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18fe9386a4820d54da88860dcd7a3ec0
+      internalID: -1035176734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_27
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 4128
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9473f800b42bfb4408111f223f71b2e6
+      internalID: 153729885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_28
+      rect:
+        serializedVersion: 2
+        x: 3388
+        y: 4128
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78bc3e58ba2771a4b91b6c41ce6419e3
+      internalID: 1623665347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_29
+      rect:
+        serializedVersion: 2
+        x: 4235
+        y: 4128
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afd202c22ea0ac64789f875eb358cc11
+      internalID: 1537426448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3440
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30a42fb8e28dca74c87ad829130f8c9a
+      internalID: -1801770220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_31
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 3440
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e03cf58070629745bcf451b99af1137
+      internalID: 531106245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_32
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 3440
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bd64b9d6d9050142a26b66c6540c1c9
+      internalID: -2122469003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_33
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 3440
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c6f67f07032c424ab1cc03d75ab5d8e
+      internalID: -1844522673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_34
+      rect:
+        serializedVersion: 2
+        x: 3388
+        y: 3440
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdedc0b07f99bce42b843fe650be1c30
+      internalID: 1450849207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_35
+      rect:
+        serializedVersion: 2
+        x: 4235
+        y: 3440
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38bcd2cb44b4cf949b1a5cccd32082b8
+      internalID: 851511579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2752
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92db31cfa9a30f94d80d9a4f686664cd
+      internalID: 1493428976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_37
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 2752
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e9a530502b47ab4c8b9599592410311
+      internalID: 2073792158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_38
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 2752
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99005f9e07c1284499683f09877f3be9
+      internalID: -985100560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_39
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 2752
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ded3c415fbbb9ea45afe7ede305d9b39
+      internalID: 1923956700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_40
+      rect:
+        serializedVersion: 2
+        x: 3388
+        y: 2752
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7201190be62eeed4e8a8befde0fb07f2
+      internalID: -2012413155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_41
+      rect:
+        serializedVersion: 2
+        x: 4235
+        y: 2752
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33d12226c6dac70439bce2aaa391d5f2
+      internalID: 407261446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2064
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d3bdd5859e46c144a2f61fd4a02a80d
+      internalID: -1115259724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_43
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 2064
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b9322a488a2be4e8ce3125bda5ff4f
+      internalID: -286659721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_44
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 2064
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 714268fa961e1c149a0a39ac1cc295b8
+      internalID: -1253656426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_45
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 2064
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaeead33376540e4fba05057d627110a
+      internalID: -976899669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_46
+      rect:
+        serializedVersion: 2
+        x: 3388
+        y: 2064
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ad2bbbf27f608545984da53b812296d
+      internalID: -2092113612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_47
+      rect:
+        serializedVersion: 2
+        x: 4235
+        y: 2064
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67247f5b8ce636b45a0a1b37692506f2
+      internalID: -647775159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1376
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 525276d8f02fbe74c926da232af29827
+      internalID: -2043842528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_49
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 1376
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d5d6a4553d177848be9cc8515371604
+      internalID: -303864083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_50
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 1376
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c129482e44de32149bc3b64e39e4a347
+      internalID: 1402944238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_51
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 1376
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9405c00acb2cd2242a4cfcc7612dee64
+      internalID: 466260605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_52
+      rect:
+        serializedVersion: 2
+        x: 3388
+        y: 1376
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f10755fc26a057458cb4493c403bde3
+      internalID: 2023885593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_53
+      rect:
+        serializedVersion: 2
+        x: 4235
+        y: 1376
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 007da18665a58fb4fb84c1e6296e3edf
+      internalID: 184187007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 688
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 176e881475a1f61448f2394ab13a5faa
+      internalID: -1255532619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_55
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 688
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2130d31b02f4a694ab7cd92e716b6c70
+      internalID: -901818481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_56
+      rect:
+        serializedVersion: 2
+        x: 1694
+        y: 688
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ebbca578dec1f24ba95bb6e059fc4c7
+      internalID: 975379183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_57
+      rect:
+        serializedVersion: 2
+        x: 2541
+        y: 688
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 520eb4131c7785c44859549eae065c52
+      internalID: 735264190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_58
+      rect:
+        serializedVersion: 2
+        x: 3388
+        y: 688
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93280970009cf5f4ca57d31031e38b96
+      internalID: 44930106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_59
+      rect:
+        serializedVersion: 2
+        x: 4235
+        y: 688
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7c7401e09642164283219b512b2e060
+      internalID: 1071663341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c7498cd04fc16f469b930679cf641ff
+      internalID: 121028029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Straight_Shot_Hurt_61
+      rect:
+        serializedVersion: 2
+        x: 847
+        y: 0
+        width: 847
+        height: 688
+      alignment: 9
+      pivot: {x: 0.7325, y: 0.018}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 145caa99ba659d741873b0ee20dec1ad
+      internalID: -169360287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f8f3b46d54da29c42bf4d0beb421b3be
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":11.0},"gridSpriteSize":{"x":847.0,"y":688.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.7325000166893005,"y":0.017999999225139619},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Straight_Shot_Hurt_0: 1289112373
+      Straight_Shot_Hurt_1: 1186469031
+      Straight_Shot_Hurt_10: -2146162453
+      Straight_Shot_Hurt_11: -239631169
+      Straight_Shot_Hurt_12: 1740811989
+      Straight_Shot_Hurt_13: 779822279
+      Straight_Shot_Hurt_14: 1854369499
+      Straight_Shot_Hurt_15: -1201614354
+      Straight_Shot_Hurt_16: -1988249579
+      Straight_Shot_Hurt_17: 685519945
+      Straight_Shot_Hurt_18: -815603546
+      Straight_Shot_Hurt_19: -1226183212
+      Straight_Shot_Hurt_2: -934216938
+      Straight_Shot_Hurt_20: 1509927066
+      Straight_Shot_Hurt_21: -1775029273
+      Straight_Shot_Hurt_22: 31258907
+      Straight_Shot_Hurt_23: 863114873
+      Straight_Shot_Hurt_24: 1514764971
+      Straight_Shot_Hurt_25: 1917280422
+      Straight_Shot_Hurt_26: -1035176734
+      Straight_Shot_Hurt_27: 153729885
+      Straight_Shot_Hurt_28: 1623665347
+      Straight_Shot_Hurt_29: 1537426448
+      Straight_Shot_Hurt_3: -327878113
+      Straight_Shot_Hurt_30: -1801770220
+      Straight_Shot_Hurt_31: 531106245
+      Straight_Shot_Hurt_32: -2122469003
+      Straight_Shot_Hurt_33: -1844522673
+      Straight_Shot_Hurt_34: 1450849207
+      Straight_Shot_Hurt_35: 851511579
+      Straight_Shot_Hurt_36: 1493428976
+      Straight_Shot_Hurt_37: 2073792158
+      Straight_Shot_Hurt_38: -985100560
+      Straight_Shot_Hurt_39: 1923956700
+      Straight_Shot_Hurt_4: -72959783
+      Straight_Shot_Hurt_40: -2012413155
+      Straight_Shot_Hurt_41: 407261446
+      Straight_Shot_Hurt_42: -1115259724
+      Straight_Shot_Hurt_43: -286659721
+      Straight_Shot_Hurt_44: -1253656426
+      Straight_Shot_Hurt_45: -976899669
+      Straight_Shot_Hurt_46: -2092113612
+      Straight_Shot_Hurt_47: -647775159
+      Straight_Shot_Hurt_48: -2043842528
+      Straight_Shot_Hurt_49: -303864083
+      Straight_Shot_Hurt_5: 1355589838
+      Straight_Shot_Hurt_50: 1402944238
+      Straight_Shot_Hurt_51: 466260605
+      Straight_Shot_Hurt_52: 2023885593
+      Straight_Shot_Hurt_53: 184187007
+      Straight_Shot_Hurt_54: -1255532619
+      Straight_Shot_Hurt_55: -901818481
+      Straight_Shot_Hurt_56: 975379183
+      Straight_Shot_Hurt_57: 735264190
+      Straight_Shot_Hurt_58: 44930106
+      Straight_Shot_Hurt_59: 1071663341
+      Straight_Shot_Hurt_6: 1424147278
+      Straight_Shot_Hurt_60: 121028029
+      Straight_Shot_Hurt_61: -169360287
+      Straight_Shot_Hurt_7: 1553451628
+      Straight_Shot_Hurt_8: -1317875744
+      Straight_Shot_Hurt_9: -2080622998
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

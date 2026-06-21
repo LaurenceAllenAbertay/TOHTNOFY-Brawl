@@ -21,13 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -2146675894205436065, guid: 83954646e7b20d34cb35d23828a5c575, type: 3}
+      value: {fileID: -2146675894205436065, guid: 4dacc7d5ca719a749a6ba0a37b32ce10, type: 3}
     - time: 0.016666668
-      value: {fileID: 419399098797981143, guid: 83954646e7b20d34cb35d23828a5c575, type: 3}
+      value: {fileID: 419399098797981143, guid: 4dacc7d5ca719a749a6ba0a37b32ce10, type: 3}
     - time: 0.033333335
-      value: {fileID: -452306542, guid: 83954646e7b20d34cb35d23828a5c575, type: 3}
+      value: {fileID: -8536324067301848253, guid: 4dacc7d5ca719a749a6ba0a37b32ce10, type: 3}
     attribute: m_Sprite
-    path: 
+    path: End Turn Button
     classID: 114
     script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
     flags: 2
@@ -39,7 +39,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 0
+      path: 1064632092
       attribute: 2015549526
       script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
       typeID: 114
@@ -48,9 +48,9 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -2146675894205436065, guid: 83954646e7b20d34cb35d23828a5c575, type: 3}
-    - {fileID: 419399098797981143, guid: 83954646e7b20d34cb35d23828a5c575, type: 3}
-    - {fileID: -452306542, guid: 83954646e7b20d34cb35d23828a5c575, type: 3}
+    - {fileID: -2146675894205436065, guid: 4dacc7d5ca719a749a6ba0a37b32ce10, type: 3}
+    - {fileID: 419399098797981143, guid: 4dacc7d5ca719a749a6ba0a37b32ce10, type: 3}
+    - {fileID: -8536324067301848253, guid: 4dacc7d5ca719a749a6ba0a37b32ce10, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

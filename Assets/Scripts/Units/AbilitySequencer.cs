@@ -91,7 +91,8 @@ namespace DDD.TNFY.BRAWL
         private IEnumerator ExecuteTimedEffects(AbilityContext ctx, List<Unit> targets)
         {
             if (enableDebugLogging)
-                Debug.Log($"[AbilitySequencer:{unit.name}] Starting timed effects for {ctx.ability.AnimationState}");
+                Debug.Log($"[AbilitySequencer:{unit.name}] Starting timed effects for {ctx.ability.AnimationState}" +
+                          $"{(unitAnimator.IsHurtIdle && !string.IsNullOrEmpty(ctx.ability.AnimationStateHurt) ? $" (hurt override: {ctx.ability.AnimationStateHurt})" : "")}");
 
             // STEP 1: Pan camera to caster — animation begins as soon as the transition completes
             if (cameraController != null)
@@ -114,9 +115,21 @@ namespace DDD.TNFY.BRAWL
             // they are removed from the targets list so no effects land on them.
             yield return StartCoroutine(ProcessWarnedDodges(ctx, targets));
 
-            // STEP 3: Play animation
+            // STEP 3: Play animation — use the hurt variant when the caster is in the hurt idle
+            // tier and the ability has a hurt animation configured; fall back to the standard state.
+            string resolvedAnimState = ctx.ability.AnimationState;
             if (!string.IsNullOrEmpty(ctx.ability.AnimationState))
-                unitAnimator.PlayAnimation(ctx.ability.AnimationState);
+            {
+                bool useHurtAnim = unitAnimator.IsHurtIdle
+                    && !string.IsNullOrEmpty(ctx.ability.AnimationStateHurt)
+                    && unitAnimator.HasState(ctx.ability.AnimationStateHurt);
+
+                resolvedAnimState = useHurtAnim
+                    ? ctx.ability.AnimationStateHurt
+                    : ctx.ability.AnimationState;
+
+                unitAnimator.PlayAnimation(resolvedAnimState);
+            }
 
             // STEP 4: Subscribe to cast-effect animation event
             bool castEffectTriggered = false;
@@ -173,15 +186,15 @@ namespace DDD.TNFY.BRAWL
 
             // Non-charge: wait for the animation to actually start
             float waitTime = 0f;
-            while (waitTime < 1f && !animator.GetCurrentAnimatorStateInfo(0).IsName(ctx.ability.AnimationState))
+            while (waitTime < 1f && !animator.GetCurrentAnimatorStateInfo(0).IsName(resolvedAnimState))
             {
                 yield return null;
                 waitTime += Time.deltaTime;
             }
 
-            if (!animator.GetCurrentAnimatorStateInfo(0).IsName(ctx.ability.AnimationState))
+            if (!animator.GetCurrentAnimatorStateInfo(0).IsName(resolvedAnimState))
             {
-                Debug.LogWarning($"[AbilitySequencer] Animation {ctx.ability.AnimationState} never started, using immediate effects");
+                Debug.LogWarning($"[AbilitySequencer] Animation {resolvedAnimState} never started, using immediate effects");
                 unitAnimator.OnCastEffectEvent -= OnCastEffect;
                 unitAnimator.OnAbilityEffectEvent -= OnAbilityEffect;
                 yield return StartCoroutine(ExecuteImmediateEffects(ctx, targets));
@@ -192,7 +205,7 @@ namespace DDD.TNFY.BRAWL
             while (true)
             {
                 var stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-                if (!stateInfo.IsName(ctx.ability.AnimationState)) break;
+                if (!stateInfo.IsName(resolvedAnimState)) break;
                 if (stateInfo.normalizedTime >= 1.0f && !stateInfo.loop) break;
                 yield return null;
             }

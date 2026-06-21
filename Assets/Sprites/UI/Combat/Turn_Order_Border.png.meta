@@ -1,13 +1,16 @@
 fileFormatVersion: 2
-guid: 0e7d2ad666f5ad44ea4d103e4155e3fc
+guid: b4a8b13ed36b6c94bacdd425f5a7a181
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2162204932035706523
-    second: Turnorder_Border_0
+      213: -8072812355158119316
+    second: Turn_Order_Border_0
   - first:
-      213: 7126719567886726537
-    second: Turnorder_Border_1
+      213: -7953886925627454401
+    second: Turn_Order_Border_1
+  - first:
+      213: 6718870785492356325
+    second: Turn_Order_Border_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -121,18 +124,18 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1317
-        height: 350
+        width: 1749
+        height: 424
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 5a9a2677a67322b468be904a3b641c03
-      internalID: 600291398
+      spriteID: c6c6a604feb97ff80800000000000000
+      internalID: -8072812355158119316
       vertices: []
       indices: 
       edges: []
@@ -141,20 +144,20 @@ TextureImporter:
       name: Turn_Order_Border_1
       rect:
         serializedVersion: 2
-        x: 1318
+        x: 1749
         y: 0
-        width: 1317
-        height: 350
+        width: 1749
+        height: 424
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 74ffe86a5675d214f92621ee42248e7d
-      internalID: -860599551
+      spriteID: f3c0a5e8bfd1e9190800000000000000
+      internalID: -7953886925627454401
       vertices: []
       indices: 
       edges: []
@@ -163,20 +166,20 @@ TextureImporter:
       name: Turn_Order_Border_2
       rect:
         serializedVersion: 2
-        x: 2636
+        x: 3498
         y: 0
-        width: 1317
-        height: 350
+        width: 1749
+        height: 424
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 77aba811a817d4e4e99a245012dec794
-      internalID: -969048234
+      spriteID: 5ec850d91693e3d50800000000000000
+      internalID: 6718870785492356325
       vertices: []
       indices: 
       edges: []
@@ -185,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5662889f4c0f6c34b9ef4c3b48eaa406
+    spriteID: 72b1d914dc90dd746a0c9014e1f679ef
     internalID: 0
     vertices: []
     indices: 
@@ -195,11 +198,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":1318.0,"y":350.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":1749.0,"y":424.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Turn_Order_Border_0: 600291398
-      Turn_Order_Border_1: -860599551
-      Turn_Order_Border_2: -969048234
+      Turn_Order_Border_0: -8072812355158119316
+      Turn_Order_Border_1: -7953886925627454401
+      Turn_Order_Border_2: 6718870785492356325
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

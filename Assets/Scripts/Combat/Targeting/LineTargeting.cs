@@ -113,10 +113,13 @@ namespace DDD.TNFY.BRAWL
                         // If there is a wall between the previous tile and this one,
                         // block this lane for all remaining steps (unless the ability
                         // is flagged to pass through walls).
-                        // prevTile can be null when the previous step was a gap — in that
-                        // case IsBlockedByWall would return true on the null, falsely
-                        // blocking the lane. Skip the wall check when we flew over a gap.
-                        if (!affectsThroughWalls && prevTile != null && IsBlockedByWall(prevTile, nextTile))
+                        // prevTile can be null when the previous step was a gap (no tile
+                        // registered at that grid position — e.g. a tree or wall object
+                        // sitting on a non-tile space). In that case we still need to
+                        // check for walls; fall back to raycasting from the caster's
+                        // start tile so the projectile origin is always valid.
+                        Tile raycastFrom = prevTile ?? start;
+                        if (!affectsThroughWalls && IsBlockedByWall(raycastFrom, nextTile))
                         {
                             laneBlocked[laneIndex] = true;
                             continue;

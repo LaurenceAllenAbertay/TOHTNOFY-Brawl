@@ -27,7 +27,8 @@ MonoBehaviour:
   canExecuteWithoutTargets: 1
   endTurnOnCast: 1
   suppressCameraTransitions: 0
-  animationState: Attack_Melee_1
+  animationState: No_Animation
+  animationStateHurt: No_Animation
   castEffectPrefab: {fileID: 0}
   castEffectOffset: {x: 0, y: 0, z: 0}
   parentCastEffectToCaster: 0

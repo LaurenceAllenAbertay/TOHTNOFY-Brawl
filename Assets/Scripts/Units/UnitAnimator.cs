@@ -47,6 +47,7 @@ namespace DDD.TNFY.BRAWL
         public bool IsAnimating => animator != null && animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f;
         public bool IsInKnockbackSequence => isInKnockbackSequence;
         public string CurrentAnimation => currentAnimation;
+        public bool IsHurtIdle => _isHurtIdle;
 
         // ── Unity lifecycle ───────────────────────────────────────────────────
 

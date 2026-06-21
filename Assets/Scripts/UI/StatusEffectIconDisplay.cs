@@ -16,15 +16,6 @@ namespace DDD.TNFY.BRAWL
     ///                                      + ContentSizeFitter (Horizontal: Preferred Size)
     ///           └── (spawned at runtime) ← Image prefab with a fixed Width/Height RectTransform
     ///
-    /// ── Setup steps ──────────────────────────────────────────────────────────
-    ///  1. Add a Canvas (World Space, Render Camera = Main Camera) child to your unit prefab.
-    ///     Give it whatever world-space position/scale suits the art (e.g. y = 2.2, scale = 0.01).
-    ///  2. Add a child RectTransform named "IconContainer" with:
-    ///       • HorizontalLayoutGroup  (spacing as desired, child alignment: Middle Centre)
-    ///       • ContentSizeFitter      (Horizontal Fit: Preferred Size)
-    ///  3. Create a simple prefab that is just an Image component on a RectTransform
-    ///     with a fixed size (e.g. 48x48). Assign it to the iconPrefab field below.
-    ///  4. Attach this script to the Canvas GameObject and wire up the two references.
     ///
     /// ── How it works ─────────────────────────────────────────────────────────
     ///  • On Start it looks for a Unit component in its parent hierarchy to know which
@@ -84,6 +75,7 @@ namespace DDD.TNFY.BRAWL
 
             StatusEffectManager.OnStatusEffectApplied += HandleEffectApplied;
             StatusEffectManager.OnStatusEffectRemoved += HandleEffectRemoved;
+            UnitManager.OnUnitDied += HandleUnitDied;
 
             // Rebuild once at start in case effects were applied before this component woke.
             RebuildIcons();
@@ -93,6 +85,7 @@ namespace DDD.TNFY.BRAWL
         {
             StatusEffectManager.OnStatusEffectApplied -= HandleEffectApplied;
             StatusEffectManager.OnStatusEffectRemoved -= HandleEffectRemoved;
+            UnitManager.OnUnitDied -= HandleUnitDied;
         }
 
         // ── Event handlers ────────────────────────────────────────────────────
@@ -107,6 +100,12 @@ namespace DDD.TNFY.BRAWL
         {
             if (target != _unit) return;
             RebuildIcons();
+        }
+
+        private void HandleUnitDied(Unit deadUnit)
+        {
+            if (deadUnit != _unit) return;
+            gameObject.SetActive(false);
         }
 
         // ── Icon rebuild ──────────────────────────────────────────────────────

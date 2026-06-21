@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -49,7 +50,21 @@ namespace DDD.TNFY.BRAWL
         // The unit this bar belongs to — resolved at Start via GetComponentInParent.
         private Unit _unit;
 
-        // ── Unity lifecycle ───────────────────────────────────────────────────
+        // ── Colour gradient ───────────────────────────────────────────────────
+        // Transitions from green (#1FF200) to red (#FF0000) between 20 % and 80 % health.
+        // Below 20 % the bar is fully red; above 80 % it is fully green.
+        private static readonly Color HealthColourHigh = new Color(0x1F / 255f, 0xF2 / 255f, 0x00 / 255f); // #1FF200
+        private static readonly Color HealthColourLow  = new Color(1f,           0f,           0f);           // #FF0000
+        private const float ColourThresholdLow  = 0.20f;
+        private const float ColourThresholdHigh = 0.80f;
+
+        // ── Tween ─────────────────────────────────────────────────────────────
+        [Header("Animation")]
+        [Tooltip("How long the fill and colour slide to their new values, in seconds.")]
+        [SerializeField] private float tweenDuration = 0.3f;
+
+        // Tracked so we can cancel and restart mid-tween when health changes rapidly.
+        private Coroutine _tweenCoroutine;
 
         private void Start()
         {
@@ -75,11 +90,13 @@ namespace DDD.TNFY.BRAWL
             healthBarRoot.SetActive(false);
 
             Unit.OnHealthChanged += HandleHealthChanged;
+            UnitManager.OnUnitDied += HandleUnitDied;
         }
 
         private void OnDestroy()
         {
             Unit.OnHealthChanged -= HandleHealthChanged;
+            UnitManager.OnUnitDied -= HandleUnitDied;
         }
 
         // ── Event handler ─────────────────────────────────────────────────────
@@ -88,6 +105,12 @@ namespace DDD.TNFY.BRAWL
         {
             if (changedUnit != _unit) return;
             RefreshBar();
+        }
+
+        private void HandleUnitDied(Unit deadUnit)
+        {
+            if (deadUnit != _unit) return;
+            healthBarRoot.SetActive(false);
         }
 
         // ── Bar update ────────────────────────────────────────────────────────
@@ -99,18 +122,63 @@ namespace DDD.TNFY.BRAWL
         /// </summary>
         private void RefreshBar()
         {
-            // Reveal the whole bar group on first damage taken.
-            if (!healthBarRoot.activeSelf)
-                healthBarRoot.SetActive(true);
-
             if (_unit.characterData == null || _unit.characterData.maxHealth <= 0)
+                return;
+
+            float targetFraction = Mathf.Clamp01((float)_unit.currentHealth / _unit.characterData.maxHealth);
+
+            // First reveal: show the root and snap to the correct value immediately
+            // so the bar doesn't slide in from nothing.
+            if (!healthBarRoot.activeSelf)
             {
-                healthBarImage.fillAmount = 1f;
+                healthBarRoot.SetActive(true);
+                ApplyBarValues(targetFraction);
                 return;
             }
 
-            float fraction = (float)_unit.currentHealth / _unit.characterData.maxHealth;
-            healthBarImage.fillAmount = Mathf.Clamp01(fraction);
+            // Subsequent changes: cancel any in-progress tween and slide from current values.
+            if (_tweenCoroutine != null)
+                StopCoroutine(_tweenCoroutine);
+
+            _tweenCoroutine = StartCoroutine(AnimateBar(targetFraction));
+        }
+
+        /// <summary>
+        /// Slides fillAmount and color from their current values to the target fraction
+        /// over tweenDuration seconds using SmoothStep easing.
+        /// </summary>
+        private IEnumerator AnimateBar(float targetFraction)
+        {
+            float startFill   = healthBarImage.fillAmount;
+            Color startColour = healthBarImage.color;
+
+            float targetColourT = Mathf.InverseLerp(ColourThresholdHigh, ColourThresholdLow, targetFraction);
+            Color targetColour  = Color.Lerp(HealthColourHigh, HealthColourLow, targetColourT);
+
+            float elapsed = 0f;
+            while (elapsed < tweenDuration)
+            {
+                elapsed += Time.deltaTime;
+                float t = Mathf.SmoothStep(0f, 1f, Mathf.Clamp01(elapsed / tweenDuration));
+
+                healthBarImage.fillAmount = Mathf.Lerp(startFill, targetFraction, t);
+                healthBarImage.color      = Color.Lerp(startColour, targetColour, t);
+
+                yield return null;
+            }
+
+            // Snap to exact final values once the tween completes.
+            ApplyBarValues(targetFraction);
+            _tweenCoroutine = null;
+        }
+
+        /// <summary>Immediately sets fill and colour with no animation.</summary>
+        private void ApplyBarValues(float fraction)
+        {
+            healthBarImage.fillAmount = fraction;
+
+            float colourT = Mathf.InverseLerp(ColourThresholdHigh, ColourThresholdLow, fraction);
+            healthBarImage.color = Color.Lerp(HealthColourHigh, HealthColourLow, colourT);
         }
     }
 }

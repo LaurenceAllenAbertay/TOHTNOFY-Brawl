@@ -21,12 +21,14 @@ MonoBehaviour:
   attackType: 0
   canHitEnemies: 1
   canHitAllies: 0
+  canTargetNeutral: 0
   passThroughUnits: 1
   maxTargets: 3
   canExecuteWithoutTargets: 0
   endTurnOnCast: 0
   suppressCameraTransitions: 0
-  animationState: Attack_Melee_1
+  animationState: No_Animation
+  animationStateHurt: No_Animation
   castEffectPrefab: {fileID: 0}
   castEffectOffset: {x: 0, y: 0, z: 0}
   parentCastEffectToCaster: 0

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ead9a2bbcfaebce4aaebad465cfb716b
+guid: 01f9b9d7b050dfa478e4546fea6e69a8
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -124,8 +124,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 186
-        height: 144
+        width: 131
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -144,10 +144,10 @@ TextureImporter:
       name: Button_Jump_1
       rect:
         serializedVersion: 2
-        x: 186
+        x: 131
         y: 0
-        width: 186
-        height: 144
+        width: 131
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,10 +166,10 @@ TextureImporter:
       name: Button_Jump_2
       rect:
         serializedVersion: 2
-        x: 372
+        x: 262
         y: 0
-        width: 186
-        height: 144
+        width: 131
+        height: 124
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 53630cbd32137754b9bd7e5da216fc62
+    spriteID: 65b60900e33f4344995b7e46f220eaea
     internalID: 0
     vertices: []
     indices: 
@@ -198,7 +198,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":186.0,"y":144.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":1.0},"gridSpriteSize":{"x":131.0,"y":124.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Button_Jump_0: 3786326033695909092
       Button_Jump_1: 5857209217957857916
