@@ -90,13 +90,11 @@ namespace DDD.TNFY.BRAWL
             healthBarRoot.SetActive(false);
 
             Unit.OnHealthChanged += HandleHealthChanged;
-            UnitManager.OnUnitDied += HandleUnitDied;
         }
 
         private void OnDestroy()
         {
             Unit.OnHealthChanged -= HandleHealthChanged;
-            UnitManager.OnUnitDied -= HandleUnitDied;
         }
 
         // ── Event handler ─────────────────────────────────────────────────────
@@ -105,12 +103,6 @@ namespace DDD.TNFY.BRAWL
         {
             if (changedUnit != _unit) return;
             RefreshBar();
-        }
-
-        private void HandleUnitDied(Unit deadUnit)
-        {
-            if (deadUnit != _unit) return;
-            healthBarRoot.SetActive(false);
         }
 
         // ── Bar update ────────────────────────────────────────────────────────
@@ -127,16 +119,23 @@ namespace DDD.TNFY.BRAWL
 
             float targetFraction = Mathf.Clamp01((float)_unit.currentHealth / _unit.characterData.maxHealth);
 
-            // First reveal: show the root and snap to the correct value immediately
-            // so the bar doesn't slide in from nothing.
+            // First reveal: always snap to FULL first, then tween down to the target value.
+            // This ensures the player sees the bar appear at full health and drain to the new
+            // value — even on a lethal first hit where targetFraction is 0. Without this,
+            // a one-shot kill would snap the bar straight to zero with no visible drain,
+            // and WaitForTweenComplete() would return immediately, skipping the death wait.
             if (!healthBarRoot.activeSelf)
             {
                 healthBarRoot.SetActive(true);
-                ApplyBarValues(targetFraction);
-                return;
+                ApplyBarValues(1f);
+
+                // If the hit somehow brought health back to full, nothing to tween.
+                if (Mathf.Approximately(targetFraction, 1f))
+                    return;
             }
 
-            // Subsequent changes: cancel any in-progress tween and slide from current values.
+            // Subsequent changes (and first-reveal drain): cancel any in-progress tween
+            // and slide from the current fill value down to the new target.
             if (_tweenCoroutine != null)
                 StopCoroutine(_tweenCoroutine);
 
@@ -179,6 +178,34 @@ namespace DDD.TNFY.BRAWL
 
             float colourT = Mathf.InverseLerp(ColourThresholdHigh, ColourThresholdLow, fraction);
             healthBarImage.color = Color.Lerp(HealthColourHigh, HealthColourLow, colourT);
+        }
+
+        // ── Sequencer API ─────────────────────────────────────────────────────
+
+        /// <summary>
+        /// Yields until the current health bar tween has finished (or immediately if
+        /// no tween is running). Called by AbilitySequencer so it can wait for the
+        /// bar to reach zero before hiding it and playing the death animation.
+        /// </summary>
+        public IEnumerator WaitForTweenComplete()
+        {
+            while (_tweenCoroutine != null)
+                yield return null;
+        }
+
+        /// <summary>
+        /// Instantly hides the health bar root with no animation. Called by
+        /// AbilitySequencer after the hurt animation and tween have both completed
+        /// on a unit that died, immediately before the death animation plays.
+        /// </summary>
+        public void HideImmediate()
+        {
+            if (_tweenCoroutine != null)
+            {
+                StopCoroutine(_tweenCoroutine);
+                _tweenCoroutine = null;
+            }
+            healthBarRoot.SetActive(false);
         }
     }
 }

@@ -75,7 +75,6 @@ namespace DDD.TNFY.BRAWL
 
             StatusEffectManager.OnStatusEffectApplied += HandleEffectApplied;
             StatusEffectManager.OnStatusEffectRemoved += HandleEffectRemoved;
-            UnitManager.OnUnitDied += HandleUnitDied;
 
             // Rebuild once at start in case effects were applied before this component woke.
             RebuildIcons();
@@ -85,7 +84,6 @@ namespace DDD.TNFY.BRAWL
         {
             StatusEffectManager.OnStatusEffectApplied -= HandleEffectApplied;
             StatusEffectManager.OnStatusEffectRemoved -= HandleEffectRemoved;
-            UnitManager.OnUnitDied -= HandleUnitDied;
         }
 
         // ── Event handlers ────────────────────────────────────────────────────
@@ -102,9 +100,16 @@ namespace DDD.TNFY.BRAWL
             RebuildIcons();
         }
 
-        private void HandleUnitDied(Unit deadUnit)
+        // ── Sequencer API ─────────────────────────────────────────────────────
+
+        /// <summary>
+        /// Hides this status effect display immediately. Called by AbilitySequencer and
+        /// UnitDeathSequencer after the hurt animation and health bar tween have finished
+        /// on a lethal hit — immediately before the death animation plays.
+        /// Never called in response to OnUnitDied directly; timing is owned by the sequencers.
+        /// </summary>
+        public void HideImmediate()
         {
-            if (deadUnit != _unit) return;
             gameObject.SetActive(false);
         }
 

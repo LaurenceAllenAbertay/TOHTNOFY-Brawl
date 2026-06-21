@@ -365,6 +365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBarRoot: {fileID: 660597937494392645}
   healthBarImage: {fileID: 2273770091490533807}
+  tweenDuration: 0.6
 --- !u!223 &8656590949017867720
 Canvas:
   m_ObjectHideFlags: 0

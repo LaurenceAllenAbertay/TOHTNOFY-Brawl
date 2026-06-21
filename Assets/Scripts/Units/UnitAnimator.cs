@@ -323,6 +323,38 @@ namespace DDD.TNFY.BRAWL
         }
 
         /// <summary>
+        /// Yields until the Hurt animation has finished playing.
+        /// Waits up to maxWait seconds before giving up gracefully.
+        /// Call this from AbilitySequencer immediately after PlayHurt() to
+        /// synchronise with the health bar tween before checking for death.
+        /// </summary>
+        public IEnumerator WaitForHurtAnimation()
+        {
+            // One frame grace period for the animator to register the state change.
+            yield return null;
+
+            const float maxWait = 5f;
+            float elapsed = 0f;
+
+            while (elapsed < maxWait)
+            {
+                var stateInfo = animator.GetCurrentAnimatorStateInfo(0);
+                if (stateInfo.IsName(HURT_STATE) && stateInfo.normalizedTime >= 1.0f && !stateInfo.loop)
+                    yield break;
+
+                // If the animator has already transitioned away (e.g. back to idle),
+                // the hurt animation is considered done.
+                if (!stateInfo.IsName(HURT_STATE))
+                    yield break;
+
+                elapsed += Time.deltaTime;
+                yield return null;
+            }
+
+            Debug.LogWarning($"[UnitAnimator] Hurt animation wait timed out on {gameObject.name}.");
+        }
+
+        /// <summary>
         /// Play the death animation (plays once and stays on last frame).
         /// Forces animator speed to 1 so the animation plays at full speed regardless
         /// of whether this unit was at inactive-turn speed when it died.

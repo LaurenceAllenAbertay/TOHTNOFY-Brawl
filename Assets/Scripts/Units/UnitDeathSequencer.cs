@@ -42,6 +42,9 @@ namespace DDD.TNFY.BRAWL
         // ── Internal state ────────────────────────────────────────────────────
 
         private readonly Queue<PendingDeath> _queue = new Queue<PendingDeath>();
+        // Tracks units whose death has already been presented inline by AbilitySequencer
+        // so DrainDeathQueue can skip them and avoid a double-presentation.
+        private readonly HashSet<Unit> _presentedInline = new HashSet<Unit>();
         private bool _isDraining = false;
 
         private CameraController _camera;
@@ -106,8 +109,15 @@ namespace DDD.TNFY.BRAWL
             while (_queue.Count > 0)
             {
                 var entry = _queue.Dequeue();
+
+                // Skip any unit whose death was already presented inline by AbilitySequencer.
+                if (_presentedInline.Contains(entry.victim))
+                    continue;
+
                 yield return StartCoroutine(PresentDeath(entry.victim));
             }
+
+            _presentedInline.Clear();
 
             // Return camera to the killer / active unit after all deaths are shown.
             if (returnToUnit != null && _camera != null && returnToUnit.gameObject != null)
@@ -122,6 +132,47 @@ namespace DDD.TNFY.BRAWL
         }
 
         // ── Private helpers ───────────────────────────────────────────────────
+
+        /// <summary>
+        /// Presents a single unit's death animation without panning the camera —
+        /// the camera is already on this unit because AbilitySequencer targeted them.
+        ///
+        /// Called inline from AbilitySequencer.PlayTargetEffectsWithAnimation immediately
+        /// after the hurt animation and health bar tween finish on a lethal hit, so the
+        /// player sees: hurt reaction → bar drains to zero → bar hides → death animation.
+        ///
+        /// Marks the victim in _presentedInline so DrainDeathQueue skips them.
+        /// </summary>
+        public IEnumerator PresentDeathInline(Unit victim)
+        {
+            if (victim == null) yield break;
+
+            // Mark as handled so DrainDeathQueue skips this entry.
+            _presentedInline.Add(victim);
+
+            // Play death animation and wait for it to complete.
+            var unitAnimator = victim.GetComponent<UnitAnimator>();
+            if (unitAnimator != null)
+            {
+                unitAnimator.PlayDeath();
+                yield return StartCoroutine(WaitForDeathAnimation(victim));
+            }
+
+            // Linger so the player can register the death before the camera moves on.
+            yield return new WaitForSeconds(lingerAfterDeathSeconds);
+
+            // Transition the unit to a body or remove it — same logic as PresentDeath.
+            bool shouldLeaveBody = victim is PlayerUnit ||
+                                   (victim is EnemyUnit enemy && enemy.leavesBodyOnDeath);
+
+            if (shouldLeaveBody)
+                victim.BecomeBody();
+            else
+            {
+                UnitManager.UnregisterUnit(victim);
+                victim.gameObject.SetActive(false);
+            }
+        }
 
         /// <summary>
         /// Pans camera to the victim, plays their death animation to completion,
@@ -140,6 +191,19 @@ namespace DDD.TNFY.BRAWL
                         _camera.UnitFocusPosition(victim),
                         cameraTransitionDuration));
             }
+
+            // ── 1.5. Wait for any residual health bar tween, then hide bar and
+            //         status effects before the death animation starts.
+            //         (The camera pan is typically longer than the tween, but we
+            //         wait explicitly so tile-effect deaths are handled correctly
+            //         regardless of timing.)
+            var healthBar = victim.GetComponentInChildren<UnitHealthBarDisplay>();
+            if (healthBar != null)
+            {
+                yield return StartCoroutine(healthBar.WaitForTweenComplete());
+                healthBar.HideImmediate();
+            }
+            victim.GetComponentInChildren<StatusEffectIconDisplay>()?.HideImmediate();
 
             // ── 2. Play death animation at full speed ─────────────────────────
             var unitAnimator = victim.GetComponent<UnitAnimator>();

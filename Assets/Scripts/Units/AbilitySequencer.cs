@@ -305,8 +305,6 @@ namespace DDD.TNFY.BRAWL
 
         private IEnumerator HandleSingleTargetingEffects(AbilityContext ctx, List<Unit> targets)
         {
-            bool anyTargetDied = false;
-
             foreach (var target in targets)
             {
                 if (target == null) continue;
@@ -316,26 +314,19 @@ namespace DDD.TNFY.BRAWL
 
                 yield return StartCoroutine(PlayTargetEffectsWithAnimation(ctx, new List<Unit> { target }));
 
-                if (target.IsDead)
-                {
-                    // This target died — DrainDeathQueue in RunSequence will pan to them
-                    // and play the death animation from here. Don't pan back to the caster
-                    // now or the camera will bounce: caster → dead target → caster → dead target.
-                    anyTargetDied = true;
-                }
-                else
-                {
+                // Brief beat after a non-lethal hit so the player can register it
+                // before the camera moves on. Lethal hits already have their own
+                // linger baked into UnitDeathSequencer.PresentDeathInline.
+                if (!target.IsDead)
                     yield return new WaitForSeconds(0.3f);
-                }
             }
 
-            // Only return to the caster here if no targets died. If any died, DrainDeathQueue
-            // will return to the caster after the last death animation finishes.
-            if (!anyTargetDied)
-            {
-                yield return StartCoroutine(cameraController.TransitionTo(
-                    cameraController.UnitFocusPosition(unit)));
-            }
+            // Always return to the caster — death presentations are now handled inline
+            // per-target inside PlayTargetEffectsWithAnimation, so the camera is already
+            // back on the last death site when we arrive here. DrainDeathQueue in
+            // RunSequence will be a no-op for these targets.
+            yield return StartCoroutine(cameraController.TransitionTo(
+                cameraController.UnitFocusPosition(unit)));
         }
 
         private IEnumerator PlayTargetEffectsWithAnimation(AbilityContext ctx, List<Unit> targets)
@@ -373,10 +364,46 @@ namespace DDD.TNFY.BRAWL
             // --- Damage ---
             if (!hasDisplacement && damageEffects.Count > 0)
             {
+                // Play hurt animations and apply damage effects simultaneously —
+                // the health bar tween is kicked off by OnHealthChanged inside Apply().
                 foreach (var target in targets) PlayTargetAnimation(target, "Hurt");
                 SpawnHitEffects(ctx, targets);
                 foreach (var effect in damageEffects) effect.Apply(ctx, targets);
-                yield return new WaitForSeconds(0.8f);
+
+                // Wait for every target's hurt animation AND health bar tween to finish
+                // before we check whether anyone died. This ensures the player always sees
+                // the full hurt reaction and the bar reaching its new value — even on a
+                // lethal hit — before the death sequence begins.
+                foreach (var target in targets)
+                {
+                    if (target == null) continue;
+                    var targetAnimator          = target.GetComponent<UnitAnimator>();
+                    var targetHealthBar         = target.GetComponentInChildren<UnitHealthBarDisplay>();
+                    var targetStatusEffects     = target.GetComponentInChildren<StatusEffectIconDisplay>();
+
+                    // Run hurt animation wait and health bar tween wait in parallel:
+                    // start both as independent coroutines and then yield on each in turn.
+                    // Because they run concurrently the total wait is max(hurt, tween),
+                    // not hurt + tween.
+                    Coroutine hurtWait    = targetAnimator    != null ? StartCoroutine(targetAnimator.WaitForHurtAnimation())       : null;
+                    Coroutine healthWait  = targetHealthBar   != null ? StartCoroutine(targetHealthBar.WaitForTweenComplete())      : null;
+
+                    if (hurtWait   != null) yield return hurtWait;
+                    if (healthWait != null) yield return healthWait;
+
+                    // If this target died, present their death inline right now —
+                    // hide the bar and status effects, then play the downed animation —
+                    // before moving on to the next target. DrainDeathQueue in RunSequence
+                    // will skip them because PresentDeath removes them from the queue.
+                    if (target.IsDead)
+                    {
+                        targetHealthBar?.HideImmediate();
+                        targetStatusEffects?.HideImmediate();
+
+                        if (UnitDeathSequencer.Instance != null)
+                            yield return StartCoroutine(UnitDeathSequencer.Instance.PresentDeathInline(target));
+                    }
+                }
             }
             else if (damageEffects.Count > 0)
             {
