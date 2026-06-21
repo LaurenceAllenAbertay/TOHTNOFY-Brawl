@@ -30,4 +30,5 @@ MonoBehaviour:
   availablePassives:
   - {fileID: 11400000, guid: 5c3c95766e39bb24688d34dbdf40b299, type: 2}
   - {fileID: 11400000, guid: 63af218fcae279a4482dc4639c9d1f34, type: 2}
+  uiColour: {r: 1, g: 0.53333336, b: 0, a: 1}
   dialogueData: {fileID: 11400000, guid: e5addc8a26e2771418b11ddf1b5c51eb, type: 2}

@@ -53,6 +53,7 @@ namespace DDD.TNFY.BRAWL
         private Unit currentPlayer;
         private bool uiHiddenForAnimation;
         private bool uiHiddenForMovement;
+        private Image _endTurnButtonImage;
 
         #endregion
 
@@ -105,6 +106,7 @@ namespace DDD.TNFY.BRAWL
             mainCamera = Camera.main;
             if (turnUIRectTransform != null)
                 parentCanvas = turnUIRectTransform.GetComponentInParent<Canvas>();
+            _endTurnButtonImage = endTurnButton != null ? endTurnButton.GetComponent<Image>() : null;
         }
 
         private void FindGameSystems()
@@ -245,6 +247,7 @@ namespace DDD.TNFY.BRAWL
             if (unitForThisTurn is PlayerUnit)
             {
                 if (endTurnButton != null) endTurnButton.gameObject.SetActive(true);
+                UpdateEndTurnButtonColour(unitForThisTurn);
                 SetUIVisibility(true);
                 TurnLifecycleLog($"[4/4] DelayedTurnUISetup → SetUIVisibility(true) called. " +
                                  $"turnUI.activeSelf={turnUI?.activeSelf}");
@@ -270,7 +273,11 @@ namespace DDD.TNFY.BRAWL
             if (ShouldShowUI())
             {
                 if (endTurnButton != null)
+                {
                     endTurnButton.gameObject.SetActive(currentPlayer is PlayerUnit);
+                    if (currentPlayer is PlayerUnit)
+                        UpdateEndTurnButtonColour(currentPlayer);
+                }
                 SetUIVisibility(true);
                 abilityPanel?.UpdateAbilityDisplay();
                 abilityPanel?.UpdateAbilityButtonStates();
@@ -467,6 +474,12 @@ namespace DDD.TNFY.BRAWL
         public void ShowAbilityTooltip(int slotIndex) => abilityPanel?.ShowAbilityTooltip(slotIndex);
         public void HideAbilityTooltip() => abilityPanel?.HideAbilityTooltip();
 
+        private void UpdateEndTurnButtonColour(Unit unit)
+        {
+            if (_endTurnButtonImage == null) return;
+            _endTurnButtonImage.color = unit?.characterData?.uiColour ?? Color.white;
+        }
+
         #endregion
 
         #region Debug Utilities
@@ -532,6 +545,7 @@ namespace DDD.TNFY.BRAWL
 
                 // Attempt recovery
                 if (endTurnButton != null) endTurnButton.gameObject.SetActive(true);
+                UpdateEndTurnButtonColour(expectedUnit);
                 SetUIVisibility(true);
                 abilityPanel?.UpdateAbilityDisplay();
                 abilityPanel?.UpdateAbilityButtonStates();

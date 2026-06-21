@@ -36,6 +36,12 @@ namespace DDD.TNFY.BRAWL
                  "or EnemyLoadout (for enemies).")]
         public PassiveAbility[] availablePassives = new PassiveAbility[0];
 
+        [Header("UI")]
+        [Tooltip("Colour used to tint UI elements associated with this character, " +
+                 "e.g. the End Turn button background. " +
+                 "Separate from the dialogue bubble colour on CharacterDialogueData.")]
+        public Color uiColour = Color.white;
+
         [Header("Dialogue")]
         [Tooltip("Per-character dialogue lines and trigger entries. " +
                  "Create via Assets > Create > TNFY Brawl > Dialogue > Character Dialogue Data.")]
