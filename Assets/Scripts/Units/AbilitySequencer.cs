@@ -165,6 +165,16 @@ namespace DDD.TNFY.BRAWL
                 if (enableDebugLogging)
                     Debug.Log($"[AbilitySequencer] AnimEvent_AbilityEffect{slot} fired — applying {slotEffects.Count} effect(s)");
 
+                // Play the Hurt animation on targets before any damage-phase effect lands,
+                // mirroring the behaviour in ApplyDamageEffectsWithHurtAnimation.
+                // Only do this once per slot, and only when at least one damage effect is firing.
+                bool hasDamageEffect = slotEffects.Any(e => e.AnimationPhase == EffectAnimationPhase.Damage);
+                if (hasDamageEffect)
+                {
+                    foreach (var target in targets)
+                        PlayTargetAnimation(target, "Hurt");
+                }
+
                 foreach (var effect in slotEffects)
                 {
                     effect.Apply(ctx, targets);

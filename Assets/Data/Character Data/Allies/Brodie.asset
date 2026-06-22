@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Brodie
   m_EditorClassIdentifier: 
   characterName: Brodie
-  portrait: {fileID: -2051855900, guid: e531406b1ba316c4b88a0291c8240e66, type: 3}
+  portrait: {fileID: 0}
   prefab: {fileID: 1853854094929722269, guid: be2f2a38fd9d3804a84f23c51183ccc9, type: 3}
   maxHealth: 200
   attack: 0
