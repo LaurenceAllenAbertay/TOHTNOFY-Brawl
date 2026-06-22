@@ -20,7 +20,7 @@ MonoBehaviour:
   defense: 0
   speed: 3
   availableAbilities:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 0ce5ddba0f25a7445a195649b2c341ed, type: 2}
   - {fileID: 0}
   - {fileID: 0}
   availablePassives: []

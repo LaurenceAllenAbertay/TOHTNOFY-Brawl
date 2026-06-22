@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 538600722897cd54787bdb9601555fbf, type: 3}
+  m_Name: Mega Mug Burst
+  m_EditorClassIdentifier: 
+  abilityName: Mega Mug Burst
+  description: 
+  image: {fileID: 0}
+  rangeType: 2
+  range: 2
+  damage: 0
+  attackType: 0
+  canHitEnemies: 0
+  canHitAllies: 1
+  canTargetNeutral: 0
+  passThroughUnits: 1
+  maxTargets: 4
+  canExecuteWithoutTargets: 1
+  endTurnOnCast: 0
+  suppressCameraTransitions: 0
+  animationState: Cast
+  animationStateHurt: Cast
+  castEffectPrefab: {fileID: 0}
+  castEffectOffset: {x: 0, y: 0, z: 0}
+  parentCastEffectToCaster: 0
+  hitEffectPrefab: {fileID: 0}
+  hitEffectOffset: {x: 0, y: 0, z: 0}
+  parentHitEffectToTarget: 0
+  targeting: {fileID: 11400000, guid: 94b073cd9dd6147438b93ffd24503b47, type: 2}
+  effects:
+  - {fileID: 11400000, guid: 116fc51e951d4b04faa4fbff26f86330, type: 2}
