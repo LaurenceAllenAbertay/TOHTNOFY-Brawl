@@ -1,0 +1,1118 @@
+fileFormatVersion: 2
+guid: 9bf7f4e48b14a0746a450377f52d016a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3658018277598921338
+    second: Cody_Celebrate_0
+  - first:
+      213: 751344264451739220
+    second: Cody_Celebrate_1
+  - first:
+      213: 221835478861945023
+    second: Cody_Celebrate_2
+  - first:
+      213: 4410730883794952201
+    second: Cody_Celebrate_3
+  - first:
+      213: 5985844131035305869
+    second: Cody_Celebrate_4
+  - first:
+      213: 8253697527196538317
+    second: Cody_Celebrate_5
+  - first:
+      213: 1476397099546184964
+    second: Cody_Celebrate_6
+  - first:
+      213: -5069834545786699915
+    second: Cody_Celebrate_7
+  - first:
+      213: 5563669967730855298
+    second: Cody_Celebrate_8
+  - first:
+      213: 2490536180090954506
+    second: Cody_Celebrate_9
+  - first:
+      213: -8039515511982449101
+    second: Cody_Celebrate_10
+  - first:
+      213: 5109771686113761721
+    second: Cody_Celebrate_11
+  - first:
+      213: -6065889125725307680
+    second: Cody_Celebrate_12
+  - first:
+      213: -2205616599684807151
+    second: Cody_Celebrate_13
+  - first:
+      213: -92739684603244063
+    second: Cody_Celebrate_14
+  - first:
+      213: 3257708172214653976
+    second: Cody_Celebrate_15
+  - first:
+      213: -1726482689165027174
+    second: Cody_Celebrate_16
+  - first:
+      213: 364131179794764430
+    second: Cody_Celebrate_17
+  - first:
+      213: 2964292890663209316
+    second: Cody_Celebrate_18
+  - first:
+      213: 1133844572288362811
+    second: Cody_Celebrate_19
+  - first:
+      213: 3222434004095757463
+    second: Cody_Celebrate_20
+  - first:
+      213: 6308967912742477623
+    second: Cody_Celebrate_21
+  - first:
+      213: -1487605928790413448
+    second: Cody_Celebrate_22
+  - first:
+      213: -3145557633040088215
+    second: Cody_Celebrate_23
+  - first:
+      213: -5943179497416755000
+    second: Cody_Celebrate_24
+  - first:
+      213: -4065499615421660220
+    second: Cody_Celebrate_25
+  - first:
+      213: 4643341461119922634
+    second: Cody_Celebrate_26
+  - first:
+      213: 3342950397044377424
+    second: Cody_Celebrate_27
+  - first:
+      213: 2992430295941920906
+    second: Cody_Celebrate_28
+  - first:
+      213: 1833576987631726927
+    second: Cody_Celebrate_29
+  - first:
+      213: -9122465619718227320
+    second: Cody_Celebrate_30
+  - first:
+      213: -8346251360556354250
+    second: Cody_Celebrate_31
+  - first:
+      213: -7458796286159356082
+    second: Cody_Celebrate_32
+  - first:
+      213: -2322307611961864209
+    second: Cody_Celebrate_33
+  - first:
+      213: -9028921559039751005
+    second: Cody_Celebrate_34
+  - first:
+      213: 316189991526334062
+    second: Cody_Celebrate_35
+  - first:
+      213: -497545542683710033
+    second: Cody_Celebrate_36
+  - first:
+      213: 6199367875866286185
+    second: Cody_Celebrate_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cody_Celebrate_0
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 4187
+        width: 459
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a728b221e34e3c230800000000000000
+      internalID: 3658018277598921338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_1
+      rect:
+        serializedVersion: 2
+        x: 586
+        y: 4187
+        width: 459
+        height: 616
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45e4ca2b0af4d6a00800000000000000
+      internalID: 751344264451739220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_2
+      rect:
+        serializedVersion: 2
+        x: 1133
+        y: 4188
+        width: 462
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb81524513e141300800000000000000
+      internalID: 221835478861945023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_3
+      rect:
+        serializedVersion: 2
+        x: 1683
+        y: 4188
+        width: 462
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9006178ae50163d30800000000000000
+      internalID: 4410730883794952201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_4
+      rect:
+        serializedVersion: 2
+        x: 2219
+        y: 4188
+        width: 469
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d875737d58df11350800000000000000
+      internalID: 5985844131035305869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_5
+      rect:
+        serializedVersion: 2
+        x: 2769
+        y: 4188
+        width: 469
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc5d118cb260b8270800000000000000
+      internalID: 8253697527196538317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_6
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 3490
+        width: 467
+        height: 569
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40d0ed9f6573d7410800000000000000
+      internalID: 1476397099546184964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_7
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 3490
+        width: 467
+        height: 569
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57f316c775454a9b0800000000000000
+      internalID: -5069834545786699915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_8
+      rect:
+        serializedVersion: 2
+        x: 1099
+        y: 3490
+        width: 474
+        height: 563
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28d4b1aab50263d40800000000000000
+      internalID: 5563669967730855298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_9
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 3490
+        width: 474
+        height: 563
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a03649ad579209220800000000000000
+      internalID: 2490536180090954506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_10
+      rect:
+        serializedVersion: 2
+        x: 2237
+        y: 3508
+        width: 472
+        height: 602
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33e1b0eac37ed6090800000000000000
+      internalID: -8039515511982449101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_11
+      rect:
+        serializedVersion: 2
+        x: 2787
+        y: 3508
+        width: 472
+        height: 602
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b9d82a964e89e640800000000000000
+      internalID: 5109771686113761721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_12
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 2839
+        width: 433
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ecfc368af1a1dba0800000000000000
+      internalID: -6065889125725307680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_13
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 2839
+        width: 433
+        height: 581
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 116051173631461e0800000000000000
+      internalID: -2205616599684807151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_14
+      rect:
+        serializedVersion: 2
+        x: 1222
+        y: 2854
+        width: 408
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e154aa8fb586bef0800000000000000
+      internalID: -92739684603244063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_15
+      rect:
+        serializedVersion: 2
+        x: 1772
+        y: 2854
+        width: 408
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 814ddb29254b53d20800000000000000
+      internalID: 3257708172214653976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_16
+      rect:
+        serializedVersion: 2
+        x: 2279
+        y: 2813
+        width: 472
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a981579342d4a08e0800000000000000
+      internalID: -1726482689165027174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_17
+      rect:
+        serializedVersion: 2
+        x: 2829
+        y: 2813
+        width: 471
+        height: 678
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e829f47f067ad0500800000000000000
+      internalID: 364131179794764430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_18
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 2112
+        width: 436
+        height: 676
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4694236bda8432920800000000000000
+      internalID: 2964292890663209316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_19
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 2112
+        width: 436
+        height: 676
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b39a0c191a93cbf00800000000000000
+      internalID: 1133844572288362811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_20
+      rect:
+        serializedVersion: 2
+        x: 1178
+        y: 2108
+        width: 424
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79c644e47a268bc20800000000000000
+      internalID: 3222434004095757463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_21
+      rect:
+        serializedVersion: 2
+        x: 1728
+        y: 2108
+        width: 424
+        height: 681
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73f5a5ae3e4fd8750800000000000000
+      internalID: 6308967912742477623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_22
+      rect:
+        serializedVersion: 2
+        x: 2273
+        y: 2114
+        width: 414
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87faea81a46fa5be0800000000000000
+      internalID: -1487605928790413448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_23
+      rect:
+        serializedVersion: 2
+        x: 2823
+        y: 2114
+        width: 414
+        height: 670
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9638026affbb854d0800000000000000
+      internalID: -3145557633040088215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_24
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1434
+        width: 398
+        height: 638
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c8f6144cb5958da0800000000000000
+      internalID: -5943179497416755000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_25
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 1434
+        width: 398
+        height: 638
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c30e44c3a17497c0800000000000000
+      internalID: -4065499615421660220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_26
+      rect:
+        serializedVersion: 2
+        x: 1162
+        y: 1414
+        width: 399
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac175e81576707040800000000000000
+      internalID: 4643341461119922634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_27
+      rect:
+        serializedVersion: 2
+        x: 1712
+        y: 1414
+        width: 399
+        height: 640
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 057c495acab846e20800000000000000
+      internalID: 3342950397044377424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_28
+      rect:
+        serializedVersion: 2
+        x: 2207
+        y: 1395
+        width: 436
+        height: 577
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a883cb4ef7f378920800000000000000
+      internalID: 2992430295941920906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_29
+      rect:
+        serializedVersion: 2
+        x: 2757
+        y: 1395
+        width: 436
+        height: 577
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f41be183e8c227910800000000000000
+      internalID: 1833576987631726927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_30
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 698
+        width: 452
+        height: 575
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88a3bfc0add766180800000000000000
+      internalID: -9122465619718227320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_31
+      rect:
+        serializedVersion: 2
+        x: 564
+        y: 698
+        width: 452
+        height: 575
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 635faef9b982c2c80800000000000000
+      internalID: -8346251360556354250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_32
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 697
+        width: 480
+        height: 597
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4ff77fcb480d7890800000000000000
+      internalID: -7458796286159356082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_33
+      rect:
+        serializedVersion: 2
+        x: 1670
+        y: 697
+        width: 480
+        height: 597
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fefc3d1f78185cfd0800000000000000
+      internalID: -2322307611961864209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_34
+      rect:
+        serializedVersion: 2
+        x: 2217
+        y: 698
+        width: 478
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3acc198eda3d2b280800000000000000
+      internalID: -9028921559039751005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_35
+      rect:
+        serializedVersion: 2
+        x: 2767
+        y: 698
+        width: 478
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6ef57e3f15536400800000000000000
+      internalID: 316189991526334062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_36
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 0
+        width: 462
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fad22cc07fc5819f0800000000000000
+      internalID: -497545542683710033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Celebrate_37
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 0
+        width: 462
+        height: 608
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9685af8cc34980650800000000000000
+      internalID: 6199367875866286185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Cody_Celebrate_0: 3658018277598921338
+      Cody_Celebrate_1: 751344264451739220
+      Cody_Celebrate_10: -8039515511982449101
+      Cody_Celebrate_11: 5109771686113761721
+      Cody_Celebrate_12: -6065889125725307680
+      Cody_Celebrate_13: -2205616599684807151
+      Cody_Celebrate_14: -92739684603244063
+      Cody_Celebrate_15: 3257708172214653976
+      Cody_Celebrate_16: -1726482689165027174
+      Cody_Celebrate_17: 364131179794764430
+      Cody_Celebrate_18: 2964292890663209316
+      Cody_Celebrate_19: 1133844572288362811
+      Cody_Celebrate_2: 221835478861945023
+      Cody_Celebrate_20: 3222434004095757463
+      Cody_Celebrate_21: 6308967912742477623
+      Cody_Celebrate_22: -1487605928790413448
+      Cody_Celebrate_23: -3145557633040088215
+      Cody_Celebrate_24: -5943179497416755000
+      Cody_Celebrate_25: -4065499615421660220
+      Cody_Celebrate_26: 4643341461119922634
+      Cody_Celebrate_27: 3342950397044377424
+      Cody_Celebrate_28: 2992430295941920906
+      Cody_Celebrate_29: 1833576987631726927
+      Cody_Celebrate_3: 4410730883794952201
+      Cody_Celebrate_30: -9122465619718227320
+      Cody_Celebrate_31: -8346251360556354250
+      Cody_Celebrate_32: -7458796286159356082
+      Cody_Celebrate_33: -2322307611961864209
+      Cody_Celebrate_34: -9028921559039751005
+      Cody_Celebrate_35: 316189991526334062
+      Cody_Celebrate_36: -497545542683710033
+      Cody_Celebrate_37: 6199367875866286185
+      Cody_Celebrate_4: 5985844131035305869
+      Cody_Celebrate_5: 8253697527196538317
+      Cody_Celebrate_6: 1476397099546184964
+      Cody_Celebrate_7: -5069834545786699915
+      Cody_Celebrate_8: 5563669967730855298
+      Cody_Celebrate_9: 2490536180090954506
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

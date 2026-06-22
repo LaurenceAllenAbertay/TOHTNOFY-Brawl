@@ -271,7 +271,7 @@ namespace DDD.TNFY.BRAWL
         {
             if (cameraController == null)
             {
-                ApplyAbilityEffectsToTargets(ctx, targets, midAnimFiredEffects);
+                yield return StartCoroutine(ApplyDamageEffectsWithHurtAnimation(ctx, targets, midAnimFiredEffects));
                 SpawnHitEffects(ctx, targets);
                 yield break;
             }
@@ -294,13 +294,83 @@ namespace DDD.TNFY.BRAWL
 
             if (!shouldUseTransitions && !hasMovementEffect)
             {
-                ApplyAbilityEffectsToTargets(ctx, targets, midAnimFiredEffects);
+                yield return StartCoroutine(ApplyDamageEffectsWithHurtAnimation(ctx, targets, midAnimFiredEffects));
                 SpawnHitEffects(ctx, targets);
                 SpawnHitEffectsOnTraversalTiles(ctx);
                 yield break;
             }
 
             yield return StartCoroutine(HandleSingleTargetingEffects(ctx, targets));
+        }
+
+        /// <summary>
+        /// Applies all damage-phase effects to targets, playing a Hurt animation on each
+        /// target first and waiting for it (and the health-bar tween) to finish before
+        /// checking for death — mirroring the logic in PlayTargetEffectsWithAnimation.
+        ///
+        /// Used by the AOE / no-camera-transition path in HandleCameraTransitionsAndEffects
+        /// so that hurt animations are never skipped, regardless of targeting type.
+        ///
+        /// Non-damage phases (displacement, status, post) are still applied immediately
+        /// via ApplyAbilityEffectsToTargets; this method only intercepts damage so that
+        /// the visual reaction is always visible before HP changes commit.
+        /// </summary>
+        private IEnumerator ApplyDamageEffectsWithHurtAnimation(AbilityContext ctx, List<Unit> targets, HashSet<AbilityEffect> midAnimFiredEffects = null)
+        {
+            var damageEffects = ctx.ability.effects
+                .Where(e => e.AnimationPhase == EffectAnimationPhase.Damage
+                            && !(midAnimFiredEffects != null && midAnimFiredEffects.Contains(e)))
+                .ToList();
+
+            bool hasDamage = damageEffects.Count > 0;
+
+            if (hasDamage)
+            {
+                // Play hurt on all targets before damage is applied so the animation
+                // starts before OnHealthChanged fires and EvaluateIdleTier re-evaluates.
+                foreach (var target in targets)
+                    PlayTargetAnimation(target, "Hurt");
+
+                foreach (var effect in damageEffects)
+                    effect.Apply(ctx, targets);
+
+                // Wait for each target's hurt animation and health-bar tween to finish
+                // in parallel (same pattern as PlayTargetEffectsWithAnimation).
+                foreach (var target in targets)
+                {
+                    if (target == null) continue;
+                    var targetAnimator  = target.GetComponent<UnitAnimator>();
+                    var targetHealthBar = target.GetComponentInChildren<UnitHealthBarDisplay>();
+
+                    Coroutine hurtWait   = targetAnimator   != null ? StartCoroutine(targetAnimator.WaitForHurtAnimation())  : null;
+                    Coroutine healthWait = targetHealthBar  != null ? StartCoroutine(targetHealthBar.WaitForTweenComplete()) : null;
+
+                    if (hurtWait   != null) yield return hurtWait;
+                    if (healthWait != null) yield return healthWait;
+
+                    // Present death inline (hides bar, plays death anim) so DrainDeathQueue
+                    // in RunSequence skips this target — same as the per-target-camera path.
+                    if (target.IsDead)
+                    {
+                        targetHealthBar?.HideImmediate();
+
+                        if (UnitDeathSequencer.Instance != null)
+                            yield return StartCoroutine(UnitDeathSequencer.Instance.PresentDeathInline(target));
+                    }
+                }
+            }
+
+            // Apply every non-damage phase (displacement, status, post) immediately —
+            // these don't have a hurt-animation dependency.
+            foreach (var effect in ctx.ability.effects)
+            {
+                if (effect.AnimationPhase == EffectAnimationPhase.PreEffect)  continue;
+                if (effect.AnimationPhase == EffectAnimationPhase.Damage)     continue; // already handled above
+                if (effect.IsSelfOnly(ctx))                                   continue;
+                if (midAnimFiredEffects != null && midAnimFiredEffects.Contains(effect)) continue;
+
+                effect.Apply(ctx, targets);
+            }
         }
 
         private IEnumerator HandleSingleTargetingEffects(AbilityContext ctx, List<Unit> targets)
@@ -440,16 +510,19 @@ namespace DDD.TNFY.BRAWL
             // Phases that have already been applied earlier in the sequence.
             // Effects in these phases are skipped here to avoid double-application.
             // Displacement and Damage are handled by PlayTargetEffectsWithAnimation
-            // (or ApplyAbilityEffectsToTargets for non-camera paths).
+            // (or ApplyDamageEffectsWithHurtAnimation for non-camera paths).
             // PreEffect (self-knockback/caster-movement) fired before camera transitions.
             // ChargeEffect is handled entirely via ExecuteChargeSequence — it never reaches Apply.
             bool usedCameraTransitions = ctx.ability.targeting.UsesCameraTransitionsPerTarget
                                          && !ctx.ability.suppressCameraTransitions;
 
-            // When suppressCameraTransitions is set, HandleCameraTransitionsAndEffects took
-            // the ApplyAbilityEffectsToTargets path, which already applied every non-PreEffect
-            // phase. Treat it the same as the camera-transition path so effects aren't double-fired.
-            bool effectsAlreadyApplied = usedCameraTransitions || ctx.ability.suppressCameraTransitions;
+            // Every branch of HandleCameraTransitionsAndEffects other than HandleSingleTargetingEffects
+            // (i.e. the no-camera path, the suppressCameraTransitions path, and the AOE/no-movement path)
+            // now applies all non-PreEffect, non-PostEffect phases itself.
+            // Mark them as applied so HandleRemainingEffects doesn't double-fire status effects.
+            bool effectsAlreadyApplied = usedCameraTransitions
+                                         || ctx.ability.suppressCameraTransitions
+                                         || !ctx.ability.targeting.UsesCameraTransitionsPerTarget;
 
             foreach (var effect in ctx.ability.effects)
             {

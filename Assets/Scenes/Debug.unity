@@ -14815,7 +14815,7 @@ MonoBehaviour:
   globalMusicVolume: 0.2
   enableDynamicMusic: 1
   poolSize: 10
-  logSyncDiagnostics: 1
+  logSyncDiagnostics: 0
   driftThresholdSamples: 2048
 --- !u!1 &1365788363
 GameObject:

@@ -386,30 +386,20 @@ namespace DDD.TNFY.BRAWL
             {
                 var dir = DirectionToward(originTile, target.currentTile);
                 if (dir == Vector2Int.zero)
-                {
-                    //Debug.Log($"[AIPlanner] {unit.name} | {ability.abilityName} vs {target.name} — REJECTED: DirectionToward returned zero");
                     return null;
-                }
 
                 if (ability.targeting is LineTargeting lt && !lt.IsValidDirection(dir))
-                {
-                    Vector3 worldDelta = target.currentTile.transform.position - originTile.transform.position;
-                    //Debug.Log($"[AIPlanner] {unit.name} | {ability.abilityName} vs {target.name} — REJECTED: IsValidDirection failed. " +
-                    //          $"Computed dir={dir}, worldDelta=({worldDelta.x:F1},{worldDelta.z:F1}). " +
-                    //          $"horizontalOnly={lt.horizontalOnly}. Grid east/west may align with Z not X.");
                     return null;
-                }
 
-                var traversalCtx = new AbilityContext { caster = unit, ability = ability, aimDir = dir };
-                var traversal    = ability.targeting.GetTraversal(traversalCtx);
+                // Use SelectTargets (the same path execution takes) so conditions like
+                // requireEmptyDestination are respected during planning exactly as at runtime.
+                // A raw traversal.Contains check misses those blocking conditions and produces
+                // plans that silently fail when the ability fires.
+                var selectCtx = new AbilityContext { caster = unit, ability = ability, aimDir = dir };
+                var selected  = ability.targeting.SelectTargets(selectCtx);
 
-                if (!traversal.Contains(target.currentTile))
-                {
-                    //Debug.Log($"[AIPlanner] {unit.name} | {ability.abilityName} vs {target.name} — REJECTED: target tile not in traversal. " +
-                    //          $"dir={dir}, traversal count={traversal.Count}, " +
-                    //          $"traversal tiles=[{string.Join(", ", traversal.ConvertAll(t => t.name))}]");
+                if (!selected.Contains(target))
                     return null;
-                }
 
                 return new ActionPlan
                 {
@@ -424,8 +414,10 @@ namespace DDD.TNFY.BRAWL
             if (ability.targeting is AOETargeting || ability.targeting is SquareAOETargeting
                                                   || ability.targeting is RandomAOETargeting)
             {
-                var traversal = ability.targeting.GetTraversal(ctx);
-                if (!traversal.Contains(target.currentTile)) return null;
+                // Use SelectTargets so any targeting-level restrictions are applied
+                // consistently between planning and execution.
+                var selected = ability.targeting.SelectTargets(ctx);
+                if (!selected.Contains(target)) return null;
 
                 return new ActionPlan
                 {
