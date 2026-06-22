@@ -40,6 +40,10 @@ namespace DDD.TNFY.BRAWL
         private InputAction cameraMoveAction;
         private InputAction cameraElevateAction;
 
+        // The tile the mouse is currently over, tracked via tile-layer raycast each frame.
+        // Kept here so hover enter/exit events fire correctly as the cursor moves.
+        private Tile hoveredTile;
+
         private void Awake()
         {
             if (Instance != null && Instance != this) { Destroy(gameObject); return; }
@@ -90,11 +94,17 @@ namespace DDD.TNFY.BRAWL
 
         private void Update()
         {
-            // Only broadcast mouse movement while the action map is active
-            // This silences subscribers during cutscenes or when input is globally disabled
+            // Only broadcast mouse movement while the action map is active.
+            // This silences subscribers during cutscenes or when input is globally disabled.
             if (!gameplayMap.enabled) return;
 
             Vector2 screenPos = mousePositionAction.ReadValue<Vector2>();
+
+            // Resolve the tile under the cursor using a tile-layer-only raycast so that
+            // wall/occluder colliders on other layers cannot intercept hover or click events.
+            Tile tileUnderCursor = RaycastTile(screenPos);
+            UpdateHoveredTile(tileUnderCursor);
+
             OnMouseMoved?.Invoke(ScreenToWorld(screenPos));
 
             OnCameraMove?.Invoke(cameraMoveAction.ReadValue<Vector2>());
@@ -106,6 +116,12 @@ namespace DDD.TNFY.BRAWL
         private void OnClick(InputAction.CallbackContext ctx)
         {
             if (IsMouseOverUI()) return;
+
+            // Fire the tile clicked event directly from the tile-layer raycast result so
+            // wall colliders cannot block clicks on tiles behind/beneath them.
+            if (hoveredTile != null)
+                Tile.NotifyClicked(hoveredTile);
+
             OnMouseClicked?.Invoke(ScreenToWorld(mousePositionAction.ReadValue<Vector2>()));
         }
 
@@ -122,6 +138,41 @@ namespace DDD.TNFY.BRAWL
         private void OnCancel(InputAction.CallbackContext ctx) => OnEscapePressed?.Invoke();
 
         private void OnEndTurn(InputAction.CallbackContext ctx) => OnEndTurnRequested?.Invoke();
+
+        // --- Tile hover tracking -----------------------------------------------
+
+        /// <summary>
+        /// Raycasts against the tile layer only and returns whichever Tile was hit,
+        /// or null when the cursor is not over any tile.
+        /// </summary>
+        private Tile RaycastTile(Vector2 screenPos)
+        {
+            if (mainCamera == null || GridManager.Instance == null) return null;
+            if (IsMouseOverUI()) return null;
+
+            Ray ray = mainCamera.ScreenPointToRay(screenPos);
+            if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, GridManager.Instance.tileLayer))
+                return hit.collider.GetComponent<Tile>();
+
+            return null;
+        }
+
+        /// <summary>
+        /// Compares the newly raycasted tile against the last known hovered tile and fires
+        /// OnTileHovered / OnTileHoverExited as the cursor moves between tiles (or off all tiles).
+        /// </summary>
+        private void UpdateHoveredTile(Tile newTile)
+        {
+            if (newTile == hoveredTile) return;
+
+            if (hoveredTile != null)
+                Tile.NotifyHoverExited(hoveredTile);
+
+            hoveredTile = newTile;
+
+            if (hoveredTile != null)
+                Tile.NotifyHovered(hoveredTile);
+        }
 
         // --- Utilities ---
 

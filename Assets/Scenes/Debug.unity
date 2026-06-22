@@ -5899,7 +5899,7 @@ MonoBehaviour:
   fadedAlpha: 0.25
   fadeOutSpeed: 10
   fadeInSpeed: 6
-  unitRayThreshold: 1.2
+  unitRayThreshold: 150
   proximityFadeDistance: 2.5
   hoverRayThreshold: 2
   refreshInterval: 2

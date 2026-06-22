@@ -293,20 +293,13 @@ namespace DDD.TNFY.BRAWL
             }
         }
 
-        private void OnMouseDown()
-        {
-            OnTileClicked?.Invoke(this);
-        }
+        // ── Input event dispatchers ───────────────────────────────────────────────
+        // Called exclusively by InputManager so tile interaction events are driven by
+        // a tile-layer-only raycast, bypassing wall/occluder colliders on other layers.
 
-        private void OnMouseEnter()
-        {
-            OnTileHovered?.Invoke(this);
-        }
-
-        private void OnMouseExit()
-        {
-            OnTileHoverExited?.Invoke(this);
-        }
+        public static void NotifyClicked(Tile tile)     => OnTileClicked?.Invoke(tile);
+        public static void NotifyHovered(Tile tile)     => OnTileHovered?.Invoke(tile);
+        public static void NotifyHoverExited(Tile tile) => OnTileHoverExited?.Invoke(tile);
 
     }
 }
