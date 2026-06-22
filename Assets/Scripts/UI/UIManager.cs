@@ -25,6 +25,9 @@ namespace DDD.TNFY.BRAWL
         [SerializeField] private GameObject turnUI;
         [SerializeField] private RectTransform turnUIRectTransform;
         [SerializeField] private Button endTurnButton;
+        [Tooltip("The child Image whose colour is tinted to match the active unit. " +
+                 "Should NOT be the Button's own Image component.")]
+        [SerializeField] private Image endTurnButtonColourIndicator;
 
         [Header("=== World UI Settings ===")]
         [SerializeField] private Vector2 worldOffset = new Vector2(0f, 0.5f);
@@ -53,7 +56,6 @@ namespace DDD.TNFY.BRAWL
         private Unit currentPlayer;
         private bool uiHiddenForAnimation;
         private bool uiHiddenForMovement;
-        private Image _endTurnButtonImage;
 
         #endregion
 
@@ -106,7 +108,6 @@ namespace DDD.TNFY.BRAWL
             mainCamera = Camera.main;
             if (turnUIRectTransform != null)
                 parentCanvas = turnUIRectTransform.GetComponentInParent<Canvas>();
-            _endTurnButtonImage = endTurnButton != null ? endTurnButton.GetComponent<Image>() : null;
         }
 
         private void FindGameSystems()
@@ -476,8 +477,8 @@ namespace DDD.TNFY.BRAWL
 
         private void UpdateEndTurnButtonColour(Unit unit)
         {
-            if (_endTurnButtonImage == null) return;
-            _endTurnButtonImage.color = unit?.characterData?.uiColour ?? Color.white;
+            if (endTurnButtonColourIndicator == null) return;
+            endTurnButtonColourIndicator.color = unit?.characterData?.uiColour ?? Color.white;
         }
 
         #endregion
