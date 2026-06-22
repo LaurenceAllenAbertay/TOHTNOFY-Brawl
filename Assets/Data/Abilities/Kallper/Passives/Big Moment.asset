@@ -13,8 +13,9 @@ MonoBehaviour:
   m_Name: Big Moment
   m_EditorClassIdentifier: 
   passiveName: Big Moment
-  description: Once per combat, a hit that would be lethal is fully absorbed, leaving
-    Kallper on 1 HP and granting an attack buff for 3 turns.
+  description: Once per combat, a hit that would be lethal is fully absorbed. Kallper
+    gets his Big Moment, recovering to 50% health and gaining an attack buff for
+    3 turns.
   icon: {fileID: 21300000, guid: 198a2e2c860a1d243a6e10b30b03484f, type: 3}
   attackUpData: {fileID: 11400000, guid: 18410f1fe61e1854ab2998a9b877482c, type: 2}
   attackPower: 3

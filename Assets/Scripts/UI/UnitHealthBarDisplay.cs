@@ -159,10 +159,10 @@ namespace DDD.TNFY.BRAWL
         /// Slides fillAmount, colour, and the health number label from their current
         /// values to the target over tweenDuration seconds using SmoothStep easing.
         /// The number is lerped between the HP value at the start of this tween and
-        /// the unit's real currentHealth, so it rolls in perfect sync with the bar
-        /// and always lands on the exact integer.
+        /// targetHealthOverride (or the unit's real currentHealth when not overridden),
+        /// so it rolls in perfect sync with the bar.
         /// </summary>
-        private IEnumerator AnimateBar(float targetFraction)
+        private IEnumerator AnimateBar(float targetFraction, int? targetHealthOverride = null)
         {
             float startFill   = healthBarImage.fillAmount;
             Color startColour = healthBarImage.color;
@@ -172,7 +172,7 @@ namespace DDD.TNFY.BRAWL
             // Capture the HP the label is currently showing so we can roll from there,
             // not from the unit's already-updated currentHealth.
             int maxHealth    = _unit.characterData.maxHealth;
-            int targetHealth = _unit.currentHealth;
+            int targetHealth = targetHealthOverride ?? _unit.currentHealth;
             int startHealth  = Mathf.RoundToInt(startFill * maxHealth);
 
             float elapsed = 0f;
@@ -191,18 +191,17 @@ namespace DDD.TNFY.BRAWL
             }
 
             // Snap to exact final values once the tween completes.
-            ApplyBarValues(targetFraction);
+            ApplyBarValues(targetFraction, targetHealthOverride);
             _tweenCoroutine = null;
         }
 
         /// <summary>Immediately sets fill, colour, and number label with no animation.</summary>
-        private void ApplyBarValues(float fraction)
+        private void ApplyBarValues(float fraction, int? healthOverride = null)
         {
             healthBarImage.fillAmount = fraction;
-
             healthBarImage.color = ColourForFraction(fraction);
-
-            SetHealthNumberText(_unit.currentHealth, _unit.characterData.maxHealth);
+            int displayHealth = healthOverride ?? _unit.currentHealth;
+            SetHealthNumberText(displayHealth, _unit.characterData.maxHealth);
         }
 
         /// <summary>
@@ -241,6 +240,32 @@ namespace DDD.TNFY.BRAWL
         {
             while (_tweenCoroutine != null)
                 yield return null;
+        }
+
+        /// <summary>
+        /// Animates the bar to an explicit visual fraction, bypassing currentHealth.
+        /// Used by BigMomentPassive to fake the bar draining to zero and recovering
+        /// to 50% as a pure presentation without touching actual HP values.
+        ///
+        /// <paramref name="displayHealthOverride"/> controls what the number label shows
+        /// at the end of the tween. Pass 0 when draining to zero so the label reads "0/max"
+        /// correctly even though currentHealth hasn't changed. Omit (or pass null) to let
+        /// the label use currentHealth as normal.
+        ///
+        /// Ensures the bar root is visible before starting the tween so the animation
+        /// is always seen even if the bar was previously hidden (first-hit scenario).
+        /// </summary>
+        public void TweenToFraction(float targetFraction, int? displayHealthOverride = null)
+        {
+            if (healthBarRoot == null || healthBarImage == null) return;
+
+            if (!healthBarRoot.activeSelf)
+                healthBarRoot.SetActive(true);
+
+            if (_tweenCoroutine != null)
+                StopCoroutine(_tweenCoroutine);
+
+            _tweenCoroutine = StartCoroutine(AnimateBar(targetFraction, displayHealthOverride));
         }
 
         /// <summary>
