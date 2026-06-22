@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 538600722897cd54787bdb9601555fbf, type: 3}
+  m_Name: Hype Up
+  m_EditorClassIdentifier: 
+  abilityName: Hype Up
+  description: Buff all allies damage within 6 tiles.
+  image: {fileID: 21300000, guid: dd6af1fba9e3a9b4ea939a40e67e9121, type: 3}
+  rangeType: 2
+  range: 6
+  damage: 0
+  attackType: 0
+  canHitEnemies: 0
+  canHitAllies: 1
+  canTargetNeutral: 0
+  passThroughUnits: 1
+  maxTargets: 99
+  canExecuteWithoutTargets: 0
+  endTurnOnCast: 0
+  suppressCameraTransitions: 1
+  animationState: Mind_Games
+  animationStateHurt: Mind_Games
+  castEffectPrefab: {fileID: 0}
+  castEffectOffset: {x: 0, y: 0, z: 0}
+  parentCastEffectToCaster: 0
+  hitEffectPrefab: {fileID: 0}
+  hitEffectOffset: {x: 0, y: 0, z: 0}
+  parentHitEffectToTarget: 0
+  targeting: {fileID: 11400000, guid: 94b073cd9dd6147438b93ffd24503b47, type: 2}
+  effects:
+  - {fileID: 11400000, guid: 9ad461d41d4caf946abee74b22d1df3d, type: 2}
