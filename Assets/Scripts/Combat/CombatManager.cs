@@ -18,7 +18,8 @@ namespace DDD.TNFY.BRAWL
         #region Properties
 
         public bool CanMove => currentState == CombatState.WaitingForInput &&
-                               !hasMovedThisTurn && !isWaitingForAnimation && !isMoving;
+                               !_movementLockedByAbility && !isWaitingForAnimation && !isMoving &&
+                               GetRemainingMovement() > 0;
         public bool CanUseAbility => currentState == CombatState.WaitingForInput &&
                                      !hasUsedAbilityThisTurn && !isWaitingForAnimation && !isMoving;
         public bool IsTargetingAbility => targetingController != null && targetingController.IsTargetingAbility;
@@ -26,7 +27,9 @@ namespace DDD.TNFY.BRAWL
         public bool IsMoving => isMoving;
         public bool IsExecutingPendingAction => isExecutingPendingAction;
         public bool IsBlockingAllInput => isBlockingAllInput;
-        public bool HasMovedThisTurn => hasMovedThisTurn;
+        public bool HasMovedThisTurn => _hasMovedThisTurn;
+        public bool HasUsedAbilityThisTurn => hasUsedAbilityThisTurn;
+        public bool IsMovementLocked => _movementLockedByAbility;
         public Unit CurrentActiveUnit => currentActiveUnit;
 
         public bool CanEndTurn => currentState == CombatState.WaitingForInput &&
@@ -73,7 +76,8 @@ namespace DDD.TNFY.BRAWL
         private float turnStartTime;
         private const float turnStartProtectionDuration = 1.5f;
         private bool _turnTransitionPending;
-        private bool hasMovedThisTurn;
+        private bool _hasMovedThisTurn;
+        private bool _movementLockedByAbility;
 
         #endregion
 
@@ -188,7 +192,8 @@ namespace DDD.TNFY.BRAWL
         private void ResetTurnState()
         {
             hasUsedAbilityThisTurn = false;
-            hasMovedThisTurn = false;
+            _hasMovedThisTurn = false;
+            _movementLockedByAbility = false;
             isWaitingForAnimation = false;
             isMoving = false;
             _turnTransitionPending = false;
@@ -312,7 +317,6 @@ namespace DDD.TNFY.BRAWL
             if (isBlockingAllInput) return true;
             if (currentState != CombatState.WaitingForInput) return true;
             if (currentActiveUnit == null) return true;
-            if (!(currentActiveUnit is PlayerUnit)) return true;
             if (isWaitingForAnimation || isMoving) return true;
 
             var unitAnimator = currentActiveUnit.GetComponent<UnitAnimator>();
@@ -368,7 +372,7 @@ namespace DDD.TNFY.BRAWL
                 return;
             }
 
-            if (!hasMovedThisTurn)
+            if (CanMove)
                 AttemptMovement(clickedTile);
         }
 
@@ -447,6 +451,8 @@ namespace DDD.TNFY.BRAWL
             if (executionSuccessful)
             {
                 hasUsedAbilityThisTurn = true;
+                if (_hasMovedThisTurn)
+                    _movementLockedByAbility = true;
 
                 // Wait for the ability animation to fully complete before moving the camera.
                 yield return StartCoroutine(WaitForCompleteAbilitySequence(ability));
@@ -602,6 +608,7 @@ namespace DDD.TNFY.BRAWL
                 },
                 onMovementComplete: () =>
                 {
+                    _hasMovedThisTurn = true;
                     UIEvents.OnMovementAnimationComplete();
                     UIEvents.OnUnitMoved();
                     UIEvents.OnCombatStateChanged();
@@ -611,9 +618,11 @@ namespace DDD.TNFY.BRAWL
                     // Re-roll targeting selections relative to the unit's new position.
                     NotifyCurrentUnitTargetingTurnStarted();
 
-                    // Restore movement highlights if the player still has points left
-                    // and hasn't used an ability yet this turn.
-                    if (currentActiveUnit is PlayerUnit && GetRemainingMovement() > 0 && !hasUsedAbilityThisTurn)
+                    // Restore movement highlights if the player still has points left.
+                    // hasMovedThisTurn is now true so CanMove returns false and highlights
+                    // will not reappear — this block is intentionally unreachable after a
+                    // normal walk, but is kept for safety if remaining points somehow exist.
+                    if (currentActiveUnit is PlayerUnit && GetRemainingMovement() > 0)
                     {
                         GridManager.Instance.SetHighlightMode(
                             GridManager.HighlightMode.Movement,
@@ -630,6 +639,7 @@ namespace DDD.TNFY.BRAWL
         public void SetMovementUsed()
         {
             movementPointsUsed = totalMovementPoints;
+            _hasMovedThisTurn = true;
             GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
             UIEvents.OnCombatStateChanged();
         }

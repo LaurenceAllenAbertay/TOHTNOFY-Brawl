@@ -36,6 +36,7 @@ namespace DDD.TNFY.BRAWL
             if (combatManager.CurrentActiveUnit != unit) return false;
             if (combatManager.IsExecutingAbility || combatManager.IsMoving) return false;
             if (combatManager.currentState != CombatState.WaitingForInput) return false;
+            if (combatManager.IsMovementLocked) return false;
             // Jump costs exactly 2 movement points and can only be performed once per turn.
             return combatManager.HasEnoughMovementForJump(2);
         }

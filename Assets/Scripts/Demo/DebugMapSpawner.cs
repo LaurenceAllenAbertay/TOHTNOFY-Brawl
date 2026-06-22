@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace DDD.TNFY.BRAWL
 {
@@ -53,6 +54,10 @@ namespace DDD.TNFY.BRAWL
         [Tooltip("Enemy prefab(s) to spawn when no lobby config exists. " +
                  "Must have EnemyUnit + EnemyLoadout components.")]
         [SerializeField] private GameObject[] fallbackEnemyPrefabs;
+        
+        [Header("Debug Navigation")]
+        [Tooltip("Exact name of the debug lobby scene as it appears in Build Settings.")]
+        [SerializeField] private string debugLobbySceneName = "DemoLobby";
 
         // ── Awake ─────────────────────────────────────────────────────────────
 
@@ -254,6 +259,12 @@ namespace DDD.TNFY.BRAWL
 
             var go = Instantiate(prefab, tile.transform.position + spawnOffset, prefab.transform.rotation);
             go.name = go.name.Replace("(Clone)", "").Trim() + " (Enemy)";
+        }
+        
+        public void ReturnToLobby()
+        {
+            DebugSessionConfig.Clear();
+            SceneManager.LoadScene(debugLobbySceneName);
         }
     }
 }
