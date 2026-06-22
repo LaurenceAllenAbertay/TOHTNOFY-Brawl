@@ -91,6 +91,8 @@ namespace DDD.TNFY.BRAWL
             // UnitManager.Awake runs RegisterExistingUnits() before TurnManager.Start,
             // so AllUnits is already populated here. Script Execution Order in Project
             // Settings should place UnitManager before TurnManager to make this explicit.
+            // NeutralUnits are intentionally excluded — they act during the environment turn,
+            // not via a normal turn slot.
             var validUnits = UnitManager.AllUnits.Where(u => u is PlayerUnit || u is EnemyUnit);
 
             // Roll initiative
@@ -137,19 +139,6 @@ namespace DDD.TNFY.BRAWL
             _activeUnitDiedThisTurn = false;
 
             Unit current = CurrentUnit;
-
-            // Check for turn-skipping status effects BEFORE firing any events or starting
-            // camera transitions. Handling here avoids coroutine conflicts between
-            // WaitForCameraTransition and EndTurnSequence that occur when these are processed
-            // mid-event-dispatch. Shocked is checked after Stunned — both use the same
-            // HandleStunnedTurn coroutine since the visual behaviour is identical.
-            if (StatusEffectManager.Instance != null &&
-                (StatusEffectManager.Instance.HasStatusEffect(current, StatusEffectType.Stunned) ||
-                 StatusEffectManager.Instance.HasStatusEffect(current, StatusEffectType.Shocked)))
-            {
-                StartCoroutine(HandleStunnedTurn(current));
-                return;
-            }
 
             // Check for turn-skipping status effects BEFORE firing any events or starting
             // camera transitions. Handling here avoids coroutine conflicts between
@@ -342,15 +331,52 @@ namespace DDD.TNFY.BRAWL
 
             int currentRound = GetCurrentRound();
 
+            // ── Phase 1: Tile effects ─────────────────────────────────────────
             foreach (var tile in GridManager.Instance.AllTiles)
             {
                 if (tile.HasActiveEffects)
                     yield return StartCoroutine(tile.TriggerEffects(currentRound));
             }
 
-            // Present any units that died from tile effects this round.
-            // No single killer to return to (tile damage) so we pass null — the camera
-            // stays on the last death position until the next turn-start pan takes over.
+            // Drain deaths caused by tile effects before neutral units act.
+            if (UnitDeathSequencer.Instance != null)
+                yield return StartCoroutine(UnitDeathSequencer.Instance.DrainDeathQueue(returnToUnit: null));
+
+            // ── Phase 2: Neutral unit environment abilities ────────────────────
+            // Take a snapshot of the list before iterating — a neutral unit's environmentAbility
+            // could theoretically kill itself (e.g. a bomb with 1 HP), which would modify
+            // AllNeutralUnits mid-iteration if we read from it directly.
+            var neutralSnapshot = new List<NeutralUnit>(UnitManager.AllNeutralUnits);
+            foreach (var neutral in neutralSnapshot)
+            {
+                // Skip any that died during tile effects (or earlier this same pass).
+                if (neutral == null || neutral.IsDead) continue;
+                if (neutral.environmentAbility == null) continue;
+
+                // Pan camera to the neutral unit so the player can see it acting.
+                if (cameraController != null)
+                    yield return StartCoroutine(cameraController.TransitionTo(
+                        cameraController.UnitFocusPosition(neutral)));
+
+                // Build a context and execute the environment ability.
+                // aimDir is not meaningful for self/AOE abilities; use current facing as default.
+                var ctx = new AbilityContext
+                {
+                    caster = neutral,
+                    ability = neutral.environmentAbility,
+                    aimDir  = neutral.currentFacing
+                };
+
+                yield return StartCoroutine(neutral.ExecuteAbilityCoroutine(ctx));
+
+                // Drain any deaths that occurred during this neutral's ability before
+                // moving on to the next one so the camera sequencing stays clean.
+                if (UnitDeathSequencer.Instance != null)
+                    yield return StartCoroutine(UnitDeathSequencer.Instance.DrainDeathQueue(returnToUnit: null));
+            }
+
+            // Final drain — catches any stragglers (e.g. a neutral unit that died to its
+            // own destructionAbility trigger during the environment pass).
             if (UnitDeathSequencer.Instance != null)
                 yield return StartCoroutine(UnitDeathSequencer.Instance.DrainDeathQueue(returnToUnit: null));
         }

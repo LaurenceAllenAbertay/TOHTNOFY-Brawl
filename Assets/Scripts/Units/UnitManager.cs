@@ -24,6 +24,11 @@ namespace DDD.TNFY.BRAWL
         private readonly List<PlayerUnit> playerUnits = new List<PlayerUnit>();
         private readonly List<EnemyUnit> enemyUnits = new List<EnemyUnit>();
 
+        // NeutralUnits: active map objects (Mega Mug, etc.) that fire during the environment
+        // turn. Kept separate so TurnManager can iterate them without scanning AllUnits.
+        // Units in this list are always IsNeutral = true and are never in the turn order.
+        private readonly List<NeutralUnit> neutralUnits = new List<NeutralUnit>();
+
         // Bodies: units that have completed their death animation and now exist as neutral
         // downed objects on the map. Kept separate so systems can query bodies without
         // iterating AllUnits and checking IsBody on each entry.
@@ -37,6 +42,14 @@ namespace DDD.TNFY.BRAWL
         public static IReadOnlyList<Unit> AllUnits => Instance?.allUnits ?? new List<Unit>();
         public static IReadOnlyList<PlayerUnit> PlayerUnits => Instance?.playerUnits ?? new List<PlayerUnit>();
         public static IReadOnlyList<EnemyUnit> EnemyUnits => Instance?.enemyUnits ?? new List<EnemyUnit>();
+
+        /// <summary>
+        /// All live NeutralUnit instances currently on the map.
+        /// TurnManager iterates this during TriggerEnvironmentEffects to fire each unit's
+        /// environmentAbility. SpawnNeutralUnitEffect adds to this list; NeutralUnit.Die()
+        /// removes from it via NotifyUnitDied.
+        /// </summary>
+        public static IReadOnlyList<NeutralUnit> AllNeutralUnits => Instance?.neutralUnits ?? new List<NeutralUnit>();
 
         // All units currently in the body state. Useful for revival systems and editor tools.
         public static IReadOnlyList<Unit> AllBodies => Instance?.bodyUnits ?? new List<Unit>();
@@ -53,8 +66,6 @@ namespace DDD.TNFY.BRAWL
 
             // Find all existing units in the scene and register them
             RegisterExistingUnits();
-
-            //Debug.Log(UnitManager.AllUnits.Count);
         }
 
         private void RegisterExistingUnits()
@@ -88,6 +99,8 @@ namespace DDD.TNFY.BRAWL
                 Instance.playerUnits.Add(player);
             else if (unit is EnemyUnit enemy && !Instance.enemyUnits.Contains(enemy))
                 Instance.enemyUnits.Add(enemy);
+            else if (unit is NeutralUnit neutral && !Instance.neutralUnits.Contains(neutral))
+                Instance.neutralUnits.Add(neutral);
 
             OnUnitRegistered?.Invoke(unit);
         }
@@ -107,6 +120,8 @@ namespace DDD.TNFY.BRAWL
                 Instance.playerUnits.Remove(player);
             else if (unit is EnemyUnit enemy)
                 Instance.enemyUnits.Remove(enemy);
+            else if (unit is NeutralUnit neutral)
+                Instance.neutralUnits.Remove(neutral);
 
             OnUnitUnregistered?.Invoke(unit);
         }
@@ -120,7 +135,7 @@ namespace DDD.TNFY.BRAWL
         }
 
         /// <summary>
-        /// Notify that a unit has died. Call this from Unit.ReceiveDamage() when health <= 0.
+        /// Notify that a unit has been damaged. Call this from DamageEffect.
         /// </summary>
         public static void NotifyUnitDamaged(Unit victim, Unit attacker)
         {
@@ -143,6 +158,12 @@ namespace DDD.TNFY.BRAWL
                 Instance.playerUnits.Remove(player);
             else if (unit is EnemyUnit enemy)
                 Instance.enemyUnits.Remove(enemy);
+            else if (unit is NeutralUnit neutral)
+            {
+                // NeutralUnits are removed from the environment-turn list immediately on death
+                // so TurnManager does not try to fire their environmentAbility this round.
+                Instance.neutralUnits.Remove(neutral);
+            }
         }
 
         /// <summary>
@@ -249,6 +270,8 @@ namespace DDD.TNFY.BRAWL
                 return Instance.playerUnits.Count;
             else if (typeof(T) == typeof(EnemyUnit))
                 return Instance.enemyUnits.Count;
+            else if (typeof(T) == typeof(NeutralUnit))
+                return Instance.neutralUnits.Count;
             else
                 return Instance.allUnits.Count;
         }
@@ -273,7 +296,8 @@ namespace DDD.TNFY.BRAWL
         [System.Diagnostics.Conditional("UNITY_EDITOR")]
         public void DebugLogUnitCounts()
         {
-            Debug.Log($"UnitManager: Total Units: {allUnits.Count}, Players: {playerUnits.Count}, Enemies: {enemyUnits.Count}, Bodies: {bodyUnits.Count}");
+            Debug.Log($"UnitManager: Total Units: {allUnits.Count}, Players: {playerUnits.Count}, " +
+                      $"Enemies: {enemyUnits.Count}, Neutrals: {neutralUnits.Count}, Bodies: {bodyUnits.Count}");
         }
     }
 }
