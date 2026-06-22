@@ -1,0 +1,2836 @@
+fileFormatVersion: 2
+guid: 325e6214c77927541b082d6b5b4e944b
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5256979628066382121
+    second: Cody_Run_0
+  - first:
+      213: -3701151767356484762
+    second: Cody_Run_1
+  - first:
+      213: -1254576424168698734
+    second: Cody_Run_2
+  - first:
+      213: -2661281133656259107
+    second: Cody_Run_3
+  - first:
+      213: -3131222952252686004
+    second: Cody_Run_4
+  - first:
+      213: -1306963049168059870
+    second: Cody_Run_5
+  - first:
+      213: -8631604078884317860
+    second: Cody_Run_6
+  - first:
+      213: -5204953943240602404
+    second: Cody_Run_7
+  - first:
+      213: 4897582513977681586
+    second: Cody_Run_8
+  - first:
+      213: 5388350688020060623
+    second: Cody_Run_9
+  - first:
+      213: -5355238995099244579
+    second: Cody_Run_10
+  - first:
+      213: -5211313386444543676
+    second: Cody_Run_11
+  - first:
+      213: 1465069433415910026
+    second: Cody_Run_12
+  - first:
+      213: -3232157189224015339
+    second: Cody_Run_13
+  - first:
+      213: -1741009640889628915
+    second: Cody_Run_14
+  - first:
+      213: -8530955237682166726
+    second: Cody_Run_15
+  - first:
+      213: -1377152916840649139
+    second: Cody_Run_16
+  - first:
+      213: -6629566545245795083
+    second: Cody_Run_17
+  - first:
+      213: 480338397478948583
+    second: Cody_Run_18
+  - first:
+      213: 8934012744087017875
+    second: Cody_Run_19
+  - first:
+      213: -6122592362301182495
+    second: Cody_Run_20
+  - first:
+      213: -518863392155157522
+    second: Cody_Run_21
+  - first:
+      213: 7698243249403522873
+    second: Cody_Run_22
+  - first:
+      213: -3298459791135605943
+    second: Cody_Run_23
+  - first:
+      213: 2485973654462362384
+    second: Cody_Run_24
+  - first:
+      213: -1705409359757089244
+    second: Cody_Run_25
+  - first:
+      213: -7215504819983084557
+    second: Cody_Run_26
+  - first:
+      213: 6782003277258344303
+    second: Cody_Run_27
+  - first:
+      213: 3694961164058675076
+    second: Cody_Run_28
+  - first:
+      213: 1361253272175033487
+    second: Cody_Run_29
+  - first:
+      213: -900653111150745470
+    second: Cody_Run_30
+  - first:
+      213: -5684965544824438536
+    second: Cody_Run_31
+  - first:
+      213: -5808356499548555160
+    second: Cody_Run_32
+  - first:
+      213: -3849693714147133120
+    second: Cody_Run_33
+  - first:
+      213: -8985200969604323262
+    second: Cody_Run_34
+  - first:
+      213: -5112410442287847192
+    second: Cody_Run_35
+  - first:
+      213: -4463615894505238256
+    second: Cody_Run_36
+  - first:
+      213: -367809140078339218
+    second: Cody_Run_37
+  - first:
+      213: -8610211775388860608
+    second: Cody_Run_38
+  - first:
+      213: -3532406418920071987
+    second: Cody_Run_39
+  - first:
+      213: -3699877660437999840
+    second: Cody_Run_40
+  - first:
+      213: -2359383583976264448
+    second: Cody_Run_41
+  - first:
+      213: -2515158197035631399
+    second: Cody_Run_42
+  - first:
+      213: 4296047897266390371
+    second: Cody_Run_43
+  - first:
+      213: 7022509585619957168
+    second: Cody_Run_44
+  - first:
+      213: 2007734661849580600
+    second: Cody_Run_45
+  - first:
+      213: 5789311161371326470
+    second: Cody_Run_46
+  - first:
+      213: -3143765156024295957
+    second: Cody_Run_47
+  - first:
+      213: -4171876372407247941
+    second: Cody_Run_48
+  - first:
+      213: -7871727915995155118
+    second: Cody_Run_49
+  - first:
+      213: 1622113852387834336
+    second: Cody_Run_50
+  - first:
+      213: 1818701992761551874
+    second: Cody_Run_51
+  - first:
+      213: -4943333293802361776
+    second: Cody_Run_52
+  - first:
+      213: 6215514726272092520
+    second: Cody_Run_53
+  - first:
+      213: 6580765584416612141
+    second: Cody_Run_54
+  - first:
+      213: -2493478737668083113
+    second: Cody_Run_55
+  - first:
+      213: 4228197924218164072
+    second: Cody_Run_56
+  - first:
+      213: 4752910305211046581
+    second: Cody_Run_57
+  - first:
+      213: -2974072713525650363
+    second: Cody_Run_58
+  - first:
+      213: -5598518861751043911
+    second: Cody_Run_59
+  - first:
+      213: 5662259672171011950
+    second: Cody_Run_60
+  - first:
+      213: -8244994742115807286
+    second: Cody_Run_61
+  - first:
+      213: -512291503728143164
+    second: Cody_Run_62
+  - first:
+      213: 8464805606323493978
+    second: Cody_Run_63
+  - first:
+      213: -9082844939770906216
+    second: Cody_Run_64
+  - first:
+      213: -2975248692410367823
+    second: Cody_Run_65
+  - first:
+      213: 6454019154508314456
+    second: Cody_Run_66
+  - first:
+      213: 3072751816366491380
+    second: Cody_Run_67
+  - first:
+      213: -1142348209364815056
+    second: Cody_Run_68
+  - first:
+      213: -3361691297639549366
+    second: Cody_Run_69
+  - first:
+      213: -592528118069675199
+    second: Cody_Run_70
+  - first:
+      213: -8249044824245879118
+    second: Cody_Run_71
+  - first:
+      213: 4045996269687680425
+    second: Cody_Run_72
+  - first:
+      213: 588255841883672822
+    second: Cody_Run_73
+  - first:
+      213: 32236561954672029
+    second: Cody_Run_74
+  - first:
+      213: 825596666698765592
+    second: Cody_Run_75
+  - first:
+      213: -1278443075587120589
+    second: Cody_Run_76
+  - first:
+      213: 3300445349057450203
+    second: Cody_Run_77
+  - first:
+      213: 2237496766984998475
+    second: Cody_Run_78
+  - first:
+      213: -3085355313044959398
+    second: Cody_Run_79
+  - first:
+      213: 6696891031039225247
+    second: Cody_Run_80
+  - first:
+      213: -1875765539700414389
+    second: Cody_Run_81
+  - first:
+      213: 5954402914874771496
+    second: Cody_Run_82
+  - first:
+      213: -693832807797409159
+    second: Cody_Run_83
+  - first:
+      213: 5117341586349251532
+    second: Cody_Run_84
+  - first:
+      213: -6405067391996440345
+    second: Cody_Run_85
+  - first:
+      213: 6759970132370862209
+    second: Cody_Run_86
+  - first:
+      213: 6524512945417781304
+    second: Cody_Run_87
+  - first:
+      213: 2920303114906608891
+    second: Cody_Run_88
+  - first:
+      213: 31205536138723953
+    second: Cody_Run_89
+  - first:
+      213: -5898758818055715349
+    second: Cody_Run_90
+  - first:
+      213: -5035630590834071675
+    second: Cody_Run_91
+  - first:
+      213: -4504253914818502697
+    second: Cody_Run_92
+  - first:
+      213: -4195398091388700660
+    second: Cody_Run_93
+  - first:
+      213: -229476043373994616
+    second: Cody_Run_94
+  - first:
+      213: 8461398293532553099
+    second: Cody_Run_95
+  - first:
+      213: 7442784378537840790
+    second: Cody_Run_96
+  - first:
+      213: 2794174163262792049
+    second: Cody_Run_97
+  - first:
+      213: 4329367812782070957
+    second: Cody_Run_98
+  - first:
+      213: -5695384176736229442
+    second: Cody_Run_99
+  - first:
+      213: -1557870390562072352
+    second: Cody_Run_100
+  - first:
+      213: 4520682148900736733
+    second: Cody_Run_101
+  - first:
+      213: 5025465989166593658
+    second: Cody_Run_102
+  - first:
+      213: -2917849476237242242
+    second: Cody_Run_103
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cody_Run_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7667
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7de53a581e47b07b0800000000000000
+      internalID: -5256979628066382121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_1
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 7667
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66358eeb31ed2acc0800000000000000
+      internalID: -3701151767356484762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_2
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 7667
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29c48d5a369d69ee0800000000000000
+      internalID: -1254576424168698734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_3
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 7667
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd548f4b8ea311bd0800000000000000
+      internalID: -2661281133656259107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_4
+      rect:
+        serializedVersion: 2
+        x: 2228
+        y: 7667
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c41cd6a9059ab84d0800000000000000
+      internalID: -3131222952252686004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_5
+      rect:
+        serializedVersion: 2
+        x: 2785
+        y: 7667
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 222c6c7080cbcdde0800000000000000
+      internalID: -1306963049168059870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_6
+      rect:
+        serializedVersion: 2
+        x: 3342
+        y: 7667
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c55994c82d1663880800000000000000
+      internalID: -8631604078884317860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_7
+      rect:
+        serializedVersion: 2
+        x: 3899
+        y: 7667
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdc00e437f944c7b0800000000000000
+      internalID: -5204953943240602404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_8
+      rect:
+        serializedVersion: 2
+        x: 4456
+        y: 7667
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b6edc31955b7f340800000000000000
+      internalID: 4897582513977681586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6970
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc9daace66447ca40800000000000000
+      internalID: 5388350688020060623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_10
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 6970
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd72ac9d18e5ea5b0800000000000000
+      internalID: -5355238995099244579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_11
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 6970
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4492cb3f512bda7b0800000000000000
+      internalID: -5211313386444543676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_12
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 6970
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a82c90e23e8f45410800000000000000
+      internalID: 1465069433415910026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_13
+      rect:
+        serializedVersion: 2
+        x: 2228
+        y: 6970
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51ad31e39221523d0800000000000000
+      internalID: -3232157189224015339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_14
+      rect:
+        serializedVersion: 2
+        x: 2785
+        y: 6970
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d074e34b4f0b6d7e0800000000000000
+      internalID: -1741009640889628915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_15
+      rect:
+        serializedVersion: 2
+        x: 3342
+        y: 6970
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3442370965fb9980800000000000000
+      internalID: -8530955237682166726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_16
+      rect:
+        serializedVersion: 2
+        x: 3899
+        y: 6970
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4ee156f7be53ece0800000000000000
+      internalID: -1377152916840649139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_17
+      rect:
+        serializedVersion: 2
+        x: 4456
+        y: 6970
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fc8fcf1a5c0ff3a0800000000000000
+      internalID: -6629566545245795083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6273
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ee86b14a318aa600800000000000000
+      internalID: 480338397478948583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_19
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 6273
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3999e1e914dfbfb70800000000000000
+      internalID: 8934012744087017875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_20
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 6273
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1eda4847fae280ba0800000000000000
+      internalID: -6122592362301182495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_21
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 6273
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeb33af6e70acc8f0800000000000000
+      internalID: -518863392155157522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_22
+      rect:
+        serializedVersion: 2
+        x: 2228
+        y: 6273
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93fee33c277a5da60800000000000000
+      internalID: 7698243249403522873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_23
+      rect:
+        serializedVersion: 2
+        x: 2785
+        y: 6273
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94bf373cb448932d0800000000000000
+      internalID: -3298459791135605943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_24
+      rect:
+        serializedVersion: 2
+        x: 3342
+        y: 6273
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01375331ed3ff7220800000000000000
+      internalID: 2485973654462362384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_25
+      rect:
+        serializedVersion: 2
+        x: 3899
+        y: 6273
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4266d03193b2558e0800000000000000
+      internalID: -1705409359757089244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_26
+      rect:
+        serializedVersion: 2
+        x: 4456
+        y: 6273
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f31ac978906ddb90800000000000000
+      internalID: -7215504819983084557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5576
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f67c48e4c048e1e50800000000000000
+      internalID: 6782003277258344303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_28
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 5576
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 487c49a1a93274330800000000000000
+      internalID: 3694961164058675076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_29
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 5576
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8cb45983a424e210800000000000000
+      internalID: 1361253272175033487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_30
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 5576
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 288620c64cc3083f0800000000000000
+      internalID: -900653111150745470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_31
+      rect:
+        serializedVersion: 2
+        x: 2228
+        y: 5576
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f0876c05f1fa11b0800000000000000
+      internalID: -5684965544824438536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_32
+      rect:
+        serializedVersion: 2
+        x: 2785
+        y: 5576
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 868b393a982946fa0800000000000000
+      internalID: -5808356499548555160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_33
+      rect:
+        serializedVersion: 2
+        x: 3342
+        y: 5576
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 049b43aa6f3239ac0800000000000000
+      internalID: -3849693714147133120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_34
+      rect:
+        serializedVersion: 2
+        x: 3899
+        y: 5576
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2482d33e2572e4380800000000000000
+      internalID: -8985200969604323262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_35
+      rect:
+        serializedVersion: 2
+        x: 4456
+        y: 5576
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e86f691ac11d09b0800000000000000
+      internalID: -5112410442287847192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4879
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0115a324efc0e02c0800000000000000
+      internalID: -4463615894505238256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_37
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 4879
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6b1d7c298745eaf0800000000000000
+      internalID: -367809140078339218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_38
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 4879
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04fbf075202628880800000000000000
+      internalID: -8610211775388860608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_39
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 4879
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcc95f5d31f5afec0800000000000000
+      internalID: -3532406418920071987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_40
+      rect:
+        serializedVersion: 2
+        x: 2228
+        y: 4879
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02f8031eed467acc0800000000000000
+      internalID: -3699877660437999840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_41
+      rect:
+        serializedVersion: 2
+        x: 2785
+        y: 4879
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00de4348129c14fd0800000000000000
+      internalID: -2359383583976264448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_42
+      rect:
+        serializedVersion: 2
+        x: 3342
+        y: 4879
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dc77c712fc581dd0800000000000000
+      internalID: -2515158197035631399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_43
+      rect:
+        serializedVersion: 2
+        x: 3899
+        y: 4879
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36580a61dc0ae9b30800000000000000
+      internalID: 4296047897266390371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_44
+      rect:
+        serializedVersion: 2
+        x: 4456
+        y: 4879
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b537a2e247f47160800000000000000
+      internalID: 7022509585619957168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4182
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83488ca9908ecdb10800000000000000
+      internalID: 2007734661849580600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_46
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 4182
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 608fdb304d3c75050800000000000000
+      internalID: 5789311161371326470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_47
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 4182
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: beddbe93f3a1f54d0800000000000000
+      internalID: -3143765156024295957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_48
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 4182
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbb12d7fa848a16c0800000000000000
+      internalID: -4171876372407247941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_49
+      rect:
+        serializedVersion: 2
+        x: 2228
+        y: 4182
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2553596aa2102c290800000000000000
+      internalID: -7871727915995155118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_50
+      rect:
+        serializedVersion: 2
+        x: 2785
+        y: 4182
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e931d454f7e28610800000000000000
+      internalID: 1622113852387834336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_51
+      rect:
+        serializedVersion: 2
+        x: 3342
+        y: 4182
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20ce8d693d35d3910800000000000000
+      internalID: 1818701992761551874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_52
+      rect:
+        serializedVersion: 2
+        x: 3899
+        y: 4182
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05c6c886f80c56bb0800000000000000
+      internalID: -4943333293802361776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_53
+      rect:
+        serializedVersion: 2
+        x: 4456
+        y: 4182
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86948ab56b1f14650800000000000000
+      internalID: 6215514726272092520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3485
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2f9441ce63935b50800000000000000
+      internalID: 6580765584416612141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_55
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 3485
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 752fd429c42656dd0800000000000000
+      internalID: -2493478737668083113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_56
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 3485
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86351113c939daa30800000000000000
+      internalID: 4228197924218164072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_57
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 3485
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bad5679dbab5f140800000000000000
+      internalID: 4752910305211046581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_58
+      rect:
+        serializedVersion: 2
+        x: 2228
+        y: 3485
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54c1f16df98f9b6d0800000000000000
+      internalID: -2974072713525650363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_59
+      rect:
+        serializedVersion: 2
+        x: 2785
+        y: 3485
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b83109e1c01e42b0800000000000000
+      internalID: -5598518861751043911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_60
+      rect:
+        serializedVersion: 2
+        x: 3342
+        y: 3485
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6fd5c10c23649e40800000000000000
+      internalID: 5662259672171011950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_61
+      rect:
+        serializedVersion: 2
+        x: 3899
+        y: 3485
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acf493547f4e39d80800000000000000
+      internalID: -8244994742115807286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_62
+      rect:
+        serializedVersion: 2
+        x: 4456
+        y: 3485
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c455d27799f3e8f0800000000000000
+      internalID: -512291503728143164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2788
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5c95a9b9d7097570800000000000000
+      internalID: 8464805606323493978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_64
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 2788
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 899300776a043f180800000000000000
+      internalID: -9082844939770906216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_65
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 2788
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b04f6ae31bc5b6d0800000000000000
+      internalID: -2975248692410367823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_66
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 2788
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 857f806e938419950800000000000000
+      internalID: 6454019154508314456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_67
+      rect:
+        serializedVersion: 2
+        x: 2228
+        y: 2788
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f606713f7b94aa20800000000000000
+      internalID: 3072751816366491380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_68
+      rect:
+        serializedVersion: 2
+        x: 2785
+        y: 2788
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 033b1032b509520f0800000000000000
+      internalID: -1142348209364815056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_69
+      rect:
+        serializedVersion: 2
+        x: 3342
+        y: 2788
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a463ca7639fd851d0800000000000000
+      internalID: -3361691297639549366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_70
+      rect:
+        serializedVersion: 2
+        x: 3899
+        y: 2788
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14bb603e0dae6c7f0800000000000000
+      internalID: -592528118069675199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_71
+      rect:
+        serializedVersion: 2
+        x: 4456
+        y: 2788
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bebc8a0071858d80800000000000000
+      internalID: -8249044824245879118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2091
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ad2a41bb24462830800000000000000
+      internalID: 4045996269687680425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_73
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 2091
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f0568c4297e92800800000000000000
+      internalID: 588255841883672822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_74
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 2091
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9d86187bf6827000800000000000000
+      internalID: 32236561954672029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_75
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 2091
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 815935e4bcb157b00800000000000000
+      internalID: 825596666698765592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_76
+      rect:
+        serializedVersion: 2
+        x: 2228
+        y: 2091
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3326216dbce024ee0800000000000000
+      internalID: -1278443075587120589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_77
+      rect:
+        serializedVersion: 2
+        x: 2785
+        y: 2091
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd0d827fe898dcd20800000000000000
+      internalID: 3300445349057450203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_78
+      rect:
+        serializedVersion: 2
+        x: 3342
+        y: 2091
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4ec93e647f2d0f10800000000000000
+      internalID: 2237496766984998475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_79
+      rect:
+        serializedVersion: 2
+        x: 3899
+        y: 2091
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5f471090bd9e25d0800000000000000
+      internalID: -3085355313044959398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_80
+      rect:
+        serializedVersion: 2
+        x: 4456
+        y: 2091
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9da79c39e220fc50800000000000000
+      internalID: 6696891031039225247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_81
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1394
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b48ec3c0e21f7f5e0800000000000000
+      internalID: -1875765539700414389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_82
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 1394
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82849ae37e942a250800000000000000
+      internalID: 5954402914874771496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_83
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1394
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97a39b5ccb20f56f0800000000000000
+      internalID: -693832807797409159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_84
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 1394
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ccb5ea85f03740740800000000000000
+      internalID: 5117341586349251532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_85
+      rect:
+        serializedVersion: 2
+        x: 2228
+        y: 1394
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e05d997421ac17a0800000000000000
+      internalID: -6405067391996440345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_86
+      rect:
+        serializedVersion: 2
+        x: 2785
+        y: 1394
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1803730050d30dd50800000000000000
+      internalID: 6759970132370862209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_87
+      rect:
+        serializedVersion: 2
+        x: 3342
+        y: 1394
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 830801c94f9bb8a50800000000000000
+      internalID: 6524512945417781304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_88
+      rect:
+        serializedVersion: 2
+        x: 3899
+        y: 1394
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf4a978e530078820800000000000000
+      internalID: 2920303114906608891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_89
+      rect:
+        serializedVersion: 2
+        x: 4456
+        y: 1394
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1720390154dde6000800000000000000
+      internalID: 31205536138723953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 697
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be50612ab16632ea0800000000000000
+      internalID: -5898758818055715349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_91
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 697
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 587ae3558a8dd1ab0800000000000000
+      internalID: -5035630590834071675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_92
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 697
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7df9415ddecad71c0800000000000000
+      internalID: -4504253914818502697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_93
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 697
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c08bc6ff9a3f6c5c0800000000000000
+      internalID: -4195398091388700660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_94
+      rect:
+        serializedVersion: 2
+        x: 2228
+        y: 697
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88d1b3e11ccb0dcf0800000000000000
+      internalID: -229476043373994616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_95
+      rect:
+        serializedVersion: 2
+        x: 2785
+        y: 697
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8faa15eaecec6570800000000000000
+      internalID: 8461398293532553099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_96
+      rect:
+        serializedVersion: 2
+        x: 3342
+        y: 697
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 690139e65f41a4760800000000000000
+      internalID: 7442784378537840790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_97
+      rect:
+        serializedVersion: 2
+        x: 3899
+        y: 697
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1716ad9e896e6c620800000000000000
+      internalID: 2794174163262792049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_98
+      rect:
+        serializedVersion: 2
+        x: 4456
+        y: 697
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dac92e67611051c30800000000000000
+      internalID: 4329367812782070957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_99
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb7a146444ee5f0b0800000000000000
+      internalID: -5695384176736229442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_100
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 0
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e8d27c3225516ae0800000000000000
+      internalID: -1557870390562072352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_101
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 0
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dde8dab7670bcbe30800000000000000
+      internalID: 4520682148900736733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_102
+      rect:
+        serializedVersion: 2
+        x: 1671
+        y: 0
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a76f41be0ba0eb540800000000000000
+      internalID: 5025465989166593658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Run_103
+      rect:
+        serializedVersion: 2
+        x: 2228
+        y: 0
+        width: 557
+        height: 697
+      alignment: 9
+      pivot: {x: 0.46, y: 0.045}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e70d1dc5c57b187d0800000000000000
+      internalID: -2917849476237242242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1431f4642f4ae8e44b3528a8070fc275
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":9.0,"y":12.0},"gridSpriteSize":{"x":557.0,"y":697.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.46000000834465029,"y":0.04500000178813934},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Cody_Run_0: -5256979628066382121
+      Cody_Run_1: -3701151767356484762
+      Cody_Run_10: -5355238995099244579
+      Cody_Run_100: -1557870390562072352
+      Cody_Run_101: 4520682148900736733
+      Cody_Run_102: 5025465989166593658
+      Cody_Run_103: -2917849476237242242
+      Cody_Run_11: -5211313386444543676
+      Cody_Run_12: 1465069433415910026
+      Cody_Run_13: -3232157189224015339
+      Cody_Run_14: -1741009640889628915
+      Cody_Run_15: -8530955237682166726
+      Cody_Run_16: -1377152916840649139
+      Cody_Run_17: -6629566545245795083
+      Cody_Run_18: 480338397478948583
+      Cody_Run_19: 8934012744087017875
+      Cody_Run_2: -1254576424168698734
+      Cody_Run_20: -6122592362301182495
+      Cody_Run_21: -518863392155157522
+      Cody_Run_22: 7698243249403522873
+      Cody_Run_23: -3298459791135605943
+      Cody_Run_24: 2485973654462362384
+      Cody_Run_25: -1705409359757089244
+      Cody_Run_26: -7215504819983084557
+      Cody_Run_27: 6782003277258344303
+      Cody_Run_28: 3694961164058675076
+      Cody_Run_29: 1361253272175033487
+      Cody_Run_3: -2661281133656259107
+      Cody_Run_30: -900653111150745470
+      Cody_Run_31: -5684965544824438536
+      Cody_Run_32: -5808356499548555160
+      Cody_Run_33: -3849693714147133120
+      Cody_Run_34: -8985200969604323262
+      Cody_Run_35: -5112410442287847192
+      Cody_Run_36: -4463615894505238256
+      Cody_Run_37: -367809140078339218
+      Cody_Run_38: -8610211775388860608
+      Cody_Run_39: -3532406418920071987
+      Cody_Run_4: -3131222952252686004
+      Cody_Run_40: -3699877660437999840
+      Cody_Run_41: -2359383583976264448
+      Cody_Run_42: -2515158197035631399
+      Cody_Run_43: 4296047897266390371
+      Cody_Run_44: 7022509585619957168
+      Cody_Run_45: 2007734661849580600
+      Cody_Run_46: 5789311161371326470
+      Cody_Run_47: -3143765156024295957
+      Cody_Run_48: -4171876372407247941
+      Cody_Run_49: -7871727915995155118
+      Cody_Run_5: -1306963049168059870
+      Cody_Run_50: 1622113852387834336
+      Cody_Run_51: 1818701992761551874
+      Cody_Run_52: -4943333293802361776
+      Cody_Run_53: 6215514726272092520
+      Cody_Run_54: 6580765584416612141
+      Cody_Run_55: -2493478737668083113
+      Cody_Run_56: 4228197924218164072
+      Cody_Run_57: 4752910305211046581
+      Cody_Run_58: -2974072713525650363
+      Cody_Run_59: -5598518861751043911
+      Cody_Run_6: -8631604078884317860
+      Cody_Run_60: 5662259672171011950
+      Cody_Run_61: -8244994742115807286
+      Cody_Run_62: -512291503728143164
+      Cody_Run_63: 8464805606323493978
+      Cody_Run_64: -9082844939770906216
+      Cody_Run_65: -2975248692410367823
+      Cody_Run_66: 6454019154508314456
+      Cody_Run_67: 3072751816366491380
+      Cody_Run_68: -1142348209364815056
+      Cody_Run_69: -3361691297639549366
+      Cody_Run_7: -5204953943240602404
+      Cody_Run_70: -592528118069675199
+      Cody_Run_71: -8249044824245879118
+      Cody_Run_72: 4045996269687680425
+      Cody_Run_73: 588255841883672822
+      Cody_Run_74: 32236561954672029
+      Cody_Run_75: 825596666698765592
+      Cody_Run_76: -1278443075587120589
+      Cody_Run_77: 3300445349057450203
+      Cody_Run_78: 2237496766984998475
+      Cody_Run_79: -3085355313044959398
+      Cody_Run_8: 4897582513977681586
+      Cody_Run_80: 6696891031039225247
+      Cody_Run_81: -1875765539700414389
+      Cody_Run_82: 5954402914874771496
+      Cody_Run_83: -693832807797409159
+      Cody_Run_84: 5117341586349251532
+      Cody_Run_85: -6405067391996440345
+      Cody_Run_86: 6759970132370862209
+      Cody_Run_87: 6524512945417781304
+      Cody_Run_88: 2920303114906608891
+      Cody_Run_89: 31205536138723953
+      Cody_Run_9: 5388350688020060623
+      Cody_Run_90: -5898758818055715349
+      Cody_Run_91: -5035630590834071675
+      Cody_Run_92: -4504253914818502697
+      Cody_Run_93: -4195398091388700660
+      Cody_Run_94: -229476043373994616
+      Cody_Run_95: 8461398293532553099
+      Cody_Run_96: 7442784378537840790
+      Cody_Run_97: 2794174163262792049
+      Cody_Run_98: 4329367812782070957
+      Cody_Run_99: -5695384176736229442
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -37,6 +37,8 @@ namespace DDD.TNFY.BRAWL
         private const string IDLE_HURT_TALKING  = "Idle_Hurt_Talking";
 
         private const string MOVE_STATE           = "Move";
+        private const string MOVE_BAD_STATE       = "Move_Bad";
+        private const string MOVE_HURT_STATE      = "Move_Hurt";
         private const string ATTACK_STATE         = "Recoil_Shot";
         private const string HURT_STATE           = "Hurt";
         private const string DEATH_STATE          = "Death";
@@ -165,6 +167,18 @@ namespace DDD.TNFY.BRAWL
             return talking ? IDLE_GOOD_TALKING : IDLE_GOOD;
         }
 
+        /// <summary>
+        /// Returns the correct move state name for the current idle tier.
+        /// Priority mirrors ResolveIdleState: Hurt → Bad → Good.
+        /// Falls back to Move when the tier-specific state is absent on this character.
+        /// </summary>
+        private string ResolveMoveState()
+        {
+            if (_isHurtIdle && HasState(MOVE_HURT_STATE)) return MOVE_HURT_STATE;
+            if (_isBadIdle  && HasState(MOVE_BAD_STATE))  return MOVE_BAD_STATE;
+            return MOVE_STATE;
+        }
+
         // ── Event handlers ────────────────────────────────────────────────────
 
         private void HandleHealthChanged(Unit changed)
@@ -274,12 +288,15 @@ namespace DDD.TNFY.BRAWL
         }
 
         /// <summary>
-        /// Play the walk animation (loops continuously)
+        /// Play the walk animation (loops continuously).
+        /// Resolves to Move_Hurt, Move_Bad, or Move based on the current idle tier,
+        /// mirroring the same priority order as ResolveIdleState.
+        /// Falls back to Move if the tier-specific state is absent on this character.
         /// </summary>
         public void PlayMove()
         {
-            if (!isInKnockbackSequence) // Don't interrupt knockback sequences
-                PlayAnimation(MOVE_STATE, true);
+            if (!isInKnockbackSequence)
+                PlayAnimation(ResolveMoveState(), true);
         }
 
         /// <summary>

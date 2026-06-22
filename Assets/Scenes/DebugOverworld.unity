@@ -663,6 +663,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 591918796187784673, guid: e4ddbbcc4ba2fc64ab537aeae8f63f99, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 591918796187784673, guid: e4ddbbcc4ba2fc64ab537aeae8f63f99, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 591918796187784673, guid: e4ddbbcc4ba2fc64ab537aeae8f63f99, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.45
       objectReference: {fileID: 0}
@@ -705,6 +713,10 @@ PrefabInstance:
     - target: {fileID: 1048228900617914572, guid: e4ddbbcc4ba2fc64ab537aeae8f63f99, type: 3}
       propertyPath: m_Name
       value: Overworld_Kallper
+      objectReference: {fileID: 0}
+    - target: {fileID: 2319815132823038000, guid: e4ddbbcc4ba2fc64ab537aeae8f63f99, type: 3}
+      propertyPath: m_FlipX
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2319815132823038000, guid: e4ddbbcc4ba2fc64ab537aeae8f63f99, type: 3}
       propertyPath: m_Size.x

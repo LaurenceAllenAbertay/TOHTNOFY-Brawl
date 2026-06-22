@@ -230,7 +230,7 @@ namespace DDD.TNFY.BRAWL
 
             var nonSelfTargets = targets.Where(t => t != unit).ToList();
             if (nonSelfTargets.Count > 0)
-                yield return StartCoroutine(HandleCameraTransitionsAndEffects(ctx, nonSelfTargets));
+                yield return StartCoroutine(HandleCameraTransitionsAndEffects(ctx, nonSelfTargets, midAnimFiredEffects));
             else if (ctx.ability.canExecuteWithoutTargets)
             {
                 // No units hit but the ability can still fire.
@@ -267,11 +267,11 @@ namespace DDD.TNFY.BRAWL
 
         #region Camera + Effect Dispatch
 
-        private IEnumerator HandleCameraTransitionsAndEffects(AbilityContext ctx, List<Unit> targets)
+        private IEnumerator HandleCameraTransitionsAndEffects(AbilityContext ctx, List<Unit> targets, HashSet<AbilityEffect> midAnimFiredEffects = null)
         {
             if (cameraController == null)
             {
-                ApplyAbilityEffectsToTargets(ctx, targets);
+                ApplyAbilityEffectsToTargets(ctx, targets, midAnimFiredEffects);
                 SpawnHitEffects(ctx, targets);
                 yield break;
             }
@@ -282,7 +282,7 @@ namespace DDD.TNFY.BRAWL
             // its own animated sequence internally and must not be double-triggered here).
             if (ctx.ability.suppressCameraTransitions)
             {
-                ApplyAbilityEffectsToTargets(ctx, targets);
+                ApplyAbilityEffectsToTargets(ctx, targets, midAnimFiredEffects);
                 SpawnHitEffects(ctx, targets);
                 SpawnHitEffectsOnTraversalTiles(ctx);
                 yield break;
@@ -294,7 +294,7 @@ namespace DDD.TNFY.BRAWL
 
             if (!shouldUseTransitions && !hasMovementEffect)
             {
-                ApplyAbilityEffectsToTargets(ctx, targets);
+                ApplyAbilityEffectsToTargets(ctx, targets, midAnimFiredEffects);
                 SpawnHitEffects(ctx, targets);
                 SpawnHitEffectsOnTraversalTiles(ctx);
                 yield break;
@@ -377,9 +377,8 @@ namespace DDD.TNFY.BRAWL
                 foreach (var target in targets)
                 {
                     if (target == null) continue;
-                    var targetAnimator          = target.GetComponent<UnitAnimator>();
-                    var targetHealthBar         = target.GetComponentInChildren<UnitHealthBarDisplay>();
-                    var targetStatusEffects     = target.GetComponentInChildren<StatusEffectIconDisplay>();
+                    var targetAnimator = target.GetComponent<UnitAnimator>();
+                    var targetHealthBar = target.GetComponentInChildren<UnitHealthBarDisplay>();
 
                     // Run hurt animation wait and health bar tween wait in parallel:
                     // start both as independent coroutines and then yield on each in turn.
@@ -392,13 +391,12 @@ namespace DDD.TNFY.BRAWL
                     if (healthWait != null) yield return healthWait;
 
                     // If this target died, present their death inline right now —
-                    // hide the bar and status effects, then play the downed animation —
-                    // before moving on to the next target. DrainDeathQueue in RunSequence
-                    // will skip them because PresentDeath removes them from the queue.
+                    // hide the bar, then play the downed animation — before moving
+                    // on to the next target. DrainDeathQueue in RunSequence will skip
+                    // them because PresentDeath removes them from the queue.
                     if (target.IsDead)
                     {
                         targetHealthBar?.HideImmediate();
-                        targetStatusEffects?.HideImmediate();
 
                         if (UnitDeathSequencer.Instance != null)
                             yield return StartCoroutine(UnitDeathSequencer.Instance.PresentDeathInline(target));
@@ -531,7 +529,7 @@ namespace DDD.TNFY.BRAWL
                 yield return StartCoroutine(ApplyEffectWithOptionalTeleportCamera(ctx, targets, effect));
         }
 
-        private void ApplyAbilityEffectsToTargets(AbilityContext ctx, List<Unit> targets)
+        private void ApplyAbilityEffectsToTargets(AbilityContext ctx, List<Unit> targets, HashSet<AbilityEffect> midAnimFiredEffects = null)
         {
             foreach (var effect in ctx.ability.effects)
             {
@@ -541,6 +539,9 @@ namespace DDD.TNFY.BRAWL
 
                 // Skip effects that only apply to the caster (e.g. Caster-only StatusEffect).
                 if (effect.IsSelfOnly(ctx)) continue;
+
+                // Skip effects that already fired mid-animation via an Animation Event.
+                if (midAnimFiredEffects != null && midAnimFiredEffects.Contains(effect)) continue;
 
                 effect.Apply(ctx, targets);
             }
