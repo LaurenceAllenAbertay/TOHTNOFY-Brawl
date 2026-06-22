@@ -366,8 +366,18 @@ namespace DDD.TNFY.BRAWL
             {
                 if (!single.IsWithinRange(ctx, target.currentTile)) return null;
 
+                // Confirm the tile is still occupied by the intended target.
+                // If the tile's occupant is a different unit (e.g. a body that landed
+                // there after the target moved), the plan would fire at the wrong unit.
                 var occupant = target.currentTile.currentUnit;
-                if (occupant == null) return null;
+                if (occupant == null || occupant != target) return null;
+
+                // Bodies and other neutral objects must never be planned against here.
+                // SelectTargets enforces canTargetNeutral at execution time, but the AI
+                // planner must reject them at planning time too so it doesn't waste a turn
+                // firing an ability that SelectTargets will refuse to resolve.
+                if (occupant.IsNeutral || occupant.IsDead) return null;
+
                 bool occupantIsAlly = occupant is EnemyUnit == unit is EnemyUnit;
                 if (!( (!occupantIsAlly && ability.canHitEnemies) || (occupantIsAlly && ability.canHitAllies) ))
                     return null;
