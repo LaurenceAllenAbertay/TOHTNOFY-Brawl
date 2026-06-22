@@ -253,20 +253,23 @@ namespace DDD.TNFY.BRAWL
             Vector2Int[] perpendiculars = GetPerpendicularDirections(chargeDirection);
             Vector2Int backward = new Vector2Int(-chargeDirection.x, -chargeDirection.y);
 
-            // Check perpendicular tiles first
+            // Check perpendicular tiles first — same layer only.
             foreach (var dir in perpendiculars)
             {
                 var tile = GridManager.Instance.GetTileInDirection(currentTile, dir);
-                if (tile != null && tile.passableTerrain && !tile.occupied)
+                if (tile != null && tile.passableTerrain && !tile.occupied &&
+                    GridManager.Instance.IsSameYLevel(currentTile, tile))
                     return tile;
             }
 
-            // Check backward
+            // Check backward — same layer only.
             var backTile = GridManager.Instance.GetTileInDirection(currentTile, backward);
-            if (backTile != null && backTile.passableTerrain && !backTile.occupied)
+            if (backTile != null && backTile.passableTerrain && !backTile.occupied &&
+                GridManager.Instance.IsSameYLevel(currentTile, backTile))
                 return backTile;
 
-            // Check any adjacent tile as fallback
+            // All same-layer preferred tiles are blocked — GetAdjacentTiles already
+            // enforces IsSameYLevel, so this fallback never picks an upper-layer tile.
             var adjacentTiles = GridManager.Instance.GetAdjacentTiles(currentTile);
             foreach (var tile in adjacentTiles)
             {
@@ -409,20 +412,22 @@ namespace DDD.TNFY.BRAWL
             Vector2Int[] perpendiculars = GetPerpendicularDirections(chargeDirection);
             Vector2Int backward = new Vector2Int(-chargeDirection.x, -chargeDirection.y);
 
-            // Check perpendicular tiles
+            // Check perpendicular tiles — same layer only.
             foreach (var dir in perpendiculars)
             {
                 var tile = GridManager.Instance.GetTileInDirection(currentTile, dir);
-                if (tile != null && tile.passableTerrain && !tile.occupied)
+                if (tile != null && tile.passableTerrain && !tile.occupied &&
+                    GridManager.Instance.IsSameYLevel(currentTile, tile))
                     return true;
             }
 
-            // Check backward
+            // Check backward — same layer only.
             var backTile = GridManager.Instance.GetTileInDirection(currentTile, backward);
-            if (backTile != null && backTile.passableTerrain && !backTile.occupied)
+            if (backTile != null && backTile.passableTerrain && !backTile.occupied &&
+                GridManager.Instance.IsSameYLevel(currentTile, backTile))
                 return true;
 
-            // Check any adjacent tile
+            // GetAdjacentTiles already enforces IsSameYLevel.
             var adjacentTiles = GridManager.Instance.GetAdjacentTiles(currentTile);
             foreach (var tile in adjacentTiles)
             {
