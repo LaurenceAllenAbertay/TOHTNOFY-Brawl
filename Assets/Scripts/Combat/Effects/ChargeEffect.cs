@@ -50,31 +50,53 @@ namespace DDD.TNFY.BRAWL
             bool isPlayerUnit = caster is PlayerUnit;
 
             Tile destination = CalculateDestination(ctx, targets);
-            if (destination == null || destination == caster.currentTile)
+            if (destination == null)
             {
                 RestoreHighlightingAfterCharge(caster, combatManager, isPlayerUnit);
                 yield break;
             }
 
-            // Check if the destination is occupied and we can displace
+            // Separate "where the caster physically lands" from "whether the hit fires".
+            // If the destination tile is occupied, we try to displace the unit there.
+            // If displacement isn't possible, the caster stops on the last free tile
+            // before the target — but effects (damage, knockback, etc.) still apply.
             Unit unitToDisplace = null;
+            Tile casterLandingTile = destination;
+
             if (destination.occupied && destination.currentUnit != caster)
             {
                 unitToDisplace = destination.currentUnit;
                 if (!CanDisplaceUnit(unitToDisplace, ctx.aimDir))
                 {
-                    Debug.LogWarning($"ChargeEffect: Cannot displace unit at {destination.gridPosition}, charge blocked");
-                    RestoreHighlightingAfterCharge(caster, combatManager, isPlayerUnit);
-                    yield break;
+                    // Cannot move the blocking unit aside — find the last free tile
+                    // in the traversal for the caster to land on instead.
+                    var traversalForLanding = (ctx.ability.targeting as MovementLineTargeting)?.GetTraversal(ctx);
+                    Tile lastFreeTile = null;
+                    if (traversalForLanding != null)
+                    {
+                        foreach (var t in traversalForLanding)
+                        {
+                            if (t.passableTerrain && !t.occupied)
+                                lastFreeTile = t;
+                        }
+                    }
+
+                    // If no free tile exists (caster already flush against the target),
+                    // stay in place — but still continue so the hit fires.
+                    casterLandingTile = lastFreeTile ?? caster.currentTile;
+                    unitToDisplace = null; // no displacement, only the hit
                 }
             }
+
+            // Track whether the caster physically moves this charge.
+            bool casterWillMove = casterLandingTile != caster.currentTile;
 
             GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
 
             Vector3 startPos = caster.transform.position;
-            Vector3 endPos = destination.transform.position;
+            Vector3 endPos = casterLandingTile.transform.position;
             float distance = Vector3.Distance(startPos, endPos);
-            float duration = distance / chargeSpeed;
+            float duration = casterWillMove ? distance / chargeSpeed : 0f;
 
             // Pre-calculate progress values at which the caster passes each target's tile
             var traversalTiles = ctx.ability.targeting.GetTraversal(ctx);
@@ -109,6 +131,21 @@ namespace DDD.TNFY.BRAWL
                 casterAnimator.ForcePlayAnimation(moveAnimationState);
 
             float elapsed = 0f;
+
+            // When the caster can't move (blocked flush against the target), the movement
+            // loop never runs and pass-through hits would be skipped. Fire them immediately.
+            if (!casterWillMove)
+            {
+                foreach (var kvp in passProgressByTarget)
+                {
+                    if (!triggeredTargets.Contains(kvp.Key))
+                    {
+                        triggeredTargets.Add(kvp.Key);
+                        TriggerPassThroughHit(ctx, kvp.Key);
+                    }
+                }
+            }
+
             while (elapsed < duration)
             {
                 elapsed += Time.deltaTime;
@@ -138,7 +175,8 @@ namespace DDD.TNFY.BRAWL
             }
 
             // Snap to final position and restore camera control
-            caster.transform.position = endPos;
+            if (casterWillMove)
+                caster.transform.position = endPos;
             if (cameraController != null) cameraController.enabled = true;
 
             // Play the stop animation (or return to idle if none configured)
@@ -152,7 +190,7 @@ namespace DDD.TNFY.BRAWL
                 yield return caster.StartCoroutine(ApplyChargeDisplacementWithAnimation(unitToDisplace, ctx.aimDir));
 
             // Commit the caster's logical grid position now that all displacement is resolved
-            caster.SetCurrentTileLogical(destination);
+            caster.SetCurrentTileLogical(casterLandingTile);
 
             RestoreHighlightingAfterCharge(caster, combatManager, isPlayerUnit);
         }
@@ -185,26 +223,37 @@ namespace DDD.TNFY.BRAWL
         }
 
         /// <summary>
-        /// Applies animated displacement to a unit that was hit by the charge
-        /// Uses knockback-style animation for smooth visual feedback
+        /// Applies animated displacement to a unit that was hit by the charge.
+        /// Bodies are moved silently — no animation is played, preserving the death pose.
+        /// Living units receive a knockback-style animation for visual feedback.
         /// </summary>
         private IEnumerator ApplyChargeDisplacementWithAnimation(Unit unitToDisplace, Vector2Int chargeDirection)
         {
             if (unitToDisplace?.currentTile == null) yield break;
+
+            // Find a valid displacement tile first — applies equally to bodies and living units.
+            Tile displacementTile = FindDisplacementTile(unitToDisplace, chargeDirection);
+            if (displacementTile == null)
+            {
+                Debug.LogWarning($"ChargeEffect: No valid displacement tile found for {unitToDisplace.name}");
+                yield break;
+            }
+
+            // Bodies must never play any animation — they are frozen in their death pose.
+            // Move them silently, exactly as KnockbackEffect.SilentBodyDisplace does.
+            if (unitToDisplace.IsBody)
+            {
+                bool bodyMoveComplete = false;
+                unitToDisplace.AnimateToTile(displacementTile, 0.3f, () => bodyMoveComplete = true);
+                while (!bodyMoveComplete) yield return null;
+                yield break;
+            }
 
             var unitAnimator = unitToDisplace.GetComponent<UnitAnimator>();
             if (unitAnimator == null)
             {
                 // Fallback to instant displacement if no animator
                 DisplaceUnitInstant(unitToDisplace, chargeDirection);
-                yield break;
-            }
-
-            // Find a valid displacement tile
-            Tile displacementTile = FindDisplacementTile(unitToDisplace, chargeDirection);
-            if (displacementTile == null)
-            {
-                Debug.LogWarning($"ChargeEffect: No valid displacement tile found for {unitToDisplace.name}");
                 yield break;
             }
 
@@ -364,15 +413,30 @@ namespace DDD.TNFY.BRAWL
             {
                 if (moveToEnd)
                 {
-                    // Move to the very last passable tile in the traversal
+                    // Prefer the last unoccupied passable tile — the charge lands there.
+                    // If every tile in the traversal is occupied, pick the last passable one;
+                    // the caster will stay on the tile before it (see ExecuteCharge) but the
+                    // hit still fires.
                     for (int i = tiles.Count - 1; i >= 0; i--)
                     {
-                        var tile = tiles[i];
-                        if (tile.passableTerrain)
+                        if (tiles[i].passableTerrain && !tiles[i].occupied)
                         {
-                            // NEW: Allow moving to occupied tiles since we'll displace after arriving
-                            finalTile = tile;
+                            finalTile = tiles[i];
                             break;
+                        }
+                    }
+
+                    if (finalTile == null)
+                    {
+                        // All traversal tiles are occupied — return the last passable one
+                        // so ExecuteCharge knows where the hit target is.
+                        for (int i = tiles.Count - 1; i >= 0; i--)
+                        {
+                            if (tiles[i].passableTerrain)
+                            {
+                                finalTile = tiles[i];
+                                break;
+                            }
                         }
                     }
                 }

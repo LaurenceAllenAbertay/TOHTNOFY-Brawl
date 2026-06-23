@@ -101,7 +101,11 @@ namespace DDD.TNFY.BRAWL
                     lastValidTile = nextTile;
                 }
 
-                // Stop at first occupied tile if configured to do so
+                // Stop at first occupied tile if configured to do so.
+                // This is a physical traversal check — any occupied tile blocks the charge
+                // path, regardless of whether the occupant is a valid hit target.
+                // A body is not hittable, but it IS a physical obstacle; a charge cannot
+                // pass through it to hit a living unit standing behind it.
                 if (stopAtFirstUnit && nextTile.occupied && nextTile.currentUnit != ctx.caster)
                 {
                     break;
@@ -153,6 +157,14 @@ namespace DDD.TNFY.BRAWL
 
                     if (stopAtFirstUnit)
                         break;
+                }
+                else
+                {
+                    // The tile is occupied by a unit we cannot hit (e.g. a body when
+                    // canTargetNeutral is false). Physically the tile is still blocked —
+                    // the charge cannot pass through it to hit a unit behind it.
+                    // Always stop here regardless of stopAtFirstUnit.
+                    break;
                 }
             }
 
