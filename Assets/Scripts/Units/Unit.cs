@@ -229,6 +229,21 @@ namespace DDD.TNFY.BRAWL
             if (currentTile != null && currentTile.currentUnit == this)
                 currentTile.currentUnit = null;
 
+            // ── Double-occupancy guard (at-rest only) ─────────────────────────────
+            // This fires only when a unit fully comes to rest on a tile, never during
+            // animated movement (SetCurrentTileLogical handles that path).
+            // Two units must never occupy the same tile at rest. If this happens it is
+            // a bug in upstream logic — the LogError is the signal to fix the caller.
+            if (newTile != null && newTile.currentUnit != null && newTile.currentUnit != this)
+            {
+                Debug.LogError(
+                    $"[Unit] Double-occupancy at rest on '{newTile.name}'! " +
+                    $"Existing: '{newTile.currentUnit.name}', incoming: '{name}'. " +
+                    $"Teleporting existing unit away. This is a bug — fix the calling code.");
+
+                Tile.TeleportToClosestFreeTile(newTile.currentUnit, newTile);
+            }
+
             currentTile = newTile;
             if (currentTile != null)
             {
@@ -239,7 +254,9 @@ namespace DDD.TNFY.BRAWL
             UnitManager.NotifyUnitMoved(this);
         }
 
-        /// <summary>Sets tile reference without moving the transform (for animated movement).</summary>
+        /// <summary>Sets tile reference without moving the transform (for animated movement).
+        /// Intentionally allows transient overlap (e.g. Wiring Fault pull) — no occupancy
+        /// guard here. Use SetCurrentTile when the unit is coming to rest.</summary>
         public void SetCurrentTileLogical(Tile newTile)
         {
             if (currentTile != null && currentTile.currentUnit == this)

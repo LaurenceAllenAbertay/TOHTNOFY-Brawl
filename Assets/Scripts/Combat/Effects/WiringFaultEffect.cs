@@ -109,9 +109,27 @@ namespace DDD.TNFY.BRAWL
             Tile casterTile = ctx.caster.currentTile;
             if (casterTile == null) yield break;
 
-            yield return ctx.caster.StartCoroutine(PullToCasterTile(ctx, hookedUnit, casterTile));
+            // Pre-calculate the recoil path BEFORE the pull so we know whether the
+            // caster can vacate their tile. If they can't move back, pulling the hooked
+            // unit onto the caster's tile would stack two units — so we skip the pull
+            // entirely, deal damage in place, and play the hurt animation.
+            Vector2Int recoilDir = new Vector2Int(-ctx.aimDir.x, -ctx.aimDir.y);
+            List<Tile> recoilPath = CalculatePath(ctx.caster, recoilDir, recoilDistance);
 
-            // Deal full damage to the hooked unit on arrival.
+            if (recoilPath.Count > 0)
+            {
+                // Normal case — caster has room to recoil, so pull the hooked unit in.
+                yield return ctx.caster.StartCoroutine(PullToCasterTile(ctx, hookedUnit, casterTile));
+            }
+            else
+            {
+                // Caster is backed against a wall — hooked unit stays put and takes the hit.
+                Debug.Log("[WiringFault] Caster cannot recoil — pull skipped, dealing damage in place.");
+                hookedUnit.GetComponent<UnitAnimator>()?.PlayHurt();
+                yield return new WaitForSeconds(0.3f);
+            }
+
+            // Deal full damage to the hooked unit regardless of whether it moved.
             if (!hookedUnit.IsDead)
             {
                 int baseDamage = ctx.ability.damage + (ctx.caster != null ? ctx.caster.currentAttack : 0);
@@ -126,11 +144,7 @@ namespace DDD.TNFY.BRAWL
             yield return new WaitForSeconds(pauseAfterPull);
 
             // ── PHASE 2: Caster recoil knockback ─────────────────────────────────
-            // Knock the caster back in the direction opposite to the aim direction.
-            Vector2Int recoilDir = new Vector2Int(-ctx.aimDir.x, -ctx.aimDir.y);
-
-            // Build the recoil path — stop at walls, impassable tiles, or occupied tiles.
-            List<Tile> recoilPath = CalculatePath(ctx.caster, recoilDir, recoilDistance);
+            // recoilDir and recoilPath already computed above — reuse them.
 
             // Block player input for the duration of the recoil animation.
             bool isPlayerCaster = ctx.caster is PlayerUnit;
@@ -290,8 +304,8 @@ namespace DDD.TNFY.BRAWL
         {
             var casterAnimator = caster.GetComponent<UnitAnimator>();
 
-            // Face the caster in the direction of recoil so the sprite reads correctly.
-            caster.FaceDirection(recoilDir);
+            // The caster always faces the direction they aimed — do not flip to recoil
+            // direction. FaceDirection was already set at cast time and stays that way.
 
             if (recoilPath.Count == 0)
             {

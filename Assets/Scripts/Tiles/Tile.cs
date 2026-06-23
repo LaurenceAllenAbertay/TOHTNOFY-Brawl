@@ -48,6 +48,62 @@ namespace DDD.TNFY.BRAWL
 
         public bool occupied { get; private set; }
 
+        /// <summary>
+        /// Emergency fallback: instantly moves <paramref name="unit"/> to the nearest
+        /// passable, unoccupied tile (BFS outward from <paramref name="origin"/>).
+        /// Only called from Unit.SetCurrentTile when a unit tries to come to rest on an
+        /// already-occupied tile — never during animated movement.
+        /// </summary>
+        internal static void TeleportToClosestFreeTile(Unit unit, Tile origin)
+        {
+            if (unit == null || origin == null) return;
+
+            var visited = new HashSet<Tile> { origin };
+            var queue   = new Queue<Tile>();
+
+            if (GridManager.Instance != null)
+            {
+                foreach (var adj in GridManager.Instance.GetAdjacentTiles(origin))
+                {
+                    if (adj != null && !visited.Contains(adj))
+                    {
+                        visited.Add(adj);
+                        queue.Enqueue(adj);
+                    }
+                }
+            }
+
+            while (queue.Count > 0)
+            {
+                Tile candidate = queue.Dequeue();
+
+                if (candidate.passableTerrain && !candidate.occupied)
+                {
+                    Debug.LogWarning(
+                        $"[Tile] Teleporting '{unit.name}' from '{origin.name}' " +
+                        $"to '{candidate.name}' (double-occupancy recovery).");
+                    unit.SetCurrentTile(candidate);
+                    return;
+                }
+
+                if (GridManager.Instance != null)
+                {
+                    foreach (var adj in GridManager.Instance.GetAdjacentTiles(candidate))
+                    {
+                        if (adj != null && !visited.Contains(adj))
+                        {
+                            visited.Add(adj);
+                            queue.Enqueue(adj);
+                        }
+                    }
+                }
+            }
+
+            Debug.LogError(
+                $"[Tile] Could not find any free tile to teleport '{unit.name}' to — " +
+                $"unit remains on '{origin.name}'. The map may be completely blocked.");
+        }
+
         // ── Tile Effects ─────────────────────────────────────────────────────────
         [SerializeField] private readonly List<TileEffectInstance> _activeEffects = new List<TileEffectInstance>();
 
