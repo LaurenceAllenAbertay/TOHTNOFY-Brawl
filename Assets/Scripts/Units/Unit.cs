@@ -73,12 +73,12 @@ namespace DDD.TNFY.BRAWL
         /// <summary>
         /// Set to true the moment Die() is called so that ReceiveDamage, targeting, and
         /// AI systems treat this unit as gone even before its GameObject is disabled.
-        /// Checked by CanTarget and ReceiveDamage to prevent double-death.
+        /// Checked by CanTarget and ReceiveDamage to prevent double-.
         /// </summary>
         public bool IsDead { get; private set; } = false;
 
         /// <summary>
-        /// Set to true by UnitDeathSequencer after the death animation completes, when this
+        /// Set to true by UnitDownedSequencer after the downed animation completes, when this
         /// unit transitions into a downed body. The unit remains on its tile, blocking
         /// movement and pathfinding, but takes no damage, has no turn, and is ignored by AI.
         /// </summary>
@@ -405,10 +405,10 @@ namespace DDD.TNFY.BRAWL
         /// <summary>
         /// Marks this unit as dead, notifies all gameplay systems (UnitManager, TurnManager,
         /// DialogueManager etc. via the OnUnitDied event), then enqueues the unit with
-        /// UnitDeathSequencer for the camera-pan + death-animation presentation.
+        /// UnitDownedSequencer for the camera-pan + downed-animation presentation.
         ///
         /// Call this instead of UnitManager.NotifyUnitDied directly — it is the single
-        /// authoritative death path for both player-controlled and AI-controlled units.
+        /// authoritative down path for both player-controlled and AI-controlled units.
         /// </summary>
         public void Die(Unit killer = null)
         {
@@ -417,7 +417,7 @@ namespace DDD.TNFY.BRAWL
 
             // Vacate the tile immediately so pathfinding, knockback destinations, and
             // targeting all see a free tile during the rest of this ability sequence.
-            // (UnitDeathSequencer cannot do this early enough — it runs after effects resolve.)
+            // (UnitDownedSequencer cannot do this early enough — it runs after effects resolve.)
             if (currentTile != null && currentTile.currentUnit == this)
                 currentTile.currentUnit = null;
 
@@ -432,18 +432,18 @@ namespace DDD.TNFY.BRAWL
             // This happens immediately so no subsequent turn or ability targets a dead unit.
             UnitManager.NotifyUnitDied(this);
 
-            // Enqueue the visual presentation (camera pan + death animation) for later.
-            // UnitDeathSequencer.DrainDeathQueue() is called by AbilitySequencer and
+            // Enqueue the visual presentation (camera pan + downed animation) for later.
+            // UnitDownedSequencer.DrainDownedQueue() is called by AbilitySequencer and
             // TurnManager after all effects in the current action are resolved, so multiple
-            // deaths from one ability are sequenced rather than played simultaneously.
-            if (UnitDeathSequencer.Instance != null)
-                UnitDeathSequencer.Instance.EnqueueDeath(this, killer);
+            // downs from one ability are sequenced rather than played simultaneously.
+            if (UnitDownedSequencer.Instance != null)
+                UnitDownedSequencer.Instance.EnqueueDowned(this, killer);
             else
                 gameObject.SetActive(false); // fallback: no sequencer in scene
         }
 
         /// <summary>
-        /// Called by UnitDeathSequencer after the death animation finishes.
+        /// Called by UnitDownedSequencer after the downed animation finishes.
         /// Transitions the unit from "dead and being removed" to "downed body on the map".
         /// The tile occupancy is restored here so the body blocks movement and pathfinding.
         /// </summary>
@@ -486,7 +486,7 @@ namespace DDD.TNFY.BRAWL
         {
             if (unit == null || unit == this) return false;
 
-            // Dead units (mid-death-sequence, before becoming a body) are never targetable.
+            // Dead units (mid-down-sequence, before becoming a body) are never targetable.
             // Bodies are handled separately: SelectTargets checks canTargetNeutral so that
             // targeting decisions are ability-specific rather than unit-specific.
             if (unit.IsDead && !unit.IsBody) return false;
@@ -530,7 +530,7 @@ namespace DDD.TNFY.BRAWL
 
 #if UNITY_EDITOR
         /// <summary>
-        /// Debug helper: instantly kills this unit via the normal death path so all
+        /// Debug helper: instantly kills this unit via the normal down path so all
         /// downstream systems (TurnManager, DialogueManager, StatusEffectManager) fire
         /// exactly as they would during gameplay.
         /// Right-click the Unit component in the Inspector and select "Debug: Kill Unit".

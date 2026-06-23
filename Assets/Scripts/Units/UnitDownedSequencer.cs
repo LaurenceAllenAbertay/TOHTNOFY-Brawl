@@ -5,45 +5,45 @@ using UnityEngine;
 namespace DDD.TNFY.BRAWL
 {
     /// <summary>
-    /// Owns the unit death presentation queue.
+    /// Owns the unit downed presentation queue.
     ///
     /// When a unit's health reaches zero, Unit.Die() enqueues a (victim, killer) pair
     /// here before unregistering the unit from gameplay systems.  The unit's GameObject
-    /// remains active until DrainDeathQueue has played its death animation.
+    /// remains active until DrainDownedQueue has played its downed animation.
     ///
     /// After the animation, one of two things happens depending on the unit type:
-    ///   • PlayerUnits and EnemyUnits with leavesBodyOnDeath = true call Unit.BecomeBody(),
-    ///     freezing on the last death frame and remaining on the map as a neutral obstacle.
-    ///   • EnemyUnits with leavesBodyOnDeath = false are fully unregistered and hidden —
-    ///     the original "vanish on death" behaviour for minions, summons, etc.
+    ///   • PlayerUnits and EnemyUnits with leavesBodyOnDown = true call Unit.BecomeBody(),
+    ///     freezing on the last downed frame and remaining on the map as a neutral obstacle.
+    ///   • EnemyUnits with leavesBodyOnDown = false are fully unregistered and hidden —
+    ///     the original "vanish on down" behaviour for minions, summons, etc.
     ///
-    /// DrainDeathQueue is called from two places:
+    /// DrainDownedQueue is called from two places:
     ///   • AbilitySequencer.RunSequence  — after all ability effects resolve, passing ctx.caster
     ///     as the unit to return the camera to afterwards.
     ///   • TurnManager.TriggerEnvironmentEffects — after all tile effects resolve, passing null
-    ///     (no single killer to return to; the camera stays on the last death).
+    ///     (no single killer to return to; the camera stays on the last downed unit).
     ///
     /// Add this component to the same scene GameObject as UnitManager (or any persistent manager).
     /// </summary>
-    public class UnitDeathSequencer : MonoBehaviour
+    public class UnitDownedSequencer : MonoBehaviour
     {
-        public static UnitDeathSequencer Instance { get; private set; }
+        public static UnitDownedSequencer Instance { get; private set; }
 
         // ── Inspector ─────────────────────────────────────────────────────────
 
         [Header("Timing")]
-        [Tooltip("How long to linger on the dead unit after the death animation finishes " +
-                 "before panning to the next death or returning to the killer.")]
-        [SerializeField] private float lingerAfterDeathSeconds = 0.5f;
+        [Tooltip("How long to linger on the downed unit after the downed animation finishes " +
+                 "before panning to the next or returning to the killer.")]
+        [SerializeField] private float lingerAfterDownedSeconds = 0.5f;
 
-        [Tooltip("Transition duration used when panning the camera to each dying unit.")]
+        [Tooltip("Transition duration used when panning the camera to each downed unit.")]
         [SerializeField] private float cameraTransitionDuration = 0.8f;
 
         // ── Internal state ────────────────────────────────────────────────────
 
-        private readonly Queue<PendingDeath> _queue = new Queue<PendingDeath>();
-        // Tracks units whose death has already been presented inline by AbilitySequencer
-        // so DrainDeathQueue can skip them and avoid a double-presentation.
+        private readonly Queue<PendingDowned> _queue = new Queue<PendingDowned>();
+        // Tracks units whose downed state has already been presented inline by AbilitySequencer
+        // so DrainDownedQueue can skip them and avoid a double-presentation.
         private readonly HashSet<Unit> _presentedInline = new HashSet<Unit>();
         private bool _isDraining = false;
 
@@ -51,7 +51,7 @@ namespace DDD.TNFY.BRAWL
 
         // ── Types ─────────────────────────────────────────────────────────────
 
-        private struct PendingDeath
+        private struct PendingDowned
         {
             public Unit victim;
             public Unit killer; // may be null (tile damage, debug kill, etc.)
@@ -80,22 +80,22 @@ namespace DDD.TNFY.BRAWL
         /// Called by Unit.Die() immediately after gameplay systems (UnitManager, TurnManager)
         /// have been notified.  Enqueues the victim for presentation.
         /// </summary>
-        public void EnqueueDeath(Unit victim, Unit killer)
+        public void EnqueueDowned(Unit victim, Unit killer)
         {
             if (victim == null) return;
-            _queue.Enqueue(new PendingDeath { victim = victim, killer = killer });
+            _queue.Enqueue(new PendingDowned { victim = victim, killer = killer });
         }
 
         /// <summary>
-        /// Plays every pending death animation one after the other, then pans the camera
+        /// Plays every pending downed animation one after the other, then pans the camera
         /// back to <paramref name="returnToUnit"/> when finished.
         ///
         /// Callers should yield on this coroutine:
-        ///   yield return StartCoroutine(UnitDeathSequencer.Instance.DrainDeathQueue(killer));
+        ///   yield return StartCoroutine(UnitDownedSequencer.Instance.DrainDownedQueue(killer));
         ///
         /// Safe to call when the queue is empty — returns immediately.
         /// </summary>
-        public IEnumerator DrainDeathQueue(Unit returnToUnit)
+        public IEnumerator DrainDownedQueue(Unit returnToUnit)
         {
             // Only one drain may run at a time.  If somehow called re-entrantly, wait.
             while (_isDraining)
@@ -110,16 +110,16 @@ namespace DDD.TNFY.BRAWL
             {
                 var entry = _queue.Dequeue();
 
-                // Skip any unit whose death was already presented inline by AbilitySequencer.
+                // Skip any unit whose downed state was already presented inline by AbilitySequencer.
                 if (_presentedInline.Contains(entry.victim))
                     continue;
 
-                yield return StartCoroutine(PresentDeath(entry.victim));
+                yield return StartCoroutine(PresentDowned(entry.victim));
             }
 
             _presentedInline.Clear();
 
-            // Return camera to the killer / active unit after all deaths are shown.
+            // Return camera to the killer / active unit after all downed animations are shown.
             if (returnToUnit != null && _camera != null && returnToUnit.gameObject != null)
             {
                 yield return StartCoroutine(
@@ -134,36 +134,45 @@ namespace DDD.TNFY.BRAWL
         // ── Private helpers ───────────────────────────────────────────────────
 
         /// <summary>
-        /// Presents a single unit's death animation without panning the camera —
+        /// Presents a single unit's downed animation without panning the camera —
         /// the camera is already on this unit because AbilitySequencer targeted them.
         ///
         /// Called inline from AbilitySequencer.PlayTargetEffectsWithAnimation immediately
-        /// after the hurt animation and health bar tween finish on a lethal hit, so the
-        /// player sees: hurt reaction → bar drains to zero → bar hides → death animation.
+        /// after the damage lands on a lethal hit.
         ///
-        /// Marks the victim in _presentedInline so DrainDeathQueue skips them.
+        /// Marks the victim in _presentedInline so DrainDownedQueue skips them.
         /// </summary>
-        public IEnumerator PresentDeathInline(Unit victim)
+        public IEnumerator PresentDownedInline(Unit victim)
         {
             if (victim == null) yield break;
 
-            // Mark as handled so DrainDeathQueue skips this entry.
+            // Mark as handled so DrainDownedQueue skips this entry.
             _presentedInline.Add(victim);
 
-            // Play death animation and wait for it to complete.
             var unitAnimator = victim.GetComponent<UnitAnimator>();
-            if (unitAnimator != null)
-            {
-                unitAnimator.PlayDeath();
-                yield return StartCoroutine(WaitForDeathAnimation(victim));
-            }
+            var healthBar    = victim.GetComponentInChildren<UnitHealthBarDisplay>();
 
-            // Linger so the player can register the death before the camera moves on.
-            yield return new WaitForSeconds(lingerAfterDeathSeconds);
+            // Start the downed animation immediately — don't wait for the health bar tween
+            // first, as that would leave the unit sitting in Idle_Hurt for the tween duration.
+            // The bar tween runs concurrently; we wait for both to finish before hiding the bar.
+            unitAnimator?.PlayDowned();
 
-            // Transition the unit to a body or remove it — same logic as PresentDeath.
+            Coroutine downedWait = StartCoroutine(WaitForDownedAnimation(victim));
+            Coroutine tweenWait  = healthBar != null ? StartCoroutine(healthBar.WaitForTweenComplete()) : null;
+
+            if (downedWait != null) yield return downedWait;
+            if (tweenWait  != null) yield return tweenWait;
+
+            // Hide the health bar and status effects now that both have finished.
+            healthBar?.HideImmediate();
+            victim.GetComponentInChildren<StatusEffectIconDisplay>()?.HideImmediate();
+
+            // Linger so the player can register what happened before the camera moves on.
+            yield return new WaitForSeconds(lingerAfterDownedSeconds);
+
+            // Transition the unit to a body or remove it — same logic as PresentDowned.
             bool shouldLeaveBody = victim is PlayerUnit ||
-                                   (victim is EnemyUnit enemy && enemy.leavesBodyOnDeath);
+                                   (victim is EnemyUnit enemy && enemy.leavesBodyOnDown);
 
             if (shouldLeaveBody)
                 victim.BecomeBody();
@@ -175,15 +184,15 @@ namespace DDD.TNFY.BRAWL
         }
 
         /// <summary>
-        /// Pans camera to the victim, plays their death animation to completion,
+        /// Pans camera to the victim, plays their downed animation to completion,
         /// lingers briefly, then either transitions the unit into a body or fully
         /// hides it depending on whether it should leave a body on the map.
         /// </summary>
-        private IEnumerator PresentDeath(Unit victim)
+        private IEnumerator PresentDowned(Unit victim)
         {
             if (victim == null) yield break;
 
-            // ── 1. Pan camera to the dying unit ───────────────────────────────
+            // ── 1. Pan camera to the downed unit ──────────────────────────────
             if (_camera != null)
             {
                 yield return StartCoroutine(
@@ -192,40 +201,38 @@ namespace DDD.TNFY.BRAWL
                         cameraTransitionDuration));
             }
 
-            // ── 1.5. Wait for any residual health bar tween, then hide bar and
-            //         status effects before the death animation starts.
-            //         (The camera pan is typically longer than the tween, but we
-            //         wait explicitly so tile-effect deaths are handled correctly
-            //         regardless of timing.)
-            var healthBar = victim.GetComponentInChildren<UnitHealthBarDisplay>();
-            if (healthBar != null)
-            {
-                yield return StartCoroutine(healthBar.WaitForTweenComplete());
-                healthBar.HideImmediate();
-            }
+            // ── 1.5. Start the downed animation immediately. The health bar tween runs
+            //         concurrently — we wait for both to finish before hiding the bar.
+            //         Waiting for the tween first would leave the unit in Idle_Hurt for
+            //         its entire duration before the downed animation begins.
+            var healthBar    = victim.GetComponentInChildren<UnitHealthBarDisplay>();
+            var unitAnimator = victim.GetComponent<UnitAnimator>();
+
+            unitAnimator?.PlayDowned();
+
+            Coroutine downedWait = StartCoroutine(WaitForDownedAnimation(victim));
+            Coroutine tweenWait  = healthBar != null ? StartCoroutine(healthBar.WaitForTweenComplete()) : null;
+
+            if (downedWait != null) yield return downedWait;
+            if (tweenWait  != null) yield return tweenWait;
+
+            // ── 2.5. Hide the health bar and status effects now that both have finished.
+            healthBar?.HideImmediate();
             victim.GetComponentInChildren<StatusEffectIconDisplay>()?.HideImmediate();
 
-            // ── 2. Play death animation at full speed ─────────────────────────
-            var unitAnimator = victim.GetComponent<UnitAnimator>();
-            if (unitAnimator != null)
-            {
-                unitAnimator.PlayDeath();
-                yield return StartCoroutine(WaitForDeathAnimation(victim));
-            }
-
             // ── 3. Linger so the player can register what happened ─────────────
-            yield return new WaitForSeconds(lingerAfterDeathSeconds);
+            yield return new WaitForSeconds(lingerAfterDownedSeconds);
 
             // ── 4. Become a body, or vanish entirely ──────────────────────────
             // PlayerUnits always leave a body (they can be revived).
-            // EnemyUnits leave a body only when leavesBodyOnDeath is true — designers
+            // EnemyUnits leave a body only when leavesBodyOnDown is true — designers
             // can disable this for summons, minions, or any enemy that should vanish cleanly.
             bool shouldLeaveBody = victim is PlayerUnit ||
-                                   (victim is EnemyUnit enemy && enemy.leavesBodyOnDeath);
+                                   (victim is EnemyUnit enemy && enemy.leavesBodyOnDown);
 
             if (shouldLeaveBody)
             {
-                // Freeze on the last frame of the death animation and remain on the map
+                // Freeze on the last frame of the downed animation and remain on the map
                 // as a neutral obstacle. BecomeBody() re-occupies the tile and notifies
                 // UnitManager so targeting and pathfinding see the body correctly.
                 victim.BecomeBody();
@@ -233,7 +240,7 @@ namespace DDD.TNFY.BRAWL
             else
             {
                 // Fully remove from all manager lists and hide the GameObject.
-                // This is the original behaviour for enemies that should disappear on death.
+                // This is the original behaviour for enemies that should disappear on down.
                 UnitManager.UnregisterUnit(victim);
                 victim.gameObject.SetActive(false);
             }
@@ -241,9 +248,9 @@ namespace DDD.TNFY.BRAWL
 
         /// <summary>
         /// Waits until the Animator on <paramref name="victim"/> has finished playing
-        /// the Death state. Waits up to maxWait seconds before giving up gracefully.
+        /// the down state. Waits up to maxWait seconds before giving up gracefully.
         /// </summary>
-        private IEnumerator WaitForDeathAnimation(Unit victim)
+        private IEnumerator WaitForDownedAnimation(Unit victim)
         {
             var animator = victim.GetComponent<Animator>();
             if (animator == null) yield break;
@@ -258,7 +265,7 @@ namespace DDD.TNFY.BRAWL
             {
                 var stateInfo = animator.GetCurrentAnimatorStateInfo(0);
 
-                if (stateInfo.IsName("Death") && stateInfo.normalizedTime >= 1.0f && !stateInfo.loop)
+                if (stateInfo.IsName("Downed") && stateInfo.normalizedTime >= 1.0f && !stateInfo.loop)
                     yield break;
 
                 elapsed += Time.deltaTime;
@@ -266,15 +273,15 @@ namespace DDD.TNFY.BRAWL
             }
 
             // Timed out — animation may be missing or the clip is set to loop (shouldn't be).
-            Debug.LogWarning($"[UnitDeathSequencer] Death animation timed out for {victim.name}.");
+            Debug.LogWarning($"[UnitDownedSequencer] Downed animation timed out for {victim.name}.");
         }
 
         // ── Queries ───────────────────────────────────────────────────────────
 
-        /// <summary>True while DrainDeathQueue is actively presenting animations.</summary>
+        /// <summary>True while DrainDownedQueue is actively presenting animations.</summary>
         public bool IsDraining => _isDraining;
 
-        /// <summary>True if there are deaths waiting to be presented.</summary>
-        public bool HasPendingDeaths => _queue.Count > 0;
+        /// <summary>True if there are downed units waiting to be presented.</summary>
+        public bool HasPendingDowned => _queue.Count > 0;
     }
 }

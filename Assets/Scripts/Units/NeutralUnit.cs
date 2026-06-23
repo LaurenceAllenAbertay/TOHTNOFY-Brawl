@@ -10,7 +10,7 @@ namespace DDD.TNFY.BRAWL
     /// Each NeutralUnit has two optional ability slots:
     ///   environmentAbility  — fired once per environment turn (end of every round).
     ///   destructionAbility  — fired automatically when this unit's health reaches zero,
-    ///                         immediately before the death sequence begins.
+    ///                         immediately before the down sequence begins.
     ///
     /// This pattern generalises to any future neutral: a ticking bomb uses environmentAbility
     /// to count down and destructionAbility to explode; a healing mug uses environmentAbility
@@ -28,7 +28,7 @@ namespace DDD.TNFY.BRAWL
         public Ability environmentAbility;
 
         [Tooltip("Fired automatically when this unit's health reaches zero, before the " +
-                 "death sequence begins. Leave null for no destruction effect.")]
+                 "down sequence begins. Leave null for no destruction effect.")]
         public Ability destructionAbility;
 
         [Header("Spawn Source (set at runtime by SpawnNeutralUnitEffect)")]
@@ -45,12 +45,12 @@ namespace DDD.TNFY.BRAWL
         /// </summary>
         public override bool IsNeutral => true;
 
-        // ── Death override — fire destructionAbility first ────────────────────
+        // ── Down override — fire destructionAbility first ────────────────────
 
         /// <summary>
         /// Overrides ReceiveDamage to intercept the lethal hit and fire destructionAbility
-        /// before the base death path runs. The destruction coroutine completes during
-        /// UnitDeathSequencer.DrainDeathQueue so the ability resolves before the unit vanishes.
+        /// before the base down path runs. The destruction coroutine completes during
+        /// UnitDownedSequencer.DrainDownedQueue so the ability resolves before the unit vanishes.
         /// </summary>
         public override void ReceiveDamage(int amount, Unit attacker = null, Ability sourceAbility = null)
         {

@@ -11,10 +11,10 @@ namespace DDD.TNFY.BRAWL
     /// </summary>
     public class EnemyUnit : Unit
     {
-        [Header("Death Behaviour")]
+        [Header("Down Behaviour")]
         [Tooltip("If true, this enemy leaves a neutral body on the map after dying. " +
                  "The body blocks movement and can be targeted by abilities with canTargetNeutral. " +
-                 "Disable for enemies that should vanish cleanly on death (e.g. summoned minions).")]
-        public bool leavesBodyOnDeath = true;
+                 "Disable for enemies that should vanish cleanly on down (e.g. summoned minions).")]
+        public bool leavesBodyOnDown = true;
     }
 }

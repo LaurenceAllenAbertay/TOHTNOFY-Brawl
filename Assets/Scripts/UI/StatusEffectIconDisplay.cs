@@ -104,8 +104,7 @@ namespace DDD.TNFY.BRAWL
 
         /// <summary>
         /// Hides this status effect display immediately. Called by AbilitySequencer and
-        /// UnitDeathSequencer after the hurt animation and health bar tween have finished
-        /// on a lethal hit — immediately before the death animation plays.
+        /// UnitDownedSequencer after the downed animation has finished on a lethal hit.
         /// Never called in response to OnUnitDied directly; timing is owned by the sequencers.
         /// </summary>
         public void HideImmediate()

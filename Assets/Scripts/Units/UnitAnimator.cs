@@ -41,7 +41,7 @@ namespace DDD.TNFY.BRAWL
         private const string MOVE_HURT_STATE      = "Move_Hurt";
         private const string ATTACK_STATE         = "Recoil_Shot";
         private const string HURT_STATE           = "Hurt";
-        private const string DEATH_STATE          = "Death";
+        private const string DOWNED_STATE          = "Downed";
         private const string KNOCKBACK_START_STATE = "Knockback_Start";
         private const string KNOCKBACK_END_STATE   = "Knockback_End";
 
@@ -115,6 +115,12 @@ namespace DDD.TNFY.BRAWL
         private void EvaluateIdleTier()
         {
             if (_unit == null) return;
+
+            // A lethal hit sets IsDead synchronously inside ReceiveDamage before
+            // OnHealthChanged fires. If we let EvaluateIdleTier run on a dead unit it
+            // would switch the animator to Idle_Hurt for one frame — visible as a brief
+            // flash before PresentDownedInline calls PlayDowned on the next yield.
+            if (_unit.IsDead) return;
 
             bool wasHurt = _isHurtIdle;
             bool wasBad  = _isBadIdle;
@@ -231,7 +237,7 @@ namespace DDD.TNFY.BRAWL
         {
             if (animator == null) return;
             if (!HasState(stateName)) return;
-            if (currentAnimation == DEATH_STATE) return;
+            if (currentAnimation == DOWNED_STATE) return;
 
             // Use frac to keep the time within [0, 1) for a looping clip.
             float frac = normalizedTime % 1f;
@@ -343,7 +349,7 @@ namespace DDD.TNFY.BRAWL
         /// Yields until the Hurt animation has finished playing.
         /// Waits up to maxWait seconds before giving up gracefully.
         /// Call this from AbilitySequencer immediately after PlayHurt() to
-        /// synchronise with the health bar tween before checking for death.
+        /// synchronise with the health bar tween before checking for downed.
         /// </summary>
         public IEnumerator WaitForHurtAnimation()
         {
@@ -372,24 +378,24 @@ namespace DDD.TNFY.BRAWL
         }
 
         /// <summary>
-        /// Play the death animation (plays once and stays on last frame).
+        /// Play the downed animation (plays once and stays on last frame).
         /// Forces animator speed to 1 so the animation plays at full speed regardless
         /// of whether this unit was at inactive-turn speed when it died.
         /// </summary>
-        public void PlayDeath()
+        public void PlayDowned()
         {
-            // Death can interrupt knockback
+            // Downed can interrupt knockback
             if (knockbackSequence != null)
             {
                 StopCoroutine(knockbackSequence);
                 isInKnockbackSequence = false;
             }
 
-            // Always play death at full speed — the unit may be at inactiveTurnSpeed.
+            // Always play downed at full speed — the unit may be at inactiveTurnSpeed.
             if (animator != null)
                 animator.speed = 1f;
 
-            PlayAnimation(DEATH_STATE, false);
+            PlayAnimation(DOWNED_STATE, false);
         }
 
         /// <summary>
@@ -517,11 +523,11 @@ namespace DDD.TNFY.BRAWL
                 return;
             }
 
-            // Don't interrupt death animation
-            if (currentAnimation == DEATH_STATE && stateName != DEATH_STATE) return;
+            // Don't interrupt downed animation
+            if (currentAnimation == DOWNED_STATE && stateName != DOWNED_STATE) return;
 
-            // Don't interrupt knockback sequences (except for death)
-            if (isInKnockbackSequence && stateName != DEATH_STATE &&
+            // Don't interrupt knockback sequences (except for downed)
+            if (isInKnockbackSequence && stateName != DOWNED_STATE &&
                 stateName != KNOCKBACK_START_STATE && stateName != KNOCKBACK_END_STATE) return;
 
             // Don't play the same animation twice unless it's interruptible
@@ -552,7 +558,7 @@ namespace DDD.TNFY.BRAWL
             }
 
             // Return to idle if we're not dead and not in a knockback sequence
-            if (currentAnimation != DEATH_STATE && !isInKnockbackSequence)
+            if (currentAnimation != DOWNED_STATE && !isInKnockbackSequence)
             {
                 PlayIdle();
             }
@@ -576,7 +582,7 @@ namespace DDD.TNFY.BRAWL
             knockbackSequence = null;
 
             // Return to idle
-            if (currentAnimation != DEATH_STATE)
+            if (currentAnimation != DOWNED_STATE)
             {
                 PlayIdle();
             }
@@ -602,7 +608,7 @@ namespace DDD.TNFY.BRAWL
             isInKnockbackSequence = false;
             knockbackSequence = null;
 
-            if (currentAnimation != DEATH_STATE)
+            if (currentAnimation != DOWNED_STATE)
             {
                 PlayIdle();
             }
@@ -666,7 +672,7 @@ namespace DDD.TNFY.BRAWL
                 case "walk": PlayMove(); break;
                 case "attack": PlayAttack(); break;
                 case "hurt": PlayHurt(); break;
-                case "death": PlayDeath(); break;
+                case "downed": PlayDowned(); break;
                 case "knockback_start": PlayKnockbackStart(); break;
                 case "knockback_end": PlayKnockbackEnd(); break;
                 case "single_knockback": PlaySingleKnockback(); break;
@@ -710,8 +716,8 @@ namespace DDD.TNFY.BRAWL
         [UnityEngine.ContextMenu("Test Hurt")]
         private void TestHurt() => PlayHurt();
 
-        [UnityEngine.ContextMenu("Test Death")]
-        private void TestDeath() => PlayDeath();
+        [UnityEngine.ContextMenu("Test Downed")]
+        private void TestDowned() => PlayDowned();
 
         [UnityEngine.ContextMenu("Test Knockback Start")]
         private void TestKnockbackStart() => PlayKnockbackStart();

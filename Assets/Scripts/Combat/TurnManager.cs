@@ -60,7 +60,7 @@ namespace DDD.TNFY.BRAWL
         /// <summary>
         /// Removes a dead unit from the turn order and adjusts currentIndex so the
         /// next call to StartNextTurn() lands on the correct unit.
-        /// Called by UnitManager.OnUnitDied for every death source: abilities, tile effects, anything.
+        /// Called by UnitManager.OnUnitDied for every down source: abilities, tile effects, anything.
         /// </summary>
         private void HandleUnitDied(Unit unit)
         {
@@ -134,8 +134,8 @@ namespace DDD.TNFY.BRAWL
             // Increment total turn count at the start of each turn
             totalTurnCount++;
 
-            // Clear the self-death flag from the previous turn. A fresh unit is now active
-            // so any death that occurs from here belongs to a different context.
+            // Clear the self-down flag from the previous turn. A fresh unit is now active
+            // so any down that occurs from here belongs to a different context.
             _activeUnitDiedThisTurn = false;
 
             Unit current = CurrentUnit;
@@ -284,9 +284,9 @@ namespace DDD.TNFY.BRAWL
                     var ctx = new AbilityContext { caster = unit, ability = ability, aimDir = dir };
                     yield return StartCoroutine(unit.ExecuteAbilityCoroutine(ctx));
 
-                    // Drain any deaths that occurred during the random ability.
-                    if (UnitDeathSequencer.Instance != null)
-                        yield return StartCoroutine(UnitDeathSequencer.Instance.DrainDeathQueue(unit));
+                    // Drain any downs that occurred during the random ability.
+                    if (UnitDownedSequencer.Instance != null)
+                        yield return StartCoroutine(UnitDownedSequencer.Instance.DrainDownedQueue(unit));
 
                     fired = true;
                     break;
@@ -309,7 +309,7 @@ namespace DDD.TNFY.BRAWL
             if (currentIndex >= turnOrder.Count)
             {
                 currentIndex = 0;
-                // Snapshot the turn order size before any tile-effect deaths can shrink it.
+                // Snapshot the turn order size before any tile-effect downs can shrink it.
                 // GetCurrentRound() uses this value for the entire environment-effect phase,
                 // so round numbers stay stable for UI and any round-scaling logic.
                 _stableRoundCount = turnOrder.Count;
@@ -338,9 +338,9 @@ namespace DDD.TNFY.BRAWL
                     yield return StartCoroutine(tile.TriggerEffects(currentRound));
             }
 
-            // Drain deaths caused by tile effects before neutral units act.
-            if (UnitDeathSequencer.Instance != null)
-                yield return StartCoroutine(UnitDeathSequencer.Instance.DrainDeathQueue(returnToUnit: null));
+            // Drain downs caused by tile effects before neutral units act.
+            if (UnitDownedSequencer.Instance != null)
+                yield return StartCoroutine(UnitDownedSequencer.Instance.DrainDownedQueue(returnToUnit: null));
 
             // ── Phase 2: Neutral unit environment abilities ────────────────────
             // Take a snapshot of the list before iterating — a neutral unit's environmentAbility
@@ -369,16 +369,16 @@ namespace DDD.TNFY.BRAWL
 
                 yield return StartCoroutine(neutral.ExecuteAbilityCoroutine(ctx));
 
-                // Drain any deaths that occurred during this neutral's ability before
+                // Drain any downs that occurred during this neutral's ability before
                 // moving on to the next one so the camera sequencing stays clean.
-                if (UnitDeathSequencer.Instance != null)
-                    yield return StartCoroutine(UnitDeathSequencer.Instance.DrainDeathQueue(returnToUnit: null));
+                if (UnitDownedSequencer.Instance != null)
+                    yield return StartCoroutine(UnitDownedSequencer.Instance.DrainDownedQueue(returnToUnit: null));
             }
 
             // Final drain — catches any stragglers (e.g. a neutral unit that died to its
             // own destructionAbility trigger during the environment pass).
-            if (UnitDeathSequencer.Instance != null)
-                yield return StartCoroutine(UnitDeathSequencer.Instance.DrainDeathQueue(returnToUnit: null));
+            if (UnitDownedSequencer.Instance != null)
+                yield return StartCoroutine(UnitDownedSequencer.Instance.DrainDownedQueue(returnToUnit: null));
         }
 
         // Public method to reset total turn count (useful for new battles)
@@ -390,7 +390,7 @@ namespace DDD.TNFY.BRAWL
         // Public method to get current round number (how many complete cycles through all units)
         public int GetCurrentRound()
         {
-            // During TriggerEnvironmentEffects, use the snapshotted count so deaths mid-processing
+            // During TriggerEnvironmentEffects, use the snapshotted count so downs mid-processing
             // don't silently change the round number for UI or round-scaling damage effects.
             int count = _stableRoundCount > 0 ? _stableRoundCount : turnOrder.Count;
             if (count == 0) return 0;

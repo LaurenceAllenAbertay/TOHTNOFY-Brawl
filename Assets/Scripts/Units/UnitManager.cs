@@ -14,7 +14,7 @@ namespace DDD.TNFY.BRAWL
         public static event System.Action<Unit> OnUnitDied;
         // Fired by DamageEffect after each hit: (victim, attacker)
         public static event System.Action<Unit, Unit> OnUnitDamaged;
-        // Fired by Unit.BecomeBody() after the death animation completes and the unit
+        // Fired by Unit.BecomeBody() after the down animation completes and the unit
         // transitions to a neutral body. Subscribe here to react to bodies appearing
         // (e.g. UI updates, revival systems).
         public static event System.Action<Unit> OnBodySpawned;
@@ -29,7 +29,7 @@ namespace DDD.TNFY.BRAWL
         // Units in this list are always IsNeutral = true and are never in the turn order.
         private readonly List<NeutralUnit> neutralUnits = new List<NeutralUnit>();
 
-        // Bodies: units that have completed their death animation and now exist as neutral
+        // Bodies: units that have completed their down animation and now exist as neutral
         // downed objects on the map. Kept separate so systems can query bodies without
         // iterating AllUnits and checking IsBody on each entry.
         private readonly List<Unit> bodyUnits = new List<Unit>();
@@ -107,7 +107,7 @@ namespace DDD.TNFY.BRAWL
 
         /// <summary>
         /// Unregister a unit from the manager. Call this from Unit.OnDestroy() or when units die
-        /// without leaving a body (e.g. enemy with leavesBodyOnDeath = false).
+        /// without leaving a body (e.g. enemy with leavesBodyOnDown = false).
         /// </summary>
         public static void UnregisterUnit(Unit unit)
         {
@@ -150,8 +150,8 @@ namespace DDD.TNFY.BRAWL
             // use these to find live combatants and must not see this unit any more.
             // Do NOT remove from allUnits here: if this unit will become a body it needs
             // to remain in allUnits so SelectTargets can find it for canTargetNeutral abilities.
-            // UnregisterUnit (full removal) is called by UnitDeathSequencer only when the
-            // unit will NOT become a body (i.e. enemy with leavesBodyOnDeath = false).
+            // UnregisterUnit (full removal) is called by UnitDownedSequencer only when the
+            // unit will NOT become a body (i.e. enemy with leavesBodyOnDown = false).
             if (Instance == null || unit == null) return;
 
             if (unit is PlayerUnit player)
@@ -160,14 +160,14 @@ namespace DDD.TNFY.BRAWL
                 Instance.enemyUnits.Remove(enemy);
             else if (unit is NeutralUnit neutral)
             {
-                // NeutralUnits are removed from the environment-turn list immediately on death
+                // NeutralUnits are removed from the environment-turn list immediately on down
                 // so TurnManager does not try to fire their environmentAbility this round.
                 Instance.neutralUnits.Remove(neutral);
             }
         }
 
         /// <summary>
-        /// Called by Unit.BecomeBody() after the death animation finishes and the unit
+        /// Called by Unit.BecomeBody() after the down animation finishes and the unit
         /// transitions to a neutral body. Moves the unit into the bodyUnits list and
         /// fires OnBodySpawned so subscribers (UI, revival systems) can react.
         /// The unit remains in allUnits so canTargetNeutral abilities can find it.

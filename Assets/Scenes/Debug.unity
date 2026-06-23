@@ -8502,8 +8502,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4265ba0425bcc041ae0ecd30ad2cc1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lingerAfterDeathSeconds: 0.3
-  cameraTransitionDuration: 0.8
+  lingerAfterDownedSeconds: 0.75
+  cameraTransitionDuration: 0.75
 --- !u!1 &753677266
 GameObject:
   m_ObjectHideFlags: 0
