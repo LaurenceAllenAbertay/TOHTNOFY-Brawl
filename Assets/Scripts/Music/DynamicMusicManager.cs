@@ -610,6 +610,35 @@ namespace DDD.TNFY.BRAWL
             UpdateAllVolumes();
         }
 
+        private bool isMuted = false;
+        private float volumeBeforeMute = -1f;
+
+        public bool IsMuted => isMuted;
+
+        /// <summary>
+        /// Mutes or unmutes music without destroying the current track sync.
+        /// Stores and restores globalMusicVolume so the original level is preserved.
+        /// </summary>
+        public void SetMuted(bool muted)
+        {
+            if (muted == isMuted) return;
+
+            isMuted = muted;
+
+            if (muted)
+            {
+                volumeBeforeMute = globalMusicVolume;
+                globalMusicVolume = 0f;
+            }
+            else
+            {
+                globalMusicVolume = volumeBeforeMute >= 0f ? volumeBeforeMute : 0.8f;
+                volumeBeforeMute = -1f;
+            }
+
+            UpdateAllVolumes();
+        }
+
         public void SetDynamicMusicEnabled(bool enabled)
         {
             enableDynamicMusic = enabled;
