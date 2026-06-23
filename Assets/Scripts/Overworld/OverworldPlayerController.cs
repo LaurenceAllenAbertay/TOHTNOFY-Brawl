@@ -40,7 +40,7 @@ namespace DDD.TNFY.BRAWL
         private void Start()
         {
             if (unitAnimator != null)
-                unitAnimator.SetAnimationSpeed(1f);
+                unitAnimator.SetActiveTurn();
         }
 
         private void OnEnable()

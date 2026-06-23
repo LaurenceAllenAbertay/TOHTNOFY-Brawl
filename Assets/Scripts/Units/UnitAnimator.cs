@@ -8,8 +8,10 @@ namespace DDD.TNFY.BRAWL
     {
         [Header("Animation Settings")]
         [SerializeField] private bool playIdleOnStart = true;
-        [SerializeField] private float activeTurnSpeed = 0.65f;
-        [SerializeField] private float inactiveTurnSpeed = 0.3f;
+        [Tooltip("Multiplier applied to animator speed when it is NOT this unit's turn. " +
+                 "Active turn always runs at the Animator's authored speed (1). " +
+                 "0.5 = half speed, 0 = frozen.")]
+        [SerializeField] [Range(0f, 1f)] private float inactiveTurnSpeedMultiplier = 0.5f;
 
         private Animator animator;
         private Unit     _unit;
@@ -379,8 +381,8 @@ namespace DDD.TNFY.BRAWL
 
         /// <summary>
         /// Play the downed animation (plays once and stays on last frame).
-        /// Forces animator speed to 1 so the animation plays at full speed regardless
-        /// of whether this unit was at inactive-turn speed when it died.
+        /// Restores animator speed to 1 so the clip plays at its authored speed,
+        /// regardless of whether this unit was at inactive-turn speed when it was downed.
         /// </summary>
         public void PlayDowned()
         {
@@ -391,7 +393,7 @@ namespace DDD.TNFY.BRAWL
                 isInKnockbackSequence = false;
             }
 
-            // Always play downed at full speed — the unit may be at inactiveTurnSpeed.
+            // Restore to authored speed — unit may be at inactiveTurnSpeedMultiplier.
             if (animator != null)
                 animator.speed = 1f;
 
@@ -477,36 +479,22 @@ namespace DDD.TNFY.BRAWL
         #region Turn Speed Control
 
         /// <summary>
-        /// Set animation speed for when it's this unit's turn
+        /// Restores animator speed to 1 — the Animator's authored speed — for this unit's active turn.
         /// </summary>
         public void SetActiveTurn()
         {
             if (animator != null)
-            {
-                SetAnimationSpeed(activeTurnSpeed);
-            }
+                animator.speed = 1f;
         }
 
         /// <summary>
-        /// Set animation speed for when it's NOT this unit's turn
+        /// Scales animator speed by inactiveTurnSpeedMultiplier when it is NOT this unit's turn.
+        /// The Animator remains the source of truth for clip speeds; this is purely a scalar on top.
         /// </summary>
         public void SetInactiveTurn()
         {
             if (animator != null)
-            {
-                SetAnimationSpeed(inactiveTurnSpeed);
-            }
-        }
-
-        /// <summary>
-        /// Set custom animation speed
-        /// </summary>
-        public void SetAnimationSpeed(float speed)
-        {
-            if (animator != null)
-            {
-                animator.speed = speed;
-            }
+                animator.speed = inactiveTurnSpeedMultiplier;
         }
 
         #endregion

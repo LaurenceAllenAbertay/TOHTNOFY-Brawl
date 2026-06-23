@@ -18,7 +18,7 @@ MonoBehaviour:
   image: {fileID: 6678830174249984675, guid: 6b33719b5ac9b544285e2453206cc828, type: 3}
   rangeType: 0
   range: 1
-  damage: 50
+  damage: 40
   attackType: 1
   canHitEnemies: 1
   canHitAllies: 0

@@ -26,7 +26,7 @@ MonoBehaviour:
   maxTargets: 4
   canExecuteWithoutTargets: 0
   endTurnOnCast: 0
-  suppressCameraTransitions: 1
+  suppressCameraTransitions: 0
   animationState: Heads_Up
   animationStateHurt: Heads_Up
   castEffectPrefab: {fileID: 0}

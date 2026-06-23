@@ -230,8 +230,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playIdleOnStart: 1
-  activeTurnSpeed: 0.65
-  inactiveTurnSpeed: 0.3
+  inactiveTurnSpeedMultiplier: 0.5
 --- !u!1001 &4410274097005613534
 PrefabInstance:
   m_ObjectHideFlags: 0

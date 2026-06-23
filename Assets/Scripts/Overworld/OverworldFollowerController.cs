@@ -82,7 +82,7 @@ namespace DDD.TNFY.BRAWL
             previousPosition = transform.position;
 
             if (unitAnimator != null)
-                unitAnimator.SetAnimationSpeed(1f);
+                unitAnimator.SetActiveTurn();
         }
 
         private void Update()
