@@ -429,7 +429,7 @@ namespace DDD.TNFY.BRAWL
             if (start == null || goal == null) return new List<Tile>();
             if (start == goal) return new List<Tile>();
 
-            // Find the standard orthogonal path first
+            // Find the standard orthogonal path first — this validates the move is legal
             var fullPath = FindPath(start, goal, maxSteps);
             if (fullPath.Count == 0) return fullPath;
 
@@ -438,6 +438,12 @@ namespace DDD.TNFY.BRAWL
             {
                 return new List<Tile> { fullPath[0] };
             }
+
+            // If start→goal is a perfect diagonal (|Δx| == |Δz|, both ≥ 2) and every
+            // intermediate tile on the straight diagonal is clear, return the goal as a
+            // single waypoint so the unit animates in one smooth diagonal motion.
+            var straightDiagonal = TryGetStraightDiagonalPath(start, goal);
+            if (straightDiagonal != null) return straightDiagonal;
 
             // Convert to waypoints with proper optimization
             return ConvertPathToWaypointsWithDiagonals(start, fullPath);
@@ -586,6 +592,55 @@ namespace DDD.TNFY.BRAWL
             bool dir2Vertical = (dir2.x == 0 && dir2.y != 0);
 
             return (dir1Horizontal && dir2Vertical) || (dir1Vertical && dir2Horizontal);
+        }
+
+        /// <summary>
+        /// Returns a single-tile waypoint list [goal] when the visual path can be a straight
+        /// diagonal: start→goal must be a perfect diagonal (|Δx| == |Δz|, both ≥ 2 grid steps)
+        /// on the same Y level, and every intermediate diagonal tile must be passable, unoccupied,
+        /// and free of active tile effects.
+        ///
+        /// The tile-effect guard is intentional: a tile effect (e.g. fire) whose OnEnter timing
+        /// triggers via MoveAlongWaypoints only fires for tiles that appear as waypoints. Skipping
+        /// an effect tile would silently bypass damage or status application.
+        ///
+        /// Returns null when the straight diagonal is not safe, letting
+        /// ConvertPathToWaypointsWithDiagonals handle the path as normal.
+        /// Single-step diagonals (|Δx| == 1) are already handled by IsValidDiagonalMove.
+        /// </summary>
+        private List<Tile> TryGetStraightDiagonalPath(Tile start, Tile goal)
+        {
+            // Straight diagonal only makes sense on a flat plane
+            if (!IsSameYLevel(start, goal)) return null;
+
+            Vector3 delta = goal.transform.position - start.transform.position;
+            int gridX = Mathf.RoundToInt(delta.x / tileSpacing.x);
+            int gridZ = Mathf.RoundToInt(delta.z / tileSpacing.z);
+
+            int absX = Mathf.Abs(gridX);
+            int absZ = Mathf.Abs(gridZ);
+
+            // Must be a perfect diagonal with equal displacement on both axes, 2+ steps
+            if (absX != absZ || absX < 2) return null;
+
+            // Step direction uses the same ±1 convention as GridDirectionUtility
+            var stepDir = new Vector2Int((int)Mathf.Sign(gridX), (int)Mathf.Sign(gridZ));
+
+            // Walk each intermediate tile (exclusive of start and goal) and validate
+            Tile current = start;
+            for (int i = 0; i < absX - 1; i++)
+            {
+                current = GetTileInDirection(current, stepDir);
+
+                if (current == null)                      return null; // gap in the grid
+                if (!IsSameYLevel(start, current))        return null; // elevation change mid-diagonal
+                if (!current.passableTerrain)             return null; // wall / impassable terrain
+                if (current.occupied)                     return null; // another unit is standing there
+                if (current.HasActiveEffects)             return null; // OnEnter effect would be skipped
+            }
+
+            // All clear — return the goal as a single waypoint for one smooth diagonal animation
+            return new List<Tile> { goal };
         }
 
         #endregion
