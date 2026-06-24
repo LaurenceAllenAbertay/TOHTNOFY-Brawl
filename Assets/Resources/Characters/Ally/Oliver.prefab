@@ -71,7 +71,8 @@ GameObject:
   - component: {fileID: 6165820439306120230}
   - component: {fileID: 4589997648062669903}
   - component: {fileID: 5608789039757451209}
-  m_Layer: 0
+  - component: {fileID: 2929956778323629652}
+  m_Layer: 8
   m_Name: Oliver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,6 +232,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playIdleOnStart: 1
   inactiveTurnSpeedMultiplier: 0.5
+--- !u!65 &2929956778323629652
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8547975530932973090}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.4399996, y: 8.599999, z: 0.2}
+  m_Center: {x: -0.5795998, y: 4.0420012, z: 0}
 --- !u!1001 &2368773472925403379
 PrefabInstance:
   m_ObjectHideFlags: 0

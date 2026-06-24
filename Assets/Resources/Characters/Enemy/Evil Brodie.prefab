@@ -74,7 +74,8 @@ GameObject:
   - component: {fileID: 3635465470440769816}
   - component: {fileID: 1897822839676078520}
   - component: {fileID: -5193970609984620637}
-  m_Layer: 0
+  - component: {fileID: 7829493198531706217}
+  m_Layer: 8
   m_Name: Evil Brodie
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +196,7 @@ MonoBehaviour:
   canMove: 0
   currentFacing: {x: 1, y: 0}
   enableDebugLogging: 0
-  leavesBodyOnDeath: 1
+  leavesBodyOnDown: 1
 --- !u!114 &6056180564853132274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,8 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playIdleOnStart: 1
-  activeTurnSpeed: 0.65
-  inactiveTurnSpeed: 0.3
+  inactiveTurnSpeedMultiplier: 0.5
 --- !u!114 &3635465470440769816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,6 +287,27 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 720bc8571d3f4854bb5c108dbefb42c6, type: 2}
   - {fileID: 11400000, guid: 4cfb28c2b36b0ca4da3b1db584b0a6db, type: 2}
   passive: {fileID: 0}
+--- !u!65 &7829493198531706217
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4885748180280455429}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.22, y: 9.3, z: 0.2}
+  m_Center: {x: 0.06220007, y: 4.371001, z: 0}
 --- !u!1001 &4700597946501429173
 PrefabInstance:
   m_ObjectHideFlags: 0

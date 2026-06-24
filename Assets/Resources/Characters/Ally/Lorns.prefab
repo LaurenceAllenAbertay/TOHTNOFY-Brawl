@@ -71,7 +71,8 @@ GameObject:
   - component: {fileID: 2737554966067764281}
   - component: {fileID: 4991065325652505081}
   - component: {fileID: 4571296184399530200}
-  m_Layer: 0
+  - component: {fileID: 7055624127406509743}
+  m_Layer: 8
   m_Name: Lorns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,6 +232,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playIdleOnStart: 1
   inactiveTurnSpeedMultiplier: 0.5
+--- !u!65 &7055624127406509743
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2158351031061411466}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.0199995, y: 6.6699996, z: 0.2}
+  m_Center: {x: 0.25100014, y: 3.3349998, z: 0}
 --- !u!1001 &4410274097005613534
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -73,7 +73,8 @@ GameObject:
   - component: {fileID: 6808859278931663867}
   - component: {fileID: 3239805607177353534}
   - component: {fileID: -5667562654134815427}
-  m_Layer: 0
+  - component: {fileID: 3501584977938740816}
+  m_Layer: 8
   m_Name: Evil Lorns
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -194,7 +195,7 @@ MonoBehaviour:
   canMove: 0
   currentFacing: {x: 1, y: 0}
   enableDebugLogging: 0
-  leavesBodyOnDeath: 1
+  leavesBodyOnDown: 1
 --- !u!114 &6861549200397320228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,8 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playIdleOnStart: 1
-  activeTurnSpeed: 0.65
-  inactiveTurnSpeed: 0.3
+  inactiveTurnSpeedMultiplier: 0.5
 --- !u!114 &6808859278931663867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -274,6 +274,27 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b76ac2ff104713646bdfe8a5a9ee6c37, type: 2}
   - {fileID: 11400000, guid: 7b5298c02649ca24194198c32229b6fd, type: 2}
   passive: {fileID: 0}
+--- !u!65 &3501584977938740816
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3963197675195542672}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.02, y: 6.67, z: 0.2}
+  m_Center: {x: 0.2509997, y: 3.335, z: 0}
 --- !u!1001 &6822790151554053953
 PrefabInstance:
   m_ObjectHideFlags: 0

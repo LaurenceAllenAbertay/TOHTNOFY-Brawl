@@ -74,7 +74,8 @@ GameObject:
   - component: {fileID: 2625288850969681487}
   - component: {fileID: -2197407118727056976}
   - component: {fileID: 9161790594171957198}
-  m_Layer: 0
+  - component: {fileID: 3658487184363969294}
+  m_Layer: 8
   m_Name: Evil Kallper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +196,7 @@ MonoBehaviour:
   canMove: 0
   currentFacing: {x: 1, y: 0}
   enableDebugLogging: 0
-  leavesBodyOnDeath: 1
+  leavesBodyOnDown: 1
 --- !u!114 &845012849849454722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,8 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playIdleOnStart: 1
-  activeTurnSpeed: 0.65
-  inactiveTurnSpeed: 0.3
+  inactiveTurnSpeedMultiplier: 0.5
 --- !u!114 &2625288850969681487
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,6 +287,27 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9e5b289da219a024fa81bd9df4ea3bac, type: 2}
   - {fileID: 11400000, guid: b65c5eda89671b047b5d32a5862ef3b9, type: 2}
   passive: {fileID: 0}
+--- !u!65 &3658487184363969294
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6696446961002669605}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.17, y: 6.31, z: 0.2}
+  m_Center: {x: -0.20679927, y: 3.155, z: 0}
 --- !u!1001 &3256458290255480586
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -71,7 +71,8 @@ GameObject:
   - component: {fileID: 7748723909159697864}
   - component: {fileID: 1097064995507393991}
   - component: {fileID: 4699050981359284718}
-  m_Layer: 0
+  - component: {fileID: 7468092132977116738}
+  m_Layer: 8
   m_Name: Kallper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -231,6 +232,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playIdleOnStart: 1
   inactiveTurnSpeedMultiplier: 0.5
+--- !u!65 &7468092132977116738
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7349237561839375101}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.1699996, y: 6.3099995, z: 0.2}
+  m_Center: {x: -0.20679997, y: 3.1549997, z: 0}
 --- !u!1001 &8360881061637584169
 PrefabInstance:
   m_ObjectHideFlags: 0

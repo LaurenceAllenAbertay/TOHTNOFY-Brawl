@@ -12,6 +12,11 @@ namespace DDD.TNFY.BRAWL
         [SerializeField] private InputActionAsset inputActions;
         [SerializeField] private Camera mainCamera;
 
+        [Tooltip("Layer mask for unit hover colliders. " +
+                 "Assign the layer you put the unit trigger colliders on. " +
+                 "Must be separate from the tile layer so the two raycasts don't interfere.")]
+        [SerializeField] private LayerMask unitLayer;
+
         // Mouse events
         public static event Action<Vector3> OnMouseMoved;
         public static event Action<Vector3> OnMouseClicked;
@@ -28,6 +33,11 @@ namespace DDD.TNFY.BRAWL
         public static event Action<Vector2> OnCameraMove;
         public static event Action<float> OnCameraElevate;
 
+        // Unit hover events — fired when the cursor enters or exits a unit's collider.
+        // UnitHealthBarDisplay subscribes to these to show/hide the health bar on hover.
+        public static event Action<Unit> OnUnitHovered;
+        public static event Action<Unit> OnUnitHoverExited;
+
         private InputActionMap gameplayMap;
         private InputAction clickAction;
         private InputAction rightClickAction;
@@ -43,6 +53,10 @@ namespace DDD.TNFY.BRAWL
         // The tile the mouse is currently over, tracked via tile-layer raycast each frame.
         // Kept here so hover enter/exit events fire correctly as the cursor moves.
         private Tile hoveredTile;
+
+        // The unit the mouse is currently over, tracked via unit-layer raycast each frame.
+        // Mirrors the hoveredTile pattern so enter/exit events fire as the cursor moves.
+        private Unit _hoveredUnit;
 
         private void Awake()
         {
@@ -104,6 +118,11 @@ namespace DDD.TNFY.BRAWL
             // wall/occluder colliders on other layers cannot intercept hover or click events.
             Tile tileUnderCursor = RaycastTile(screenPos);
             UpdateHoveredTile(tileUnderCursor);
+
+            // Resolve the unit under the cursor using a separate unit-layer-only raycast.
+            // This is independent of the tile raycast — the two layers never interfere.
+            Unit unitUnderCursor = RaycastUnit(screenPos);
+            UpdateHoveredUnit(unitUnderCursor);
 
             OnMouseMoved?.Invoke(ScreenToWorld(screenPos));
 
@@ -172,6 +191,51 @@ namespace DDD.TNFY.BRAWL
 
             if (hoveredTile != null)
                 Tile.NotifyHovered(hoveredTile);
+        }
+
+        // --- Unit hover tracking -----------------------------------------------
+
+        /// <summary>
+        /// Raycasts against the unit layer only and returns whichever Unit was hit,
+        /// or null when the cursor is not over any unit.
+        ///
+        /// Unit colliders are expected to be trigger Box Colliders. Physics.Raycast
+        /// ignores triggers by default, so QueryTriggerInteraction.Collide is required.
+        ///
+        /// GetComponentInParent is used rather than GetComponent so the collider can
+        /// live on the root Unit GameObject or on a dedicated child (either works).
+        /// </summary>
+        private Unit RaycastUnit(Vector2 screenPos)
+        {
+            if (mainCamera == null) return null;
+            if (IsMouseOverUI()) return null;
+
+            Ray ray = mainCamera.ScreenPointToRay(screenPos);
+            if (Physics.Raycast(ray, out RaycastHit hit, Mathf.Infinity, unitLayer,
+                                 QueryTriggerInteraction.Collide))
+            {
+                return hit.collider.GetComponentInParent<Unit>();
+            }
+
+            return null;
+        }
+
+        /// <summary>
+        /// Compares the newly raycasted unit against the last known hovered unit and fires
+        /// OnUnitHovered / OnUnitHoverExited as the cursor moves between units (or off all units).
+        /// Mirrors UpdateHoveredTile exactly.
+        /// </summary>
+        private void UpdateHoveredUnit(Unit newUnit)
+        {
+            if (newUnit == _hoveredUnit) return;
+
+            if (_hoveredUnit != null)
+                OnUnitHoverExited?.Invoke(_hoveredUnit);
+
+            _hoveredUnit = newUnit;
+
+            if (_hoveredUnit != null)
+                OnUnitHovered?.Invoke(_hoveredUnit);
         }
 
         // --- Utilities ---
