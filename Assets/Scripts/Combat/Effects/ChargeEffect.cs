@@ -299,8 +299,8 @@ namespace DDD.TNFY.BRAWL
             if (unitToDisplace?.currentTile == null) return null;
 
             var currentTile = unitToDisplace.currentTile;
-            Vector2Int[] perpendiculars = GetPerpendicularDirections(chargeDirection);
-            Vector2Int backward = new Vector2Int(-chargeDirection.x, -chargeDirection.y);
+            Vector2Int[] perpendiculars = GridDirectionUtility.Perpendiculars(chargeDirection);
+            Vector2Int backward = GridDirectionUtility.Opposite(chargeDirection);
 
             // Check perpendicular tiles first — same layer only.
             foreach (var dir in perpendiculars)
@@ -473,8 +473,8 @@ namespace DDD.TNFY.BRAWL
             if (unitToDisplace == null) return false;
 
             var currentTile = unitToDisplace.currentTile;
-            Vector2Int[] perpendiculars = GetPerpendicularDirections(chargeDirection);
-            Vector2Int backward = new Vector2Int(-chargeDirection.x, -chargeDirection.y);
+            Vector2Int[] perpendiculars = GridDirectionUtility.Perpendiculars(chargeDirection);
+            Vector2Int backward = GridDirectionUtility.Opposite(chargeDirection);
 
             // Check perpendicular tiles — same layer only.
             foreach (var dir in perpendiculars)
@@ -522,12 +522,5 @@ namespace DDD.TNFY.BRAWL
             return true;
         }
 
-        private Vector2Int[] GetPerpendicularDirections(Vector2Int direction)
-        {
-            if (direction == Vector2Int.up || direction == Vector2Int.down)
-                return new Vector2Int[] { Vector2Int.left, Vector2Int.right };
-            else
-                return new Vector2Int[] { Vector2Int.up, Vector2Int.down };
-        }
     }
 }

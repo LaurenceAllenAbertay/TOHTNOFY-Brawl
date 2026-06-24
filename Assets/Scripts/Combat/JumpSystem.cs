@@ -195,6 +195,10 @@ namespace DDD.TNFY.BRAWL
             // Cache the occupant before we move (SetCurrentTileLogical will clear the tile).
             Unit stompTarget = targetTile.occupied ? targetTile.currentUnit : null;
 
+            // Capture the origin tile before we update the logical position — used
+            // by ExecuteStomp to derive knockback direction via the grid.
+            Tile originTile = currentUnit.currentTile;
+
             Vector3 startPos = currentUnit.transform.position;
             Vector3 endPos = targetTile.transform.position;
 
@@ -204,7 +208,7 @@ namespace DDD.TNFY.BRAWL
             // Start jump animation with camera coordination.
             if (cameraController != null)
             {
-                StartCoroutine(JumpAnimation(currentUnit, startPos, endPos, stompTarget));
+                StartCoroutine(JumpAnimation(currentUnit, startPos, endPos, stompTarget, originTile));
             }
 
             // Mark that the player has used their movement — jumping consumes all remaining movement.
@@ -245,7 +249,7 @@ namespace DDD.TNFY.BRAWL
             return false;
         }
 
-        public IEnumerator JumpAnimation(Unit unit, Vector3 startPos, Vector3 endPos, Unit stompTarget = null)
+        public IEnumerator JumpAnimation(Unit unit, Vector3 startPos, Vector3 endPos, Unit stompTarget = null, Tile originTile = null)
         {
             float duration = 0.5f;
             float elapsed = 0f;
@@ -306,83 +310,61 @@ namespace DDD.TNFY.BRAWL
             }
 
             // If this was a stomp, apply damage and knockback to the occupant now that
-            // Brodie has fully landed. The stomp direction is away from Brodie's origin tile.
+            // the unit has fully landed. Direction is derived from the grid tiles — not world positions.
             if (stompTarget != null)
             {
-                ExecuteStomp(unit, stompTarget, startPos, endPos);
+                ExecuteStomp(unit, stompTarget, originTile);
             }
         }
 
 
         /// <summary>
         /// Called on landing when CanStompOccupiedTiles is true.
-        /// Deals damage to the stomped unit equal to the jumping unit's attack stat,
-        /// then knocks them back 1 tile away from the landing point.
-        /// The knockback direction is derived from the jump vector (start → end projected
-        /// to the dominant axis) so the victim is thrown in the direction Brodie jumped.
+        /// Deals damage to the stomped unit, then knocks them back using the agreed
+        /// fallback chain. Direction is derived from the origin tile to the landing tile
+        /// via the grid — no world-space positions involved.
+        ///
+        /// If ResolveKnockbackDestination returns null the victim has nowhere to go.
+        /// Because two units cannot share a tile the victim is killed by the impact.
         /// </summary>
-        private void ExecuteStomp(Unit stomper, Unit victim, Vector3 jumpStartPos, Vector3 jumpEndPos)
+        private void ExecuteStomp(Unit stomper, Unit victim, Tile originTile)
         {
             if (victim == null || stomper == null) return;
 
-            // Deal damage — base is the stomper's current attack.
             int damage = Mathf.Max(1, stomper.currentAttack - victim.currentDefense);
             victim.ReceiveDamage(damage);
             UnitManager.NotifyUnitDamaged(victim, stomper);
 
-            // If the victim died from the stomp damage, no knockback needed.
             if (victim.currentHealth <= 0) return;
 
-            // Derive primary knockback direction from the horizontal jump vector, dominant axis.
-            Vector3 jumpDir = jumpEndPos - jumpStartPos;
-            int dx = jumpDir.x > 0.01f ? 1 : (jumpDir.x < -0.01f ? -1 : 0);
-            int dz = jumpDir.z > 0.01f ? 1 : (jumpDir.z < -0.01f ? -1 : 0);
-            Vector2Int knockbackDir = Mathf.Abs(jumpDir.x) >= Mathf.Abs(jumpDir.z)
-                ? new Vector2Int(dx, 0)
-                : new Vector2Int(0, dz);
+            // Derive knockback direction from origin tile → landing tile using the grid.
+            // stomper.currentTile is the landing tile (set by SetCurrentTileLogical before animation).
+            // FromTiles is used rather than CardinalFromTiles so that a diagonal jump (e.g. NE)
+            // produces a diagonal push (NE) — CardinalFromTiles would arbitrarily pick N or E
+            // because on a tile grid the axes are always exactly equal for diagonal positions.
+            Vector2Int knockbackDir = Vector2Int.right; // safe fallback — should never be reached
+            if (originTile != null && stomper.currentTile != null)
+            {
+                Vector2Int dir = GridDirectionUtility.FromTiles(originTile, stomper.currentTile);
+                if (dir != Vector2Int.zero) knockbackDir = dir;
+            }
 
-            // Try primary direction first, then the two perpendicular sides — mirrors
-            // KnockbackEffect.FindValidKnockbackTile so stomp behaves consistently.
-            Tile knockbackTile = FindStompKnockbackTile(victim.currentTile, knockbackDir);
+            // Resolve destination using the same full fallback chain as all other knockback.
+            Tile knockbackTile = GridDirectionUtility.ResolveKnockbackDestination(victim.currentTile, knockbackDir);
 
             if (knockbackTile == null)
             {
-                // Truly no tile available anywhere — two units cannot share a tile,
-                // so the victim is killed by the impact.
-                Debug.Log($"[Stomp] {victim.name} has no valid knockback tile in any direction — killed by impact.");
+                // No valid tile in any direction — victim cannot share the tile so they are killed.
+                Debug.Log($"[Stomp] {victim.name} has no valid knockback tile — killed by impact.");
                 victim.ReceiveDamage(victim.currentHealth);
                 return;
             }
 
-            // Play knockback animation and move the victim.
             var victimAnimator = victim.GetComponent<UnitAnimator>();
             if (victimAnimator != null)
                 StartCoroutine(StompKnockbackAnimation(victim, knockbackTile, victimAnimator));
             else
                 victim.SetCurrentTile(knockbackTile);
-        }
-
-        /// <summary>
-        /// Tries the primary knockback direction, then the two perpendicular sides.
-        /// Returns the first free, passable, unoccupied tile found, or null if all are blocked.
-        /// Mirrors KnockbackEffect.FindValidKnockbackTile / GetKnockbackDirectionsPriority.
-        /// </summary>
-        private Tile FindStompKnockbackTile(Tile fromTile, Vector2Int primaryDir)
-        {
-            // Perpendicular directions: clockwise and counter-clockwise of primary.
-            Vector2Int cwDir  = new Vector2Int(-primaryDir.y,  primaryDir.x);
-            Vector2Int ccwDir = new Vector2Int( primaryDir.y, -primaryDir.x);
-
-            Vector2Int[] directionsToTry = { primaryDir, cwDir, ccwDir };
-
-            foreach (var dir in directionsToTry)
-            {
-                Tile candidate = GridManager.Instance.GetTileInDirection(fromTile, dir);
-                if (candidate != null && candidate.passableTerrain && !candidate.occupied)
-                    return candidate;
-            }
-
-            return null;
         }
 
         private IEnumerator StompKnockbackAnimation(Unit victim, Tile destination, UnitAnimator animator)

@@ -16,11 +16,8 @@ namespace DDD.TNFY.BRAWL
         [Tooltip("If true, units knocked into other units will cause collision damage and secondary knockback")]
         public bool enableCollisions = false;
 
-        [Tooltip("Damage dealt to units hit by collision (if different from main ability damage)")]
-        public int collisionDamage = -1; // -1 means use ability damage
-
-        [Tooltip("If true, make sure the unit moves to a new tile")]
-        public bool forceKnockback = true;
+        [Tooltip("Damage dealt to units hit by collision (-1 = use ability damage)")]
+        public int collisionDamage = -1;
 
         [Tooltip("If true, applies knockback to the caster instead of targets")]
         public bool applyToSelf = false;
@@ -43,265 +40,200 @@ namespace DDD.TNFY.BRAWL
         public override string TargetAnimationHint => applyToSelf ? null : "Knockback";
         public override float ExpectedAnimationDuration => 1f;
 
+        // ── Entry point ───────────────────────────────────────────────────────
+
         public override void Apply(AbilityContext ctx, IReadOnlyList<Unit> targets)
         {
             if (ctx?.caster == null) return;
 
-            // Camera follow only when a single unit is launched over multiple tiles.
-            bool singleTarget = (targets == null || targets.Count == 1) && !applyToSelf;
-            bool shouldFollowCamera = singleTarget && knockbackDistance > 1;
+            bool singleTarget    = (targets == null || targets.Count == 1) && !applyToSelf;
+            bool shouldFollowCam = singleTarget && knockbackDistance > 1;
 
             if (applyToSelf)
             {
-                // Apply knockback to the caster
                 ctx.caster.StartCoroutine(ApplyKnockbackWithAnimation(ctx, ctx.caster, false));
             }
             else if (finalTargetOnly)
             {
-                Unit displacedUnit = GetDisplacedUnit(ctx);
-                if (displacedUnit != null)
-                {
-                    ctx.caster.StartCoroutine(ApplyKnockbackWithAnimation(ctx, displacedUnit, shouldFollowCamera));
-                }
+                Unit displaced = GetDisplacedUnit(ctx);
+                if (displaced != null)
+                    ctx.caster.StartCoroutine(ApplyKnockbackWithAnimation(ctx, displaced, shouldFollowCam));
             }
             else
             {
-                if (targets != null)
+                if (targets == null) return;
+                foreach (var target in targets)
                 {
-                    foreach (var target in targets)
-                    {
-                        if (target != null)
-                            ctx.caster.StartCoroutine(ApplyKnockbackWithAnimation(ctx, target, shouldFollowCamera));
-                    }
+                    if (target != null)
+                        ctx.caster.StartCoroutine(ApplyKnockbackWithAnimation(ctx, target, shouldFollowCam));
                 }
             }
         }
+
+        // ── Primary animation coroutine ───────────────────────────────────────
 
         private IEnumerator ApplyKnockbackWithAnimation(AbilityContext ctx, Unit target, bool followCamera = false)
         {
             if (target?.currentTile == null) yield break;
 
-            // Bodies have no animator state to drive — just move them silently to their
-            // destination with no animation. CalculateKnockbackPath still runs so walls,
-            // gaps, and other units correctly block the body's movement.
+            // Capture before any movement — needed to derive the resolved direction later.
+            Tile originalTile = target.currentTile;
+
+            // Determine push direction up-front so bodies and animator-less units share the same path.
+            Vector2Int knockbackDir = ResolveKnockbackDir(ctx, target);
+
+            // Bodies have no animator — slide them silently to their destination.
             if (target.IsBody)
             {
-                var bodyPath = CalculateKnockbackPath(ctx, target, ctx.aimDir);
+                var bodyPath = CalculateKnockbackPath(target, knockbackDir);
                 if (bodyPath.Count > 0)
                 {
-                    bool bodyMoveComplete = false;
-                    target.AnimateToTile(bodyPath[bodyPath.Count - 1], movementDurationPerTile * bodyPath.Count,
-                        () => bodyMoveComplete = true);
-                    while (!bodyMoveComplete) yield return null;
+                    bool done = false;
+                    target.AnimateToTile(bodyPath[bodyPath.Count - 1],
+                        movementDurationPerTile * bodyPath.Count, () => done = true);
+                    while (!done) yield return null;
                 }
                 yield break;
             }
+
+            // Block player input up-front when this is a self-knockback on the active player.
+            bool isPlayerSelfKnockback = applyToSelf && target == ctx.caster && target is PlayerUnit;
+            if (isPlayerSelfKnockback)
+                ResetPlayerStateAfterKnockback(target);
 
             var unitAnimator = target.GetComponent<UnitAnimator>();
             if (unitAnimator == null)
             {
-                ApplyKnockbackImmediate(ctx, target);
+                ApplyKnockbackImmediate(target, knockbackDir);
                 yield break;
             }
 
-            // Determine knockback direction
-            Vector2Int knockbackDir;
-            bool isPlayerSelfKnockback = false;
+            // Build path using the full fallback chain.
+            var knockbackPath = CalculateKnockbackPath(target, knockbackDir);
 
-            if (applyToSelf && target == ctx.caster)
-            {
-                // For self-knockback, use opposite of aim direction (knock backwards)
-                knockbackDir = new Vector2Int(-ctx.aimDir.x, -ctx.aimDir.y);
+            // Face the target toward the source of the knockback.
+            target.FaceDirection(GridDirectionUtility.Opposite(knockbackDir));
 
-                isPlayerSelfKnockback = target is PlayerUnit;
-                if (isPlayerSelfKnockback)
-                {
-                    // Block player input during animation
-                    ResetPlayerStateAfterKnockback(target);
-                }
-            }
-            else if (radialKnockback && ctx.caster?.currentTile != null && target.currentTile != null)
-            {
-                // Radial knockback: push each target away from the caster's tile.
-                // Direction is derived per-target so units scatter outward from the epicentre.
-                Vector3 diff = target.currentTile.transform.position -
-                               ctx.caster.currentTile.transform.position;
-                int dx = diff.x > 0.01f ? 1 : (diff.x < -0.01f ? -1 : 0);
-                int dz = diff.z > 0.01f ? 1 : (diff.z < -0.01f ? -1 : 0);
-                // Prefer the dominant axis so diagonal targets get a clean cardinal push.
-                if (Mathf.Abs(diff.x) >= Mathf.Abs(diff.z))
-                    knockbackDir = new Vector2Int(dx, 0);
-                else
-                    knockbackDir = new Vector2Int(0, dz);
-            }
-            else
-            {
-                // For normal knockback, use aim direction
-                knockbackDir = ctx.aimDir;
-            }
-
-            // Calculate the path first
-            var knockbackPath = CalculateKnockbackPath(ctx, target, knockbackDir);
-
-            // Face the target toward the source of the knockback (inverse of push direction).
-            target.FaceDirection(new Vector2Int(-knockbackDir.x, -knockbackDir.y));
-
-            if (!forceKnockback && knockbackPath.Count == 0)
-            {
-                // No valid tile to move to, but still play the animation so the player
-                // gets visual feedback that knockback was blocked (e.g. wall behind caster).
-                unitAnimator.PlayKnockbackStart();
-                yield return new WaitForSeconds(knockbackStartDuration);
-                unitAnimator.PlayKnockbackEnd();
-                yield return new WaitForSeconds(knockbackEndDuration);
-
-                if (isPlayerSelfKnockback)
-                {
-                    RestorePlayerStateAfterKnockback(target);
-                }
-                yield break;
-            }
-
+            // No valid destination — play the blocked animation in place.
             if (knockbackPath.Count == 0)
             {
-                // Still play animation even if no movement for visual feedback
                 unitAnimator.PlayKnockbackStart();
                 yield return new WaitForSeconds(knockbackStartDuration);
                 unitAnimator.PlayKnockbackEnd();
                 yield return new WaitForSeconds(knockbackEndDuration);
 
-                // Restore player state if this was a player self-knockback
                 if (isPlayerSelfKnockback)
-                {
                     RestorePlayerStateAfterKnockback(target);
-                }
+
                 yield break;
             }
 
-            // NEW: Start knockback animation and movement simultaneously
+            // The direction actually used in step 1 (may differ from knockbackDir when a fallback tile was chosen).
+            Vector2Int resolvedDir = GridDirectionUtility.FromTiles(originalTile, knockbackPath[0]);
+
             unitAnimator.PlayKnockbackStart();
 
             if (knockbackPath.Count == 1)
             {
-                // Start movement after a very brief delay to let animation begin
+                // Single tile: brief delay then move.
                 yield return new WaitForSeconds(0.1f);
 
-                // Move to destination
                 bool movementComplete = false;
                 target.AnimateToTile(knockbackPath[0], movementDurationPerTile, () => movementComplete = true);
+                while (!movementComplete) yield return null;
 
-                while (!movementComplete)
-                {
-                    yield return null;
-                }
-
-                // Check for a unit on the tile immediately beyond the landing spot.
-                // The launched unit now occupies knockbackPath[0], so any blocker
-                // is one step further in the knockback direction.
                 if (enableCollisions)
                 {
-                    Tile beyondTile = GridManager.Instance.GetTileInDirection(knockbackPath[0], knockbackDir);
-                    if (beyondTile != null && beyondTile.currentUnit != null && beyondTile.currentUnit != target)
-                        HandleCollision(ctx, target, beyondTile.currentUnit, knockbackDir);
+                    Tile beyondTile = GridManager.Instance.GetTileInDirection(knockbackPath[0], resolvedDir);
+                    if (beyondTile?.currentUnit != null && beyondTile.currentUnit != target)
+                        HandleCollision(ctx, target, beyondTile.currentUnit, resolvedDir);
                 }
 
-                // Wait for remaining start animation time, then play end
-                float remainingStartTime = knockbackStartDuration - 0.1f - movementDurationPerTile;
-                if (remainingStartTime > 0)
-                {
-                    yield return new WaitForSeconds(remainingStartTime);
-                }
+                float remainingStart = knockbackStartDuration - 0.1f - movementDurationPerTile;
+                if (remainingStart > 0f)
+                    yield return new WaitForSeconds(remainingStart);
 
-                // Play Knockback_End
                 unitAnimator.PlayKnockbackEnd();
-
-                // Wait for Knockback_End to complete
                 yield return new WaitForSeconds(knockbackEndDuration);
             }
             else
             {
-                // Multi-tile knockback: Start movement immediately and hold start animation
-                Debug.Log($"Multi-tile knockback for {target.name} - {knockbackPath.Count} tiles");
-
-                // Cache camera once before the loop.
-                var camera = followCamera ? UnityEngine.Object.FindAnyObjectByType<CameraController>() : null;
-
-                // Fire one smooth camera transition covering the full movement distance.
-                // Duration matches total movement time so the camera arrives with the unit.
+                // Multi-tile: smooth camera pan then step through each tile.
+                var camera = followCamera ? Object.FindAnyObjectByType<CameraController>() : null;
                 if (camera != null)
                 {
                     float totalDuration = knockbackPath.Count * movementDurationPerTile;
-                    Vector3 finalFocus = camera.WorldFocusPosition(knockbackPath[knockbackPath.Count - 1].transform.position);
+                    Vector3 finalFocus  = camera.WorldFocusPosition(knockbackPath[knockbackPath.Count - 1].transform.position);
                     ctx.caster.StartCoroutine(camera.TransitionTo(finalFocus, totalDuration));
                 }
 
-                // Brief delay to let knockback start animation begin
                 yield return new WaitForSeconds(0.1f);
-
-                // Move through all tiles while holding the start animation
-                float timePerTile = movementDurationPerTile;
 
                 for (int i = 0; i < knockbackPath.Count; i++)
                 {
                     bool moveComplete = false;
-                    target.AnimateToTile(knockbackPath[i], timePerTile, () => moveComplete = true);
+                    target.AnimateToTile(knockbackPath[i], movementDurationPerTile, () => moveComplete = true);
+                    while (!moveComplete) yield return null;
 
-                    Debug.Log($"{target.name} knocked back to {knockbackPath[i].name} (step {i + 1}/{knockbackPath.Count})");
-
-                    while (!moveComplete)
-                    {
-                        yield return null;
-                    }
-
-                    // Check for a unit on the tile immediately beyond this step.
                     if (enableCollisions)
                     {
-                        Tile beyondTile = GridManager.Instance.GetTileInDirection(knockbackPath[i], knockbackDir);
-                        if (beyondTile != null && beyondTile.currentUnit != null && beyondTile.currentUnit != target)
+                        Tile beyondTile = GridManager.Instance.GetTileInDirection(knockbackPath[i], resolvedDir);
+                        if (beyondTile?.currentUnit != null && beyondTile.currentUnit != target)
                         {
-                            HandleCollision(ctx, target, beyondTile.currentUnit, knockbackDir);
+                            HandleCollision(ctx, target, beyondTile.currentUnit, resolvedDir);
                             break;
                         }
                     }
                 }
 
-                // Calculate remaining start animation time
-                float totalMovementTime = knockbackPath.Count * timePerTile;
-                float remainingStartTime = knockbackStartDuration - 0.1f - totalMovementTime;
-                if (remainingStartTime > 0)
-                {
-                    yield return new WaitForSeconds(remainingStartTime);
-                }
+                float totalMovement  = knockbackPath.Count * movementDurationPerTile;
+                float remainingStart = knockbackStartDuration - 0.1f - totalMovement;
+                if (remainingStart > 0f)
+                    yield return new WaitForSeconds(remainingStart);
 
-                // Now play Knockback_End
-                Debug.Log($"Playing Knockback_End for {target.name}");
                 unitAnimator.PlayKnockbackEnd();
-
-                // Wait for Knockback_End to complete
                 yield return new WaitForSeconds(knockbackEndDuration);
             }
 
-            // Restore player state if this was a player self-knockback
             if (isPlayerSelfKnockback)
-            {
                 RestorePlayerStateAfterKnockback(target);
-            }
         }
 
-        // Restore player state if this was a player
+        // ── Direction helper ─────────────────────────────────────────────────
+
+        /// <summary>
+        /// Determines the knockback push direction for <paramref name="target"/> based on
+        /// the effect configuration and ability context.
+        /// </summary>
+        private Vector2Int ResolveKnockbackDir(AbilityContext ctx, Unit target)
+        {
+            // Self-knockback: push opposite to the aim direction (recoil).
+            if (applyToSelf && target == ctx.caster)
+                return GridDirectionUtility.Opposite(ctx.aimDir);
+
+            // Radial: derive direction tile-to-tile from caster toward each target.
+            // FromTiles is used rather than CardinalFromTiles so that a diagonally positioned
+            // target is pushed diagonally away — CardinalFromTiles would strip the diagonal
+            // and produce a cardinal direction that feeds into the wrong fallback chain.
+            if (radialKnockback && ctx.caster?.currentTile != null && target.currentTile != null)
+            {
+                Vector2Int radialDir = GridDirectionUtility.FromTiles(ctx.caster.currentTile, target.currentTile);
+                // Guard: if the two units somehow share a tile, fall back to aim direction.
+                return radialDir != Vector2Int.zero ? radialDir : ctx.aimDir;
+            }
+
+            // Default: push in the ability's aim direction.
+            return ctx.aimDir;
+        }
+
+        // ── Player state management ───────────────────────────────────────────
 
         private void ResetPlayerStateAfterKnockback(Unit target)
         {
-            // Only reset state for player units
             if (!(target is PlayerUnit)) return;
 
-            // Clear tile highlights immediately
-            if (GridManager.Instance != null)
-            {
-                GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
-            }
+            GridManager.Instance?.SetHighlightMode(GridManager.HighlightMode.None);
 
-            // Find combat manager to block input during animation
             var combatManager = Object.FindAnyObjectByType<CombatManager>();
             if (combatManager != null && combatManager.CurrentActiveUnit == target)
                 combatManager.BlockAnimationForEffect();
@@ -309,288 +241,247 @@ namespace DDD.TNFY.BRAWL
 
         private void RestorePlayerStateAfterKnockback(Unit target)
         {
-            // Only restore state for player units
             if (!(target is PlayerUnit)) return;
 
             var combatManager = Object.FindAnyObjectByType<CombatManager>();
             if (combatManager != null && combatManager.CurrentActiveUnit == target)
-            {
-                // UPDATED: Add a small delay to ensure animation is fully complete
                 combatManager.StartCoroutine(DelayedStateRestore(combatManager, target));
-            }
         }
 
-        /// <summary>
-        /// NEW: Delayed state restoration to ensure knockback animation is completely finished
-        /// </summary>
         private IEnumerator DelayedStateRestore(CombatManager combatManager, Unit target)
         {
-            // Wait an extra frame to ensure animation state is fully updated
             yield return null;
 
-            // Release the animation block — restores WaitingForInput and clears isWaitingForAnimation.
             combatManager.ReleaseAnimationBlock();
 
-            // Update movement highlights from the new position if player can still move
             if (combatManager.CanMove)
-            {
                 GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.Movement, target);
-            }
 
-            // Trigger UI updates to reflect new state
             UIEvents.OnCombatStateChanged();
             UIEvents.OnUnitMoved();
         }
 
-        private List<Tile> CalculateKnockbackPath(AbilityContext ctx, Unit target, Vector2Int knockbackDir)
+        // ── Path calculation ──────────────────────────────────────────────────
+
+        /// <summary>
+        /// Builds the tile path the unit will travel through.
+        ///
+        /// Step 1 uses the full fallback chain via
+        /// <see cref="GridDirectionUtility.ResolveKnockbackDestination"/>:
+        /// the unit always moves away from the source, never up a layer, and never
+        /// into an occupied or impassable tile.
+        ///
+        /// Steps 2+ continue in the resolved direction from step 1, stopping at any
+        /// wall, occupied tile, or layer boundary. A drop to a lower layer is valid
+        /// but terminates the path immediately — the unit has landed.
+        /// </summary>
+        private List<Tile> CalculateKnockbackPath(Unit target, Vector2Int knockbackDir)
         {
             var path = new List<Tile>();
-            Tile currentTile = target.currentTile;
-
-            if (currentTile == null)
+            if (target.currentTile == null)
             {
-                Debug.LogWarning($"[Knockback] {target.name} has no currentTile - cannot calculate path");
+                Debug.LogWarning($"[Knockback] {target.name} has no currentTile — cannot calculate path");
                 return path;
             }
 
-            for (int step = 1; step <= knockbackDistance; step++)
-            {
-                Tile nextTile = GridManager.Instance.GetTileInDirection(currentTile, knockbackDir);
+            Tile originTile = target.currentTile;
 
-                if (nextTile == null)
+            // Step 1: full fallback chain.
+            Tile firstTile = GridDirectionUtility.ResolveKnockbackDestination(originTile, knockbackDir);
+            if (firstTile == null)
+            {
+                Debug.Log($"[Knockback] {target.name}: all fallback directions blocked — no movement");
+                return path;
+            }
+
+            path.Add(firstTile);
+
+            // A drop lands the unit — stop regardless of remaining distance.
+            if (GridManager.Instance.GetYLevel(firstTile) < GridManager.Instance.GetYLevel(originTile))
+            {
+                Debug.Log($"[Knockback] {target.name}: knocked off ledge to {firstTile.name} — stopping");
+                return path;
+            }
+
+            if (knockbackDistance <= 1) return path;
+
+            // Steps 2+: continue in the direction that step 1 actually resolved to.
+            Vector2Int resolvedDir = GridDirectionUtility.FromTiles(originTile, firstTile);
+            Tile current = firstTile;
+
+            for (int step = 2; step <= knockbackDistance; step++)
+            {
+                Tile next = GridManager.Instance.GetTileInDirection(current, resolvedDir);
+
+                if (next == null)
                 {
-                    Debug.Log($"[Knockback] {target.name} step {step}: no tile in dir {knockbackDir} from {currentTile.name}");
+                    Debug.Log($"[Knockback] {target.name} step {step}: no tile in {GridDirectionUtility.ToName(resolvedDir)}");
                     break;
                 }
 
-                int currentLevel = GridManager.Instance.GetYLevel(currentTile);
-                int nextLevel    = GridManager.Instance.GetYLevel(nextTile);
+                int currentLevel = GridManager.Instance.GetYLevel(current);
+                int nextLevel    = GridManager.Instance.GetYLevel(next);
 
-                // Upper layers are treated as walls — knockback cannot go up.
                 if (nextLevel > currentLevel)
                 {
-                    Debug.Log($"[Knockback] {target.name} step {step}: tile {nextTile.name} is on a higher layer ({nextLevel} > {currentLevel}) - treating as wall");
+                    Debug.Log($"[Knockback] {target.name} step {step}: {next.name} is higher — treating as wall");
                     break;
                 }
 
-                if (!nextTile.passableTerrain)
+                if (!next.passableTerrain)
                 {
-                    Debug.Log($"[Knockback] {target.name} step {step}: tile {nextTile.name} is impassable");
+                    Debug.Log($"[Knockback] {target.name} step {step}: {next.name} is impassable");
                     break;
                 }
 
-                if (nextTile.currentUnit != null && nextTile.currentUnit != target)
+                if (next.currentUnit != null && next.currentUnit != target)
                 {
-                    Debug.Log($"[Knockback] {target.name} step {step}: tile {nextTile.name} occupied by {nextTile.currentUnit.name}");
+                    Debug.Log($"[Knockback] {target.name} step {step}: {next.name} occupied by {next.currentUnit.name}");
                     break;
                 }
 
-                // Lower layers are valid and count as 1 step — once we drop a layer
-                // the unit has landed, so stop here regardless of remaining distance.
                 bool isDropDown = nextLevel < currentLevel;
-                path.Add(nextTile);
-                currentTile = nextTile;
+                path.Add(next);
+                current = next;
 
                 if (isDropDown)
                 {
-                    Debug.Log($"[Knockback] {target.name} step {step}: knocked down to lower layer {nextTile.name} - stopping");
+                    Debug.Log($"[Knockback] {target.name} step {step}: knocked down to {next.name} — stopping");
                     break;
                 }
             }
 
-            Debug.Log($"[Knockback] {target.name} path calculated: {path.Count} tiles in dir {knockbackDir}");
+            Debug.Log($"[Knockback] {target.name}: path = {path.Count} tile(s), primary dir = {GridDirectionUtility.ToName(knockbackDir)}");
             return path;
         }
 
-        private void ApplyKnockbackImmediate(AbilityContext ctx, Unit target)
+        // ── Immediate (no-animation) fallback ─────────────────────────────────
+
+        /// <summary>
+        /// Moves the unit instantly through its knockback path when no UnitAnimator is present.
+        /// Follows the same rules as the animated path.
+        /// </summary>
+        private void ApplyKnockbackImmediate(Unit target, Vector2Int knockbackDir)
         {
-            Vector2Int knockbackDir = ctx.aimDir;
+            Tile originTile = target.currentTile;
+            if (originTile == null) return;
 
-            for (int step = 1; step <= knockbackDistance; step++)
+            Debug.Log($"[Knockback Immediate] {target.name}: no UnitAnimator — applying instant movement. Dir = {GridDirectionUtility.ToName(knockbackDir)}");
+
+            Tile firstTile = GridDirectionUtility.ResolveKnockbackDestination(originTile, knockbackDir);
+            if (firstTile == null)
             {
-                Tile nextTile;
+                Debug.Log($"[Knockback Immediate] {target.name}: all fallback directions blocked — no movement");
+                return;
+            }
 
-                if (forceKnockback)
-                {
-                    // Original behavior - try alternative directions if primary is blocked
-                    nextTile = FindValidKnockbackTile(target.currentTile, knockbackDir);
-                }
-                else
-                {
-                    // New behavior - only move in exact knockback direction
-                    nextTile = GridManager.Instance.GetTileInDirection(target.currentTile, knockbackDir);
+            Debug.Log($"[Knockback Immediate] {target.name}: moving to {firstTile.name}");
 
-                    // Validate the tile is actually moveable
-                    if (nextTile == null || !nextTile.passableTerrain || nextTile.occupied)
-                    {
-                        nextTile = null;
-                    }
-                }
+            bool firstIsDropDown =
+                GridManager.Instance.GetYLevel(firstTile) < GridManager.Instance.GetYLevel(originTile);
 
-                if (nextTile == null)
-                {
-                    if (step == 1) // Couldn't move at all
-                    {
-                        Debug.Log("Can't move unit anywhere!");
-                    }
+            target.SetCurrentTile(firstTile);
+
+            if (firstIsDropDown || knockbackDistance <= 1) return;
+
+            Vector2Int resolvedDir = GridDirectionUtility.FromTiles(originTile, firstTile);
+            Tile current = firstTile;
+
+            for (int step = 2; step <= knockbackDistance; step++)
+            {
+                Tile next = GridManager.Instance.GetTileInDirection(current, resolvedDir);
+
+                if (next == null || !next.passableTerrain ||
+                    (next.currentUnit != null && next.currentUnit != target))
                     break;
-                }
 
-                int currentLevel = GridManager.Instance.GetYLevel(target.currentTile);
-                int nextLevel    = GridManager.Instance.GetYLevel(nextTile);
+                int currentLevel = GridManager.Instance.GetYLevel(current);
+                int nextLevel    = GridManager.Instance.GetYLevel(next);
 
-                // Upper layers are treated as walls — knockback cannot go up.
-                if (nextLevel > currentLevel)
-                {
-                    Debug.Log($"[Knockback Immediate] {target.name}: tile {nextTile.name} is on a higher layer - treating as wall");
-                    break;
-                }
+                if (nextLevel > currentLevel) break;
 
                 bool isDropDown = nextLevel < currentLevel;
-                target.SetCurrentTile(nextTile);
+                target.SetCurrentTile(next);
+                current = next;
 
-                // Lower layer counts as 1 step — the unit has landed, stop here.
-                if (isDropDown)
-                    break;
+                if (isDropDown) break;
             }
         }
 
-        private Tile FindValidKnockbackTile(Tile fromTile, Vector2Int primaryDirection)
-        {
-            Vector2Int[] directionsToTry = GetKnockbackDirectionsPriority(primaryDirection);
-
-            foreach (var direction in directionsToTry)
-            {
-                Tile targetTile = GridManager.Instance.GetTileInDirection(fromTile, direction);
-
-                if (targetTile == null || !targetTile.passableTerrain || targetTile.occupied)
-                    continue;
-
-                // Never allow knockback up to a higher layer.
-                if (GridManager.Instance.GetYLevel(targetTile) > GridManager.Instance.GetYLevel(fromTile))
-                    continue;
-
-                return targetTile;
-            }
-
-            return null;
-        }
+        // ── Collision handling ────────────────────────────────────────────────
 
         private void HandleCollision(AbilityContext ctx, Unit knockingUnit, Unit collidedUnit, Vector2Int knockbackDirection)
         {
-            // Bodies are immortal — skip damage entirely. The body can still be displaced
-            // by the collision if there is a free tile behind it.
+            // Bodies cannot take damage, but can still be displaced.
             if (!collidedUnit.IsBody)
             {
-                int damageAmount = collisionDamage >= 0 ? collisionDamage : ctx.ability.damage;
-                collidedUnit.ReceiveDamage(damageAmount);
-                Debug.Log($"{collidedUnit.name} takes {damageAmount} collision damage!");
+                int damage = collisionDamage >= 0 ? collisionDamage : ctx.ability.damage;
+                collidedUnit.ReceiveDamage(damage);
+                Debug.Log($"[Knockback] {collidedUnit.name} takes {damage} collision damage");
             }
 
-            // Knock the collided unit back 1 tile in the same direction.
-            Tile newDestination = GridManager.Instance.GetTileInDirection(collidedUnit.currentTile, knockbackDirection);
+            // Secondary unit follows the same full fallback chain.
+            Tile destination = GridDirectionUtility.ResolveKnockbackDestination(
+                collidedUnit.currentTile, knockbackDirection);
 
-            // Secondary knockback also respects the no-upward-layer rule.
-            bool destinationIsHigher = newDestination != null &&
-                GridManager.Instance.GetYLevel(newDestination) > GridManager.Instance.GetYLevel(collidedUnit.currentTile);
+            if (destination == null) return; // All directions blocked — no secondary movement.
 
-            if (newDestination != null && newDestination.passableTerrain && !newDestination.occupied && !destinationIsHigher)
+            if (collidedUnit.IsBody)
             {
-                if (collidedUnit.IsBody)
-                {
-                    // Bodies move silently — no knockback animation.
-                    ctx.caster.StartCoroutine(SilentBodyDisplace(collidedUnit, newDestination));
-                }
+                ctx.caster.StartCoroutine(SilentBodyDisplace(collidedUnit, destination));
+            }
+            else
+            {
+                var animator = collidedUnit.GetComponent<UnitAnimator>();
+                if (animator != null)
+                    ctx.caster.StartCoroutine(SecondaryKnockback(collidedUnit, destination, animator));
                 else
-                {
-                    var collidedAnimator = collidedUnit.GetComponent<UnitAnimator>();
-                    if (collidedAnimator != null)
-                        ctx.caster.StartCoroutine(SecondaryKnockback(collidedUnit, newDestination, collidedAnimator));
-                    else
-                        collidedUnit.SetCurrentTile(newDestination);
-                }
+                    collidedUnit.SetCurrentTile(destination);
             }
         }
 
-        /// <summary>
-        /// Silently moves a body to a destination tile with no animation.
-        /// Used when a body is displaced by a collision during another unit's knockback.
-        /// </summary>
+        // ── Body / secondary animation coroutines ────────────────────────────
+
         private IEnumerator SilentBodyDisplace(Unit body, Tile destination)
         {
-            bool moveComplete = false;
-            body.AnimateToTile(destination, movementDurationPerTile, () => moveComplete = true);
-            while (!moveComplete) yield return null;
+            bool done = false;
+            body.AnimateToTile(destination, movementDurationPerTile, () => done = true);
+            while (!done) yield return null;
         }
 
         private IEnumerator SecondaryKnockback(Unit unit, Tile destination, UnitAnimator animator)
         {
-            // Quick knockback for collision
             animator.PlayKnockbackStart();
             yield return new WaitForSeconds(0.2f);
 
-            bool moveComplete = false;
-            unit.AnimateToTile(destination, 0.2f, () => moveComplete = true);
-
-            while (!moveComplete)
-            {
-                yield return null;
-            }
+            bool done = false;
+            unit.AnimateToTile(destination, 0.2f, () => done = true);
+            while (!done) yield return null;
 
             animator.PlayKnockbackEnd();
             yield return new WaitForSeconds(0.2f);
         }
 
+        // ── Displaced unit detection ──────────────────────────────────────────
+
+        /// <summary>
+        /// Returns the unit occupying the caster's current tile (used by finalTargetOnly mode).
+        /// Tile occupancy is the sole check — no world-space position comparison.
+        /// </summary>
         private Unit GetDisplacedUnit(AbilityContext ctx)
         {
             if (ctx.caster?.currentTile == null) return null;
 
             Tile finalTile = ctx.caster.currentTile;
-            Vector3 finalTilePosition = finalTile.transform.position;
 
             foreach (var unit in UnitManager.AllUnits)
             {
                 if (unit == null || unit == ctx.caster) continue;
-
-                if (unit.currentTile == finalTile ||
-                    Vector3.Distance(unit.transform.position, finalTilePosition) < 0.5f)
-                {
+                if (unit.currentTile == finalTile)
                     return unit;
-                }
             }
 
             return null;
-        }
-
-        private Vector2Int[] GetKnockbackDirectionsPriority(Vector2Int primaryDirection)
-        {
-            Vector2Int backwards = primaryDirection;
-            Vector2Int left = GetPerpendicularDirection(primaryDirection, false);
-            Vector2Int right = GetPerpendicularDirection(primaryDirection, true);
-
-            return new Vector2Int[]
-            {
-                backwards,
-                left,
-                right
-            };
-        }
-
-        private Vector2Int GetPerpendicularDirection(Vector2Int direction, bool clockwise)
-        {
-            if (clockwise)
-                return new Vector2Int(-direction.y, direction.x);
-            else
-                return new Vector2Int(direction.y, -direction.x);
-        }
-
-        private string GetDirectionName(Vector2Int direction)
-        {
-            if (direction == Vector2Int.up) return "north";
-            if (direction == Vector2Int.down) return "south";
-            if (direction == Vector2Int.left) return "west";
-            if (direction == Vector2Int.right) return "east";
-            return $"({direction.x},{direction.y})";
         }
     }
 }

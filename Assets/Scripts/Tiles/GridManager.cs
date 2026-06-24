@@ -555,9 +555,11 @@ namespace DDD.TNFY.BRAWL
         }
 
         /// <summary>
-        /// Calculates the grid direction between two tiles
+        /// Calculates the grid direction between two tiles.
+        /// Each component is clamped to [-1, 1] — may return a diagonal.
+        /// Use <see cref="GridDirectionUtility.CardinalFromTiles"/> when you need a clean single-axis direction.
         /// </summary>
-        private Vector2Int GetGridDirection(Tile from, Tile to)
+        public Vector2Int GetGridDirection(Tile from, Tile to)
         {
             Vector3 delta = to.transform.position - from.transform.position;
 

@@ -88,6 +88,8 @@ namespace DDD.TNFY.BRAWL
 
             // Persist the final facing direction through FaceDirection so currentFacing
             // stays in sync with the flipX that UpdateSpriteFacing set during the walk.
+            // NOTE: Only the X axis is checked here intentionally — units have left/right
+            // facing only. North/South movement does not update facing by design.
             if (pathToUse.Count >= 2)
             {
                 Vector3 secondLast = pathToUse[pathToUse.Count - 2].transform.position;
