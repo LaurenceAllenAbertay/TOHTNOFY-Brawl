@@ -8,10 +8,12 @@ namespace DDD.TNFY.BRAWL
     /// Wiring Fault — Kallper's signature ability.
     ///
     /// Sequence (all steps are animated and sequential within one coroutine):
-    ///   1. Pull  — the first unit in the line is dragged to the caster's tile.
-    ///              The hooked unit takes full ability damage on arrival.
-    ///   2. Recoil — the caster is knocked back 2 tiles (opposite aim direction).
-    ///   3. Branch:
+    ///   1. Pull  — the first unit in the line is dragged toward the caster as far as
+    ///              possible. The hooked unit takes full ability damage on arrival.
+    ///   2. Recoil — the caster is knocked back up to 2 tiles (opposite aim direction).
+    ///              If the caster is against a wall (zero recoil tiles available) the
+    ///              sequence ends after the pull — no recoil, no Shocked applied.
+    ///   3. Branch (only reached when recoil occurs):
     ///       • Hit   — if the recoil path ends with a unit immediately beyond the landing
     ///                 tile, that unit takes double ability damage and gains Shocked.
     ///                 The caster is unharmed.
@@ -61,14 +63,29 @@ namespace DDD.TNFY.BRAWL
         [Tooltip("Time in seconds for the hooked unit to travel one tile toward the caster.")]
         public float pullDurationPerTile = 0.15f;
 
-        [Tooltip("Brief pause after the hooked unit arrives before the recoil begins.")]
-        public float pauseAfterPull = 0.2f;
+        [Tooltip("Time to wait after PlayKnockback_Start before movement begins. " +
+                 "Used for both the pull and the recoil.")]
+        public float knockbackStartDelay = 0.1f;
+
+        [Tooltip("Time to wait after the pulled unit plays Knockback_End. " +
+                 "Reduce toward zero for a snappier pull-into-recoil feel.")]
+        public float pullKnockbackEndDuration = 0.1f;
+
+        [Tooltip("Brief pause after the hooked unit's knockback end before the recoil begins.")]
+        public float pauseAfterPull = 0.0f;
 
         [Tooltip("Time in seconds for the caster to travel one tile during recoil.")]
         public float recoilDurationPerTile = 0.18f;
 
         [Tooltip("Duration of Knockback_End animation played on caster after recoil.")]
         public float knockbackEndDuration = 0.4f;
+
+        [Tooltip("How long the caster holds the Knockback_Start pose in the wall case " +
+                 "before snapping to Knockback_End (no movement occurs).")]
+        public float wallRecoilAnimDuration = 0.3f;
+
+        [Tooltip("Duration to wait after the miss debuff animation plays on the caster.")]
+        public float missAnimDuration = 0.5f;
 
         // ── Phase wiring ──────────────────────────────────────────────────────────
 
@@ -109,27 +126,24 @@ namespace DDD.TNFY.BRAWL
             Tile casterTile = ctx.caster.currentTile;
             if (casterTile == null) yield break;
 
-            // Pre-calculate the recoil path BEFORE the pull so we know whether the
-            // caster can vacate their tile. If they can't move back, pulling the hooked
-            // unit onto the caster's tile would stack two units — so we skip the pull
-            // entirely, deal damage in place, and play the hurt animation.
             Vector2Int recoilDir = new Vector2Int(-ctx.aimDir.x, -ctx.aimDir.y);
             List<Tile> recoilPath = CalculatePath(ctx.caster, recoilDir, recoilDistance);
 
-            if (recoilPath.Count > 0)
-            {
-                // Normal case — caster has room to recoil, so pull the hooked unit in.
-                yield return ctx.caster.StartCoroutine(PullToCasterTile(ctx, hookedUnit, casterTile));
-            }
-            else
-            {
-                // Caster is backed against a wall — hooked unit stays put and takes the hit.
-                Debug.Log("[WiringFault] Caster cannot recoil — pull skipped, dealing damage in place.");
-                hookedUnit.GetComponent<UnitAnimator>()?.PlayHurt();
-                yield return new WaitForSeconds(0.3f);
-            }
+            bool wallCase = recoilPath.Count == 0;
 
-            // Deal full damage to the hooked unit regardless of whether it moved.
+            // Walk from the hooked unit toward the caster to find the farthest tile
+            // they can actually reach. In the normal case the caster's tile is included
+            // because they will vacate it during the recoil. In the wall case the caster
+            // never moves, so we stop before their tile — they are a permanent blocker.
+            Vector2Int pullDir = recoilDir; // hooked unit travels in the same direction as the caster's recoil
+            Tile pullDestination = CalculatePullDestination(
+                hookedUnit.currentTile, casterTile, pullDir, includeCasterTile: !wallCase);
+
+            Debug.Log($"[WiringFault] wallCase={wallCase}, pullDestination={pullDestination?.name}, casterTile={casterTile?.name}");
+
+            yield return ctx.caster.StartCoroutine(PullToCasterTile(ctx, hookedUnit, pullDestination));
+
+            // Deal damage to the hooked unit on arrival.
             if (!hookedUnit.IsDead)
             {
                 int baseDamage = ctx.ability.damage + (ctx.caster != null ? ctx.caster.currentAttack : 0);
@@ -140,13 +154,23 @@ namespace DDD.TNFY.BRAWL
                 Debug.Log($"[WiringFault] {hookedUnit.name} took {finalDamage} damage on arrival.");
             }
 
-            // Brief dramatic pause before the recoil.
+            // Wall case ends here — no recoil, no Shocked.
+            // Still play the knockback animation so the player can see the recoil was blocked.
+            if (wallCase)
+            {
+                Debug.Log("[WiringFault] Caster is against a wall — recoil and Shocked skipped.");
+                var casterAnimator = ctx.caster.GetComponent<UnitAnimator>();
+                casterAnimator?.PlayKnockbackStart();
+                yield return new WaitForSeconds(wallRecoilAnimDuration);
+                casterAnimator?.PlayKnockbackEnd();
+                yield return new WaitForSeconds(knockbackEndDuration);
+                yield break;
+            }
+
+            // Brief pause before the recoil.
             yield return new WaitForSeconds(pauseAfterPull);
 
             // ── PHASE 2: Caster recoil knockback ─────────────────────────────────
-            // recoilDir and recoilPath already computed above — reuse them.
-
-            // Block player input for the duration of the recoil animation.
             bool isPlayerCaster = ctx.caster is PlayerUnit;
             CombatManager combatManager = null;
             if (isPlayerCaster)
@@ -157,55 +181,47 @@ namespace DDD.TNFY.BRAWL
             }
 
             yield return ctx.caster.StartCoroutine(
-                ApplyRecoilWithAnimation(ctx, ctx.caster, recoilDir, recoilPath));
+                ApplyRecoilWithAnimation(ctx.caster, recoilDir, recoilPath));
 
             // ── PHASE 3: Branch — hit or miss ────────────────────────────────────
+            // Shocked is only ever applied here, after a recoil has occurred.
             bool collisionHit = false;
 
-            if (recoilPath.Count > 0)
+            Tile landingTile = recoilPath[recoilPath.Count - 1];
+            Tile beyondTile  = GridManager.Instance.GetTileInDirection(landingTile, recoilDir);
+
+            if (beyondTile != null &&
+                beyondTile.currentUnit != null &&
+                beyondTile.currentUnit != ctx.caster &&
+                !beyondTile.currentUnit.IsDead)
             {
-                // Check the tile immediately beyond the caster's landing tile.
-                Tile landingTile = recoilPath[recoilPath.Count - 1];
-                Tile beyondTile  = GridManager.Instance.GetTileInDirection(landingTile, recoilDir);
+                collisionHit = true;
+                Unit victim = beyondTile.currentUnit;
 
-                if (beyondTile != null &&
-                    beyondTile.currentUnit != null &&
-                    beyondTile.currentUnit != ctx.caster &&
-                    !beyondTile.currentUnit.IsDead)
-                {
-                    collisionHit = true;
-                    Unit victim = beyondTile.currentUnit;
+                int baseDamage = ctx.ability.damage + (ctx.caster != null ? ctx.caster.currentAttack : 0);
+                int doubleDamage = Mathf.Max(1, (baseDamage - victim.currentDefense) * 2);
+                victim.ReceiveDamage(doubleDamage, ctx.caster);
+                UnitManager.NotifyUnitDamaged(victim, ctx.caster);
+                ctx.LastResolvedDamage += doubleDamage;
+                Debug.Log($"[WiringFault] Recoil slammed into {victim.name} — {doubleDamage} damage (double).");
 
-                    // Double damage to the unit the caster slams into.
-                    int baseDamage = ctx.ability.damage + (ctx.caster != null ? ctx.caster.currentAttack : 0);
-                    int doubleDamage = Mathf.Max(1, (baseDamage - victim.currentDefense) * 2);
-                    victim.ReceiveDamage(doubleDamage, ctx.caster);
-                    UnitManager.NotifyUnitDamaged(victim, ctx.caster);
-                    ctx.LastResolvedDamage += doubleDamage;
-                    Debug.Log($"[WiringFault] Recoil slammed into {victim.name} — {doubleDamage} damage (double).");
-
-                    // Play hurt animation on the victim.
-                    victim.GetComponent<UnitAnimator>()?.PlayHurt();
-
-                    // Apply Shocked to the collision victim.
-                    ApplyShocked(victim, ctx.caster);
-                }
+                victim.GetComponent<UnitAnimator>()?.PlayHurt();
+                ApplyShocked(victim, ctx.caster);
             }
 
             if (!collisionHit)
             {
-                // Miss branch — caster gets Shocked.
+                // Miss — caster gets Shocked now that the recoil has landed.
                 Debug.Log("[WiringFault] Recoil missed — caster takes Shocked.");
                 ApplyShocked(ctx.caster, ctx.caster);
 
-                // Play debuff animation on the caster.
                 var casterAnimator = ctx.caster.GetComponent<UnitAnimator>();
                 if (casterAnimator != null && casterAnimator.HasState("Debuff"))
                     casterAnimator.PlayAnimation("Debuff");
                 else
                     casterAnimator?.PlayHurt();
 
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(missAnimDuration);
             }
 
             // Restore player input now that the full sequence is done.
@@ -217,116 +233,97 @@ namespace DDD.TNFY.BRAWL
             }
         }
 
-        // ── Pull helper ───────────────────────────────────────────────────────────
+        // ── Pull helpers ──────────────────────────────────────────────────────────
 
         /// <summary>
-        /// Animates the hooked unit sliding tile-by-tile toward <paramref name="destination"/>.
-        /// The unit plays the Knockback_Start animation for the duration of the journey.
+        /// Walks from <paramref name="from"/> one step at a time in <paramref name="pullDir"/>
+        /// and returns the farthest tile the hooked unit can reach.
+        ///
+        /// Rules:
+        ///   • Stops at any impassable or occupied tile.
+        ///   • When the caster's tile is reached: includes it only if
+        ///     <paramref name="includeCasterTile"/> is true (normal case — caster will vacate).
+        ///     In the wall case <paramref name="includeCasterTile"/> is false, so the walk
+        ///     stops before the caster's tile, guaranteeing no double-occupancy.
+        ///   • Returns <paramref name="from"/> if no forward tile is reachable (unit stays put).
+        /// </summary>
+        private Tile CalculatePullDestination(Tile from, Tile casterTile, Vector2Int pullDir, bool includeCasterTile)
+        {
+            Tile bestReachable = from;
+            Tile current = from;
+
+            int maxSteps = 20;
+            while (maxSteps-- > 0)
+            {
+                Tile next = GridManager.Instance.GetTileInDirection(current, pullDir);
+
+                if (next == null || !next.passableTerrain) break;
+
+                // Caster's tile: honour the wall-case flag and always stop the walk here.
+                if (next == casterTile)
+                {
+                    if (includeCasterTile) bestReachable = casterTile;
+                    break;
+                }
+
+                // Any other occupied tile is an impassable blocker.
+                if (next.occupied) break;
+
+                bestReachable = next;
+                current = next;
+            }
+
+            return bestReachable;
+        }
+
+        /// <summary>
+        /// Animates the hooked unit to <paramref name="destination"/> in a single smooth
+        /// lerp, duration scaled by tile distance.
         /// </summary>
         private IEnumerator PullToCasterTile(AbilityContext ctx, Unit hookedUnit, Tile destination)
         {
             if (hookedUnit.currentTile == destination) yield break;
 
+            int distance = GridManager.Instance.GetGridDistance(hookedUnit.currentTile, destination);
+            if (distance == 0) yield break;
+
             var hookedAnimator = hookedUnit.GetComponent<UnitAnimator>();
 
-            // Build a path from the hooked unit's tile to the caster's tile, stepping
-            // back toward the caster one tile at a time.
-            List<Tile> pullPath = BuildPullPath(hookedUnit.currentTile, destination);
-            if (pullPath.Count == 0) yield break;
-
-            // Face the hooked unit toward the caster (pull direction).
-            Vector2Int pullDir = ctx.aimDir; // hooked unit moves opposite to aimDir (back toward caster)
-            hookedUnit.FaceDirection(new Vector2Int(-pullDir.x, -pullDir.y));
+            // Face the hooked unit toward the caster (opposite of aim direction).
+            hookedUnit.FaceDirection(new Vector2Int(-ctx.aimDir.x, -ctx.aimDir.y));
 
             hookedAnimator?.PlayKnockbackStart();
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(knockbackStartDelay);
 
-            foreach (var tile in pullPath)
-            {
-                bool moveComplete = false;
-                hookedUnit.AnimateToTile(tile, pullDurationPerTile, () => moveComplete = true);
-                while (!moveComplete)
-                    yield return null;
-            }
+            float totalDuration = distance * pullDurationPerTile;
+            bool pullComplete = false;
+            hookedUnit.AnimateToTile(destination, totalDuration, () => pullComplete = true);
+            while (!pullComplete)
+                yield return null;
 
             hookedAnimator?.PlayKnockbackEnd();
-            yield return new WaitForSeconds(0.25f);
-        }
-
-        /// <summary>
-        /// Returns the sequence of tiles from <paramref name="from"/> toward
-        /// <paramref name="to"/>, stepping one tile at a time in the cardinal direction
-        /// that closes the gap. Stops if a tile is impassable or occupied (by a unit
-        /// other than the caster, who is expected to be on <paramref name="to"/>).
-        /// </summary>
-        private List<Tile> BuildPullPath(Tile from, Tile to)
-        {
-            var path = new List<Tile>();
-            if (from == null || to == null) return path;
-
-            // Determine the step direction (horizontal only — matches LineTargeting).
-            Vector3 diff = to.transform.position - from.transform.position;
-            int dx = diff.x > 0.01f ? 1 : (diff.x < -0.01f ? -1 : 0);
-            int dz = diff.z > 0.01f ? 1 : (diff.z < -0.01f ? -1 : 0);
-            // Prefer the dominant axis (should always be a clean cardinal for a line ability).
-            Vector2Int step = Mathf.Abs(diff.x) >= Mathf.Abs(diff.z)
-                ? new Vector2Int(dx, 0)
-                : new Vector2Int(0, dz);
-
-            Tile current = from;
-            // Safety cap to prevent infinite loops on malformed grids.
-            int maxSteps = 20;
-            while (current != to && maxSteps-- > 0)
-            {
-                Tile next = GridManager.Instance.GetTileInDirection(current, step);
-                if (next == null) break;
-
-                // Stop if the path is physically blocked (except the destination itself —
-                // the caster is standing there and will share it momentarily).
-                if (next != to && (!next.passableTerrain || (next.occupied && next.currentUnit != null)))
-                    break;
-
-                path.Add(next);
-                current = next;
-            }
-
-            return path;
+            yield return new WaitForSeconds(pullKnockbackEndDuration);
         }
 
         // ── Recoil helper ─────────────────────────────────────────────────────────
 
         /// <summary>
-        /// Animates the caster sliding along <paramref name="recoilPath"/> using the
-        /// standard Knockback_Start → move → Knockback_End sequence.
+        /// Animates the caster sliding to the end of <paramref name="recoilPath"/> in a
+        /// single smooth lerp. Called only when recoilPath.Count > 0.
         /// </summary>
-        private IEnumerator ApplyRecoilWithAnimation(
-            AbilityContext ctx, Unit caster, Vector2Int recoilDir, List<Tile> recoilPath)
+        private IEnumerator ApplyRecoilWithAnimation(Unit caster, Vector2Int recoilDir, List<Tile> recoilPath)
         {
             var casterAnimator = caster.GetComponent<UnitAnimator>();
 
-            // The caster always faces the direction they aimed — do not flip to recoil
-            // direction. FaceDirection was already set at cast time and stays that way.
-
-            if (recoilPath.Count == 0)
-            {
-                // Nowhere to go — still play the animation for visual feedback.
-                casterAnimator?.PlayKnockbackStart();
-                yield return new WaitForSeconds(0.3f);
-                casterAnimator?.PlayKnockbackEnd();
-                yield return new WaitForSeconds(knockbackEndDuration);
-                yield break;
-            }
-
             casterAnimator?.PlayKnockbackStart();
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(knockbackStartDelay);
 
-            foreach (var tile in recoilPath)
-            {
-                bool moveComplete = false;
-                caster.AnimateToTile(tile, recoilDurationPerTile, () => moveComplete = true);
-                while (!moveComplete)
-                    yield return null;
-            }
+            Tile landingTile = recoilPath[recoilPath.Count - 1];
+            float totalDuration = recoilPath.Count * recoilDurationPerTile;
+            bool recoilComplete = false;
+            caster.AnimateToTile(landingTile, totalDuration, () => recoilComplete = true);
+            while (!recoilComplete)
+                yield return null;
 
             casterAnimator?.PlayKnockbackEnd();
             yield return new WaitForSeconds(knockbackEndDuration);

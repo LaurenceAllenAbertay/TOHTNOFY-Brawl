@@ -12,10 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3c6be9f8f749744aa157a470b7e1dc4, type: 3}
   m_Name: Wiring Fault
   m_EditorClassIdentifier: 
+  midAnimationEventIndex: -1
   shockedStatusData: {fileID: 11400000, guid: 5db250c01b2e8614ebabee8efbc04455, type: 2}
   shockedDuration: 2
+  shockedDamage: 5
   recoilDistance: 2
   pullDurationPerTile: 0.15
-  pauseAfterPull: 0.2
-  recoilDurationPerTile: 0.18
-  knockbackEndDuration: 0.4
+  knockbackStartDelay: 0.1
+  pullKnockbackEndDuration: 0.1
+  pauseAfterPull: 0
+  recoilDurationPerTile: 0.15
+  knockbackEndDuration: 0.2
+  wallRecoilAnimDuration: 0.3
+  missAnimDuration: 0.5
