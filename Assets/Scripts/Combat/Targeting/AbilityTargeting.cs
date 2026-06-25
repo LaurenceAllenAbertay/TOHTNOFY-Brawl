@@ -120,6 +120,28 @@ namespace DDD.TNFY.BRAWL
         /// </summary>
         public virtual bool IsValidAimDirection(Vector2Int aimDir) => true;
 
+        /// <summary>
+        /// Given the raw world-space direction from caster to cursor (before cardinal
+        /// quantisation), returns the aim direction this targeting type should use.
+        ///
+        /// The default implementation snaps to the nearest cardinal — identical to the
+        /// logic AbilityTargetingController used for every type before this hook existed.
+        /// Override in targeting types that need to remap otherwise-invalid directions
+        /// rather than silently rejecting them. For example, horizontalOnly LineTargeting
+        /// overrides this to redirect north/south cursors to left/right using the X
+        /// component so a preview always shows when the cursor is above or below the unit.
+        ///
+        /// The returned direction must satisfy IsValidAimDirection for the controller to
+        /// proceed — but a correct override should guarantee that by construction.
+        /// </summary>
+        public virtual Vector2Int ResolveAimDirection(Vector3 rawDir)
+        {
+            if (Mathf.Abs(rawDir.x) > Mathf.Abs(rawDir.z))
+                return rawDir.x > 0 ? Vector2Int.right : Vector2Int.left;
+            else
+                return rawDir.z > 0 ? Vector2Int.up : Vector2Int.down;
+        }
+
         public abstract List<Tile> GetTraversal(AbilityContext ctx);
 
         // Resolve which units to actually hit, respecting filters / pass-through / maxTargets.

@@ -197,7 +197,10 @@ namespace DDD.TNFY.BRAWL
 
             if (dir.sqrMagnitude > 0.1f)
             {
-                Vector2Int aimDir = GetCardinalDirection(dir.normalized);
+                // ResolveAimDirection lets the targeting type remap directions before the
+                // validity check — e.g. horizontalOnly LineTargeting redirects north/south
+                // to left/right so the preview never goes blank above or below the unit.
+                Vector2Int aimDir = currentAbility.targeting.ResolveAimDirection(dir.normalized);
 
                 // If the targeting type restricts valid directions (e.g. horizontalOnly),
                 // clear any stale highlight rather than leaving the previous valid preview lit.
@@ -222,7 +225,7 @@ namespace DDD.TNFY.BRAWL
 
             if (dir.sqrMagnitude > 0.1f)
             {
-                Vector2Int aimDir = GetCardinalDirection(dir.normalized);
+                Vector2Int aimDir = currentAbility.targeting.ResolveAimDirection(dir.normalized);
 
                 // Silently ignore clicks in directions this targeting type doesn't allow.
                 if (!currentAbility.targeting.IsValidAimDirection(aimDir)) return;
@@ -300,14 +303,6 @@ namespace DDD.TNFY.BRAWL
                 targetTile = targetTile,
                 aimDir     = aimDir
             };
-        }
-
-        private Vector2Int GetCardinalDirection(Vector3 dir)
-        {
-            if (Mathf.Abs(dir.x) > Mathf.Abs(dir.z))
-                return dir.x > 0 ? Vector2Int.right : Vector2Int.left;
-            else
-                return dir.z > 0 ? Vector2Int.up : Vector2Int.down;
         }
 
         private Tile GetHoveredTile(Vector3 fallbackMouseWorldPosition)

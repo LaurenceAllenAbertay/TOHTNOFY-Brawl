@@ -317,6 +317,7 @@ namespace DDD.TNFY.BRAWL
             if (isBlockingAllInput) return true;
             if (currentState != CombatState.WaitingForInput) return true;
             if (currentActiveUnit == null) return true;
+            if (!(currentActiveUnit is PlayerUnit)) return true;
             if (isWaitingForAnimation || isMoving) return true;
 
             var unitAnimator = currentActiveUnit.GetComponent<UnitAnimator>();
@@ -404,6 +405,13 @@ namespace DDD.TNFY.BRAWL
         {
             if (ShouldBlockInput()) return;
             if (hasUsedAbilityThisTurn) return;
+
+            // Defensive guard: keyboard shortcuts can reach here even when the ability button
+            // is greyed out and non-interactable. Block on-cooldown abilities regardless of
+            // how the request arrived.
+            var abilities = UnitLoadoutManager.GetAbilities(currentActiveUnit);
+            if (slot >= 0 && slot < abilities.Length && currentActiveUnit != null &&
+                currentActiveUnit.IsAbilityOnCooldown(slot)) return;
 
             // If jump targeting is active, cancel it before entering ability targeting.
             // The two modes are mutually exclusive — both own tile highlights and input.

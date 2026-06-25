@@ -67,6 +67,12 @@ namespace DDD.TNFY.BRAWL
         // Checked at turn start: if set, auto-executes and ends turn immediately.
         public PendingAction? pendingAction = null;
 
+        // Per-slot ability cooldown tracking.
+        // Index matches the unit's loadout slot (0-2). Value is the number of ticks
+        // remaining before the slot is usable again; 0 means available.
+        // Set via TriggerAbilityCooldown; decremented each turn start via TickAbilityCooldowns.
+        private readonly int[] _abilityCooldownsRemaining = new int[3];
+
         [Header("Debug Settings")]
         [SerializeField] private bool enableDebugLogging = false;
 
@@ -185,6 +191,10 @@ namespace DDD.TNFY.BRAWL
             var targets = ctx.ability.targeting.SelectTargets(ctx);
             if (targets.Count == 0 && !ctx.ability.canExecuteWithoutTargets) yield break;
 
+            // This path (AI pending actions, Dizzy) bypasses Ability.Execute / ExecuteWithContext,
+            // so we trigger the cooldown here once execution is confirmed.
+            TriggerAbilityCooldown(ctx.ability);
+
             yield return StartCoroutine(ExecuteAbilityAnimationSequence(ctx, targets));
         }
 
@@ -195,6 +205,7 @@ namespace DDD.TNFY.BRAWL
         public virtual void StartTurn()
         {
             canMove = true;
+            TickAbilityCooldowns();
 
             if (unitAnimator != null)
                 unitAnimator.SetActiveTurn();
@@ -207,6 +218,56 @@ namespace DDD.TNFY.BRAWL
         }
 
         #endregion
+
+        /// <summary>Returns true if the ability in the given loadout slot is currently on cooldown.</summary>
+        public bool IsAbilityOnCooldown(int slot)
+            => slot >= 0 && slot < _abilityCooldownsRemaining.Length && _abilityCooldownsRemaining[slot] > 0;
+
+        /// <summary>
+        /// Returns the number of this unit's turns that must pass before the ability
+        /// in the given slot becomes available again. 0 means it is available now.
+        /// </summary>
+        public int GetAbilityCooldownRemaining(int slot)
+            => (slot >= 0 && slot < _abilityCooldownsRemaining.Length) ? _abilityCooldownsRemaining[slot] : 0;
+
+        /// <summary>
+        /// Puts the given ability on cooldown. Finds its slot by reference in this unit's
+        /// current loadout. No-op if the ability has cooldown 0 (usable every turn) or
+        /// if the ability is not found in the loadout.
+        /// Called by Ability.Execute / ExecuteWithContext and Unit.ExecuteAbilityCoroutine
+        /// immediately after a successful execution is confirmed.
+        /// </summary>
+        public void TriggerAbilityCooldown(Ability ability)
+        {
+            if (ability == null || ability.cooldown <= 0) return;
+
+            var abilities = UnitLoadoutManager.GetAbilities(this);
+            for (int i = 0; i < abilities.Length; i++)
+            {
+                if (abilities[i] == ability)
+                {
+                    // cooldown + 1: the +1 ensures the slot remains locked for exactly
+                    // `cooldown` of this unit's turns. The first tick (at the start of
+                    // the very next turn) brings it from cooldown+1 down to cooldown,
+                    // so the first full turn it is locked it reads exactly `cooldown`.
+                    _abilityCooldownsRemaining[i] = ability.cooldown + 1;
+                    return;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Decrements all active cooldowns by one tick.
+        /// Called at the start of every unit turn (including stunned turns via TurnManager).
+        /// </summary>
+        public void TickAbilityCooldowns()
+        {
+            for (int i = 0; i < _abilityCooldownsRemaining.Length; i++)
+            {
+                if (_abilityCooldownsRemaining[i] > 0)
+                    _abilityCooldownsRemaining[i]--;
+            }
+        }
 
         #region Movement and Facing
 

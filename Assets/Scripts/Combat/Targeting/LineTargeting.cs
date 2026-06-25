@@ -139,6 +139,26 @@ namespace DDD.TNFY.BRAWL
         public override bool IsValidAimDirection(Vector2Int aimDir) => IsValidDirection(aimDir);
 
         /// <summary>
+        /// For horizontal-only line targeting, redirects a north/south cursor to left/right
+        /// using the X component of the raw world direction so a preview always shows when
+        /// the cursor is directly above or below the unit.
+        ///
+        /// Without this, GetCardinalDirection picks up/down when |Z| > |X|, IsValidAimDirection
+        /// rejects it, and the controller clears the highlights — leaving the player with
+        /// a blank screen and no way to fire until they move the mouse left or right enough.
+        /// </summary>
+        public override Vector2Int ResolveAimDirection(Vector3 rawDir)
+        {
+            if (!horizontalOnly)
+                return base.ResolveAimDirection(rawDir);
+
+            // Snap entirely by X component — north/south cursors resolve to left/right
+            // based on which horizontal side the cursor is closer to.
+            // rawDir.x == 0 (cursor exactly vertical) defaults to right via >= 0.
+            return rawDir.x >= 0 ? Vector2Int.right : Vector2Int.left;
+        }
+
+        /// <summary>
         /// Checks if the given direction is valid for this targeting type
         /// </summary>
         public bool IsValidDirection(Vector2Int direction)

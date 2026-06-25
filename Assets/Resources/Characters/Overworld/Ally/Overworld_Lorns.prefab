@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4167529142144353560}
   - component: {fileID: 2748848892374898845}
   - component: {fileID: 4231815395999725642}
-  - component: {fileID: 1281003795891305389}
+  - component: {fileID: 7398012464250753312}
   m_Layer: 0
   m_Name: Overworld_Lorns
   m_TagString: Untagged
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 37083158945071965}
@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 215081699, guid: 85dd2a411dee5264ca097828f8075603, type: 3}
+  m_Sprite: {fileID: 222713341, guid: 9908dfb7f1f738945ace6af0c6ce05fd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -126,9 +126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playIdleOnStart: 1
-  activeTurnSpeed: 0.65
-  inactiveTurnSpeed: 0.3
---- !u!114 &1281003795891305389
+  inactiveTurnSpeedMultiplier: 0.5
+--- !u!114 &7398012464250753312
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,11 +136,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 3240368679786431020}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e1a4da7a66569c47a08709f67121847, type: 3}
+  m_Script: {fileID: 11500000, guid: c12effe3f2cd11245a432352a37b2c1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
-  historyCapacity: 120
+  followTarget: {fileID: 0}
+  leader: {fileID: 0}
+  followDistance: 0.2
+  followSpeed: 10
+  idleSpreadRadius: 0.7
+  idleSpreadMinRadius: 0.5
+  smoothTime: 0.2
+  arrivalThreshold: 0.1
   unitAnimator: {fileID: 4231815395999725642}
   spriteRenderer: {fileID: 4167529142144353560}
 --- !u!1 &7762694029648427387

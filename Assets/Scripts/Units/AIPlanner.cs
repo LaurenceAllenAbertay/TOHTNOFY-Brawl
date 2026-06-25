@@ -589,7 +589,8 @@ namespace DDD.TNFY.BRAWL
         private IEnumerable<(Ability, int)> UsableAbilities(Ability[] abilities)
         {
             for (int i = 0; i < abilities.Length; i++)
-                if (abilities[i] != null) yield return (abilities[i], i);
+                if (abilities[i] != null && !unit.IsAbilityOnCooldown(i))
+                    yield return (abilities[i], i);
         }
     }
 }

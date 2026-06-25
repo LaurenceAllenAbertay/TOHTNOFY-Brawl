@@ -34,6 +34,13 @@ namespace DDD.TNFY.BRAWL
         [Header("Numbers")]
         public int damage = 10;
 
+        [Header("Cooldown")]
+        [Tooltip("How many of this unit's turns must pass before this ability can be used again.\n" +
+                 "0 = usable every turn (no cooldown).\n" +
+                 "1 = locked for the unit's next turn, available the turn after that.\n" +
+                 "2 = locked for two turns, and so on.")]
+        public int cooldown = 0;
+
         [Tooltip("Whether this ability counts as melee or ranged for passive interactions (e.g. Staticy).")]
         public AttackType attackType = AttackType.Ranged;
 
@@ -113,6 +120,7 @@ namespace DDD.TNFY.BRAWL
             if (targets.Count == 0 && !canExecuteWithoutTargets)
                 return false;
 
+            caster.TriggerAbilityCooldown(this);
             caster.StartCoroutine(ExecuteAbilitySequence(ctx, targets));
             return true;
         }
@@ -127,6 +135,7 @@ namespace DDD.TNFY.BRAWL
             if (targets.Count == 0 && !canExecuteWithoutTargets)
                 return false;
 
+            ctx.caster.TriggerAbilityCooldown(this);
             ctx.caster.StartCoroutine(ExecuteAbilitySequence(ctx, targets));
             return true;
         }

@@ -213,6 +213,10 @@ namespace DDD.TNFY.BRAWL
         {
             Debug.Log($"[TurnManager] {unit.name} is stunned - skipping turn");
 
+            // Cooldowns still tick even when stunned — time passes for everyone.
+            // This mirrors the status-effect duration tick that fires via OnTurnEnded below.
+            unit.TickAbilityCooldowns();
+
             // Pan camera to the stunned unit so the player can see whose turn it is.
             if (cameraController != null)
                 yield return StartCoroutine(cameraController.TransitionTo(
@@ -267,6 +271,10 @@ namespace DDD.TNFY.BRAWL
             foreach (var ability in shuffled)
             {
                 if (ability == null) continue;
+
+                // Skip abilities that are on cooldown — dizzy does not bypass cooldowns.
+                int slot = System.Array.IndexOf(loadout, ability);
+                if (slot >= 0 && unit.IsAbilityOnCooldown(slot)) continue;
 
                 // Shuffle directions for directional abilities.
                 var dirs = new System.Collections.Generic.List<Vector2Int>(cardinalDirs);

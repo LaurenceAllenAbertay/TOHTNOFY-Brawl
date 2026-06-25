@@ -25,6 +25,10 @@ namespace DDD.TNFY.BRAWL
         private Camera cam;
         private bool isTransitioning = false;
 
+        // True only during a PlayerUnit's turn. Set by OnTurnStarted so manual
+        // camera movement is blocked while enemies or AI-controlled units are acting.
+        private bool _playerInputEnabled = false;
+
         void Start()
         {
             cam = GetComponent<Camera>();
@@ -46,7 +50,7 @@ namespace DDD.TNFY.BRAWL
 
         void Update()
         {
-            if (!isTransitioning)
+            if (!isTransitioning && _playerInputEnabled)
                 HandleMovement();
         }
 
@@ -177,6 +181,7 @@ namespace DDD.TNFY.BRAWL
 
         private void OnTurnStarted(Unit newActiveUnit)
         {
+            _playerInputEnabled = newActiveUnit is PlayerUnit;
             if (newActiveUnit != null)
                 StartCoroutine(SmoothFocusOnUnit(newActiveUnit));
         }

@@ -19,6 +19,11 @@ namespace DDD.TNFY.BRAWL
         [SerializeField] private Button[] abilityButtons = new Button[3];
         [SerializeField] private TextMeshProUGUI abilityTooltipText;
 
+        [Tooltip("One TMP label per ability slot (children of the ability sprite images). " +
+                 "Displays the remaining cooldown turns when the slot is locked. " +
+                 "Must match the order and count of abilityButtons.")]
+        [SerializeField] private TextMeshProUGUI[] abilityCooldownTexts = new TextMeshProUGUI[3];
+
         #endregion
 
         #region Public State
@@ -109,6 +114,10 @@ namespace DDD.TNFY.BRAWL
 
             if (!abilitiesExpanded) return;
 
+            bool canUseAbility = combatManager.CanUseAbility &&
+                                 !isUIBlockedForAnimation() &&
+                                 !isUIBlockedForMovement();
+
             for (int i = 0; i < abilityButtons.Length; i++)
             {
                 if (abilityButtons[i] == null) continue;
@@ -116,9 +125,34 @@ namespace DDD.TNFY.BRAWL
                 if (i < abilities.Length && abilities[i] != null)
                 {
                     var ability = abilities[i];
+
                     Image buttonImage = abilityButtons[i].GetComponent<Image>();
                     if (buttonImage != null) buttonImage.sprite = ability.image;
+
+                    bool isOnCooldown = currentPlayer.IsAbilityOnCooldown(i);
+                    bool isInteractable = canUseAbility && !isOnCooldown;
+
+                    abilityButtons[i].interactable = isInteractable;
+                    if (buttonImage != null)
+                        buttonImage.color = isOnCooldown ? new Color(0.4f, 0.4f, 0.4f, 1f) : Color.white;
+
                     abilityButtons[i].gameObject.SetActive(true);
+
+                    // Cooldown countdown label
+                    if (abilityCooldownTexts != null && i < abilityCooldownTexts.Length &&
+                        abilityCooldownTexts[i] != null)
+                    {
+                        if (isOnCooldown)
+                        {
+                            abilityCooldownTexts[i].text = currentPlayer.GetAbilityCooldownRemaining(i).ToString();
+                            abilityCooldownTexts[i].gameObject.SetActive(true);
+                        }
+                        else
+                        {
+                            abilityCooldownTexts[i].text = "";
+                            abilityCooldownTexts[i].gameObject.SetActive(false);
+                        }
+                    }
                 }
                 else
                 {
@@ -131,7 +165,9 @@ namespace DDD.TNFY.BRAWL
 
         public void UpdateAbilityButtonStates()
         {
-            if (combatManager == null || getCurrentPlayer?.Invoke()?.characterData == null) return;
+            if (combatManager == null) return;
+            var currentPlayer = getCurrentPlayer?.Invoke();
+            if (currentPlayer?.characterData == null) return;
 
             bool canUseAbility = combatManager.CanUseAbility &&
                                  !isUIBlockedForAnimation() &&
@@ -139,6 +175,41 @@ namespace DDD.TNFY.BRAWL
 
             if (expandAbilitiesButton != null)
                 expandAbilitiesButton.interactable = canUseAbility;
+
+            // Refresh per-button state when the panel is open so greying and
+            // cooldown text always reflect the current unit's cooldown state.
+            if (!abilitiesExpanded) return;
+
+            var abilities = UnitLoadoutManager.GetAbilities(currentPlayer);
+            for (int i = 0; i < abilityButtons.Length; i++)
+            {
+                if (abilityButtons[i] == null || !abilityButtons[i].gameObject.activeSelf) continue;
+                if (i >= abilities.Length || abilities[i] == null) continue;
+
+                bool isOnCooldown = currentPlayer.IsAbilityOnCooldown(i);
+                bool isInteractable = canUseAbility && !isOnCooldown;
+
+                abilityButtons[i].interactable = isInteractable;
+
+                Image buttonImage = abilityButtons[i].GetComponent<Image>();
+                if (buttonImage != null)
+                    buttonImage.color = isOnCooldown ? new Color(0.4f, 0.4f, 0.4f, 1f) : Color.white;
+
+                if (abilityCooldownTexts != null && i < abilityCooldownTexts.Length &&
+                    abilityCooldownTexts[i] != null)
+                {
+                    if (isOnCooldown)
+                    {
+                        abilityCooldownTexts[i].text = currentPlayer.GetAbilityCooldownRemaining(i).ToString();
+                        abilityCooldownTexts[i].gameObject.SetActive(true);
+                    }
+                    else
+                    {
+                        abilityCooldownTexts[i].text = "";
+                        abilityCooldownTexts[i].gameObject.SetActive(false);
+                    }
+                }
+            }
         }
 
         public void CollapseIfExpanded()
@@ -196,6 +267,10 @@ namespace DDD.TNFY.BRAWL
             var abilities = UnitLoadoutManager.GetAbilities(currentPlayer);
             if (slotIndex < 0 || slotIndex >= abilities.Length) return;
             if (abilities[slotIndex] == null) return;
+
+            // Belt-and-suspenders: the button should already be non-interactable when
+            // on cooldown, but guard here in case state gets out of sync.
+            if (currentPlayer.IsAbilityOnCooldown(slotIndex)) return;
 
             SetAbilitiesExpanded(false);
             combatManager.EnterAbilityTargeting(slotIndex);

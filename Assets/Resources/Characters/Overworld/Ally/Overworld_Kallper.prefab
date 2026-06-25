@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2319815132823038000}
   - component: {fileID: 4012615760686546575}
   - component: {fileID: 2948443290276650795}
-  - component: {fileID: 6435763245314680403}
+  - component: {fileID: 4720356373798416465}
   m_Layer: 0
   m_Name: Overworld_Kallper
   m_TagString: Untagged
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalScale: {x: 0.15, y: 0.15, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 869043257860901648}
@@ -80,12 +80,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -1879143901, guid: af94e13e2cdf2ab408fa6c300759353d, type: 3}
+  m_Sprite: {fileID: 7755750005175976139, guid: b05f5302ab30b6643bb0c0bc6b2558c8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 6.53, y: 8.74}
+  m_Size: {x: 5.17, y: 6.31}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -126,9 +126,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playIdleOnStart: 1
-  activeTurnSpeed: 0.65
-  inactiveTurnSpeed: 0.3
---- !u!114 &6435763245314680403
+  inactiveTurnSpeedMultiplier: 0.5
+--- !u!114 &4720356373798416465
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -137,17 +136,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1048228900617914572}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c12effe3f2cd11245a432352a37b2c1c, type: 3}
+  m_Script: {fileID: 11500000, guid: 4e1a4da7a66569c47a08709f67121847, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  followTarget: {fileID: 0}
-  leader: {fileID: 0}
-  followDistance: 0.2
-  followSpeed: 10
-  idleSpreadRadius: 0.7
-  idleSpreadMinRadius: 0.5
-  smoothTime: 0.2
-  arrivalThreshold: 0.1
+  moveSpeed: 5
   unitAnimator: {fileID: 2948443290276650795}
   spriteRenderer: {fileID: 2319815132823038000}
 --- !u!1 &1383112905143541579
