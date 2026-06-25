@@ -227,6 +227,10 @@ namespace DDD.TNFY.BRAWL
                             if (tile == null || !tile.passableTerrain || tile.occupied) continue;
                             if (tile == originTile) continue;
 
+                            // Never teleport to a tile the unit could reach by walking or jumping —
+                            // that would waste the ability on movement normal locomotion already covers.
+                            if (reachableTiles.Contains(tile) || jumpableTiles.Contains(tile)) continue;
+
                             float score = ScoreTile(tile, anchor.currentTile, abilities, targets, maxDist);
                             if (score > bestScore)
                             {

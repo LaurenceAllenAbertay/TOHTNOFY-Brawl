@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/DemoLobby.unity
     guid: 943bce3750bb8d24fbf4eb9c97db2e34
   - enabled: 1
+    path: Assets/Scenes/DebugOverworld.unity
+    guid: dd7af558d588b1344a3819b2d1164f85
+  - enabled: 1
     path: Assets/Scenes/Debug.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1

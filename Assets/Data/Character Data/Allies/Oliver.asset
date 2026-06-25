@@ -15,6 +15,7 @@ MonoBehaviour:
   characterName: Oliver
   portrait: {fileID: 0}
   prefab: {fileID: 8547975530932973090, guid: ff3a7c448e9ed2d428a0d1c08b1514f9, type: 3}
+  overworldPrefab: {fileID: 8825876420906441847, guid: ed5171bb55a18bf4f946bdf77e3b1d92, type: 3}
   maxHealth: 150
   attack: 0
   defense: 0

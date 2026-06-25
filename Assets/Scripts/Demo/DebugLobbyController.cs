@@ -77,12 +77,17 @@ namespace DDD.TNFY.BRAWL
         [SerializeField] private TextMeshProUGUI validationLabel;
 
         [Header("Scene")]
-        [Tooltip("Exact name of the debug map scene as it appears in Build Settings.")]
-        [SerializeField] private string debugMapSceneName = "Debug";
+        [Tooltip("Exact name of the overworld scene to load after the lobby, as it appears in Build Settings. " +
+                 "The overworld's OverworldInteractable then loads the combat scene.")]
+        [SerializeField] private string overworldSceneName = "DebugOverworld";
 
         // ── Private state ─────────────────────────────────────────────────────
 
-        private bool[]           _included;   // is this character ticked for the player team?
+        // Indices of selected characters in selection order.
+        // Index 0 = leader (first picked), index 1 = second, etc.
+        // Removing a character re-promotes whoever is now at index 0.
+        private readonly List<int> _selectionQueue = new List<int>();
+
         private Ability[][]      _abilities;  // [charIndex][slot 0-2] — chosen abilities per character
         private PassiveAbility[] _passives;   // chosen passive per character
 
@@ -128,14 +133,14 @@ namespace DDD.TNFY.BRAWL
         private void InitialiseState()
         {
             int count = allCharacters.Length;
-            _included  = new bool[count];
             _abilities = new Ability[count][];
             _passives  = new PassiveAbility[count];
+
+            _selectionQueue.Clear();
 
             for (int i = 0; i < count; i++)
             {
                 var cd = allCharacters[i];
-                _included[i] = false;
 
                 // Pre-fill ability slots with the first 3 available abilities for this
                 // character so the lobby shows a meaningful default without the user
@@ -293,10 +298,10 @@ namespace DDD.TNFY.BRAWL
             if (includeToggle != null)
             {
                 includeToggle.onValueChanged.RemoveAllListeners();
-                includeToggle.isOn = _included[_selectedCharIndex];
+                includeToggle.isOn = _selectionQueue.Contains(_selectedCharIndex);
                 includeToggle.onValueChanged.AddListener(OnIncludeToggleChanged);
                 if (includeLabel != null)
-                    includeLabel.text = _included[_selectedCharIndex] ? "In Team" : "Benched";
+                    includeLabel.text = _selectionQueue.Contains(_selectedCharIndex) ? "In Team" : "Benched";
             }
 
             // Rebuild ability dropdowns using this character's own pool
@@ -384,7 +389,17 @@ namespace DDD.TNFY.BRAWL
         private void OnIncludeToggleChanged(bool isOn)
         {
             if (_selectedCharIndex < 0) return;
-            _included[_selectedCharIndex] = isOn;
+
+            if (isOn)
+            {
+                if (!_selectionQueue.Contains(_selectedCharIndex))
+                    _selectionQueue.Add(_selectedCharIndex);
+            }
+            else
+            {
+                _selectionQueue.Remove(_selectedCharIndex);
+            }
+
             if (includeLabel != null)
                 includeLabel.text = isOn ? "In Team" : "Benched";
             ValidateAndRefreshStartButton();
@@ -507,9 +522,7 @@ namespace DDD.TNFY.BRAWL
 
         private void ValidateAndRefreshStartButton()
         {
-            bool anyPlayerIncluded = false;
-            for (int i = 0; i < allCharacters.Length; i++)
-                if (_included[i]) { anyPlayerIncluded = true; break; }
+            bool anyPlayerIncluded = _selectionQueue.Count > 0;
 
             bool valid = anyPlayerIncluded && _enemyCount > 0;
 
@@ -538,18 +551,17 @@ namespace DDD.TNFY.BRAWL
 
             DebugSessionConfig.Clear();
 
-            // Write player loadouts into UnitLoadoutManager and spawn identities into config
-            for (int i = 0; i < allCharacters.Length; i++)
+            // Write player loadouts in queue order — index 0 = leader.
+            // DebugOverworldSpawner and DebugMapSpawner both preserve this order.
+            foreach (int charIndex in _selectionQueue)
             {
-                if (!_included[i]) continue;
+                var cd = allCharacters[charIndex];
+                if (cd == null) continue;
 
-                var cd = allCharacters[i];
-
-                // Manager persists across scenes — all combat systems read from here
                 UnitLoadoutManager.Instance.SetPlayerLoadout(
                     cd,
-                    (Ability[])_abilities[i].Clone(),
-                    _passives[i]);
+                    (Ability[])_abilities[charIndex].Clone(),
+                    _passives[charIndex]);
 
                 DebugSessionConfig.PlayerSpawns.Add(new PlayerSpawnConfig
                 {
@@ -581,7 +593,7 @@ namespace DDD.TNFY.BRAWL
                 });
             }
 
-            SceneManager.LoadScene(debugMapSceneName);
+            SceneManager.LoadScene(overworldSceneName);
         }
     }
 }

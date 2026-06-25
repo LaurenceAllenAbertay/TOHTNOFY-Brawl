@@ -15,6 +15,12 @@ namespace DDD.TNFY.BRAWL
                  "Used by DebugMapSpawner to spawn the correct prefab per character.")]
         public GameObject prefab;
 
+        [Tooltip("The overworld prefab for this character. " +
+                 "Used by DebugOverworldSpawner. Should contain UnitAnimator and SpriteRenderer " +
+                 "but no movement controller — the spawner adds the correct one at runtime " +
+                 "based on party queue order.")]
+        public GameObject overworldPrefab;
+
         [Header("Stats")]
         public int maxHealth;
         public int attack;

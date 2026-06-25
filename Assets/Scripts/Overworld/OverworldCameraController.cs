@@ -18,7 +18,8 @@ namespace DDD.TNFY.BRAWL
     ///
     /// ── Setup ────────────────────────────────────────────────────────────────
     /// Attach to the Camera GameObject in the overworld scene.
-    /// Assign the lead character's OverworldPlayerController to 'target'.
+    /// Assign the scene's OverworldCameraController 'target' via SetTarget() —
+    /// DebugOverworldSpawner calls this automatically after spawning the party.
     /// Set cameraYOffset and cameraZOffset to match the combat scene camera
     /// (defaults: Y=2, Z=3.5 — same as CameraController).
     ///
@@ -32,8 +33,9 @@ namespace DDD.TNFY.BRAWL
         // ── Inspector ─────────────────────────────────────────────────────────
 
         [Header("Target")]
-        [Tooltip("The lead overworld character to follow.")]
-        [SerializeField] private OverworldPlayerController target;
+        [Tooltip("The lead overworld character's Transform to follow. " +
+                 "Assigned at runtime by DebugOverworldSpawner via SetTarget().")]
+        [SerializeField] private Transform target;
 
         [Header("Offset — match your combat CameraController values")]
         [Tooltip("Height above the target. CameraController default: 2.")]
@@ -65,7 +67,7 @@ namespace DDD.TNFY.BRAWL
             if (target == null)
             {
                 Debug.LogWarning("[OverworldCameraController] No target assigned. " +
-                                 "Assign the lead OverworldPlayerController in the Inspector.");
+                                 "DebugOverworldSpawner should call SetTarget() after spawning.");
                 return;
             }
 
@@ -90,7 +92,7 @@ namespace DDD.TNFY.BRAWL
         /// </summary>
         private Vector3 DesiredPosition()
         {
-            Vector3 t = target.transform.position;
+            Vector3 t = target.position;
             return new Vector3(t.x, t.y + cameraYOffset, t.z - cameraZOffset);
         }
 
@@ -118,7 +120,7 @@ namespace DDD.TNFY.BRAWL
             transform.position = ClampToBounds(DesiredPosition());
         }
 
-        public void SetTarget(OverworldPlayerController newTarget)
+        public void SetTarget(Transform newTarget)
         {
             target = newTarget;
             SnapToTarget();
