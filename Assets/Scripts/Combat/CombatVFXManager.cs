@@ -15,6 +15,10 @@ namespace DDD.TNFY.BRAWL
 
         [Header("Debug")]
         [SerializeField] private bool enableDebugLogging = false;
+        
+        [Header("Damage VFX")]
+        [SerializeField] private GameObject damageVFXPrefab;
+        [SerializeField] private Vector3 damageVFXOffset = new Vector3(0f, 0.5f, 0f);
 
         void Awake()
         {
@@ -24,6 +28,33 @@ namespace DDD.TNFY.BRAWL
                 return;
             }
             Instance = this;
+        }
+        
+        private void OnEnable()
+        {
+            Unit.OnDamageDealt += HandleDamageDealt;
+        }
+
+        private void OnDisable()
+        {
+            Unit.OnDamageDealt -= HandleDamageDealt;
+        }
+
+        private void HandleDamageDealt(Unit victim, int amount)
+        {
+            if (victim == null || damageVFXPrefab == null) return;
+
+            Vector3 spawnPos = victim.transform.position + damageVFXOffset;
+            var vfx = Instantiate(damageVFXPrefab, spawnPos, Quaternion.identity);
+
+            var animator = vfx.GetComponent<Animator>();
+            if (animator != null)
+            {
+                string trigger = victim is PlayerUnit ? "PlayPlayer" : "PlayEnemy";
+                animator.SetTrigger(trigger);
+            }
+
+            Destroy(vfx, 2f);
         }
 
         /// <summary>

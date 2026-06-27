@@ -17118,7 +17118,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5a215c2011f7854daeee2c3020d49e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enableDebugLogging: 1
+  enableDebugLogging: 0
+  damageVFXPrefab: {fileID: 634127931051634153, guid: b15b1216923f7664db9ab791f267f2b2, type: 3}
+  damageVFXOffset: {x: 0, y: 0.5, z: 0}
 --- !u!114 &1563940151
 MonoBehaviour:
   m_ObjectHideFlags: 0

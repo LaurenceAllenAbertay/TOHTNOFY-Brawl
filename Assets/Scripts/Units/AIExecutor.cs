@@ -139,6 +139,14 @@ namespace DDD.TNFY.BRAWL
 
             Vector3 startPos = unit.transform.position;
             Vector3 endPos = destination.transform.position;
+
+            // For AI jumps the camera lerps to the destination tile while the unit is in the air.
+            // We start the transition without yielding so it runs in parallel with JumpAnimation.
+            // Player jumps intentionally have no camera movement — the player controls the camera.
+            var cam = CameraController.Instance;
+            if (cam != null)
+                StartCoroutine(cam.TransitionTo(cam.WorldFocusPosition(endPos)));
+
             yield return StartCoroutine(jumpSystem.JumpAnimation(unit, startPos, endPos));
         }
 

@@ -1,0 +1,624 @@
+fileFormatVersion: 2
+guid: 86a3ba68fb35ed54b8cc8e3e24380b26
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1187407641671951979
+    second: Damage_Bad_0
+  - first:
+      213: 8856813202055512125
+    second: Damage_Bad_1
+  - first:
+      213: 1292257403725828029
+    second: Damage_Bad_2
+  - first:
+      213: -2710849188595611636
+    second: Damage_Bad_3
+  - first:
+      213: 4161329914247737355
+    second: Damage_Bad_4
+  - first:
+      213: -1166617842953557000
+    second: Damage_Bad_5
+  - first:
+      213: 1783978966446060455
+    second: Damage_Bad_6
+  - first:
+      213: -979260142266913167
+    second: Damage_Bad_7
+  - first:
+      213: -7267173775844411284
+    second: Damage_Bad_8
+  - first:
+      213: 5524452604216443376
+    second: Damage_Bad_9
+  - first:
+      213: -3020788570121143907
+    second: Damage_Bad_10
+  - first:
+      213: 7546513968378462110
+    second: Damage_Bad_11
+  - first:
+      213: 1117870166393305790
+    second: Damage_Bad_12
+  - first:
+      213: 1088139450006575576
+    second: Damage_Bad_13
+  - first:
+      213: 5146990898031621577
+    second: Damage_Bad_14
+  - first:
+      213: -5575378503383147199
+    second: Damage_Bad_15
+  - first:
+      213: -5681920719840827452
+    second: Damage_Bad_16
+  - first:
+      213: -6801351647316556808
+    second: Damage_Bad_17
+  - first:
+      213: 1725019456599258175
+    second: Damage_Bad_18
+  - first:
+      213: 1578155753414162631
+    second: Damage_Bad_19
+  - first:
+      213: -9193463806725748352
+    second: Damage_Bad_20
+  - first:
+      213: -5993645443784922360
+    second: Damage_Bad_21
+  - first:
+      213: -1519185233516266316
+    second: Damage_Bad_22
+  - first:
+      213: 4812015868705644501
+    second: Damage_Bad_23
+  - first:
+      213: 3024589352094098477
+    second: Damage_Bad_24
+  - first:
+      213: -7458742881393479530
+    second: Damage_Bad_25
+  - first:
+      213: -7472310930475516727
+    second: Damage_Bad_26
+  - first:
+      213: -1836615785362737654
+    second: Damage_Bad_27
+  - first:
+      213: 5193219208475713948
+    second: Damage_Bad_28
+  - first:
+      213: -3416994486623071669
+    second: Damage_Bad_29
+  - first:
+      213: -6776427247643484344
+    second: Damage_Bad_30
+  - first:
+      213: -6079352770272065665
+    second: Damage_Bad_31
+  - first:
+      213: -8245500441785032094
+    second: Damage_Bad_32
+  - first:
+      213: 8917421585376391436
+    second: Damage_Bad_33
+  - first:
+      213: -4292647594724805343
+    second: Damage_Bad_34
+  - first:
+      213: -8262784283836443940
+    second: Damage_Bad_35
+  - first:
+      213: 7742593544804227477
+    second: Damage_Bad_36
+  - first:
+      213: 3437326459148347772
+    second: Damage_Bad_37
+  - first:
+      213: -5773738810036776545
+    second: Damage_Bad_38
+  - first:
+      213: 1345449911844219118
+    second: Damage_Bad_39
+  - first:
+      213: -114429187709500260
+    second: Damage_Bad_40
+  - first:
+      213: -3516614431536434403
+    second: Damage_Bad_41
+  - first:
+      213: -6092796138417679277
+    second: Damage_Bad_42
+  - first:
+      213: -2178190875287295267
+    second: Damage_Bad_43
+  - first:
+      213: 6254386644057433116
+    second: Damage_Bad_44
+  - first:
+      213: -989287155454957955
+    second: Damage_Bad_45
+  - first:
+      213: -981907746740412738
+    second: Damage_Bad_46
+  - first:
+      213: 1433036819045114018
+    second: Damage_Bad_47
+  - first:
+      213: 4575729298113590413
+    second: Damage_Bad_48
+  - first:
+      213: 996111726727951709
+    second: Damage_Bad_49
+  - first:
+      213: 9058039973900128623
+    second: Damage_Bad_50
+  - first:
+      213: 6770119724548927417
+    second: Damage_Bad_51
+  - first:
+      213: 8737469827852607090
+    second: Damage_Bad_52
+  - first:
+      213: -1148845332551130220
+    second: Damage_Bad_53
+  - first:
+      213: 5791990579616792935
+    second: Damage_Bad_54
+  - first:
+      213: 3511914074563294151
+    second: Damage_Bad_55
+  - first:
+      213: 7907339091661948652
+    second: Damage_Bad_56
+  - first:
+      213: 5731194520032226607
+    second: Damage_Bad_57
+  - first:
+      213: -8515541554483160908
+    second: Damage_Bad_58
+  - first:
+      213: -2691584961021449009
+    second: Damage_Bad_59
+  - first:
+      213: 7340785169022957555
+    second: Damage_Bad_60
+  - first:
+      213: -7097005935545602586
+    second: Damage_Bad_61
+  - first:
+      213: 551866083913868614
+    second: Damage_Bad_62
+  - first:
+      213: -458276911820532401
+    second: Damage_Bad_63
+  - first:
+      213: -4172129889682517688
+    second: Damage_Bad_64
+  - first:
+      213: 7935674719439481080
+    second: Damage_Bad_65
+  - first:
+      213: 5262911568550640821
+    second: Damage_Bad_66
+  - first:
+      213: 8030676997932892344
+    second: Damage_Bad_67
+  - first:
+      213: -1496505877937556978
+    second: Damage_Bad_68
+  - first:
+      213: 7233059215826620913
+    second: Damage_Bad_69
+  - first:
+      213: -7835041286744168013
+    second: Damage_Bad_70
+  - first:
+      213: -7524731517461373572
+    second: Damage_Bad_71
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Damage_Bad_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1330
+        width: 669
+        height: 665
+      alignment: 9
+      pivot: {x: 0.5082716, y: 0.56241024}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b66e07d75f48a7010800000000000000
+      internalID: 1187407641671951979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damage_Bad_1
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 1330
+        width: 669
+        height: 665
+      alignment: 9
+      pivot: {x: 0.5082717, y: 0.5582496}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d30428e8ea8b9ea70800000000000000
+      internalID: 8856813202055512125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damage_Bad_2
+      rect:
+        serializedVersion: 2
+        x: 1341
+        y: 1330
+        width: 669
+        height: 665
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5582496}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbf427313450fe110800000000000000
+      internalID: 1292257403725828029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damage_Bad_3
+      rect:
+        serializedVersion: 2
+        x: 2007
+        y: 1330
+        width: 669
+        height: 665
+      alignment: 9
+      pivot: {x: 0.5041358, y: 0.56241024}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c084a129601216ad0800000000000000
+      internalID: -2710849188595611636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damage_Bad_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 665
+        width: 669
+        height: 665
+      alignment: 9
+      pivot: {x: 0.5165432, y: 0.56241024}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0071f3628300c930800000000000000
+      internalID: 4161329914247737355
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damage_Bad_5
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 665
+        width: 669
+        height: 665
+      alignment: 9
+      pivot: {x: 0.5082717, y: 0.5582496}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fbee1ab0475fcfe0800000000000000
+      internalID: -1166617842953557000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damage_Bad_6
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 665
+        width: 669
+        height: 665
+      alignment: 9
+      pivot: {x: 0.5041356, y: 0.5540889}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a339c50b67f1c810800000000000000
+      internalID: 1783978966446060455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damage_Bad_7
+      rect:
+        serializedVersion: 2
+        x: 2007
+        y: 665
+        width: 669
+        height: 665
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5540889}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17e6b75c618f862f0800000000000000
+      internalID: -979260142266913167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damage_Bad_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 669
+        height: 665
+      alignment: 9
+      pivot: {x: 0.5124074, y: 0.5582496}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6872c934ffc52b90800000000000000
+      internalID: -7267173775844411284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damage_Bad_9
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 0
+        width: 669
+        height: 665
+      alignment: 9
+      pivot: {x: 0.5041358, y: 0.54160684}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f18dccaf5ccaac40800000000000000
+      internalID: 5524452604216443376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damage_Bad_10
+      rect:
+        serializedVersion: 2
+        x: 1338
+        y: 0
+        width: 669
+        height: 665
+      alignment: 9
+      pivot: {x: 0.5169154, y: 0.563159}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d997e50ecc00416d0800000000000000
+      internalID: -3020788570121143907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Damage_Bad_11
+      rect:
+        serializedVersion: 2
+        x: 2007
+        y: 0
+        width: 669
+        height: 665
+      alignment: 9
+      pivot: {x: 0.52253973, y: 0.5725623}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9fb8b9987a9ab860800000000000000
+      internalID: 7546513968378462110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: aca3086d1789c784ebfccb91ac348f67
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":3.0},"gridSpriteSize":{"x":669.0,"y":665.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Damage_Bad_0: 1187407641671951979
+      Damage_Bad_1: 8856813202055512125
+      Damage_Bad_10: -3020788570121143907
+      Damage_Bad_11: 7546513968378462110
+      Damage_Bad_2: 1292257403725828029
+      Damage_Bad_3: -2710849188595611636
+      Damage_Bad_4: 4161329914247737355
+      Damage_Bad_5: -1166617842953557000
+      Damage_Bad_6: 1783978966446060455
+      Damage_Bad_7: -979260142266913167
+      Damage_Bad_8: -7267173775844411284
+      Damage_Bad_9: 5524452604216443376
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
