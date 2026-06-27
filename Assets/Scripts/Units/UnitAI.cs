@@ -156,24 +156,33 @@ namespace DDD.TNFY.BRAWL
         {
             logger.LogTurnStart();
 
-            // A pending action (e.g. set by Chug) takes priority over normal planning.
+            // A pending action (e.g. set by Chug) takes priority over normal planning —
+            // unless the unit is Scared, in which case the queued ability is discarded.
             if (unit.pendingAction.HasValue)
             {
-                var pending      = unit.pendingAction.Value;
-                unit.pendingAction = null;
-
-                Debug.Log($"[UnitAI] {unit.name} executing queued action: {pending.ability.abilityName}");
-
-                var ctx = new AbilityContext
+                if (!unit.CanUseAbilities())
                 {
-                    caster   = unit,
-                    ability  = pending.ability,
-                    aimDir   = pending.aimDir
-                };
-                yield return StartCoroutine(unit.ExecuteAbilityCoroutine(ctx));
-                yield return new WaitForSeconds(endTurnDelay);
-                turnManager.EndTurn();
-                yield break;
+                    unit.pendingAction = null;
+                    Debug.Log($"[UnitAI] {unit.name} is scared — pending action cleared.");
+                }
+                else
+                {
+                    var pending      = unit.pendingAction.Value;
+                    unit.pendingAction = null;
+
+                    Debug.Log($"[UnitAI] {unit.name} executing queued action: {pending.ability.abilityName}");
+
+                    var ctx = new AbilityContext
+                    {
+                        caster   = unit,
+                        ability  = pending.ability,
+                        aimDir   = pending.aimDir
+                    };
+                    yield return StartCoroutine(unit.ExecuteAbilityCoroutine(ctx));
+                    yield return new WaitForSeconds(endTurnDelay);
+                    turnManager.EndTurn();
+                    yield break;
+                }
             }
 
             yield return new WaitForSeconds(thinkingDelay);

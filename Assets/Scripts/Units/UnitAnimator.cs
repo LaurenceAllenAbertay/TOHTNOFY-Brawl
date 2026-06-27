@@ -46,12 +46,25 @@ namespace DDD.TNFY.BRAWL
         private const string DOWNED_STATE          = "Downed";
         private const string KNOCKBACK_START_STATE = "Knockback_Start";
         private const string KNOCKBACK_END_STATE   = "Knockback_End";
+        private const string TARGETING_STATE       = "Targeting";
+        private const string TARGETING_BAD_STATE   = "Targeting_Bad";
+        private const string TARGETING_HURT_STATE  = "Targeting_Hurt";
+        private const string JUMP_STATE            = "Jump";
+        private const string JUMP_BAD_STATE        = "Jump_Bad";
+        private const string JUMP_HURT_STATE       = "Jump_Hurt";
 
         // Animation state tracking
         public bool IsAnimating => animator != null && animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f;
         public bool IsInKnockbackSequence => isInKnockbackSequence;
         public string CurrentAnimation => currentAnimation;
         public bool IsHurtIdle => _isHurtIdle;
+
+        /// <summary>
+        /// True when this unit's Animator Controller contains at least one Jump state
+        /// (Jump, Jump_Bad, or Jump_Hurt) that would be resolved and played by PlayJump().
+        /// Used by JumpSystem to decide whether to wait for AnimEvent_JumpLaunch.
+        /// </summary>
+        public bool HasJumpAnimation => HasState(ResolveJumpState());
 
         // ── Unity lifecycle ───────────────────────────────────────────────────
 
@@ -187,6 +200,30 @@ namespace DDD.TNFY.BRAWL
             return MOVE_STATE;
         }
 
+        /// <summary>
+        /// Returns the correct targeting state name for the current idle tier.
+        /// Priority mirrors ResolveMoveState: Hurt → Bad → Good.
+        /// Falls back to Targeting when the tier-specific state is absent on this character.
+        /// </summary>
+        private string ResolveTargetingState()
+        {
+            if (_isHurtIdle && HasState(TARGETING_HURT_STATE)) return TARGETING_HURT_STATE;
+            if (_isBadIdle  && HasState(TARGETING_BAD_STATE))  return TARGETING_BAD_STATE;
+            return TARGETING_STATE;
+        }
+
+        /// <summary>
+        /// Returns the correct jump state name for the current idle tier.
+        /// Priority mirrors ResolveMoveState: Hurt → Bad → Good.
+        /// Falls back to Jump when the tier-specific state is absent on this character.
+        /// </summary>
+        private string ResolveJumpState()
+        {
+            if (_isHurtIdle && HasState(JUMP_HURT_STATE)) return JUMP_HURT_STATE;
+            if (_isBadIdle  && HasState(JUMP_BAD_STATE))  return JUMP_BAD_STATE;
+            return JUMP_STATE;
+        }
+
         // ── Event handlers ────────────────────────────────────────────────────
 
         private void HandleHealthChanged(Unit changed)
@@ -262,6 +299,20 @@ namespace DDD.TNFY.BRAWL
         public void AnimEvent_CastEffect() => OnCastEffectEvent?.Invoke();
 
         /// <summary>
+        /// Fired at the frame the unit leaves the ground during a jump animation.
+        /// JumpSystem subscribes before calling PlayJump() and unsubscribes after receiving it.
+        /// Add an Animation Event named "AnimEvent_JumpLaunch" at the launch frame of each Jump clip.
+        /// </summary>
+        public event System.Action OnJumpLaunchEvent;
+
+        /// <summary>
+        /// Called by Unity Animation Events on Jump clips.
+        /// Place an Animation Event named "AnimEvent_JumpLaunch" at the frame the unit leaves
+        /// the ground. All Jump tier variants (Jump, Jump_Bad, Jump_Hurt) need this event.
+        /// </summary>
+        public void AnimEvent_JumpLaunch() => OnJumpLaunchEvent?.Invoke();
+
+        /// <summary>
         /// Fired mid-animation to trigger one or more ability effects by slot index.
         /// AbilitySequencer subscribes to this when suppressCameraTransitions is true and
         /// dispatches every AbilityEffect whose midAnimationEventIndex matches the slot fired.
@@ -305,6 +356,33 @@ namespace DDD.TNFY.BRAWL
         {
             if (!isInKnockbackSequence)
                 PlayAnimation(ResolveMoveState(), true);
+        }
+
+        /// <summary>
+        /// Plays the targeting animation while the unit is in ability-targeting mode (loops).
+        /// Resolves to Targeting_Hurt, Targeting_Bad, or Targeting based on the current idle tier,
+        /// mirroring the same priority order as ResolveIdleState.
+        /// Interrupted naturally when PlayAttack, PlayHurt, PlayIdle, or PlayDowned takes over.
+        /// If the resolved state is absent from this unit's animator the call is silently
+        /// ignored, so units without the clip fall back to their current idle gracefully.
+        /// Called by AbilityTargetingController on enter; PlayIdle is called on cancel.
+        /// </summary>
+        public void PlayTargeting()
+        {
+            if (isInKnockbackSequence) return;
+            PlayAnimation(ResolveTargetingState(), false);
+        }
+
+        /// <summary>
+        /// Plays the tier-appropriate jump animation (Jump_Hurt → Jump_Bad → Jump).
+        /// Does not start a ReturnToIdle coroutine — JumpSystem calls PlayIdle() explicitly
+        /// after the arc movement completes. The AnimEvent_JumpLaunch event on each clip
+        /// is what signals JumpSystem to begin the movement arc.
+        /// </summary>
+        public void PlayJump()
+        {
+            if (isInKnockbackSequence) return;
+            PlayAnimation(ResolveJumpState(), false);
         }
 
         /// <summary>
@@ -661,6 +739,8 @@ namespace DDD.TNFY.BRAWL
                 case "attack": PlayAttack(); break;
                 case "hurt": PlayHurt(); break;
                 case "downed": PlayDowned(); break;
+                case "targeting": PlayTargeting(); break;
+                case "jump": PlayJump(); break;
                 case "knockback_start": PlayKnockbackStart(); break;
                 case "knockback_end": PlayKnockbackEnd(); break;
                 case "single_knockback": PlaySingleKnockback(); break;
@@ -706,6 +786,12 @@ namespace DDD.TNFY.BRAWL
 
         [UnityEngine.ContextMenu("Test Downed")]
         private void TestDowned() => PlayDowned();
+
+        [UnityEngine.ContextMenu("Test Targeting")]
+        private void TestTargeting() => PlayTargeting();
+
+        [UnityEngine.ContextMenu("Test Jump")]
+        private void TestJump() => PlayJump();
 
         [UnityEngine.ContextMenu("Test Knockback Start")]
         private void TestKnockbackStart() => PlayKnockbackStart();

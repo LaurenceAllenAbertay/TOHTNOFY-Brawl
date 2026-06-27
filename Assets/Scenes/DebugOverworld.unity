@@ -620,7 +620,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -48.52002, y: -28.3}
+  m_AnchoredPosition: {x: -48.52002, y: -28.300049}
   m_SizeDelta: {x: 81.5, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &771557975
@@ -921,9 +921,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  cameraYOffset: 2
-  cameraZOffset: 3.5
+  cameraYOffset: 2.25
+  cameraZOffset: 4
   smoothTime: 0.15
+  lookaheadDistance: 1.5
+  lookaheadSmoothTime: 0.4
+  lookaheadMinSpeed: 0.5
+  baseFov: 60
+  movingFov: 65
+  fovMaxSpeed: 5
+  fovSmoothTime: 0.4
   boundsBox: {fileID: 0}
   boundsPadding: 1
 --- !u!1 &1477339595

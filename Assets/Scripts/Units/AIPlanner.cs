@@ -515,7 +515,7 @@ namespace DDD.TNFY.BRAWL
 
         private List<Tile> GetReachableTiles()
         {
-            if (unit.currentTile == null) return new List<Tile>();
+            if (unit.currentTile == null || !unit.CanMove()) return new List<Tile>();
             return GridManager.Instance.GetReachableTiles(unit.currentTile, unit.GetEffectiveMovementRange());
         }
 
@@ -528,7 +528,7 @@ namespace DDD.TNFY.BRAWL
         private List<Tile> GetJumpableTiles()
         {
             var result = new List<Tile>();
-            if (unit.currentTile == null || unit.JumpRange < 2) return result;
+            if (unit.currentTile == null || unit.JumpRange < 2 || !unit.CanMove()) return result;
 
             Tile startTile    = unit.currentTile;
             int  maxRange     = unit.JumpRange;
@@ -592,6 +592,7 @@ namespace DDD.TNFY.BRAWL
 
         private IEnumerable<(Ability, int)> UsableAbilities(Ability[] abilities)
         {
+            if (!unit.CanUseAbilities()) yield break;
             for (int i = 0; i < abilities.Length; i++)
                 if (abilities[i] != null && !unit.IsAbilityOnCooldown(i))
                     yield return (abilities[i], i);

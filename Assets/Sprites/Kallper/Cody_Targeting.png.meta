@@ -1,0 +1,2108 @@
+fileFormatVersion: 2
+guid: c5dd185d3330d4c4d81e56f244eacaf0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8797719278870399218
+    second: Cody_Targeting_Good_0
+  - first:
+      213: 3149183394468138101
+    second: Cody_Targeting_Good_1
+  - first:
+      213: 6305517806973043218
+    second: Cody_Targeting_Good_2
+  - first:
+      213: -4911076230174339021
+    second: Cody_Targeting_Good_3
+  - first:
+      213: -3635939406470047254
+    second: Cody_Targeting_Good_4
+  - first:
+      213: -4124071043232011548
+    second: Cody_Targeting_Good_5
+  - first:
+      213: 2536283409236592972
+    second: Cody_Targeting_Good_6
+  - first:
+      213: 8370074959472692793
+    second: Cody_Targeting_Good_7
+  - first:
+      213: 6944297737147508336
+    second: Cody_Targeting_Good_8
+  - first:
+      213: -575697340094780976
+    second: Cody_Targeting_Good_9
+  - first:
+      213: -1406724346428128462
+    second: Cody_Targeting_Good_10
+  - first:
+      213: -6934787977836092093
+    second: Cody_Targeting_Good_11
+  - first:
+      213: -1834549267084102954
+    second: Cody_Targeting_Good_12
+  - first:
+      213: 1437933495808456875
+    second: Cody_Targeting_Good_13
+  - first:
+      213: -860431906817075877
+    second: Cody_Targeting_Good_14
+  - first:
+      213: 960478156170876365
+    second: Cody_Targeting_Good_15
+  - first:
+      213: 2316679597363343641
+    second: Cody_Targeting_Good_16
+  - first:
+      213: -3127892509129934893
+    second: Cody_Targeting_Good_17
+  - first:
+      213: 129303418816063824
+    second: Cody_Targeting_Good_18
+  - first:
+      213: 1503956162459420834
+    second: Cody_Targeting_Good_19
+  - first:
+      213: 4625224626309702647
+    second: Cody_Targeting_Good_20
+  - first:
+      213: 5592305287697750828
+    second: Cody_Targeting_Good_21
+  - first:
+      213: 7404268435236794205
+    second: Cody_Targeting_Good_22
+  - first:
+      213: -2338289466112972822
+    second: Cody_Targeting_Good_23
+  - first:
+      213: -5420372906062612316
+    second: Cody_Targeting_Good_24
+  - first:
+      213: -8602369098421668751
+    second: Cody_Targeting_Good_25
+  - first:
+      213: -6521571086321322696
+    second: Cody_Targeting_Good_26
+  - first:
+      213: -4917399015885386842
+    second: Cody_Targeting_Good_27
+  - first:
+      213: -2045164976339929624
+    second: Cody_Targeting_Good_28
+  - first:
+      213: 4725446370026425742
+    second: Cody_Targeting_Good_29
+  - first:
+      213: 78145462695682059
+    second: Cody_Targeting_Good_30
+  - first:
+      213: -6715743705202054146
+    second: Cody_Targeting_Good_31
+  - first:
+      213: 4716280068656926236
+    second: Cody_Targeting_Good_32
+  - first:
+      213: 9003424537876990679
+    second: Cody_Targeting_Good_33
+  - first:
+      213: -167538434246664829
+    second: Cody_Targeting_Good_34
+  - first:
+      213: -6428779223984953876
+    second: Cody_Targeting_Good_35
+  - first:
+      213: -2601001070172003381
+    second: Cody_Targeting_Good_36
+  - first:
+      213: -1058014317412402697
+    second: Cody_Targeting_Good_37
+  - first:
+      213: -4772085533328171546
+    second: Cody_Targeting_Good_38
+  - first:
+      213: -6438145715965196282
+    second: Cody_Targeting_Good_39
+  - first:
+      213: -4752057479038255948
+    second: Cody_Targeting_Good_40
+  - first:
+      213: 8762691106925933083
+    second: Cody_Targeting_Good_41
+  - first:
+      213: -5673846394227466476
+    second: Cody_Targeting_Good_42
+  - first:
+      213: -7167961393999592905
+    second: Cody_Targeting_Good_43
+  - first:
+      213: -8241349682525655169
+    second: Cody_Targeting_Good_44
+  - first:
+      213: -5883931154510944240
+    second: Cody_Targeting_Good_45
+  - first:
+      213: -503626351818928674
+    second: Cody_Targeting_Good_46
+  - first:
+      213: -5424538859153060366
+    second: Cody_Targeting_Good_47
+  - first:
+      213: -1566098342136855347
+    second: Cody_Targeting_Good_48
+  - first:
+      213: 1673469420478104526
+    second: Cody_Targeting_Good_49
+  - first:
+      213: -8880699514609285603
+    second: Cody_Targeting_Good_50
+  - first:
+      213: -156740356945555196
+    second: Cody_Targeting_Good_51
+  - first:
+      213: 8657239650268264657
+    second: Cody_Targeting_Good_52
+  - first:
+      213: 34254030049440465
+    second: Cody_Targeting_Good_53
+  - first:
+      213: 3908345644440084288
+    second: Cody_Targeting_Good_54
+  - first:
+      213: 1447549214686807334
+    second: Cody_Targeting_Good_55
+  - first:
+      213: 2524349625188831859
+    second: Cody_Targeting_Good_56
+  - first:
+      213: 1096115909526598197
+    second: Cody_Targeting_Good_57
+  - first:
+      213: 7560384872702961833
+    second: Cody_Targeting_Good_58
+  - first:
+      213: 12877175711745585
+    second: Cody_Targeting_Good_59
+  - first:
+      213: -3494074114870517651
+    second: Cody_Targeting_Good_60
+  - first:
+      213: -6275495753333822063
+    second: Cody_Targeting_Good_61
+  - first:
+      213: 4932151534158617807
+    second: Cody_Targeting_Good_62
+  - first:
+      213: 4970329259124796328
+    second: Cody_Targeting_Good_63
+  - first:
+      213: 2858594257364809691
+    second: Cody_Targeting_Good_64
+  - first:
+      213: 2992405164388357996
+    second: Cody_Targeting_Good_65
+  - first:
+      213: -2289481478191645620
+    second: Cody_Targeting_Good_66
+  - first:
+      213: -7796384705290913671
+    second: Cody_Targeting_Good_67
+  - first:
+      213: -4533307690671215006
+    second: Cody_Targeting_Good_68
+  - first:
+      213: -7145120572184964944
+    second: Cody_Targeting_Good_69
+  - first:
+      213: 976429970083593009
+    second: Cody_Targeting_Good_70
+  - first:
+      213: -4397617172165891657
+    second: Cody_Targeting_Good_71
+  - first:
+      213: 7118187515427871878
+    second: Cody_Targeting_Good_72
+  - first:
+      213: -218339440084337753
+    second: Cody_Targeting_Good_73
+  - first:
+      213: -7920754807022834642
+    second: Cody_Targeting_Good_74
+  - first:
+      213: 8237990058363748077
+    second: Cody_Targeting_Good_75
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6230
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e07f25d9de838e580800000000000000
+      internalID: -8797719278870399218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_1
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 6230
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57c05d7bc9524bb20800000000000000
+      internalID: 3149183394468138101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_2
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 6230
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21247819903b18750800000000000000
+      internalID: 6305517806973043218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_3
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 6230
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 330189b403a58dbb0800000000000000
+      internalID: -4911076230174339021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_4
+      rect:
+        serializedVersion: 2
+        x: 2336
+        y: 6230
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae91284bf5c8a8dc0800000000000000
+      internalID: -3635939406470047254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_5
+      rect:
+        serializedVersion: 2
+        x: 2920
+        y: 6230
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ea6ea78c3b54c6c0800000000000000
+      internalID: -4124071043232011548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_6
+      rect:
+        serializedVersion: 2
+        x: 3504
+        y: 6230
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c498349a250b23320800000000000000
+      internalID: 2536283409236592972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5607
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93e03ce34da782470800000000000000
+      internalID: 8370074959472692793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_8
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 5607
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 076e93ddff91f5060800000000000000
+      internalID: 6944297737147508336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_9
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 5607
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d96381c156b208f0800000000000000
+      internalID: -575697340094780976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_10
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 5607
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 233024af8af4a7ce0800000000000000
+      internalID: -1406724346428128462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_11
+      rect:
+        serializedVersion: 2
+        x: 2336
+        y: 5607
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3452e64831fa2cf90800000000000000
+      internalID: -6934787977836092093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_12
+      rect:
+        serializedVersion: 2
+        x: 2920
+        y: 5607
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d2bf74592f5a86e0800000000000000
+      internalID: -1834549267084102954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_13
+      rect:
+        serializedVersion: 2
+        x: 3504
+        y: 5607
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba87c4c55e094f310800000000000000
+      internalID: 1437933495808456875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4984
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5591c05db12f04f0800000000000000
+      internalID: -860431906817075877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_15
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 4984
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc556115bcd445d00800000000000000
+      internalID: 960478156170876365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_16
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 4984
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 911bc3bc1df762020800000000000000
+      internalID: 2316679597363343641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_17
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 4984
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d774b1d55e7794d0800000000000000
+      internalID: -3127892509129934893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_18
+      rect:
+        serializedVersion: 2
+        x: 2336
+        y: 4984
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05966ca36c06bc100800000000000000
+      internalID: 129303418816063824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_19
+      rect:
+        serializedVersion: 2
+        x: 2920
+        y: 4984
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a8472559202fd410800000000000000
+      internalID: 1503956162459420834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_20
+      rect:
+        serializedVersion: 2
+        x: 3504
+        y: 4984
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f32499ca49103040800000000000000
+      internalID: 4625224626309702647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4361
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2b53c4a70cdb9d40800000000000000
+      internalID: 5592305287697750828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_22
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 4361
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5f2def89ee31c660800000000000000
+      internalID: 7404268435236794205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_23
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 4361
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae76c4e8e1abc8fd0800000000000000
+      internalID: -2338289466112972822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_24
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 4361
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a87cff6f87f6c4b0800000000000000
+      internalID: -5420372906062612316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_25
+      rect:
+        serializedVersion: 2
+        x: 2336
+        y: 4361
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17477cdd1ee3e9880800000000000000
+      internalID: -8602369098421668751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_26
+      rect:
+        serializedVersion: 2
+        x: 2920
+        y: 4361
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 835fb5656a9be75a0800000000000000
+      internalID: -6521571086321322696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_27
+      rect:
+        serializedVersion: 2
+        x: 3504
+        y: 4361
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6abcb4706a3e1cbb0800000000000000
+      internalID: -4917399015885386842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3738
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e5303e2a4d1e93e0800000000000000
+      internalID: -2045164976339929624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_29
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 3738
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8d8592ef68249140800000000000000
+      internalID: 4725446370026425742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_30
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 3738
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b00e8c062e0a51100800000000000000
+      internalID: 78145462695682059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_31
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 3738
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efbadd08ea2ecc2a0800000000000000
+      internalID: -6715743705202054146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_32
+      rect:
+        serializedVersion: 2
+        x: 2336
+        y: 3738
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1e0d890cb7937140800000000000000
+      internalID: 4716280068656926236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_33
+      rect:
+        serializedVersion: 2
+        x: 2920
+        y: 3738
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7da813e3ae692fc70800000000000000
+      internalID: 9003424537876990679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_34
+      rect:
+        serializedVersion: 2
+        x: 3504
+        y: 3738
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 38d90848ea8ccadf0800000000000000
+      internalID: -167538434246664829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3115
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce527fe5b5368c6a0800000000000000
+      internalID: -6428779223984953876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_36
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 3115
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc3acffae4367ebd0800000000000000
+      internalID: -2601001070172003381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_37
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 3115
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f93b5b759d2151f0800000000000000
+      internalID: -1058014317412402697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_38
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 3115
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ed9134bd7526cdb0800000000000000
+      internalID: -4772085533328171546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_39
+      rect:
+        serializedVersion: 2
+        x: 2336
+        y: 3115
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60801b3059c17a6a0800000000000000
+      internalID: -6438145715965196282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_40
+      rect:
+        serializedVersion: 2
+        x: 2920
+        y: 3115
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bcbfa976ec4d0eb0800000000000000
+      internalID: -4752057479038255948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_41
+      rect:
+        serializedVersion: 2
+        x: 3504
+        y: 3115
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b127bc092255b9970800000000000000
+      internalID: 8762691106925933083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2492
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41fd0f904c27241b0800000000000000
+      internalID: -5673846394227466476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_43
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 2492
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 732c0f2f619468c90800000000000000
+      internalID: -7167961393999592905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_44
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 2492
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7fa747d028d0ad80800000000000000
+      internalID: -8241349682525655169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_45
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 2492
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01865841ac3185ea0800000000000000
+      internalID: -5883931154510944240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_46
+      rect:
+        serializedVersion: 2
+        x: 2336
+        y: 2492
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edd8e485082c209f0800000000000000
+      internalID: -503626351818928674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_47
+      rect:
+        serializedVersion: 2
+        x: 2920
+        y: 2492
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fd01e5e5aa28b4b0800000000000000
+      internalID: -5424538859153060366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_48
+      rect:
+        serializedVersion: 2
+        x: 3504
+        y: 2492
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc4ca99fad9144ae0800000000000000
+      internalID: -1566098342136855347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_49
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1869
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec3831e429b593710800000000000000
+      internalID: 1673469420478104526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_50
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1869
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d16cabae7da61c480800000000000000
+      internalID: -8880699514609285603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_51
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1869
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 401da4ec97523ddf0800000000000000
+      internalID: -156740356945555196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_52
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 1869
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d8baa90891b42870800000000000000
+      internalID: 8657239650268264657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_53
+      rect:
+        serializedVersion: 2
+        x: 2336
+        y: 1869
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d2f83ddbd1b97000800000000000000
+      internalID: 34254030049440465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_54
+      rect:
+        serializedVersion: 2
+        x: 2920
+        y: 1869
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04fdb4408ab3d3630800000000000000
+      internalID: 3908345644440084288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_55
+      rect:
+        serializedVersion: 2
+        x: 3504
+        y: 1869
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6258d40675ab61410800000000000000
+      internalID: 1447549214686807334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1246
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 372554a0c9a480320800000000000000
+      internalID: 2524349625188831859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_57
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 1246
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 532bcfbbc9f263f00800000000000000
+      internalID: 1096115909526598197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_58
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1246
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a862be2cf1ebe860800000000000000
+      internalID: 7560384872702961833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_59
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 1246
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 136420c19bfbd2000800000000000000
+      internalID: 12877175711745585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_60
+      rect:
+        serializedVersion: 2
+        x: 2336
+        y: 1246
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d60614cda1e828fc0800000000000000
+      internalID: -3494074114870517651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_61
+      rect:
+        serializedVersion: 2
+        x: 2920
+        y: 1246
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19da0118cd5f8e8a0800000000000000
+      internalID: -6275495753333822063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_62
+      rect:
+        serializedVersion: 2
+        x: 3504
+        y: 1246
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcc1ceb40b5827440800000000000000
+      internalID: 4932151534158617807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 623
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ab2dd290282af440800000000000000
+      internalID: 4970329259124796328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_64
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 623
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd77333e454cba720800000000000000
+      internalID: 2858594257364809691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_65
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 623
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c67996f74a8278920800000000000000
+      internalID: 2992405164388357996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_66
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 623
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4cfc8cc9b02a30e0800000000000000
+      internalID: -2289481478191645620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_67
+      rect:
+        serializedVersion: 2
+        x: 2336
+        y: 623
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 978b8d4ea6dadc390800000000000000
+      internalID: -7796384705290913671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_68
+      rect:
+        serializedVersion: 2
+        x: 2920
+        y: 623
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26eeeff7ca47611c0800000000000000
+      internalID: -4533307690671215006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_69
+      rect:
+        serializedVersion: 2
+        x: 3504
+        y: 623
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b0549132be67dc90800000000000000
+      internalID: -7145120572184964944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13bb0ea62e9fc8d00800000000000000
+      internalID: 976429970083593009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_71
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 0
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b9e4e24b7688f2c0800000000000000
+      internalID: -4397617172165891657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_72
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 0
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68cd2bdd4d1e8c260800000000000000
+      internalID: 7118187515427871878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_73
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 0
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7abb051af6d48fcf0800000000000000
+      internalID: -218339440084337753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_74
+      rect:
+        serializedVersion: 2
+        x: 2336
+        y: 0
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2caf6e0873d31290800000000000000
+      internalID: -7920754807022834642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Targeting_Good_75
+      rect:
+        serializedVersion: 2
+        x: 2920
+        y: 0
+        width: 584
+        height: 623
+      alignment: 9
+      pivot: {x: 0.5225, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dee78f3bf48335270800000000000000
+      internalID: 8237990058363748077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: d0e131e164e34e04fad6f71dcbe2f008
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":7.0,"y":11.0},"gridSpriteSize":{"x":584.0,"y":623.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5224999785423279,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Cody_Targeting_Good_0: -8797719278870399218
+      Cody_Targeting_Good_1: 3149183394468138101
+      Cody_Targeting_Good_10: -1406724346428128462
+      Cody_Targeting_Good_11: -6934787977836092093
+      Cody_Targeting_Good_12: -1834549267084102954
+      Cody_Targeting_Good_13: 1437933495808456875
+      Cody_Targeting_Good_14: -860431906817075877
+      Cody_Targeting_Good_15: 960478156170876365
+      Cody_Targeting_Good_16: 2316679597363343641
+      Cody_Targeting_Good_17: -3127892509129934893
+      Cody_Targeting_Good_18: 129303418816063824
+      Cody_Targeting_Good_19: 1503956162459420834
+      Cody_Targeting_Good_2: 6305517806973043218
+      Cody_Targeting_Good_20: 4625224626309702647
+      Cody_Targeting_Good_21: 5592305287697750828
+      Cody_Targeting_Good_22: 7404268435236794205
+      Cody_Targeting_Good_23: -2338289466112972822
+      Cody_Targeting_Good_24: -5420372906062612316
+      Cody_Targeting_Good_25: -8602369098421668751
+      Cody_Targeting_Good_26: -6521571086321322696
+      Cody_Targeting_Good_27: -4917399015885386842
+      Cody_Targeting_Good_28: -2045164976339929624
+      Cody_Targeting_Good_29: 4725446370026425742
+      Cody_Targeting_Good_3: -4911076230174339021
+      Cody_Targeting_Good_30: 78145462695682059
+      Cody_Targeting_Good_31: -6715743705202054146
+      Cody_Targeting_Good_32: 4716280068656926236
+      Cody_Targeting_Good_33: 9003424537876990679
+      Cody_Targeting_Good_34: -167538434246664829
+      Cody_Targeting_Good_35: -6428779223984953876
+      Cody_Targeting_Good_36: -2601001070172003381
+      Cody_Targeting_Good_37: -1058014317412402697
+      Cody_Targeting_Good_38: -4772085533328171546
+      Cody_Targeting_Good_39: -6438145715965196282
+      Cody_Targeting_Good_4: -3635939406470047254
+      Cody_Targeting_Good_40: -4752057479038255948
+      Cody_Targeting_Good_41: 8762691106925933083
+      Cody_Targeting_Good_42: -5673846394227466476
+      Cody_Targeting_Good_43: -7167961393999592905
+      Cody_Targeting_Good_44: -8241349682525655169
+      Cody_Targeting_Good_45: -5883931154510944240
+      Cody_Targeting_Good_46: -503626351818928674
+      Cody_Targeting_Good_47: -5424538859153060366
+      Cody_Targeting_Good_48: -1566098342136855347
+      Cody_Targeting_Good_49: 1673469420478104526
+      Cody_Targeting_Good_5: -4124071043232011548
+      Cody_Targeting_Good_50: -8880699514609285603
+      Cody_Targeting_Good_51: -156740356945555196
+      Cody_Targeting_Good_52: 8657239650268264657
+      Cody_Targeting_Good_53: 34254030049440465
+      Cody_Targeting_Good_54: 3908345644440084288
+      Cody_Targeting_Good_55: 1447549214686807334
+      Cody_Targeting_Good_56: 2524349625188831859
+      Cody_Targeting_Good_57: 1096115909526598197
+      Cody_Targeting_Good_58: 7560384872702961833
+      Cody_Targeting_Good_59: 12877175711745585
+      Cody_Targeting_Good_6: 2536283409236592972
+      Cody_Targeting_Good_60: -3494074114870517651
+      Cody_Targeting_Good_61: -6275495753333822063
+      Cody_Targeting_Good_62: 4932151534158617807
+      Cody_Targeting_Good_63: 4970329259124796328
+      Cody_Targeting_Good_64: 2858594257364809691
+      Cody_Targeting_Good_65: 2992405164388357996
+      Cody_Targeting_Good_66: -2289481478191645620
+      Cody_Targeting_Good_67: -7796384705290913671
+      Cody_Targeting_Good_68: -4533307690671215006
+      Cody_Targeting_Good_69: -7145120572184964944
+      Cody_Targeting_Good_7: 8370074959472692793
+      Cody_Targeting_Good_70: 976429970083593009
+      Cody_Targeting_Good_71: -4397617172165891657
+      Cody_Targeting_Good_72: 7118187515427871878
+      Cody_Targeting_Good_73: -218339440084337753
+      Cody_Targeting_Good_74: -7920754807022834642
+      Cody_Targeting_Good_75: 8237990058363748077
+      Cody_Targeting_Good_8: 6944297737147508336
+      Cody_Targeting_Good_9: -575697340094780976
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

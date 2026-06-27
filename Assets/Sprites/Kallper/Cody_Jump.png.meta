@@ -1,0 +1,1120 @@
+fileFormatVersion: 2
+guid: 807319766574dfa4799eade8c89ed28d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5347059522844767772
+    second: Cody_Jump_0
+  - first:
+      213: -3310696972969108098
+    second: Cody_Jump_1
+  - first:
+      213: 9039409851033839372
+    second: Cody_Jump_2
+  - first:
+      213: 4487686979780821482
+    second: Cody_Jump_3
+  - first:
+      213: 7740194192448049414
+    second: Cody_Jump_4
+  - first:
+      213: 3547154693304807997
+    second: Cody_Jump_5
+  - first:
+      213: -1690215437596699395
+    second: Cody_Jump_6
+  - first:
+      213: 4236985206200724372
+    second: Cody_Jump_7
+  - first:
+      213: 1001188443623348787
+    second: Cody_Jump_8
+  - first:
+      213: -1494544265141253622
+    second: Cody_Jump_9
+  - first:
+      213: -2999367448423398959
+    second: Cody_Jump_10
+  - first:
+      213: 3306032666892730317
+    second: Cody_Jump_11
+  - first:
+      213: -8246069260258540007
+    second: Cody_Jump_12
+  - first:
+      213: 984864230682711454
+    second: Cody_Jump_13
+  - first:
+      213: -5091386024153273310
+    second: Cody_Jump_14
+  - first:
+      213: 7305911652304925100
+    second: Cody_Jump_15
+  - first:
+      213: -1603968060619621965
+    second: Cody_Jump_16
+  - first:
+      213: 7758669902109289573
+    second: Cody_Jump_17
+  - first:
+      213: 3410563548387275884
+    second: Cody_Jump_18
+  - first:
+      213: 3189746987318981618
+    second: Cody_Jump_19
+  - first:
+      213: 1105162980016706145
+    second: Cody_Jump_20
+  - first:
+      213: 6799962411122719906
+    second: Cody_Jump_21
+  - first:
+      213: 8451337742564769446
+    second: Cody_Jump_22
+  - first:
+      213: 3553232195728859241
+    second: Cody_Jump_23
+  - first:
+      213: -829448312845742242
+    second: Cody_Jump_24
+  - first:
+      213: -5465396810162237400
+    second: Cody_Jump_25
+  - first:
+      213: 8920087580255397704
+    second: Cody_Jump_26
+  - first:
+      213: 5302309353575888485
+    second: Cody_Jump_27
+  - first:
+      213: -6245750965023372061
+    second: Cody_Jump_28
+  - first:
+      213: -3499771478341716820
+    second: Cody_Jump_29
+  - first:
+      213: -4166353920116668313
+    second: Cody_Jump_30
+  - first:
+      213: 3773760425448611401
+    second: Cody_Jump_31
+  - first:
+      213: -7788927991971041015
+    second: Cody_Jump_32
+  - first:
+      213: 4941550741887363585
+    second: Cody_Jump_33
+  - first:
+      213: 3252346976584720823
+    second: Cody_Jump_34
+  - first:
+      213: 2272403446583860378
+    second: Cody_Jump_35
+  - first:
+      213: 6782460010316260974
+    second: Cody_Jump_36
+  - first:
+      213: 7247706741791483760
+    second: Cody_Jump_37
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cody_Jump_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3830
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c16380c5e42943a40800000000000000
+      internalID: 5347059522844767772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_1
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 3830
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7d1737d4aa0e02d0800000000000000
+      internalID: -3310696972969108098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_2
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 3830
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c07e90edd5f627d70800000000000000
+      internalID: 9039409851033839372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_3
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 3830
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae14bf40887774e30800000000000000
+      internalID: 4487686979780821482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_4
+      rect:
+        serializedVersion: 2
+        x: 2348
+        y: 3830
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6015865db91ba6b60800000000000000
+      internalID: 7740194192448049414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_5
+      rect:
+        serializedVersion: 2
+        x: 2935
+        y: 3830
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d32fac166660a3130800000000000000
+      internalID: 3547154693304807997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_6
+      rect:
+        serializedVersion: 2
+        x: 3522
+        y: 3830
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df4da20c3062b88e0800000000000000
+      internalID: -1690215437596699395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3064
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49bed26b89bccca30800000000000000
+      internalID: 4236985206200724372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_8
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 3064
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33a556fb59fe4ed00800000000000000
+      internalID: 1001188443623348787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_9
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 3064
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0a8827c8ef424be0800000000000000
+      internalID: -1494544265141253622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_10
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 3064
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d18add623b1066d0800000000000000
+      internalID: -2999367448423398959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_11
+      rect:
+        serializedVersion: 2
+        x: 2348
+        y: 3064
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcf7af5c13361ed20800000000000000
+      internalID: 3306032666892730317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_12
+      rect:
+        serializedVersion: 2
+        x: 2935
+        y: 3064
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 916850582b3109d80800000000000000
+      internalID: -8246069260258540007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_13
+      rect:
+        serializedVersion: 2
+        x: 3522
+        y: 3064
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e95d4ddbcc0faad00800000000000000
+      internalID: 984864230682711454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_14
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2298
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22ca4f7e263c759b0800000000000000
+      internalID: -5091386024153273310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_15
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 2298
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca1b50c70ffc36560800000000000000
+      internalID: 7305911652304925100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_16
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 2298
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b9f1bb0c8f8db9e0800000000000000
+      internalID: -1603968060619621965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_17
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 2298
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56c2db43b255cab60800000000000000
+      internalID: 7758669902109289573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_18
+      rect:
+        serializedVersion: 2
+        x: 2348
+        y: 2298
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c64f4813a71c45f20800000000000000
+      internalID: 3410563548387275884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_19
+      rect:
+        serializedVersion: 2
+        x: 2935
+        y: 2298
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f335862cf1444c20800000000000000
+      internalID: 3189746987318981618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_20
+      rect:
+        serializedVersion: 2
+        x: 3522
+        y: 2298
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 162decaffd3565f00800000000000000
+      internalID: 1105162980016706145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1532
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ac7af009c15e5e50800000000000000
+      internalID: 6799962411122719906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_22
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 1532
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6aebc6656ee294570800000000000000
+      internalID: 8451337742564769446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_23
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 1532
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96066ee2bdd9f4130800000000000000
+      internalID: 3553232195728859241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_24
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 1532
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5f484177253d74f0800000000000000
+      internalID: -829448312845742242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_25
+      rect:
+        serializedVersion: 2
+        x: 2348
+        y: 1532
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8201abdde820724b0800000000000000
+      internalID: -5465396810162237400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_26
+      rect:
+        serializedVersion: 2
+        x: 2935
+        y: 1532
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8472f72c4648acb70800000000000000
+      internalID: 8920087580255397704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_27
+      rect:
+        serializedVersion: 2
+        x: 3522
+        y: 1532
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5663f15a346959940800000000000000
+      internalID: 5302309353575888485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_28
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 766
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ec8a36b692a259a0800000000000000
+      internalID: -6245750965023372061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_29
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 766
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca4f56e02605e6fc0800000000000000
+      internalID: -3499771478341716820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_30
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 766
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 768c3e61f232e26c0800000000000000
+      internalID: -4166353920116668313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_31
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 766
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94e9a4adc171f5430800000000000000
+      internalID: 3773760425448611401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_32
+      rect:
+        serializedVersion: 2
+        x: 2348
+        y: 766
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9013871424b28e390800000000000000
+      internalID: -7788927991971041015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_33
+      rect:
+        serializedVersion: 2
+        x: 2935
+        y: 766
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10aa3c1e73ae39440800000000000000
+      internalID: 4941550741887363585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_34
+      rect:
+        serializedVersion: 2
+        x: 3522
+        y: 766
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b1e5a1f758a22d20800000000000000
+      internalID: 3252346976584720823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9c110c15e2398f10800000000000000
+      internalID: 2272403446583860378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_36
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 0
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e666132c173202e50800000000000000
+      internalID: 6782460010316260974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Jump_37
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 0
+        width: 587
+        height: 766
+      alignment: 9
+      pivot: {x: 0.4786, y: 0.01825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0776fa4b1e6059460800000000000000
+      internalID: 7247706741791483760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 3c8f242f8418f1840b5878178765f9ce
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":7.0,"y":6.0},"gridSpriteSize":{"x":587.0,"y":766.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.47859999537467959,"y":0.0182499997317791},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Cody_Jump_0: 5347059522844767772
+      Cody_Jump_1: -3310696972969108098
+      Cody_Jump_10: -2999367448423398959
+      Cody_Jump_11: 3306032666892730317
+      Cody_Jump_12: -8246069260258540007
+      Cody_Jump_13: 984864230682711454
+      Cody_Jump_14: -5091386024153273310
+      Cody_Jump_15: 7305911652304925100
+      Cody_Jump_16: -1603968060619621965
+      Cody_Jump_17: 7758669902109289573
+      Cody_Jump_18: 3410563548387275884
+      Cody_Jump_19: 3189746987318981618
+      Cody_Jump_2: 9039409851033839372
+      Cody_Jump_20: 1105162980016706145
+      Cody_Jump_21: 6799962411122719906
+      Cody_Jump_22: 8451337742564769446
+      Cody_Jump_23: 3553232195728859241
+      Cody_Jump_24: -829448312845742242
+      Cody_Jump_25: -5465396810162237400
+      Cody_Jump_26: 8920087580255397704
+      Cody_Jump_27: 5302309353575888485
+      Cody_Jump_28: -6245750965023372061
+      Cody_Jump_29: -3499771478341716820
+      Cody_Jump_3: 4487686979780821482
+      Cody_Jump_30: -4166353920116668313
+      Cody_Jump_31: 3773760425448611401
+      Cody_Jump_32: -7788927991971041015
+      Cody_Jump_33: 4941550741887363585
+      Cody_Jump_34: 3252346976584720823
+      Cody_Jump_35: 2272403446583860378
+      Cody_Jump_36: 6782460010316260974
+      Cody_Jump_37: 7247706741791483760
+      Cody_Jump_4: 7740194192448049414
+      Cody_Jump_5: 3547154693304807997
+      Cody_Jump_6: -1690215437596699395
+      Cody_Jump_7: 4236985206200724372
+      Cody_Jump_8: 1001188443623348787
+      Cody_Jump_9: -1494544265141253622
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

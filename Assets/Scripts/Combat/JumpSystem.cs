@@ -9,16 +9,15 @@ namespace DDD.TNFY.BRAWL
         [Header("Jump Settings")]
         // jumpRange is now read from Unit.JumpRange so passives can modify it per-unit.
         // The minimum jump distance is always 2 (the base value on Unit).
+        [SerializeField] private float jumpHeight = 2f;
 
         private CombatManager combatManager;
-        private CameraController cameraController;
         private bool isTargetingJump = false;
         private Tile hoveredTile;
 
         void Start()
         {
             combatManager = FindAnyObjectByType<CombatManager>();
-            cameraController = FindAnyObjectByType<CameraController>();
         }
 
         void Update()
@@ -37,6 +36,7 @@ namespace DDD.TNFY.BRAWL
             if (combatManager.IsExecutingAbility || combatManager.IsMoving) return false;
             if (combatManager.currentState != CombatState.WaitingForInput) return false;
             if (combatManager.IsMovementLocked) return false;
+            if (!unit.CanMove()) return false;
             // Jump costs exactly 2 movement points and can only be performed once per turn.
             return combatManager.HasEnoughMovementForJump(2);
         }
@@ -205,11 +205,7 @@ namespace DDD.TNFY.BRAWL
             // Update tile reference immediately but animate the movement.
             currentUnit.SetCurrentTileLogical(targetTile);
 
-            // Start jump animation with camera coordination.
-            if (cameraController != null)
-            {
-                StartCoroutine(JumpAnimation(currentUnit, startPos, endPos, stompTarget, originTile));
-            }
+            StartCoroutine(JumpAnimation(currentUnit, startPos, endPos, stompTarget, originTile));
 
             // Mark that the player has used their movement — jumping consumes all remaining movement.
             SetMovementUsed();
@@ -251,70 +247,76 @@ namespace DDD.TNFY.BRAWL
 
         public IEnumerator JumpAnimation(Unit unit, Vector3 startPos, Vector3 endPos, Unit stompTarget = null, Tile originTile = null)
         {
-            float duration = 0.5f;
-            float elapsed = 0f;
-            float jumpHeight = 2f;
-
-            // Calculate jump direction for sprite facing
+            // Face the jump direction before the wind-up so the animation plays correctly.
             Vector3 jumpDirection = (endPos - startPos).normalized;
-            Vector2Int jumpDir = GetJumpDirection(jumpDirection);
+            unit.FaceDirection(GetJumpDirection(jumpDirection));
 
-            // Face the jump direction
-            unit.FaceDirection(jumpDir);
+            // Wind-up: play the tier-appropriate jump animation and wait for AnimEvent_JumpLaunch
+            // before starting the arc. This gives the animator full control over launch timing —
+            // move the event keyframe in the clip and the code timing follows automatically.
+            // Units without a Jump animation state skip straight to the arc with no delay.
+            var unitAnimator = unit.GetComponent<UnitAnimator>();
+            float arcDuration = 0.5f; // fallback for units with no jump animation clip
 
-            // Get camera controller reference
-            var cameraController = FindAnyObjectByType<CameraController>();
-
-            Vector3 cameraStartPos = Vector3.zero;
-            Vector3 cameraTargetPos = Vector3.zero;
-            bool shouldMoveCamera = cameraController != null;
-
-            if (shouldMoveCamera)
+            if (unitAnimator != null && unitAnimator.HasJumpAnimation)
             {
-                cameraStartPos = cameraController.transform.position;
-                cameraTargetPos = new Vector3(
-                    endPos.x,
-                    endPos.y + 2f,
-                    endPos.z - 3.5f   // Maintain offset behind player
-                );
+                bool launched = false;
+                System.Action onLaunch = () => launched = true;
+                unitAnimator.OnJumpLaunchEvent += onLaunch;
+                unitAnimator.PlayJump();
 
-                // Apply bounds checking
-                cameraTargetPos = cameraController.ClampToBounds(cameraTargetPos);
+                const float launchMaxWait = 3f;
+                float launchElapsed = 0f;
+                while (!launched && launchElapsed < launchMaxWait)
+                {
+                    launchElapsed += Time.deltaTime;
+                    yield return null;
+                }
+
+                if (!launched)
+                    Debug.LogWarning($"[JumpSystem] AnimEvent_JumpLaunch never fired on {unit.name}. " +
+                                     "Ensure every Jump clip (Jump, Jump_Bad, Jump_Hurt) has the " +
+                                     "AnimEvent_JumpLaunch event placed at the launch frame.");
+
+                unitAnimator.OnJumpLaunchEvent -= onLaunch;
+
+                // Read remaining clip time now that we're exactly at the launch frame.
+                // This becomes the arc duration so the unit arrives at the destination
+                // precisely as the animation ends — no hardcoded timing required.
+                var anim = unit.GetComponent<Animator>();
+                if (anim != null)
+                {
+                    var info = anim.GetCurrentAnimatorStateInfo(0);
+                    float remaining = (1f - Mathf.Clamp01(info.normalizedTime)) * info.length;
+                    if (remaining > 0.05f)
+                        arcDuration = remaining;
+                }
             }
 
-            while (elapsed < duration)
+            // Arc movement.
+            float elapsed = 0f;
+
+            while (elapsed < arcDuration)
             {
                 elapsed += Time.deltaTime;
-                float t = elapsed / duration;
+                float t = elapsed / arcDuration;
 
-                // Create arc motion for unit
                 Vector3 currentPos = Vector3.Lerp(startPos, endPos, t);
                 currentPos.y += Mathf.Sin(t * Mathf.PI) * jumpHeight;
                 unit.transform.position = currentPos;
 
-                // Move camera smoothly to follow
-                if (shouldMoveCamera)
-                {
-                    float smoothT = Mathf.SmoothStep(0f, 1f, t);
-                    cameraController.transform.position = Vector3.Lerp(cameraStartPos, cameraTargetPos, smoothT);
-                }
-
                 yield return null;
             }
 
-            // Ensure exact final positions
+            // Snap to exact final position.
             unit.transform.position = endPos;
-            if (shouldMoveCamera)
-            {
-                cameraController.transform.position = cameraTargetPos;
-            }
 
-            // If this was a stomp, apply damage and knockback to the occupant now that
-            // the unit has fully landed. Direction is derived from the grid tiles — not world positions.
+            // Apply stomp to any unit that was on the landing tile.
             if (stompTarget != null)
-            {
                 ExecuteStomp(unit, stompTarget, originTile);
-            }
+
+            // Return to idle now that the jump is complete.
+            unitAnimator?.PlayIdle();
         }
 
 

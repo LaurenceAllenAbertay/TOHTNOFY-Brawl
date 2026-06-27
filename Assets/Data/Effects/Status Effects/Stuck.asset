@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed4cacc5000e10f4ea7835be903acc67, type: 3}
-  m_Name: Dizzy
+  m_Name: Stuck
   m_EditorClassIdentifier: 
-  effectName: Dizzy
+  effectName: Stuck
   description: 
-  icon: {fileID: 21300000, guid: 0ffa47e3f6a135f49bff46ba6873af61, type: 3}
+  icon: {fileID: 0}
   effectColor: {r: 1, g: 1, b: 1, a: 1}
-  effectType: 28
+  effectType: 18
   stackingBehavior: 1
   maxStacks: 1
   triggerTiming: 1

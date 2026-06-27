@@ -83,6 +83,12 @@ namespace DDD.TNFY.BRAWL
         Ensnared,
         Encumbered,
 
+        // Stuck: the affected unit cannot move or jump for the duration.
+        Stuck,
+
+        // Scared: the affected unit cannot use abilities for the duration.
+        Scared,
+
         // Healing
         Healthy,
         Saturated,

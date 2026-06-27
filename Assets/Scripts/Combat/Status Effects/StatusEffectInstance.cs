@@ -12,8 +12,7 @@ namespace DDD.TNFY.BRAWL
         public int remainingDuration;
         /// <summary>
         /// The duration this effect was applied with. Immutable after creation.
-        /// Used by escalating damage formulas (e.g. Poison) to determine which tick
-        /// is currently firing without relying on fragile proxies like asset name length.
+        /// Available for any effect that needs to know its original lifetime.
         /// </summary>
         public int initialDuration;
         public int stackCount = 1;
@@ -38,6 +37,11 @@ namespace DDD.TNFY.BRAWL
             this.remainingDuration = duration;
             this.initialDuration   = duration;
             this.effectPower       = power;
+
+            // For AddStacks effects (Bleeding, Poison), effectPower IS the initial stack count.
+            // All other effects default to 1.
+            if (data != null && data.stackingBehavior == StatusEffectData.StackingBehavior.AddStacks)
+                this.stackCount = Mathf.Max(1, Mathf.RoundToInt(power));
         }
 
         public bool IsExpired => remainingDuration <= 0;

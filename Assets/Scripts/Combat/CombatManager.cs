@@ -21,7 +21,8 @@ namespace DDD.TNFY.BRAWL
                                !_movementLockedByAbility && !isWaitingForAnimation && !isMoving &&
                                GetRemainingMovement() > 0;
         public bool CanUseAbility => currentState == CombatState.WaitingForInput &&
-                                     !hasUsedAbilityThisTurn && !isWaitingForAnimation && !isMoving;
+                                     !hasUsedAbilityThisTurn && !isWaitingForAnimation && !isMoving &&
+                                     (currentActiveUnit == null || currentActiveUnit.CanUseAbilities());
         public bool IsTargetingAbility => targetingController != null && targetingController.IsTargetingAbility;
         public bool IsExecutingAbility => isWaitingForAnimation;
         public bool IsMoving => isMoving;
@@ -243,17 +244,27 @@ namespace DDD.TNFY.BRAWL
             // Check for a queued follow-up action before giving control to the player.
             if (currentActiveUnit.pendingAction.HasValue)
             {
-                var pending = currentActiveUnit.pendingAction.Value;
-                currentActiveUnit.pendingAction = null;
-                currentState = CombatState.ExecutingAction;
-                var ctx = new AbilityContext
+                // Scared units cannot use abilities — discard the queued action rather than
+                // firing it through the execution path where CanUseAbility would block it anyway.
+                if (!currentActiveUnit.CanUseAbilities())
                 {
-                    caster = currentActiveUnit,
-                    ability = pending.ability,
-                    aimDir = pending.aimDir
-                };
-                StartCoroutine(ExecutePendingAction(ctx));
-                return;
+                    currentActiveUnit.pendingAction = null;
+                    Debug.Log($"[CombatManager] {currentActiveUnit.name} is scared — pending action cleared.");
+                }
+                else
+                {
+                    var pending = currentActiveUnit.pendingAction.Value;
+                    currentActiveUnit.pendingAction = null;
+                    currentState = CombatState.ExecutingAction;
+                    var ctx = new AbilityContext
+                    {
+                        caster = currentActiveUnit,
+                        ability = pending.ability,
+                        aimDir = pending.aimDir
+                    };
+                    StartCoroutine(ExecutePendingAction(ctx));
+                    return;
+                }
             }
 
             currentState = CombatState.WaitingForInput;

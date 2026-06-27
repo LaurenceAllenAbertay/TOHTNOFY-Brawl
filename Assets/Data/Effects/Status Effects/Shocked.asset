@@ -17,9 +17,9 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 49c57257d6416314bb757e4626073681, type: 3}
   effectColor: {r: 1, g: 1, b: 1, a: 1}
   effectType: 27
-  stackingBehavior: 2
-  maxStacks: 99
-  triggerTiming: 0
+  stackingBehavior: 1
+  maxStacks: 1
+  triggerTiming: 1
   triggersOnApplication: 0
   applicationVFX: {fileID: 0}
   persistentVFX: {fileID: 0}

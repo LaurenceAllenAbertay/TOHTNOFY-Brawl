@@ -67,6 +67,7 @@ namespace DDD.TNFY.BRAWL
             var ctx = MakeContext(activeUnit);
             currentAbility.targeting.ShowEnterPreview(ctx, hoveredTile);
 
+            activeUnit.GetComponent<UnitAnimator>()?.PlayTargeting();
             UIEvents.OnTargetingStateChanged();
         }
 
@@ -85,6 +86,7 @@ namespace DDD.TNFY.BRAWL
 
             ClearAbilityTargeting();
             RestoreDefaultHighlights(activeUnit);
+            activeUnit?.GetComponent<UnitAnimator>()?.PlayIdle();
             UIEvents.OnTargetingStateChanged();
         }
 
@@ -110,6 +112,7 @@ namespace DDD.TNFY.BRAWL
             if (tile == hoveredTile) return;
 
             hoveredTile = tile;
+            TryUpdateFacingFromTile(activeUnit, hoveredTile);
             var ctx = MakeContext(activeUnit);
             currentAbility.targeting.ShowHoverPreview(ctx, hoveredTile);
         }
@@ -147,6 +150,7 @@ namespace DDD.TNFY.BRAWL
                 Tile newHover = GetHoveredTile(mouseWorldPosition);
                 if (newHover == hoveredTile) return;
                 hoveredTile = newHover;
+                TryUpdateFacingFromTile(activeUnit, hoveredTile);
 
                 var ctx = MakeContext(activeUnit);
                 targeting.OnMouseMoved(ctx, hoveredTile);
@@ -209,6 +213,8 @@ namespace DDD.TNFY.BRAWL
                     GridManager.Instance.ClearAllHighlights();
                     return;
                 }
+
+                TryUpdateFacingFromDirection(activeUnit, aimDir);
 
                 GridManager.Instance.SetHighlightMode(
                     GridManager.HighlightMode.AbilityPreview,
@@ -298,10 +304,10 @@ namespace DDD.TNFY.BRAWL
         {
             return new AbilityContext
             {
-                caster     = activeUnit,
-                ability    = currentAbility,
+                caster = activeUnit,
+                ability = currentAbility,
                 targetTile = targetTile,
-                aimDir     = aimDir
+                aimDir = aimDir
             };
         }
 
@@ -317,6 +323,34 @@ namespace DDD.TNFY.BRAWL
             return grid.GetTileAtPosition(fallbackMouseWorldPosition);
         }
 
-        #endregion
+        /// <summary>
+        /// Faces the unit left or right based on the horizontal component of an aim direction.
+        /// No-op when aimDir.x is zero (vertical aim) so the unit keeps its current facing.
+        /// </summary>
+        private void TryUpdateFacingFromDirection(Unit activeUnit, Vector2Int aimDir)
+        {
+            if (activeUnit == null) return;
+            if (aimDir.x > 0)
+                activeUnit.FaceDirection(Vector2Int.right);
+            else if (aimDir.x < 0)
+                activeUnit.FaceDirection(Vector2Int.left);
+            // aimDir.x == 0 (up/down) — keep current facing unchanged
+        }
+
+        /// <summary>
+        /// Faces the unit toward a target tile based on its horizontal position relative
+        /// to the caster. No-op when the tile is in the same column as the caster.
+        /// </summary>
+        private void TryUpdateFacingFromTile(Unit activeUnit, Tile targetTile)
+        {
+            if (activeUnit == null || targetTile == null) return;
+            float deltaX = targetTile.transform.position.x - activeUnit.transform.position.x;
+            if (deltaX > 0.01f)
+                activeUnit.FaceDirection(Vector2Int.right);
+            else if (deltaX < -0.01f)
+                activeUnit.FaceDirection(Vector2Int.left);
+            // Same column — keep current facing unchanged
+        }
     }
 }
+#endregion

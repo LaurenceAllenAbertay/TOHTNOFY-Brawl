@@ -18,8 +18,8 @@ MonoBehaviour:
   effectColor: {r: 1, g: 1, b: 1, a: 1}
   effectType: 1
   stackingBehavior: 3
-  maxStacks: 3
-  triggerTiming: 0
+  maxStacks: 99
+  triggerTiming: 1
   triggersOnApplication: 0
   applicationVFX: {fileID: 0}
   persistentVFX: {fileID: 0}

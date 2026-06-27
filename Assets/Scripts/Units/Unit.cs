@@ -526,7 +526,20 @@ namespace DDD.TNFY.BRAWL
         {
             if (!canMove) return false;
             if (StatusEffectManager.Instance != null &&
-                StatusEffectManager.Instance.HasStatusEffect(this, StatusEffectType.Ensnared))
+                (StatusEffectManager.Instance.HasStatusEffect(this, StatusEffectType.Ensnared) ||
+                 StatusEffectManager.Instance.HasStatusEffect(this, StatusEffectType.Stuck)))
+                return false;
+            return true;
+        }
+
+        /// <summary>
+        /// Returns false when a status effect prevents this unit from using abilities this turn.
+        /// Checked by CombatManager (player) and AIPlanner (AI) before any ability is selected.
+        /// </summary>
+        public virtual bool CanUseAbilities()
+        {
+            if (StatusEffectManager.Instance != null &&
+                StatusEffectManager.Instance.HasStatusEffect(this, StatusEffectType.Scared))
                 return false;
             return true;
         }

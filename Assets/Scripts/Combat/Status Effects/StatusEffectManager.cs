@@ -218,18 +218,22 @@ namespace DDD.TNFY.BRAWL
             switch (effect.effectData.effectType)
             {
                 case StatusEffectType.Bleeding:
-                    effect.target.ReceiveDamage(Mathf.RoundToInt(effect.effectPower * effect.stackCount));
-                    effect.stackCount = Mathf.Max(0, effect.stackCount - 1);
-                    if (effect.stackCount == 0)
-                        RemoveStatusEffect(effect.target, effect);
+                    // Damage equals the current stack count — grows every tick.
+                    effect.target.ReceiveDamage(effect.stackCount);
+                    // After dealing damage, stacks climb by 1 (snowball).
+                    // Duration expiry via UpdateEffectDurations is the natural end condition.
+                    effect.stackCount = Mathf.Min(effect.stackCount + 1, effect.effectData.maxStacks);
                     break;
 
                 case StatusEffectType.Poison:
-                    // Damage escalates each tick: tick 1 = effectPower, tick 2 = 2x, ..., final tick = initialDuration x.
-                    // initialDuration is stored on the instance so renaming the asset cannot change the formula.
-                    int tickNumber = effect.initialDuration - effect.remainingDuration + 1;
-                    int poisonDamage = Mathf.RoundToInt(effect.effectPower * tickNumber);
-                    effect.target.ReceiveDamage(poisonDamage);
+                    // Damage equals the current stack count — fades every tick.
+                    effect.target.ReceiveDamage(effect.stackCount);
+                    // After dealing damage, stacks fall by 1.
+                    effect.stackCount = Mathf.Max(0, effect.stackCount - 1);
+                    // When stacks hit 0 there is nothing left to deal — remove immediately
+                    // rather than waiting for duration to expire.
+                    if (effect.stackCount == 0)
+                        RemoveStatusEffect(effect.target, effect);
                     break;
 
                 case StatusEffectType.Healthy:
@@ -242,10 +246,26 @@ namespace DDD.TNFY.BRAWL
                     break;
 
                 case StatusEffectType.Shocked:
-                    // Deals flat damage each turn the unit is incapacitated.
-                    // The turn skip itself is enforced in TurnManager.StartNextTurn.
-                    effect.target.ReceiveDamage(Mathf.RoundToInt(effect.effectPower));
-                    Debug.Log($"[Shocked] {effect.target.name} takes {Mathf.RoundToInt(effect.effectPower)} shock damage.");
+                    // Direct damage to the shocked unit.
+                    int shockDamage = Mathf.RoundToInt(effect.effectPower);
+                    effect.target.ReceiveDamage(shockDamage);
+                    Debug.Log($"[Shocked] {effect.target.name} takes {shockDamage} shock damage.");
+
+                    // Discharge arc — deal half damage to allies on directly adjacent tiles.
+                    if (effect.target.currentTile != null && GridManager.Instance != null)
+                    {
+                        int splashDamage = Mathf.Max(1, Mathf.RoundToInt(shockDamage / 2f));
+                        var adjacentTiles = GridManager.Instance.GetAdjacentTiles(effect.target.currentTile);
+                        foreach (var adjTile in adjacentTiles)
+                        {
+                            var adjUnit = adjTile.currentUnit;
+                            if (adjUnit == null || adjUnit.IsBody) continue;
+                            if (!effect.target.IsAllyOf(adjUnit)) continue;
+
+                            adjUnit.ReceiveDamage(splashDamage);
+                            Debug.Log($"[Shocked] {adjUnit.name} takes {splashDamage} arc splash damage.");
+                        }
+                    }
                     break;
 
                     // Add more cases as needed
@@ -300,7 +320,9 @@ namespace DDD.TNFY.BRAWL
                     return existing;
 
                 case StatusEffectData.StackingBehavior.AddStacks:
-                    existing.stackCount = Mathf.Min(existing.stackCount + 1, effectData.maxStacks);
+                    existing.stackCount = Mathf.Min(
+                        existing.stackCount + Mathf.Max(1, Mathf.RoundToInt(power)),
+                        effectData.maxStacks);
                     existing.RefreshDuration(duration);
                     return existing;
 
@@ -362,11 +384,19 @@ namespace DDD.TNFY.BRAWL
                     // If fully blocked, damage is negated and the unit stays put.
                     break;
                 case StatusEffectType.Shocked:
-                    // Turn skip is enforced in TurnManager.StartNextTurn.
-                    // Damage fires in TriggerEffect at StartOfTurn — nothing to apply immediately.
+                    // Damage and adjacent ally arc fire in TriggerEffect at EndOfTurn.
+                    // Nothing to apply immediately.
                     break;
                 case StatusEffectType.Dizzy:
                     // Random ability execution is handled in TurnManager.StartNextTurn.
+                    // Nothing to apply immediately.
+                    break;
+                case StatusEffectType.Stuck:
+                    // Behavioural effect: CanMove() reads the effect list live.
+                    // Nothing to apply immediately.
+                    break;
+                case StatusEffectType.Scared:
+                    // Behavioural effect: CanUseAbilities() reads the effect list live.
                     // Nothing to apply immediately.
                     break;
             }
@@ -428,10 +458,16 @@ namespace DDD.TNFY.BRAWL
                     }
                     break;
                 case StatusEffectType.Shocked:
-                    // Nothing to reverse: damage and turn-skip are both transient per-turn effects.
+                    // Nothing to reverse: damage and ally arc are both transient per-turn effects.
                     break;
                 case StatusEffectType.Dizzy:
                     // Nothing to reverse: random-ability behaviour is transient per-turn.
+                    break;
+                case StatusEffectType.Stuck:
+                    // Nothing to reverse: CanMove() reads the effect list live.
+                    break;
+                case StatusEffectType.Scared:
+                    // Nothing to reverse: CanUseAbilities() reads the effect list live.
                     break;
             }
 
