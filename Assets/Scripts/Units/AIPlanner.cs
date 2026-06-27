@@ -8,10 +8,19 @@ namespace DDD.TNFY.BRAWL
     /// Decides what an AI unit should do this turn.
     ///
     /// Priority order:
-    ///   1. Kill shot (from current tile, then from a tile we can walk or jump to)
-    ///   2. Best damage opportunity (same two-pass order)
-    ///   3. Useful self-buff (only when no attack is available)
-    ///   4. Approach the nearest target (walk or jump, whichever gets closer)
+    ///   1. Kill shot  — scans all valid targets; prefers the most-wounded (lowest HP%) first.
+    ///                   Never skipped — an AI will always take a kill it can see.
+    ///   2. Attack anchor — tries every usable damaging ability + position against the
+    ///                   weighted-random anchor target selected by PickWeightedTarget.
+    ///   3. Useful self-buff (only when no attack is possible this turn).
+    ///   4. Teleport toward the anchor (repositioning ability).
+    ///   5. Approach the anchor (walk or jump, whichever scores higher).
+    ///
+    /// Target selection (PickWeightedTarget):
+    ///   Considers the N closest valid targets (targetCandidateCount, designer-tunable).
+    ///   Each candidate's selection weight is halved for every teammate whose nearest
+    ///   candidate is that same unit — this naturally spreads AI focus across the player
+    ///   team and prevents dogpiling on a single target.
     ///
     /// aggressionBias: 1 = always charge, 0 = pick safest tile that still advances.
     /// lookAheadSteps: 1 = score this turn only, 2 = also reward tiles in ability range next turn.
@@ -23,22 +32,28 @@ namespace DDD.TNFY.BRAWL
         private readonly Unit  unit;
         private readonly float aggressionBias;
         private readonly int   lookAheadSteps;
-        private readonly System.Func<Unit, bool> canTargetUnit;
+        private readonly int   targetCandidateCount;
+        private readonly System.Func<Unit, bool>  canTargetUnit;
+        private readonly System.Func<List<Unit>>  getTeammates;
         private readonly AIDebugLogger logger;
 
         public AIPlanner(
             Unit unit,
             float aggressionBias,
             int lookAheadSteps,
+            int targetCandidateCount,
             System.Func<Unit, bool> canTargetUnit,
             System.Func<Unit, bool> isAlly,
+            System.Func<List<Unit>> getTeammates,
             AIDebugLogger logger)
         {
-            this.unit           = unit;
-            this.aggressionBias = aggressionBias;
-            this.lookAheadSteps = lookAheadSteps;
-            this.canTargetUnit  = canTargetUnit;
-            this.logger         = logger;
+            this.unit                 = unit;
+            this.aggressionBias       = aggressionBias;
+            this.lookAheadSteps       = lookAheadSteps;
+            this.targetCandidateCount = targetCandidateCount;
+            this.canTargetUnit        = canTargetUnit;
+            this.getTeammates         = getTeammates;
+            this.logger               = logger;
         }
 
         // ── Public entry point ────────────────────────────────────────────────────
@@ -49,11 +64,16 @@ namespace DDD.TNFY.BRAWL
             var reachableTiles = GetReachableTiles();
             var jumpableTiles  = GetJumpableTiles();
 
+            // Pick the anchor target once — every non-killshot stage works toward this unit.
+            // Kill shot remains a global scan so the AI always takes any available kill,
+            // regardless of which target was randomly selected as the anchor.
+            var anchor = PickWeightedTarget(targets);
+
             var plan = TryFindKillShot(abilities, targets, reachableTiles, jumpableTiles)
-                    ?? TryFindBestDamage(abilities, targets, reachableTiles, jumpableTiles)
+                    ?? TryAttackAnchor(abilities, anchor, reachableTiles, jumpableTiles)
                     ?? TryFindUsefulBuff(abilities)
-                    ?? TryTeleportToPosition(abilities, targets, reachableTiles, jumpableTiles)
-                    ?? TryApproach(targets, reachableTiles, jumpableTiles, abilities);
+                    ?? TryTeleportToPosition(abilities, anchor, reachableTiles, jumpableTiles)
+                    ?? TryApproach(anchor, reachableTiles, jumpableTiles, abilities);
 
             if (plan != null)
                 logger?.LogSelectionReason(plan.debugReason);
@@ -67,8 +87,12 @@ namespace DDD.TNFY.BRAWL
 
         private ActionPlan TryFindKillShot(Ability[] abilities, List<Unit> targets, List<Tile> reachableTiles, List<Tile> jumpableTiles)
         {
+            // Prefer finishing off the most-wounded target first (HP% so it scales correctly
+            // across units with different max health values).
+            var ordered = targets.OrderBy(t => HealthPct(t)).ToList();
+
             foreach (var (ability, slot) in UsableAbilities(abilities))
-            foreach (var target in targets)
+            foreach (var target in ordered)
             {
                 if (!canTargetUnit(target)) continue;
                 if (SimulateDamage(ability, target) < target.currentHealth) continue;
@@ -95,56 +119,58 @@ namespace DDD.TNFY.BRAWL
             return null;
         }
 
-        // ── Stage 2: Best damage ──────────────────────────────────────────────────
+        // ── Stage 2: Attack anchor target ────────────────────────────────────────
 
-        private ActionPlan TryFindBestDamage(Ability[] abilities, List<Unit> targets, List<Tile> reachableTiles, List<Tile> jumpableTiles)
+        /// <summary>
+        /// Tries every usable damaging ability and every reachable/jumpable tile against the
+        /// pre-selected anchor target. Returns the highest-damage valid plan found.
+        /// Target selection is handled upstream by PickWeightedTarget — this stage only
+        /// decides how best to execute against the chosen anchor.
+        /// </summary>
+        private ActionPlan TryAttackAnchor(Ability[] abilities, Unit anchor, List<Tile> reachableTiles, List<Tile> jumpableTiles)
         {
+            if (anchor == null) return null;
+
             ActionPlan best    = null;
             int        bestDmg = 0;
-            int        bestHp  = int.MaxValue;
 
             foreach (var (ability, slot) in UsableAbilities(abilities))
             {
                 if (!DealsDamage(ability)) continue;
+                int dmg = SimulateDamage(ability, anchor);
+                if (dmg <= 0) continue;
 
-                foreach (var target in targets)
+                // Already in range.
+                var plan = BuildAbilityPlan(ability, slot, unit.currentTile, anchor, isAbilityFirst: true);
+                if (plan != null && dmg > bestDmg)
                 {
-                    if (!canTargetUnit(target)) continue;
-                    int dmg = SimulateDamage(ability, target);
-                    if (dmg <= 0) continue;
+                    best = plan; bestDmg = dmg;
+                    best.debugReason = "Attack anchor (no move)";
+                }
 
-                    // Already in range.
-                    var plan = BuildAbilityPlan(ability, slot, unit.currentTile, target, isAbilityFirst: true);
-                    if (plan != null && IsBetter(dmg, target.currentHealth, bestDmg, bestHp))
+                // Walk then attack.
+                foreach (var tile in reachableTiles)
+                {
+                    if (tile == unit.currentTile) continue;
+                    plan = BuildAbilityPlan(ability, slot, tile, anchor, isAbilityFirst: false);
+                    if (plan != null && dmg > bestDmg)
                     {
-                        best = plan; bestDmg = dmg; bestHp = target.currentHealth;
-                        best.debugReason = "Best damage (no move)";
+                        plan.movementTarget = tile;
+                        best = plan; bestDmg = dmg;
+                        best.debugReason = "Attack anchor (after walk)";
                     }
+                }
 
-                    // Walk then attack.
-                    foreach (var tile in reachableTiles)
+                // Jump then attack.
+                foreach (var tile in jumpableTiles)
+                {
+                    plan = BuildAbilityPlan(ability, slot, tile, anchor, isAbilityFirst: false);
+                    if (plan != null && dmg > bestDmg)
                     {
-                        if (tile == unit.currentTile) continue;
-                        plan = BuildAbilityPlan(ability, slot, tile, target, isAbilityFirst: false);
-                        if (plan != null && IsBetter(dmg, target.currentHealth, bestDmg, bestHp))
-                        {
-                            plan.movementTarget = tile;
-                            best = plan; bestDmg = dmg; bestHp = target.currentHealth;
-                            best.debugReason = "Best damage (after walk)";
-                        }
-                    }
-
-                    // Jump then attack.
-                    foreach (var tile in jumpableTiles)
-                    {
-                        plan = BuildAbilityPlan(ability, slot, tile, target, isAbilityFirst: false);
-                        if (plan != null && IsBetter(dmg, target.currentHealth, bestDmg, bestHp))
-                        {
-                            plan.movementTarget = tile;
-                            plan.isJump = true;
-                            best = plan; bestDmg = dmg; bestHp = target.currentHealth;
-                            best.debugReason = "Best damage (after jump)";
-                        }
+                        plan.movementTarget = tile;
+                        plan.isJump = true;
+                        best = plan; bestDmg = dmg;
+                        best.debugReason = "Attack anchor (after jump)";
                     }
                 }
             }
@@ -181,19 +207,13 @@ namespace DDD.TNFY.BRAWL
 
         /// <summary>
         /// If the unit has a teleport ability and no damaging action was possible this turn,
-        /// use the teleport to reposition closer to a target (or into attack range for next turn).
-        /// Evaluates three cases in one pass and keeps the single best scoring destination:
-        ///   A) Teleport from current tile (no walk).
-        ///   B) Walk to a reachable tile first, then teleport from there.
-        ///   C) Jump to a jumpable tile first, then teleport from there.
-        /// Only fires when stages 1-3 all returned null, so the unit never wastes a teleport
-        /// when it could be attacking.
+        /// uses the teleport to reposition closer to the anchor target.
+        /// Evaluates three cases: teleport from current tile, walk-then-teleport, jump-then-teleport.
+        /// Only fires when stages 1–3 all returned null so the unit never wastes a
+        /// teleport when it could be attacking.
         /// </summary>
-        private ActionPlan TryTeleportToPosition(Ability[] abilities, List<Unit> targets, List<Tile> reachableTiles, List<Tile> jumpableTiles)
+        private ActionPlan TryTeleportToPosition(Ability[] abilities, Unit anchor, List<Tile> reachableTiles, List<Tile> jumpableTiles)
         {
-            if (targets.Count == 0) return null;
-
-            var anchor = GetNearest(targets);
             if (anchor?.currentTile == null) return null;
 
             ActionPlan best      = null;
@@ -231,7 +251,7 @@ namespace DDD.TNFY.BRAWL
                             // that would waste the ability on movement normal locomotion already covers.
                             if (reachableTiles.Contains(tile) || jumpableTiles.Contains(tile)) continue;
 
-                            float score = ScoreTile(tile, anchor.currentTile, abilities, targets, maxDist);
+                            float score = ScoreTile(tile, anchor.currentTile, abilities, anchor, maxDist);
                             if (score > bestScore)
                             {
                                 bestScore = score;
@@ -283,11 +303,8 @@ namespace DDD.TNFY.BRAWL
 
         // ── Stage 5: Approach ─────────────────────────────────────────────────────
 
-        private ActionPlan TryApproach(List<Unit> targets, List<Tile> reachableTiles, List<Tile> jumpableTiles, Ability[] abilities)
+        private ActionPlan TryApproach(Unit anchor, List<Tile> reachableTiles, List<Tile> jumpableTiles, Ability[] abilities)
         {
-            if (targets.Count == 0) return null;
-
-            var anchor = GetNearest(targets);
             if (anchor?.currentTile == null) return null;
 
             Tile  bestTile   = null;
@@ -299,14 +316,14 @@ namespace DDD.TNFY.BRAWL
             foreach (var tile in reachableTiles)
             {
                 if (tile == unit.currentTile) continue;
-                float score = ScoreTile(tile, anchor.currentTile, abilities, targets, maxDist);
+                float score = ScoreTile(tile, anchor.currentTile, abilities, anchor, maxDist);
                 if (score > bestScore) { bestScore = score; bestTile = tile; bestIsJump = false; }
             }
 
             // Score jump tiles — only preferred when they score better than any walk tile.
             foreach (var tile in jumpableTiles)
             {
-                float score = ScoreTile(tile, anchor.currentTile, abilities, targets, maxDist);
+                float score = ScoreTile(tile, anchor.currentTile, abilities, anchor, maxDist);
                 if (score > bestScore) { bestScore = score; bestTile = tile; bestIsJump = true; }
             }
 
@@ -316,17 +333,17 @@ namespace DDD.TNFY.BRAWL
             {
                 movementTarget = bestTile,
                 isJump         = bestIsJump,
-                debugReason    = bestIsJump ? "Approaching target (jump)" : "Approaching target"
+                debugReason    = bestIsJump ? "Approaching anchor (jump)" : "Approaching anchor"
             };
         }
 
-        private float ScoreTile(Tile tile, Tile anchorTile, Ability[] abilities, List<Unit> targets, int maxDist)
+        private float ScoreTile(Tile tile, Tile anchorTile, Ability[] abilities, Unit anchor, int maxDist)
         {
             float closeness = 1f - Mathf.Clamp01((float)GridManager.Instance.GetGridDistance(tile, anchorTile, true) / maxDist);
             float danger    = DangerScore(tile);
             float score     = (closeness * aggressionBias) - (danger * (1f - aggressionBias));
 
-            if (lookAheadSteps >= 2 && AnyDamageAbilityReachesFromTile(tile, abilities, targets))
+            if (lookAheadSteps >= 2 && AnyDamageAbilityReachesAnchorFromTile(tile, abilities, anchor))
                 score += 0.3f;
 
             return score;
@@ -455,10 +472,95 @@ namespace DDD.TNFY.BRAWL
             return null;
         }
 
+        // ── Target selection ──────────────────────────────────────────────────────
+
+        /// <summary>
+        /// Picks a target from the N closest valid candidates using weighted random selection.
+        ///
+        /// Weight per candidate starts at 1.0 and is halved for each teammate whose nearest
+        /// candidate is the same unit. This means a target that multiple teammates would
+        /// naturally gravitate toward becomes less likely to be picked — spreading AI focus
+        /// across the player team without any explicit coordination logic.
+        ///
+        /// If all candidates are equally pressured, the weights remain proportional and the
+        /// selection is uniformly random among the N closest. Returns the first target in
+        /// the list as a safety fallback if the tile data is missing.
+        /// </summary>
+        private Unit PickWeightedTarget(List<Unit> targets)
+        {
+            if (targets.Count == 0) return null;
+            if (targets.Count == 1) return targets[0];
+            if (unit.currentTile == null) return targets[0];
+
+            // Gather the N closest valid candidates.
+            var candidates = targets
+                .Where(t => t.currentTile != null)
+                .OrderBy(t => GridManager.Instance.GetGridDistance(unit.currentTile, t.currentTile, true))
+                .Take(targetCandidateCount)
+                .ToList();
+
+            if (candidates.Count == 0) return targets[0];
+            if (candidates.Count == 1) return candidates[0];
+
+            // Weight each candidate: halve per teammate already gravitating toward it.
+            var   teammates = getTeammates?.Invoke() ?? new List<Unit>();
+            var   weights   = new float[candidates.Count];
+            for (int i = 0; i < candidates.Count; i++)
+                weights[i] = 1f / Mathf.Pow(2f, CountTeammatePressure(candidates[i], candidates, teammates));
+
+            return WeightedRandom(candidates, weights);
+        }
+
+        /// <summary>
+        /// Returns how many teammates consider <paramref name="candidate"/> their nearest target
+        /// among the current candidate pool. Used to reduce weight and prevent dogpiling.
+        /// </summary>
+        private int CountTeammatePressure(Unit candidate, List<Unit> candidates, List<Unit> teammates)
+        {
+            int count = 0;
+            foreach (var teammate in teammates)
+            {
+                if (teammate?.currentTile == null) continue;
+
+                // Find which candidate is closest to this teammate.
+                Unit nearestToTeammate = null;
+                int  nearestDist       = int.MaxValue;
+                foreach (var c in candidates)
+                {
+                    if (c?.currentTile == null) continue;
+                    int d = GridManager.Instance.GetGridDistance(teammate.currentTile, c.currentTile, true);
+                    if (d < nearestDist) { nearestDist = d; nearestToTeammate = c; }
+                }
+
+                if (nearestToTeammate == candidate) count++;
+            }
+            return count;
+        }
+
+        /// <summary>Weighted random selection — returns one candidate proportional to its weight.</summary>
+        private static Unit WeightedRandom(List<Unit> candidates, float[] weights)
+        {
+            float total = 0f;
+            foreach (var w in weights) total += w;
+            if (total <= 0f) return candidates[0];
+
+            float roll       = Random.Range(0f, total);
+            float cumulative = 0f;
+            for (int i = 0; i < candidates.Count; i++)
+            {
+                cumulative += weights[i];
+                if (roll <= cumulative) return candidates[i];
+            }
+            return candidates[candidates.Count - 1]; // float precision safety
+        }
+
         // ── Helpers ───────────────────────────────────────────────────────────────
 
-        private bool IsBetter(int dmg, int hp, int bestDmg, int bestHp)
-            => dmg > bestDmg || (dmg == bestDmg && hp < bestHp);
+        /// <summary>Returns the unit's current health as a 0–1 fraction of its max health.</summary>
+        private float HealthPct(Unit u)
+            => u?.characterData != null && u.characterData.maxHealth > 0
+                ? u.currentHealth / (float)u.characterData.maxHealth
+                : 1f;
 
         private int SimulateDamage(Ability ability, Unit target)
         {
@@ -499,16 +601,14 @@ namespace DDD.TNFY.BRAWL
             return Mathf.Clamp01(threats / 4f);
         }
 
-        private bool AnyDamageAbilityReachesFromTile(Tile tile, Ability[] abilities, List<Unit> targets)
+        private bool AnyDamageAbilityReachesAnchorFromTile(Tile tile, Ability[] abilities, Unit anchor)
         {
+            if (anchor == null) return false;
             foreach (var (ability, _) in UsableAbilities(abilities))
             {
                 if (!DealsDamage(ability)) continue;
-                foreach (var target in targets)
-                {
-                    if (BuildAbilityPlan(ability, -1, tile, target, false) != null)
-                        return true;
-                }
+                if (BuildAbilityPlan(ability, -1, tile, anchor, false) != null)
+                    return true;
             }
             return false;
         }
@@ -559,18 +659,6 @@ namespace DDD.TNFY.BRAWL
             }
 
             return result;
-        }
-
-        private Unit GetNearest(List<Unit> targets)
-        {
-            Unit nearest = null; int nearestDist = int.MaxValue;
-            foreach (var t in targets)
-            {
-                if (t?.currentTile == null) continue;
-                int d = GridManager.Instance.GetGridDistance(unit.currentTile, t.currentTile, true);
-                if (d < nearestDist) { nearestDist = d; nearest = t; }
-            }
-            return nearest;
         }
 
         private Vector2Int DirectionToward(Tile from, Tile to)

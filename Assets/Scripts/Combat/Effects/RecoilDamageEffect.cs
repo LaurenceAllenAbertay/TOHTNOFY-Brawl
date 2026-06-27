@@ -55,6 +55,9 @@ namespace DDD.TNFY.BRAWL
             // Notify UI — direct subtract bypasses ReceiveDamage so we fire the event manually.
             Unit.NotifyHealthChanged(ctx.caster);
 
+            // Notify damage-response systems (e.g. screen shake) — same pattern as NotifyHealthChanged.
+            Unit.NotifyDamageDealt(ctx.caster, recoil);
+
             if (ctx.caster.currentHealth <= 0)
             {
                 Debug.Log($"[RecoilDamageEffect] {ctx.caster.name} was defeated by recoil.");

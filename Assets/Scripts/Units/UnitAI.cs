@@ -42,6 +42,13 @@ namespace DDD.TNFY.BRAWL
         [Range(1, 2)]
         [SerializeField] private int lookAheadSteps = 1;
 
+        [Tooltip("How many of the nearest valid targets to consider when selecting who to focus " +
+                 "this turn. A weighted random pick is made among these candidates, with weight " +
+                 "reduced per teammate already gravitating toward the same target — preventing " +
+                 "the whole team from piling onto one player. 1 = always pick the closest.")]
+        [Min(1)]
+        [SerializeField] private int targetCandidateCount = 3;
+
         [Header("Timing")]
         [Tooltip("Pause before the unit begins evaluating — gives the player time to read the board.")]
         [SerializeField] private float thinkingDelay = 1.5f;
@@ -94,8 +101,8 @@ namespace DDD.TNFY.BRAWL
 
             RegisterWithTeam();
 
-            TurnManager.OnTurnStarted           += OnTurnStarted;
-            TurnManager.OnTurnEnded             += OnTurnEnded;
+            TurnManager.OnTurnStarted                 += OnTurnStarted;
+            TurnManager.OnTurnEnded                   += OnTurnEnded;
             StatusEffectManager.OnStatusEffectApplied += OnStatusEffectApplied;
         }
 
@@ -105,7 +112,7 @@ namespace DDD.TNFY.BRAWL
             jumpSystem  = FindAnyObjectByType<JumpSystem>();
 
             logger  = new AIDebugLogger(unit, enableDebugLogging, logDetailedScoring, topActionsToLog);
-            planner = new AIPlanner(unit, aggressionBias, lookAheadSteps, CanTargetUnit, IsAlly, logger);
+            planner = new AIPlanner(unit, aggressionBias, lookAheadSteps, targetCandidateCount, CanTargetUnit, IsAlly, GetTeammateUnits, logger);
 
             executor = GetComponent<AIExecutor>();
             if (executor == null)
@@ -353,6 +360,23 @@ namespace DDD.TNFY.BRAWL
             teamGroups[teamId].Remove(this);
             if (teamGroups[teamId].Count == 0)
                 teamGroups.Remove(teamId);
+        }
+
+        /// <summary>
+        /// Returns the Unit components of all living teammates on this AI's team.
+        /// Passed to AIPlanner as a delegate so it can measure teammate targeting pressure
+        /// without needing a direct reference to UnitAI or the team registry.
+        /// </summary>
+        private List<Unit> GetTeammateUnits()
+        {
+            var result = new List<Unit>();
+            if (!teamGroups.TryGetValue(teamId, out var teammates)) return result;
+            foreach (var ai in teammates)
+            {
+                if (ai == this || ai.unit == null || ai.unit.IsDead) continue;
+                result.Add(ai.unit);
+            }
+            return result;
         }
 
         #endregion

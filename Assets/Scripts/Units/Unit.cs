@@ -391,6 +391,25 @@ namespace DDD.TNFY.BRAWL
             OnHealthChanged?.Invoke(unit);
         }
 
+        /// <summary>
+        /// Fired after damage is committed to health. Passes (victim, finalDamageAmount).
+        /// Only fires when damage actually lands — blocked by Shielded, Immune, Guarded,
+        /// and Alerted, and clamped to a minimum of 1 via DamageEffect before reaching here.
+        /// For damage paths that bypass ReceiveDamage (e.g. recoil in RecoilDamageEffect),
+        /// callers must invoke NotifyDamageDealt manually — see that class for the pattern.
+        /// </summary>
+        public static event System.Action<Unit, int> OnDamageDealt;
+
+        /// <summary>
+        /// Fires OnDamageDealt for the given unit and amount. Use this from outside the Unit
+        /// class when health is mutated directly without going through ReceiveDamage,
+        /// following the same pattern as NotifyHealthChanged.
+        /// </summary>
+        public static void NotifyDamageDealt(Unit victim, int amount)
+        {
+            OnDamageDealt?.Invoke(victim, amount);
+        }
+
         public virtual void ReceiveDamage(int amount, Unit attacker = null, Ability sourceAbility = null)
         {
             if (IsDead) return;
@@ -454,6 +473,7 @@ namespace DDD.TNFY.BRAWL
             currentHealth -= amount;
             Debug.Log($"{name} took {amount} damage. HP now {currentHealth}");
 
+            OnDamageDealt?.Invoke(this, amount);
             OnHealthChanged?.Invoke(this);
 
             if (currentHealth <= 0)

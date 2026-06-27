@@ -6334,6 +6334,9 @@ MonoBehaviour:
   boundsBox: {fileID: 400907951}
   boundsPadding: 1
   visualizeBounds: 0
+  shakeMaxMagnitude: 1
+  shakeMaxDuration: 0.6
+  shakeDamageReference: 100
 --- !u!114 &519420034
 MonoBehaviour:
   m_ObjectHideFlags: 0
