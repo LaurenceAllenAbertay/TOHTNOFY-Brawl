@@ -25,8 +25,6 @@ namespace DDD.TNFY.BRAWL
         [SerializeField] private GameObject turnUI;
         [SerializeField] private RectTransform turnUIRectTransform;
         [SerializeField] private Button endTurnButton;
-        [Tooltip("The child Image whose colour is tinted to match the active unit. " +
-                 "Should NOT be the Button's own Image component.")]
         [SerializeField] private Image endTurnButtonColourIndicator;
 
         [Header("=== World UI Settings ===")]

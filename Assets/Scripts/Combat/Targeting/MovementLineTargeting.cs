@@ -6,23 +6,12 @@ namespace DDD.TNFY.BRAWL
     [CreateAssetMenu(menuName = "TNFY Brawl/Targeting/Movement Line")]
     public class MovementLineTargeting : AbilityTargeting
     {
-        // ── Input behaviour ───────────────────────────────────────────────────────
-        // Movement line (charge) is aimed by mouse direction — preview updates on mouse move,
-        // confirms on mouse click. No enter preview (direction not yet chosen).
-
         public override bool UsesDirectionalInput => true;
-
-        [Header("Direction")]
-        [Tooltip("If true, this ability can only be aimed left or right (horizontal only)")]
+        
         public bool horizontalOnly = false;
-
-        [Header("Charge Behavior")]
-        [Tooltip("If true, stops traversal at first occupied tile")]
+        
         public bool stopAtFirstUnit = true;
-
-        [Tooltip("If true, the ability cannot be used if the final tile in the traversal is occupied. " +
-                 "SelectTargets returns empty when this check fails, blocking execution. " +
-                 "Use for abilities like Kalpoeria where the landing spot must be free.")]
+        
         public bool requireEmptyDestination = false;
 
         public override bool IsValidAimDirection(Vector2Int aimDir)
@@ -40,15 +29,14 @@ namespace DDD.TNFY.BRAWL
             if (start == null) return tiles;
 
             var dir = ctx.aimDir;
-
-            // Restrict direction if horizontalOnly is enabled
+            
             if (horizontalOnly)
             {
                 if (dir == Vector2Int.up || dir == Vector2Int.down)
-                    return tiles; // Return empty list — ability won't execute vertically
+                    return tiles;
 
                 if (dir != Vector2Int.left && dir != Vector2Int.right)
-                    dir = Vector2Int.right; // Fallback for unexpected directions
+                    dir = Vector2Int.right; 
             }
 
             int max = Mathf.Max(1, ctx.EffectiveRange);
@@ -59,53 +47,40 @@ namespace DDD.TNFY.BRAWL
 
             for (int i = 1; i <= max; i++)
             {
-                // Calculate next position
                 currentPos += new Vector3(dir.x * tileSpacing.x, 0, dir.y * tileSpacing.z);
-
-                // Try to get tile at this position
+                
                 Tile nextTile = GridManager.Instance.GetTileAtPosition(currentPos);
 
                 if (nextTile == null)
                 {
-                    // No tile exists at this position
                     if (!affectsOverGaps)
                     {
-                        break; // Can't continue over empty space
+                        break; 
                     }
-                    // Otherwise, skip this position and continue looking
                     continue;
                 }
-
-                // Check if blocked by walls
+                
                 if (!affectsThroughWalls)
                 {
                     Tile checkFromTile = lastValidTile ?? start;
                     if (IsBlockedByWall(checkFromTile, nextTile))
                     {
-                        break; // Wall blocks the charge
+                        break;
                     }
                 }
-
-                // Check if we can traverse this tile
+                
                 if (!nextTile.passableTerrain && !affectsOverGaps)
                 {
-                    break; // Can't continue past impassable terrain
+                    break;
                 }
-
-                // Add the tile to traversal
+                
                 tiles.Add(nextTile);
-
-                // Update last valid tile for wall checking
+                
                 if (nextTile.passableTerrain)
                 {
                     lastValidTile = nextTile;
                 }
-
-                // Stop at first occupied tile if configured to do so.
-                // This is a physical traversal check — any occupied tile blocks the charge
-                // path, regardless of whether the occupant is a valid hit target.
-                // A body is not hittable, but it IS a physical obstacle; a charge cannot
-                // pass through it to hit a living unit standing behind it.
+                
                 if (stopAtFirstUnit && nextTile.occupied && nextTile.currentUnit != ctx.caster)
                 {
                     break;
@@ -122,17 +97,13 @@ namespace DDD.TNFY.BRAWL
 
             var tiles = GetTraversal(ctx);
 
-            // If the destination must be empty and the final tile in the path is occupied,
-            // return an empty target list to block execution entirely (Ability.Execute checks
-            // targets.Count == 0 && !canExecuteWithoutTargets).
             if (requireEmptyDestination && tiles.Count > 0)
             {
                 var destination = tiles[tiles.Count - 1];
                 if (destination.occupied && destination.currentUnit != ctx.caster)
                     return result;
             }
-
-            // Collect all valid targets in the path
+            
             foreach (var tile in tiles)
             {
                 var unit = tile.currentUnit;
@@ -160,30 +131,18 @@ namespace DDD.TNFY.BRAWL
                 }
                 else
                 {
-                    // The tile is occupied by a unit we cannot hit (e.g. a body when
-                    // canTargetNeutral is false). Physically the tile is still blocked —
-                    // the charge cannot pass through it to hit a unit behind it.
-                    // Always stop here regardless of stopAtFirstUnit.
                     break;
                 }
             }
 
             return result;
         }
-
-        /// <summary>
-        /// Calculate where the caster should move to based on charge settings.
-        /// This is called by ChargeEffect to determine the movement destination.
-        /// </summary>
+        
         public Tile GetMovementDestination(AbilityContext ctx, IReadOnlyList<Unit> targets)
         {
-            // Note: The ChargeEffect will have its own chargeUntilBlocked and moveToEnd settings
-            // We just provide the traversal tiles and let the effect decide where to stop
             var tiles = GetTraversal(ctx);
             if (tiles.Count == 0) return ctx.caster.currentTile;
-
-            // For now, just return the last valid passable tile in the traversal
-            // The ChargeEffect should handle the actual logic based on its settings
+            
             for (int i = tiles.Count - 1; i >= 0; i--)
             {
                 if (tiles[i].passableTerrain && !tiles[i].occupied)

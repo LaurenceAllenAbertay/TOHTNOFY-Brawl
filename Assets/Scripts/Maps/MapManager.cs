@@ -31,8 +31,6 @@ namespace DDD.TNFY.BRAWL
                 Debug.LogWarning("No map settings assigned!");
                 return;
             }
-
-            // You can add more settings here
         }
     }
 }

@@ -4,13 +4,6 @@ using UnityEngine;
 
 namespace DDD.TNFY.BRAWL
 {
-    /// <summary>
-    /// Singleton that owns all unit movement animation.
-    /// CombatManager calls ExecuteAnimatedMovement for player movement and provides
-    /// onMovementStarted / onMovementComplete callbacks to manage its own state flags.
-    /// UnitAI calls ExecuteAnimatedMovement directly (without callbacks) for AI movement.
-    /// Attach to the same manager GameObject as CombatManager.
-    /// </summary>
     public class UnitMovementController : MonoBehaviour
     {
         public static UnitMovementController Instance { get; private set; }
@@ -36,16 +29,7 @@ namespace DDD.TNFY.BRAWL
         }
 
         #region Public API
-
-        /// <summary>
-        /// Animates movingUnit along the supplied waypoints to destination.
-        /// </summary>
-        /// <param name="movingUnit">The unit to move.</param>
-        /// <param name="destination">Final logical tile.</param>
-        /// <param name="waypoints">Pre-computed path (optimised). If null a path is calculated internally.</param>
-        /// <param name="followCameraForAI">True for enemy units whose movement the player should watch.</param>
-        /// <param name="onMovementStarted">Optional callback invoked just before animation begins.</param>
-        /// <param name="onMovementComplete">Optional callback invoked after animation and tile update finish.</param>
+        
         public IEnumerator ExecuteAnimatedMovement(
             Unit movingUnit,
             Tile destination,
@@ -55,11 +39,9 @@ namespace DDD.TNFY.BRAWL
             System.Action onMovementComplete = null)
         {
             if (movingUnit == null || destination == null) yield break;
-
-            // Capture the origin tile before movement begins — used for final facing on single-step paths.
+            
             Tile originTile = movingUnit.currentTile;
-
-            // Build path if not provided
+            
             List<Tile> pathToUse = waypoints;
             if (pathToUse == null || pathToUse.Count == 0)
             {
@@ -85,11 +67,7 @@ namespace DDD.TNFY.BRAWL
                 unitAnimator.PlayIdle();
 
             movingUnit.SetCurrentTile(destination);
-
-            // Persist the final facing direction through FaceDirection so currentFacing
-            // stays in sync with the flipX that UpdateSpriteFacing set during the walk.
-            // NOTE: Only the X axis is checked here intentionally — units have left/right
-            // facing only. North/South movement does not update facing by design.
+            
             if (pathToUse.Count >= 2)
             {
                 Vector3 secondLast = pathToUse[pathToUse.Count - 2].transform.position;
@@ -100,8 +78,6 @@ namespace DDD.TNFY.BRAWL
             }
             else if (pathToUse.Count == 1)
             {
-                // Single-step path: use the captured origin tile so we aren't reading
-                // a position that SetCurrentTile has already snapped to the destination.
                 float dx = pathToUse[0].transform.position.x - originTile.transform.position.x;
                 if (Mathf.Abs(dx) > 0.01f)
                     movingUnit.FaceDirection(dx > 0 ? Vector2Int.right : Vector2Int.left);
@@ -164,7 +140,7 @@ namespace DDD.TNFY.BRAWL
                 cameraStartPos = cameraController.transform.position;
                 Vector3 finalPos = waypoints[waypoints.Count - 1].transform.position;
                 cameraTargetPos = cameraController.UnitFocusPosition(movingUnit);
-                // Use the final waypoint position directly rather than the unit's current tile
+
                 cameraTargetPos = cameraController.ClampToBounds(new Vector3(
                     finalPos.x,
                     finalPos.y + 2f,
@@ -231,7 +207,7 @@ namespace DDD.TNFY.BRAWL
         {
             if (sr == null) return;
             Vector3 dir = (to - from).normalized;
-            // Source art faces left — flip when moving right, not left.
+            
             if (Mathf.Abs(dir.x) > 0.1f)
                 sr.flipX = dir.x > 0;
         }

@@ -3,12 +3,6 @@ using UnityEngine;
 
 namespace DDD.TNFY.BRAWL
 {
-    /// <summary>
-    /// Singleton responsible for instantiating all combat visual effects.
-    /// AbilitySequencer, ChargeEffect, and any other system that needs to
-    /// spawn cast or hit VFX should call this instead of calling Instantiate directly.
-    /// Attach this component to a persistent manager GameObject in the scene.
-    /// </summary>
     public class CombatVFXManager : MonoBehaviour
     {
         public static CombatVFXManager Instance { get; private set; }
@@ -56,11 +50,7 @@ namespace DDD.TNFY.BRAWL
 
             Destroy(vfx, 2f);
         }
-
-        /// <summary>
-        /// Spawns the cast effect prefab at the caster's position, applying
-        /// directional mirroring and optional parenting as configured on the ability.
-        /// </summary>
+        
         public void SpawnCastEffect(AbilityContext ctx, Transform casterTransform)
         {
             if (ctx?.ability == null || casterTransform == null) return;
@@ -99,11 +89,6 @@ namespace DDD.TNFY.BRAWL
                 Debug.Log($"[CombatVFXManager] Spawned cast effect for {ability.abilityName}");
         }
 
-        /// <summary>
-        /// Spawns the hit effect prefab on each tile in the list that has no unit on it.
-        /// Used when canExecuteWithoutTargets is true so empty traversal tiles still show
-        /// an impact even when no unit was standing there (e.g. Barrage hitting open ground).
-        /// </summary>
         public void SpawnHitEffectsOnEmptyTiles(AbilityContext ctx, IReadOnlyList<Tile> tiles)
         {
             if (ctx?.ability == null || tiles == null) return;
@@ -121,10 +106,6 @@ namespace DDD.TNFY.BRAWL
                 Debug.Log($"[CombatVFXManager] Spawned hit effects on empty tiles for {ctx.ability.abilityName}");
         }
 
-        /// <summary>
-        /// Spawns the hit effect prefab at each target's position, applying
-        /// optional parenting as configured on the ability.
-        /// </summary>
         public void SpawnHitEffects(AbilityContext ctx, IReadOnlyList<Unit> targets)
         {
             if (ctx?.ability == null || targets == null) return;

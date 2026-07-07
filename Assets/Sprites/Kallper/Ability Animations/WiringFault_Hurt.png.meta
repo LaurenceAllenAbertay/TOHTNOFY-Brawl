@@ -1,0 +1,4316 @@
+fileFormatVersion: 2
+guid: ba06c815020d1464c8d737e594bae36e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6179820263583870053
+    second: WiringFault_Hurt_0
+  - first:
+      213: -5982265018783043678
+    second: WiringFault_Hurt_1
+  - first:
+      213: 378170048303544443
+    second: WiringFault_Hurt_2
+  - first:
+      213: -4866113207849036041
+    second: WiringFault_Hurt_3
+  - first:
+      213: 2688625740822380541
+    second: WiringFault_Hurt_4
+  - first:
+      213: 4431736992968367809
+    second: WiringFault_Hurt_5
+  - first:
+      213: -6057964638070934502
+    second: WiringFault_Hurt_6
+  - first:
+      213: -7440808969066821412
+    second: WiringFault_Hurt_7
+  - first:
+      213: -7482040391371898618
+    second: WiringFault_Hurt_8
+  - first:
+      213: -5874558224844910097
+    second: WiringFault_Hurt_9
+  - first:
+      213: 8719419624559803633
+    second: WiringFault_Hurt_10
+  - first:
+      213: 112712357742137775
+    second: WiringFault_Hurt_11
+  - first:
+      213: -2286416013642033855
+    second: WiringFault_Hurt_12
+  - first:
+      213: -1209313058404432494
+    second: WiringFault_Hurt_13
+  - first:
+      213: 6853077605303547929
+    second: WiringFault_Hurt_14
+  - first:
+      213: 930555063731977403
+    second: WiringFault_Hurt_15
+  - first:
+      213: 4628049755835962913
+    second: WiringFault_Hurt_16
+  - first:
+      213: -5772303466636657814
+    second: WiringFault_Hurt_17
+  - first:
+      213: -817202313284897212
+    second: WiringFault_Hurt_18
+  - first:
+      213: 7195122091042657109
+    second: WiringFault_Hurt_19
+  - first:
+      213: -1794322197010881678
+    second: WiringFault_Hurt_20
+  - first:
+      213: 3601058498244088277
+    second: WiringFault_Hurt_21
+  - first:
+      213: -8313551403653798415
+    second: WiringFault_Hurt_22
+  - first:
+      213: -6084478029544540335
+    second: WiringFault_Hurt_23
+  - first:
+      213: 1554782102949235429
+    second: WiringFault_Hurt_24
+  - first:
+      213: 4698718372234867994
+    second: WiringFault_Hurt_25
+  - first:
+      213: 1420181971745210870
+    second: WiringFault_Hurt_26
+  - first:
+      213: 1246920932165920624
+    second: WiringFault_Hurt_27
+  - first:
+      213: -8657508998376357606
+    second: WiringFault_Hurt_28
+  - first:
+      213: -3144523141920156972
+    second: WiringFault_Hurt_29
+  - first:
+      213: -1646384216839304049
+    second: WiringFault_Hurt_30
+  - first:
+      213: 4233018688390603495
+    second: WiringFault_Hurt_31
+  - first:
+      213: 7864325173707977506
+    second: WiringFault_Hurt_32
+  - first:
+      213: 2232869153626959137
+    second: WiringFault_Hurt_33
+  - first:
+      213: 5993761474034468800
+    second: WiringFault_Hurt_34
+  - first:
+      213: 1047645039929463842
+    second: WiringFault_Hurt_35
+  - first:
+      213: 5861796586100699653
+    second: WiringFault_Hurt_36
+  - first:
+      213: -1324255671864574048
+    second: WiringFault_Hurt_37
+  - first:
+      213: 7810760936883325928
+    second: WiringFault_Hurt_38
+  - first:
+      213: -1625375926153298734
+    second: WiringFault_Hurt_39
+  - first:
+      213: -2122197915859329466
+    second: WiringFault_Hurt_40
+  - first:
+      213: -3987952653865584841
+    second: WiringFault_Hurt_41
+  - first:
+      213: 7193960963208911372
+    second: WiringFault_Hurt_42
+  - first:
+      213: 8916421554267968589
+    second: WiringFault_Hurt_43
+  - first:
+      213: -5696209879779286044
+    second: WiringFault_Hurt_44
+  - first:
+      213: -1070481461009602417
+    second: WiringFault_Hurt_45
+  - first:
+      213: 652178618025119229
+    second: WiringFault_Hurt_46
+  - first:
+      213: -711945493248596672
+    second: WiringFault_Hurt_47
+  - first:
+      213: 5348105045473816745
+    second: WiringFault_Hurt_48
+  - first:
+      213: 8819420492474494507
+    second: WiringFault_Hurt_49
+  - first:
+      213: 6233901802983359326
+    second: WiringFault_Hurt_50
+  - first:
+      213: 236920253847146751
+    second: WiringFault_Hurt_51
+  - first:
+      213: -4507444910267715729
+    second: WiringFault_Hurt_52
+  - first:
+      213: 3074649123921649079
+    second: WiringFault_Hurt_53
+  - first:
+      213: -1853206127444583444
+    second: WiringFault_Hurt_54
+  - first:
+      213: -2551413771614964277
+    second: WiringFault_Hurt_55
+  - first:
+      213: 2884467204501397381
+    second: WiringFault_Hurt_56
+  - first:
+      213: 3705667329227239986
+    second: WiringFault_Hurt_57
+  - first:
+      213: 7316127057465255035
+    second: WiringFault_Hurt_58
+  - first:
+      213: 7335622117622841496
+    second: WiringFault_Hurt_59
+  - first:
+      213: 4912902313592629614
+    second: WiringFault_Hurt_60
+  - first:
+      213: -1098656234597366553
+    second: WiringFault_Hurt_61
+  - first:
+      213: 3312744041575862009
+    second: WiringFault_Hurt_62
+  - first:
+      213: 2190627139454196765
+    second: WiringFault_Hurt_63
+  - first:
+      213: 5594573399213554571
+    second: WiringFault_Hurt_64
+  - first:
+      213: -173956585809187838
+    second: WiringFault_Hurt_65
+  - first:
+      213: -7282043528897432107
+    second: WiringFault_Hurt_66
+  - first:
+      213: 165442647578131687
+    second: WiringFault_Hurt_67
+  - first:
+      213: -6903759195139205746
+    second: WiringFault_Hurt_68
+  - first:
+      213: -8213635773051735935
+    second: WiringFault_Hurt_69
+  - first:
+      213: -8259890346164366170
+    second: WiringFault_Hurt_70
+  - first:
+      213: -3865030322819407829
+    second: WiringFault_Hurt_71
+  - first:
+      213: 8576096809396165314
+    second: WiringFault_Hurt_72
+  - first:
+      213: -8545987453693842825
+    second: WiringFault_Hurt_73
+  - first:
+      213: 201248652554963575
+    second: WiringFault_Hurt_74
+  - first:
+      213: 3648105552521574451
+    second: WiringFault_Hurt_75
+  - first:
+      213: 5183104813015881906
+    second: WiringFault_Hurt_76
+  - first:
+      213: -6272413238777896239
+    second: WiringFault_Hurt_77
+  - first:
+      213: 1785531686402606829
+    second: WiringFault_Hurt_78
+  - first:
+      213: -7048564025051721858
+    second: WiringFault_Hurt_79
+  - first:
+      213: 3982998604840086234
+    second: WiringFault_Hurt_80
+  - first:
+      213: -9152509664800476659
+    second: WiringFault_Hurt_81
+  - first:
+      213: -8546355819977184812
+    second: WiringFault_Hurt_82
+  - first:
+      213: 8135572454922337087
+    second: WiringFault_Hurt_83
+  - first:
+      213: -5229557258202450732
+    second: WiringFault_Hurt_84
+  - first:
+      213: -5435087722286548765
+    second: WiringFault_Hurt_85
+  - first:
+      213: -6163987381043352993
+    second: WiringFault_Hurt_86
+  - first:
+      213: -8598139070540740642
+    second: WiringFault_Hurt_87
+  - first:
+      213: -831137752442615214
+    second: WiringFault_Hurt_88
+  - first:
+      213: -3368579704278344711
+    second: WiringFault_Hurt_89
+  - first:
+      213: -4928540071005450871
+    second: WiringFault_Hurt_90
+  - first:
+      213: -279186810251793694
+    second: WiringFault_Hurt_91
+  - first:
+      213: 5804495997585065164
+    second: WiringFault_Hurt_92
+  - first:
+      213: -5061074082632051808
+    second: WiringFault_Hurt_93
+  - first:
+      213: 5845194163440648333
+    second: WiringFault_Hurt_94
+  - first:
+      213: -7850705502239922077
+    second: WiringFault_Hurt_95
+  - first:
+      213: 814906604023033100
+    second: WiringFault_Hurt_96
+  - first:
+      213: 4168079587215856564
+    second: WiringFault_Hurt_97
+  - first:
+      213: -3202289856486354993
+    second: WiringFault_Hurt_98
+  - first:
+      213: -4099495864098996250
+    second: WiringFault_Hurt_99
+  - first:
+      213: 2626254168867489290
+    second: WiringFault_Hurt_100
+  - first:
+      213: -8065120816597356973
+    second: WiringFault_Hurt_101
+  - first:
+      213: 205856594989029233
+    second: WiringFault_Hurt_102
+  - first:
+      213: -71319691831945592
+    second: WiringFault_Hurt_103
+  - first:
+      213: 2422759254503268578
+    second: WiringFault_Hurt_104
+  - first:
+      213: 7725329445025680415
+    second: WiringFault_Hurt_105
+  - first:
+      213: 6253338022712000174
+    second: WiringFault_Hurt_106
+  - first:
+      213: 9153660765990123682
+    second: WiringFault_Hurt_107
+  - first:
+      213: -7723032820534331525
+    second: WiringFault_Hurt_108
+  - first:
+      213: -4282867730589367539
+    second: WiringFault_Hurt_109
+  - first:
+      213: -9006432995972442902
+    second: WiringFault_Hurt_110
+  - first:
+      213: -3466708208461410458
+    second: WiringFault_Hurt_111
+  - first:
+      213: 7650275072298623966
+    second: WiringFault_Hurt_112
+  - first:
+      213: -6450476478235045142
+    second: WiringFault_Hurt_113
+  - first:
+      213: 7376933423978899217
+    second: WiringFault_Hurt_114
+  - first:
+      213: 6389144346071450936
+    second: WiringFault_Hurt_115
+  - first:
+      213: -270612273484281744
+    second: WiringFault_Hurt_116
+  - first:
+      213: 6844119591765807108
+    second: WiringFault_Hurt_117
+  - first:
+      213: 577823281343571187
+    second: WiringFault_Hurt_118
+  - first:
+      213: 1135349295877975576
+    second: WiringFault_Hurt_119
+  - first:
+      213: -3259321458813845199
+    second: WiringFault_Hurt_120
+  - first:
+      213: 9053753088231079420
+    second: WiringFault_Hurt_121
+  - first:
+      213: -3765453132635130055
+    second: WiringFault_Hurt_122
+  - first:
+      213: -8353174725181274188
+    second: WiringFault_Hurt_123
+  - first:
+      213: -7248525459363804713
+    second: WiringFault_Hurt_124
+  - first:
+      213: 8899806092090683597
+    second: WiringFault_Hurt_125
+  - first:
+      213: 6836277080987186079
+    second: WiringFault_Hurt_126
+  - first:
+      213: -871434707715133579
+    second: WiringFault_Hurt_127
+  - first:
+      213: -5113293374675089563
+    second: WiringFault_Hurt_128
+  - first:
+      213: 6268607061299522429
+    second: WiringFault_Hurt_129
+  - first:
+      213: 6518858575096416956
+    second: WiringFault_Hurt_130
+  - first:
+      213: 7817727257199657437
+    second: WiringFault_Hurt_131
+  - first:
+      213: 7632482493821606177
+    second: WiringFault_Hurt_132
+  - first:
+      213: -4829235278183661727
+    second: WiringFault_Hurt_133
+  - first:
+      213: 9006421556068224365
+    second: WiringFault_Hurt_134
+  - first:
+      213: -3792912712765871735
+    second: WiringFault_Hurt_135
+  - first:
+      213: -3621137442920177031
+    second: WiringFault_Hurt_136
+  - first:
+      213: -9133747841085134472
+    second: WiringFault_Hurt_137
+  - first:
+      213: -634132482868183733
+    second: WiringFault_Hurt_138
+  - first:
+      213: -4269015284864647377
+    second: WiringFault_Hurt_139
+  - first:
+      213: 4472491848927266742
+    second: WiringFault_Hurt_140
+  - first:
+      213: 2569101805127570393
+    second: WiringFault_Hurt_141
+  - first:
+      213: -7170984773887321431
+    second: WiringFault_Hurt_142
+  - first:
+      213: -3313460025148241903
+    second: WiringFault_Hurt_143
+  - first:
+      213: -3176091378444612966
+    second: WiringFault_Hurt_144
+  - first:
+      213: 8199481743694649448
+    second: WiringFault_Hurt_145
+  - first:
+      213: -4992674846135674576
+    second: WiringFault_Hurt_146
+  - first:
+      213: 8499912877467137341
+    second: WiringFault_Hurt_147
+  - first:
+      213: -293815571780175476
+    second: WiringFault_Hurt_148
+  - first:
+      213: 4447855835343471988
+    second: WiringFault_Hurt_149
+  - first:
+      213: 2387027984120334306
+    second: WiringFault_Hurt_150
+  - first:
+      213: 6509031470082542566
+    second: WiringFault_Hurt_151
+  - first:
+      213: 8056884725791571407
+    second: WiringFault_Hurt_152
+  - first:
+      213: 2911263009204793640
+    second: WiringFault_Hurt_153
+  - first:
+      213: -4493588207194863552
+    second: WiringFault_Hurt_154
+  - first:
+      213: 3031873883790701248
+    second: WiringFault_Hurt_155
+  - first:
+      213: -4756993579731669096
+    second: WiringFault_Hurt_156
+  - first:
+      213: 3574985786377083404
+    second: WiringFault_Hurt_157
+  - first:
+      213: -7603857480323388051
+    second: WiringFault_Hurt_158
+  - first:
+      213: -660919510634025803
+    second: WiringFault_Hurt_159
+  - first:
+      213: 1262852242352848374
+    second: WiringFault_Hurt_160
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WiringFault_Hurt_0
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 11719
+        width: 459
+        height: 613
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b93925d563edc3aa0800000000000000
+      internalID: -6179820263583870053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_1
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 11719
+        width: 459
+        height: 613
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2afe03b29a9bafca0800000000000000
+      internalID: -5982265018783043678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_2
+      rect:
+        serializedVersion: 2
+        x: 2332
+        y: 11719
+        width: 460
+        height: 613
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7833d1c7a78f3500800000000000000
+      internalID: 378170048303544443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_3
+      rect:
+        serializedVersion: 2
+        x: 3416
+        y: 11719
+        width: 460
+        height: 613
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f65259b1d7187cb0800000000000000
+      internalID: -4866113207849036041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_4
+      rect:
+        serializedVersion: 2
+        x: 4498
+        y: 11719
+        width: 462
+        height: 613
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dff70b7cddaef4520800000000000000
+      internalID: 2688625740822380541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_5
+      rect:
+        serializedVersion: 2
+        x: 5582
+        y: 11719
+        width: 462
+        height: 613
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ce56d39051b08d30800000000000000
+      internalID: 4431736992968367809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_6
+      rect:
+        serializedVersion: 2
+        x: 6664
+        y: 11719
+        width: 464
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1477e51249cdeba0800000000000000
+      internalID: -6057964638070934502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_7
+      rect:
+        serializedVersion: 2
+        x: 7748
+        y: 11719
+        width: 464
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd84b3d6aafecb890800000000000000
+      internalID: -7440808969066821412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_8
+      rect:
+        serializedVersion: 2
+        x: 8829
+        y: 11719
+        width: 467
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6014725d7e37a2890800000000000000
+      internalID: -7482040391371898618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_9
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 10745
+        width: 467
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe115c35b60697ea0800000000000000
+      internalID: -5874558224844910097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_10
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 10745
+        width: 469
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fcf47973f9910970800000000000000
+      internalID: 8719419624559803633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_11
+      rect:
+        serializedVersion: 2
+        x: 2323
+        y: 10745
+        width: 469
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa1540dca4f609100800000000000000
+      internalID: 112712357742137775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_12
+      rect:
+        serializedVersion: 2
+        x: 3404
+        y: 10745
+        width: 472
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1451a12efb40540e0800000000000000
+      internalID: -2286416013642033855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_13
+      rect:
+        serializedVersion: 2
+        x: 4488
+        y: 10745
+        width: 472
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 295009b3e28a73fe0800000000000000
+      internalID: -1209313058404432494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_14
+      rect:
+        serializedVersion: 2
+        x: 5572
+        y: 10745
+        width: 472
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9187d4ad5c50b1f50800000000000000
+      internalID: 6853077605303547929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_15
+      rect:
+        serializedVersion: 2
+        x: 6656
+        y: 10745
+        width: 472
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbc7fa176eef9ec00800000000000000
+      internalID: 930555063731977403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_16
+      rect:
+        serializedVersion: 2
+        x: 7738
+        y: 10745
+        width: 474
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1269f638bb22a3040800000000000000
+      internalID: 4628049755835962913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_17
+      rect:
+        serializedVersion: 2
+        x: 8822
+        y: 10745
+        width: 474
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6bbd5f7498a4efa0800000000000000
+      internalID: -5772303466636657814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_18
+      rect:
+        serializedVersion: 2
+        x: 166
+        y: 9771
+        width: 458
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 446b60763d6b8a4f0800000000000000
+      internalID: -817202313284897212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_19
+      rect:
+        serializedVersion: 2
+        x: 1250
+        y: 9771
+        width: 458
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 553d920ab653ad360800000000000000
+      internalID: 7195122091042657109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_20
+      rect:
+        serializedVersion: 2
+        x: 2397
+        y: 9770
+        width: 415
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2736192f7794917e0800000000000000
+      internalID: -1794322197010881678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_21
+      rect:
+        serializedVersion: 2
+        x: 3481
+        y: 9770
+        width: 415
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d19d3bff9789f130800000000000000
+      internalID: 3601058498244088277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_22
+      rect:
+        serializedVersion: 2
+        x: 4479
+        y: 9772
+        width: 661
+        height: 806
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f5e343ab0550ac80800000000000000
+      internalID: -8313551403653798415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_23
+      rect:
+        serializedVersion: 2
+        x: 5563
+        y: 9772
+        width: 661
+        height: 806
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 157345518779f8ba0800000000000000
+      internalID: -6084478029544540335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_24
+      rect:
+        serializedVersion: 2
+        x: 6599
+        y: 9772
+        width: 772
+        height: 867
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ea8c65c512b39510800000000000000
+      internalID: 1554782102949235429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_25
+      rect:
+        serializedVersion: 2
+        x: 7683
+        y: 9772
+        width: 772
+        height: 867
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1539a4f673353140800000000000000
+      internalID: 4698718372234867994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_26
+      rect:
+        serializedVersion: 2
+        x: 8756
+        y: 9772
+        width: 786
+        height: 934
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f189469aff75b310800000000000000
+      internalID: 1420181971745210870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_27
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 8798
+        width: 786
+        height: 934
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 077afb83bf3fd4110800000000000000
+      internalID: 1246920932165920624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_28
+      rect:
+        serializedVersion: 2
+        x: 1142
+        y: 8798
+        width: 819
+        height: 943
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1187087f695ad780800000000000000
+      internalID: -8657508998376357606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_29
+      rect:
+        serializedVersion: 2
+        x: 2226
+        y: 8798
+        width: 819
+        height: 943
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d29ad1ecd86c54d0800000000000000
+      internalID: -3144523141920156972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_30
+      rect:
+        serializedVersion: 2
+        x: 3293
+        y: 9376
+        width: 162
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8ccb77174ed629e0800000000000000
+      internalID: -1646384216839304049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_31
+      rect:
+        serializedVersion: 2
+        x: 3326
+        y: 8798
+        width: 858
+        height: 932
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e2ac11d114beba30800000000000000
+      internalID: 4233018688390603495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_32
+      rect:
+        serializedVersion: 2
+        x: 4377
+        y: 9376
+        width: 162
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 223b6091412b32d60800000000000000
+      internalID: 7864325173707977506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_33
+      rect:
+        serializedVersion: 2
+        x: 4410
+        y: 8798
+        width: 858
+        height: 932
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12dacdb3aaebcfe10800000000000000
+      internalID: 2232869153626959137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_34
+      rect:
+        serializedVersion: 2
+        x: 5429
+        y: 8798
+        width: 905
+        height: 871
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c70f38ed4e1e2350800000000000000
+      internalID: 5993761474034468800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_35
+      rect:
+        serializedVersion: 2
+        x: 6513
+        y: 8798
+        width: 905
+        height: 871
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22412b7fc9bf98e00800000000000000
+      internalID: 1047645039929463842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_36
+      rect:
+        serializedVersion: 2
+        x: 7587
+        y: 9522
+        width: 133
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 502312c10f8495150800000000000000
+      internalID: 5861796586100699653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_37
+      rect:
+        serializedVersion: 2
+        x: 7717
+        y: 8799
+        width: 762
+        height: 863
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0af37be8b7c4f9de0800000000000000
+      internalID: -1324255671864574048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_38
+      rect:
+        serializedVersion: 2
+        x: 8671
+        y: 9522
+        width: 133
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8eb8d6c50b5656c60800000000000000
+      internalID: 7810760936883325928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_39
+      rect:
+        serializedVersion: 2
+        x: 8801
+        y: 8799
+        width: 762
+        height: 863
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dc392fe4318179e0800000000000000
+      internalID: -1625375926153298734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_40
+      rect:
+        serializedVersion: 2
+        x: 1141
+        y: 9333
+        width: 103
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64e512a4d307c82e0800000000000000
+      internalID: -2122197915859329466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_41
+      rect:
+        serializedVersion: 2
+        x: 2225
+        y: 9333
+        width: 103
+        height: 175
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 737f34db032f7a8c0800000000000000
+      internalID: -3987952653865584841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_42
+      rect:
+        serializedVersion: 2
+        x: 7702
+        y: 9009
+        width: 112
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0a181c716516d360800000000000000
+      internalID: 7193960963208911372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_43
+      rect:
+        serializedVersion: 2
+        x: 8786
+        y: 9009
+        width: 112
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4457c1992e7dbb70800000000000000
+      internalID: 8916421554267968589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_44
+      rect:
+        serializedVersion: 2
+        x: 7628
+        y: 8817
+        width: 89
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e36fad4b4ff2f0b0800000000000000
+      internalID: -5696209879779286044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_45
+      rect:
+        serializedVersion: 2
+        x: 8712
+        y: 8817
+        width: 89
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f88a1e968c2e421f0800000000000000
+      internalID: -1070481461009602417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_46
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8548
+        width: 132
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfd0e796ff00d0900800000000000000
+      internalID: 652178618025119229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_47
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 8440
+        width: 517
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0452a7f8859ae16f0800000000000000
+      internalID: -711945493248596672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_48
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 8548
+        width: 133
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a0f0f01439483a40800000000000000
+      internalID: 5348105045473816745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_49
+      rect:
+        serializedVersion: 2
+        x: 1213
+        y: 8440
+        width: 517
+        height: 248
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2e2ebae530e46a70800000000000000
+      internalID: 8819420492474494507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_50
+      rect:
+        serializedVersion: 2
+        x: 2167
+        y: 8554
+        width: 52
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e538d7349a4438650800000000000000
+      internalID: 6233901802983359326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_51
+      rect:
+        serializedVersion: 2
+        x: 2433
+        y: 8582
+        width: 73
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff097a237b5b94300800000000000000
+      internalID: 236920253847146751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_52
+      rect:
+        serializedVersion: 2
+        x: 2735
+        y: 8637
+        width: 79
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6fa9de4cb65271c0800000000000000
+      internalID: -4507444910267715729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_53
+      rect:
+        serializedVersion: 2
+        x: 3251
+        y: 8554
+        width: 52
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bdd05886195baa20800000000000000
+      internalID: 3074649123921649079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_54
+      rect:
+        serializedVersion: 2
+        x: 3517
+        y: 8582
+        width: 73
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ceb961688d61846e0800000000000000
+      internalID: -1853206127444583444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_55
+      rect:
+        serializedVersion: 2
+        x: 3819
+        y: 8637
+        width: 79
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc5b9d351be879cd0800000000000000
+      internalID: -2551413771614964277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_56
+      rect:
+        serializedVersion: 2
+        x: 2245
+        y: 8548
+        width: 39
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58fd192d3afa70820800000000000000
+      internalID: 2884467204501397381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_57
+      rect:
+        serializedVersion: 2
+        x: 2297
+        y: 8478
+        width: 152
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2323c5e6dcc2d6330800000000000000
+      internalID: 3705667329227239986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_58
+      rect:
+        serializedVersion: 2
+        x: 2512
+        y: 8444
+        width: 150
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7427d7dbca188560800000000000000
+      internalID: 7316127057465255035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_59
+      rect:
+        serializedVersion: 2
+        x: 2668
+        y: 8538
+        width: 96
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 890886f337d5dc560800000000000000
+      internalID: 7335622117622841496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_60
+      rect:
+        serializedVersion: 2
+        x: 3329
+        y: 8548
+        width: 39
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6922e1ef922e2440800000000000000
+      internalID: 4912902313592629614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_61
+      rect:
+        serializedVersion: 2
+        x: 3381
+        y: 8478
+        width: 152
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e44e8eb9f9c0c0f0800000000000000
+      internalID: -1098656234597366553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_62
+      rect:
+        serializedVersion: 2
+        x: 3596
+        y: 8444
+        width: 150
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fecbe5772b39fd20800000000000000
+      internalID: 3312744041575862009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_63
+      rect:
+        serializedVersion: 2
+        x: 3752
+        y: 8538
+        width: 96
+        height: 56
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1c5f72e6cba66e10800000000000000
+      internalID: 2190627139454196765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_64
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 8035
+        width: 112
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8b39f18ddae3ad40800000000000000
+      internalID: 5594573399213554571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_65
+      rect:
+        serializedVersion: 2
+        x: 227
+        y: 7825
+        width: 687
+        height: 641
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20ce088286bf59df0800000000000000
+      internalID: -173956585809187838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_66
+      rect:
+        serializedVersion: 2
+        x: 1198
+        y: 8035
+        width: 112
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d5f22d0efbf0fa90800000000000000
+      internalID: -7282043528897432107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_67
+      rect:
+        serializedVersion: 2
+        x: 1311
+        y: 7825
+        width: 687
+        height: 641
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ec389f1635cb4200800000000000000
+      internalID: 165442647578131687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_68
+      rect:
+        serializedVersion: 2
+        x: 2282
+        y: 8035
+        width: 101
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8514e6f69be030a0800000000000000
+      internalID: -6903759195139205746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_69
+      rect:
+        serializedVersion: 2
+        x: 2394
+        y: 7824
+        width: 597
+        height: 597
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1807fc838cd430e80800000000000000
+      internalID: -8213635773051735935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_70
+      rect:
+        serializedVersion: 2
+        x: 3366
+        y: 8035
+        width: 101
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a4d1313e79fe5d80800000000000000
+      internalID: -8259890346164366170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_71
+      rect:
+        serializedVersion: 2
+        x: 3478
+        y: 7824
+        width: 597
+        height: 597
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b206c323667ac5ac0800000000000000
+      internalID: -3865030322819407829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_72
+      rect:
+        serializedVersion: 2
+        x: 4562
+        y: 7825
+        width: 581
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ca5b6b2c9a640770800000000000000
+      internalID: 8576096809396165314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_73
+      rect:
+        serializedVersion: 2
+        x: 5646
+        y: 7825
+        width: 581
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77a22af70bd866980800000000000000
+      internalID: -8545987453693842825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_74
+      rect:
+        serializedVersion: 2
+        x: 6730
+        y: 7825
+        width: 575
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77a801f459afac200800000000000000
+      internalID: 201248652554963575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_75
+      rect:
+        serializedVersion: 2
+        x: 7814
+        y: 7825
+        width: 575
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 338bd29ebaca0a230800000000000000
+      internalID: 3648105552521574451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_76
+      rect:
+        serializedVersion: 2
+        x: 8898
+        y: 7825
+        width: 503
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b8dd6dbd561ee740800000000000000
+      internalID: 5183104813015881906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_77
+      rect:
+        serializedVersion: 2
+        x: 9460
+        y: 8063
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d2af2a5469e3f8a0800000000000000
+      internalID: -6272413238777896239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_78
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 7843
+        width: 89
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de64b3fcb9b77c810800000000000000
+      internalID: 1785531686402606829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_79
+      rect:
+        serializedVersion: 2
+        x: 1124
+        y: 7843
+        width: 89
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7fc1363d587e2e90800000000000000
+      internalID: -7048564025051721858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_80
+      rect:
+        serializedVersion: 2
+        x: 2208
+        y: 7843
+        width: 89
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adaae56d024764730800000000000000
+      internalID: 3982998604840086234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_81
+      rect:
+        serializedVersion: 2
+        x: 3292
+        y: 7843
+        width: 89
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d02fc32b3f0cbf080800000000000000
+      internalID: -9152509664800476659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_82
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 6851
+        width: 503
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d9ea2a89ae356980800000000000000
+      internalID: -8546355819977184812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_83
+      rect:
+        serializedVersion: 2
+        x: 788
+        y: 7089
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3b391c2b0c57e070800000000000000
+      internalID: 8135572454922337087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_84
+      rect:
+        serializedVersion: 2
+        x: 1310
+        y: 6851
+        width: 530
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d4f64c8161ec67b0800000000000000
+      internalID: -5229557258202450732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_85
+      rect:
+        serializedVersion: 2
+        x: 2394
+        y: 6851
+        width: 530
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e8f50e4380b294b0800000000000000
+      internalID: -5435087722286548765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_86
+      rect:
+        serializedVersion: 2
+        x: 3478
+        y: 6851
+        width: 605
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5aabe8922e157aa0800000000000000
+      internalID: -6163987381043352993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_87
+      rect:
+        serializedVersion: 2
+        x: 4562
+        y: 6851
+        width: 605
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed7030bf1164da880800000000000000
+      internalID: -8598139070540740642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_88
+      rect:
+        serializedVersion: 2
+        x: 5646
+        y: 6851
+        width: 572
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25acd322e943774f0800000000000000
+      internalID: -831137752442615214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_89
+      rect:
+        serializedVersion: 2
+        x: 6730
+        y: 6851
+        width: 572
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fb16e04b966041d0800000000000000
+      internalID: -3368579704278344711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_90
+      rect:
+        serializedVersion: 2
+        x: 7753
+        y: 6851
+        width: 594
+        height: 634
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98d017efaee4a9bb0800000000000000
+      internalID: -4928540071005450871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_91
+      rect:
+        serializedVersion: 2
+        x: 8837
+        y: 6851
+        width: 594
+        height: 634
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2eaa7f44311202cf0800000000000000
+      internalID: -279186810251793694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_92
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 5877
+        width: 584
+        height: 695
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc40c343b56bd8050800000000000000
+      internalID: 5804495997585065164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_93
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 5877
+        width: 584
+        height: 695
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a3d7c2cfe373c9b0800000000000000
+      internalID: -5061074082632051808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_94
+      rect:
+        serializedVersion: 2
+        x: 2394
+        y: 5877
+        width: 623
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d80011b5f1d4e1150800000000000000
+      internalID: 5845194163440648333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_95
+      rect:
+        serializedVersion: 2
+        x: 3478
+        y: 5877
+        width: 623
+        height: 715
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 368e8c6c0f0bc0390800000000000000
+      internalID: -7850705502239922077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_96
+      rect:
+        serializedVersion: 2
+        x: 4536
+        y: 5877
+        width: 626
+        height: 602
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0da9e12d312f4b00800000000000000
+      internalID: 814906604023033100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_97
+      rect:
+        serializedVersion: 2
+        x: 5620
+        y: 5877
+        width: 626
+        height: 602
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b3de871d4ef7d930800000000000000
+      internalID: 4168079587215856564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_98
+      rect:
+        serializedVersion: 2
+        x: 6663
+        y: 5877
+        width: 652
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcf4b4c875e2f83d0800000000000000
+      internalID: -3202289856486354993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_99
+      rect:
+        serializedVersion: 2
+        x: 7747
+        y: 5877
+        width: 652
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ef323e4b3aab17c0800000000000000
+      internalID: -4099495864098996250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_100
+      rect:
+        serializedVersion: 2
+        x: 8816
+        y: 5877
+        width: 630
+        height: 597
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a064c398044527420800000000000000
+      internalID: 2626254168867489290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_101
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 4903
+        width: 630
+        height: 597
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35e2b10295fe21090800000000000000
+      internalID: -8065120816597356973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_102
+      rect:
+        serializedVersion: 2
+        x: 1268
+        y: 5261
+        width: 22
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1771ef28b795bd200800000000000000
+      internalID: 205856594989029233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_103
+      rect:
+        serializedVersion: 2
+        x: 1289
+        y: 4907
+        width: 368
+        height: 599
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 886ddde3e1f920ff0800000000000000
+      internalID: -71319691831945592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_104
+      rect:
+        serializedVersion: 2
+        x: 2352
+        y: 5261
+        width: 22
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e025f4a4be5f9120800000000000000
+      internalID: 2422759254503268578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_105
+      rect:
+        serializedVersion: 2
+        x: 2373
+        y: 4907
+        width: 368
+        height: 599
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1c0f9f1332e53b60800000000000000
+      internalID: 7725329445025680415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_106
+      rect:
+        serializedVersion: 2
+        x: 3383
+        y: 4906
+        width: 594
+        height: 599
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eae3130dcc158c650800000000000000
+      internalID: 6253338022712000174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_107
+      rect:
+        serializedVersion: 2
+        x: 4467
+        y: 4906
+        width: 594
+        height: 599
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a8754fe7f5580f70800000000000000
+      internalID: 9153660765990123682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_108
+      rect:
+        serializedVersion: 2
+        x: 5607
+        y: 4901
+        width: 641
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b773e5f619642d490800000000000000
+      internalID: -7723032820534331525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_109
+      rect:
+        serializedVersion: 2
+        x: 6691
+        y: 4901
+        width: 641
+        height: 604
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d03cc3a9d723094c0800000000000000
+      internalID: -4282867730589367539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_110
+      rect:
+        serializedVersion: 2
+        x: 7779
+        y: 4906
+        width: 454
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae494b588e8b20380800000000000000
+      internalID: -9006432995972442902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_111
+      rect:
+        serializedVersion: 2
+        x: 8863
+        y: 4906
+        width: 454
+        height: 595
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66f0ab67047c3efc0800000000000000
+      internalID: -3466708208461410458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_112
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 5220
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed3a26635ac3b2a60800000000000000
+      internalID: 7650275072298623966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_113
+      rect:
+        serializedVersion: 2
+        x: 2361
+        y: 5220
+        width: 24
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae299c2b1dd4b76a0800000000000000
+      internalID: -6450476478235045142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_114
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 5102
+        width: 149
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 117e7fb4dd1206660800000000000000
+      internalID: 7376933423978899217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_115
+      rect:
+        serializedVersion: 2
+        x: 2273
+        y: 5102
+        width: 149
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 835c84e7eeccaa850800000000000000
+      internalID: 6389144346071450936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_116
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 3916
+        width: 479
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 078cb1f22979e3cf0800000000000000
+      internalID: -270612273484281744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_117
+      rect:
+        serializedVersion: 2
+        x: 1152
+        y: 3916
+        width: 479
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4001e7bc1823bfe50800000000000000
+      internalID: 6844119591765807108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_118
+      rect:
+        serializedVersion: 2
+        x: 2167
+        y: 3918
+        width: 553
+        height: 602
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f42f638637d40800800000000000000
+      internalID: 577823281343571187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_119
+      rect:
+        serializedVersion: 2
+        x: 3251
+        y: 3918
+        width: 553
+        height: 602
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81eebc45b2291cf00800000000000000
+      internalID: 1135349295877975576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_120
+      rect:
+        serializedVersion: 2
+        x: 4366
+        y: 3916
+        width: 566
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 131c79ed66094c2d0800000000000000
+      internalID: -3259321458813845199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_121
+      rect:
+        serializedVersion: 2
+        x: 5450
+        y: 3916
+        width: 566
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfdfb14077465ad70800000000000000
+      internalID: 9053753088231079420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_122
+      rect:
+        serializedVersion: 2
+        x: 6596
+        y: 3916
+        width: 571
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 937b6ea735c6ebbc0800000000000000
+      internalID: -3765453132635130055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_123
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 3916
+        width: 571
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b78cce28df831c80800000000000000
+      internalID: -8353174725181274188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_124
+      rect:
+        serializedVersion: 2
+        x: 8933
+        y: 3928
+        width: 385
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d9ce31cf70186b90800000000000000
+      internalID: -7248525459363804713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_125
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 2954
+        width: 385
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc03ce0dc76728b70800000000000000
+      internalID: 8899806092090683597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_126
+      rect:
+        serializedVersion: 2
+        x: 1297
+        y: 2954
+        width: 475
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f93b266f8c55fde50800000000000000
+      internalID: 6836277080987186079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_127
+      rect:
+        serializedVersion: 2
+        x: 2381
+        y: 2954
+        width: 475
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57f61b910ca08e3f0800000000000000
+      internalID: -871434707715133579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_128
+      rect:
+        serializedVersion: 2
+        x: 3481
+        y: 2954
+        width: 449
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 567022264cee909b0800000000000000
+      internalID: -5113293374675089563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_129
+      rect:
+        serializedVersion: 2
+        x: 4565
+        y: 2954
+        width: 449
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7b6345e8e09ef650800000000000000
+      internalID: 6268607061299522429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_130
+      rect:
+        serializedVersion: 2
+        x: 5649
+        y: 2954
+        width: 449
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cba81ade553a77a50800000000000000
+      internalID: 6518858575096416956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_131
+      rect:
+        serializedVersion: 2
+        x: 6733
+        y: 2954
+        width: 449
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd1464435852e7c60800000000000000
+      internalID: 7817727257199657437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_132
+      rect:
+        serializedVersion: 2
+        x: 7817
+        y: 2954
+        width: 449
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 129df96b3660ce960800000000000000
+      internalID: 7632482493821606177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_133
+      rect:
+        serializedVersion: 2
+        x: 8901
+        y: 2954
+        width: 449
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16ff313d91c1bfcb0800000000000000
+      internalID: -4829235278183661727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_134
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 1980
+        width: 449
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6d0edaefac3dfc70800000000000000
+      internalID: 9006421556068224365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_135
+      rect:
+        serializedVersion: 2
+        x: 1313
+        y: 1980
+        width: 449
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 989e683cbfddc5bc0800000000000000
+      internalID: -3792912712765871735
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_136
+      rect:
+        serializedVersion: 2
+        x: 2397
+        y: 1980
+        width: 449
+        height: 591
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97260e76ea22fbdc0800000000000000
+      internalID: -3621137442920177031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_137
+      rect:
+        serializedVersion: 2
+        x: 3477
+        y: 1980
+        width: 453
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87921203bb86e3180800000000000000
+      internalID: -9133747841085134472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_138
+      rect:
+        serializedVersion: 2
+        x: 4561
+        y: 1980
+        width: 453
+        height: 590
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4dfa1adddb1337f0800000000000000
+      internalID: -634132482868183733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_139
+      rect:
+        serializedVersion: 2
+        x: 5627
+        y: 1981
+        width: 477
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2ffde4773961c4c0800000000000000
+      internalID: -4269015284864647377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_140
+      rect:
+        serializedVersion: 2
+        x: 6711
+        y: 1981
+        width: 477
+        height: 579
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b7c32ce3ab711e30800000000000000
+      internalID: 4472491848927266742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_141
+      rect:
+        serializedVersion: 2
+        x: 7803
+        y: 1981
+        width: 471
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d39176ea7847a320800000000000000
+      internalID: 2569101805127570393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_142
+      rect:
+        serializedVersion: 2
+        x: 8887
+        y: 1981
+        width: 471
+        height: 578
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aa16b6775b8b7c90800000000000000
+      internalID: -7170984773887321431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_143
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 1007
+        width: 424
+        height: 577
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 118059f99a93402d0800000000000000
+      internalID: -3313460025148241903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_144
+      rect:
+        serializedVersion: 2
+        x: 1344
+        y: 1007
+        width: 424
+        height: 577
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9ac0ad08b14ce3d0800000000000000
+      internalID: -3176091378444612966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_145
+      rect:
+        serializedVersion: 2
+        x: 2495
+        y: 1008
+        width: 427
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 868583304396ac170800000000000000
+      internalID: 8199481743694649448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_146
+      rect:
+        serializedVersion: 2
+        x: 3579
+        y: 1008
+        width: 427
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0391e050ea476bab0800000000000000
+      internalID: -4992674846135674576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_147
+      rect:
+        serializedVersion: 2
+        x: 4672
+        y: 1008
+        width: 554
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3572334ab1c5f570800000000000000
+      internalID: 8499912877467137341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_148
+      rect:
+        serializedVersion: 2
+        x: 5756
+        y: 1008
+        width: 554
+        height: 586
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c89709e4b482cebf0800000000000000
+      internalID: -293815571780175476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_149
+      rect:
+        serializedVersion: 2
+        x: 6880
+        y: 1008
+        width: 585
+        height: 577
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 475cbc50155f9bd30800000000000000
+      internalID: 4447855835343471988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_150
+      rect:
+        serializedVersion: 2
+        x: 7964
+        y: 1008
+        width: 585
+        height: 577
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e7c866fd4d602120800000000000000
+      internalID: 2387027984120334306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_151
+      rect:
+        serializedVersion: 2
+        x: 9058
+        y: 1009
+        width: 606
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ebcb1eb2a9b45a50800000000000000
+      internalID: 6509031470082542566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_152
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 35
+        width: 606
+        height: 558
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcdb31d88fdcfcf60800000000000000
+      internalID: 8056884725791571407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_153
+      rect:
+        serializedVersion: 2
+        x: 1506
+        y: 35
+        width: 587
+        height: 553
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 821f2674842e66820800000000000000
+      internalID: 2911263009204793640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_154
+      rect:
+        serializedVersion: 2
+        x: 2590
+        y: 35
+        width: 587
+        height: 553
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0480447655193a1c0800000000000000
+      internalID: -4493588207194863552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_155
+      rect:
+        serializedVersion: 2
+        x: 3696
+        y: 35
+        width: 565
+        height: 553
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c2f027db31631a20800000000000000
+      internalID: 3031873883790701248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_156
+      rect:
+        serializedVersion: 2
+        x: 4780
+        y: 35
+        width: 565
+        height: 553
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89fa749fa83cbfdb0800000000000000
+      internalID: -4756993579731669096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_157
+      rect:
+        serializedVersion: 2
+        x: 5877
+        y: 35
+        width: 552
+        height: 553
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0a9312b1a6ec9130800000000000000
+      internalID: 3574985786377083404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_158
+      rect:
+        serializedVersion: 2
+        x: 6961
+        y: 35
+        width: 552
+        height: 553
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6da0aa98eba97690800000000000000
+      internalID: -7603857480323388051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_159
+      rect:
+        serializedVersion: 2
+        x: 8039
+        y: 35
+        width: 562
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bca88fe431f3d6f0800000000000000
+      internalID: -660919510634025803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WiringFault_Hurt_160
+      rect:
+        serializedVersion: 2
+        x: 9123
+        y: 35
+        width: 562
+        height: 552
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fd3f3d6c6d868110800000000000000
+      internalID: 1262852242352848374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      WiringFault_Hurt_0: -6179820263583870053
+      WiringFault_Hurt_1: -5982265018783043678
+      WiringFault_Hurt_10: 8719419624559803633
+      WiringFault_Hurt_100: 2626254168867489290
+      WiringFault_Hurt_101: -8065120816597356973
+      WiringFault_Hurt_102: 205856594989029233
+      WiringFault_Hurt_103: -71319691831945592
+      WiringFault_Hurt_104: 2422759254503268578
+      WiringFault_Hurt_105: 7725329445025680415
+      WiringFault_Hurt_106: 6253338022712000174
+      WiringFault_Hurt_107: 9153660765990123682
+      WiringFault_Hurt_108: -7723032820534331525
+      WiringFault_Hurt_109: -4282867730589367539
+      WiringFault_Hurt_11: 112712357742137775
+      WiringFault_Hurt_110: -9006432995972442902
+      WiringFault_Hurt_111: -3466708208461410458
+      WiringFault_Hurt_112: 7650275072298623966
+      WiringFault_Hurt_113: -6450476478235045142
+      WiringFault_Hurt_114: 7376933423978899217
+      WiringFault_Hurt_115: 6389144346071450936
+      WiringFault_Hurt_116: -270612273484281744
+      WiringFault_Hurt_117: 6844119591765807108
+      WiringFault_Hurt_118: 577823281343571187
+      WiringFault_Hurt_119: 1135349295877975576
+      WiringFault_Hurt_12: -2286416013642033855
+      WiringFault_Hurt_120: -3259321458813845199
+      WiringFault_Hurt_121: 9053753088231079420
+      WiringFault_Hurt_122: -3765453132635130055
+      WiringFault_Hurt_123: -8353174725181274188
+      WiringFault_Hurt_124: -7248525459363804713
+      WiringFault_Hurt_125: 8899806092090683597
+      WiringFault_Hurt_126: 6836277080987186079
+      WiringFault_Hurt_127: -871434707715133579
+      WiringFault_Hurt_128: -5113293374675089563
+      WiringFault_Hurt_129: 6268607061299522429
+      WiringFault_Hurt_13: -1209313058404432494
+      WiringFault_Hurt_130: 6518858575096416956
+      WiringFault_Hurt_131: 7817727257199657437
+      WiringFault_Hurt_132: 7632482493821606177
+      WiringFault_Hurt_133: -4829235278183661727
+      WiringFault_Hurt_134: 9006421556068224365
+      WiringFault_Hurt_135: -3792912712765871735
+      WiringFault_Hurt_136: -3621137442920177031
+      WiringFault_Hurt_137: -9133747841085134472
+      WiringFault_Hurt_138: -634132482868183733
+      WiringFault_Hurt_139: -4269015284864647377
+      WiringFault_Hurt_14: 6853077605303547929
+      WiringFault_Hurt_140: 4472491848927266742
+      WiringFault_Hurt_141: 2569101805127570393
+      WiringFault_Hurt_142: -7170984773887321431
+      WiringFault_Hurt_143: -3313460025148241903
+      WiringFault_Hurt_144: -3176091378444612966
+      WiringFault_Hurt_145: 8199481743694649448
+      WiringFault_Hurt_146: -4992674846135674576
+      WiringFault_Hurt_147: 8499912877467137341
+      WiringFault_Hurt_148: -293815571780175476
+      WiringFault_Hurt_149: 4447855835343471988
+      WiringFault_Hurt_15: 930555063731977403
+      WiringFault_Hurt_150: 2387027984120334306
+      WiringFault_Hurt_151: 6509031470082542566
+      WiringFault_Hurt_152: 8056884725791571407
+      WiringFault_Hurt_153: 2911263009204793640
+      WiringFault_Hurt_154: -4493588207194863552
+      WiringFault_Hurt_155: 3031873883790701248
+      WiringFault_Hurt_156: -4756993579731669096
+      WiringFault_Hurt_157: 3574985786377083404
+      WiringFault_Hurt_158: -7603857480323388051
+      WiringFault_Hurt_159: -660919510634025803
+      WiringFault_Hurt_16: 4628049755835962913
+      WiringFault_Hurt_160: 1262852242352848374
+      WiringFault_Hurt_17: -5772303466636657814
+      WiringFault_Hurt_18: -817202313284897212
+      WiringFault_Hurt_19: 7195122091042657109
+      WiringFault_Hurt_2: 378170048303544443
+      WiringFault_Hurt_20: -1794322197010881678
+      WiringFault_Hurt_21: 3601058498244088277
+      WiringFault_Hurt_22: -8313551403653798415
+      WiringFault_Hurt_23: -6084478029544540335
+      WiringFault_Hurt_24: 1554782102949235429
+      WiringFault_Hurt_25: 4698718372234867994
+      WiringFault_Hurt_26: 1420181971745210870
+      WiringFault_Hurt_27: 1246920932165920624
+      WiringFault_Hurt_28: -8657508998376357606
+      WiringFault_Hurt_29: -3144523141920156972
+      WiringFault_Hurt_3: -4866113207849036041
+      WiringFault_Hurt_30: -1646384216839304049
+      WiringFault_Hurt_31: 4233018688390603495
+      WiringFault_Hurt_32: 7864325173707977506
+      WiringFault_Hurt_33: 2232869153626959137
+      WiringFault_Hurt_34: 5993761474034468800
+      WiringFault_Hurt_35: 1047645039929463842
+      WiringFault_Hurt_36: 5861796586100699653
+      WiringFault_Hurt_37: -1324255671864574048
+      WiringFault_Hurt_38: 7810760936883325928
+      WiringFault_Hurt_39: -1625375926153298734
+      WiringFault_Hurt_4: 2688625740822380541
+      WiringFault_Hurt_40: -2122197915859329466
+      WiringFault_Hurt_41: -3987952653865584841
+      WiringFault_Hurt_42: 7193960963208911372
+      WiringFault_Hurt_43: 8916421554267968589
+      WiringFault_Hurt_44: -5696209879779286044
+      WiringFault_Hurt_45: -1070481461009602417
+      WiringFault_Hurt_46: 652178618025119229
+      WiringFault_Hurt_47: -711945493248596672
+      WiringFault_Hurt_48: 5348105045473816745
+      WiringFault_Hurt_49: 8819420492474494507
+      WiringFault_Hurt_5: 4431736992968367809
+      WiringFault_Hurt_50: 6233901802983359326
+      WiringFault_Hurt_51: 236920253847146751
+      WiringFault_Hurt_52: -4507444910267715729
+      WiringFault_Hurt_53: 3074649123921649079
+      WiringFault_Hurt_54: -1853206127444583444
+      WiringFault_Hurt_55: -2551413771614964277
+      WiringFault_Hurt_56: 2884467204501397381
+      WiringFault_Hurt_57: 3705667329227239986
+      WiringFault_Hurt_58: 7316127057465255035
+      WiringFault_Hurt_59: 7335622117622841496
+      WiringFault_Hurt_6: -6057964638070934502
+      WiringFault_Hurt_60: 4912902313592629614
+      WiringFault_Hurt_61: -1098656234597366553
+      WiringFault_Hurt_62: 3312744041575862009
+      WiringFault_Hurt_63: 2190627139454196765
+      WiringFault_Hurt_64: 5594573399213554571
+      WiringFault_Hurt_65: -173956585809187838
+      WiringFault_Hurt_66: -7282043528897432107
+      WiringFault_Hurt_67: 165442647578131687
+      WiringFault_Hurt_68: -6903759195139205746
+      WiringFault_Hurt_69: -8213635773051735935
+      WiringFault_Hurt_7: -7440808969066821412
+      WiringFault_Hurt_70: -8259890346164366170
+      WiringFault_Hurt_71: -3865030322819407829
+      WiringFault_Hurt_72: 8576096809396165314
+      WiringFault_Hurt_73: -8545987453693842825
+      WiringFault_Hurt_74: 201248652554963575
+      WiringFault_Hurt_75: 3648105552521574451
+      WiringFault_Hurt_76: 5183104813015881906
+      WiringFault_Hurt_77: -6272413238777896239
+      WiringFault_Hurt_78: 1785531686402606829
+      WiringFault_Hurt_79: -7048564025051721858
+      WiringFault_Hurt_8: -7482040391371898618
+      WiringFault_Hurt_80: 3982998604840086234
+      WiringFault_Hurt_81: -9152509664800476659
+      WiringFault_Hurt_82: -8546355819977184812
+      WiringFault_Hurt_83: 8135572454922337087
+      WiringFault_Hurt_84: -5229557258202450732
+      WiringFault_Hurt_85: -5435087722286548765
+      WiringFault_Hurt_86: -6163987381043352993
+      WiringFault_Hurt_87: -8598139070540740642
+      WiringFault_Hurt_88: -831137752442615214
+      WiringFault_Hurt_89: -3368579704278344711
+      WiringFault_Hurt_9: -5874558224844910097
+      WiringFault_Hurt_90: -4928540071005450871
+      WiringFault_Hurt_91: -279186810251793694
+      WiringFault_Hurt_92: 5804495997585065164
+      WiringFault_Hurt_93: -5061074082632051808
+      WiringFault_Hurt_94: 5845194163440648333
+      WiringFault_Hurt_95: -7850705502239922077
+      WiringFault_Hurt_96: 814906604023033100
+      WiringFault_Hurt_97: 4168079587215856564
+      WiringFault_Hurt_98: -3202289856486354993
+      WiringFault_Hurt_99: -4099495864098996250
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

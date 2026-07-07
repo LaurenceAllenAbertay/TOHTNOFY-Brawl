@@ -5,28 +5,8 @@ using UnityEngine.UI;
 
 namespace DDD.TNFY.BRAWL
 {
-    /// <summary>
-    /// Manages the eight fixed turn-indicator buttons in the HUD.
-    ///
-    /// Slot 0 = current unit, Slots 1-7 = next seven units (wraps around the turn order).
-    /// Each slot shows the unit's portrait and pans the camera to that unit on click.
-    /// When a unit dies their portrait is tinted grey.
-    ///
-    /// Turn transitions play a staggered wave animation: a white flash rolls across all slots
-    /// from last to first (hide phase), sprites are swapped at the midpoint, then the wave
-    /// rolls back across revealing the new portraits (reveal phase).
-    ///
-    /// Each button must have exactly two child Images in this order:
-    ///   [0] PortraitImage  — the unit portrait
-    ///   [1] OverlayImage   — solid white, alpha 0 at rest, Raycast Target OFF
-    ///
-    /// The eight Button GameObjects are pre-placed in the scene and assigned via the Inspector.
-    /// Attach to the same GameObject as UIManager.
-    /// </summary>
     public class TurnOrderUIController : MonoBehaviour
     {
-        #region Serialized Fields
-
         [Header("Turn Indicator Buttons (Slot 0 = Current, 1-7 = Upcoming)")]
         [SerializeField] private Button slot0Button;
         [SerializeField] private Button slot1Button;
@@ -41,34 +21,22 @@ namespace DDD.TNFY.BRAWL
         [SerializeField] [Range(0.02f, 0.5f)] private float fadeOutDuration  = 0.08f;
         [SerializeField] [Range(0.02f, 0.5f)] private float fadeInDuration   = 0.12f;
         [SerializeField] [Range(0.01f, 0.3f)] private float slotStaggerDelay = 0.04f;
-
-        #endregion
-
-        #region Private Fields
-
+        
         private TurnManager turnManager;
         private CombatManager combatManager;
-
-        // Injected by UIManager so the controller knows when UI should be interactive
+        
         private System.Func<bool> isUIBlockedForAnimation;
         private System.Func<bool> isUIBlockedForMovement;
 
-        // Populated in Initialize() from the serialized button fields
         private Button[] slotButtons;
 
-        // Explicit portrait and overlay references — one per slot, indexed to match slotButtons.
-        // Stored directly so we never rely on GetComponentInChildren ordering at runtime.
         private Image[] portraitImages;
         private Image[] overlayImages;
 
-        // Tracks which unit is currently assigned to each slot so we can grey out
-        // the correct portrait when UnitManager.OnUnitDied fires
         private Unit[] slotUnits;
 
-        // Prevents the transition animation from running on the very first population
         private bool hasPopulatedOnce = false;
 
-        // Ensures only one transition coroutine runs at a time
         private Coroutine transitionCoroutine;
 
         private static readonly Color AliveColor     = Color.white;
@@ -76,9 +44,6 @@ namespace DDD.TNFY.BRAWL
         private static readonly Color OverlayHidden  = new Color(1f, 1f, 1f, 0f);
         private static readonly Color OverlayVisible = new Color(1f, 1f, 1f, 1f);
 
-        #endregion
-
-        #region Initialization
 
         public void Initialize(
             TurnManager turnManager,
@@ -106,22 +71,16 @@ namespace DDD.TNFY.BRAWL
                 if (slotButtons[i] == null) continue;
 
                 Image[] children = slotButtons[i].GetComponentsInChildren<Image>();
-
-                // children[0] = PortraitImage, children[1] = OverlayImage
-                // This matches the hierarchy order set up in the scene.
+                
                 if (children.Length >= 2)
                 {
                     portraitImages[i] = children[0];
                     overlayImages[i]  = children[1];
-
-                    // Ensure overlay starts fully transparent
+                    
                     overlayImages[i].color = OverlayHidden;
                 }
                 else
                 {
-                    Debug.LogWarning($"[TurnOrderUIController] Slot {i} button does not have " +
-                                     $"two child Images (PortraitImage + OverlayImage). " +
-                                     $"Check the hierarchy.");
                     if (children.Length >= 1)
                         portraitImages[i] = children[0];
                 }
@@ -135,10 +94,6 @@ namespace DDD.TNFY.BRAWL
             UnitManager.OnUnitDied -= HandleUnitDied;
         }
 
-        #endregion
-
-        #region Public API — called by UIManager event handlers
-
         public void HandleTurnStarted(Unit unit)
         {
             RefreshAllSlots();
@@ -149,14 +104,7 @@ namespace DDD.TNFY.BRAWL
             RefreshAllSlots();
         }
 
-        #endregion
-
-        #region Slot Refresh
-
-        /// <summary>
-        /// On the first call, populates all slots instantly with no animation.
-        /// On subsequent calls, kicks off the cascade transition coroutine.
-        /// </summary>
+        
         private void RefreshAllSlots()
         {
             if (turnManager == null) return;
@@ -167,17 +115,13 @@ namespace DDD.TNFY.BRAWL
                 hasPopulatedOnce = true;
                 return;
             }
-
-            // Cancel any in-progress transition before starting a new one
+            
             if (transitionCoroutine != null)
                 StopCoroutine(transitionCoroutine);
 
             transitionCoroutine = StartCoroutine(TransitionCoroutine());
         }
-
-        /// <summary>
-        /// Instantly assigns portraits to all slots with no animation. Used on first populate.
-        /// </summary>
+        
         private void PopulateSlotsImmediate()
         {
             IReadOnlyList<Unit> order = turnManager.TurnOrder;
@@ -203,32 +147,18 @@ namespace DDD.TNFY.BRAWL
             UpdateAllButtonInteractability();
         }
 
-        /// <summary>
-        /// Full staggered wave transition:
-        ///   1. All 8 overlays fade to white in parallel, each starting slotStaggerDelay after
-        ///      the previous (slot 7 first, slot 0 last). Waits until the last overlay is white.
-        ///   2. Sprites are swapped at the midpoint while everything is white.
-        ///   3. All 8 overlays fade back out in parallel with the same stagger, revealing
-        ///      the new portraits underneath.
-        /// Buttons are non-interactable for the duration.
-        /// </summary>
         private IEnumerator TransitionCoroutine()
         {
             SetAllButtonsInteractable(false);
-
-            // --- PHASE 1: White wave rolling from slot 7 to slot 0 ---
-            // All fades start in parallel, each offset by slotStaggerDelay from the last.
-            // Slot 7 starts immediately (delay 0), slot 0 starts last (delay 7 * stagger).
+            
             for (int slot = 7; slot >= 0; slot--)
             {
                 if (overlayImages[slot] != null)
                     StartCoroutine(StaggeredFadeIn(slot, (7 - slot) * slotStaggerDelay));
             }
-
-            // Wait for the last slot (slot 0, longest delay) to finish fading fully white
+            
             yield return new WaitForSeconds((7 * slotStaggerDelay) + fadeOutDuration);
 
-            // --- MIDPOINT: Swap all portraits while everything is white ---
             IReadOnlyList<Unit> order = turnManager.TurnOrder;
             int count        = order.Count;
             int currentIndex = turnManager.CurrentTurnIndex;
@@ -246,43 +176,31 @@ namespace DDD.TNFY.BRAWL
                 SetSlotClickListener(slotButtons[slot], unit);
             }
 
-            // --- PHASE 2: White wave clearing from slot 7 to slot 0 ---
-            // Same stagger pattern — each overlay fades out revealing the new portrait.
             for (int slot = 7; slot >= 0; slot--)
             {
                 if (overlayImages[slot] != null)
                     StartCoroutine(StaggeredFadeOut(slot, (7 - slot) * slotStaggerDelay));
             }
-
-            // Wait for the last slot (slot 0) to finish fading out
+            
             yield return new WaitForSeconds((7 * slotStaggerDelay) + fadeInDuration);
 
             UpdateAllButtonInteractability();
             transitionCoroutine = null;
         }
 
-        /// <summary>
-        /// Waits for the given delay then fades the overlay in to fully white and holds it there.
-        /// </summary>
         private IEnumerator StaggeredFadeIn(int slot, float delay)
         {
             if (delay > 0f) yield return new WaitForSeconds(delay);
             yield return StartCoroutine(FadeOverlay(slot, OverlayHidden, OverlayVisible, fadeOutDuration));
         }
 
-        /// <summary>
-        /// Waits for the given delay then fades the overlay out from white to transparent.
-        /// </summary>
         private IEnumerator StaggeredFadeOut(int slot, float delay)
         {
             if (delay > 0f) yield return new WaitForSeconds(delay);
             overlayImages[slot].color = OverlayVisible;
             yield return StartCoroutine(FadeOverlay(slot, OverlayVisible, OverlayHidden, fadeInDuration));
         }
-
-        /// <summary>
-        /// Smoothly lerps a single slot's overlay between two colors over the given duration.
-        /// </summary>
+        
         private IEnumerator FadeOverlay(int slot, Color from, Color to, float duration)
         {
             Image overlay = overlayImages[slot];
@@ -298,15 +216,7 @@ namespace DDD.TNFY.BRAWL
 
             overlay.color = to;
         }
-
-        #endregion
-
-        #region Slot Helpers
-
-        /// <summary>
-        /// Assigns the unit's portrait sprite to the portrait Image for this slot.
-        /// Falls back to the unit's SpriteRenderer sprite if no portrait is set on CharacterData.
-        /// </summary>
+        
         private void ApplyPortrait(int slot, Unit unit)
         {
             Image portrait = portraitImages[slot];
@@ -324,9 +234,6 @@ namespace DDD.TNFY.BRAWL
             }
         }
 
-        /// <summary>
-        /// Tints the portrait grey if the unit is dead, white if alive.
-        /// </summary>
         private void ApplyTint(int slot, Unit unit)
         {
             Image portrait = portraitImages[slot];
@@ -334,26 +241,12 @@ namespace DDD.TNFY.BRAWL
             portrait.color = (unit != null && unit.IsDead) ? DeadColor : AliveColor;
         }
 
-        /// <summary>
-        /// Wires the button's onClick to pan the camera to the unit assigned to this slot.
-        /// Captures unit by value so the lambda always targets the right unit regardless of
-        /// later slot reassignments.
-        /// </summary>
         private void SetSlotClickListener(Button button, Unit unit)
         {
             button.onClick.RemoveAllListeners();
             button.onClick.AddListener(() => OnSlotClicked(unit));
         }
-
-        #endregion
-
-        #region Unit Death
-
-        /// <summary>
-        /// Called by UnitManager.OnUnitDied. Finds which slot(s) the dead unit occupies
-        /// and greys out their portrait — does not shift the slot contents since TurnManager
-        /// has already removed the unit and HandleTurnStarted will refresh on the next turn.
-        /// </summary>
+        
         private void HandleUnitDied(Unit unit)
         {
             for (int slot = 0; slot < slotUnits.Length; slot++)
@@ -362,10 +255,6 @@ namespace DDD.TNFY.BRAWL
                 ApplyTint(slot, unit);
             }
         }
-
-        #endregion
-
-        #region Camera Transitions
 
         private void OnSlotClicked(Unit targetUnit)
         {
@@ -398,11 +287,7 @@ namespace DDD.TNFY.BRAWL
             yield return StartCoroutine(cameraController.TransitionTo(cameraController.UnitFocusPosition(targetUnit)));
             SetAllButtonsInteractable(true);
         }
-
-        #endregion
-
-        #region Button Interactability
-
+        
         private void UpdateAllButtonInteractability()
         {
             bool interactable = CanTransitionCamera();
@@ -421,7 +306,5 @@ namespace DDD.TNFY.BRAWL
                     button.interactable = interactable && CanTransitionCamera();
             }
         }
-
-        #endregion
     }
 }

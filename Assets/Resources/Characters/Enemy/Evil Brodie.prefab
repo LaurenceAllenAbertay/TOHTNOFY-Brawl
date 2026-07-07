@@ -252,6 +252,7 @@ MonoBehaviour:
   hostileToAllNonTeam: 0
   aggressionBias: 1
   lookAheadSteps: 1
+  targetCandidateCount: 2
   thinkingDelay: 2.5
   actionDelay: 0.8
   endTurnDelay: 1

@@ -7,15 +7,11 @@ namespace DDD.TNFY.BRAWL
     [CreateAssetMenu(menuName = "TNFY Brawl/Targeting/Single Target")]
     public class SingleTargeting : AbilityTargeting
     {
-        // ── Input behaviour ───────────────────────────────────────────────────────
-
         public override bool UsesDirectionalInput => false;
         public override bool UsesHoverTracking    => true;
         public override bool ConfirmsOnTileClick  => true;
         public override bool UsesCameraTransitionsPerTarget => true;
-
-        // ── Preview ───────────────────────────────────────────────────────────────
-
+        
         public override void ShowEnterPreview(AbilityContext ctx, Tile hoveredTile)
         {
             var tilesInRange = GetTilesInRange(ctx);
@@ -29,7 +25,6 @@ namespace DDD.TNFY.BRAWL
 
         public override void ShowHoverPreview(AbilityContext ctx, Tile hoveredTile)
         {
-            // Re-draw the full preview so the hover highlight updates correctly.
             ShowEnterPreview(ctx, hoveredTile);
         }
 
@@ -61,9 +56,7 @@ namespace DDD.TNFY.BRAWL
                 if (canHit) hoveredTile.Highlight(TileHighlightType.AttackRange);
             }
         }
-
-        // ── Confirmation ──────────────────────────────────────────────────────────
-
+        
         public override bool OnTileClicked(Tile tile, AbilityContext ctx, out AbilityContext outCtx)
         {
             outCtx = null;
@@ -90,9 +83,7 @@ namespace DDD.TNFY.BRAWL
             };
             return true;
         }
-
-        // ── Range query ───────────────────────────────────────────────────────────
-
+        
         public List<Tile> GetTilesInRange(AbilityContext ctx)
         {
             var tiles = new List<Tile>();
@@ -106,10 +97,7 @@ namespace DDD.TNFY.BRAWL
                 if (tile == start) continue;
                 if (!affectsOverGaps && !tile.passableTerrain) continue;
                 if (!affectsThroughWalls && IsBlockedByWall(start, tile)) continue;
-
-                // IsAllowedByLayerFlags rejects tiles above/below when the corresponding
-                // flag is off, and returns the correct 3D Manhattan distance when the tile
-                // is on a different Y level (same-level tiles use standard 2D distance).
+                
                 if (!IsAllowedByLayerFlags(start, tile, out int dist)) continue;
                 if (dist <= 0 || dist > ctx.EffectiveRange) continue;
 
@@ -143,8 +131,7 @@ namespace DDD.TNFY.BRAWL
 
             if (!affectsOverGaps && !targetTile.passableTerrain) return false;
             if (!affectsThroughWalls && IsBlockedByWall(start, targetTile)) return false;
-
-            // IsAllowedByLayerFlags handles Y-direction filtering and returns 3D distance.
+            
             if (!IsAllowedByLayerFlags(start, targetTile, out int dist)) return false;
             if (dist <= 0 || dist > ctx.EffectiveRange) return false;
 

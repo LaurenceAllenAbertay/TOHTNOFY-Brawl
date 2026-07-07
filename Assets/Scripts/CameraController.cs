@@ -12,9 +12,7 @@ namespace DDD.TNFY.BRAWL
         [SerializeField] private float cameraYOffset = 2f;
 
         [Header("AOE Zoom Settings")]
-        [Tooltip("How much extra Y height to add per world-unit of ability radius when zooming out for RandomAOE")]
         [SerializeField] private float aoeZoomYMultiplier = 0.8f;
-        [Tooltip("How much extra Z pullback to add per world-unit of ability radius when zooming out for RandomAOE. Needs to be larger than Y to cover tiles in front of the caster.")]
         [SerializeField] private float aoeZoomZMultiplier = 2f;
 
         [Header("Bounds")]
@@ -23,11 +21,8 @@ namespace DDD.TNFY.BRAWL
         [SerializeField] private bool visualizeBounds = false;
 
         [Header("Screen Shake")]
-        [Tooltip("Maximum positional offset (world units) at full shake intensity.")]
         [SerializeField] private float shakeMaxMagnitude = 0.35f;
-        [Tooltip("Duration (seconds) of the shake at full intensity.")]
         [SerializeField] private float shakeMaxDuration = 0.4f;
-        [Tooltip("Damage value that maps to full shake intensity. Damage above this is clamped to max.")]
         [SerializeField] private float shakeDamageReference = 10f;
 
         private Camera cam;

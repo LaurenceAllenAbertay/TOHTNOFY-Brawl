@@ -7,28 +7,19 @@ namespace DDD.TNFY.BRAWL
     public class StatusEffectManager : MonoBehaviour
     {
         public static StatusEffectManager Instance { get; private set; }
-
-        // Track all active status effects
+        
         private Dictionary<Unit, List<StatusEffectInstance>> activeEffects = new Dictionary<Unit, List<StatusEffectInstance>>();
-
-        // Stunned escalation tracking.
-        // stunnedApplicationCount: how many consecutive times this unit has been stunned.
-        // stunnedThisTurn: units that received Stunned on the current turn (used to detect reset).
+        
         private Dictionary<Unit, int> stunnedApplicationCount = new Dictionary<Unit, int>();
         private HashSet<Unit> stunnedThisTurn = new HashSet<Unit>();
-
-        // Immune escalation tracking — same diminishing-returns pattern as Stunned.
+        
         private Dictionary<Unit, int> immuneApplicationCount = new Dictionary<Unit, int>();
         private HashSet<Unit> immuneThisTurn = new HashSet<Unit>();
 
-        // Events
         public static event System.Action<Unit, StatusEffectInstance> OnStatusEffectApplied;
         public static event System.Action<Unit, StatusEffectInstance> OnStatusEffectRemoved;
         public static event System.Action<Unit, StatusEffectInstance> OnStatusEffectTriggered;
-
-        // Power modifier hook - passives register here to modify effectPower before application.
-        // Signature: (source, target, effectData, originalPower) -> modifiedPower.
-        // Multiple passives chain by each adding their delta to the incoming value.
+        
         public static event System.Func<Unit, Unit, StatusEffectData, float, float> OnModifyEffectPower;
 
         void Awake()
@@ -39,8 +30,7 @@ namespace DDD.TNFY.BRAWL
                 return;
             }
             Instance = this;
-
-            // Subscribe to turn events
+            
             TurnManager.OnTurnStarted += HandleTurnStarted;
             TurnManager.OnTurnEnded += HandleTurnEnded;
             UnitManager.OnUnitDied += HandleUnitDied;
@@ -59,10 +49,7 @@ namespace DDD.TNFY.BRAWL
 
             if (!activeEffects.ContainsKey(target))
                 activeEffects[target] = new List<StatusEffectInstance>();
-
-            // Unique effects always create a fresh independent instance with their own timer.
-            // Skip FindExistingEffect so each application stacks individually and expires
-            // independently (e.g. hit on turn 1 expires turn 4, hit on turn 2 expires turn 5).
+            
             bool isUnique = effectData.stackingBehavior == StatusEffectData.StackingBehavior.Unique;
 
             var existingEffect = isUnique ? null : FindExistingEffect(target, effectData);
@@ -74,8 +61,6 @@ namespace DDD.TNFY.BRAWL
             }
             else
             {
-                // Stunned escalating failure check.
-                // Each consecutive application on the same target has 75% higher chance to fail.
                 if (effectData.effectType == StatusEffectType.Stunned)
                 {
                     int count = stunnedApplicationCount.ContainsKey(target) ? stunnedApplicationCount[target] : 0;
@@ -85,12 +70,10 @@ namespace DDD.TNFY.BRAWL
                         Debug.Log($"[Stunned] Failed to apply to {target.name} (attempt {count + 1}, fail chance {failChance * 100}%)");
                         return null;
                     }
-                    // Succeeded -- record that this unit was stunned this turn.
                     stunnedThisTurn.Add(target);
                     stunnedApplicationCount[target] = count + 1;
                 }
-
-                // Immune escalating failure check — same 75%-per-consecutive-use pattern as Stunned.
+                
                 if (effectData.effectType == StatusEffectType.Immune)
                 {
                     int count = immuneApplicationCount.ContainsKey(target) ? immuneApplicationCount[target] : 0;
@@ -100,12 +83,10 @@ namespace DDD.TNFY.BRAWL
                         Debug.Log($"[Immune] Failed to apply to {target.name} (attempt {count + 1}, fail chance {failChance * 100}%)");
                         return null;
                     }
-                    // Succeeded -- record that this unit was made Immune this turn.
                     immuneThisTurn.Add(target);
                     immuneApplicationCount[target] = count + 1;
                 }
-
-                // Allow passives to modify the power before the instance is created.
+                
                 if (OnModifyEffectPower != null)
                 {
                     foreach (System.Func<Unit, Unit, StatusEffectData, float, float> modifier
@@ -114,12 +95,10 @@ namespace DDD.TNFY.BRAWL
                         power = modifier(source, target, effectData, power);
                     }
                 }
-
-                // Create new effect instance
+                
                 var newEffect = new StatusEffectInstance(effectData, source, target, duration, power);
                 activeEffects[target].Add(newEffect);
 
-                // Apply immediate effects
                 ApplyImmediateEffects(newEffect);
 
                 OnStatusEffectApplied?.Invoke(target, newEffect);
@@ -168,15 +147,12 @@ namespace DDD.TNFY.BRAWL
         {
             ProcessEffectsForTiming(unit, StatusEffectData.EffectTriggerTiming.EndOfTurn);
             UpdateEffectDurations(unit);
-
-            // If this unit was not stunned on this turn, reset their consecutive stun counter.
-            // This implements the "goes a full turn without being stunned" reset condition.
+            
             if (!stunnedThisTurn.Contains(unit))
                 stunnedApplicationCount.Remove(unit);
 
             stunnedThisTurn.Remove(unit);
-
-            // Same reset logic for Immune.
+            
             if (!immuneThisTurn.Contains(unit))
                 immuneApplicationCount.Remove(unit);
 
@@ -200,7 +176,7 @@ namespace DDD.TNFY.BRAWL
         {
             if (!activeEffects.ContainsKey(unit)) return;
 
-            var effects = activeEffects[unit].ToList(); // Copy to avoid modification during iteration
+            var effects = activeEffects[unit].ToList();
 
             foreach (var effect in effects)
             {
@@ -214,24 +190,16 @@ namespace DDD.TNFY.BRAWL
 
         private void TriggerEffect(StatusEffectInstance effect)
         {
-            // This will be expanded with specific effect implementations
             switch (effect.effectData.effectType)
             {
                 case StatusEffectType.Bleeding:
-                    // Damage equals the current stack count — grows every tick.
                     effect.target.ReceiveDamage(effect.stackCount);
-                    // After dealing damage, stacks climb by 1 (snowball).
-                    // Duration expiry via UpdateEffectDurations is the natural end condition.
                     effect.stackCount = Mathf.Min(effect.stackCount + 1, effect.effectData.maxStacks);
                     break;
 
                 case StatusEffectType.Poison:
-                    // Damage equals the current stack count — fades every tick.
                     effect.target.ReceiveDamage(effect.stackCount);
-                    // After dealing damage, stacks fall by 1.
                     effect.stackCount = Mathf.Max(0, effect.stackCount - 1);
-                    // When stacks hit 0 there is nothing left to deal — remove immediately
-                    // rather than waiting for duration to expire.
                     if (effect.stackCount == 0)
                         RemoveStatusEffect(effect.target, effect);
                     break;
@@ -246,12 +214,10 @@ namespace DDD.TNFY.BRAWL
                     break;
 
                 case StatusEffectType.Shocked:
-                    // Direct damage to the shocked unit.
                     int shockDamage = Mathf.RoundToInt(effect.effectPower);
                     effect.target.ReceiveDamage(shockDamage);
                     Debug.Log($"[Shocked] {effect.target.name} takes {shockDamage} shock damage.");
-
-                    // Discharge arc — deal half damage to allies on directly adjacent tiles.
+                    
                     if (effect.target.currentTile != null && GridManager.Instance != null)
                     {
                         int splashDamage = Mathf.Max(1, Mathf.RoundToInt(shockDamage / 2f));
@@ -267,8 +233,7 @@ namespace DDD.TNFY.BRAWL
                         }
                     }
                     break;
-
-                    // Add more cases as needed
+                
             }
 
             OnStatusEffectTriggered?.Invoke(effect.target, effect);
@@ -282,8 +247,6 @@ namespace DDD.TNFY.BRAWL
 
             foreach (var effect in activeEffects[unit])
             {
-                // Duration -1 means indefinite (e.g. passive-managed effects).
-                // The owning system is responsible for removal; skip ticking.
                 if (effect.remainingDuration == -1)
                 {
                     effect.hasTriggeredThisTurn = false;
@@ -340,8 +303,7 @@ namespace DDD.TNFY.BRAWL
             if (!activeEffects.ContainsKey(target)) return null;
             return activeEffects[target].FirstOrDefault(e => e.effectData == effectData);
         }
-
-        // **UPDATE** - Replace existing ApplyImmediateEffects method
+        
         private void ApplyImmediateEffects(StatusEffectInstance effect)
         {
             // Apply stat modifiers
@@ -349,15 +311,11 @@ namespace DDD.TNFY.BRAWL
             {
                 case StatusEffectType.AttackUp:
                 case StatusEffectType.AttackDown:
-                    // Attack is now a computed property on Unit (base * multiplier).
-                    // The StatusEffectInstance existing in activeEffects is sufficient —
-                    // no direct stat mutation required.
+                    // Nothing to apply immediately
                     break;
                 case StatusEffectType.DefenseUp:
                 case StatusEffectType.DefenseDown:
-                    // Defense is now a computed property on Unit (base * multiplier).
-                    // The StatusEffectInstance existing in activeEffects is sufficient —
-                    // no direct stat mutation required.
+                    // Nothing to apply immediately
                     break;
                 case StatusEffectType.SpeedUp:
                     effect.target.currentSpeed += Mathf.RoundToInt(effect.effectPower);
@@ -366,42 +324,34 @@ namespace DDD.TNFY.BRAWL
                     effect.target.currentSpeed -= Mathf.RoundToInt(effect.effectPower);
                     break;
                 case StatusEffectType.Intimidated:
-                    // Behavioural effect: no stat change on application.
-                    // Unit.CanTarget enforces the restriction at selection time.
+                    // Nothing to apply immediately
                     break;
                 case StatusEffectType.Taunting:
-                    // Handled by UnitAI via OnStatusEffectApplied — no AI coupling here.
+                    // Nothing to apply immediately
                     break;
                 case StatusEffectType.Stunned:
-                    // Turn skip is handled in TriggerEffect at Start Of Turn.
+                    // Nothing to apply immediately
                     break;
                 case StatusEffectType.Immune:
-                    // Behavioural effect: damage prevention is checked live in Unit.ReceiveDamage.
+                    // Nothing to apply immediately
                     break;
                 case StatusEffectType.Warned:
-                    // Behavioural effect: walk-dodge is handled in AbilitySequencer before animation plays.
-                    // If a safe tile is reachable by walking, the unit walks there and the attack misses.
-                    // If fully blocked, damage is negated and the unit stays put.
+                    // Nothing to apply immediately
                     break;
                 case StatusEffectType.Shocked:
-                    // Damage and adjacent ally arc fire in TriggerEffect at EndOfTurn.
-                    // Nothing to apply immediately.
+                    // Nothing to apply immediately
                     break;
                 case StatusEffectType.Dizzy:
-                    // Random ability execution is handled in TurnManager.StartNextTurn.
-                    // Nothing to apply immediately.
+                    // Nothing to apply immediately
                     break;
                 case StatusEffectType.Stuck:
-                    // Behavioural effect: CanMove() reads the effect list live.
-                    // Nothing to apply immediately.
+                    // Nothing to apply immediately
                     break;
                 case StatusEffectType.Scared:
-                    // Behavioural effect: CanUseAbilities() reads the effect list live.
-                    // Nothing to apply immediately.
+                    // Nothing to apply immediately
                     break;
             }
-
-            // Spawn VFX if configured
+            
             if (effect.effectData.applicationVFX != null)
             {
                 var vfx = Instantiate(effect.effectData.applicationVFX,
@@ -411,22 +361,16 @@ namespace DDD.TNFY.BRAWL
                 Destroy(vfx, 3f);
             }
         }
-
-        // **UPDATE** - Replace existing RemoveEffectModifiers method
+        
         private void RemoveEffectModifiers(StatusEffectInstance effect)
         {
-            // Reverse stat modifiers when effect ends.
             switch (effect.effectData.effectType)
             {
                 case StatusEffectType.AttackUp:
                 case StatusEffectType.AttackDown:
-                    // Attack is a computed property — removing the instance from activeEffects
-                    // (done by the caller) is all that is needed. No manual revert required.
                     break;
                 case StatusEffectType.DefenseUp:
                 case StatusEffectType.DefenseDown:
-                    // Defense is a computed property — removing the instance from activeEffects
-                    // (done by the caller) is all that is needed. No manual revert required.
                     break;
                 case StatusEffectType.SpeedUp:
                     effect.target.currentSpeed -= Mathf.RoundToInt(effect.effectPower);
@@ -435,21 +379,18 @@ namespace DDD.TNFY.BRAWL
                     effect.target.currentSpeed += Mathf.RoundToInt(effect.effectPower);
                     break;
                 case StatusEffectType.Intimidated:
-                    // Nothing to reverse: restriction is checked live via Unit.CanTarget.
+                    // Nothing to reverse
                     break;
                 case StatusEffectType.Taunting:
-                    // Nothing to reverse: AddTargetLikelyUnit tracks its own duration
-                    // and clears itself via UpdateTargetingDurations in UnitAI.
+                    // Nothing to reverse
                     break;
                 case StatusEffectType.Stunned:
-                    // Nothing to reverse: stun counter managed separately in stunnedApplicationCount.
+                    // Nothing to reverse
                     break;
                 case StatusEffectType.Immune:
-                    // Nothing to reverse: damage prevention is checked live in Unit.ReceiveDamage.
+                    // Nothing to reverse
                     break;
                 case StatusEffectType.Warned:
-                    // If Warned expired without the dodge ever firing, apply DefenseDown as the
-                    // penalty. The DefenseDown StatusEffectData is stored in customData by StatusEffect.
                     if (!effect.wasTriggered && effect.customData is StatusEffectData defenseDownData)
                     {
                         ApplyStatusEffect(effect.target, defenseDownData, effect.source,
@@ -458,20 +399,19 @@ namespace DDD.TNFY.BRAWL
                     }
                     break;
                 case StatusEffectType.Shocked:
-                    // Nothing to reverse: damage and ally arc are both transient per-turn effects.
+                    // Nothing to reverse
                     break;
                 case StatusEffectType.Dizzy:
-                    // Nothing to reverse: random-ability behaviour is transient per-turn.
+                    // Nothing to reverse
                     break;
                 case StatusEffectType.Stuck:
-                    // Nothing to reverse: CanMove() reads the effect list live.
+                    // Nothing to reverse
                     break;
                 case StatusEffectType.Scared:
-                    // Nothing to reverse: CanUseAbilities() reads the effect list live.
+                    // Nothing to reverse
                     break;
             }
-
-            // Spawn removal VFX if configured
+            
             if (effect.effectData.removalVFX != null)
             {
                 var vfx = Instantiate(effect.effectData.removalVFX,
@@ -481,15 +421,6 @@ namespace DDD.TNFY.BRAWL
             }
         }
 
-        /// <summary>
-        /// Returns the combined attack multiplier for <paramref name="unit"/> based on all
-        /// currently active AttackUp and AttackDown effects.
-        /// Each point of effectPower contributes ±10% (e.g. effectPower 2 = ±20%).
-        /// Returns 1.0 when no modifiers are active, so the base stat is unchanged.
-        /// Clamped to a minimum of 0 so attack can never go negative.
-        /// Called by Unit.currentAttack — do not call this inside StatusEffectManager
-        /// methods that already hold the activeEffects lock.
-        /// </summary>
         public static float GetAttackMultiplier(Unit unit)
         {
             if (Instance == null || unit == null) return 1f;
@@ -506,15 +437,6 @@ namespace DDD.TNFY.BRAWL
             return Mathf.Max(0f, multiplier);
         }
 
-        /// <summary>
-        /// Returns the combined defense multiplier for <paramref name="unit"/> based on all
-        /// currently active DefenseUp and DefenseDown effects.
-        /// Each point of effectPower contributes ±10% (e.g. effectPower 2 = ±20%).
-        /// Returns 1.0 when no modifiers are active, so the base stat is unchanged.
-        /// Clamped to a minimum of 0 so defense can never go negative.
-        /// Called by Unit.currentDefense — do not call this inside StatusEffectManager
-        /// methods that already hold the activeEffects lock.
-        /// </summary>
         public static float GetDefenseMultiplier(Unit unit)
         {
             if (Instance == null || unit == null) return 1f;

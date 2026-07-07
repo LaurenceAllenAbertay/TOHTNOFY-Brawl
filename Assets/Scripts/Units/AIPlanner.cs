@@ -35,6 +35,7 @@ namespace DDD.TNFY.BRAWL
         private readonly int   targetCandidateCount;
         private readonly System.Func<Unit, bool>  canTargetUnit;
         private readonly System.Func<List<Unit>>  getTeammates;
+        private readonly System.Func<Unit>         getLastAttacker;
         private readonly AIDebugLogger logger;
 
         public AIPlanner(
@@ -45,6 +46,7 @@ namespace DDD.TNFY.BRAWL
             System.Func<Unit, bool> canTargetUnit,
             System.Func<Unit, bool> isAlly,
             System.Func<List<Unit>> getTeammates,
+            System.Func<Unit> getLastAttacker,
             AIDebugLogger logger)
         {
             this.unit                 = unit;
@@ -53,6 +55,7 @@ namespace DDD.TNFY.BRAWL
             this.targetCandidateCount = targetCandidateCount;
             this.canTargetUnit        = canTargetUnit;
             this.getTeammates         = getTeammates;
+            this.getLastAttacker      = getLastAttacker;
             this.logger               = logger;
         }
 
@@ -87,6 +90,21 @@ namespace DDD.TNFY.BRAWL
 
         private ActionPlan TryFindKillShot(Ability[] abilities, List<Unit> targets, List<Tile> reachableTiles, List<Tile> jumpableTiles)
         {
+            // If any valid target is directly adjacent (grid distance 1), skip the killshot
+            // entirely and let TryAttackAnchor handle them. An AI standing next to an enemy
+            // should always swing at them first — chasing a killshot on a distant target while
+            // ignoring someone right beside you reads as broken rather than dumb.
+            if (unit.currentTile != null)
+            {
+                foreach (var t in targets)
+                {
+                    if (t.currentTile == null) continue;
+                    if (!canTargetUnit(t)) continue;
+                    if (GridManager.Instance.GetGridDistance(unit.currentTile, t.currentTile, true) == 1)
+                        return null;
+                }
+            }
+
             // Prefer finishing off the most-wounded target first (HP% so it scales correctly
             // across units with different max health values).
             var ordered = targets.OrderBy(t => HealthPct(t)).ToList();
@@ -486,15 +504,61 @@ namespace DDD.TNFY.BRAWL
         /// selection is uniformly random among the N closest. Returns the first target in
         /// the list as a safety fallback if the tile data is missing.
         /// </summary>
+        /// <summary>
+        /// Picks a target from the N closest valid candidates.
+        ///
+        /// Priority order:
+        ///   1. Melee lock-on  — if exactly 1 target is within 2 tiles, always pick them.
+        ///   2. Last-attacker  — if multiple targets are within 2 tiles, prefer whoever
+        ///                       attacked this unit most recently (retaliation instinct).
+        ///   3. Weighted random — considers the N closest candidates (targetCandidateCount).
+        ///                       Base weight is inversely proportional to distance so closer
+        ///                       targets are naturally more likely. Weight is then halved for
+        ///                       each teammate already gravitating toward the same unit,
+        ///                       preventing the whole team from dogpiling one target.
+        /// </summary>
         private Unit PickWeightedTarget(List<Unit> targets)
         {
             if (targets.Count == 0) return null;
             if (targets.Count == 1) return targets[0];
             if (unit.currentTile == null) return targets[0];
 
-            // Gather the N closest valid candidates.
-            var candidates = targets
+            const int meleeRange = 2;
+
+            // Collect all valid targets that have a tile position.
+            var validTargets = targets
                 .Where(t => t.currentTile != null)
+                .ToList();
+
+            if (validTargets.Count == 0) return targets[0];
+
+            // ── Stage 1: Melee lock-on ─────────────────────────────────────────────
+            // Find every valid target within melee range using the grid (the authoritative
+            // source of truth for distance — no transform position checks).
+            var meleeTargets = validTargets
+                .Where(t => GridManager.Instance.GetGridDistance(unit.currentTile, t.currentTile, true) <= meleeRange)
+                .ToList();
+
+            if (meleeTargets.Count == 1)
+                return meleeTargets[0];
+
+            // ── Stage 2: Last-attacker tiebreaker (multiple in melee range) ────────
+            if (meleeTargets.Count > 1)
+            {
+                var lastAttacker = getLastAttacker?.Invoke();
+                if (lastAttacker != null && meleeTargets.Contains(lastAttacker))
+                    return lastAttacker;
+
+                // Multiple melee targets, none is the last attacker — fall through to
+                // weighted random among the melee targets only, so we stay in melee.
+                var meleeWeights = BuildProximityWeights(meleeTargets);
+                return WeightedRandom(meleeTargets, meleeWeights);
+            }
+
+            // ── Stage 3: Weighted random from N closest ────────────────────────────
+            // No targets within melee range — pick from the N nearest using proximity
+            // weighting so the closest is the most likely outcome.
+            var candidates = validTargets
                 .OrderBy(t => GridManager.Instance.GetGridDistance(unit.currentTile, t.currentTile, true))
                 .Take(targetCandidateCount)
                 .ToList();
@@ -502,13 +566,28 @@ namespace DDD.TNFY.BRAWL
             if (candidates.Count == 0) return targets[0];
             if (candidates.Count == 1) return candidates[0];
 
-            // Weight each candidate: halve per teammate already gravitating toward it.
-            var   teammates = getTeammates?.Invoke() ?? new List<Unit>();
-            var   weights   = new float[candidates.Count];
-            for (int i = 0; i < candidates.Count; i++)
-                weights[i] = 1f / Mathf.Pow(2f, CountTeammatePressure(candidates[i], candidates, teammates));
-
+            var weights = BuildProximityWeights(candidates);
             return WeightedRandom(candidates, weights);
+        }
+
+        /// <summary>
+        /// Builds a weight array for the given candidate list.
+        /// Each candidate's base weight is 1/distance (closer = higher).
+        /// That weight is then halved for every teammate already gravitating toward
+        /// the same unit, spreading AI focus naturally across the player team.
+        /// </summary>
+        private float[] BuildProximityWeights(List<Unit> candidates)
+        {
+            var teammates = getTeammates?.Invoke() ?? new List<Unit>();
+            var weights   = new float[candidates.Count];
+            for (int i = 0; i < candidates.Count; i++)
+            {
+                int dist = GridManager.Instance.GetGridDistance(unit.currentTile, candidates[i].currentTile, true);
+                float proximityWeight  = 1f / Mathf.Max(1, dist);
+                float pressurePenalty  = Mathf.Pow(2f, CountTeammatePressure(candidates[i], candidates, teammates));
+                weights[i] = proximityWeight / pressurePenalty;
+            }
+            return weights;
         }
 
         /// <summary>

@@ -4,11 +4,6 @@ using TMPro;
 
 namespace DDD.TNFY.BRAWL
 {
-    /// <summary>
-    /// Manages the ability panel: expand/collapse, button sprites and interactability,
-    /// and ability tooltips.
-    /// Attach to the same GameObject as UIManager.
-    /// </summary>
     public class AbilityPanelController : MonoBehaviour
     {
         #region Serialized Fields
@@ -19,9 +14,6 @@ namespace DDD.TNFY.BRAWL
         [SerializeField] private Button[] abilityButtons = new Button[3];
         [SerializeField] private TextMeshProUGUI abilityTooltipText;
 
-        [Tooltip("One TMP label per ability slot (children of the ability sprite images). " +
-                 "Displays the remaining cooldown turns when the slot is locked. " +
-                 "Must match the order and count of abilityButtons.")]
         [SerializeField] private TextMeshProUGUI[] abilityCooldownTexts = new TextMeshProUGUI[3];
 
         #endregion
@@ -36,8 +28,7 @@ namespace DDD.TNFY.BRAWL
 
         private CombatManager combatManager;
         private bool abilitiesExpanded = false;
-
-        // Injected by UIManager
+        
         private System.Func<bool> isUIBlockedForAnimation;
         private System.Func<bool> isUIBlockedForMovement;
         private System.Func<Unit> getCurrentPlayer;
@@ -137,8 +128,7 @@ namespace DDD.TNFY.BRAWL
                         buttonImage.color = isOnCooldown ? new Color(0.4f, 0.4f, 0.4f, 1f) : Color.white;
 
                     abilityButtons[i].gameObject.SetActive(true);
-
-                    // Cooldown countdown label
+                    
                     if (abilityCooldownTexts != null && i < abilityCooldownTexts.Length &&
                         abilityCooldownTexts[i] != null)
                     {
@@ -176,8 +166,6 @@ namespace DDD.TNFY.BRAWL
             if (expandAbilitiesButton != null)
                 expandAbilitiesButton.interactable = canUseAbility;
 
-            // Refresh per-button state when the panel is open so greying and
-            // cooldown text always reflect the current unit's cooldown state.
             if (!abilitiesExpanded) return;
 
             var abilities = UnitLoadoutManager.GetAbilities(currentPlayer);
@@ -267,9 +255,7 @@ namespace DDD.TNFY.BRAWL
             var abilities = UnitLoadoutManager.GetAbilities(currentPlayer);
             if (slotIndex < 0 || slotIndex >= abilities.Length) return;
             if (abilities[slotIndex] == null) return;
-
-            // Belt-and-suspenders: the button should already be non-interactable when
-            // on cooldown, but guard here in case state gets out of sync.
+            
             if (currentPlayer.IsAbilityOnCooldown(slotIndex)) return;
 
             SetAbilitiesExpanded(false);

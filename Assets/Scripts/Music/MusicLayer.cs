@@ -23,8 +23,7 @@ namespace DDD.TNFY.BRAWL
         [Header("Trigger Conditions")]
         public List<MusicTrigger> enableTriggers = new List<MusicTrigger>();
         public List<MusicTrigger> disableTriggers = new List<MusicTrigger>();
-
-        // Runtime data
+        
         [System.NonSerialized] public AudioSource audioSource;
         [System.NonSerialized] public bool isEnabled;
         [System.NonSerialized] public Coroutine fadeCoroutine;

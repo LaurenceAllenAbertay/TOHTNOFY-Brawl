@@ -162,13 +162,7 @@ namespace DDD.TNFY.BRAWL
                 SetupTurnAfterCameraTransition();
             }
         }
-
-        /// <summary>
-        /// Notifies every ability's targeting system that a new turn has started.
-        /// Targeting types that cache per-turn state (e.g. RandomAOETargeting) override
-        /// ResetForNewTurn to refresh themselves; the base implementation is a no-op.
-        /// Called at the start of every turn so cached selections are always fresh.
-        /// </summary>
+        
         private void NotifyAllTargetingTurnStarted()
         {
             foreach (var unit in UnitManager.AllUnits)
@@ -177,12 +171,7 @@ namespace DDD.TNFY.BRAWL
                     ability?.targeting?.ResetForNewTurn();
             }
         }
-
-        /// <summary>
-        /// Notifies only the active unit's targeting systems that a turn event occurred.
-        /// Called after the active unit moves so cached selections re-roll relative to
-        /// their new position.
-        /// </summary>
+        
         private void NotifyCurrentUnitTargetingTurnStarted()
         {
             if (currentActiveUnit == null) return;
@@ -202,16 +191,6 @@ namespace DDD.TNFY.BRAWL
 
         private IEnumerator WaitForCameraTransition()
         {
-            // Yield one frame before checking IsTransitioning.
-            // CameraController.OnTurnStarted starts its TransitionTo coroutine
-            // synchronously (sets isTransitioning = true up to its first yield),
-            // BUT only if its handler fires before this coroutine's first check.
-            // If Script Execution Order causes CombatManager to subscribe before
-            // CameraController, isTransitioning would still be false here without
-            // this guard — causing SetupTurnAfterCameraTransition to run early
-            // while the camera is still physically moving. The one-frame yield
-            // ensures CameraController has always had a chance to start its
-            // transition before we poll the flag.
             if (debugMode)
                 Debug.Log($"[CombatManager] F={Time.frameCount:D6} T={Time.time:F3}s | " +
                           $"WaitForCameraTransition START — yielding one frame before polling IsTransitioning");
@@ -228,10 +207,6 @@ namespace DDD.TNFY.BRAWL
                 yield return null;
             }
 
-            if (debugMode)
-                Debug.Log($"[CombatManager] F={Time.frameCount:D6} T={Time.time:F3}s | " +
-                          $"WaitForCameraTransition DONE — waited {waitFrames} poll-frames, calling SetupTurnAfterCameraTransition");
-
             SetupTurnAfterCameraTransition();
         }
 
@@ -240,12 +215,9 @@ namespace DDD.TNFY.BRAWL
             _turnTransitionPending = false;
             targetingController?.ClearAbilityTargeting();
             GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
-
-            // Check for a queued follow-up action before giving control to the player.
+            
             if (currentActiveUnit.pendingAction.HasValue)
             {
-                // Scared units cannot use abilities — discard the queued action rather than
-                // firing it through the execution path where CanUseAbility would block it anyway.
                 if (!currentActiveUnit.CanUseAbilities())
                 {
                     currentActiveUnit.pendingAction = null;
@@ -286,18 +258,12 @@ namespace DDD.TNFY.BRAWL
         {
             isExecutingPendingAction = true;
 
-            // Yield directly on the ability coroutine so we block until it fully completes,
-            // including all animations and knockback. No external state polling needed.
             yield return StartCoroutine(
                 ExecuteAbilityWithAnimation(ctx.ability, ctx, isDirectional: true, ctx.aimDir));
 
             isExecutingPendingAction = false;
             GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
 
-            // If the caster killed themselves during this action (e.g. recoil damage),
-            // TurnManager.HandleUnitDied has already flagged _activeUnitDiedThisTurn and
-            // adjusted the turn index. TurnManager.EndTurn() is safe to call — it will
-            // detect the flag and skip the erroneous CurrentUnit?.EndTurn() call.
             _turnTransitionPending = true;
             currentState = CombatState.TurnEnding;
             turnManager.EndTurn();
@@ -416,16 +382,11 @@ namespace DDD.TNFY.BRAWL
         {
             if (ShouldBlockInput()) return;
             if (hasUsedAbilityThisTurn) return;
-
-            // Defensive guard: keyboard shortcuts can reach here even when the ability button
-            // is greyed out and non-interactable. Block on-cooldown abilities regardless of
-            // how the request arrived.
+            
             var abilities = UnitLoadoutManager.GetAbilities(currentActiveUnit);
             if (slot >= 0 && slot < abilities.Length && currentActiveUnit != null &&
                 currentActiveUnit.IsAbilityOnCooldown(slot)) return;
 
-            // If jump targeting is active, cancel it before entering ability targeting.
-            // The two modes are mutually exclusive — both own tile highlights and input.
             if (jumpSystem != null && jumpSystem.IsTargetingJump)
                 jumpSystem.CancelJumpTargeting();
 
@@ -436,11 +397,7 @@ namespace DDD.TNFY.BRAWL
         {
             targetingController?.CancelAbilityTargeting(currentActiveUnit);
         }
-
-        /// <summary>
-        /// Called by AbilityTargetingController when the player has confirmed an ability.
-        /// Owns execution-state flags and waits for the full animation sequence.
-        /// </summary>
+        
         public void StartAbilityExecution(Ability ability, AbilityContext ctx, bool isDirectional, Vector2Int aimDir)
         {
             StartCoroutine(ExecuteAbilityWithAnimation(ability, ctx, isDirectional, aimDir));
@@ -472,12 +429,9 @@ namespace DDD.TNFY.BRAWL
                 hasUsedAbilityThisTurn = true;
                 if (_hasMovedThisTurn)
                     _movementLockedByAbility = true;
-
-                // Wait for the ability animation to fully complete before moving the camera.
+                
                 yield return StartCoroutine(WaitForCompleteAbilitySequence(ability));
 
-                // After the animation, zoom out to frame the full range so the player can
-                // see where all the hits landed, then smoothly return to the caster.
                 if (isRandomAOE)
                 {
                     Vector3 tileSpacing = GridManager.Instance.GetTileSpacing();
@@ -488,9 +442,6 @@ namespace DDD.TNFY.BRAWL
                         cameraController.UnitFocusPosition(currentActiveUnit)));
                 }
 
-                // If the caster killed themselves during this ability (e.g. recoil damage),
-                // skip restoring WaitingForInput — that would let the dead unit act again.
-                // Go straight to TurnEnding so EndTurn() can advance to the next unit.
                 if (currentActiveUnit != null && currentActiveUnit.IsDead)
                 {
                     UnblockAllInput();
@@ -503,12 +454,7 @@ namespace DDD.TNFY.BRAWL
                     turnManager.EndTurn();
                     yield break;
                 }
-
-                // Clear the animation block BEFORE restoring highlights so that CanMove
-                // evaluates correctly inside RestoreDefaultHighlights. Previously these
-                // were set after the call, which meant CanMove was always false at the
-                // point highlights were restored — causing movement tiles to never reappear
-                // after abilities that don't end the turn (e.g. Double Prong).
+                
                 UnblockAllInput();
                 isWaitingForAnimation = false;
                 currentState = CombatState.WaitingForInput;
@@ -523,18 +469,11 @@ namespace DDD.TNFY.BRAWL
             {
                 targetingController?.ShowRetryPreview(currentActiveUnit);
             }
-
-            // State already cleared above on the success path; clean up here only for
-            // the failed-execution path where the block above was skipped.
+            
             UnblockAllInput();
             isWaitingForAnimation = false;
             currentState = CombatState.WaitingForInput;
 
-            // If the ability demands an immediate turn end, mark TurnEnding NOW — before
-            // firing UIEvents.OnAbilityAnimationComplete. UIManager's HandleAbilityAnimationComplete
-            // calls ShouldShowUI(), which would return true for a PlayerUnit in WaitingForInput.
-            // By moving to TurnEnding first, ShouldShowUI() sees the correct state and keeps
-            // the UI hidden, preventing a one-frame flash before EndTurn fires OnTurnStarted.
             if (ability.endTurnOnCast && !isExecutingPendingAction)
             {
                 _turnTransitionPending = true;
@@ -544,8 +483,6 @@ namespace DDD.TNFY.BRAWL
             UIEvents.OnAbilityAnimationComplete();
             UIEvents.OnTargetingStateChanged();
 
-            // If the ability demands an immediate turn end (player-controlled cast only).
-            // ExecutePendingAction handles its own turn end after yielding on this coroutine.
             if (ability.endTurnOnCast && !isExecutingPendingAction)
             {
                 GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
@@ -568,10 +505,7 @@ namespace DDD.TNFY.BRAWL
                 {
                     bool cameraTransitioning = cameraController != null && cameraController.IsTransitioning;
                     bool abilityExecuting = currentActiveUnit.currentAbilityContext != null;
-
-                    // Also wait for any knockback animations on target units to fully complete.
-                    // Knockback runs as a coroutine on the target, not the caster, so
-                    // currentAbilityContext clearing does not mean knockback is done.
+                    
                     bool anyKnockbackPlaying = false;
                     foreach (var unit in UnitManager.AllUnits)
                     {
@@ -634,13 +568,8 @@ namespace DDD.TNFY.BRAWL
                     isMoving = false;
                     currentState = CombatState.WaitingForInput;
 
-                    // Re-roll targeting selections relative to the unit's new position.
                     NotifyCurrentUnitTargetingTurnStarted();
 
-                    // Restore movement highlights if the player still has points left.
-                    // hasMovedThisTurn is now true so CanMove returns false and highlights
-                    // will not reappear — this block is intentionally unreachable after a
-                    // normal walk, but is kept for safety if remaining points somehow exist.
                     if (currentActiveUnit is PlayerUnit && GetRemainingMovement() > 0)
                     {
                         GridManager.Instance.SetHighlightMode(
@@ -651,10 +580,7 @@ namespace DDD.TNFY.BRAWL
                 }
             ));
         }
-
-        /// <summary>
-        /// Marks all movement as consumed. Called by JumpSystem and movement-consuming abilities.
-        /// </summary>
+        
         public void SetMovementUsed()
         {
             movementPointsUsed = totalMovementPoints;
@@ -669,23 +595,13 @@ namespace DDD.TNFY.BRAWL
 
         public void BlockAllInput() => isBlockingAllInput = true;
         public void UnblockAllInput() => isBlockingAllInput = false;
-
-        /// <summary>
-        /// Called by effects that manage their own animation timing (e.g. self-knockback,
-        /// movement effect, charge displacement) to acquire the animation block without going
-        /// through the full ExecuteAbilityWithAnimation flow.
-        /// Always pair with a corresponding ReleaseAnimationBlock call.
-        /// </summary>
+        
         public void BlockAnimationForEffect()
         {
             currentState = CombatState.ExecutingAction;
             isWaitingForAnimation = true;
         }
 
-        /// <summary>
-        /// Paired release for BlockAnimationForEffect. Clears the animation block and
-        /// returns the manager to WaitingForInput so the player can act again.
-        /// </summary>
         public void ReleaseAnimationBlock()
         {
             isWaitingForAnimation = false;

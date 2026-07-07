@@ -7,17 +7,13 @@ namespace DDD.TNFY.BRAWL
     [CreateAssetMenu(menuName = "TNFY Brawl/Effects/Movement Effect")]
     public class MovementEffect : AbilityEffect
     {
-        [Tooltip("Direction to move relative to aim direction")]
-        public Vector2Int moveDirection = Vector2Int.down; // down = backwards from up
-
-        [Tooltip("How far to move")]
+        public Vector2Int moveDirection = Vector2Int.down;
+        
         public int moveDistance = 1;
 
-        [Tooltip("If true, applies movement to caster instead of targets")]
         public bool applyToCaster = false;
 
         [Header("Animation Settings")]
-        [Tooltip("How long the movement takes per tile")]
         public float movementDurationPerTile = 0.3f;
 
         public override EffectAnimationPhase AnimationPhase =>
@@ -49,10 +45,8 @@ namespace DDD.TNFY.BRAWL
 
         private IEnumerator ApplyMovementWithAnimation(AbilityContext ctx, Unit unitToMove)
         {
-            // Calculate actual movement direction based on aim direction
             Vector2Int actualDirection = CalculateMovementDirection(moveDirection, ctx.aimDir);
 
-            // Calculate the full movement path
             var movementPath = CalculateMovementPath(unitToMove, actualDirection);
 
             if (movementPath.Count == 0)
@@ -62,25 +56,21 @@ namespace DDD.TNFY.BRAWL
             }
 
             Debug.Log($"{unitToMove.name} starting movement: {movementPath.Count} tiles in direction {GetDirectionName(actualDirection)}");
-
-            // Handle player state during movement if this is the active player
+            
             bool isActivePlayer = IsActivePlayerUnit(unitToMove);
             if (isActivePlayer)
             {
                 BlockPlayerInputDuringMovement();
             }
-
-            // Use regular movement animation like CombatManager does
+            
             var unitAnimator = unitToMove.GetComponent<UnitAnimator>();
             var spriteRenderer = unitToMove.GetComponentInChildren<SpriteRenderer>();
-
-            // Start walk animation
+            
             if (unitAnimator != null)
             {
                 unitAnimator.PlayMove();
             }
-
-            // Move through each tile in the path
+            
             Vector3 currentPos = unitToMove.transform.position;
 
             foreach (var tile in movementPath)
@@ -88,26 +78,23 @@ namespace DDD.TNFY.BRAWL
                 Vector3 segmentStart = currentPos;
                 Vector3 segmentEnd = tile.transform.position;
                 float segmentDuration = movementDurationPerTile;
-
-                // Update sprite facing for this segment
+                
                 if (spriteRenderer != null)
                 {
                     Vector3 direction = (segmentEnd - segmentStart).normalized;
-                    // Source art faces left — flip when moving right, not left.
+
                     if (Mathf.Abs(direction.x) > 0.1f)
                     {
                         spriteRenderer.flipX = direction.x > 0;
                     }
                 }
-
-                // Animate this segment
+                
                 float segmentElapsed = 0f;
                 while (segmentElapsed < segmentDuration)
                 {
                     segmentElapsed += Time.deltaTime;
                     float segmentT = segmentElapsed / segmentDuration;
-
-                    // Smooth interpolation for this segment
+                    
                     float smoothSegmentT = Mathf.SmoothStep(0f, 1f, segmentT);
                     unitToMove.transform.position = Vector3.Lerp(segmentStart, segmentEnd, smoothSegmentT);
 
@@ -115,30 +102,24 @@ namespace DDD.TNFY.BRAWL
                 }
 
                 currentPos = segmentEnd;
-
-                // Update logical tile position
+                
                 unitToMove.SetCurrentTileLogical(tile);
-
-                // Trigger any OnEnter tile effects for this tile.
-                // yield return ensures the effect animation finishes before the unit moves on.
+                
                 if (tile.HasActiveEffects)
                     yield return tile.TriggerOnEnterEffects(unitToMove);
             }
-
-            // Ensure exact final position
+            
             if (movementPath.Count > 0)
             {
                 unitToMove.transform.position = movementPath[movementPath.Count - 1].transform.position;
                 unitToMove.SetCurrentTile(movementPath[movementPath.Count - 1]);
             }
-
-            // Stop walk animation and return to idle
+            
             if (unitAnimator != null)
             {
                 unitAnimator.PlayIdle();
             }
-
-            // Restore player state if this was the active player
+            
             if (isActivePlayer)
             {
                 RestorePlayerInputAfterMovement();
@@ -165,13 +146,11 @@ namespace DDD.TNFY.BRAWL
 
         private Vector2Int CalculateMovementDirection(Vector2Int relativeDirection, Vector2Int aimDirection)
         {
-            // Simple approach: if moveDirection is down (backwards), return opposite of aim direction
             if (relativeDirection == Vector2Int.down)
             {
                 return GetOppositeDirection(aimDirection);
             }
-
-            // For other relative directions, use rotation method
+            
             return RotateDirection(relativeDirection, aimDirection);
         }
 
@@ -187,17 +166,14 @@ namespace DDD.TNFY.BRAWL
 
         private Vector2Int RotateDirection(Vector2Int dir, Vector2Int aimDir)
         {
-            // Convert aim direction to rotation steps (0, 1, 2, 3 = up, right, down, left)
             int rotation = 0;
             if (aimDir == Vector2Int.right) rotation = 1;
             else if (aimDir == Vector2Int.down) rotation = 2;
             else if (aimDir == Vector2Int.left) rotation = 3;
-
-            // Rotate the movement direction
+            
             Vector2Int result = dir;
             for (int i = 0; i < rotation; i++)
             {
-                // Rotate 90 degrees clockwise: (x,y) -> (-y,x)
                 result = new Vector2Int(-result.y, result.x);
             }
 
@@ -217,7 +193,6 @@ namespace DDD.TNFY.BRAWL
             var combatManager = Object.FindAnyObjectByType<CombatManager>();
             if (combatManager != null)
             {
-                // Clear tile highlights immediately
                 if (GridManager.Instance != null)
                 {
                     GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
@@ -239,13 +214,10 @@ namespace DDD.TNFY.BRAWL
 
         private IEnumerator DelayedInputRestore(CombatManager combatManager)
         {
-            // Wait an extra frame to ensure animation is fully complete
             yield return null;
-
-            // Release the animation block — restores WaitingForInput and clears isWaitingForAnimation.
+            
             combatManager.ReleaseAnimationBlock();
-
-            // Update movement highlights from the new position if player can still move
+            
             if (combatManager.CanMove)
             {
                 GridManager.Instance.SetHighlightMode(
@@ -253,8 +225,7 @@ namespace DDD.TNFY.BRAWL
                     combatManager.CurrentActiveUnit,
                     movementRangeOverride: combatManager.GetRemainingMovement());
             }
-
-            // Trigger UI updates
+            
             UIEvents.OnCombatStateChanged();
             UIEvents.OnUnitMoved();
 

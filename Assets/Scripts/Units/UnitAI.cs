@@ -5,68 +5,34 @@ using UnityEngine;
 
 namespace DDD.TNFY.BRAWL
 {
-    /// <summary>
-    /// Orchestrates an AI unit's turn.
-    ///
-    /// Responsibilities:
-    ///   • Holds all designer-facing configuration.
-    ///   • Listens to TurnManager events and launches the turn coroutine.
-    ///   • Builds the target list and hands it to AIPlanner.
-    ///   • Passes the resulting ActionPlan to AIExecutor.
-    ///
-    /// What this class does NOT do:
-    ///   • Score or evaluate actions — that is AIPlanner's job.
-    ///   • Execute movement or abilities — that is AIExecutor's job.
-    /// </summary>
     public class UnitAI : MonoBehaviour
     {
-        #region Inspector Settings
-
         [Header("Team")]
-        [Tooltip("Units with the same teamId are allies and will not target each other.")]
         [SerializeField] private int teamId = 1;
-
-        [Tooltip("When true this unit is hostile to every unit not on its team, " +
-                 "including other enemy teams. When false it only targets PlayerUnits.")]
+        
         [SerializeField] private bool hostileToAllNonTeam = false;
 
         [Header("AI Behaviour")]
-        [Tooltip("0 = cautious (picks the safest tile that still advances toward the target). " +
-                 "1 = aggressive (always moves as close to the target as possible). " +
-                 "Does not affect ability priority — the unit will always attack when it can.")]
         [Range(0f, 1f)]
         [SerializeField] private float aggressionBias = 1f;
-
-        [Tooltip("1 = score only the current turn. " +
-                 "2 = also reward positions that will be in ability range next turn.")]
+        
         [Range(1, 2)]
         [SerializeField] private int lookAheadSteps = 1;
-
-        [Tooltip("How many of the nearest valid targets to consider when selecting who to focus " +
-                 "this turn. A weighted random pick is made among these candidates, with weight " +
-                 "reduced per teammate already gravitating toward the same target — preventing " +
-                 "the whole team from piling onto one player. 1 = always pick the closest.")]
+        
         [Min(1)]
         [SerializeField] private int targetCandidateCount = 3;
 
         [Header("Timing")]
-        [Tooltip("Pause before the unit begins evaluating — gives the player time to read the board.")]
         [SerializeField] private float thinkingDelay = 1.5f;
-
-        [Tooltip("Short pause between movement and ability execution.")]
+        
         [SerializeField] private float actionDelay = 0.8f;
 
-        [Tooltip("Pause after all actions are complete before the turn formally ends.")]
         [SerializeField] private float endTurnDelay = 1.0f;
 
         [Header("Debug")]
         [SerializeField] private bool enableDebugLogging = true;
         [SerializeField] private bool logDetailedScoring = false;
         [SerializeField] private int  topActionsToLog    = 3;
-
-        #endregion
-
-        #region Private Fields
 
         private Unit         unit;
         private TurnManager  turnManager;
@@ -75,20 +41,15 @@ namespace DDD.TNFY.BRAWL
         private AIDebugLogger logger;
         private AIPlanner     planner;
         private AIExecutor    executor;
-
-        // Per-unit targeting overrides — set externally by status effects (e.g. Taunting).
+        
         private readonly Dictionary<Unit, int> untargetableUnits  = new Dictionary<Unit, int>();
         private readonly Dictionary<Unit, int> targetLikelyUnits  = new Dictionary<Unit, int>();
-
-        // Static team registry — shared across all UnitAI instances so we can cheaply
-        // identify allies without a scene search every turn.
+        
+        private Unit lastAttacker;
+        
         private static readonly Dictionary<int, List<UnitAI>> teamGroups
             = new Dictionary<int, List<UnitAI>>();
-
-        #endregion
-
-        #region Unity Lifecycle
-
+        
         private void Awake()
         {
             unit = GetComponent<Unit>();
@@ -104,6 +65,8 @@ namespace DDD.TNFY.BRAWL
             TurnManager.OnTurnStarted                 += OnTurnStarted;
             TurnManager.OnTurnEnded                   += OnTurnEnded;
             StatusEffectManager.OnStatusEffectApplied += OnStatusEffectApplied;
+            UnitManager.OnUnitDamaged                 += OnUnitDamaged;
+            UnitManager.OnUnitDied                    += OnUnitDied;
         }
 
         private void Start()
@@ -112,7 +75,7 @@ namespace DDD.TNFY.BRAWL
             jumpSystem  = FindAnyObjectByType<JumpSystem>();
 
             logger  = new AIDebugLogger(unit, enableDebugLogging, logDetailedScoring, topActionsToLog);
-            planner = new AIPlanner(unit, aggressionBias, lookAheadSteps, targetCandidateCount, CanTargetUnit, IsAlly, GetTeammateUnits, logger);
+            planner = new AIPlanner(unit, aggressionBias, lookAheadSteps, targetCandidateCount, CanTargetUnit, IsAlly, GetTeammateUnits, GetLastAttacker, logger);
 
             executor = GetComponent<AIExecutor>();
             if (executor == null)
@@ -130,18 +93,14 @@ namespace DDD.TNFY.BRAWL
             TurnManager.OnTurnStarted                 -= OnTurnStarted;
             TurnManager.OnTurnEnded                   -= OnTurnEnded;
             StatusEffectManager.OnStatusEffectApplied -= OnStatusEffectApplied;
+            UnitManager.OnUnitDamaged                 -= OnUnitDamaged;
+            UnitManager.OnUnitDied                    -= OnUnitDied;
         }
-
-        #endregion
-
-        #region Turn Orchestration
-
+        
         private void OnTurnStarted(Unit activeUnit)
         {
             if (activeUnit != unit) return;
 
-            // TurnManager already handles Stunned, Shocked, and Dizzy in its own coroutines.
-            // Guard here so UnitAI never races against those.
             if (StatusEffectManager.Instance != null)
             {
                 if (StatusEffectManager.Instance.HasStatusEffect(unit, StatusEffectType.Stunned)  ||
@@ -163,8 +122,6 @@ namespace DDD.TNFY.BRAWL
         {
             logger.LogTurnStart();
 
-            // A pending action (e.g. set by Chug) takes priority over normal planning —
-            // unless the unit is Scared, in which case the queued ability is discarded.
             if (unit.pendingAction.HasValue)
             {
                 if (!unit.CanUseAbilities())
@@ -213,14 +170,6 @@ namespace DDD.TNFY.BRAWL
             turnManager.EndTurn();
         }
 
-        #endregion
-
-        #region Target List
-
-        /// <summary>
-        /// Builds the list of units this AI should consider targeting this turn.
-        /// Respects team affiliation, untargetable overrides, and Taunting priority.
-        /// </summary>
         private List<Unit> GetTargets()
         {
             var targets = new List<Unit>();
@@ -228,15 +177,12 @@ namespace DDD.TNFY.BRAWL
             foreach (var candidate in UnitManager.AllUnits)
             {
                 if (candidate == null) continue;
-                // Bodies remain in AllUnits so canTargetNeutral abilities can find them,
-                // but AI never considers them as targets.
                 if (candidate.IsDead || candidate.IsNeutral) continue;
                 if (!ShouldTarget(candidate)) continue;
                 if (!CanTargetUnit(candidate)) continue;
                 targets.Add(candidate);
             }
-
-            // If any unit has Taunting, restrict the target list to them.
+            
             var taunting = targets.Where(t => targetLikelyUnits.ContainsKey(t)).ToList();
             if (taunting.Count > 0) return taunting;
 
@@ -245,35 +191,22 @@ namespace DDD.TNFY.BRAWL
 
         private bool ShouldTarget(Unit candidate)
         {
-            // Never target self.
             if (candidate == unit) return false;
-
-            // Never target dead units.
+            
             if (candidate.IsDead) return false;
 
-            // Never target neutral units (bodies, map objects). AI always ignores these.
-            // TODO: If a future enemy ability should target neutrals, add a per-ability
-            // canTargetNeutral check here and pass the ability context through from GetTargets.
             if (candidate.IsNeutral) return false;
-
-            // Never target allies.
+            
             if (IsAlly(candidate)) return false;
-
-            // When hostileToAllNonTeam is false, only PlayerUnits are valid targets.
+            
             if (!hostileToAllNonTeam && !(candidate is PlayerUnit)) return false;
 
             return true;
         }
-
-        #endregion
-
-        #region Targeting Predicates (passed to AIPlanner)
-
-        /// <summary>True when this unit is permitted to target the given unit this turn.</summary>
+        
         public bool CanTargetUnit(Unit target)
             => unit.CanTarget(target) && !untargetableUnits.ContainsKey(target);
 
-        /// <summary>True when the given unit is an ally (same team, or explicitly allied).</summary>
         public bool IsAlly(Unit candidate)
         {
             if (candidate is EnemyUnit enemy)
@@ -284,14 +217,6 @@ namespace DDD.TNFY.BRAWL
             return false;
         }
 
-        #endregion
-
-        #region Targeting Overrides (set by external systems, e.g. StatusEffectManager)
-
-        /// <summary>
-        /// Marks a unit as untargetable for the specified number of turns.
-        /// If already present, the longer duration is kept.
-        /// </summary>
         public void AddUntargetableUnit(Unit target, int duration)
         {
             if (target == null) return;
@@ -300,10 +225,7 @@ namespace DDD.TNFY.BRAWL
             else
                 untargetableUnits[target] = duration;
         }
-
-        /// <summary>
-        /// Marks a unit as a priority target (e.g. Taunting) for the specified turns.
-        /// </summary>
+        
         public void AddTargetLikelyUnit(Unit target, int duration)
         {
             if (target == null) return;
@@ -313,7 +235,6 @@ namespace DDD.TNFY.BRAWL
                 targetLikelyUnits[target] = duration;
         }
 
-        /// <summary>Decrements all targeting override durations. Called at end of each turn.</summary>
         private void TickTargetingDurations()
         {
             DecrementAndClean(untargetableUnits);
@@ -330,22 +251,29 @@ namespace DDD.TNFY.BRAWL
                     dict.Remove(key);
             }
         }
-
-        #endregion
-
-        #region Status Effect Responses
-
+        
         private void OnStatusEffectApplied(Unit target, StatusEffectInstance effect)
         {
-            // When Taunting is applied to any unit, register that unit as a priority target.
             if (effect.effectData.effectType == StatusEffectType.Taunting)
                 AddTargetLikelyUnit(target, effect.remainingDuration);
         }
+        
+        private void OnUnitDamaged(Unit victim, Unit attacker)
+        {
+            if (victim != unit) return;
+            if (attacker == null || attacker == unit) return;
+            if (!ShouldTarget(attacker)) return;
+            lastAttacker = attacker;
+        }
 
-        #endregion
-
-        #region Team Registry
-
+        private void OnUnitDied(Unit dead)
+        {
+            if (lastAttacker == dead)
+                lastAttacker = null;
+        }
+        
+        private Unit GetLastAttacker() => lastAttacker;
+        
         private void RegisterWithTeam()
         {
             if (!teamGroups.ContainsKey(teamId))
@@ -362,11 +290,6 @@ namespace DDD.TNFY.BRAWL
                 teamGroups.Remove(teamId);
         }
 
-        /// <summary>
-        /// Returns the Unit components of all living teammates on this AI's team.
-        /// Passed to AIPlanner as a delegate so it can measure teammate targeting pressure
-        /// without needing a direct reference to UnitAI or the team registry.
-        /// </summary>
         private List<Unit> GetTeammateUnits()
         {
             var result = new List<Unit>();
@@ -378,7 +301,5 @@ namespace DDD.TNFY.BRAWL
             }
             return result;
         }
-
-        #endregion
     }
 }

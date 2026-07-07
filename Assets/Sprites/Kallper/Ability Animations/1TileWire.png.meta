@@ -1,0 +1,1248 @@
+fileFormatVersion: 2
+guid: 29aac036df804f2489472cfea3e51a0a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6651876390415778174
+    second: 1TileWire_0
+  - first:
+      213: 6152660793318588338
+    second: 1TileWire_1
+  - first:
+      213: -3097245226869483020
+    second: 1TileWire_2
+  - first:
+      213: -9173317021680099799
+    second: 1TileWire_3
+  - first:
+      213: 9090533342255578345
+    second: 1TileWire_4
+  - first:
+      213: -1197677821195097339
+    second: 1TileWire_5
+  - first:
+      213: -375887382482221439
+    second: 1TileWire_6
+  - first:
+      213: 3991383719408550090
+    second: 1TileWire_7
+  - first:
+      213: -8857799558318893676
+    second: 1TileWire_8
+  - first:
+      213: 6283219758393377968
+    second: 1TileWire_9
+  - first:
+      213: 4007534128559313113
+    second: 1TileWire_10
+  - first:
+      213: -4012441779254863173
+    second: 1TileWire_11
+  - first:
+      213: 3272139714652798831
+    second: 1TileWire_12
+  - first:
+      213: 2324053141979985932
+    second: 1TileWire_13
+  - first:
+      213: -1791790029906340662
+    second: 1TileWire_14
+  - first:
+      213: 3111173288858969743
+    second: 1TileWire_15
+  - first:
+      213: -3624720319677509582
+    second: 1TileWire_16
+  - first:
+      213: -835862309172228287
+    second: 1TileWire_17
+  - first:
+      213: 5175853535164834409
+    second: 1TileWire_18
+  - first:
+      213: -5522441084788395543
+    second: 1TileWire_19
+  - first:
+      213: -8363939335612776637
+    second: 1TileWire_20
+  - first:
+      213: -8781307290066116006
+    second: 1TileWire_21
+  - first:
+      213: 6084189034965319052
+    second: 1TileWire_22
+  - first:
+      213: 4934090784557346992
+    second: 1TileWire_23
+  - first:
+      213: -3140782693137729157
+    second: 1TileWire_24
+  - first:
+      213: 3203278263871131193
+    second: 1TileWire_25
+  - first:
+      213: 1835086940394307575
+    second: 1TileWire_26
+  - first:
+      213: 1187759631683207953
+    second: 1TileWire_27
+  - first:
+      213: 5821694246292171018
+    second: 1TileWire_28
+  - first:
+      213: 218959350954479787
+    second: 1TileWire_29
+  - first:
+      213: 9122338470869280291
+    second: 1TileWire_30
+  - first:
+      213: 1755379786706907944
+    second: 1TileWire_31
+  - first:
+      213: -4337319864987625581
+    second: 1TileWire_32
+  - first:
+      213: -6125686438424816381
+    second: 1TileWire_33
+  - first:
+      213: -4093879528670899912
+    second: 1TileWire_34
+  - first:
+      213: 8058334890048133412
+    second: 1TileWire_35
+  - first:
+      213: 1773367513628228553
+    second: 1TileWire_36
+  - first:
+      213: 935512441897904796
+    second: 1TileWire_37
+  - first:
+      213: -5654470786061105656
+    second: 1TileWire_38
+  - first:
+      213: -6592705608793904837
+    second: 1TileWire_39
+  - first:
+      213: 3462795413616028687
+    second: 1TileWire_40
+  - first:
+      213: 7467025964697270954
+    second: 1TileWire_41
+  - first:
+      213: -6111704326834163543
+    second: 1TileWire_42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 1TileWire_0
+      rect:
+        serializedVersion: 2
+        x: 479
+        y: 5634
+        width: 401
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28eb5738aa9cfa3a0800000000000000
+      internalID: -6651876390415778174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_1
+      rect:
+        serializedVersion: 2
+        x: 2156
+        y: 5634
+        width: 401
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bf3a31b464a26550800000000000000
+      internalID: 6152660793318588338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_2
+      rect:
+        serializedVersion: 2
+        x: 3353
+        y: 5657
+        width: 867
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f99b2640ef5405d0800000000000000
+      internalID: -3097245226869483020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_3
+      rect:
+        serializedVersion: 2
+        x: 5030
+        y: 5657
+        width: 867
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92e96b665c4d1b080800000000000000
+      internalID: -9173317021680099799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_4
+      rect:
+        serializedVersion: 2
+        x: 6707
+        y: 5657
+        width: 867
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ecfcfb39ef082e70800000000000000
+      internalID: 9090533342255578345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_5
+      rect:
+        serializedVersion: 2
+        x: 8384
+        y: 5657
+        width: 867
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50b6d400e5ef06fe0800000000000000
+      internalID: -1197677821195097339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4870
+        width: 866
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 186889bca6498caf0800000000000000
+      internalID: -375887382482221439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_7
+      rect:
+        serializedVersion: 2
+        x: 1676
+        y: 4870
+        width: 867
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac0cf95785e346730800000000000000
+      internalID: 3991383719408550090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_8
+      rect:
+        serializedVersion: 2
+        x: 3367
+        y: 4870
+        width: 929
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4955aca7b36c21580800000000000000
+      internalID: -8857799558318893676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_9
+      rect:
+        serializedVersion: 2
+        x: 5044
+        y: 4870
+        width: 929
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b4c0c0941b723750800000000000000
+      internalID: 6283219758393377968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_10
+      rect:
+        serializedVersion: 2
+        x: 6721
+        y: 4870
+        width: 929
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d0580e9e0f9d9730800000000000000
+      internalID: 4007534128559313113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_11
+      rect:
+        serializedVersion: 2
+        x: 8398
+        y: 4870
+        width: 929
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbad399e571f058c0800000000000000
+      internalID: -4012441779254863173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_12
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 4083
+        width: 929
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6ff353ebb9f86d20800000000000000
+      internalID: 3272139714652798831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_13
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 4083
+        width: 929
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c08f8dee402b04020800000000000000
+      internalID: 2324053141979985932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_14
+      rect:
+        serializedVersion: 2
+        x: 3367
+        y: 4083
+        width: 929
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac4985b06784227e0800000000000000
+      internalID: -1791790029906340662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_15
+      rect:
+        serializedVersion: 2
+        x: 5044
+        y: 4083
+        width: 929
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f866f1d5f9b1d2b20800000000000000
+      internalID: 3111173288858969743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_16
+      rect:
+        serializedVersion: 2
+        x: 6721
+        y: 4083
+        width: 929
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2305b77e21862bdc0800000000000000
+      internalID: -3624720319677509582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_17
+      rect:
+        serializedVersion: 2
+        x: 8398
+        y: 4083
+        width: 929
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14fc6ac88ab6664f0800000000000000
+      internalID: -835862309172228287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_18
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 3296
+        width: 929
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96223fc0e5354d740800000000000000
+      internalID: 5175853535164834409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_19
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 3296
+        width: 929
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e13a20b7195c53b0800000000000000
+      internalID: -5522441084788395543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_20
+      rect:
+        serializedVersion: 2
+        x: 3367
+        y: 3296
+        width: 929
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34f32e10d715deb80800000000000000
+      internalID: -8363939335612776637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_21
+      rect:
+        serializedVersion: 2
+        x: 5044
+        y: 3296
+        width: 929
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a52af088b87822680800000000000000
+      internalID: -8781307290066116006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_22
+      rect:
+        serializedVersion: 2
+        x: 6721
+        y: 3296
+        width: 929
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8d3f6f11b16f6450800000000000000
+      internalID: 6084189034965319052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_23
+      rect:
+        serializedVersion: 2
+        x: 8398
+        y: 3296
+        width: 929
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b0b1173d69697440800000000000000
+      internalID: 4934090784557346992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_24
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 2509
+        width: 929
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b79b4daf7c2b964d0800000000000000
+      internalID: -3140782693137729157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_25
+      rect:
+        serializedVersion: 2
+        x: 1690
+        y: 2509
+        width: 929
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93ec4cafb94547c20800000000000000
+      internalID: 3203278263871131193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_26
+      rect:
+        serializedVersion: 2
+        x: 3367
+        y: 2509
+        width: 929
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ff392e79d9877910800000000000000
+      internalID: 1835086940394307575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_27
+      rect:
+        serializedVersion: 2
+        x: 5162
+        y: 2509
+        width: 905
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 113c60d8715cb7010800000000000000
+      internalID: 1187759631683207953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_28
+      rect:
+        serializedVersion: 2
+        x: 6839
+        y: 2509
+        width: 905
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a092e258210dac050800000000000000
+      internalID: 5821694246292171018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_29
+      rect:
+        serializedVersion: 2
+        x: 8667
+        y: 2509
+        width: 867
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba054ed9e56e90300800000000000000
+      internalID: 218959350954479787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_30
+      rect:
+        serializedVersion: 2
+        x: 2293
+        y: 1743
+        width: 632
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3262b0dc18e099e70800000000000000
+      internalID: 9122338470869280291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_31
+      rect:
+        serializedVersion: 2
+        x: 3970
+        y: 1743
+        width: 632
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 823f0989d9c5c5810800000000000000
+      internalID: 1755379786706907944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_32
+      rect:
+        serializedVersion: 2
+        x: 5814
+        y: 1720
+        width: 632
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 397da2a109ebec3c0800000000000000
+      internalID: -4337319864987625581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_33
+      rect:
+        serializedVersion: 2
+        x: 7491
+        y: 1720
+        width: 632
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 305d248b3a03dfaa0800000000000000
+      internalID: -6125686438424816381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_34
+      rect:
+        serializedVersion: 2
+        x: 9271
+        y: 1703
+        width: 592
+        height: 412
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 831d35c424e9f27c0800000000000000
+      internalID: -4093879528670899912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_35
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 1722
+        width: 867
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 429947a33e4f4df60800000000000000
+      internalID: 8058334890048133412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_36
+      rect:
+        serializedVersion: 2
+        x: 886
+        y: 916
+        width: 592
+        height: 412
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cb3702ab544c9810800000000000000
+      internalID: 1773367513628228553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_37
+      rect:
+        serializedVersion: 2
+        x: 2799
+        y: 889
+        width: 398
+        height: 651
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9a684efb9b9bfc00800000000000000
+      internalID: 935512441897904796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_38
+      rect:
+        serializedVersion: 2
+        x: 4476
+        y: 889
+        width: 398
+        height: 651
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 806010c57c84781b0800000000000000
+      internalID: -5654470786061105656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_39
+      rect:
+        serializedVersion: 2
+        x: 6211
+        y: 786
+        width: 389
+        height: 789
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b392d1fad210284a0800000000000000
+      internalID: -6592705608793904837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_40
+      rect:
+        serializedVersion: 2
+        x: 7888
+        y: 786
+        width: 389
+        height: 789
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0c6f6ef4125e0030800000000000000
+      internalID: 3462795413616028687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_41
+      rect:
+        serializedVersion: 2
+        x: 9781
+        y: 863
+        width: 281
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaa366a8d8430a760800000000000000
+      internalID: 7467025964697270954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1TileWire_42
+      rect:
+        serializedVersion: 2
+        x: 1396
+        y: 76
+        width: 282
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a0f4d2cb4dde2ba0800000000000000
+      internalID: -6111704326834163543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      1TileWire_0: -6651876390415778174
+      1TileWire_1: 6152660793318588338
+      1TileWire_10: 4007534128559313113
+      1TileWire_11: -4012441779254863173
+      1TileWire_12: 3272139714652798831
+      1TileWire_13: 2324053141979985932
+      1TileWire_14: -1791790029906340662
+      1TileWire_15: 3111173288858969743
+      1TileWire_16: -3624720319677509582
+      1TileWire_17: -835862309172228287
+      1TileWire_18: 5175853535164834409
+      1TileWire_19: -5522441084788395543
+      1TileWire_2: -3097245226869483020
+      1TileWire_20: -8363939335612776637
+      1TileWire_21: -8781307290066116006
+      1TileWire_22: 6084189034965319052
+      1TileWire_23: 4934090784557346992
+      1TileWire_24: -3140782693137729157
+      1TileWire_25: 3203278263871131193
+      1TileWire_26: 1835086940394307575
+      1TileWire_27: 1187759631683207953
+      1TileWire_28: 5821694246292171018
+      1TileWire_29: 218959350954479787
+      1TileWire_3: -9173317021680099799
+      1TileWire_30: 9122338470869280291
+      1TileWire_31: 1755379786706907944
+      1TileWire_32: -4337319864987625581
+      1TileWire_33: -6125686438424816381
+      1TileWire_34: -4093879528670899912
+      1TileWire_35: 8058334890048133412
+      1TileWire_36: 1773367513628228553
+      1TileWire_37: 935512441897904796
+      1TileWire_38: -5654470786061105656
+      1TileWire_39: -6592705608793904837
+      1TileWire_4: 9090533342255578345
+      1TileWire_40: 3462795413616028687
+      1TileWire_41: 7467025964697270954
+      1TileWire_42: -6111704326834163543
+      1TileWire_5: -1197677821195097339
+      1TileWire_6: -375887382482221439
+      1TileWire_7: 3991383719408550090
+      1TileWire_8: -8857799558318893676
+      1TileWire_9: 6283219758393377968
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

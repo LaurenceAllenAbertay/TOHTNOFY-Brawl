@@ -19,9 +19,8 @@ namespace DDD.TNFY.BRAWL
 
         [Header("Global Settings")]
         [Range(0f, 1f)] public float masterVolume = 0.7f;
-        public bool syncAllLayers = true; // All layers start at the same time
-
-        // Calculate beat duration for synchronization
+        public bool syncAllLayers = true;
+        
         public float BeatDuration => 60f / bpm;
         public float MeasureDuration => BeatDuration * beatsPerMeasure;
     }

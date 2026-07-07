@@ -3,64 +3,24 @@ using UnityEngine.SceneManagement;
 
 namespace DDD.TNFY.BRAWL
 {
-    /// <summary>
-    /// Reads DebugSessionConfig and spawns the correct player and enemy units into
-    /// the debug map scene before UnitManager and TurnManager initialise.
-    ///
-    /// ── What this spawner does ────────────────────────────────────────────────
-    /// • Player units: spawns the correct prefab, assigns CharacterData.
-    ///   Ability and passive data is already in UnitLoadoutManager (written by the lobby)
-    ///   and is read from there by all in-combat systems — no extra work needed here.
-    ///
-    /// • Enemy units: instantiates the prefab chosen in the lobby. The EnemyLoadout
-    ///   component on that prefab carries the designer-set abilities and passive.
-    ///   No cloning or data injection needed — it's all on the prefab already.
-    ///
-    /// ── Execution Order ──────────────────────────────────────────────────────
-    /// Set in Project Settings → Script Execution Order:
-    ///   GridManager      → -300
-    ///   DebugMapSpawner  → -200
-    ///   UnitManager      → -100
-    ///   TurnManager      → 0  (default)
-    ///
-    /// ── Spawn Tile Strategy ──────────────────────────────────────────────────
-    /// Drag Tile scene objects into the player/enemy spawn tile arrays to define
-    /// the valid spawn zone for each side. Each unit picks a random unoccupied
-    /// tile from its pool — no two units will ever share a tile.
-    /// Units are instantiated at tile.position + spawnOffset, then Unit.Awake()
-    /// snaps each unit to that same tile via GridManager.GetTileAtPosition().
-    /// Each character's prefab is read from CharacterData.prefab — assign it there.
-    /// </summary>
     public class DebugMapSpawner : MonoBehaviour
     {
-        // ── Inspector wiring ──────────────────────────────────────────────────
-
         [Header("Spawn Offset")]
-        [Tooltip("World-space offset added to each tile's position when spawning a unit. " +
-                 "Default (0, 1.5, 0) places the unit visually above the tile surface.")]
         [SerializeField] private Vector3 spawnOffset = new Vector3(0f, 1.5f, 0f);
 
         [Header("Spawn Tiles")]
-        [Tooltip("Drag Tile scene objects here — one per player slot, in spawn order.")]
         [SerializeField] private Tile[] playerSpawnTiles;
 
-        [Tooltip("Drag Tile scene objects here — one per enemy slot, in spawn order.")]
         [SerializeField] private Tile[] enemySpawnTiles;
 
         [Header("Fallback (for running Debug scene without lobby)")]
-        [Tooltip("CharacterData assets to spawn as players when no lobby config exists.")]
         [SerializeField] private CharacterData[] fallbackPlayerCharacters;
-
-        [Tooltip("Enemy prefab(s) to spawn when no lobby config exists. " +
-                 "Must have EnemyUnit + EnemyLoadout components.")]
+        
         [SerializeField] private GameObject[] fallbackEnemyPrefabs;
         
         [Header("Debug Navigation")]
-        [Tooltip("Exact name of the debug lobby scene as it appears in Build Settings.")]
         [SerializeField] private string debugLobbySceneName = "DemoLobby";
-
-        // ── Awake ─────────────────────────────────────────────────────────────
-
+        
         private void Awake()
         {
             bool hasLobbyData = DebugSessionConfig.PlayerSpawns.Count > 0
@@ -71,12 +31,9 @@ namespace DDD.TNFY.BRAWL
             else
                 SpawnFallback();
         }
-
-        // ── Spawn from lobby config ───────────────────────────────────────────
-
+        
         private void SpawnFromConfig()
         {
-            // Player units
             var playerSpawns = DebugSessionConfig.PlayerSpawns;
             for (int i = 0; i < playerSpawns.Count; i++)
             {
@@ -92,8 +49,7 @@ namespace DDD.TNFY.BRAWL
 
                 SpawnPlayerUnit(config.characterData.prefab, config.characterData, tile);
             }
-
-            // Enemy units — each carries its own prefab reference from the lobby
+            
             var enemySpawns = DebugSessionConfig.EnemySpawns;
             for (int i = 0; i < enemySpawns.Count; i++)
             {
@@ -110,9 +66,7 @@ namespace DDD.TNFY.BRAWL
                 SpawnEnemyUnit(config.prefab, tile);
             }
         }
-
-        // ── Fallback spawn ────────────────────────────────────────────────────
-
+        
         private void SpawnFallback()
         {
             Debug.Log("[DebugMapSpawner] No lobby config found — using fallback spawn.");
@@ -122,9 +76,7 @@ namespace DDD.TNFY.BRAWL
                 foreach (var cd in fallbackPlayerCharacters)
                 {
                     if (cd == null) continue;
-
-                    // Register a default loadout for fallback players so in-combat systems
-                    // don't warn about missing loadout entries.
+                    
                     if (UnitLoadoutManager.Instance != null &&
                         !UnitLoadoutManager.Instance.HasPlayerLoadout(cd))
                     {
@@ -157,16 +109,7 @@ namespace DDD.TNFY.BRAWL
                 }
             }
         }
-
-        // ── Tile selection ────────────────────────────────────────────────────
-
-        /// <summary>
-        /// Returns a random unoccupied tile from the given pool.
-        /// Because each SpawnPlayerUnit/SpawnEnemyUnit call activates the unit and triggers
-        /// Unit.Awake() (which calls SetCurrentTile), the tile's occupied flag is set
-        /// immediately — so subsequent calls to this method will never return the same tile.
-        /// Returns null and logs a warning if all tiles in the pool are taken.
-        /// </summary>
+        
         private Tile PickRandomTile(Tile[] pool, string unitName)
         {
             if (pool == null || pool.Length == 0)
@@ -174,9 +117,7 @@ namespace DDD.TNFY.BRAWL
                 Debug.LogWarning($"[DebugMapSpawner] Spawn tile pool is empty — cannot place '{unitName}'. Add tiles in the Inspector.");
                 return null;
             }
-
-            // Collect all unoccupied tiles from the pool.
-            // Using a local list avoids modifying the serialised array.
+            
             var available = new System.Collections.Generic.List<Tile>(pool.Length);
             foreach (var tile in pool)
             {
@@ -193,14 +134,6 @@ namespace DDD.TNFY.BRAWL
             return available[Random.Range(0, available.Count)];
         }
 
-        // ── Spawn helpers ─────────────────────────────────────────────────────
-
-        /// <summary>
-        /// Spawns a player unit at the given tile, assigns CharacterData before Awake fires.
-        /// The prefab is instantiated inactive so Unit.Awake() doesn't run until after
-        /// characterData is set — otherwise stats and tile-snap would use a null CharacterData.
-        /// Ability and passive data is read from UnitLoadoutManager at runtime.
-        /// </summary>
         private void SpawnPlayerUnit(GameObject prefab, CharacterData data, Tile tile)
         {
             if (prefab == null)
@@ -214,8 +147,7 @@ namespace DDD.TNFY.BRAWL
                 Debug.LogError($"[DebugMapSpawner] Spawn tile for '{data.characterName}' is null — assign it in the Inspector.");
                 return;
             }
-
-            // Instantiate inactive so Unit.Awake() doesn't fire before characterData is assigned.
+            
             prefab.SetActive(false);
             var go = Instantiate(prefab, tile.transform.position + spawnOffset, prefab.transform.rotation);
             prefab.SetActive(true);
@@ -233,12 +165,7 @@ namespace DDD.TNFY.BRAWL
             unit.characterData = data;
             go.SetActive(true);
         }
-
-        /// <summary>
-        /// Spawns an enemy unit at the given tile.
-        /// The EnemyLoadout component on the prefab already carries abilities and passive —
-        /// no data injection required.
-        /// </summary>
+        
         private void SpawnEnemyUnit(GameObject prefab, Tile tile)
         {
             if (prefab == null)

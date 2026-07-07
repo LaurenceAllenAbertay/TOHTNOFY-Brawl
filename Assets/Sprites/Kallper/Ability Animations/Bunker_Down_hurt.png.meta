@@ -1,0 +1,3146 @@
+fileFormatVersion: 2
+guid: bd1b6782fb94c134cac6faa00d5450bd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 338189778150872422
+    second: Bunker_Down_hurt_0
+  - first:
+      213: 2683806936311346308
+    second: Bunker_Down_hurt_1
+  - first:
+      213: 4093103994558362961
+    second: Bunker_Down_hurt_2
+  - first:
+      213: 3910322619204519726
+    second: Bunker_Down_hurt_3
+  - first:
+      213: -2378524461526500779
+    second: Bunker_Down_hurt_4
+  - first:
+      213: 1241937546627546074
+    second: Bunker_Down_hurt_5
+  - first:
+      213: -1214088530112809461
+    second: Bunker_Down_hurt_6
+  - first:
+      213: -1645834528727294395
+    second: Bunker_Down_hurt_7
+  - first:
+      213: -473233362195773892
+    second: Bunker_Down_hurt_8
+  - first:
+      213: 5320833511018209175
+    second: Bunker_Down_hurt_9
+  - first:
+      213: -179467634282884000
+    second: Bunker_Down_hurt_10
+  - first:
+      213: 676261622146018822
+    second: Bunker_Down_hurt_11
+  - first:
+      213: 2694829411581063344
+    second: Bunker_Down_hurt_12
+  - first:
+      213: 3081637245666553308
+    second: Bunker_Down_hurt_13
+  - first:
+      213: -4187279278730404396
+    second: Bunker_Down_hurt_14
+  - first:
+      213: -6658094250732625951
+    second: Bunker_Down_hurt_15
+  - first:
+      213: 640134503154763669
+    second: Bunker_Down_hurt_16
+  - first:
+      213: -5411697655853965638
+    second: Bunker_Down_hurt_17
+  - first:
+      213: 8792222045528598586
+    second: Bunker_Down_hurt_18
+  - first:
+      213: -2995450062929685257
+    second: Bunker_Down_hurt_19
+  - first:
+      213: -1407696169760212084
+    second: Bunker_Down_hurt_20
+  - first:
+      213: 7956787409783158521
+    second: Bunker_Down_hurt_21
+  - first:
+      213: -6337139817540357030
+    second: Bunker_Down_hurt_22
+  - first:
+      213: -6795061615778660175
+    second: Bunker_Down_hurt_23
+  - first:
+      213: 4898241986608591088
+    second: Bunker_Down_hurt_24
+  - first:
+      213: 1436962181093579250
+    second: Bunker_Down_hurt_25
+  - first:
+      213: 8960783883855470699
+    second: Bunker_Down_hurt_26
+  - first:
+      213: 254784579757730014
+    second: Bunker_Down_hurt_27
+  - first:
+      213: 6846251196358078335
+    second: Bunker_Down_hurt_28
+  - first:
+      213: 5044625815282183478
+    second: Bunker_Down_hurt_29
+  - first:
+      213: 1903659403491061862
+    second: Bunker_Down_hurt_30
+  - first:
+      213: 7718615473461117393
+    second: Bunker_Down_hurt_31
+  - first:
+      213: 8658906545353651200
+    second: Bunker_Down_hurt_32
+  - first:
+      213: 8843092284067646284
+    second: Bunker_Down_hurt_33
+  - first:
+      213: 3121367669006198479
+    second: Bunker_Down_hurt_34
+  - first:
+      213: 6307122254744887533
+    second: Bunker_Down_hurt_35
+  - first:
+      213: 1078769259143928667
+    second: Bunker_Down_hurt_36
+  - first:
+      213: -7599296633000354230
+    second: Bunker_Down_hurt_37
+  - first:
+      213: -9107296206498181931
+    second: Bunker_Down_hurt_38
+  - first:
+      213: 4239579277025889091
+    second: Bunker_Down_hurt_39
+  - first:
+      213: -3646403468666251966
+    second: Bunker_Down_hurt_40
+  - first:
+      213: -3692975310980090472
+    second: Bunker_Down_hurt_41
+  - first:
+      213: -2044548433318427751
+    second: Bunker_Down_hurt_42
+  - first:
+      213: -6529500913989092512
+    second: Bunker_Down_hurt_43
+  - first:
+      213: -1224183494236854946
+    second: Bunker_Down_hurt_44
+  - first:
+      213: 2965892676742718840
+    second: Bunker_Down_hurt_45
+  - first:
+      213: 6843447902891528702
+    second: Bunker_Down_hurt_46
+  - first:
+      213: -5332595384711152018
+    second: Bunker_Down_hurt_47
+  - first:
+      213: -7541820530472450884
+    second: Bunker_Down_hurt_48
+  - first:
+      213: -3467682042922042445
+    second: Bunker_Down_hurt_49
+  - first:
+      213: 6075274407551205339
+    second: Bunker_Down_hurt_50
+  - first:
+      213: 2320234866767394308
+    second: Bunker_Down_hurt_51
+  - first:
+      213: -384375692517120894
+    second: Bunker_Down_hurt_52
+  - first:
+      213: -6128113089921490096
+    second: Bunker_Down_hurt_53
+  - first:
+      213: 2628769275791717635
+    second: Bunker_Down_hurt_54
+  - first:
+      213: -685025171793767847
+    second: Bunker_Down_hurt_55
+  - first:
+      213: 2255826106692018348
+    second: Bunker_Down_hurt_56
+  - first:
+      213: 5713855584701443386
+    second: Bunker_Down_hurt_57
+  - first:
+      213: 5770024853926418872
+    second: Bunker_Down_hurt_58
+  - first:
+      213: -1332907203760862920
+    second: Bunker_Down_hurt_59
+  - first:
+      213: -1629598166270764205
+    second: Bunker_Down_hurt_60
+  - first:
+      213: 3175664725424878971
+    second: Bunker_Down_hurt_61
+  - first:
+      213: -6543088118661315613
+    second: Bunker_Down_hurt_62
+  - first:
+      213: -6232188695254142788
+    second: Bunker_Down_hurt_63
+  - first:
+      213: -7646504465991287879
+    second: Bunker_Down_hurt_64
+  - first:
+      213: -8488664399564919632
+    second: Bunker_Down_hurt_65
+  - first:
+      213: -3576715338407882292
+    second: Bunker_Down_hurt_66
+  - first:
+      213: 9060867870069998207
+    second: Bunker_Down_hurt_67
+  - first:
+      213: 6320604923609697758
+    second: Bunker_Down_hurt_68
+  - first:
+      213: -3721736922193851139
+    second: Bunker_Down_hurt_69
+  - first:
+      213: 5596439375980862342
+    second: Bunker_Down_hurt_70
+  - first:
+      213: -9120430672291996621
+    second: Bunker_Down_hurt_71
+  - first:
+      213: 2050515733435512383
+    second: Bunker_Down_hurt_72
+  - first:
+      213: -4553829497780962500
+    second: Bunker_Down_hurt_73
+  - first:
+      213: 8624080474715834717
+    second: Bunker_Down_hurt_74
+  - first:
+      213: -8782326739482022167
+    second: Bunker_Down_hurt_75
+  - first:
+      213: 1522398667230631729
+    second: Bunker_Down_hurt_76
+  - first:
+      213: 3737825215054363727
+    second: Bunker_Down_hurt_77
+  - first:
+      213: 9210279168897039715
+    second: Bunker_Down_hurt_78
+  - first:
+      213: -5294347843364542047
+    second: Bunker_Down_hurt_79
+  - first:
+      213: 808691889947462963
+    second: Bunker_Down_hurt_80
+  - first:
+      213: -8321008331151724440
+    second: Bunker_Down_hurt_81
+  - first:
+      213: -3534767489884896003
+    second: Bunker_Down_hurt_82
+  - first:
+      213: 2237240561486402629
+    second: Bunker_Down_hurt_83
+  - first:
+      213: 3347963861613074558
+    second: Bunker_Down_hurt_84
+  - first:
+      213: 8779568573032952059
+    second: Bunker_Down_hurt_85
+  - first:
+      213: -6858867948307486784
+    second: Bunker_Down_hurt_86
+  - first:
+      213: -3891392474452702905
+    second: Bunker_Down_hurt_87
+  - first:
+      213: -8440206524515850067
+    second: Bunker_Down_hurt_88
+  - first:
+      213: -6599100052283826541
+    second: Bunker_Down_hurt_89
+  - first:
+      213: -7849638390643964519
+    second: Bunker_Down_hurt_90
+  - first:
+      213: 3759194150967731859
+    second: Bunker_Down_hurt_91
+  - first:
+      213: 8722655360889438204
+    second: Bunker_Down_hurt_92
+  - first:
+      213: 8716138972259650945
+    second: Bunker_Down_hurt_93
+  - first:
+      213: 861445765922724373
+    second: Bunker_Down_hurt_94
+  - first:
+      213: -8327650440021404671
+    second: Bunker_Down_hurt_95
+  - first:
+      213: -4352565336248051459
+    second: Bunker_Down_hurt_96
+  - first:
+      213: -3307643601042411436
+    second: Bunker_Down_hurt_97
+  - first:
+      213: 8680540809246230937
+    second: Bunker_Down_hurt_98
+  - first:
+      213: -8788860199664561424
+    second: Bunker_Down_hurt_99
+  - first:
+      213: 649894178504887590
+    second: Bunker_Down_hurt_100
+  - first:
+      213: -6312106465176749230
+    second: Bunker_Down_hurt_101
+  - first:
+      213: 6096581047347859641
+    second: Bunker_Down_hurt_102
+  - first:
+      213: -5242565985357795065
+    second: Bunker_Down_hurt_103
+  - first:
+      213: 7930494364211505046
+    second: Bunker_Down_hurt_104
+  - first:
+      213: 6047918838262322349
+    second: Bunker_Down_hurt_105
+  - first:
+      213: 8972708951516001651
+    second: Bunker_Down_hurt_106
+  - first:
+      213: 8246021697679518841
+    second: Bunker_Down_hurt_107
+  - first:
+      213: 948531979119862298
+    second: Bunker_Down_hurt_108
+  - first:
+      213: 184671114472689936
+    second: Bunker_Down_hurt_109
+  - first:
+      213: -478830859755378288
+    second: Bunker_Down_hurt_110
+  - first:
+      213: -7131107730682084669
+    second: Bunker_Down_hurt_111
+  - first:
+      213: 217321044133434648
+    second: Bunker_Down_hurt_112
+  - first:
+      213: 61568773719843026
+    second: Bunker_Down_hurt_113
+  - first:
+      213: 1814904251254568882
+    second: Bunker_Down_hurt_114
+  - first:
+      213: 5398740164457593687
+    second: Bunker_Down_hurt_115
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_0
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 9221
+        width: 460
+        height: 613
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 665d959bfcd71b400800000000000000
+      internalID: 338189778150872422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_1
+      rect:
+        serializedVersion: 2
+        x: 654
+        y: 9221
+        width: 460
+        height: 613
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 484319c603cce3520800000000000000
+      internalID: 2683806936311346308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_2
+      rect:
+        serializedVersion: 2
+        x: 1248
+        y: 9221
+        width: 459
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15532689560adc830800000000000000
+      internalID: 4093103994558362961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_3
+      rect:
+        serializedVersion: 2
+        x: 1841
+        y: 9221
+        width: 459
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e274cd254b1444630800000000000000
+      internalID: 3910322619204519726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_4
+      rect:
+        serializedVersion: 2
+        x: 2437
+        y: 9221
+        width: 456
+        height: 598
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 55ab22daa98cdfed0800000000000000
+      internalID: -2378524461526500779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_5
+      rect:
+        serializedVersion: 2
+        x: 3030
+        y: 9221
+        width: 456
+        height: 598
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adb74fb5e9f3c3110800000000000000
+      internalID: 1241937546627546074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_6
+      rect:
+        serializedVersion: 2
+        x: 3620
+        y: 9225
+        width: 459
+        height: 624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b06ffb41ae0b62fe0800000000000000
+      internalID: -1214088530112809461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_7
+      rect:
+        serializedVersion: 2
+        x: 4213
+        y: 9225
+        width: 459
+        height: 624
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54e13245732d829e0800000000000000
+      internalID: -1645834528727294395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_8
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 8570
+        width: 461
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c36057ea3ccbe69f0800000000000000
+      internalID: -473233362195773892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_9
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 8570
+        width: 461
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79f1c3523e567d940800000000000000
+      internalID: 5320833511018209175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_10
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 8572
+        width: 459
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06493e13327628df0800000000000000
+      internalID: -179467634282884000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_11
+      rect:
+        serializedVersion: 2
+        x: 1851
+        y: 8572
+        width: 459
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60e2e33cc50926900800000000000000
+      internalID: 676261622146018822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_12
+      rect:
+        serializedVersion: 2
+        x: 2450
+        y: 8567
+        width: 463
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b0709f6215f56520800000000000000
+      internalID: 2694829411581063344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_13
+      rect:
+        serializedVersion: 2
+        x: 3043
+        y: 8567
+        width: 463
+        height: 607
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdd619a6fbc24ca20800000000000000
+      internalID: 3081637245666553308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_14
+      rect:
+        serializedVersion: 2
+        x: 3637
+        y: 8565
+        width: 465
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dd9bef5eabc3e5c0800000000000000
+      internalID: -4187279278730404396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_15
+      rect:
+        serializedVersion: 2
+        x: 4230
+        y: 8565
+        width: 465
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1efd2081e82b993a0800000000000000
+      internalID: -6658094250732625951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_16
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 7908
+        width: 465
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 597c20560f632e800800000000000000
+      internalID: 640134503154763669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_17
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 7908
+        width: 465
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abe920787a9c5e4b0800000000000000
+      internalID: -5411697655853965638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_18
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 7908
+        width: 465
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3827120e5f340a70800000000000000
+      internalID: 8792222045528598586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_19
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 7908
+        width: 465
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f497a0d9060e66d0800000000000000
+      internalID: -2995450062929685257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_20
+      rect:
+        serializedVersion: 2
+        x: 2453
+        y: 7908
+        width: 465
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8bb3c9bacbd67ce0800000000000000
+      internalID: -1407696169760212084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_21
+      rect:
+        serializedVersion: 2
+        x: 3046
+        y: 7908
+        width: 465
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f6fc690eff2c6e60800000000000000
+      internalID: 7956787409783158521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_22
+      rect:
+        serializedVersion: 2
+        x: 3639
+        y: 7908
+        width: 465
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a54f58b59e4fd08a0800000000000000
+      internalID: -6337139817540357030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_23
+      rect:
+        serializedVersion: 2
+        x: 4232
+        y: 7908
+        width: 465
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b00f94567713b1a0800000000000000
+      internalID: -6795061615778660175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_24
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 7251
+        width: 465
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f075b3822d0af340800000000000000
+      internalID: 4898241986608591088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_25
+      rect:
+        serializedVersion: 2
+        x: 674
+        y: 7251
+        width: 465
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f9d0c78d7d11f310800000000000000
+      internalID: 1436962181093579250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_26
+      rect:
+        serializedVersion: 2
+        x: 1267
+        y: 7251
+        width: 465
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b60204257791b5c70800000000000000
+      internalID: 8960783883855470699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_27
+      rect:
+        serializedVersion: 2
+        x: 1860
+        y: 7251
+        width: 465
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed8e4b2b93d298300800000000000000
+      internalID: 254784579757730014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_28
+      rect:
+        serializedVersion: 2
+        x: 2453
+        y: 7251
+        width: 465
+        height: 609
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7f240aa035c20f50800000000000000
+      internalID: 6846251196358078335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_29
+      rect:
+        serializedVersion: 2
+        x: 3050
+        y: 7251
+        width: 458
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63de8a0937c120640800000000000000
+      internalID: 5044625815282183478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_30
+      rect:
+        serializedVersion: 2
+        x: 3643
+        y: 7251
+        width: 458
+        height: 612
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 660ba6634282b6a10800000000000000
+      internalID: 1903659403491061862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_31
+      rect:
+        serializedVersion: 2
+        x: 4240
+        y: 7251
+        width: 446
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d1cb7dc0e70e1b60800000000000000
+      internalID: 7718615473461117393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_32
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 6594
+        width: 446
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 004fb1b40ad9a2870800000000000000
+      internalID: 8658906545353651200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_33
+      rect:
+        serializedVersion: 2
+        x: 659
+        y: 6592
+        width: 480
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4b89d36499f8ba70800000000000000
+      internalID: 8843092284067646284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_34
+      rect:
+        serializedVersion: 2
+        x: 1252
+        y: 6592
+        width: 480
+        height: 596
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc6e0847b53515b20800000000000000
+      internalID: 3121367669006198479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_35
+      rect:
+        serializedVersion: 2
+        x: 1833
+        y: 6592
+        width: 466
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de0a70d2646678750800000000000000
+      internalID: 6307122254744887533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_36
+      rect:
+        serializedVersion: 2
+        x: 2426
+        y: 6592
+        width: 466
+        height: 564
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5b92e5fcee88fe00800000000000000
+      internalID: 1078769259143928667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_37
+      rect:
+        serializedVersion: 2
+        x: 3009
+        y: 6592
+        width: 447
+        height: 580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4e113f99ffd98690800000000000000
+      internalID: -7599296633000354230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_38
+      rect:
+        serializedVersion: 2
+        x: 3602
+        y: 6592
+        width: 447
+        height: 580
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5dcc96b4a526c9180800000000000000
+      internalID: -9107296206498181931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_39
+      rect:
+        serializedVersion: 2
+        x: 4183
+        y: 6592
+        width: 407
+        height: 575
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34b4c34e3e206da30800000000000000
+      internalID: 4239579277025889091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_40
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 5935
+        width: 407
+        height: 575
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 245556e5d5f556dc0800000000000000
+      internalID: -3646403468666251966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_41
+      rect:
+        serializedVersion: 2
+        x: 624
+        y: 5935
+        width: 404
+        height: 574
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8957eb8558aefbcc0800000000000000
+      internalID: -3692975310980090472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_42
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 5935
+        width: 404
+        height: 574
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99349f9480e40a3e0800000000000000
+      internalID: -2044548433318427751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_43
+      rect:
+        serializedVersion: 2
+        x: 1807
+        y: 5935
+        width: 417
+        height: 573
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06b7715738d8265a0800000000000000
+      internalID: -6529500913989092512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_44
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 5935
+        width: 417
+        height: 573
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e55ad161993d20fe0800000000000000
+      internalID: -1224183494236854946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_45
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 5935
+        width: 420
+        height: 569
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 875ae2feca7f82920800000000000000
+      internalID: 2965892676742718840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_46
+      rect:
+        serializedVersion: 2
+        x: 3586
+        y: 5935
+        width: 420
+        height: 569
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef1ddba0c9fc8fe50800000000000000
+      internalID: 6843447902891528702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_47
+      rect:
+        serializedVersion: 2
+        x: 4179
+        y: 5935
+        width: 420
+        height: 569
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6e776b30c0def5b0800000000000000
+      internalID: -5332595384711152018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_48
+      rect:
+        serializedVersion: 2
+        x: 28
+        y: 5278
+        width: 420
+        height: 569
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb401719f22165790800000000000000
+      internalID: -7541820530472450884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_49
+      rect:
+        serializedVersion: 2
+        x: 622
+        y: 5278
+        width: 420
+        height: 569
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bb71a5fd8150efc0800000000000000
+      internalID: -3467682042922042445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_50
+      rect:
+        serializedVersion: 2
+        x: 1215
+        y: 5278
+        width: 420
+        height: 569
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdf7c1fa2e5bf4450800000000000000
+      internalID: 6075274407551205339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_51
+      rect:
+        serializedVersion: 2
+        x: 1811
+        y: 5278
+        width: 417
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40675257151233020800000000000000
+      internalID: 2320234866767394308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_52
+      rect:
+        serializedVersion: 2
+        x: 2404
+        y: 5278
+        width: 417
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 284e83b185c6aaaf0800000000000000
+      internalID: -384375692517120894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_53
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 5278
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 053eec3ec9194faa0800000000000000
+      internalID: -6128113089921490096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_54
+      rect:
+        serializedVersion: 2
+        x: 3593
+        y: 5278
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 305b6008ab34b7420800000000000000
+      internalID: 2628769275791717635
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_55
+      rect:
+        serializedVersion: 2
+        x: 4186
+        y: 5278
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95218055c3d4e76f0800000000000000
+      internalID: -685025171793767847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_56
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 4621
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca02e6464ed4e4f10800000000000000
+      internalID: 2255826106692018348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_57
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 4621
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3de2088161bb4f40800000000000000
+      internalID: 5713855584701443386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_58
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 4621
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b99573a80f331050800000000000000
+      internalID: 5770024853926418872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_59
+      rect:
+        serializedVersion: 2
+        x: 1814
+        y: 4621
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8394641d5ff808de0800000000000000
+      internalID: -1332907203760862920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_60
+      rect:
+        serializedVersion: 2
+        x: 2407
+        y: 4621
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35b9dcc0a118269e0800000000000000
+      internalID: -1629598166270764205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_61
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 4621
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7530bc0e3a321c20800000000000000
+      internalID: 3175664725424878971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_62
+      rect:
+        serializedVersion: 2
+        x: 3593
+        y: 4621
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e30d19d5084235a0800000000000000
+      internalID: -6543088118661315613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_63
+      rect:
+        serializedVersion: 2
+        x: 4186
+        y: 4621
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb0fb26b661d289a0800000000000000
+      internalID: -6232188695254142788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_64
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 3964
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bbb62b73b822e590800000000000000
+      internalID: -7646504465991287879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_65
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 3964
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bcad6614b4323a80800000000000000
+      internalID: -8488664399564919632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_66
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 3964
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc1d1879954fc5ec0800000000000000
+      internalID: -3576715338407882292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_67
+      rect:
+        serializedVersion: 2
+        x: 1814
+        y: 3964
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f72c540425baebd70800000000000000
+      internalID: 9060867870069998207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_68
+      rect:
+        serializedVersion: 2
+        x: 2407
+        y: 3964
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edd4755a0bc47b750800000000000000
+      internalID: 6320604923609697758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_69
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 3964
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfc0e25ecfbb95cc0800000000000000
+      internalID: -3721736922193851139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_70
+      rect:
+        serializedVersion: 2
+        x: 3593
+        y: 3964
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68b195416fb8aad40800000000000000
+      internalID: 5596439375980862342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_71
+      rect:
+        serializedVersion: 2
+        x: 4186
+        y: 3964
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33c557b20a8bd6180800000000000000
+      internalID: -9120430672291996621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_72
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 3307
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f36f5c90235e47c10800000000000000
+      internalID: 2050515733435512383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_73
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 3307
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3bf111f23c8dc0c0800000000000000
+      internalID: -4553829497780962500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_74
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 3307
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d59c1d9df73eea770800000000000000
+      internalID: 8624080474715834717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_75
+      rect:
+        serializedVersion: 2
+        x: 1814
+        y: 3307
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ee62c77c58ee1680800000000000000
+      internalID: -8782326739482022167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_76
+      rect:
+        serializedVersion: 2
+        x: 2407
+        y: 3307
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1375fc69585a02510800000000000000
+      internalID: 1522398667230631729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_77
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 3307
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4c30dfaa3c6fd330800000000000000
+      internalID: 3737825215054363727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_78
+      rect:
+        serializedVersion: 2
+        x: 3593
+        y: 3307
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36db9402b1c71df70800000000000000
+      internalID: 9210279168897039715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_79
+      rect:
+        serializedVersion: 2
+        x: 4186
+        y: 3307
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a9a6e6efa2b686b0800000000000000
+      internalID: -5294347843364542047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_80
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 2650
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33dce014dfc093b00800000000000000
+      internalID: 808691889947462963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_81
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 2650
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 860b2a86207d58c80800000000000000
+      internalID: -8321008331151724440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_82
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 2650
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df4cfc922bbf1fec0800000000000000
+      internalID: -3534767489884896003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_83
+      rect:
+        serializedVersion: 2
+        x: 1814
+        y: 2650
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5441e70ff664c0f10800000000000000
+      internalID: 2237240561486402629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_84
+      rect:
+        serializedVersion: 2
+        x: 2407
+        y: 2650
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e78da44d46b567e20800000000000000
+      internalID: 3347963861613074558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_85
+      rect:
+        serializedVersion: 2
+        x: 3000
+        y: 2650
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf0ffccd91b47d970800000000000000
+      internalID: 8779568573032952059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_86
+      rect:
+        serializedVersion: 2
+        x: 3593
+        y: 2650
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c7e1dbd0f760d0a0800000000000000
+      internalID: -6858867948307486784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_87
+      rect:
+        serializedVersion: 2
+        x: 4186
+        y: 2650
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7494e96792ffef9c0800000000000000
+      internalID: -3891392474452702905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_88
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1993
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da86c4352ec5eda80800000000000000
+      internalID: -8440206524515850067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_89
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1993
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39e5c5a47794b64a0800000000000000
+      internalID: -6599100052283826541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_90
+      rect:
+        serializedVersion: 2
+        x: 1221
+        y: 1993
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 995c56e097b701390800000000000000
+      internalID: -7849638390643964519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_91
+      rect:
+        serializedVersion: 2
+        x: 1814
+        y: 1993
+        width: 415
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 396682ac9275b2430800000000000000
+      internalID: 3759194150967731859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_92
+      rect:
+        serializedVersion: 2
+        x: 2404
+        y: 1993
+        width: 417
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cffb8fb06d81d0970800000000000000
+      internalID: 8722655360889438204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_93
+      rect:
+        serializedVersion: 2
+        x: 2997
+        y: 1993
+        width: 417
+        height: 570
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18d89761732f5f870800000000000000
+      internalID: 8716138972259650945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_94
+      rect:
+        serializedVersion: 2
+        x: 3597
+        y: 1993
+        width: 411
+        height: 571
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51a96172c5874fb00800000000000000
+      internalID: 861445765922724373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_95
+      rect:
+        serializedVersion: 2
+        x: 4190
+        y: 1993
+        width: 411
+        height: 571
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10416eceb0e3e6c80800000000000000
+      internalID: -8327650440021404671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_96
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 1336
+        width: 405
+        height: 573
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df8914733e49893c0800000000000000
+      internalID: -4352565336248051459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_97
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1336
+        width: 405
+        height: 573
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 450f5446ba3e812d0800000000000000
+      internalID: -3307643601042411436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_98
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1336
+        width: 404
+        height: 582
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9994761efd9777870800000000000000
+      internalID: 8680540809246230937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_99
+      rect:
+        serializedVersion: 2
+        x: 1833
+        y: 1336
+        width: 404
+        height: 582
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f2dc6ab632b70680800000000000000
+      internalID: -8788860199664561424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_100
+      rect:
+        serializedVersion: 2
+        x: 2434
+        y: 1336
+        width: 408
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62dc063ef43e40900800000000000000
+      internalID: 649894178504887590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_101
+      rect:
+        serializedVersion: 2
+        x: 3027
+        y: 1336
+        width: 408
+        height: 584
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25b71b6ec94e668a0800000000000000
+      internalID: -6312106465176749230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_102
+      rect:
+        serializedVersion: 2
+        x: 3637
+        y: 1337
+        width: 442
+        height: 593
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b05c8759286b9450800000000000000
+      internalID: 6096581047347859641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_103
+      rect:
+        serializedVersion: 2
+        x: 4230
+        y: 1337
+        width: 442
+        height: 593
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 701f33b330aae37b0800000000000000
+      internalID: -5242565985357795065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_104
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 680
+        width: 453
+        height: 602
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69760105b96ce0e60800000000000000
+      internalID: 7930494364211505046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_105
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 680
+        width: 453
+        height: 602
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da4d401e3268ee350800000000000000
+      internalID: 6047918838262322349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_106
+      rect:
+        serializedVersion: 2
+        x: 1293
+        y: 680
+        width: 456
+        height: 601
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37534108047758c70800000000000000
+      internalID: 8972708951516001651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_107
+      rect:
+        serializedVersion: 2
+        x: 1886
+        y: 680
+        width: 456
+        height: 601
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97ce9547b01cf6270800000000000000
+      internalID: 8246021697679518841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_108
+      rect:
+        serializedVersion: 2
+        x: 2478
+        y: 680
+        width: 459
+        height: 601
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a12a9893fccd92d00800000000000000
+      internalID: 948531979119862298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_109
+      rect:
+        serializedVersion: 2
+        x: 3071
+        y: 680
+        width: 459
+        height: 601
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0119b627665109200800000000000000
+      internalID: 184671114472689936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_110
+      rect:
+        serializedVersion: 2
+        x: 3650
+        y: 680
+        width: 455
+        height: 601
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09929c8bed9da59f0800000000000000
+      internalID: -478830859755378288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_111
+      rect:
+        serializedVersion: 2
+        x: 4243
+        y: 680
+        width: 455
+        height: 601
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c207a91d47390d90800000000000000
+      internalID: -7131107730682084669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_112
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 26
+        width: 490
+        height: 611
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8155ac59654140300800000000000000
+      internalID: 217321044133434648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_113
+      rect:
+        serializedVersion: 2
+        x: 643
+        y: 26
+        width: 490
+        height: 611
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d0e3d6397cbad000800000000000000
+      internalID: 61568773719843026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_114
+      rect:
+        serializedVersion: 2
+        x: 1243
+        y: 23
+        width: 467
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b7ff5dfcc5df2910800000000000000
+      internalID: 1814904251254568882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bunker_Down_hurt_115
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 23
+        width: 467
+        height: 614
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75bf029639d2cea40800000000000000
+      internalID: 5398740164457593687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Bunker_Down_hurt_0: 338189778150872422
+      Bunker_Down_hurt_1: 2683806936311346308
+      Bunker_Down_hurt_10: -179467634282884000
+      Bunker_Down_hurt_100: 649894178504887590
+      Bunker_Down_hurt_101: -6312106465176749230
+      Bunker_Down_hurt_102: 6096581047347859641
+      Bunker_Down_hurt_103: -5242565985357795065
+      Bunker_Down_hurt_104: 7930494364211505046
+      Bunker_Down_hurt_105: 6047918838262322349
+      Bunker_Down_hurt_106: 8972708951516001651
+      Bunker_Down_hurt_107: 8246021697679518841
+      Bunker_Down_hurt_108: 948531979119862298
+      Bunker_Down_hurt_109: 184671114472689936
+      Bunker_Down_hurt_11: 676261622146018822
+      Bunker_Down_hurt_110: -478830859755378288
+      Bunker_Down_hurt_111: -7131107730682084669
+      Bunker_Down_hurt_112: 217321044133434648
+      Bunker_Down_hurt_113: 61568773719843026
+      Bunker_Down_hurt_114: 1814904251254568882
+      Bunker_Down_hurt_115: 5398740164457593687
+      Bunker_Down_hurt_12: 2694829411581063344
+      Bunker_Down_hurt_13: 3081637245666553308
+      Bunker_Down_hurt_14: -4187279278730404396
+      Bunker_Down_hurt_15: -6658094250732625951
+      Bunker_Down_hurt_16: 640134503154763669
+      Bunker_Down_hurt_17: -5411697655853965638
+      Bunker_Down_hurt_18: 8792222045528598586
+      Bunker_Down_hurt_19: -2995450062929685257
+      Bunker_Down_hurt_2: 4093103994558362961
+      Bunker_Down_hurt_20: -1407696169760212084
+      Bunker_Down_hurt_21: 7956787409783158521
+      Bunker_Down_hurt_22: -6337139817540357030
+      Bunker_Down_hurt_23: -6795061615778660175
+      Bunker_Down_hurt_24: 4898241986608591088
+      Bunker_Down_hurt_25: 1436962181093579250
+      Bunker_Down_hurt_26: 8960783883855470699
+      Bunker_Down_hurt_27: 254784579757730014
+      Bunker_Down_hurt_28: 6846251196358078335
+      Bunker_Down_hurt_29: 5044625815282183478
+      Bunker_Down_hurt_3: 3910322619204519726
+      Bunker_Down_hurt_30: 1903659403491061862
+      Bunker_Down_hurt_31: 7718615473461117393
+      Bunker_Down_hurt_32: 8658906545353651200
+      Bunker_Down_hurt_33: 8843092284067646284
+      Bunker_Down_hurt_34: 3121367669006198479
+      Bunker_Down_hurt_35: 6307122254744887533
+      Bunker_Down_hurt_36: 1078769259143928667
+      Bunker_Down_hurt_37: -7599296633000354230
+      Bunker_Down_hurt_38: -9107296206498181931
+      Bunker_Down_hurt_39: 4239579277025889091
+      Bunker_Down_hurt_4: -2378524461526500779
+      Bunker_Down_hurt_40: -3646403468666251966
+      Bunker_Down_hurt_41: -3692975310980090472
+      Bunker_Down_hurt_42: -2044548433318427751
+      Bunker_Down_hurt_43: -6529500913989092512
+      Bunker_Down_hurt_44: -1224183494236854946
+      Bunker_Down_hurt_45: 2965892676742718840
+      Bunker_Down_hurt_46: 6843447902891528702
+      Bunker_Down_hurt_47: -5332595384711152018
+      Bunker_Down_hurt_48: -7541820530472450884
+      Bunker_Down_hurt_49: -3467682042922042445
+      Bunker_Down_hurt_5: 1241937546627546074
+      Bunker_Down_hurt_50: 6075274407551205339
+      Bunker_Down_hurt_51: 2320234866767394308
+      Bunker_Down_hurt_52: -384375692517120894
+      Bunker_Down_hurt_53: -6128113089921490096
+      Bunker_Down_hurt_54: 2628769275791717635
+      Bunker_Down_hurt_55: -685025171793767847
+      Bunker_Down_hurt_56: 2255826106692018348
+      Bunker_Down_hurt_57: 5713855584701443386
+      Bunker_Down_hurt_58: 5770024853926418872
+      Bunker_Down_hurt_59: -1332907203760862920
+      Bunker_Down_hurt_6: -1214088530112809461
+      Bunker_Down_hurt_60: -1629598166270764205
+      Bunker_Down_hurt_61: 3175664725424878971
+      Bunker_Down_hurt_62: -6543088118661315613
+      Bunker_Down_hurt_63: -6232188695254142788
+      Bunker_Down_hurt_64: -7646504465991287879
+      Bunker_Down_hurt_65: -8488664399564919632
+      Bunker_Down_hurt_66: -3576715338407882292
+      Bunker_Down_hurt_67: 9060867870069998207
+      Bunker_Down_hurt_68: 6320604923609697758
+      Bunker_Down_hurt_69: -3721736922193851139
+      Bunker_Down_hurt_7: -1645834528727294395
+      Bunker_Down_hurt_70: 5596439375980862342
+      Bunker_Down_hurt_71: -9120430672291996621
+      Bunker_Down_hurt_72: 2050515733435512383
+      Bunker_Down_hurt_73: -4553829497780962500
+      Bunker_Down_hurt_74: 8624080474715834717
+      Bunker_Down_hurt_75: -8782326739482022167
+      Bunker_Down_hurt_76: 1522398667230631729
+      Bunker_Down_hurt_77: 3737825215054363727
+      Bunker_Down_hurt_78: 9210279168897039715
+      Bunker_Down_hurt_79: -5294347843364542047
+      Bunker_Down_hurt_8: -473233362195773892
+      Bunker_Down_hurt_80: 808691889947462963
+      Bunker_Down_hurt_81: -8321008331151724440
+      Bunker_Down_hurt_82: -3534767489884896003
+      Bunker_Down_hurt_83: 2237240561486402629
+      Bunker_Down_hurt_84: 3347963861613074558
+      Bunker_Down_hurt_85: 8779568573032952059
+      Bunker_Down_hurt_86: -6858867948307486784
+      Bunker_Down_hurt_87: -3891392474452702905
+      Bunker_Down_hurt_88: -8440206524515850067
+      Bunker_Down_hurt_89: -6599100052283826541
+      Bunker_Down_hurt_9: 5320833511018209175
+      Bunker_Down_hurt_90: -7849638390643964519
+      Bunker_Down_hurt_91: 3759194150967731859
+      Bunker_Down_hurt_92: 8722655360889438204
+      Bunker_Down_hurt_93: 8716138972259650945
+      Bunker_Down_hurt_94: 861445765922724373
+      Bunker_Down_hurt_95: -8327650440021404671
+      Bunker_Down_hurt_96: -4352565336248051459
+      Bunker_Down_hurt_97: -3307643601042411436
+      Bunker_Down_hurt_98: 8680540809246230937
+      Bunker_Down_hurt_99: -8788860199664561424
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

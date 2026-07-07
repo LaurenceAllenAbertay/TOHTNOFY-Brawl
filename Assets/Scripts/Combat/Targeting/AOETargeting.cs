@@ -6,10 +6,6 @@ namespace DDD.TNFY.BRAWL
     [CreateAssetMenu(menuName = "TNFY Brawl/Targeting/AOE")]
     public class AOETargeting : AbilityTargeting
     {
-        // ── Input behaviour ───────────────────────────────────────────────────────
-        // AOE is aimed by mouse direction — preview updates on mouse move,
-        // confirms on mouse click. No enter preview (direction not yet chosen).
-
         public override bool UsesDirectionalInput => true;
 
         public bool includeSelf = false;
@@ -26,13 +22,6 @@ namespace DDD.TNFY.BRAWL
 
             if (needsLayerCheck)
             {
-                // When reaching tiles on other Y levels we can't BFS via GetAdjacentTiles
-                // because that helper is restricted to same-Y neighbours. Instead iterate
-                // every tile and use IsAllowedByLayerFlags, which:
-                //   • rejects tiles above  if affectsUpperLayers is false
-                //   • rejects tiles below  if affectsLowerLayers is false
-                //   • charges full 3D Manhattan distance (X + Z + Y steps) so a tile
-                //     that is 1 across and 1 down costs 2 range, not 1.
                 foreach (var tile in GridManager.Instance.AllTiles)
                 {
                     if (tile == null || (!includeSelf && tile == center)) continue;
@@ -47,7 +36,6 @@ namespace DDD.TNFY.BRAWL
             }
             else
             {
-                // No cross-layer reach — same-Y BFS, unchanged from original behaviour.
                 var queue = new Queue<(Tile tile, int distance)>();
                 var visited = new HashSet<Tile>();
 

@@ -6,37 +6,12 @@ using TMPro;
 
 namespace DDD.TNFY.BRAWL
 {
-    /// <summary>
-    /// Drives the Debug Lobby scene.
-    ///
-    /// Layout:
-    ///   Left panel  — one CharacterCard button per playable character.
-    ///   Right panel — detail view for the selected character:
-    ///                   portrait, name, include toggle, three ability dropdowns,
-    ///                   passive dropdown.
-    ///   Enemy strip — enemy count stepper + per-enemy character template dropdowns.
-    ///   Footer      — validation label + Start Battle button.
-    ///
-    /// Ability dropdowns are populated from the selected character's
-    /// CharacterData.availableAbilities pool — not a global flat list — so
-    /// Kallper can only equip Kallper's abilities, etc.
-    ///
-    /// On Start Battle:
-    ///   • Player loadouts are written into UnitLoadoutManager (persists across scenes).
-    ///   • Spawn identities are written into DebugSessionConfig (static, survives load).
-    ///   • The debug map scene is loaded; DebugMapSpawner reads both.
-    /// </summary>
     public class DebugLobbyController : MonoBehaviour
     {
-        // ── Inspector wiring ──────────────────────────────────────────────────
 
         [Header("Asset Lists (drag from Project window)")]
-        [Tooltip("All CharacterData assets — one per playable character. Order determines card order.")]
         [SerializeField] private CharacterData[] allCharacters;
-
-        [Tooltip("All enemy prefabs available to assign to enemy slots. " +
-                 "Each prefab must have EnemyUnit + EnemyLoadout components. " +
-                 "Multiple prefabs can share the same CharacterData but have different EnemyLoadout kits.")]
+        
         [SerializeField] private GameObject[] allEnemyPrefabs;
 
         [Header("Left Panel — Character Cards")]
@@ -77,37 +52,24 @@ namespace DDD.TNFY.BRAWL
         [SerializeField] private TextMeshProUGUI validationLabel;
 
         [Header("Scene")]
-        [Tooltip("Exact name of the overworld scene to load after the lobby, as it appears in Build Settings. " +
-                 "The overworld's OverworldInteractable then loads the combat scene.")]
         [SerializeField] private string overworldSceneName = "DebugOverworld";
 
-        // ── Private state ─────────────────────────────────────────────────────
-
-        // Indices of selected characters in selection order.
-        // Index 0 = leader (first picked), index 1 = second, etc.
-        // Removing a character re-promotes whoever is now at index 0.
         private readonly List<int> _selectionQueue = new List<int>();
 
-        private Ability[][]      _abilities;  // [charIndex][slot 0-2] — chosen abilities per character
-        private PassiveAbility[] _passives;   // chosen passive per character
+        private Ability[][]      _abilities; 
+        private PassiveAbility[] _passives; 
 
         private int _selectedCharIndex = -1;
         private int _enemyCount = 1;
-
-        // Enemy slot choices — index into allEnemyPrefabs
+        
         private readonly List<int> _enemyPrefabIndices = new List<int>();
-
-        // Spawned card buttons for highlight management
+        
         private readonly List<Button> _characterCardButtons = new List<Button>();
         private readonly List<Image>  _characterCardImages  = new List<Image>();
-
-        // Spawned enemy row dropdowns
+        
         private readonly List<TMP_Dropdown> _enemyDropdowns = new List<TMP_Dropdown>();
 
-        // Enemy prefab options built once
         private List<TMP_Dropdown.OptionData> _enemyPrefabOptions;
-
-        // ── Unity Lifecycle ───────────────────────────────────────────────────
 
         private void Awake()
         {
@@ -128,8 +90,6 @@ namespace DDD.TNFY.BRAWL
             ValidateAndRefreshStartButton();
         }
 
-        // ── State initialisation ──────────────────────────────────────────────
-
         private void InitialiseState()
         {
             int count = allCharacters.Length;
@@ -141,18 +101,14 @@ namespace DDD.TNFY.BRAWL
             for (int i = 0; i < count; i++)
             {
                 var cd = allCharacters[i];
-
-                // Pre-fill ability slots with the first 3 available abilities for this
-                // character so the lobby shows a meaningful default without the user
-                // having to set every slot manually.
+                
                 _abilities[i] = new Ability[3];
                 if (cd?.availableAbilities != null)
                 {
                     for (int s = 0; s < 3 && s < cd.availableAbilities.Length; s++)
                         _abilities[i][s] = cd.availableAbilities[s];
                 }
-
-                // No passive default — start with None and let the user choose.
+                
                 _passives[i] = null;
             }
 
@@ -161,11 +117,9 @@ namespace DDD.TNFY.BRAWL
             _enemyPrefabIndices.Add(0);
         }
 
-        // ── Shared dropdown option lists (passives, enemy prefabs) ────────────
 
         private void BuildSharedDropdownOptions()
         {
-            // Enemy prefab options — shown in enemy row dropdowns
             _enemyPrefabOptions = new List<TMP_Dropdown.OptionData>();
             if (allEnemyPrefabs != null)
             {
@@ -178,13 +132,6 @@ namespace DDD.TNFY.BRAWL
                 Debug.LogWarning("[DebugLobby] allEnemyPrefabs is empty — enemy rows will have no options.");
         }
 
-        // ── Per-character ability option list ─────────────────────────────────
-
-        /// <summary>
-        /// Builds a dropdown option list from the selected character's availableAbilities pool.
-        /// Called each time a new character card is selected, so the dropdowns always
-        /// reflect that character's specific pool.
-        /// </summary>
         private List<TMP_Dropdown.OptionData> BuildAbilityOptionsForCharacter(int charIndex)
         {
             var options = new List<TMP_Dropdown.OptionData>
@@ -202,12 +149,7 @@ namespace DDD.TNFY.BRAWL
 
             return options;
         }
-
-        /// <summary>
-        /// Builds a dropdown option list from the selected character's availablePassives pool.
-        /// Called each time a new character card is selected so the passive dropdown always
-        /// reflects that character's specific pool — enforcing per-character passive restrictions.
-        /// </summary>
+        
         private List<TMP_Dropdown.OptionData> BuildPassiveOptionsForCharacter(int charIndex)
         {
             var options = new List<TMP_Dropdown.OptionData>
@@ -226,8 +168,6 @@ namespace DDD.TNFY.BRAWL
             return options;
         }
 
-        // ── Character Cards ───────────────────────────────────────────────────
-
         private void BuildCharacterCards()
         {
             if (characterCardContainer == null || characterCardPrefab == null) return;
@@ -243,8 +183,7 @@ namespace DDD.TNFY.BRAWL
                 var nameLabel = cardGO.GetComponentInChildren<TextMeshProUGUI>();
                 if (nameLabel != null)
                     nameLabel.text = cd?.characterName ?? "Unknown";
-
-                // portrait[0] = card background, portrait[1] = portrait image
+                
                 var portraits = cardGO.GetComponentsInChildren<Image>();
                 if (portraits.Length > 1 && cd?.portrait != null)
                 {
@@ -252,7 +191,6 @@ namespace DDD.TNFY.BRAWL
                     portraits[1].SetNativeSize();
                 }
 
-                // Button is on the root GameObject of the card prefab
                 var btn = cardGO.GetComponent<Button>();
                 if (btn != null)
                     btn.onClick.AddListener(() => OnCharacterCardClicked(capturedIndex));
@@ -281,8 +219,6 @@ namespace DDD.TNFY.BRAWL
             }
         }
 
-        // ── Detail Panel ──────────────────────────────────────────────────────
-
         private void RefreshDetailPanel()
         {
             if (_selectedCharIndex < 0 || _selectedCharIndex >= allCharacters.Length) return;
@@ -303,19 +239,16 @@ namespace DDD.TNFY.BRAWL
                 if (includeLabel != null)
                     includeLabel.text = _selectionQueue.Contains(_selectedCharIndex) ? "In Team" : "Benched";
             }
-
-            // Rebuild ability dropdowns using this character's own pool
+            
             var abilityOptions = BuildAbilityOptionsForCharacter(_selectedCharIndex);
             RefreshAbilityDropdown(abilityDropdown0, 0, abilityOptions);
             RefreshAbilityDropdown(abilityDropdown1, 1, abilityOptions);
             RefreshAbilityDropdown(abilityDropdown2, 2, abilityOptions);
-
-            // Sync description texts to match the current ability selections
+            
             RefreshAbilityDescription(abilityDescription0, _abilities[_selectedCharIndex][0]);
             RefreshAbilityDescription(abilityDescription1, _abilities[_selectedCharIndex][1]);
             RefreshAbilityDescription(abilityDescription2, _abilities[_selectedCharIndex][2]);
-
-            // Rebuild passive dropdown using this character's own pool
+            
             var passiveOptions = BuildPassiveOptionsForCharacter(_selectedCharIndex);
             RefreshPassiveDropdown(passiveOptions);
             RefreshPassiveDescription(_passives[_selectedCharIndex]);
@@ -330,8 +263,6 @@ namespace DDD.TNFY.BRAWL
             dropdown.ClearOptions();
             dropdown.AddOptions(options);
 
-            // Find the current ability in this character's availableAbilities pool.
-            // Index 0 in the dropdown is "— None —", so pool index maps to dropdown index + 1.
             var current = _abilities[_selectedCharIndex][slot];
             int ddIndex = 0;
             var pool = allCharacters[_selectedCharIndex]?.availableAbilities;
@@ -361,9 +292,7 @@ namespace DDD.TNFY.BRAWL
             passiveDropdown.onValueChanged.RemoveAllListeners();
             passiveDropdown.ClearOptions();
             passiveDropdown.AddOptions(options);
-
-            // Find the current passive in this character's availablePassives pool.
-            // Index 0 in the dropdown is "— None —", so pool index maps to dropdown index + 1.
+            
             var current = _passives[_selectedCharIndex];
             int ddIndex = 0;
             var pool = allCharacters[_selectedCharIndex]?.availablePassives;
@@ -383,9 +312,7 @@ namespace DDD.TNFY.BRAWL
             passiveDropdown.RefreshShownValue();
             passiveDropdown.onValueChanged.AddListener(OnPassiveDropdownChanged);
         }
-
-        // ── Detail Panel Callbacks ────────────────────────────────────────────
-
+        
         private void OnIncludeToggleChanged(bool isOn)
         {
             if (_selectedCharIndex < 0) return;
@@ -408,12 +335,11 @@ namespace DDD.TNFY.BRAWL
         private void OnAbilityDropdownChanged(int slot, int dropdownValue)
         {
             if (_selectedCharIndex < 0) return;
-            // dropdownValue 0 → None; 1+ → availableAbilities[dropdownValue - 1]
+
             var pool = allCharacters[_selectedCharIndex]?.availableAbilities;
             var selected = (dropdownValue == 0 || pool == null) ? null : pool[dropdownValue - 1];
             _abilities[_selectedCharIndex][slot] = selected;
-
-            // Update the matching description text immediately
+            
             var descriptionLabel = slot == 0 ? abilityDescription0
                                  : slot == 1 ? abilityDescription1
                                  : abilityDescription2;
@@ -429,8 +355,6 @@ namespace DDD.TNFY.BRAWL
             RefreshPassiveDescription(selected);
         }
 
-        // ── Description helpers ───────────────────────────────────────────────
-
         private void RefreshAbilityDescription(TextMeshProUGUI label, Ability ability)
         {
             if (label == null) return;
@@ -442,9 +366,7 @@ namespace DDD.TNFY.BRAWL
             if (passiveDescription == null) return;
             passiveDescription.text = passive != null ? passive.description : "";
         }
-
-        // ── Enemy Section ─────────────────────────────────────────────────────
-
+        
         private void SetupEnemySection()
         {
             if (enemyCountDecButton != null)
@@ -511,9 +433,7 @@ namespace DDD.TNFY.BRAWL
             if (enemyIndex < _enemyPrefabIndices.Count)
                 _enemyPrefabIndices[enemyIndex] = prefabIndex;
         }
-
-        // ── Footer ────────────────────────────────────────────────────────────
-
+        
         private void SetupFooter()
         {
             if (startBattleButton != null)
@@ -550,9 +470,7 @@ namespace DDD.TNFY.BRAWL
             }
 
             DebugSessionConfig.Clear();
-
-            // Write player loadouts in queue order — index 0 = leader.
-            // DebugOverworldSpawner and DebugMapSpawner both preserve this order.
+            
             foreach (int charIndex in _selectionQueue)
             {
                 var cd = allCharacters[charIndex];
@@ -568,8 +486,7 @@ namespace DDD.TNFY.BRAWL
                     characterData = cd
                 });
             }
-
-            // Write enemy spawn identities — abilities come from EnemyLoadout on the prefab
+            
             foreach (int prefabIndex in _enemyPrefabIndices)
             {
                 if (allEnemyPrefabs == null || prefabIndex >= allEnemyPrefabs.Length) continue;
@@ -577,8 +494,6 @@ namespace DDD.TNFY.BRAWL
                 var prefab = allEnemyPrefabs[prefabIndex];
                 if (prefab == null) continue;
 
-                // Read the CharacterData from the prefab's Unit component so the config
-                // carries it without needing a separate character selection per enemy slot.
                 var unitComponent = prefab.GetComponent<Unit>();
                 if (unitComponent == null)
                 {

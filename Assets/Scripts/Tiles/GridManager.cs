@@ -35,15 +35,13 @@ namespace DDD.TNFY.BRAWL
 
         private void Awake()
         {
-            // Singleton pattern setup
             if (Instance != null && Instance != this)
             {
                 Destroy(gameObject);
                 return;
             }
             Instance = this;
-
-            // Load tile spacing from MapConfiguration if available
+            
             LoadTileSpacingFromMapConfig();
 
             BuildTileList();
@@ -52,16 +50,12 @@ namespace DDD.TNFY.BRAWL
         #endregion
 
         #region Grid Setup and Validation
-
-        /// <summary>
-        /// Rebuilds the tile list by finding all Tile components in the scene
-        /// </summary>
+        
         public void BuildTileList()
         {
             allTiles.Clear();
             allTiles.AddRange(FindObjectsByType<Tile>(FindObjectsSortMode.None));
-
-            // Auto-detect spacing if not manually set (check if any component is 0 or negative)
+            
             if (tileSpacing.x <= 0 || tileSpacing.y <= 0 || tileSpacing.z <= 0)
             {
                 ValidateGridSpacing();
@@ -75,8 +69,7 @@ namespace DDD.TNFY.BRAWL
             float minDistanceX = float.MaxValue;
             float minDistanceZ = float.MaxValue;
             float minDistanceY = float.MaxValue;
-
-            // Find minimum non-zero distance between any two tiles for each axis
+            
             for (int i = 0; i < allTiles.Count; i++)
             {
                 for (int j = i + 1; j < allTiles.Count; j++)
@@ -93,13 +86,11 @@ namespace DDD.TNFY.BRAWL
                         minDistanceY = Mathf.Abs(delta.y);
                 }
             }
-
-            // Update spacing with detected values
+            
             if (minDistanceX < float.MaxValue) tileSpacing.x = Mathf.Round(minDistanceX * 10f) / 10f;
             if (minDistanceZ < float.MaxValue) tileSpacing.z = Mathf.Round(minDistanceZ * 10f) / 10f;
             if (minDistanceY < float.MaxValue) tileSpacing.y = Mathf.Round(minDistanceY * 10f) / 10f;
-
-            Debug.Log($"Grid spacing detected as: X={tileSpacing.x}, Y={tileSpacing.y}, Z={tileSpacing.z}");
+            
         }
 
         public Vector3 GetTileSpacing()
@@ -110,28 +101,18 @@ namespace DDD.TNFY.BRAWL
         #endregion
 
         #region Core Tile Finding
-
-
-        /// <summary>
-        /// Finds the tile at a specific world position using raycast with fallback to closest tile
-        /// </summary>
+        
         public Tile GetTileAtPosition(Vector3 worldPos)
         {
-            // Primary method: raycast from above for precise detection
             RaycastHit hit;
             if (Physics.Raycast(worldPos + Vector3.up * 10f, Vector3.down, out hit, 20f, tileLayer))
             {
                 return hit.collider.GetComponent<Tile>();
             }
 
-            // Fallback: find closest tile that's snapped to the grid
             return GetClosestGridAlignedTile(worldPos);
         }
-
-        /// <summary>
-        /// Finds the tile directly under a screen position by raycasting against tile colliders.
-        /// Returns null when no tile collider is hit.
-        /// </summary>
+        
         public Tile GetTileAtScreenPosition(Camera camera, Vector2 screenPosition)
         {
             if (camera == null) return null;
@@ -144,27 +125,22 @@ namespace DDD.TNFY.BRAWL
 
             return null;
         }
-
-        /// <summary>
-        /// Finds the closest tile that's properly aligned to the 3D grid spacing
-        /// </summary>
+        
         private Tile GetClosestGridAlignedTile(Vector3 worldPos)
         {
-            // Snap the world position to the nearest grid point
             Vector3 snappedPos = new Vector3(
                 Mathf.Round(worldPos.x / tileSpacing.x) * tileSpacing.x,
                 Mathf.Round(worldPos.y / tileSpacing.y) * tileSpacing.y,
                 Mathf.Round(worldPos.z / tileSpacing.z) * tileSpacing.z
             );
-
-            // Find tile closest to this snapped position
+            
             Tile bestTile = null;
             float bestDistance = float.MaxValue;
 
             foreach (var tile in allTiles)
             {
                 float distance = Vector3.Distance(tile.transform.position, snappedPos);
-                if (distance < bestDistance && distance < (tileSpacing.magnitude * 0.1f)) // Within 10% of spacing
+                if (distance < bestDistance && distance < (tileSpacing.magnitude * 0.1f)) 
                 {
                     bestDistance = distance;
                     bestTile = tile;
@@ -173,10 +149,7 @@ namespace DDD.TNFY.BRAWL
 
             return bestTile;
         }
-
-        /// <summary>
-        /// Finds the closest tile to a world position within optional max distance
-        /// </summary>
+        
         public Tile GetClosestTile(Vector3 worldPos, Vector3 maxDistance)
         {
             Tile best = null;
@@ -185,8 +158,7 @@ namespace DDD.TNFY.BRAWL
             foreach (var tile in allTiles)
             {
                 Vector3 diff = tile.transform.position - worldPos;
-
-                // Check if within max distance bounds for each axis
+                
                 if (Mathf.Abs(diff.x) <= maxDistance.x &&
                     Mathf.Abs(diff.y) <= maxDistance.y &&
                     Mathf.Abs(diff.z) <= maxDistance.z)
@@ -230,12 +202,11 @@ namespace DDD.TNFY.BRAWL
             foreach (var dir in directions)
             {
                 var tile = GetTileInDirection(centerTile, dir);
-                // Only include tiles on the same Y level and that are passable
+ 
                 if (tile != null && tile.passableTerrain && IsSameYLevel(centerTile, tile))
                     adjacent.Add(tile);
             }
-
-            // Only include diagonals on the same Y level
+            
             if (includeDiagonals)
             {
                 Vector2Int[] diagonalDirections = {
@@ -253,8 +224,7 @@ namespace DDD.TNFY.BRAWL
 
             return adjacent;
         }
-
-        // Add to GridManager.cs
+        
         public List<Tile> GetAllAdjacentTiles(Tile centerTile, bool includeDiagonals = false)
         {
             if (centerTile == null) return new List<Tile>();
@@ -265,7 +235,7 @@ namespace DDD.TNFY.BRAWL
             foreach (var dir in directions)
             {
                 var tile = GetTileInDirection(centerTile, dir);
-                if (tile != null) // Remove the passableTerrain check
+                if (tile != null)
                     adjacent.Add(tile);
             }
 
@@ -286,29 +256,23 @@ namespace DDD.TNFY.BRAWL
 
             return adjacent;
         }
-
-        /// <summary>
-        /// Checks if two tiles are adjacent (within one grid spacing distance)
-        /// </summary>
+        
         public bool AreTilesAdjacent(Tile tile1, Tile tile2)
         {
             if (tile1 == null || tile2 == null) return false;
 
             Vector3 diff = tile2.transform.position - tile1.transform.position;
-
-            // Check if tiles are adjacent in exactly one direction
+            
             int nonZeroAxes = 0;
             if (Mathf.Abs(diff.x) > 0.1f) nonZeroAxes++;
             if (Mathf.Abs(diff.z) > 0.1f) nonZeroAxes++;
             if (Mathf.Abs(diff.y) > 0.1f) nonZeroAxes++;
 
-            // Should be adjacent in exactly one axis and on same Y level for movement
             if (nonZeroAxes != 1) return false;
 
-            // Check distances match spacing
             bool xMatch = Mathf.Abs(Mathf.Abs(diff.x) - tileSpacing.x) < 0.1f;
             bool zMatch = Mathf.Abs(Mathf.Abs(diff.z) - tileSpacing.z) < 0.1f;
-            bool yMatch = Mathf.Abs(diff.y) < 0.1f; // Same Y level
+            bool yMatch = Mathf.Abs(diff.y) < 0.1f; 
 
             return (xMatch && yMatch) || (zMatch && yMatch);
         }
@@ -316,11 +280,7 @@ namespace DDD.TNFY.BRAWL
         #endregion
 
         #region Pathfinding
-
-        /// <summary>
-        /// Calculates all tiles reachable within movement range using breadth-first search
-        /// Uses only orthogonal movement for pathfinding
-        /// </summary>
+        
         public List<Tile> GetReachableTiles(Tile startTile, int movementRange)
         {
             List<Tile> reachableTiles = new List<Tile>();
@@ -337,14 +297,12 @@ namespace DDD.TNFY.BRAWL
                 if (distance <= movementRange)
                 {
                     reachableTiles.Add(current);
-
-                    // Use orthogonal movement only for pathfinding
+                    
                     var adjacentTiles = GetAdjacentTiles(current, false);
                     foreach (Tile adjacent in adjacentTiles)
                     {
                         if (visited.Contains(adjacent)) continue;
-
-                        // Tile must be moveable and either unoccupied or the start tile
+                        
                         bool passable = adjacent.moveable && (!adjacent.occupied || adjacent == startTile);
                         if (!passable) continue;
 
@@ -357,10 +315,6 @@ namespace DDD.TNFY.BRAWL
             return reachableTiles;
         }
 
-        /// <summary>
-        /// Finds shortest path between two tiles using breadth-first search with max step limit
-        /// Uses only orthogonal movement for pathfinding
-        /// </summary>
         public List<Tile> FindPath(Tile start, Tile goal, int maxSteps = int.MaxValue)
         {
             var path = new List<Tile>();
@@ -382,13 +336,11 @@ namespace DDD.TNFY.BRAWL
 
                 if (steps >= maxSteps) continue;
 
-                // Use orthogonal movement only for pathfinding
                 var adjacentTiles = GetAdjacentTiles(current, false);
                 foreach (var adjacent in adjacentTiles)
                 {
                     if (adjacent == null || visited.Contains(adjacent)) continue;
-
-                    // Goal tile can be occupied, others must be free
+                    
                     bool passable = adjacent.moveable && (adjacent == goal || !adjacent.occupied);
                     if (!passable) continue;
 
@@ -409,7 +361,6 @@ namespace DDD.TNFY.BRAWL
 
             if (!found) return path;
 
-            // Reconstruct path from goal back to start, then reverse
             var cur = goal;
             while (cur != start)
             {
@@ -420,26 +371,19 @@ namespace DDD.TNFY.BRAWL
             return path;
         }
 
-        /// <summary>
-        /// Finds shortest path between two tiles, optimized for visual movement
-        /// Returns waypoints that allow for diagonal animation while respecting orthogonal pathfinding
-        /// </summary>
         public List<Tile> FindPathOptimized(Tile start, Tile goal, int maxSteps = int.MaxValue)
         {
             if (start == null || goal == null) return new List<Tile>();
             if (start == goal) return new List<Tile>();
-
-            // Find the standard orthogonal path first
+            
             var fullPath = FindPath(start, goal, maxSteps);
             if (fullPath.Count == 0) return fullPath;
-
-            // If the path is just one step, return it directly
+            
             if (fullPath.Count == 1)
             {
                 return new List<Tile> { fullPath[0] };
             }
-
-            // Convert to waypoints with proper optimization
+            
             return ConvertPathToWaypointsWithDiagonals(start, fullPath);
         }
 
@@ -447,9 +391,6 @@ namespace DDD.TNFY.BRAWL
 
         #region Path Optimization
 
-        /// <summary>
-        /// Converts an orthogonal path to waypoints with proper diagonal movement and straight line optimization
-        /// </summary>
         private List<Tile> ConvertPathToWaypointsWithDiagonals(Tile start, List<Tile> fullPath)
         {
             if (fullPath.Count <= 1) return fullPath;
@@ -460,7 +401,6 @@ namespace DDD.TNFY.BRAWL
 
             while (currentIndex < fullPath.Count)
             {
-                // Try to find the farthest tile we can reach with a straight line or diagonal
                 int farthestIndex = currentIndex;
                 Tile farthestTile = currentIndex < fullPath.Count ? fullPath[currentIndex] : null;
 
@@ -468,42 +408,36 @@ namespace DDD.TNFY.BRAWL
                 {
                     Tile candidateTile = fullPath[lookahead];
                     Vector2Int directionToCandidate = GetGridDirection(currentTile, candidateTile);
-
-                    // Check if this is a valid straight move (same direction)
+                    
                     if (lookahead == currentIndex + 1)
                     {
-                        // Always accept the immediate next tile
                         farthestIndex = lookahead;
                         farthestTile = candidateTile;
                         continue;
                     }
-
-                    // Check if we can move directly to this tile via straight line
+                    
                     if (IsStraightLine(currentTile, fullPath, currentIndex, lookahead))
                     {
                         farthestIndex = lookahead;
                         farthestTile = candidateTile;
                     }
-                    // Check if we can move directly via diagonal (exactly 1 tile in both directions)
                     else if (lookahead == currentIndex + 2 &&
                              IsValidDiagonalMove(currentTile, fullPath[currentIndex], candidateTile))
                     {
                         farthestIndex = lookahead;
                         farthestTile = candidateTile;
-                        break; // Diagonal moves can only be 2 steps
+                        break; 
                     }
                     else
                     {
-                        // Can't reach further, break out
                         break;
                     }
                 }
-
-                // Add the farthest reachable tile as a waypoint
+                
                 if (farthestTile != null)
                 {
                     waypoints.Add(farthestTile);
-                    currentIndex = farthestIndex + 1; // Move past the tiles we just covered
+                    currentIndex = farthestIndex + 1; 
                     currentTile = farthestTile;
                 }
                 else
@@ -514,10 +448,7 @@ namespace DDD.TNFY.BRAWL
 
             return waypoints;
         }
-
-        /// <summary>
-        /// Checks if all tiles between start and end index form a straight line
-        /// </summary>
+        
         private bool IsStraightLine(Tile startTile, List<Tile> path, int startIndex, int endIndex)
         {
             if (endIndex <= startIndex + 1) return true;
@@ -535,51 +466,35 @@ namespace DDD.TNFY.BRAWL
 
             return true;
         }
-
-        /// <summary>
-        /// Checks if moving from start to end via intermediate tile forms a valid diagonal move
-        /// </summary>
+        
         private bool IsValidDiagonalMove(Tile start, Tile intermediate, Tile end)
         {
-            // Check if this is a perfect L-shape: one horizontal + one vertical move
             Vector2Int dir1 = GetGridDirection(start, intermediate);
             Vector2Int dir2 = GetGridDirection(intermediate, end);
 
             bool isPerpendicular = IsPerpendicularMove(dir1, dir2);
-
-            // Check if the diagonal tile exists and is reachable
+            
             Vector2Int diagonalDir = dir1 + dir2;
             Tile diagonalTile = GetTileInDirection(start, diagonalDir);
 
             return isPerpendicular && diagonalTile != null && diagonalTile == end;
         }
-
-        /// <summary>
-        /// Calculates the grid direction between two tiles.
-        /// Each component is clamped to [-1, 1] — may return a diagonal.
-        /// Use <see cref="GridDirectionUtility.CardinalFromTiles"/> when you need a clean single-axis direction.
-        /// </summary>
+        
         public Vector2Int GetGridDirection(Tile from, Tile to)
         {
             Vector3 delta = to.transform.position - from.transform.position;
-
-            // Convert to grid coordinates using proper spacing
+            
             int gridX = Mathf.RoundToInt(delta.x / tileSpacing.x);
             int gridZ = Mathf.RoundToInt(delta.z / tileSpacing.z);
-
-            // Normalize to unit direction
+            
             gridX = Mathf.Clamp(gridX, -1, 1);
             gridZ = Mathf.Clamp(gridZ, -1, 1);
 
             return new Vector2Int(gridX, gridZ);
         }
 
-        /// <summary>
-        /// Checks if two directions are perpendicular (one horizontal, one vertical)
-        /// </summary>
         private bool IsPerpendicularMove(Vector2Int dir1, Vector2Int dir2)
         {
-            // One direction is horizontal (x != 0, y == 0) and other is vertical (x == 0, y != 0)
             bool dir1Horizontal = (dir1.x != 0 && dir1.y == 0);
             bool dir1Vertical = (dir1.x == 0 && dir1.y != 0);
             bool dir2Horizontal = (dir2.x != 0 && dir2.y == 0);
@@ -591,10 +506,7 @@ namespace DDD.TNFY.BRAWL
         #endregion
 
         #region Area Selection
-
-        /// <summary>
-        /// Gets all passable tiles within a rectangular area centered on a position
-        /// </summary>
+        
         public List<Tile> GetTilesInRect(Vector3 center, int width, int height)
         {
             var tiles = new List<Tile>();
@@ -615,9 +527,6 @@ namespace DDD.TNFY.BRAWL
             return tiles;
         }
 
-        /// <summary>
-        /// Gets all passable tiles in a cross pattern extending in four cardinal directions
-        /// </summary>
         public List<Tile> GetTilesInCross(Tile center, int range)
         {
             var tiles = new List<Tile>();
@@ -637,17 +546,14 @@ namespace DDD.TNFY.BRAWL
                     }
                     else
                     {
-                        break; // Stop extending in this direction if blocked
+                        break;
                     }
                 }
             }
 
             return tiles;
         }
-
-        /// <summary>
-        /// Gets all tiles at exactly the specified distance from center (ring pattern)
-        /// </summary>
+        
         public List<Tile> GetTilesAtDistance(Tile center, int distance)
         {
             var tiles = new List<Tile>();
@@ -687,24 +593,18 @@ namespace DDD.TNFY.BRAWL
         #endregion
 
         #region Distance Calculation
-
-        /// <summary>
-        /// Calculates 3D Manhattan distance between two tiles including Y level differences
-        /// Used for jump validation across multiple tile layers
-        /// </summary>
+        
         private int GetGridDistance3D(Tile tile1, Tile tile2)
         {
             if (tile1 == null || tile2 == null) return int.MaxValue;
 
             Vector3 pos1 = tile1.transform.position;
             Vector3 pos2 = tile2.transform.position;
-
-            // Calculate distance in each axis using tile spacing
+            
             int xDistance = Mathf.RoundToInt(Mathf.Abs(pos2.x - pos1.x) / tileSpacing.x);
             int zDistance = Mathf.RoundToInt(Mathf.Abs(pos2.z - pos1.z) / tileSpacing.z);
             int yDistance = Mathf.RoundToInt(Mathf.Abs(pos2.y - pos1.y) / tileSpacing.y);
 
-            // Return Manhattan distance including Y component
             return xDistance + zDistance + yDistance;
         }
 
@@ -718,22 +618,17 @@ namespace DDD.TNFY.BRAWL
             if (tile1 == null || tile2 == null) return int.MaxValue;
             Vector3 pos1 = tile1.transform.position;
             Vector3 pos2 = tile2.transform.position;
-
-            // Calculate distance in each axis using tile spacing
+            
             int xDistance = Mathf.RoundToInt(Mathf.Abs(pos2.x - pos1.x) / tileSpacing.x);
             int zDistance = Mathf.RoundToInt(Mathf.Abs(pos2.z - pos1.z) / tileSpacing.z);
-
-            // Default behavior: only X and Z distance for backward compatibility
+            
             return xDistance + zDistance;
         }
 
         #endregion
 
         #region Highlighting System
-
-        /// <summary>
-        /// Sets the highlight mode and applies appropriate visual feedback
-        /// </summary>
+        
         public void SetHighlightMode(HighlightMode mode, Unit unit = null, Ability ability = null, Vector2Int aimDir = default, int movementRangeOverride = -1)
         {
             ClearAllHighlights();
@@ -756,10 +651,7 @@ namespace DDD.TNFY.BRAWL
                     break;
             }
         }
-
-        /// <summary>
-        /// Highlights all tiles within movement range of the unit
-        /// </summary>
+        
         private void HighlightMovement(Unit unit, int movementRangeOverride = -1)
         {
             int movementRange = movementRangeOverride >= 0 ? movementRangeOverride : unit.currentSpeed;
@@ -769,15 +661,9 @@ namespace DDD.TNFY.BRAWL
                 tile.Highlight(TileHighlightType.Moveable);
             }
         }
-
-        /// <summary>
-        /// Highlights tiles affected by an ability, showing danger zones and valid targets
-        /// </summary>
+        
         private void HighlightAbilityPreview(Unit unit, Ability ability, Vector2Int aimDir)
         {
-            //if (ability.targeting is RandomAOETargeting)
-            //    return;
-
             var ctx = new AbilityContext
             {
                 caster = unit,
@@ -790,7 +676,6 @@ namespace DDD.TNFY.BRAWL
 
             foreach (var tile in traverseTiles)
             {
-                // Always highlight tiles in the path, even if they're gaps
                 tile.Highlight(TileHighlightType.Danger);
 
                 var u = tile.currentUnit;
@@ -809,22 +694,17 @@ namespace DDD.TNFY.BRAWL
                     {
                         tile.Highlight(TileHighlightType.AttackRange);
                         targetsHighlighted++;
-
-                        // Only stop if ability can't pass through units AND we're not going over gaps
+                        
                         if (!ability.passThroughUnits && tile.passableTerrain)
                             break;
-
-                        // Stop if max targets reached
+                        
                         if (targetsHighlighted >= ability.maxTargets)
                             break;
                     }
                 }
             }
         }
-
-        /// <summary>
-        /// Clears all tile highlights and resets visual state
-        /// </summary>
+        
         public void ClearAllHighlights()
         {
             foreach (Tile tile in allTiles)
@@ -843,7 +723,6 @@ namespace DDD.TNFY.BRAWL
             }
             else
             {
-                // Try to find MapConfiguration in the scene
                 var mapManager = FindAnyObjectByType<MapManager>();
                 if (mapManager != null && mapManager.CurrentConfiguration != null)
                 {
@@ -858,7 +737,7 @@ namespace DDD.TNFY.BRAWL
             if (tile1 == null || tile2 == null) return false;
 
             float yDiff = Mathf.Abs(tile1.transform.position.y - tile2.transform.position.y);
-            return yDiff < (tileSpacing.y * 0.5f); // Within half a Y spacing unit
+            return yDiff < (tileSpacing.y * 0.5f);
         }
 
         public int GetYLevel(Tile tile)

@@ -1,0 +1,1248 @@
+fileFormatVersion: 2
+guid: 886f9e127aaa07143a021de25cc5a610
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4915528306770613232
+    second: 2TileWire_0
+  - first:
+      213: -7399023893250864655
+    second: 2TileWire_1
+  - first:
+      213: 7954623502336605828
+    second: 2TileWire_2
+  - first:
+      213: -3220704133771603029
+    second: 2TileWire_3
+  - first:
+      213: -7063494017533025902
+    second: 2TileWire_4
+  - first:
+      213: -746280329423231032
+    second: 2TileWire_5
+  - first:
+      213: 3409668494366122462
+    second: 2TileWire_6
+  - first:
+      213: -4754341806637074879
+    second: 2TileWire_7
+  - first:
+      213: 6998165336917091421
+    second: 2TileWire_8
+  - first:
+      213: -5709034976146397593
+    second: 2TileWire_9
+  - first:
+      213: 8366645145391365530
+    second: 2TileWire_10
+  - first:
+      213: 3368621007007936708
+    second: 2TileWire_11
+  - first:
+      213: -3750110277004541561
+    second: 2TileWire_12
+  - first:
+      213: 3381963863737213837
+    second: 2TileWire_13
+  - first:
+      213: -1350650228218266629
+    second: 2TileWire_14
+  - first:
+      213: -1752041982326435082
+    second: 2TileWire_15
+  - first:
+      213: 3593969942991674112
+    second: 2TileWire_16
+  - first:
+      213: -4132250102109470284
+    second: 2TileWire_17
+  - first:
+      213: 2470831448131954006
+    second: 2TileWire_18
+  - first:
+      213: 2441281077095568054
+    second: 2TileWire_19
+  - first:
+      213: 5775017182193412356
+    second: 2TileWire_20
+  - first:
+      213: -5734475038252621986
+    second: 2TileWire_21
+  - first:
+      213: -3483417456593971178
+    second: 2TileWire_22
+  - first:
+      213: -7386861885746421659
+    second: 2TileWire_23
+  - first:
+      213: -2417029530391329830
+    second: 2TileWire_24
+  - first:
+      213: -2632583293796591343
+    second: 2TileWire_25
+  - first:
+      213: 4925129640024627483
+    second: 2TileWire_26
+  - first:
+      213: -1577415392989113073
+    second: 2TileWire_27
+  - first:
+      213: 3210652436181388868
+    second: 2TileWire_28
+  - first:
+      213: -9142205672861005963
+    second: 2TileWire_29
+  - first:
+      213: 3608081682587547035
+    second: 2TileWire_30
+  - first:
+      213: -6374450903596383768
+    second: 2TileWire_31
+  - first:
+      213: 135463167830187249
+    second: 2TileWire_32
+  - first:
+      213: -4700310354030955935
+    second: 2TileWire_33
+  - first:
+      213: -3095538379428215282
+    second: 2TileWire_34
+  - first:
+      213: 4129963236520834675
+    second: 2TileWire_35
+  - first:
+      213: 2584984821979105800
+    second: 2TileWire_36
+  - first:
+      213: -2564852859564674809
+    second: 2TileWire_37
+  - first:
+      213: 5122173666201890476
+    second: 2TileWire_38
+  - first:
+      213: 1299668952064708998
+    second: 2TileWire_39
+  - first:
+      213: -3571040416776085343
+    second: 2TileWire_40
+  - first:
+      213: -8562023120597705010
+    second: 2TileWire_41
+  - first:
+      213: -2306728265946533611
+    second: 2TileWire_42
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: 2TileWire_0
+      rect:
+        serializedVersion: 2
+        x: 1312
+        y: 5634
+        width: 608
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01c6f8f6c0988cbb0800000000000000
+      internalID: -4915528306770613232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_1
+      rect:
+        serializedVersion: 2
+        x: 4014
+        y: 5634
+        width: 608
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f9872688f2615990800000000000000
+      internalID: -7399023893250864655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_2
+      rect:
+        serializedVersion: 2
+        x: 6206
+        y: 5657
+        width: 1104
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48e3fb21eef746e60800000000000000
+      internalID: 7954623502336605828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_3
+      rect:
+        serializedVersion: 2
+        x: 8908
+        y: 5657
+        width: 1104
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba359e387a2cd43d0800000000000000
+      internalID: -3220704133771603029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_4
+      rect:
+        serializedVersion: 2
+        x: 11195
+        y: 5655
+        width: 1495
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 291e8d37d9d69fd90800000000000000
+      internalID: -7063494017533025902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_5
+      rect:
+        serializedVersion: 2
+        x: 13897
+        y: 5655
+        width: 1495
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c7eddd8efda4a5f0800000000000000
+      internalID: -746280329423231032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4866
+        width: 1868
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed1a8803e63915f20800000000000000
+      internalID: 3409668494366122462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_7
+      rect:
+        serializedVersion: 2
+        x: 2701
+        y: 4866
+        width: 1869
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 146bb92015f250eb0800000000000000
+      internalID: -4754341806637074879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_8
+      rect:
+        serializedVersion: 2
+        x: 5503
+        y: 4866
+        width: 1869
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d54256acb4a7e1160800000000000000
+      internalID: 6998165336917091421
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_9
+      rect:
+        serializedVersion: 2
+        x: 8205
+        y: 4866
+        width: 1869
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 766638cdfee65c0b0800000000000000
+      internalID: -5709034976146397593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_10
+      rect:
+        serializedVersion: 2
+        x: 10907
+        y: 4866
+        width: 1869
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9d7ccc6e6b4c1470800000000000000
+      internalID: 8366645145391365530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_11
+      rect:
+        serializedVersion: 2
+        x: 13609
+        y: 4866
+        width: 1869
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c070a945febfbe20800000000000000
+      internalID: 3368621007007936708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_12
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 4079
+        width: 1869
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7814a9e629ee4fbc0800000000000000
+      internalID: -3750110277004541561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_13
+      rect:
+        serializedVersion: 2
+        x: 2801
+        y: 4079
+        width: 1869
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d83a34537362fee20800000000000000
+      internalID: 3381963863737213837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_14
+      rect:
+        serializedVersion: 2
+        x: 5503
+        y: 4079
+        width: 1869
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bfbff3306c6814de0800000000000000
+      internalID: -1350650228218266629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_15
+      rect:
+        serializedVersion: 2
+        x: 8205
+        y: 4079
+        width: 1869
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f29cdb891f7fa7e0800000000000000
+      internalID: -1752041982326435082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_16
+      rect:
+        serializedVersion: 2
+        x: 10907
+        y: 4079
+        width: 1869
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00b13791f9850e130800000000000000
+      internalID: 3593969942991674112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_17
+      rect:
+        serializedVersion: 2
+        x: 13609
+        y: 4079
+        width: 1869
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b181bcfc6c47a6c0800000000000000
+      internalID: -4132250102109470284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_18
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 3292
+        width: 1869
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 655e4cd6c182a4220800000000000000
+      internalID: 2470831448131954006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_19
+      rect:
+        serializedVersion: 2
+        x: 2801
+        y: 3292
+        width: 1869
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b21a25843c21e120800000000000000
+      internalID: 2441281077095568054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_20
+      rect:
+        serializedVersion: 2
+        x: 5503
+        y: 3292
+        width: 1869
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4096a64a78bf42050800000000000000
+      internalID: 5775017182193412356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_21
+      rect:
+        serializedVersion: 2
+        x: 8205
+        y: 3292
+        width: 1869
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5f9b93d55d0b60b0800000000000000
+      internalID: -5734475038252621986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_22
+      rect:
+        serializedVersion: 2
+        x: 10907
+        y: 3292
+        width: 1869
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6185257774a68afc0800000000000000
+      internalID: -3483417456593971178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_23
+      rect:
+        serializedVersion: 2
+        x: 13609
+        y: 3292
+        width: 1869
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 560663f80489c7990800000000000000
+      internalID: -7386861885746421659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_24
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 2505
+        width: 1869
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad34565b27cf47ed0800000000000000
+      internalID: -2417029530391329830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_25
+      rect:
+        serializedVersion: 2
+        x: 2801
+        y: 2505
+        width: 1869
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11950ab317f277bd0800000000000000
+      internalID: -2632583293796591343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_26
+      rect:
+        serializedVersion: 2
+        x: 5503
+        y: 2505
+        width: 1869
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b195a6a2053995440800000000000000
+      internalID: 4925129640024627483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_27
+      rect:
+        serializedVersion: 2
+        x: 8288
+        y: 2505
+        width: 1869
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0596adbe05eb1ae0800000000000000
+      internalID: -1577415392989113073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_28
+      rect:
+        serializedVersion: 2
+        x: 10990
+        y: 2505
+        width: 1869
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44e85d341678e8c20800000000000000
+      internalID: 3210652436181388868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_29
+      rect:
+        serializedVersion: 2
+        x: 13815
+        y: 2505
+        width: 1870
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5770f85c06c502180800000000000000
+      internalID: -9142205672861005963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_30
+      rect:
+        serializedVersion: 2
+        x: 3273
+        y: 1743
+        width: 1749
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9579338c2b721230800000000000000
+      internalID: 3608081682587547035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_31
+      rect:
+        serializedVersion: 2
+        x: 5975
+        y: 1743
+        width: 1749
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e148fc2da66987a0800000000000000
+      internalID: -6374450903596383768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_32
+      rect:
+        serializedVersion: 2
+        x: 8785
+        y: 1720
+        width: 1749
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fcdaae880341e100800000000000000
+      internalID: 135463167830187249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_33
+      rect:
+        serializedVersion: 2
+        x: 11487
+        y: 1720
+        width: 1749
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 162f4e5e2a425ceb0800000000000000
+      internalID: -4700310354030955935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_34
+      rect:
+        serializedVersion: 2
+        x: 14334
+        y: 1703
+        width: 1637
+        height: 412
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e06c799ae307a05d0800000000000000
+      internalID: -3095538379428215282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_35
+      rect:
+        serializedVersion: 2
+        x: 305
+        y: 1718
+        width: 1870
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3763f30aea3905930800000000000000
+      internalID: 4129963236520834675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_36
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 916
+        width: 1637
+        height: 412
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80a47dfeff5bfd320800000000000000
+      internalID: 2584984821979105800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_37
+      rect:
+        serializedVersion: 2
+        x: 4002
+        y: 889
+        width: 1108
+        height: 651
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 701b084d9efc76cd0800000000000000
+      internalID: -2564852859564674809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_38
+      rect:
+        serializedVersion: 2
+        x: 6704
+        y: 889
+        width: 1108
+        height: 651
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caee2db9fcd951740800000000000000
+      internalID: 5122173666201890476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_39
+      rect:
+        serializedVersion: 2
+        x: 9587
+        y: 786
+        width: 1081
+        height: 789
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 681db65a60a590210800000000000000
+      internalID: 1299668952064708998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_40
+      rect:
+        serializedVersion: 2
+        x: 12289
+        y: 786
+        width: 1081
+        height: 789
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a0af7f39ad117ec0800000000000000
+      internalID: -3571040416776085343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_41
+      rect:
+        serializedVersion: 2
+        x: 15931
+        y: 863
+        width: 281
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ece971ad5559d2980800000000000000
+      internalID: -8562023120597705010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_42
+      rect:
+        serializedVersion: 2
+        x: 2421
+        y: 76
+        width: 282
+        height: 572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51177ea1ddadcffd0800000000000000
+      internalID: -2306728265946533611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      2TileWire_0: -4915528306770613232
+      2TileWire_1: -7399023893250864655
+      2TileWire_10: 8366645145391365530
+      2TileWire_11: 3368621007007936708
+      2TileWire_12: -3750110277004541561
+      2TileWire_13: 3381963863737213837
+      2TileWire_14: -1350650228218266629
+      2TileWire_15: -1752041982326435082
+      2TileWire_16: 3593969942991674112
+      2TileWire_17: -4132250102109470284
+      2TileWire_18: 2470831448131954006
+      2TileWire_19: 2441281077095568054
+      2TileWire_2: 7954623502336605828
+      2TileWire_20: 5775017182193412356
+      2TileWire_21: -5734475038252621986
+      2TileWire_22: -3483417456593971178
+      2TileWire_23: -7386861885746421659
+      2TileWire_24: -2417029530391329830
+      2TileWire_25: -2632583293796591343
+      2TileWire_26: 4925129640024627483
+      2TileWire_27: -1577415392989113073
+      2TileWire_28: 3210652436181388868
+      2TileWire_29: -9142205672861005963
+      2TileWire_3: -3220704133771603029
+      2TileWire_30: 3608081682587547035
+      2TileWire_31: -6374450903596383768
+      2TileWire_32: 135463167830187249
+      2TileWire_33: -4700310354030955935
+      2TileWire_34: -3095538379428215282
+      2TileWire_35: 4129963236520834675
+      2TileWire_36: 2584984821979105800
+      2TileWire_37: -2564852859564674809
+      2TileWire_38: 5122173666201890476
+      2TileWire_39: 1299668952064708998
+      2TileWire_4: -7063494017533025902
+      2TileWire_40: -3571040416776085343
+      2TileWire_41: -8562023120597705010
+      2TileWire_42: -2306728265946533611
+      2TileWire_5: -746280329423231032
+      2TileWire_6: 3409668494366122462
+      2TileWire_7: -4754341806637074879
+      2TileWire_8: 6998165336917091421
+      2TileWire_9: -5709034976146397593
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
