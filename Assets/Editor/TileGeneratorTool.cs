@@ -32,7 +32,6 @@ public class TileGeneratorTool : EditorWindow
         GUILayout.Label("Tile Square Generator", EditorStyles.boldLabel);
         GUILayout.Space(10);
 
-        // MapConfiguration reference
         mapConfiguration = (MapConfiguration)EditorGUILayout.ObjectField(
             "Map Configuration",
             mapConfiguration,
@@ -40,7 +39,6 @@ public class TileGeneratorTool : EditorWindow
             false
         );
 
-        // Prefab selection
         tilePrefab = (GameObject)EditorGUILayout.ObjectField(
             "Tile Prefab",
             tilePrefab,
@@ -50,7 +48,6 @@ public class TileGeneratorTool : EditorWindow
 
         GUILayout.Space(10);
 
-        // Corner tiles selection
         GUILayout.Label("Define Square Corners", EditorStyles.boldLabel);
         cornerTile1 = (Tile)EditorGUILayout.ObjectField(
             "Corner Tile 1",
@@ -68,7 +65,6 @@ public class TileGeneratorTool : EditorWindow
 
         GUILayout.Space(10);
 
-        // Y Level settings
         GUILayout.Label("Y Level Settings", EditorStyles.boldLabel);
         targetYLevel = EditorGUILayout.IntField("Target Y Level", targetYLevel);
 
@@ -80,16 +76,14 @@ public class TileGeneratorTool : EditorWindow
 
         GUILayout.Space(10);
 
-        // Settings
         GUILayout.Label("Generation Settings", EditorStyles.boldLabel);
 
-        // Get tile spacing from MapConfiguration or fallback to manual input
         if (mapConfiguration != null)
         {
             EditorGUILayout.LabelField("Tile Spacing (from MapConfig)",
                 $"X: {mapConfiguration.tileSpacing.x:F2}, Z: {mapConfiguration.tileSpacing.z:F2}");
-            // Use spacing from MapConfiguration
-            tileSpacing = mapConfiguration.tileSpacing.x; // Assume X and Z are the same for backward compatibility
+
+            tileSpacing = mapConfiguration.tileSpacing.x; 
         }
         else
         {
@@ -108,7 +102,6 @@ public class TileGeneratorTool : EditorWindow
 
         GUILayout.Space(20);
 
-        // Validation
         bool canGenerate = ValidateInputs();
 
         if (!canGenerate)
@@ -116,7 +109,6 @@ public class TileGeneratorTool : EditorWindow
             EditorGUILayout.HelpBox(GetValidationMessage(), MessageType.Warning);
         }
 
-        // Generation buttons
         using (new EditorGUI.DisabledScope(!canGenerate))
         {
             if (GUILayout.Button("Generate Tile Square", GUILayout.Height(30)))
@@ -134,7 +126,6 @@ public class TileGeneratorTool : EditorWindow
 
         GUILayout.Space(10);
 
-        // Quick actions
         GUILayout.Label("Quick Actions", EditorStyles.boldLabel);
 
         if (GUILayout.Button("Select All Tiles in Scene"))
@@ -155,11 +146,9 @@ public class TileGeneratorTool : EditorWindow
         if (cornerTile1 == null || cornerTile2 == null) return false;
         if (cornerTile1 == cornerTile2) return false;
 
-        // Get effective spacing for validation
         float effectiveSpacing = GetEffectiveSpacing();
         if (effectiveSpacing <= 0) return false;
 
-        // Check if prefab has Tile component
         var tileComponent = tilePrefab.GetComponent<Tile>();
         if (tileComponent == null) return false;
 
@@ -181,17 +170,14 @@ public class TileGeneratorTool : EditorWindow
 
     private void GenerateTileSquare()
     {
-        // Get corner positions
         Vector3 pos1 = cornerTile1.transform.position;
         Vector3 pos2 = cornerTile2.transform.position;
 
-        // Calculate min and max bounds for X and Z only
         float minX = Mathf.Min(pos1.x, pos2.x);
         float maxX = Mathf.Max(pos1.x, pos2.x);
         float minZ = Mathf.Min(pos1.z, pos2.z);
         float maxZ = Mathf.Max(pos1.z, pos2.z);
 
-        // Calculate Y position from target level and MapConfiguration
         float yPos;
         if (mapConfiguration != null)
         {
@@ -199,22 +185,18 @@ public class TileGeneratorTool : EditorWindow
         }
         else
         {
-            yPos = pos1.y; // Fallback to corner tile Y position
+            yPos = pos1.y; 
         }
 
-        // Get effective tile spacing
         float effectiveSpacingX = mapConfiguration != null ? mapConfiguration.tileSpacing.x : tileSpacing;
         float effectiveSpacingZ = mapConfiguration != null ? mapConfiguration.tileSpacing.z : tileSpacing;
 
-        // Calculate grid dimensions
         int tilesX = Mathf.RoundToInt((maxX - minX) / effectiveSpacingX) + 1;
         int tilesZ = Mathf.RoundToInt((maxZ - minZ) / effectiveSpacingZ) + 1;
 
-        // Track created tiles for undo
         GameObject[] createdTiles = new GameObject[tilesX * tilesZ];
         int tileIndex = 0;
 
-        // Create parent object if none specified
         GameObject tileContainer = null;
         if (parentTransform == null)
         {
@@ -222,7 +204,6 @@ public class TileGeneratorTool : EditorWindow
             parentTransform = tileContainer.transform;
         }
 
-        // Generate tiles
         for (int x = 0; x < tilesX; x++)
         {
             for (int z = 0; z < tilesZ; z++)
@@ -233,48 +214,39 @@ public class TileGeneratorTool : EditorWindow
                     minZ + (z * effectiveSpacingZ)
                 );
 
-                // Align to grid if requested
                 if (alignToGrid)
                 {
                     tilePosition.x = Mathf.Round(tilePosition.x / effectiveSpacingX) * effectiveSpacingX;
                     tilePosition.z = Mathf.Round(tilePosition.z / effectiveSpacingZ) * effectiveSpacingZ;
-                    // Y position is already aligned to the level
                 }
 
-                // Skip if a tile already exists at this position (within tolerance)
                 if (TileExistsAtPosition(tilePosition, 0.1f))
                 {
                     Debug.Log($"Skipping tile at {tilePosition} - tile already exists");
                     continue;
                 }
 
-                // Create tile
                 GameObject newTile = (GameObject)PrefabUtility.InstantiatePrefab(tilePrefab);
                 newTile.transform.position = tilePosition;
                 newTile.transform.parent = parentTransform;
                 newTile.name = $"Tile_L{targetYLevel}_{x}_{z}";
 
-                // Set grid position on Tile component (include Y level)
                 var tileComponent = newTile.GetComponent<Tile>();
                 if (tileComponent != null)
                 {
                     tileComponent.gridPosition = new Vector2Int(x, z);
-                    // Note: Y level will be auto-calculated by GridManager based on transform.position.y
                 }
 
                 createdTiles[tileIndex++] = newTile;
             }
         }
 
-        // Register undo
         Undo.RegisterCreatedObjectUndo(parentTransform.gameObject, "Generate Tile Square");
 
-        // Select created tiles
         Selection.objects = createdTiles;
 
         Debug.Log($"Generated {tileIndex} tiles in a {tilesX}x{tilesZ} grid at Y level {targetYLevel} (Y pos: {yPos})");
 
-        // Refresh GridManager if it exists
         var gridManager = FindAnyObjectByType<GridManager>();
         if (gridManager != null)
         {
@@ -285,17 +257,14 @@ public class TileGeneratorTool : EditorWindow
 
     private void GenerateTileSquareWithGaps()
     {
-        // Get corner positions
         Vector3 pos1 = cornerTile1.transform.position;
         Vector3 pos2 = cornerTile2.transform.position;
-
-        // Calculate min and max bounds for X and Z only
+        
         float minX = Mathf.Min(pos1.x, pos2.x);
         float maxX = Mathf.Max(pos1.x, pos2.x);
         float minZ = Mathf.Min(pos1.z, pos2.z);
         float maxZ = Mathf.Max(pos1.z, pos2.z);
-
-        // Calculate Y position from target level and MapConfiguration
+        
         float yPos;
         if (mapConfiguration != null)
         {
@@ -303,25 +272,20 @@ public class TileGeneratorTool : EditorWindow
         }
         else
         {
-            yPos = pos1.y; // Fallback to corner tile Y position
+            yPos = pos1.y;
         }
 
-        // Get effective tile spacing
         float effectiveSpacingX = mapConfiguration != null ? mapConfiguration.tileSpacing.x : tileSpacing;
         float effectiveSpacingZ = mapConfiguration != null ? mapConfiguration.tileSpacing.z : tileSpacing;
 
-        // Calculate grid dimensions
         int tilesX = Mathf.RoundToInt((maxX - minX) / effectiveSpacingX) + 1;
         int tilesZ = Mathf.RoundToInt((maxZ - minZ) / effectiveSpacingZ) + 1;
 
-        // Generate a random offset for noise sampling to create unique patterns each time
         float noiseOffsetX = Random.Range(-1000f, 1000f);
         float noiseOffsetZ = Random.Range(-1000f, 1000f);
 
-        // Track created tiles for undo
         var createdTilesList = new System.Collections.Generic.List<GameObject>();
 
-        // Create parent object if none specified
         GameObject tileContainer = null;
         if (parentTransform == null)
         {
@@ -333,7 +297,6 @@ public class TileGeneratorTool : EditorWindow
         int tilesSkippedGaps = 0;
         int tilesSkippedExisting = 0;
 
-        // Generate tiles with gaps
         for (int x = 0; x < tilesX; x++)
         {
             for (int z = 0; z < tilesZ; z++)
@@ -344,42 +307,34 @@ public class TileGeneratorTool : EditorWindow
                     minZ + (z * effectiveSpacingZ)
                 );
 
-                // Align to grid if requested
                 if (alignToGrid)
                 {
                     tilePosition.x = Mathf.Round(tilePosition.x / effectiveSpacingX) * effectiveSpacingX;
                     tilePosition.z = Mathf.Round(tilePosition.z / effectiveSpacingZ) * effectiveSpacingZ;
-                    // Y position is already aligned to the level
                 }
 
-                // Skip if a tile already exists at this position (within tolerance)
                 if (TileExistsAtPosition(tilePosition, 0.1f))
                 {
                     tilesSkippedExisting++;
                     continue;
                 }
 
-                // Determine if this position should have a gap
                 bool shouldCreateGap = false;
 
                 if (useNoise)
                 {
-                    // Use Perlin noise for more natural-looking gaps
                     float noiseValue = Mathf.PerlinNoise(
                         (x * noiseScale) + noiseOffsetX,
                         (z * noiseScale) + noiseOffsetZ
                     );
-
-                    // Convert noise to gap probability
+                    
                     shouldCreateGap = noiseValue < gapProbability;
                 }
                 else
                 {
-                    // Use simple random probability
                     shouldCreateGap = Random.value < gapProbability;
                 }
 
-                // Always create corner tiles regardless of gap settings
                 bool isCorner = (x == 0 && z == 0) ||
                                (x == 0 && z == tilesZ - 1) ||
                                (x == tilesX - 1 && z == 0) ||
@@ -391,13 +346,11 @@ public class TileGeneratorTool : EditorWindow
                     continue;
                 }
 
-                // Create tile
                 GameObject newTile = (GameObject)PrefabUtility.InstantiatePrefab(tilePrefab);
                 newTile.transform.position = tilePosition;
                 newTile.transform.parent = parentTransform;
                 newTile.name = $"Tile_L{targetYLevel}_{x}_{z}";
 
-                // Set grid position on Tile component
                 var tileComponent = newTile.GetComponent<Tile>();
                 if (tileComponent != null)
                 {
@@ -409,7 +362,6 @@ public class TileGeneratorTool : EditorWindow
             }
         }
 
-        // Register undo
         if (tileContainer != null)
         {
             Undo.RegisterCreatedObjectUndo(tileContainer, "Generate Tile Square with Gaps");
@@ -422,14 +374,12 @@ public class TileGeneratorTool : EditorWindow
             }
         }
 
-        // Select created tiles
         Selection.objects = createdTilesList.ToArray();
 
         string gapMethod = useNoise ? "Perlin noise" : "random probability";
         Debug.Log($"Generated {tilesCreated} tiles with gaps using {gapMethod} at Y level {targetYLevel}");
         Debug.Log($"Grid size: {tilesX}x{tilesZ}, Gaps created: {tilesSkippedGaps}, Existing tiles skipped: {tilesSkippedExisting}");
 
-        // Refresh GridManager if it exists
         var gridManager = FindAnyObjectByType<GridManager>();
         if (gridManager != null)
         {
@@ -461,7 +411,6 @@ public class TileGeneratorTool : EditorWindow
         float minZ = Mathf.Min(pos1.z, pos2.z);
         float maxZ = Mathf.Max(pos1.z, pos2.z);
 
-        // Get effective tile spacing
         float effectiveSpacingX = mapConfiguration != null ? mapConfiguration.tileSpacing.x : tileSpacing;
         float effectiveSpacingZ = mapConfiguration != null ? mapConfiguration.tileSpacing.z : tileSpacing;
 
@@ -470,7 +419,7 @@ public class TileGeneratorTool : EditorWindow
 
         int totalPossibleTiles = tilesX * tilesZ;
         int estimatedGaps = Mathf.RoundToInt(totalPossibleTiles * gapProbability);
-        int estimatedTiles = totalPossibleTiles - estimatedGaps + 4; // +4 for guaranteed corners
+        int estimatedTiles = totalPossibleTiles - estimatedGaps + 4;
 
         Debug.Log($"Complete generation would create {totalPossibleTiles} tiles in a {tilesX}x{tilesZ} grid");
         Debug.Log($"Gap generation would create approximately {estimatedTiles} tiles with ~{estimatedGaps} gaps");

@@ -12,12 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e4057410d222494daf110231494a293, type: 3}
   m_Name: Bunker Down
   m_EditorClassIdentifier: 
+  midAnimationEventIndex: -1
   statusesToApply:
   - statusEffectData: {fileID: 11400000, guid: 0ea7f6bc056751d4abf3769ac13a2c23, type: 2}
     applyTo: 1
-    duration: 2
+    duration: 1
+    allyDuration: 0
     effectPower: 0
     useAbilityDamage: 0
     damageMultiplier: 0
     scaleDurationWithDamage: 0
     damagePerTurn: 0
+    warnedFallbackEffect: {fileID: 0}

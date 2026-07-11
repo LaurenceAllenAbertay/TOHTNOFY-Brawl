@@ -56,7 +56,11 @@ namespace DDD.TNFY.BRAWL
         
         [SerializeField] private string animationState = "";
 
-        [SerializeField] private string animationStateHurt = "";
+        [Tooltip("If set, the caster holds on this state after animationState finishes, instead of returning to idle (e.g. Bunker_Down_Idle).")]
+        [SerializeField] private string animationHoldState = "";
+
+        [Tooltip("Played when the status effect that caused animationHoldState expires or is removed (e.g. Bunker_Down_End). Only used if Animation Hold State is set.")]
+        [SerializeField] private string animationHoldReleaseState = "";
         
         [SerializeField] private GameObject castEffectPrefab;
         [SerializeField] private Vector3 castEffectOffset = Vector3.zero;
@@ -70,7 +74,10 @@ namespace DDD.TNFY.BRAWL
         public List<AbilityEffect> effects;
         
         public string AnimationState => animationState;
-        public string AnimationStateHurt => animationStateHurt;
+
+        public string AnimationStateHurt => string.IsNullOrEmpty(animationState) ? "" : animationState + "_Hurt";
+        public string AnimationHoldState => animationHoldState;
+        public string AnimationHoldReleaseState => animationHoldReleaseState;
         public GameObject CastEffectPrefab => castEffectPrefab;
         public Vector3 CastEffectOffset => castEffectOffset;
         public bool ParentCastEffectToCaster => parentCastEffectToCaster;

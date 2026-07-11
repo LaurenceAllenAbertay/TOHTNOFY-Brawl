@@ -28,8 +28,9 @@ MonoBehaviour:
   canExecuteWithoutTargets: 1
   endTurnOnCast: 1
   suppressCameraTransitions: 0
-  animationState: Heads_Up
-  animationStateHurt: Heads_Up
+  animationState: Bunker_Down_Start
+  animationHoldState: Bunker_Down_Idle
+  animationHoldReleaseState: Bunker_Down_End
   castEffectPrefab: {fileID: 0}
   castEffectOffset: {x: 0, y: 0, z: 0}
   parentCastEffectToCaster: 0

@@ -7,7 +7,6 @@ public static class TileGeneratorToolInspector
     [MenuItem("GameObject/TNFY Brawl/Generate Tiles Between Selected", false, 10)]
     private static void GenerateTilesBetweenSelected()
     {
-        // Check if exactly 2 tiles are selected
         if (Selection.gameObjects.Length != 2)
         {
             EditorUtility.DisplayDialog("Invalid Selection",
@@ -25,10 +24,8 @@ public static class TileGeneratorToolInspector
             return;
         }
 
-        // Open the tool window with pre-filled corner tiles
         var window = EditorWindow.GetWindow<TileGeneratorTool>("Tile Generator");
 
-        // Use reflection to set the private fields (or make them public in the main tool)
         var type = typeof(TileGeneratorTool);
         var cornerTile1Field = type.GetField("cornerTile1",
             System.Reflection.BindingFlags.NonPublic | System.Reflection.BindingFlags.Instance);

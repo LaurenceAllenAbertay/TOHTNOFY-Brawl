@@ -17,6 +17,10 @@ namespace DDD.TNFY.BRAWL
         private bool isInKnockbackSequence = false;
         private Coroutine knockbackSequence;
 
+        private Coroutine holdSequence;
+        private StatusEffectInstance activeHoldInstance;
+        private string activeHoldReleaseState;
+
         private bool _isTalking      = false;
         private bool _isHurtIdle     = false;  
         private bool _isBadIdle      = false;  
@@ -87,6 +91,7 @@ namespace DDD.TNFY.BRAWL
             UnitManager.OnUnitUnregistered    += HandleRosterChanged;
             DialogueBubbleUI.OnDialogueStarted += HandleDialogueStarted;
             DialogueBubbleUI.OnDialogueEnded   += HandleDialogueEnded;
+            StatusEffectManager.OnStatusEffectRemoved += HandleStatusEffectRemoved;
         }
 
         private void UnsubscribeFromEvents()
@@ -97,6 +102,7 @@ namespace DDD.TNFY.BRAWL
             UnitManager.OnUnitUnregistered    -= HandleRosterChanged;
             DialogueBubbleUI.OnDialogueStarted -= HandleDialogueStarted;
             DialogueBubbleUI.OnDialogueEnded   -= HandleDialogueEnded;
+            StatusEffectManager.OnStatusEffectRemoved -= HandleStatusEffectRemoved;
         }
 
         private void EvaluateIdleTier()
@@ -201,6 +207,14 @@ namespace DDD.TNFY.BRAWL
             string nonTalkState   = ResolveIdleState(talking: false);
             PlayIdleAtTime(nonTalkState, normalizedTime);
         }
+        
+        private void HandleStatusEffectRemoved(Unit target, StatusEffectInstance effect)
+        {
+            if (target != _unit) return;
+            if (activeHoldInstance == null || effect != activeHoldInstance) return;
+
+            ReleaseHold();
+        }
 
         private void PlayIdleAtTime(string stateName, float normalizedTime)
         {
@@ -270,6 +284,76 @@ namespace DDD.TNFY.BRAWL
             PlayAnimation(animationState, false);
             
             StartCoroutine(ReturnToIdleAfterAnimation(animationState));
+        }
+
+        public void PlayAnimationThenHold(string castState, string holdState, string releaseState)
+        {
+            if (string.IsNullOrEmpty(castState) || isInKnockbackSequence) return;
+
+            if (holdSequence != null)
+            {
+                StopCoroutine(holdSequence);
+                holdSequence = null;
+            }
+
+            activeHoldInstance = null;
+            activeHoldReleaseState = releaseState;
+
+            PlayAnimation(castState, false);
+            holdSequence = StartCoroutine(ReturnToHoldAfterAnimation(castState, holdState));
+        }
+
+        public void BindHoldToStatusEffect(StatusEffectInstance instance)
+        {
+            if (string.IsNullOrEmpty(activeHoldReleaseState)) return;
+
+            activeHoldInstance = instance;
+        }
+
+        private IEnumerator ReturnToHoldAfterAnimation(string castState, string holdState)
+        {
+            yield return new WaitForSeconds(0.1f);
+
+            while (animator.GetCurrentAnimatorStateInfo(0).IsName(castState) &&
+                   animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f)
+            {
+                yield return null;
+            }
+
+            holdSequence = null;
+
+            if (currentAnimation != castState || isInKnockbackSequence) yield break;
+
+            if (HasState(holdState))
+            {
+                animator.Play(holdState);
+                currentAnimation = holdState;
+            }
+            else
+            {
+                Debug.LogWarning($"[UnitAnimator] Hold state '{holdState}' not found on {gameObject.name}, falling back to idle.");
+                PlayIdle();
+            }
+        }
+        
+        public void ReleaseHold()
+        {
+            if (holdSequence != null)
+            {
+                StopCoroutine(holdSequence);
+                holdSequence = null;
+            }
+
+            string releaseState = activeHoldReleaseState;
+            activeHoldInstance = null;
+            activeHoldReleaseState = null;
+
+            if (isInKnockbackSequence || currentAnimation == DOWNED_STATE) return;
+
+            if (!string.IsNullOrEmpty(releaseState) && HasState(releaseState))
+                PlayAnimation(releaseState); 
+            else
+                PlayIdle();
         }
 
         public void PlayHurt()

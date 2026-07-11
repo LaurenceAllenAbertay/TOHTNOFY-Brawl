@@ -4,42 +4,27 @@ using UnityEngine.UI;
 
 namespace DDD.TNFY.BRAWL
 {
-    /// <summary>
-    /// Coordinates HUD visibility and world-space UI positioning.
-    /// Delegates turn-order display to TurnOrderUIController and
-    /// ability panel management to AbilityPanelController.
-    /// </summary>
     public class UIManager : MonoBehaviour
     {
-        #region Properties
-
         public bool AreAbilitiesExpanded => abilityPanel != null && abilityPanel.AreAbilitiesExpanded;
         public bool IsUIHiddenForAnimation => uiHiddenForAnimation;
         public bool IsUIHiddenForMovement => uiHiddenForMovement;
 
-        #endregion
-
-        #region Serialized Fields
-
-        [Header("=== HUD Root ===")]
+        [Header("HUD Root")]
         [SerializeField] private GameObject turnUI;
         [SerializeField] private RectTransform turnUIRectTransform;
         [SerializeField] private Button endTurnButton;
         [SerializeField] private Image endTurnButtonColourIndicator;
 
-        [Header("=== World UI Settings ===")]
+        [Header("World UI Settings")]
         [SerializeField] private Vector2 worldOffset = new Vector2(0f, 0.5f);
         [SerializeField] private float baseUISize = 40f;
         [SerializeField] private float referenceCameraDistance = 10f;
         [SerializeField] private bool maintainScreenSize = false;
 
-        [Header("=== Debug ===")]
+        [Header("Debug")]
         [SerializeField] private bool debugMode = false;
         [SerializeField] private bool forceShowUI = false;
-
-        #endregion
-
-        #region Private Fields
 
         private TurnManager turnManager;
         private CombatManager combatManager;
@@ -54,11 +39,7 @@ namespace DDD.TNFY.BRAWL
         private Unit currentPlayer;
         private bool uiHiddenForAnimation;
         private bool uiHiddenForMovement;
-
-        #endregion
-
-        #region Unity Lifecycle
-
+        
         void Awake()
         {
             ValidateReferences();
@@ -84,10 +65,6 @@ namespace DDD.TNFY.BRAWL
         {
             UnsubscribeFromEvents();
         }
-
-        #endregion
-
-        #region Initialization
 
         private void ValidateReferences()
         {
@@ -176,27 +153,14 @@ namespace DDD.TNFY.BRAWL
             TurnManager.OnTurnNumberChanged -= HandleTurnIndexChanged;
         }
 
-        #endregion
-
-        #region Event Handlers
-
         private void HandleTurnStarted(Unit unit)
         {
-            TurnLifecycleLog($"[1/4] HandleTurnStarted → unit={unit?.name ?? "NULL"} " +
-                             $"type={unit?.GetType().Name ?? "NULL"} " +
-                             $"currentPlayer_before={currentPlayer?.name ?? "NULL"}");
-
             currentPlayer = unit;
             turnOrderController?.HandleTurnStarted(unit);
 
             if (unit is PlayerUnit)
             {
-                TurnLifecycleLog($"[2/4] HandleTurnStarted → PlayerUnit confirmed, " +
-                                 $"launching DelayedTurnUISetup coroutine");
 
-                // Hide the button and HUD immediately so they don't linger during the
-                // camera transition. DelayedTurnUISetup will re-show them once the
-                // camera has settled on the new active unit.
                 if (endTurnButton != null) endTurnButton.gameObject.SetActive(false);
                 SetUIVisibility(false);
 
@@ -206,7 +170,6 @@ namespace DDD.TNFY.BRAWL
             }
             else
             {
-                TurnLifecycleLog($"[2/4] HandleTurnStarted → Non-player unit, hiding UI");
                 SetUIVisibility(false);
                 if (endTurnButton != null) endTurnButton.gameObject.SetActive(false);
             }
@@ -214,16 +177,7 @@ namespace DDD.TNFY.BRAWL
 
         private IEnumerator DelayedTurnUISetup()
         {
-            // Snapshot the unit this coroutine was created for.
-            // HandleTurnStarted overwrites the shared `currentPlayer` field every time a new
-            // turn begins (e.g. when endTurnOnCast fires and the next unit's OnTurnStarted
-            // arrives before this coroutine resumes). Without the snapshot the check below
-            // would evaluate against whichever unit is *currently* active, not the one whose
-            // turn this coroutine was spawned for — causing the UI to be silently skipped.
             Unit unitForThisTurn = currentPlayer;
-
-            TurnLifecycleLog($"[3/4] DelayedTurnUISetup START → unitForThisTurn={unitForThisTurn?.name ?? "NULL"} " +
-                             $"combatState={combatManager?.currentState}");
 
             yield return null;
 
@@ -231,32 +185,17 @@ namespace DDD.TNFY.BRAWL
             while (combatManager != null && combatManager.currentState == CombatState.CameraTransition)
             {
                 waitFrames++;
-                if (debugMode && waitFrames % 10 == 0)
-                    TurnLifecycleLog($"[3/4] DelayedTurnUISetup WAITING on CameraTransition → " +
-                                     $"frame_count={waitFrames} cameraIsTransitioning={cameraController?.IsTransitioning}");
+
                 yield return null;
             }
-
-            TurnLifecycleLog($"[3/4] DelayedTurnUISetup DONE WAITING → waited {waitFrames} extra frames " +
-                             $"combatState={combatManager?.currentState} " +
-                             $"currentPlayer={currentPlayer?.name ?? "NULL"} " +
-                             $"unitForThisTurn={unitForThisTurn?.name ?? "NULL"} " +
-                             $"stillPlayerUnit={unitForThisTurn is PlayerUnit}");
 
             if (unitForThisTurn is PlayerUnit)
             {
                 if (endTurnButton != null) endTurnButton.gameObject.SetActive(true);
                 UpdateEndTurnButtonColour(unitForThisTurn);
                 SetUIVisibility(true);
-                TurnLifecycleLog($"[4/4] DelayedTurnUISetup → SetUIVisibility(true) called. " +
-                                 $"turnUI.activeSelf={turnUI?.activeSelf}");
                 abilityPanel?.UpdateAbilityDisplay();
                 abilityPanel?.UpdateAbilityButtonStates();
-            }
-            else
-            {
-                TurnLifecycleLog($"[4/4] DelayedTurnUISetup → unitForThisTurn is no longer a PlayerUnit — UI skipped. " +
-                                 $"This can happen if a rapid turn transition replaced currentPlayer before this coroutine resumed.");
             }
         }
 
@@ -346,11 +285,7 @@ namespace DDD.TNFY.BRAWL
             if (!IsCurrentlyTargeting())
                 abilityPanel?.CollapseIfExpanded();
         }
-
-        #endregion
-
-        #region World UI Positioning
-
+        
         private void UpdateUIPositionAndScale()
         {
             if (currentPlayer == null || mainCamera == null || turnUIRectTransform == null || parentCanvas == null)
@@ -364,11 +299,6 @@ namespace DDD.TNFY.BRAWL
 
             if (viewportPosition.z <= 0)
             {
-                // Only suppress the UI if the camera is fully settled. Check both the
-                // CombatManager state flag AND cameraController.IsTransitioning directly:
-                // the state flag alone is insufficient if WaitForCameraTransition exited
-                // early (before isTransitioning was set), leaving currentState as
-                // WaitingForInput while the camera is still physically moving.
                 bool cameraMoving = cameraController != null && cameraController.IsTransitioning;
                 bool inCameraState = combatManager != null && combatManager.currentState == CombatState.CameraTransition;
                 if (!cameraMoving && !inCameraState)
@@ -396,10 +326,6 @@ namespace DDD.TNFY.BRAWL
             }
         }
 
-        #endregion
-
-        #region State Queries
-
         private bool ShouldShowUI()
         {
             if (forceShowUI) return true;
@@ -411,18 +337,6 @@ namespace DDD.TNFY.BRAWL
             if (IsCurrentlyTargeting() || IsExecutingAbility() || uiHiddenForAnimation || uiHiddenForMovement)
                 return false;
 
-            // Block any transitional combat state. Both cases cause batched HandleTurnUIUpdate
-            // calls (queued by UIEvents.OnAbilityUsed / OnAbilityAnimationComplete) to fire while
-            // the game is not yet ready to show the UI:
-            //
-            // CameraTransition — the camera is physically moving to the new active unit.
-            //   DelayedTurnUISetup explicitly polls this state and waits for it to end before
-            //   calling SetUIVisibility directly, so blocking here does not prevent the UI from
-            //   appearing — it just stops HandleTurnUIUpdate from showing it a frame too early.
-            //
-            // TurnEnding — an endTurnOnCast ability just fired. CombatManager sets this state
-            //   BEFORE UIEvents.OnAbilityAnimationComplete so that the batched TurnUI update
-            //   triggered by that event arrives while the block is already in place.
             if (combatManager != null)
             {
                 var state = combatManager.currentState;
@@ -442,17 +356,11 @@ namespace DDD.TNFY.BRAWL
 
         private bool IsMoving() =>
             combatManager != null && combatManager.IsMoving;
-
-        #endregion
-
-        #region Public API
-
+        
         private void SetUIVisibility(bool visible)
         {
             if (turnUI == null) return;
 
-            // When hiding, always act immediately — the caller already decided we should hide.
-            // When showing, guard against the flags so we never show during an animation or movement.
             if (visible && (uiHiddenForAnimation || uiHiddenForMovement)) return;
 
             turnUI.SetActive(visible);
@@ -479,45 +387,15 @@ namespace DDD.TNFY.BRAWL
             endTurnButtonColourIndicator.color = unit?.characterData?.uiColour ?? Color.white;
         }
 
-        #endregion
-
-        #region Debug Utilities
-
-        /// <summary>
-        /// Conditional logger that stamps every entry with frame count and timestamp.
-        /// Gate it behind debugMode so it compiles away to nothing in release builds.
-        /// </summary>
-        [System.Diagnostics.Conditional("UNITY_EDITOR")]
-        private void TurnLifecycleLog(string message)
-        {
-            if (!debugMode) return;
-            Debug.Log($"[UIManager] F={Time.frameCount:D6} T={Time.time:F3}s | {message}");
-        }
-
-        /// <summary>
-        /// Safety-net coroutine that fires after every PlayerUnit turn starts.
-        /// If the turnUI is still invisible after <timeoutSeconds>, it logs a detailed
-        /// error and attempts a forced recovery. This catches any combination of race
-        /// conditions that the primary fixes don't eliminate.
-        ///
-        /// Architectural note — Poll vs Push: every other mechanism here is Push
-        /// (event → coroutine → SetActive). This watchdog is a deliberate Poll: it
-        /// checks state on a timer rather than waiting for a specific signal. That
-        /// makes it resilient to exactly the failure mode we're debugging: missing
-        /// or misfired signals.
-        /// </summary>
         private IEnumerator TurnUIWatchdog(Unit expectedUnit, float timeoutSeconds = 2.5f)
         {
             float elapsed = 0f;
 
             while (elapsed < timeoutSeconds)
             {
-                // Happy-path exit: UI is already up.
                 if (turnUI != null && turnUI.activeSelf)
                     yield break;
 
-                // If another unit's turn has started since this watchdog launched,
-                // our window has passed — bail without interfering.
                 if (currentPlayer != expectedUnit)
                     yield break;
 
@@ -525,7 +403,6 @@ namespace DDD.TNFY.BRAWL
                 yield return null;
             }
 
-            // --- Reached timeout ---
             bool uiIsActive = turnUI != null && turnUI.activeSelf;
             bool unitStillCurrent = currentPlayer == expectedUnit;
             bool stillPlayerUnit = expectedUnit is PlayerUnit;
@@ -542,7 +419,6 @@ namespace DDD.TNFY.BRAWL
                     $"Root cause: the primary Push path (HandleTurnStarted → DelayedTurnUISetup) " +
                     $"did not produce a visible UI within {timeoutSeconds}s. Forcing recovery.");
 
-                // Attempt recovery
                 if (endTurnButton != null) endTurnButton.gameObject.SetActive(true);
                 UpdateEndTurnButtonColour(expectedUnit);
                 SetUIVisibility(true);
@@ -552,33 +428,5 @@ namespace DDD.TNFY.BRAWL
                 Debug.LogWarning($"[UIManager] TurnUIWatchdog recovery complete. turnUI.activeSelf={turnUI?.activeSelf}");
             }
         }
-
-        #endregion
-
-        #region Editor Support
-
-#if UNITY_EDITOR
-        void OnValidate()
-        {
-            baseUISize = Mathf.Max(1, baseUISize);
-            referenceCameraDistance = Mathf.Max(1, referenceCameraDistance);
-        }
-
-        void OnDrawGizmos()
-        {
-            if (currentPlayer != null && debugMode)
-            {
-                Vector3 uiWorldPos = currentPlayer.transform.position + Vector3.up * worldOffset.y;
-                if (mainCamera != null) uiWorldPos += mainCamera.transform.right * worldOffset.x;
-
-                Gizmos.color = Color.yellow;
-                Gizmos.DrawWireSphere(uiWorldPos, 0.25f);
-                Gizmos.color = Color.green;
-                Gizmos.DrawLine(currentPlayer.transform.position, uiWorldPos);
-            }
-        }
-#endif
-
-        #endregion
     }
 }

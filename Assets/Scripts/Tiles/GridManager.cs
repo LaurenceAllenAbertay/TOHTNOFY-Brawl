@@ -753,16 +753,12 @@ namespace DDD.TNFY.BRAWL
         [SerializeField] private bool showGridGizmos = true;
         [SerializeField] private Color gridGizmoColor = new Color(0, 1, 0, 0.3f);
 
-        /// <summary>
-        /// Draws grid connections in Scene view for debugging
-        /// </summary>
         void OnDrawGizmos()
         {
             if (!showGridGizmos || allTiles.Count == 0) return;
 
             Gizmos.color = gridGizmoColor;
 
-            // Draw lines between adjacent tiles
             foreach (var tile in allTiles)
             {
                 if (tile == null) continue;

@@ -22,6 +22,8 @@ namespace DDD.TNFY.BRAWL
         public EffectTriggerTiming triggerTiming = EffectTriggerTiming.StartOfTurn;
         public bool triggersOnApplication = false;
 
+        public EffectExpiryTiming expiryTiming = EffectExpiryTiming.EndOfTurn;
+
         [Header("Visual/Audio")]
         public GameObject applicationVFX;
         public GameObject persistentVFX;
@@ -29,12 +31,12 @@ namespace DDD.TNFY.BRAWL
 
         public enum StackingBehavior
         {
-            None,               // Cannot stack, new applications fail
+            None,                // Cannot stack, new applications fail
             RefreshDuration,    // Reset duration to max
             AddDuration,        // Add to existing duration
-            AddStacks,          // Increase stack count (for Bleeding)
+            AddStacks,          // Increase stack count 
             Replace,            // Replace with new instance
-            Unique              // Multiple instances can exist (different sources)
+            Unique              // Multiple instances can exist 
         }
 
         public enum EffectTriggerTiming
@@ -46,6 +48,12 @@ namespace DDD.TNFY.BRAWL
             OnMove,
             OnAttack,
             Continuous
+        }
+
+        public enum EffectExpiryTiming
+        {
+            EndOfTurn, 
+            StartOfTurn 
         }
     }
 

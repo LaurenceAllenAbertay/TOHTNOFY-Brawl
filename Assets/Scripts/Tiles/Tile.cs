@@ -231,7 +231,6 @@ namespace DDD.TNFY.BRAWL
             }
             _activeEffects.RemoveAll(e => e.IsExpired);
 
-            // Drop back to the normal visual once all effects have burned out
             if (_activeEffects.Count == 0)
                 ResetHighlight();
         }

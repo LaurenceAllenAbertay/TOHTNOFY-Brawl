@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e24b86e554078d488f575d858e027ce, type: 3}
   m_Name: Self Target
   m_EditorClassIdentifier: 
-  affectsThroughWalls: 0
+  affectsThroughWalls: 1
   affectsOverGaps: 1
+  affectsUpperLayers: 1
+  affectsLowerLayers: 1

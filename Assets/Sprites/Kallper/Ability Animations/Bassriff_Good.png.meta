@@ -579,9 +579,9 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -616,6 +616,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -623,12 +649,12 @@ TextureImporter:
       name: Bassriff_Good_0
       rect:
         serializedVersion: 2
-        x: 87
-        y: 6446
-        width: 460
-        height: 614
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 6426
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -645,12 +671,12 @@ TextureImporter:
       name: Bassriff_Good_1
       rect:
         serializedVersion: 2
-        x: 652
-        y: 6446
-        width: 460
-        height: 614
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 565
+        y: 6426
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -667,12 +693,12 @@ TextureImporter:
       name: Bassriff_Good_2
       rect:
         serializedVersion: 2
-        x: 1217
-        y: 6446
-        width: 460
-        height: 619
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1130
+        y: 6426
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -689,12 +715,12 @@ TextureImporter:
       name: Bassriff_Good_3
       rect:
         serializedVersion: 2
-        x: 1782
-        y: 6446
-        width: 460
-        height: 619
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1695
+        y: 6426
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -711,12 +737,12 @@ TextureImporter:
       name: Bassriff_Good_4
       rect:
         serializedVersion: 2
-        x: 2341
-        y: 6447
-        width: 466
-        height: 603
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2260
+        y: 6426
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -733,12 +759,12 @@ TextureImporter:
       name: Bassriff_Good_5
       rect:
         serializedVersion: 2
-        x: 2906
-        y: 6447
-        width: 466
-        height: 603
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2825
+        y: 6426
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -755,12 +781,12 @@ TextureImporter:
       name: Bassriff_Good_6
       rect:
         serializedVersion: 2
-        x: 3465
-        y: 6447
-        width: 472
-        height: 599
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3390
+        y: 6426
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -777,12 +803,12 @@ TextureImporter:
       name: Bassriff_Good_7
       rect:
         serializedVersion: 2
-        x: 4030
-        y: 6447
-        width: 472
-        height: 599
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3955
+        y: 6426
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -799,12 +825,12 @@ TextureImporter:
       name: Bassriff_Good_8
       rect:
         serializedVersion: 2
-        x: 4591
-        y: 6449
-        width: 476
-        height: 580
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4520
+        y: 6426
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -821,12 +847,12 @@ TextureImporter:
       name: Bassriff_Good_9
       rect:
         serializedVersion: 2
-        x: 5156
-        y: 6449
-        width: 476
-        height: 580
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5085
+        y: 6426
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -843,12 +869,12 @@ TextureImporter:
       name: Bassriff_Good_10
       rect:
         serializedVersion: 2
-        x: 5711
-        y: 6448
-        width: 486
-        height: 543
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5650
+        y: 6426
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -865,12 +891,12 @@ TextureImporter:
       name: Bassriff_Good_11
       rect:
         serializedVersion: 2
-        x: 6276
-        y: 6448
-        width: 486
-        height: 543
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6215
+        y: 6426
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -887,12 +913,12 @@ TextureImporter:
       name: Bassriff_Good_12
       rect:
         serializedVersion: 2
-        x: 6832
-        y: 6448
-        width: 489
-        height: 523
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6780
+        y: 6426
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -909,12 +935,12 @@ TextureImporter:
       name: Bassriff_Good_13
       rect:
         serializedVersion: 2
-        x: 7397
-        y: 6448
-        width: 489
-        height: 523
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7345
+        y: 6426
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -931,12 +957,12 @@ TextureImporter:
       name: Bassriff_Good_14
       rect:
         serializedVersion: 2
-        x: 7971
-        y: 6446
-        width: 505
-        height: 595
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7910
+        y: 6426
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -953,12 +979,12 @@ TextureImporter:
       name: Bassriff_Good_15
       rect:
         serializedVersion: 2
-        x: 8536
-        y: 6446
-        width: 505
-        height: 595
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8475
+        y: 6426
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -975,12 +1001,12 @@ TextureImporter:
       name: Bassriff_Good_16
       rect:
         serializedVersion: 2
-        x: 9106
-        y: 6459
-        width: 473
-        height: 605
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 9040
+        y: 6426
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -997,12 +1023,12 @@ TextureImporter:
       name: Bassriff_Good_17
       rect:
         serializedVersion: 2
-        x: 66
-        y: 5745
-        width: 473
-        height: 605
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 5712
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1019,12 +1045,12 @@ TextureImporter:
       name: Bassriff_Good_18
       rect:
         serializedVersion: 2
-        x: 641
-        y: 5716
-        width: 435
-        height: 694
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 565
+        y: 5712
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1041,12 +1067,12 @@ TextureImporter:
       name: Bassriff_Good_19
       rect:
         serializedVersion: 2
-        x: 1206
-        y: 5716
-        width: 435
-        height: 694
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1130
+        y: 5712
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1063,12 +1089,12 @@ TextureImporter:
       name: Bassriff_Good_20
       rect:
         serializedVersion: 2
-        x: 1764
-        y: 5718
-        width: 445
-        height: 709
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1695
+        y: 5712
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1085,12 +1111,12 @@ TextureImporter:
       name: Bassriff_Good_21
       rect:
         serializedVersion: 2
-        x: 2329
-        y: 5718
-        width: 445
-        height: 709
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2260
+        y: 5712
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1107,12 +1133,12 @@ TextureImporter:
       name: Bassriff_Good_22
       rect:
         serializedVersion: 2
-        x: 2905
-        y: 5755
-        width: 464
-        height: 654
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2825
+        y: 5712
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1129,12 +1155,12 @@ TextureImporter:
       name: Bassriff_Good_23
       rect:
         serializedVersion: 2
-        x: 3470
-        y: 5755
-        width: 464
-        height: 654
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3390
+        y: 5712
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1151,12 +1177,12 @@ TextureImporter:
       name: Bassriff_Good_24
       rect:
         serializedVersion: 2
-        x: 4024
-        y: 5748
-        width: 491
-        height: 626
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3955
+        y: 5712
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1173,12 +1199,12 @@ TextureImporter:
       name: Bassriff_Good_25
       rect:
         serializedVersion: 2
-        x: 4589
-        y: 5748
-        width: 491
-        height: 626
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4520
+        y: 5712
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1195,12 +1221,12 @@ TextureImporter:
       name: Bassriff_Good_26
       rect:
         serializedVersion: 2
-        x: 5164
-        y: 5738
-        width: 481
-        height: 626
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5085
+        y: 5712
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1217,12 +1243,12 @@ TextureImporter:
       name: Bassriff_Good_27
       rect:
         serializedVersion: 2
-        x: 5729
-        y: 5738
-        width: 481
-        height: 626
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5650
+        y: 5712
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1239,12 +1265,12 @@ TextureImporter:
       name: Bassriff_Good_28
       rect:
         serializedVersion: 2
-        x: 6300
-        y: 5733
-        width: 481
-        height: 581
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6215
+        y: 5712
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1261,12 +1287,12 @@ TextureImporter:
       name: Bassriff_Good_29
       rect:
         serializedVersion: 2
-        x: 6865
-        y: 5733
-        width: 481
-        height: 581
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6780
+        y: 5712
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1283,12 +1309,12 @@ TextureImporter:
       name: Bassriff_Good_30
       rect:
         serializedVersion: 2
-        x: 7414
-        y: 5732
-        width: 496
-        height: 572
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7345
+        y: 5712
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1305,12 +1331,12 @@ TextureImporter:
       name: Bassriff_Good_31
       rect:
         serializedVersion: 2
-        x: 7979
-        y: 5732
-        width: 496
-        height: 572
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7910
+        y: 5712
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1327,12 +1353,12 @@ TextureImporter:
       name: Bassriff_Good_32
       rect:
         serializedVersion: 2
-        x: 8542
-        y: 5732
-        width: 470
-        height: 575
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8475
+        y: 5712
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1349,12 +1375,12 @@ TextureImporter:
       name: Bassriff_Good_33
       rect:
         serializedVersion: 2
-        x: 9107
-        y: 5732
-        width: 470
-        height: 575
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 9040
+        y: 5712
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1371,12 +1397,12 @@ TextureImporter:
       name: Bassriff_Good_34
       rect:
         serializedVersion: 2
-        x: 40
-        y: 5016
-        width: 436
-        height: 595
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 4998
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1393,12 +1419,12 @@ TextureImporter:
       name: Bassriff_Good_35
       rect:
         serializedVersion: 2
-        x: 605
-        y: 5016
-        width: 436
-        height: 595
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 565
+        y: 4998
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1415,12 +1441,12 @@ TextureImporter:
       name: Bassriff_Good_36
       rect:
         serializedVersion: 2
-        x: 1165
-        y: 5016
-        width: 449
-        height: 606
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1130
+        y: 4998
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1437,12 +1463,12 @@ TextureImporter:
       name: Bassriff_Good_37
       rect:
         serializedVersion: 2
-        x: 1730
-        y: 5016
-        width: 449
-        height: 606
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1695
+        y: 4998
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1459,12 +1485,12 @@ TextureImporter:
       name: Bassriff_Good_38
       rect:
         serializedVersion: 2
-        x: 2284
-        y: 5016
-        width: 454
-        height: 605
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2260
+        y: 4998
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1481,12 +1507,12 @@ TextureImporter:
       name: Bassriff_Good_39
       rect:
         serializedVersion: 2
-        x: 2849
-        y: 5016
-        width: 454
-        height: 605
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2825
+        y: 4998
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1503,12 +1529,12 @@ TextureImporter:
       name: Bassriff_Good_40
       rect:
         serializedVersion: 2
-        x: 3416
-        y: 5016
-        width: 452
-        height: 605
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3390
+        y: 4998
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1525,12 +1551,12 @@ TextureImporter:
       name: Bassriff_Good_41
       rect:
         serializedVersion: 2
-        x: 3981
-        y: 5016
-        width: 452
-        height: 605
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3955
+        y: 4998
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1547,12 +1573,12 @@ TextureImporter:
       name: Bassriff_Good_42
       rect:
         serializedVersion: 2
-        x: 4547
-        y: 5016
-        width: 451
-        height: 605
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4520
+        y: 4998
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1569,12 +1595,12 @@ TextureImporter:
       name: Bassriff_Good_43
       rect:
         serializedVersion: 2
-        x: 5112
-        y: 5016
-        width: 451
-        height: 605
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5085
+        y: 4998
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1591,12 +1617,12 @@ TextureImporter:
       name: Bassriff_Good_44
       rect:
         serializedVersion: 2
-        x: 5687
-        y: 5016
-        width: 441
-        height: 605
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5650
+        y: 4998
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1613,12 +1639,12 @@ TextureImporter:
       name: Bassriff_Good_45
       rect:
         serializedVersion: 2
-        x: 6252
-        y: 5016
-        width: 441
-        height: 605
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6215
+        y: 4998
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1635,12 +1661,12 @@ TextureImporter:
       name: Bassriff_Good_46
       rect:
         serializedVersion: 2
-        x: 6820
-        y: 5016
-        width: 438
-        height: 605
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6780
+        y: 4998
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1657,12 +1683,12 @@ TextureImporter:
       name: Bassriff_Good_47
       rect:
         serializedVersion: 2
-        x: 7385
-        y: 5016
-        width: 438
-        height: 605
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7345
+        y: 4998
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1679,12 +1705,12 @@ TextureImporter:
       name: Bassriff_Good_48
       rect:
         serializedVersion: 2
-        x: 7948
-        y: 5016
-        width: 440
-        height: 605
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7910
+        y: 4998
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1701,12 +1727,12 @@ TextureImporter:
       name: Bassriff_Good_49
       rect:
         serializedVersion: 2
-        x: 8513
-        y: 5016
-        width: 440
-        height: 605
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8475
+        y: 4998
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1723,12 +1749,12 @@ TextureImporter:
       name: Bassriff_Good_50
       rect:
         serializedVersion: 2
-        x: 9078
-        y: 5016
-        width: 440
-        height: 605
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 9040
+        y: 4998
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1745,12 +1771,12 @@ TextureImporter:
       name: Bassriff_Good_51
       rect:
         serializedVersion: 2
-        x: 38
-        y: 4302
-        width: 440
-        height: 605
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 4284
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1767,12 +1793,12 @@ TextureImporter:
       name: Bassriff_Good_52
       rect:
         serializedVersion: 2
-        x: 603
-        y: 4302
-        width: 440
-        height: 605
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 565
+        y: 4284
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1789,12 +1815,12 @@ TextureImporter:
       name: Bassriff_Good_53
       rect:
         serializedVersion: 2
-        x: 1168
-        y: 4302
-        width: 440
-        height: 605
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1130
+        y: 4284
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1811,12 +1837,12 @@ TextureImporter:
       name: Bassriff_Good_54
       rect:
         serializedVersion: 2
-        x: 1733
-        y: 4302
-        width: 440
-        height: 605
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1695
+        y: 4284
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1833,12 +1859,12 @@ TextureImporter:
       name: Bassriff_Good_55
       rect:
         serializedVersion: 2
-        x: 2298
-        y: 4302
-        width: 440
-        height: 605
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2260
+        y: 4284
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1855,12 +1881,12 @@ TextureImporter:
       name: Bassriff_Good_56
       rect:
         serializedVersion: 2
-        x: 2863
-        y: 4302
-        width: 440
-        height: 605
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2825
+        y: 4284
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1877,12 +1903,12 @@ TextureImporter:
       name: Bassriff_Good_57
       rect:
         serializedVersion: 2
-        x: 3428
-        y: 4302
-        width: 440
-        height: 605
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3390
+        y: 4284
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1899,12 +1925,12 @@ TextureImporter:
       name: Bassriff_Good_58
       rect:
         serializedVersion: 2
-        x: 3992
-        y: 4302
-        width: 438
-        height: 601
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3955
+        y: 4284
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1921,12 +1947,12 @@ TextureImporter:
       name: Bassriff_Good_59
       rect:
         serializedVersion: 2
-        x: 4557
-        y: 4302
-        width: 438
-        height: 601
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4520
+        y: 4284
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1943,12 +1969,12 @@ TextureImporter:
       name: Bassriff_Good_60
       rect:
         serializedVersion: 2
-        x: 5123
-        y: 4302
-        width: 441
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5085
+        y: 4284
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1965,12 +1991,12 @@ TextureImporter:
       name: Bassriff_Good_61
       rect:
         serializedVersion: 2
-        x: 5688
-        y: 4302
-        width: 441
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5650
+        y: 4284
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1987,12 +2013,12 @@ TextureImporter:
       name: Bassriff_Good_62
       rect:
         serializedVersion: 2
-        x: 6253
-        y: 4302
-        width: 441
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6215
+        y: 4284
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2009,12 +2035,12 @@ TextureImporter:
       name: Bassriff_Good_63
       rect:
         serializedVersion: 2
-        x: 6818
-        y: 4302
-        width: 441
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6780
+        y: 4284
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2031,12 +2057,12 @@ TextureImporter:
       name: Bassriff_Good_64
       rect:
         serializedVersion: 2
-        x: 7383
-        y: 4302
-        width: 441
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7345
+        y: 4284
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2053,12 +2079,12 @@ TextureImporter:
       name: Bassriff_Good_65
       rect:
         serializedVersion: 2
-        x: 7948
-        y: 4302
-        width: 441
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7910
+        y: 4284
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2075,12 +2101,12 @@ TextureImporter:
       name: Bassriff_Good_66
       rect:
         serializedVersion: 2
-        x: 8511
-        y: 4302
-        width: 443
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8475
+        y: 4284
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2097,12 +2123,12 @@ TextureImporter:
       name: Bassriff_Good_67
       rect:
         serializedVersion: 2
-        x: 9076
-        y: 4302
-        width: 443
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 9040
+        y: 4284
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2119,12 +2145,12 @@ TextureImporter:
       name: Bassriff_Good_68
       rect:
         serializedVersion: 2
-        x: 37
-        y: 3588
-        width: 442
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 3570
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2141,12 +2167,12 @@ TextureImporter:
       name: Bassriff_Good_69
       rect:
         serializedVersion: 2
-        x: 602
-        y: 3588
-        width: 442
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 565
+        y: 3570
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2163,12 +2189,12 @@ TextureImporter:
       name: Bassriff_Good_70
       rect:
         serializedVersion: 2
-        x: 1168
-        y: 3588
-        width: 441
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1130
+        y: 3570
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2185,12 +2211,12 @@ TextureImporter:
       name: Bassriff_Good_71
       rect:
         serializedVersion: 2
-        x: 1733
-        y: 3588
-        width: 441
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1695
+        y: 3570
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2207,12 +2233,12 @@ TextureImporter:
       name: Bassriff_Good_72
       rect:
         serializedVersion: 2
-        x: 2293
-        y: 3588
-        width: 446
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2260
+        y: 3570
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2229,12 +2255,12 @@ TextureImporter:
       name: Bassriff_Good_73
       rect:
         serializedVersion: 2
-        x: 2858
-        y: 3588
-        width: 446
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2825
+        y: 3570
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2251,12 +2277,12 @@ TextureImporter:
       name: Bassriff_Good_74
       rect:
         serializedVersion: 2
-        x: 3423
-        y: 3588
-        width: 446
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3390
+        y: 3570
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2273,12 +2299,12 @@ TextureImporter:
       name: Bassriff_Good_75
       rect:
         serializedVersion: 2
-        x: 3988
-        y: 3588
-        width: 446
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3955
+        y: 3570
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2295,12 +2321,12 @@ TextureImporter:
       name: Bassriff_Good_76
       rect:
         serializedVersion: 2
-        x: 4553
-        y: 3588
-        width: 446
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4520
+        y: 3570
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2317,12 +2343,12 @@ TextureImporter:
       name: Bassriff_Good_77
       rect:
         serializedVersion: 2
-        x: 5118
-        y: 3588
-        width: 446
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5085
+        y: 3570
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2339,12 +2365,12 @@ TextureImporter:
       name: Bassriff_Good_78
       rect:
         serializedVersion: 2
-        x: 5683
-        y: 3588
-        width: 446
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5650
+        y: 3570
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2361,12 +2387,12 @@ TextureImporter:
       name: Bassriff_Good_79
       rect:
         serializedVersion: 2
-        x: 6248
-        y: 3588
-        width: 446
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6215
+        y: 3570
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2383,12 +2409,12 @@ TextureImporter:
       name: Bassriff_Good_80
       rect:
         serializedVersion: 2
-        x: 6813
-        y: 3588
-        width: 446
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6780
+        y: 3570
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2405,12 +2431,12 @@ TextureImporter:
       name: Bassriff_Good_81
       rect:
         serializedVersion: 2
-        x: 7378
-        y: 3588
-        width: 446
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7345
+        y: 3570
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2427,12 +2453,12 @@ TextureImporter:
       name: Bassriff_Good_82
       rect:
         serializedVersion: 2
-        x: 7943
-        y: 3588
-        width: 446
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7910
+        y: 3570
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2449,12 +2475,12 @@ TextureImporter:
       name: Bassriff_Good_83
       rect:
         serializedVersion: 2
-        x: 8508
-        y: 3588
-        width: 446
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8475
+        y: 3570
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2471,12 +2497,12 @@ TextureImporter:
       name: Bassriff_Good_84
       rect:
         serializedVersion: 2
-        x: 9073
-        y: 3588
-        width: 446
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 9040
+        y: 3570
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2493,12 +2519,12 @@ TextureImporter:
       name: Bassriff_Good_85
       rect:
         serializedVersion: 2
-        x: 33
-        y: 2874
-        width: 446
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 2856
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2515,12 +2541,12 @@ TextureImporter:
       name: Bassriff_Good_86
       rect:
         serializedVersion: 2
-        x: 600
-        y: 2874
-        width: 450
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 565
+        y: 2856
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2537,12 +2563,12 @@ TextureImporter:
       name: Bassriff_Good_87
       rect:
         serializedVersion: 2
-        x: 1165
-        y: 2874
-        width: 450
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1130
+        y: 2856
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2559,12 +2585,12 @@ TextureImporter:
       name: Bassriff_Good_88
       rect:
         serializedVersion: 2
-        x: 1728
-        y: 2874
-        width: 446
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1695
+        y: 2856
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2581,12 +2607,12 @@ TextureImporter:
       name: Bassriff_Good_89
       rect:
         serializedVersion: 2
-        x: 2293
-        y: 2874
-        width: 446
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2260
+        y: 2856
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2603,12 +2629,12 @@ TextureImporter:
       name: Bassriff_Good_90
       rect:
         serializedVersion: 2
-        x: 2848
-        y: 2874
-        width: 443
-        height: 604
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2825
+        y: 2856
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2625,12 +2651,12 @@ TextureImporter:
       name: Bassriff_Good_91
       rect:
         serializedVersion: 2
-        x: 3413
-        y: 2874
-        width: 443
-        height: 604
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3390
+        y: 2856
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2647,12 +2673,12 @@ TextureImporter:
       name: Bassriff_Good_92
       rect:
         serializedVersion: 2
-        x: 3975
-        y: 2874
-        width: 435
-        height: 601
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3955
+        y: 2856
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2669,12 +2695,12 @@ TextureImporter:
       name: Bassriff_Good_93
       rect:
         serializedVersion: 2
-        x: 4540
-        y: 2874
-        width: 435
-        height: 601
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4520
+        y: 2856
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2691,12 +2717,12 @@ TextureImporter:
       name: Bassriff_Good_94
       rect:
         serializedVersion: 2
-        x: 5103
-        y: 2874
-        width: 452
-        height: 602
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5085
+        y: 2856
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2713,12 +2739,12 @@ TextureImporter:
       name: Bassriff_Good_95
       rect:
         serializedVersion: 2
-        x: 5668
-        y: 2874
-        width: 452
-        height: 602
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5650
+        y: 2856
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2735,12 +2761,12 @@ TextureImporter:
       name: Bassriff_Good_96
       rect:
         serializedVersion: 2
-        x: 6234
-        y: 2874
-        width: 480
-        height: 602
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6215
+        y: 2856
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2757,12 +2783,12 @@ TextureImporter:
       name: Bassriff_Good_97
       rect:
         serializedVersion: 2
-        x: 6799
-        y: 2874
-        width: 480
-        height: 602
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6780
+        y: 2856
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2779,12 +2805,12 @@ TextureImporter:
       name: Bassriff_Good_98
       rect:
         serializedVersion: 2
-        x: 7364
-        y: 2874
-        width: 504
-        height: 602
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7345
+        y: 2856
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2801,12 +2827,12 @@ TextureImporter:
       name: Bassriff_Good_99
       rect:
         serializedVersion: 2
-        x: 7929
-        y: 2874
-        width: 504
-        height: 602
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7910
+        y: 2856
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2823,12 +2849,12 @@ TextureImporter:
       name: Bassriff_Good_100
       rect:
         serializedVersion: 2
-        x: 8498
-        y: 2874
-        width: 496
-        height: 599
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8475
+        y: 2856
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2845,12 +2871,12 @@ TextureImporter:
       name: Bassriff_Good_101
       rect:
         serializedVersion: 2
-        x: 9063
-        y: 2874
-        width: 496
-        height: 599
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 9040
+        y: 2856
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2867,12 +2893,12 @@ TextureImporter:
       name: Bassriff_Good_102
       rect:
         serializedVersion: 2
-        x: 25
-        y: 2160
-        width: 494
-        height: 602
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 2142
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2889,12 +2915,12 @@ TextureImporter:
       name: Bassriff_Good_103
       rect:
         serializedVersion: 2
-        x: 590
-        y: 2160
-        width: 494
-        height: 602
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 565
+        y: 2142
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2911,12 +2937,12 @@ TextureImporter:
       name: Bassriff_Good_104
       rect:
         serializedVersion: 2
-        x: 1175
-        y: 2160
-        width: 479
-        height: 606
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1130
+        y: 2142
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2933,12 +2959,12 @@ TextureImporter:
       name: Bassriff_Good_105
       rect:
         serializedVersion: 2
-        x: 1740
-        y: 2160
-        width: 479
-        height: 606
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1695
+        y: 2142
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2955,12 +2981,12 @@ TextureImporter:
       name: Bassriff_Good_106
       rect:
         serializedVersion: 2
-        x: 2328
-        y: 2160
-        width: 474
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2260
+        y: 2142
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2977,12 +3003,12 @@ TextureImporter:
       name: Bassriff_Good_107
       rect:
         serializedVersion: 2
-        x: 2893
-        y: 2160
-        width: 474
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2825
+        y: 2142
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2999,12 +3025,12 @@ TextureImporter:
       name: Bassriff_Good_108
       rect:
         serializedVersion: 2
-        x: 3452
-        y: 2160
-        width: 485
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3390
+        y: 2142
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3021,12 +3047,12 @@ TextureImporter:
       name: Bassriff_Good_109
       rect:
         serializedVersion: 2
-        x: 4017
-        y: 2160
-        width: 485
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3955
+        y: 2142
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3043,12 +3069,12 @@ TextureImporter:
       name: Bassriff_Good_110
       rect:
         serializedVersion: 2
-        x: 4584
-        y: 2160
-        width: 478
-        height: 606
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4520
+        y: 2142
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3065,12 +3091,12 @@ TextureImporter:
       name: Bassriff_Good_111
       rect:
         serializedVersion: 2
-        x: 5149
-        y: 2160
-        width: 478
-        height: 606
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5085
+        y: 2142
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3087,12 +3113,12 @@ TextureImporter:
       name: Bassriff_Good_112
       rect:
         serializedVersion: 2
-        x: 5710
-        y: 2160
-        width: 482
-        height: 606
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5650
+        y: 2142
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3109,12 +3135,12 @@ TextureImporter:
       name: Bassriff_Good_113
       rect:
         serializedVersion: 2
-        x: 6275
-        y: 2160
-        width: 482
-        height: 606
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6215
+        y: 2142
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3131,12 +3157,12 @@ TextureImporter:
       name: Bassriff_Good_114
       rect:
         serializedVersion: 2
-        x: 6839
-        y: 2160
-        width: 483
-        height: 604
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6780
+        y: 2142
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3153,12 +3179,12 @@ TextureImporter:
       name: Bassriff_Good_115
       rect:
         serializedVersion: 2
-        x: 7404
-        y: 2160
-        width: 483
-        height: 604
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7345
+        y: 2142
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3175,12 +3201,12 @@ TextureImporter:
       name: Bassriff_Good_116
       rect:
         serializedVersion: 2
-        x: 7955
-        y: 2160
-        width: 497
-        height: 604
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7910
+        y: 2142
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3197,12 +3223,12 @@ TextureImporter:
       name: Bassriff_Good_117
       rect:
         serializedVersion: 2
-        x: 8520
-        y: 2160
-        width: 497
-        height: 604
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8475
+        y: 2142
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3219,12 +3245,12 @@ TextureImporter:
       name: Bassriff_Good_118
       rect:
         serializedVersion: 2
-        x: 9075
-        y: 2160
-        width: 507
-        height: 609
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 9040
+        y: 2142
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3241,12 +3267,12 @@ TextureImporter:
       name: Bassriff_Good_119
       rect:
         serializedVersion: 2
-        x: 35
-        y: 1446
-        width: 507
-        height: 609
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1428
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3263,12 +3289,12 @@ TextureImporter:
       name: Bassriff_Good_120
       rect:
         serializedVersion: 2
-        x: 598
-        y: 1446
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 565
+        y: 1428
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3285,12 +3311,12 @@ TextureImporter:
       name: Bassriff_Good_121
       rect:
         serializedVersion: 2
-        x: 1163
-        y: 1446
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1130
+        y: 1428
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3307,12 +3333,12 @@ TextureImporter:
       name: Bassriff_Good_122
       rect:
         serializedVersion: 2
-        x: 1728
-        y: 1446
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1695
+        y: 1428
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3329,12 +3355,12 @@ TextureImporter:
       name: Bassriff_Good_123
       rect:
         serializedVersion: 2
-        x: 2293
-        y: 1446
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2260
+        y: 1428
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3351,12 +3377,12 @@ TextureImporter:
       name: Bassriff_Good_124
       rect:
         serializedVersion: 2
-        x: 2858
-        y: 1446
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2825
+        y: 1428
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3373,12 +3399,12 @@ TextureImporter:
       name: Bassriff_Good_125
       rect:
         serializedVersion: 2
-        x: 3423
-        y: 1446
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3390
+        y: 1428
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3395,12 +3421,12 @@ TextureImporter:
       name: Bassriff_Good_126
       rect:
         serializedVersion: 2
-        x: 3988
-        y: 1446
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3955
+        y: 1428
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3417,12 +3443,12 @@ TextureImporter:
       name: Bassriff_Good_127
       rect:
         serializedVersion: 2
-        x: 4553
-        y: 1446
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4520
+        y: 1428
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3439,12 +3465,12 @@ TextureImporter:
       name: Bassriff_Good_128
       rect:
         serializedVersion: 2
-        x: 5118
-        y: 1446
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5085
+        y: 1428
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3461,12 +3487,12 @@ TextureImporter:
       name: Bassriff_Good_129
       rect:
         serializedVersion: 2
-        x: 5683
-        y: 1446
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5650
+        y: 1428
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3483,12 +3509,12 @@ TextureImporter:
       name: Bassriff_Good_130
       rect:
         serializedVersion: 2
-        x: 6248
-        y: 1446
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6215
+        y: 1428
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3505,12 +3531,12 @@ TextureImporter:
       name: Bassriff_Good_131
       rect:
         serializedVersion: 2
-        x: 6813
-        y: 1446
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6780
+        y: 1428
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3527,12 +3553,12 @@ TextureImporter:
       name: Bassriff_Good_132
       rect:
         serializedVersion: 2
-        x: 7378
-        y: 1446
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7345
+        y: 1428
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3549,12 +3575,12 @@ TextureImporter:
       name: Bassriff_Good_133
       rect:
         serializedVersion: 2
-        x: 7943
-        y: 1446
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7910
+        y: 1428
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3571,12 +3597,12 @@ TextureImporter:
       name: Bassriff_Good_134
       rect:
         serializedVersion: 2
-        x: 8508
-        y: 1446
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8475
+        y: 1428
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3593,12 +3619,12 @@ TextureImporter:
       name: Bassriff_Good_135
       rect:
         serializedVersion: 2
-        x: 9073
-        y: 1446
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 9040
+        y: 1428
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3615,12 +3641,12 @@ TextureImporter:
       name: Bassriff_Good_136
       rect:
         serializedVersion: 2
-        x: 33
-        y: 732
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 714
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3637,12 +3663,12 @@ TextureImporter:
       name: Bassriff_Good_137
       rect:
         serializedVersion: 2
-        x: 598
-        y: 732
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 565
+        y: 714
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3659,12 +3685,12 @@ TextureImporter:
       name: Bassriff_Good_138
       rect:
         serializedVersion: 2
-        x: 1163
-        y: 732
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1130
+        y: 714
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3681,12 +3707,12 @@ TextureImporter:
       name: Bassriff_Good_139
       rect:
         serializedVersion: 2
-        x: 1728
-        y: 732
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1695
+        y: 714
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3703,12 +3729,12 @@ TextureImporter:
       name: Bassriff_Good_140
       rect:
         serializedVersion: 2
-        x: 2293
-        y: 732
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2260
+        y: 714
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3725,12 +3751,12 @@ TextureImporter:
       name: Bassriff_Good_141
       rect:
         serializedVersion: 2
-        x: 2858
-        y: 732
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2825
+        y: 714
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3747,12 +3773,12 @@ TextureImporter:
       name: Bassriff_Good_142
       rect:
         serializedVersion: 2
-        x: 3423
-        y: 732
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3390
+        y: 714
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3769,12 +3795,12 @@ TextureImporter:
       name: Bassriff_Good_143
       rect:
         serializedVersion: 2
-        x: 3988
-        y: 732
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3955
+        y: 714
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3791,12 +3817,12 @@ TextureImporter:
       name: Bassriff_Good_144
       rect:
         serializedVersion: 2
-        x: 4553
-        y: 732
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4520
+        y: 714
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3813,12 +3839,12 @@ TextureImporter:
       name: Bassriff_Good_145
       rect:
         serializedVersion: 2
-        x: 5118
-        y: 732
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5085
+        y: 714
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3835,12 +3861,12 @@ TextureImporter:
       name: Bassriff_Good_146
       rect:
         serializedVersion: 2
-        x: 5683
-        y: 732
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5650
+        y: 714
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3857,12 +3883,12 @@ TextureImporter:
       name: Bassriff_Good_147
       rect:
         serializedVersion: 2
-        x: 6248
-        y: 732
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6215
+        y: 714
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3879,12 +3905,12 @@ TextureImporter:
       name: Bassriff_Good_148
       rect:
         serializedVersion: 2
-        x: 6813
-        y: 732
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6780
+        y: 714
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3901,12 +3927,12 @@ TextureImporter:
       name: Bassriff_Good_149
       rect:
         serializedVersion: 2
-        x: 7378
-        y: 732
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7345
+        y: 714
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3923,12 +3949,12 @@ TextureImporter:
       name: Bassriff_Good_150
       rect:
         serializedVersion: 2
-        x: 7943
-        y: 732
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7910
+        y: 714
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3945,12 +3971,12 @@ TextureImporter:
       name: Bassriff_Good_151
       rect:
         serializedVersion: 2
-        x: 8508
-        y: 732
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8475
+        y: 714
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3967,12 +3993,12 @@ TextureImporter:
       name: Bassriff_Good_152
       rect:
         serializedVersion: 2
-        x: 9073
-        y: 732
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 9040
+        y: 714
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3989,12 +4015,12 @@ TextureImporter:
       name: Bassriff_Good_153
       rect:
         serializedVersion: 2
-        x: 33
-        y: 18
-        width: 509
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4011,12 +4037,12 @@ TextureImporter:
       name: Bassriff_Good_154
       rect:
         serializedVersion: 2
-        x: 594
-        y: 18
-        width: 508
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 565
+        y: 0
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4033,12 +4059,12 @@ TextureImporter:
       name: Bassriff_Good_155
       rect:
         serializedVersion: 2
-        x: 1159
-        y: 18
-        width: 508
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1130
+        y: 0
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4055,12 +4081,12 @@ TextureImporter:
       name: Bassriff_Good_156
       rect:
         serializedVersion: 2
-        x: 1745
+        x: 1695
         y: 0
-        width: 492
-        height: 625
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4077,12 +4103,12 @@ TextureImporter:
       name: Bassriff_Good_157
       rect:
         serializedVersion: 2
-        x: 2310
+        x: 2260
         y: 0
-        width: 492
-        height: 625
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4099,12 +4125,12 @@ TextureImporter:
       name: Bassriff_Good_158
       rect:
         serializedVersion: 2
-        x: 2920
-        y: 18
-        width: 447
-        height: 608
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2825
+        y: 0
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4121,12 +4147,12 @@ TextureImporter:
       name: Bassriff_Good_159
       rect:
         serializedVersion: 2
-        x: 3485
-        y: 18
-        width: 447
-        height: 608
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3390
+        y: 0
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4143,12 +4169,12 @@ TextureImporter:
       name: Bassriff_Good_160
       rect:
         serializedVersion: 2
-        x: 4064
-        y: 18
-        width: 433
-        height: 608
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3955
+        y: 0
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4165,12 +4191,12 @@ TextureImporter:
       name: Bassriff_Good_161
       rect:
         serializedVersion: 2
-        x: 4629
-        y: 18
-        width: 433
-        height: 608
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4520
+        y: 0
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4187,12 +4213,12 @@ TextureImporter:
       name: Bassriff_Good_162
       rect:
         serializedVersion: 2
-        x: 5185
-        y: 18
-        width: 437
-        height: 608
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5085
+        y: 0
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4209,12 +4235,12 @@ TextureImporter:
       name: Bassriff_Good_163
       rect:
         serializedVersion: 2
-        x: 5750
-        y: 18
-        width: 437
-        height: 608
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5650
+        y: 0
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4231,12 +4257,12 @@ TextureImporter:
       name: Bassriff_Good_164
       rect:
         serializedVersion: 2
-        x: 6306
-        y: 18
-        width: 442
-        height: 608
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6215
+        y: 0
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4253,12 +4279,12 @@ TextureImporter:
       name: Bassriff_Good_165
       rect:
         serializedVersion: 2
-        x: 6871
-        y: 18
-        width: 442
-        height: 608
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6780
+        y: 0
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4275,12 +4301,12 @@ TextureImporter:
       name: Bassriff_Good_166
       rect:
         serializedVersion: 2
-        x: 7432
-        y: 18
-        width: 446
-        height: 611
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7345
+        y: 0
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4297,12 +4323,12 @@ TextureImporter:
       name: Bassriff_Good_167
       rect:
         serializedVersion: 2
-        x: 7997
-        y: 18
-        width: 446
-        height: 611
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 7910
+        y: 0
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4319,12 +4345,12 @@ TextureImporter:
       name: Bassriff_Good_168
       rect:
         serializedVersion: 2
-        x: 8562
-        y: 20
-        width: 460
-        height: 614
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8475
+        y: 0
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4341,12 +4367,12 @@ TextureImporter:
       name: Bassriff_Good_169
       rect:
         serializedVersion: 2
-        x: 9127
-        y: 20
-        width: 460
-        height: 614
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 9040
+        y: 0
+        width: 565
+        height: 714
+      alignment: 9
+      pivot: {x: 0.545, y: 0.029}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -4363,7 +4389,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 59f5167a4c07719439589cdc2a37be4f
     internalID: 0
     vertices: []
     indices: 
@@ -4371,7 +4397,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":17.0,"y":10.0},"gridSpriteSize":{"x":565.0,"y":714.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5450000166893005,"y":0.028999999165534974},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Bassriff_Good_0: -7022137732575935671
       Bassriff_Good_1: -8113417219069966337

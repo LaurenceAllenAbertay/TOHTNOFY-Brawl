@@ -417,9 +417,9 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -454,6 +454,32 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -461,12 +487,12 @@ TextureImporter:
       name: Bunker_Down_0
       rect:
         serializedVersion: 2
-        x: 61
-        y: 9221
-        width: 460
-        height: 613
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 9198
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -483,12 +509,12 @@ TextureImporter:
       name: Bunker_Down_1
       rect:
         serializedVersion: 2
-        x: 654
-        y: 9221
-        width: 460
-        height: 613
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 593
+        y: 9198
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -505,12 +531,12 @@ TextureImporter:
       name: Bunker_Down_2
       rect:
         serializedVersion: 2
-        x: 1248
-        y: 9221
-        width: 459
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1186
+        y: 9198
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -527,12 +553,12 @@ TextureImporter:
       name: Bunker_Down_3
       rect:
         serializedVersion: 2
-        x: 1841
-        y: 9221
-        width: 459
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1779
+        y: 9198
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -549,12 +575,12 @@ TextureImporter:
       name: Bunker_Down_4
       rect:
         serializedVersion: 2
-        x: 2437
-        y: 9221
-        width: 456
-        height: 598
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2372
+        y: 9198
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -571,12 +597,12 @@ TextureImporter:
       name: Bunker_Down_5
       rect:
         serializedVersion: 2
-        x: 3030
-        y: 9221
-        width: 456
-        height: 598
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2965
+        y: 9198
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -593,12 +619,12 @@ TextureImporter:
       name: Bunker_Down_6
       rect:
         serializedVersion: 2
-        x: 3620
-        y: 9225
-        width: 459
-        height: 624
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3558
+        y: 9198
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -615,12 +641,12 @@ TextureImporter:
       name: Bunker_Down_7
       rect:
         serializedVersion: 2
-        x: 4213
-        y: 9225
-        width: 459
-        height: 624
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4151
+        y: 9198
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -637,12 +663,12 @@ TextureImporter:
       name: Bunker_Down_8
       rect:
         serializedVersion: 2
-        x: 65
-        y: 8570
-        width: 461
-        height: 609
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 8541
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -659,12 +685,12 @@ TextureImporter:
       name: Bunker_Down_9
       rect:
         serializedVersion: 2
-        x: 658
-        y: 8570
-        width: 461
-        height: 609
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 593
+        y: 8541
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -681,12 +707,12 @@ TextureImporter:
       name: Bunker_Down_10
       rect:
         serializedVersion: 2
-        x: 1258
-        y: 8572
-        width: 459
-        height: 609
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1186
+        y: 8541
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -703,12 +729,12 @@ TextureImporter:
       name: Bunker_Down_11
       rect:
         serializedVersion: 2
-        x: 1851
-        y: 8572
-        width: 459
-        height: 609
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1779
+        y: 8541
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -725,12 +751,12 @@ TextureImporter:
       name: Bunker_Down_12
       rect:
         serializedVersion: 2
-        x: 2450
-        y: 8567
-        width: 463
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2372
+        y: 8541
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -747,12 +773,12 @@ TextureImporter:
       name: Bunker_Down_13
       rect:
         serializedVersion: 2
-        x: 3043
-        y: 8567
-        width: 463
-        height: 607
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2965
+        y: 8541
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -769,12 +795,12 @@ TextureImporter:
       name: Bunker_Down_14
       rect:
         serializedVersion: 2
-        x: 3637
-        y: 8565
-        width: 465
-        height: 609
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3558
+        y: 8541
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -791,12 +817,12 @@ TextureImporter:
       name: Bunker_Down_15
       rect:
         serializedVersion: 2
-        x: 4230
-        y: 8565
-        width: 465
-        height: 609
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4151
+        y: 8541
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -813,12 +839,12 @@ TextureImporter:
       name: Bunker_Down_16
       rect:
         serializedVersion: 2
-        x: 81
-        y: 7908
-        width: 465
-        height: 609
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 7884
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -835,12 +861,12 @@ TextureImporter:
       name: Bunker_Down_17
       rect:
         serializedVersion: 2
-        x: 674
-        y: 7908
-        width: 465
-        height: 609
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 593
+        y: 7884
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -857,12 +883,12 @@ TextureImporter:
       name: Bunker_Down_18
       rect:
         serializedVersion: 2
-        x: 1267
-        y: 7908
-        width: 465
-        height: 609
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1186
+        y: 7884
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -879,12 +905,12 @@ TextureImporter:
       name: Bunker_Down_19
       rect:
         serializedVersion: 2
-        x: 1860
-        y: 7908
-        width: 465
-        height: 609
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1779
+        y: 7884
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -901,12 +927,12 @@ TextureImporter:
       name: Bunker_Down_20
       rect:
         serializedVersion: 2
-        x: 2453
-        y: 7908
-        width: 465
-        height: 609
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2372
+        y: 7884
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -923,12 +949,12 @@ TextureImporter:
       name: Bunker_Down_21
       rect:
         serializedVersion: 2
-        x: 3046
-        y: 7908
-        width: 465
-        height: 609
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2965
+        y: 7884
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -945,12 +971,12 @@ TextureImporter:
       name: Bunker_Down_22
       rect:
         serializedVersion: 2
-        x: 3639
-        y: 7908
-        width: 465
-        height: 609
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3558
+        y: 7884
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -967,12 +993,12 @@ TextureImporter:
       name: Bunker_Down_23
       rect:
         serializedVersion: 2
-        x: 4232
-        y: 7908
-        width: 465
-        height: 609
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4151
+        y: 7884
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -989,12 +1015,12 @@ TextureImporter:
       name: Bunker_Down_24
       rect:
         serializedVersion: 2
-        x: 81
-        y: 7251
-        width: 465
-        height: 609
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 7227
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1011,12 +1037,12 @@ TextureImporter:
       name: Bunker_Down_25
       rect:
         serializedVersion: 2
-        x: 674
-        y: 7251
-        width: 465
-        height: 609
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 593
+        y: 7227
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1033,12 +1059,12 @@ TextureImporter:
       name: Bunker_Down_26
       rect:
         serializedVersion: 2
-        x: 1267
-        y: 7251
-        width: 465
-        height: 609
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1186
+        y: 7227
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1055,12 +1081,12 @@ TextureImporter:
       name: Bunker_Down_27
       rect:
         serializedVersion: 2
-        x: 1860
-        y: 7251
-        width: 465
-        height: 609
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1779
+        y: 7227
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1077,12 +1103,12 @@ TextureImporter:
       name: Bunker_Down_28
       rect:
         serializedVersion: 2
-        x: 2453
-        y: 7251
-        width: 465
-        height: 609
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2372
+        y: 7227
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1099,12 +1125,12 @@ TextureImporter:
       name: Bunker_Down_29
       rect:
         serializedVersion: 2
-        x: 3050
-        y: 7251
-        width: 458
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2965
+        y: 7227
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1121,12 +1147,12 @@ TextureImporter:
       name: Bunker_Down_30
       rect:
         serializedVersion: 2
-        x: 3643
-        y: 7251
-        width: 458
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3558
+        y: 7227
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1143,12 +1169,12 @@ TextureImporter:
       name: Bunker_Down_31
       rect:
         serializedVersion: 2
-        x: 4240
-        y: 7251
-        width: 446
-        height: 614
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4151
+        y: 7227
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1165,12 +1191,12 @@ TextureImporter:
       name: Bunker_Down_32
       rect:
         serializedVersion: 2
-        x: 89
-        y: 6594
-        width: 446
-        height: 614
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 6570
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1187,12 +1213,12 @@ TextureImporter:
       name: Bunker_Down_33
       rect:
         serializedVersion: 2
-        x: 659
-        y: 6592
-        width: 480
-        height: 596
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 593
+        y: 6570
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1209,12 +1235,12 @@ TextureImporter:
       name: Bunker_Down_34
       rect:
         serializedVersion: 2
-        x: 1252
-        y: 6592
-        width: 480
-        height: 596
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1186
+        y: 6570
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1231,12 +1257,12 @@ TextureImporter:
       name: Bunker_Down_35
       rect:
         serializedVersion: 2
-        x: 1833
-        y: 6592
-        width: 466
-        height: 564
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1779
+        y: 6570
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1253,12 +1279,12 @@ TextureImporter:
       name: Bunker_Down_36
       rect:
         serializedVersion: 2
-        x: 2426
-        y: 6592
-        width: 466
-        height: 564
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2372
+        y: 6570
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1275,12 +1301,12 @@ TextureImporter:
       name: Bunker_Down_37
       rect:
         serializedVersion: 2
-        x: 3009
-        y: 6592
-        width: 447
-        height: 580
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2965
+        y: 6570
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1297,12 +1323,12 @@ TextureImporter:
       name: Bunker_Down_38
       rect:
         serializedVersion: 2
-        x: 3602
-        y: 6592
-        width: 447
-        height: 580
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3558
+        y: 6570
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1319,12 +1345,12 @@ TextureImporter:
       name: Bunker_Down_39
       rect:
         serializedVersion: 2
-        x: 4183
-        y: 6592
-        width: 407
-        height: 575
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4151
+        y: 6570
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1341,12 +1367,12 @@ TextureImporter:
       name: Bunker_Down_40
       rect:
         serializedVersion: 2
-        x: 32
-        y: 5935
-        width: 407
-        height: 575
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 5913
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1363,12 +1389,12 @@ TextureImporter:
       name: Bunker_Down_41
       rect:
         serializedVersion: 2
-        x: 624
-        y: 5935
-        width: 404
-        height: 574
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 593
+        y: 5913
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1385,12 +1411,12 @@ TextureImporter:
       name: Bunker_Down_42
       rect:
         serializedVersion: 2
-        x: 1217
-        y: 5935
-        width: 404
-        height: 574
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1186
+        y: 5913
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1407,12 +1433,12 @@ TextureImporter:
       name: Bunker_Down_43
       rect:
         serializedVersion: 2
-        x: 1807
-        y: 5935
-        width: 417
-        height: 573
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1779
+        y: 5913
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1429,12 +1455,12 @@ TextureImporter:
       name: Bunker_Down_44
       rect:
         serializedVersion: 2
-        x: 2400
-        y: 5935
-        width: 417
-        height: 573
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2372
+        y: 5913
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1451,12 +1477,12 @@ TextureImporter:
       name: Bunker_Down_45
       rect:
         serializedVersion: 2
-        x: 2993
-        y: 5935
-        width: 420
-        height: 569
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2965
+        y: 5913
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1473,12 +1499,12 @@ TextureImporter:
       name: Bunker_Down_46
       rect:
         serializedVersion: 2
-        x: 3586
-        y: 5935
-        width: 420
-        height: 569
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3558
+        y: 5913
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1495,12 +1521,12 @@ TextureImporter:
       name: Bunker_Down_47
       rect:
         serializedVersion: 2
-        x: 4179
-        y: 5935
-        width: 420
-        height: 569
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4151
+        y: 5913
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1517,12 +1543,12 @@ TextureImporter:
       name: Bunker_Down_48
       rect:
         serializedVersion: 2
-        x: 28
-        y: 5278
-        width: 420
-        height: 569
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 5256
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1539,12 +1565,12 @@ TextureImporter:
       name: Bunker_Down_49
       rect:
         serializedVersion: 2
-        x: 622
-        y: 5278
-        width: 420
-        height: 569
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 593
+        y: 5256
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1561,12 +1587,12 @@ TextureImporter:
       name: Bunker_Down_50
       rect:
         serializedVersion: 2
-        x: 1215
-        y: 5278
-        width: 420
-        height: 569
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1186
+        y: 5256
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1583,12 +1609,12 @@ TextureImporter:
       name: Bunker_Down_51
       rect:
         serializedVersion: 2
-        x: 1811
-        y: 5278
-        width: 417
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1779
+        y: 5256
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1605,12 +1631,12 @@ TextureImporter:
       name: Bunker_Down_52
       rect:
         serializedVersion: 2
-        x: 2404
-        y: 5278
-        width: 417
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2372
+        y: 5256
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1627,12 +1653,12 @@ TextureImporter:
       name: Bunker_Down_53
       rect:
         serializedVersion: 2
-        x: 3000
-        y: 5278
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2965
+        y: 5256
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1649,12 +1675,12 @@ TextureImporter:
       name: Bunker_Down_54
       rect:
         serializedVersion: 2
-        x: 3593
-        y: 5278
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3558
+        y: 5256
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1671,12 +1697,12 @@ TextureImporter:
       name: Bunker_Down_55
       rect:
         serializedVersion: 2
-        x: 4186
-        y: 5278
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4151
+        y: 5256
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1693,12 +1719,12 @@ TextureImporter:
       name: Bunker_Down_56
       rect:
         serializedVersion: 2
-        x: 35
-        y: 4621
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 4599
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1715,12 +1741,12 @@ TextureImporter:
       name: Bunker_Down_57
       rect:
         serializedVersion: 2
-        x: 628
-        y: 4621
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 593
+        y: 4599
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1737,12 +1763,12 @@ TextureImporter:
       name: Bunker_Down_58
       rect:
         serializedVersion: 2
-        x: 1221
-        y: 4621
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1186
+        y: 4599
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1759,12 +1785,12 @@ TextureImporter:
       name: Bunker_Down_59
       rect:
         serializedVersion: 2
-        x: 1814
-        y: 4621
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1779
+        y: 4599
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1781,12 +1807,12 @@ TextureImporter:
       name: Bunker_Down_60
       rect:
         serializedVersion: 2
-        x: 2407
-        y: 4621
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2372
+        y: 4599
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1803,12 +1829,12 @@ TextureImporter:
       name: Bunker_Down_61
       rect:
         serializedVersion: 2
-        x: 3000
-        y: 4621
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2965
+        y: 4599
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1825,12 +1851,12 @@ TextureImporter:
       name: Bunker_Down_62
       rect:
         serializedVersion: 2
-        x: 3593
-        y: 4621
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3558
+        y: 4599
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1847,12 +1873,12 @@ TextureImporter:
       name: Bunker_Down_63
       rect:
         serializedVersion: 2
-        x: 4186
-        y: 4621
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4151
+        y: 4599
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1869,12 +1895,12 @@ TextureImporter:
       name: Bunker_Down_64
       rect:
         serializedVersion: 2
-        x: 35
-        y: 3964
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 3942
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1891,12 +1917,12 @@ TextureImporter:
       name: Bunker_Down_65
       rect:
         serializedVersion: 2
-        x: 628
-        y: 3964
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 593
+        y: 3942
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1913,12 +1939,12 @@ TextureImporter:
       name: Bunker_Down_66
       rect:
         serializedVersion: 2
-        x: 1221
-        y: 3964
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1186
+        y: 3942
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1935,12 +1961,12 @@ TextureImporter:
       name: Bunker_Down_67
       rect:
         serializedVersion: 2
-        x: 1814
-        y: 3964
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1779
+        y: 3942
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1957,12 +1983,12 @@ TextureImporter:
       name: Bunker_Down_68
       rect:
         serializedVersion: 2
-        x: 2407
-        y: 3964
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2372
+        y: 3942
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1979,12 +2005,12 @@ TextureImporter:
       name: Bunker_Down_69
       rect:
         serializedVersion: 2
-        x: 3000
-        y: 3964
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2965
+        y: 3942
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2001,12 +2027,12 @@ TextureImporter:
       name: Bunker_Down_70
       rect:
         serializedVersion: 2
-        x: 3593
-        y: 3964
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3558
+        y: 3942
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2023,12 +2049,12 @@ TextureImporter:
       name: Bunker_Down_71
       rect:
         serializedVersion: 2
-        x: 4186
-        y: 3964
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4151
+        y: 3942
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2045,12 +2071,12 @@ TextureImporter:
       name: Bunker_Down_72
       rect:
         serializedVersion: 2
-        x: 35
-        y: 3307
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 3285
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2067,12 +2093,12 @@ TextureImporter:
       name: Bunker_Down_73
       rect:
         serializedVersion: 2
-        x: 628
-        y: 3307
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 593
+        y: 3285
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2089,12 +2115,12 @@ TextureImporter:
       name: Bunker_Down_74
       rect:
         serializedVersion: 2
-        x: 1221
-        y: 3307
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1186
+        y: 3285
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2111,12 +2137,12 @@ TextureImporter:
       name: Bunker_Down_75
       rect:
         serializedVersion: 2
-        x: 1814
-        y: 3307
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1779
+        y: 3285
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2133,12 +2159,12 @@ TextureImporter:
       name: Bunker_Down_76
       rect:
         serializedVersion: 2
-        x: 2407
-        y: 3307
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2372
+        y: 3285
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2155,12 +2181,12 @@ TextureImporter:
       name: Bunker_Down_77
       rect:
         serializedVersion: 2
-        x: 3000
-        y: 3307
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2965
+        y: 3285
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2177,12 +2203,12 @@ TextureImporter:
       name: Bunker_Down_78
       rect:
         serializedVersion: 2
-        x: 3593
-        y: 3307
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3558
+        y: 3285
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2199,12 +2225,12 @@ TextureImporter:
       name: Bunker_Down_79
       rect:
         serializedVersion: 2
-        x: 4186
-        y: 3307
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4151
+        y: 3285
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2221,12 +2247,12 @@ TextureImporter:
       name: Bunker_Down_80
       rect:
         serializedVersion: 2
-        x: 35
-        y: 2650
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 2628
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2243,12 +2269,12 @@ TextureImporter:
       name: Bunker_Down_81
       rect:
         serializedVersion: 2
-        x: 628
-        y: 2650
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 593
+        y: 2628
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2265,12 +2291,12 @@ TextureImporter:
       name: Bunker_Down_82
       rect:
         serializedVersion: 2
-        x: 1221
-        y: 2650
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1186
+        y: 2628
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2287,12 +2313,12 @@ TextureImporter:
       name: Bunker_Down_83
       rect:
         serializedVersion: 2
-        x: 1814
-        y: 2650
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1779
+        y: 2628
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2309,12 +2335,12 @@ TextureImporter:
       name: Bunker_Down_84
       rect:
         serializedVersion: 2
-        x: 2407
-        y: 2650
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2372
+        y: 2628
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2331,12 +2357,12 @@ TextureImporter:
       name: Bunker_Down_85
       rect:
         serializedVersion: 2
-        x: 3000
-        y: 2650
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2965
+        y: 2628
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2353,12 +2379,12 @@ TextureImporter:
       name: Bunker_Down_86
       rect:
         serializedVersion: 2
-        x: 3593
-        y: 2650
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3558
+        y: 2628
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2375,12 +2401,12 @@ TextureImporter:
       name: Bunker_Down_87
       rect:
         serializedVersion: 2
-        x: 4186
-        y: 2650
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4151
+        y: 2628
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2397,12 +2423,12 @@ TextureImporter:
       name: Bunker_Down_88
       rect:
         serializedVersion: 2
-        x: 35
-        y: 1993
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1971
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2419,12 +2445,12 @@ TextureImporter:
       name: Bunker_Down_89
       rect:
         serializedVersion: 2
-        x: 628
-        y: 1993
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 593
+        y: 1971
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2441,12 +2467,12 @@ TextureImporter:
       name: Bunker_Down_90
       rect:
         serializedVersion: 2
-        x: 1221
-        y: 1993
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1186
+        y: 1971
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2463,12 +2489,12 @@ TextureImporter:
       name: Bunker_Down_91
       rect:
         serializedVersion: 2
-        x: 1814
-        y: 1993
-        width: 415
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1779
+        y: 1971
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2485,12 +2511,12 @@ TextureImporter:
       name: Bunker_Down_92
       rect:
         serializedVersion: 2
-        x: 2404
-        y: 1993
-        width: 417
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2372
+        y: 1971
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2507,12 +2533,12 @@ TextureImporter:
       name: Bunker_Down_93
       rect:
         serializedVersion: 2
-        x: 2997
-        y: 1993
-        width: 417
-        height: 570
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2965
+        y: 1971
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2529,12 +2555,12 @@ TextureImporter:
       name: Bunker_Down_94
       rect:
         serializedVersion: 2
-        x: 3597
-        y: 1993
-        width: 411
-        height: 571
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3558
+        y: 1971
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2551,12 +2577,12 @@ TextureImporter:
       name: Bunker_Down_95
       rect:
         serializedVersion: 2
-        x: 4190
-        y: 1993
-        width: 411
-        height: 571
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4151
+        y: 1971
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2573,12 +2599,12 @@ TextureImporter:
       name: Bunker_Down_96
       rect:
         serializedVersion: 2
-        x: 47
-        y: 1336
-        width: 405
-        height: 573
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1314
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2595,12 +2621,12 @@ TextureImporter:
       name: Bunker_Down_97
       rect:
         serializedVersion: 2
-        x: 640
-        y: 1336
-        width: 405
-        height: 573
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 593
+        y: 1314
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2617,12 +2643,12 @@ TextureImporter:
       name: Bunker_Down_98
       rect:
         serializedVersion: 2
-        x: 1240
-        y: 1336
-        width: 404
-        height: 582
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1186
+        y: 1314
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2639,12 +2665,12 @@ TextureImporter:
       name: Bunker_Down_99
       rect:
         serializedVersion: 2
-        x: 1833
-        y: 1336
-        width: 404
-        height: 582
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1779
+        y: 1314
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2661,12 +2687,12 @@ TextureImporter:
       name: Bunker_Down_100
       rect:
         serializedVersion: 2
-        x: 2434
-        y: 1336
-        width: 408
-        height: 584
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2372
+        y: 1314
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2683,12 +2709,12 @@ TextureImporter:
       name: Bunker_Down_101
       rect:
         serializedVersion: 2
-        x: 3027
-        y: 1336
-        width: 408
-        height: 584
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2965
+        y: 1314
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2705,12 +2731,12 @@ TextureImporter:
       name: Bunker_Down_102
       rect:
         serializedVersion: 2
-        x: 3637
-        y: 1337
-        width: 442
-        height: 593
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3558
+        y: 1314
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2727,12 +2753,12 @@ TextureImporter:
       name: Bunker_Down_103
       rect:
         serializedVersion: 2
-        x: 4230
-        y: 1337
-        width: 442
-        height: 593
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4151
+        y: 1314
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2749,12 +2775,12 @@ TextureImporter:
       name: Bunker_Down_104
       rect:
         serializedVersion: 2
-        x: 104
-        y: 680
-        width: 453
-        height: 602
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 657
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2771,12 +2797,12 @@ TextureImporter:
       name: Bunker_Down_105
       rect:
         serializedVersion: 2
-        x: 697
-        y: 680
-        width: 453
-        height: 602
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 593
+        y: 657
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2793,12 +2819,12 @@ TextureImporter:
       name: Bunker_Down_106
       rect:
         serializedVersion: 2
-        x: 1293
-        y: 680
-        width: 456
-        height: 601
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1186
+        y: 657
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2815,12 +2841,12 @@ TextureImporter:
       name: Bunker_Down_107
       rect:
         serializedVersion: 2
-        x: 1886
-        y: 680
-        width: 456
-        height: 601
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1779
+        y: 657
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2837,12 +2863,12 @@ TextureImporter:
       name: Bunker_Down_108
       rect:
         serializedVersion: 2
-        x: 2478
-        y: 680
-        width: 459
-        height: 601
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2372
+        y: 657
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2859,12 +2885,12 @@ TextureImporter:
       name: Bunker_Down_109
       rect:
         serializedVersion: 2
-        x: 3071
-        y: 680
-        width: 459
-        height: 601
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2965
+        y: 657
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2881,12 +2907,12 @@ TextureImporter:
       name: Bunker_Down_110
       rect:
         serializedVersion: 2
-        x: 3650
-        y: 680
-        width: 455
-        height: 601
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 3558
+        y: 657
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2903,12 +2929,12 @@ TextureImporter:
       name: Bunker_Down_111
       rect:
         serializedVersion: 2
-        x: 4243
-        y: 680
-        width: 455
-        height: 601
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4151
+        y: 657
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2925,12 +2951,12 @@ TextureImporter:
       name: Bunker_Down_112
       rect:
         serializedVersion: 2
-        x: 50
-        y: 26
-        width: 490
-        height: 611
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2947,12 +2973,12 @@ TextureImporter:
       name: Bunker_Down_113
       rect:
         serializedVersion: 2
-        x: 643
-        y: 26
-        width: 490
-        height: 611
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 593
+        y: 0
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2969,12 +2995,12 @@ TextureImporter:
       name: Bunker_Down_114
       rect:
         serializedVersion: 2
-        x: 1243
-        y: 23
-        width: 467
-        height: 614
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1186
+        y: 0
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2991,12 +3017,12 @@ TextureImporter:
       name: Bunker_Down_115
       rect:
         serializedVersion: 2
-        x: 1836
-        y: 23
-        width: 467
-        height: 614
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1779
+        y: 0
+        width: 593
+        height: 657
+      alignment: 9
+      pivot: {x: 0.474, y: 0.036}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3013,7 +3039,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: bbf6bdc953d13794cbede544ec17e4d8
     internalID: 0
     vertices: []
     indices: 
@@ -3021,7 +3047,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":15.0},"gridSpriteSize":{"x":593.0,"y":657.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.4740000069141388,"y":0.035999998450279239},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Bunker_Down_0: -3635433071682804359
       Bunker_Down_1: -7596372878008275936

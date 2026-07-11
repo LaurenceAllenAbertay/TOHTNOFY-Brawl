@@ -3,22 +3,12 @@ using UnityEngine;
 
 namespace DDD.TNFY.BRAWL
 {
-    /// <summary>
-    /// Owns all AI action execution coroutines (movement, jumping, ability use).
-    /// Must be a MonoBehaviour because it runs coroutines.
-    /// Attach to the same prefab as UnitAI.
-    /// </summary>
+
     public class AIExecutor : MonoBehaviour
     {
-        #region Private Fields
-
         private Unit unit;
         private JumpSystem jumpSystem;
         private AIDebugLogger logger;
-
-        #endregion
-
-        #region Initialization
 
         public void Initialize(Unit unit, JumpSystem jumpSystem, AIDebugLogger logger)
         {
@@ -26,14 +16,7 @@ namespace DDD.TNFY.BRAWL
             this.jumpSystem = jumpSystem;
             this.logger = logger;
         }
-
-        #endregion
-
-        #region Action Plan Execution
-
-        /// <summary>
-        /// Executes the full action plan in the plan's order.
-        /// </summary>
+        
         public IEnumerator ExecuteActionPlan(ActionPlan plan, float actionDelay)
         {
             if (plan == null) yield break;
@@ -79,10 +62,6 @@ namespace DDD.TNFY.BRAWL
 
             logger?.LogActionComplete();
         }
-
-        #endregion
-
-        #region Movement
 
         private IEnumerator ExecuteMovement(ActionPlan plan)
         {
@@ -140,9 +119,6 @@ namespace DDD.TNFY.BRAWL
             Vector3 startPos = unit.transform.position;
             Vector3 endPos = destination.transform.position;
 
-            // For AI jumps the camera lerps to the destination tile while the unit is in the air.
-            // We start the transition without yielding so it runs in parallel with JumpAnimation.
-            // Player jumps intentionally have no camera movement — the player controls the camera.
             var cam = CameraController.Instance;
             if (cam != null)
                 StartCoroutine(cam.TransitionTo(cam.WorldFocusPosition(endPos)));
@@ -161,7 +137,6 @@ namespace DDD.TNFY.BRAWL
             if (distance < minRange || distance > maxRange) return false;
             if (!targetTile.passableTerrain) return false;
 
-            // Occupied tiles are only valid when the unit can stomp.
             if (targetTile.occupied && !unit.CanStompOccupiedTiles) return false;
 
             return !IsJumpBlockedByWalls(unit.currentTile, targetTile);
@@ -176,10 +151,6 @@ namespace DDD.TNFY.BRAWL
             int wallsLayerMask = LayerMask.GetMask("Walls");
             return Physics.Raycast(rayStart, (rayEnd - rayStart).normalized, checkDistance, wallsLayerMask);
         }
-
-        #endregion
-
-        #region Ability Execution
 
         private IEnumerator ExecuteAbility(ActionPlan plan)
         {
@@ -235,6 +206,5 @@ namespace DDD.TNFY.BRAWL
             }
         }
 
-        #endregion
     }
 }

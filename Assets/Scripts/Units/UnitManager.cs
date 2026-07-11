@@ -7,56 +7,36 @@ namespace DDD.TNFY.BRAWL
     {
         public static UnitManager Instance { get; private set; }
 
-        // Events for other systems to listen to
         public static event System.Action<Unit> OnUnitRegistered;
         public static event System.Action<Unit> OnUnitUnregistered;
         public static event System.Action<Unit> OnUnitMoved;
         public static event System.Action<Unit> OnUnitDied;
-        // Fired by DamageEffect after each hit: (victim, attacker)
+
         public static event System.Action<Unit, Unit> OnUnitDamaged;
-        // Fired by Unit.BecomeBody() after the down animation completes and the unit
-        // transitions to a neutral body. Subscribe here to react to bodies appearing
-        // (e.g. UI updates, revival systems).
+
         public static event System.Action<Unit> OnBodySpawned;
 
-        // Unit collections for fast access
         private readonly List<Unit> allUnits = new List<Unit>();
         private readonly List<PlayerUnit> playerUnits = new List<PlayerUnit>();
         private readonly List<EnemyUnit> enemyUnits = new List<EnemyUnit>();
 
-        // NeutralUnits: active map objects (Mega Mug, etc.) that fire during the environment
-        // turn. Kept separate so TurnManager can iterate them without scanning AllUnits.
-        // Units in this list are always IsNeutral = true and are never in the turn order.
         private readonly List<NeutralUnit> neutralUnits = new List<NeutralUnit>();
 
-        // Bodies: units that have completed their down animation and now exist as neutral
-        // downed objects on the map. Kept separate so systems can query bodies without
-        // iterating AllUnits and checking IsBody on each entry.
         private readonly List<Unit> bodyUnits = new List<Unit>();
 
-        // Cached collections to avoid allocations
         private readonly List<Unit> cachedValidTargets = new List<Unit>();
         private readonly List<Unit> cachedUnitsInRange = new List<Unit>();
 
-        // Public read-only access
         public static IReadOnlyList<Unit> AllUnits => Instance?.allUnits ?? new List<Unit>();
         public static IReadOnlyList<PlayerUnit> PlayerUnits => Instance?.playerUnits ?? new List<PlayerUnit>();
         public static IReadOnlyList<EnemyUnit> EnemyUnits => Instance?.enemyUnits ?? new List<EnemyUnit>();
 
-        /// <summary>
-        /// All live NeutralUnit instances currently on the map.
-        /// TurnManager iterates this during TriggerEnvironmentEffects to fire each unit's
-        /// environmentAbility. SpawnNeutralUnitEffect adds to this list; NeutralUnit.Die()
-        /// removes from it via NotifyUnitDied.
-        /// </summary>
         public static IReadOnlyList<NeutralUnit> AllNeutralUnits => Instance?.neutralUnits ?? new List<NeutralUnit>();
 
-        // All units currently in the body state. Useful for revival systems and editor tools.
         public static IReadOnlyList<Unit> AllBodies => Instance?.bodyUnits ?? new List<Unit>();
 
         private void Awake()
         {
-            // Singleton setup
             if (Instance != null && Instance != this)
             {
                 Destroy(gameObject);
@@ -64,17 +44,14 @@ namespace DDD.TNFY.BRAWL
             }
             Instance = this;
 
-            // Find all existing units in the scene and register them
             RegisterExistingUnits();
         }
 
         private void RegisterExistingUnits()
         {
-            // Only call FindObjectsOfType once during initialization
             var existingUnits = FindObjectsByType<Unit>(FindObjectsSortMode.None);
             foreach (var unit in existingUnits)
             {
-                // Check if unit is already in our list to avoid double registration
                 if (!allUnits.Contains(unit))
                 {
                     RegisterUnit(unit);
@@ -82,19 +59,14 @@ namespace DDD.TNFY.BRAWL
             }
         }
 
-        /// <summary>
-        /// Register a unit with the manager. Call this from Unit.Awake() or when spawning units.
-        /// </summary>
         public static void RegisterUnit(Unit unit)
         {
             if (Instance == null || unit == null) return;
 
-            // Prevent double registration
             if (Instance.allUnits.Contains(unit)) return;
 
             Instance.allUnits.Add(unit);
 
-            // Add to specific type lists
             if (unit is PlayerUnit player && !Instance.playerUnits.Contains(player))
                 Instance.playerUnits.Add(player);
             else if (unit is EnemyUnit enemy && !Instance.enemyUnits.Contains(enemy))
@@ -105,10 +77,6 @@ namespace DDD.TNFY.BRAWL
             OnUnitRegistered?.Invoke(unit);
         }
 
-        /// <summary>
-        /// Unregister a unit from the manager. Call this from Unit.OnDestroy() or when units die
-        /// without leaving a body (e.g. enemy with leavesBodyOnDown = false).
-        /// </summary>
         public static void UnregisterUnit(Unit unit)
         {
             if (Instance == null || unit == null) return;
@@ -126,17 +94,11 @@ namespace DDD.TNFY.BRAWL
             OnUnitUnregistered?.Invoke(unit);
         }
 
-        /// <summary>
-        /// Notify that a unit has moved. Call this from Unit.SetCurrentTile().
-        /// </summary>
         public static void NotifyUnitMoved(Unit unit)
         {
             OnUnitMoved?.Invoke(unit);
         }
 
-        /// <summary>
-        /// Notify that a unit has been damaged. Call this from DamageEffect.
-        /// </summary>
         public static void NotifyUnitDamaged(Unit victim, Unit attacker)
         {
             OnUnitDamaged?.Invoke(victim, attacker);
@@ -146,12 +108,6 @@ namespace DDD.TNFY.BRAWL
         {
             OnUnitDied?.Invoke(unit);
 
-            // Remove from faction lists immediately — TurnManager, AI, and targeting all
-            // use these to find live combatants and must not see this unit any more.
-            // Do NOT remove from allUnits here: if this unit will become a body it needs
-            // to remain in allUnits so SelectTargets can find it for canTargetNeutral abilities.
-            // UnregisterUnit (full removal) is called by UnitDownedSequencer only when the
-            // unit will NOT become a body (i.e. enemy with leavesBodyOnDown = false).
             if (Instance == null || unit == null) return;
 
             if (unit is PlayerUnit player)
@@ -160,18 +116,10 @@ namespace DDD.TNFY.BRAWL
                 Instance.enemyUnits.Remove(enemy);
             else if (unit is NeutralUnit neutral)
             {
-                // NeutralUnits are removed from the environment-turn list immediately on down
-                // so TurnManager does not try to fire their environmentAbility this round.
                 Instance.neutralUnits.Remove(neutral);
             }
         }
 
-        /// <summary>
-        /// Called by Unit.BecomeBody() after the down animation finishes and the unit
-        /// transitions to a neutral body. Moves the unit into the bodyUnits list and
-        /// fires OnBodySpawned so subscribers (UI, revival systems) can react.
-        /// The unit remains in allUnits so canTargetNeutral abilities can find it.
-        /// </summary>
         public static void NotifyBodySpawned(Unit unit)
         {
             if (Instance == null || unit == null) return;
@@ -180,9 +128,6 @@ namespace DDD.TNFY.BRAWL
             OnBodySpawned?.Invoke(unit);
         }
 
-        /// <summary>
-        /// Get all units that can be targeted by the given unit, using cached collection to avoid allocations.
-        /// </summary>
         public static IReadOnlyList<Unit> GetValidTargetsFor(Unit caster, System.Func<Unit, bool> additionalFilter = null)
         {
             if (Instance == null || caster == null) return new List<Unit>();
@@ -191,17 +136,13 @@ namespace DDD.TNFY.BRAWL
 
             foreach (var unit in Instance.allUnits)
             {
-                // Skip self
                 if (unit == caster) continue;
 
-                // Basic targeting rules
                 bool isAlly = (unit is EnemyUnit) == (caster is EnemyUnit);
-                if (isAlly) continue; // For now, assume units only target enemies
+                if (isAlly) continue; 
 
-                // Check if enemy can target this unit (for EnemyUnit targeting restrictions)
                 if (caster is EnemyUnit enemy && !enemy.CanTarget(unit)) continue;
 
-                // Apply additional filter if provided
                 if (additionalFilter != null && !additionalFilter(unit)) continue;
 
                 Instance.cachedValidTargets.Add(unit);
@@ -210,9 +151,6 @@ namespace DDD.TNFY.BRAWL
             return Instance.cachedValidTargets;
         }
 
-        /// <summary>
-        /// Get all units within a certain range of a position, using cached collection.
-        /// </summary>
         public static IReadOnlyList<Unit> GetUnitsInRange(Vector3 worldPosition, float range)
         {
             if (Instance == null) return new List<Unit>();
@@ -234,9 +172,6 @@ namespace DDD.TNFY.BRAWL
             return Instance.cachedUnitsInRange;
         }
 
-        /// <summary>
-        /// Find the closest unit to a world position within max distance.
-        /// </summary>
         public static Unit GetClosestUnit(Vector3 worldPosition, float maxDistance = float.MaxValue)
         {
             if (Instance == null) return null;
@@ -259,9 +194,6 @@ namespace DDD.TNFY.BRAWL
             return closest;
         }
 
-        /// <summary>
-        /// Get count of units by type for quick checks.
-        /// </summary>
         public static int GetUnitCount<T>() where T : Unit
         {
             if (Instance == null) return 0;
@@ -276,9 +208,6 @@ namespace DDD.TNFY.BRAWL
                 return Instance.allUnits.Count;
         }
 
-        /// <summary>
-        /// Check if any units of a specific type exist.
-        /// </summary>
         public static bool HasUnitsOfType<T>() where T : Unit
         {
             return GetUnitCount<T>() > 0;
@@ -290,14 +219,6 @@ namespace DDD.TNFY.BRAWL
             {
                 Instance = null;
             }
-        }
-
-        // Debug method to validate unit registration
-        [System.Diagnostics.Conditional("UNITY_EDITOR")]
-        public void DebugLogUnitCounts()
-        {
-            Debug.Log($"UnitManager: Total Units: {allUnits.Count}, Players: {playerUnits.Count}, " +
-                      $"Enemies: {enemyUnits.Count}, Neutrals: {neutralUnits.Count}, Bodies: {bodyUnits.Count}");
         }
     }
 }

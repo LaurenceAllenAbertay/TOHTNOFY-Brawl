@@ -56,7 +56,6 @@ namespace DDD.TNFY.BRAWL
 
             if (existingEffect != null)
             {
-                // Handle stacking
                 return HandleStackingBehavior(existingEffect, effectData, source, duration, power);
             }
             else
@@ -140,13 +139,14 @@ namespace DDD.TNFY.BRAWL
 
         private void HandleTurnStarted(Unit unit)
         {
+            UpdateEffectDurations(unit, StatusEffectData.EffectExpiryTiming.StartOfTurn);
             ProcessEffectsForTiming(unit, StatusEffectData.EffectTriggerTiming.StartOfTurn);
         }
 
         private void HandleTurnEnded(Unit unit)
         {
             ProcessEffectsForTiming(unit, StatusEffectData.EffectTriggerTiming.EndOfTurn);
-            UpdateEffectDurations(unit);
+            UpdateEffectDurations(unit, StatusEffectData.EffectExpiryTiming.EndOfTurn);
             
             if (!stunnedThisTurn.Contains(unit))
                 stunnedApplicationCount.Remove(unit);
@@ -239,7 +239,7 @@ namespace DDD.TNFY.BRAWL
             OnStatusEffectTriggered?.Invoke(effect.target, effect);
         }
 
-        private void UpdateEffectDurations(Unit unit)
+        private void UpdateEffectDurations(Unit unit, StatusEffectData.EffectExpiryTiming timing)
         {
             if (!activeEffects.ContainsKey(unit)) return;
 
@@ -247,6 +247,8 @@ namespace DDD.TNFY.BRAWL
 
             foreach (var effect in activeEffects[unit])
             {
+                if (effect.effectData.expiryTiming != timing) continue;
+
                 if (effect.remainingDuration == -1)
                 {
                     effect.hasTriggeredThisTurn = false;
@@ -306,7 +308,6 @@ namespace DDD.TNFY.BRAWL
         
         private void ApplyImmediateEffects(StatusEffectInstance effect)
         {
-            // Apply stat modifiers
             switch (effect.effectData.effectType)
             {
                 case StatusEffectType.AttackUp:

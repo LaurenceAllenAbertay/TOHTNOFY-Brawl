@@ -21,6 +21,7 @@ MonoBehaviour:
   maxStacks: 1
   triggerTiming: 6
   triggersOnApplication: 0
+  expiryTiming: 1
   applicationVFX: {fileID: 0}
   persistentVFX: {fileID: 0}
   removalVFX: {fileID: 0}

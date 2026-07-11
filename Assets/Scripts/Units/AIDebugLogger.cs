@@ -4,11 +4,6 @@ using UnityEngine;
 
 namespace DDD.TNFY.BRAWL
 {
-    /// <summary>
-    /// Plain class that owns all AI debug logging.
-    /// Instantiated by UnitAI and passed to AIPlanner and AIExecutor.
-    /// Contains no Unity lifecycle methods — not a MonoBehaviour.
-    /// </summary>
     public class AIDebugLogger
     {
         private readonly Unit unit;
@@ -24,8 +19,6 @@ namespace DDD.TNFY.BRAWL
             this.topActionsToLog    = topActionsToLog;
         }
 
-        // ── Turn lifecycle ────────────────────────────────────────────────────────
-
         public void LogTurnStart()
         {
             if (!enableDebugLogging) return;
@@ -39,8 +32,6 @@ namespace DDD.TNFY.BRAWL
             if (!enableDebugLogging) return;
             Debug.Log($"[{unit.name}] === TURN END ===");
         }
-
-        // ── Planning ──────────────────────────────────────────────────────────────
 
         public void LogTargetsAndTeammates(List<Unit> targets, List<UnitAI> teammates)
         {
@@ -63,10 +54,6 @@ namespace DDD.TNFY.BRAWL
             }
         }
 
-        /// <summary>
-        /// Logs the plan chosen by AIPlanner, including the reason it was selected.
-        /// Replaces the old score-based LogSelectedAction.
-        /// </summary>
         public void LogSelectedAction(ActionPlan plan)
         {
             if (!enableDebugLogging) return;
@@ -81,7 +68,6 @@ namespace DDD.TNFY.BRAWL
                       $"{(string.IsNullOrEmpty(plan.debugReason) ? "" : $" | Reason: {plan.debugReason}")}");
         }
 
-        /// <summary>Logs the reason a particular planning stage was chosen.</summary>
         public void LogSelectionReason(string reason)
         {
             if (!enableDebugLogging) return;
@@ -93,8 +79,6 @@ namespace DDD.TNFY.BRAWL
             if (!enableDebugLogging) return;
             Debug.Log($"[{unit.name}] No valid actions available — ending turn");
         }
-
-        // ── Execution ─────────────────────────────────────────────────────────────
 
         public void LogActionExecution()
         {
@@ -139,12 +123,6 @@ namespace DDD.TNFY.BRAWL
             Debug.Log($"[{unit.name}] Action execution complete");
         }
 
-        // ── Static helpers ────────────────────────────────────────────────────────
-
-        /// <summary>
-        /// Builds a human-readable description of a plan for log output.
-        /// Works for both ability-first and move-first plans.
-        /// </summary>
         public static string GetActionDescription(ActionPlan plan, Unit unit)
         {
             if (plan == null) return "None";

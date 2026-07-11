@@ -1,5 +1,5 @@
 namespace DDD.TNFY.BRAWL
 {
-    // Type-safe tag.
+    // Type-safe tag
     public class OverworldPartyLeader : UnityEngine.MonoBehaviour { }
 }

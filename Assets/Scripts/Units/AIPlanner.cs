@@ -4,29 +4,6 @@ using UnityEngine;
 
 namespace DDD.TNFY.BRAWL
 {
-    /// <summary>
-    /// Decides what an AI unit should do this turn.
-    ///
-    /// Priority order:
-    ///   1. Kill shot  — scans all valid targets; prefers the most-wounded (lowest HP%) first.
-    ///                   Never skipped — an AI will always take a kill it can see.
-    ///   2. Attack anchor — tries every usable damaging ability + position against the
-    ///                   weighted-random anchor target selected by PickWeightedTarget.
-    ///   3. Useful self-buff (only when no attack is possible this turn).
-    ///   4. Teleport toward the anchor (repositioning ability).
-    ///   5. Approach the anchor (walk or jump, whichever scores higher).
-    ///
-    /// Target selection (PickWeightedTarget):
-    ///   Considers the N closest valid targets (targetCandidateCount, designer-tunable).
-    ///   Each candidate's selection weight is halved for every teammate whose nearest
-    ///   candidate is that same unit — this naturally spreads AI focus across the player
-    ///   team and prevents dogpiling on a single target.
-    ///
-    /// aggressionBias: 1 = always charge, 0 = pick safest tile that still advances.
-    /// lookAheadSteps: 1 = score this turn only, 2 = also reward tiles in ability range next turn.
-    ///
-    /// Plain C# class — no MonoBehaviour.
-    /// </summary>
     public class AIPlanner
     {
         private readonly Unit  unit;
@@ -59,17 +36,12 @@ namespace DDD.TNFY.BRAWL
             this.logger               = logger;
         }
 
-        // ── Public entry point ────────────────────────────────────────────────────
-
         public ActionPlan Plan(List<Unit> targets)
         {
             var abilities      = UnitLoadoutManager.GetAbilities(unit);
             var reachableTiles = GetReachableTiles();
             var jumpableTiles  = GetJumpableTiles();
 
-            // Pick the anchor target once — every non-killshot stage works toward this unit.
-            // Kill shot remains a global scan so the AI always takes any available kill,
-            // regardless of which target was randomly selected as the anchor.
             var anchor = PickWeightedTarget(targets);
 
             var plan = TryFindKillShot(abilities, targets, reachableTiles, jumpableTiles)
@@ -86,14 +58,8 @@ namespace DDD.TNFY.BRAWL
             return plan;
         }
 
-        // ── Stage 1: Kill shot ────────────────────────────────────────────────────
-
         private ActionPlan TryFindKillShot(Ability[] abilities, List<Unit> targets, List<Tile> reachableTiles, List<Tile> jumpableTiles)
         {
-            // If any valid target is directly adjacent (grid distance 1), skip the killshot
-            // entirely and let TryAttackAnchor handle them. An AI standing next to an enemy
-            // should always swing at them first — chasing a killshot on a distant target while
-            // ignoring someone right beside you reads as broken rather than dumb.
             if (unit.currentTile != null)
             {
                 foreach (var t in targets)
@@ -105,8 +71,6 @@ namespace DDD.TNFY.BRAWL
                 }
             }
 
-            // Prefer finishing off the most-wounded target first (HP% so it scales correctly
-            // across units with different max health values).
             var ordered = targets.OrderBy(t => HealthPct(t)).ToList();
 
             foreach (var (ability, slot) in UsableAbilities(abilities))
@@ -115,11 +79,9 @@ namespace DDD.TNFY.BRAWL
                 if (!canTargetUnit(target)) continue;
                 if (SimulateDamage(ability, target) < target.currentHealth) continue;
 
-                // Already in range — no movement needed.
                 var plan = BuildAbilityPlan(ability, slot, unit.currentTile, target, isAbilityFirst: true);
                 if (plan != null) { plan.debugReason = "Kill shot (no move)"; return plan; }
 
-                // Walk then kill.
                 foreach (var tile in reachableTiles)
                 {
                     if (tile == unit.currentTile) continue;
@@ -127,7 +89,6 @@ namespace DDD.TNFY.BRAWL
                     if (plan != null) { plan.movementTarget = tile; plan.debugReason = "Kill shot (after walk)"; return plan; }
                 }
 
-                // Jump then kill.
                 foreach (var tile in jumpableTiles)
                 {
                     plan = BuildAbilityPlan(ability, slot, tile, target, isAbilityFirst: false);
@@ -137,14 +98,6 @@ namespace DDD.TNFY.BRAWL
             return null;
         }
 
-        // ── Stage 2: Attack anchor target ────────────────────────────────────────
-
-        /// <summary>
-        /// Tries every usable damaging ability and every reachable/jumpable tile against the
-        /// pre-selected anchor target. Returns the highest-damage valid plan found.
-        /// Target selection is handled upstream by PickWeightedTarget — this stage only
-        /// decides how best to execute against the chosen anchor.
-        /// </summary>
         private ActionPlan TryAttackAnchor(Ability[] abilities, Unit anchor, List<Tile> reachableTiles, List<Tile> jumpableTiles)
         {
             if (anchor == null) return null;
@@ -158,7 +111,6 @@ namespace DDD.TNFY.BRAWL
                 int dmg = SimulateDamage(ability, anchor);
                 if (dmg <= 0) continue;
 
-                // Already in range.
                 var plan = BuildAbilityPlan(ability, slot, unit.currentTile, anchor, isAbilityFirst: true);
                 if (plan != null && dmg > bestDmg)
                 {
@@ -166,7 +118,6 @@ namespace DDD.TNFY.BRAWL
                     best.debugReason = "Attack anchor (no move)";
                 }
 
-                // Walk then attack.
                 foreach (var tile in reachableTiles)
                 {
                     if (tile == unit.currentTile) continue;
@@ -179,7 +130,6 @@ namespace DDD.TNFY.BRAWL
                     }
                 }
 
-                // Jump then attack.
                 foreach (var tile in jumpableTiles)
                 {
                     plan = BuildAbilityPlan(ability, slot, tile, anchor, isAbilityFirst: false);
@@ -195,8 +145,6 @@ namespace DDD.TNFY.BRAWL
 
             return best;
         }
-
-        // ── Stage 3: Useful buff ──────────────────────────────────────────────────
 
         private ActionPlan TryFindUsefulBuff(Ability[] abilities)
         {
@@ -221,15 +169,6 @@ namespace DDD.TNFY.BRAWL
             return null;
         }
 
-        // ── Stage 4: Teleport to position ────────────────────────────────────────
-
-        /// <summary>
-        /// If the unit has a teleport ability and no damaging action was possible this turn,
-        /// uses the teleport to reposition closer to the anchor target.
-        /// Evaluates three cases: teleport from current tile, walk-then-teleport, jump-then-teleport.
-        /// Only fires when stages 1–3 all returned null so the unit never wastes a
-        /// teleport when it could be attacking.
-        /// </summary>
         private ActionPlan TryTeleportToPosition(Ability[] abilities, Unit anchor, List<Tile> reachableTiles, List<Tile> jumpableTiles)
         {
             if (anchor?.currentTile == null) return null;
@@ -242,8 +181,6 @@ namespace DDD.TNFY.BRAWL
             {
                 if (!IsTeleportAbility(ability)) continue;
 
-                // Evaluate teleporting from a given origin tile and update best if improved.
-                // moveTile = null means no walk/jump beforehand (case A).
                 void EvaluateOrigin(Tile originTile, Tile moveTile, bool moveIsJump)
                 {
                     var saved = unit.currentTile;
@@ -265,8 +202,6 @@ namespace DDD.TNFY.BRAWL
                             if (tile == null || !tile.passableTerrain || tile.occupied) continue;
                             if (tile == originTile) continue;
 
-                            // Never teleport to a tile the unit could reach by walking or jumping —
-                            // that would waste the ability on movement normal locomotion already covers.
                             if (reachableTiles.Contains(tile) || jumpableTiles.Contains(tile)) continue;
 
                             float score = ScoreTile(tile, anchor.currentTile, abilities, anchor, maxDist);
@@ -296,17 +231,14 @@ namespace DDD.TNFY.BRAWL
                     }
                 }
 
-                // Case A: teleport from current position.
                 EvaluateOrigin(unit.currentTile, moveTile: null, moveIsJump: false);
 
-                // Case B: walk to a reachable tile first, then teleport.
                 foreach (var walkTile in reachableTiles)
                 {
                     if (walkTile == unit.currentTile) continue;
                     EvaluateOrigin(walkTile, moveTile: walkTile, moveIsJump: false);
                 }
 
-                // Case C: jump to a jumpable tile first, then teleport.
                 foreach (var jumpTile in jumpableTiles)
                 {
                     EvaluateOrigin(jumpTile, moveTile: jumpTile, moveIsJump: true);
@@ -319,8 +251,6 @@ namespace DDD.TNFY.BRAWL
         private bool IsTeleportAbility(Ability ability)
             => ability?.effects != null && ability.effects.Any(e => e is TeleportEffect);
 
-        // ── Stage 5: Approach ─────────────────────────────────────────────────────
-
         private ActionPlan TryApproach(Unit anchor, List<Tile> reachableTiles, List<Tile> jumpableTiles, Ability[] abilities)
         {
             if (anchor?.currentTile == null) return null;
@@ -330,7 +260,6 @@ namespace DDD.TNFY.BRAWL
             float bestScore  = float.MinValue;
             int   maxDist    = GridManager.Instance.AllTiles.Count;
 
-            // Score walk tiles.
             foreach (var tile in reachableTiles)
             {
                 if (tile == unit.currentTile) continue;
@@ -338,7 +267,6 @@ namespace DDD.TNFY.BRAWL
                 if (score > bestScore) { bestScore = score; bestTile = tile; bestIsJump = false; }
             }
 
-            // Score jump tiles — only preferred when they score better than any walk tile.
             foreach (var tile in jumpableTiles)
             {
                 float score = ScoreTile(tile, anchor.currentTile, abilities, anchor, maxDist);
@@ -367,18 +295,6 @@ namespace DDD.TNFY.BRAWL
             return score;
         }
 
-        // ── Plan builder ──────────────────────────────────────────────────────────
-
-        /// <summary>
-        /// Tries to build a valid plan for using <paramref name="ability"/> against
-        /// <paramref name="target"/> as if the unit were standing on <paramref name="originTile"/>.
-        ///
-        /// Returns null when the ability cannot reach the target from that tile.
-        ///
-        /// When originTile differs from unit.currentTile we temporarily assign currentTile
-        /// so all traversal methods read the correct origin. The raw field is written directly
-        /// (not via SetCurrentTile) so no events fire. The finally block guarantees restoration.
-        /// </summary>
         private ActionPlan BuildAbilityPlan(Ability ability, int slot, Tile originTile, Unit target, bool isAbilityFirst)
         {
             if (ability?.targeting == null || originTile == null || target?.currentTile == null)
@@ -400,21 +316,13 @@ namespace DDD.TNFY.BRAWL
         private ActionPlan EvaluateAbilityAgainstTarget(
             Ability ability, int slot, Tile originTile, Unit target, bool isAbilityFirst, AbilityContext ctx)
         {
-            // ── SingleTargeting ───────────────────────────────────────────────────
             if (ability.targeting is SingleTargeting single)
             {
                 if (!single.IsWithinRange(ctx, target.currentTile)) return null;
 
-                // Confirm the tile is still occupied by the intended target.
-                // If the tile's occupant is a different unit (e.g. a body that landed
-                // there after the target moved), the plan would fire at the wrong unit.
                 var occupant = target.currentTile.currentUnit;
                 if (occupant == null || occupant != target) return null;
 
-                // Bodies and other neutral objects must never be planned against here.
-                // SelectTargets enforces canTargetNeutral at execution time, but the AI
-                // planner must reject them at planning time too so it doesn't waste a turn
-                // firing an ability that SelectTargets will refuse to resolve.
                 if (occupant.IsNeutral || occupant.IsDead) return null;
 
                 bool occupantIsAlly = occupant is EnemyUnit == unit is EnemyUnit;
@@ -430,7 +338,6 @@ namespace DDD.TNFY.BRAWL
                 };
             }
 
-            // ── LineTargeting & MovementLineTargeting ─────────────────────────────
             if (ability.targeting is LineTargeting || ability.targeting is MovementLineTargeting)
             {
                 var dir = DirectionToward(originTile, target.currentTile);
@@ -440,10 +347,6 @@ namespace DDD.TNFY.BRAWL
                 if (ability.targeting is LineTargeting lt && !lt.IsValidDirection(dir))
                     return null;
 
-                // Use SelectTargets (the same path execution takes) so conditions like
-                // requireEmptyDestination are respected during planning exactly as at runtime.
-                // A raw traversal.Contains check misses those blocking conditions and produces
-                // plans that silently fail when the ability fires.
                 var selectCtx = new AbilityContext { caster = unit, ability = ability, aimDir = dir };
                 var selected  = ability.targeting.SelectTargets(selectCtx);
 
@@ -459,12 +362,9 @@ namespace DDD.TNFY.BRAWL
                 };
             }
 
-            // ── AOE types ─────────────────────────────────────────────────────────
             if (ability.targeting is AOETargeting || ability.targeting is SquareAOETargeting
                                                   || ability.targeting is RandomAOETargeting)
             {
-                // Use SelectTargets so any targeting-level restrictions are applied
-                // consistently between planning and execution.
                 var selected = ability.targeting.SelectTargets(ctx);
                 if (!selected.Contains(target)) return null;
 
@@ -476,7 +376,6 @@ namespace DDD.TNFY.BRAWL
                 };
             }
 
-            // ── SelfTargeting ─────────────────────────────────────────────────────
             if (ability.targeting is SelfTargeting)
             {
                 return new ActionPlan
@@ -490,33 +389,6 @@ namespace DDD.TNFY.BRAWL
             return null;
         }
 
-        // ── Target selection ──────────────────────────────────────────────────────
-
-        /// <summary>
-        /// Picks a target from the N closest valid candidates using weighted random selection.
-        ///
-        /// Weight per candidate starts at 1.0 and is halved for each teammate whose nearest
-        /// candidate is the same unit. This means a target that multiple teammates would
-        /// naturally gravitate toward becomes less likely to be picked — spreading AI focus
-        /// across the player team without any explicit coordination logic.
-        ///
-        /// If all candidates are equally pressured, the weights remain proportional and the
-        /// selection is uniformly random among the N closest. Returns the first target in
-        /// the list as a safety fallback if the tile data is missing.
-        /// </summary>
-        /// <summary>
-        /// Picks a target from the N closest valid candidates.
-        ///
-        /// Priority order:
-        ///   1. Melee lock-on  — if exactly 1 target is within 2 tiles, always pick them.
-        ///   2. Last-attacker  — if multiple targets are within 2 tiles, prefer whoever
-        ///                       attacked this unit most recently (retaliation instinct).
-        ///   3. Weighted random — considers the N closest candidates (targetCandidateCount).
-        ///                       Base weight is inversely proportional to distance so closer
-        ///                       targets are naturally more likely. Weight is then halved for
-        ///                       each teammate already gravitating toward the same unit,
-        ///                       preventing the whole team from dogpiling one target.
-        /// </summary>
         private Unit PickWeightedTarget(List<Unit> targets)
         {
             if (targets.Count == 0) return null;
@@ -525,16 +397,12 @@ namespace DDD.TNFY.BRAWL
 
             const int meleeRange = 2;
 
-            // Collect all valid targets that have a tile position.
             var validTargets = targets
                 .Where(t => t.currentTile != null)
                 .ToList();
 
             if (validTargets.Count == 0) return targets[0];
 
-            // ── Stage 1: Melee lock-on ─────────────────────────────────────────────
-            // Find every valid target within melee range using the grid (the authoritative
-            // source of truth for distance — no transform position checks).
             var meleeTargets = validTargets
                 .Where(t => GridManager.Instance.GetGridDistance(unit.currentTile, t.currentTile, true) <= meleeRange)
                 .ToList();
@@ -542,22 +410,16 @@ namespace DDD.TNFY.BRAWL
             if (meleeTargets.Count == 1)
                 return meleeTargets[0];
 
-            // ── Stage 2: Last-attacker tiebreaker (multiple in melee range) ────────
             if (meleeTargets.Count > 1)
             {
                 var lastAttacker = getLastAttacker?.Invoke();
                 if (lastAttacker != null && meleeTargets.Contains(lastAttacker))
                     return lastAttacker;
 
-                // Multiple melee targets, none is the last attacker — fall through to
-                // weighted random among the melee targets only, so we stay in melee.
                 var meleeWeights = BuildProximityWeights(meleeTargets);
                 return WeightedRandom(meleeTargets, meleeWeights);
             }
 
-            // ── Stage 3: Weighted random from N closest ────────────────────────────
-            // No targets within melee range — pick from the N nearest using proximity
-            // weighting so the closest is the most likely outcome.
             var candidates = validTargets
                 .OrderBy(t => GridManager.Instance.GetGridDistance(unit.currentTile, t.currentTile, true))
                 .Take(targetCandidateCount)
@@ -570,12 +432,6 @@ namespace DDD.TNFY.BRAWL
             return WeightedRandom(candidates, weights);
         }
 
-        /// <summary>
-        /// Builds a weight array for the given candidate list.
-        /// Each candidate's base weight is 1/distance (closer = higher).
-        /// That weight is then halved for every teammate already gravitating toward
-        /// the same unit, spreading AI focus naturally across the player team.
-        /// </summary>
         private float[] BuildProximityWeights(List<Unit> candidates)
         {
             var teammates = getTeammates?.Invoke() ?? new List<Unit>();
@@ -590,10 +446,6 @@ namespace DDD.TNFY.BRAWL
             return weights;
         }
 
-        /// <summary>
-        /// Returns how many teammates consider <paramref name="candidate"/> their nearest target
-        /// among the current candidate pool. Used to reduce weight and prevent dogpiling.
-        /// </summary>
         private int CountTeammatePressure(Unit candidate, List<Unit> candidates, List<Unit> teammates)
         {
             int count = 0;
@@ -601,7 +453,6 @@ namespace DDD.TNFY.BRAWL
             {
                 if (teammate?.currentTile == null) continue;
 
-                // Find which candidate is closest to this teammate.
                 Unit nearestToTeammate = null;
                 int  nearestDist       = int.MaxValue;
                 foreach (var c in candidates)
@@ -616,7 +467,6 @@ namespace DDD.TNFY.BRAWL
             return count;
         }
 
-        /// <summary>Weighted random selection — returns one candidate proportional to its weight.</summary>
         private static Unit WeightedRandom(List<Unit> candidates, float[] weights)
         {
             float total = 0f;
@@ -630,12 +480,9 @@ namespace DDD.TNFY.BRAWL
                 cumulative += weights[i];
                 if (roll <= cumulative) return candidates[i];
             }
-            return candidates[candidates.Count - 1]; // float precision safety
+            return candidates[candidates.Count - 1]; 
         }
 
-        // ── Helpers ───────────────────────────────────────────────────────────────
-
-        /// <summary>Returns the unit's current health as a 0–1 fraction of its max health.</summary>
         private float HealthPct(Unit u)
             => u?.characterData != null && u.characterData.maxHealth > 0
                 ? u.currentHealth / (float)u.characterData.maxHealth
@@ -644,6 +491,11 @@ namespace DDD.TNFY.BRAWL
         private int SimulateDamage(Ability ability, Unit target)
         {
             if (!DealsDamage(ability)) return 0;
+
+            if (StatusEffectManager.Instance != null &&
+                StatusEffectManager.Instance.HasStatusEffect(target, StatusEffectType.Immune))
+                return 0;
+
             int baseDamage = ability.damage + unit.currentAttack;
             return Mathf.Max(1, baseDamage - target.currentDefense);
         }
@@ -698,12 +550,6 @@ namespace DDD.TNFY.BRAWL
             return GridManager.Instance.GetReachableTiles(unit.currentTile, unit.GetEffectiveMovementRange());
         }
 
-        /// <summary>
-        /// Returns all tiles this unit can reach via a jump this turn.
-        /// Uses GetGridDistance with includeYLevel=true so cross-layer tiles are included —
-        /// this is the key difference from GetReachableTiles which is a same-layer BFS.
-        /// Mirrors JumpSystem.GetJumpableTiles exactly.
-        /// </summary>
         private List<Tile> GetJumpableTiles()
         {
             var result = new List<Tile>();
@@ -719,16 +565,12 @@ namespace DDD.TNFY.BRAWL
                 if (!tile.passableTerrain) continue;
                 if (tile.occupied && !unit.CanStompOccupiedTiles) continue;
 
-                // includeYLevel=true is what makes cross-layer tiles visible here.
                 int dist = GridManager.Instance.GetGridDistance(startTile, tile, true);
                 if (dist < minRange || dist > maxRange) continue;
 
-                // Skip tiles the unit can already walk to — no point flagging a jump
-                // for a tile that's already in the walk set.
                 var walkPath = GridManager.Instance.FindPath(startTile, tile, unit.GetEffectiveMovementRange());
                 if (walkPath.Count > 0) continue;
 
-                // Wall check — same as JumpSystem.
                 Vector3 from = startTile.transform.position + Vector3.up * 0.5f;
                 Vector3 to   = tile.transform.position      + Vector3.up * 0.5f;
                 if (Physics.Raycast(from, (to - from).normalized, Vector3.Distance(from, to) * 0.9f, LayerMask.GetMask("Walls")))
