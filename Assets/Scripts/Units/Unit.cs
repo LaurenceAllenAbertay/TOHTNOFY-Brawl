@@ -27,6 +27,9 @@ namespace DDD.TNFY.BRAWL
         private int _baseAttack;
         private int _baseDefense;
 
+        public int baseAttack => _baseAttack;
+        public int baseDefense => _baseDefense;
+
         public void AdminOverrideBaseStats(int? attack, int? defense)
         {
             if (attack.HasValue)
@@ -352,6 +355,21 @@ namespace DDD.TNFY.BRAWL
                 Debug.Log($"{name} was defeated.");
                 Die(attacker);
             }
+        }
+
+        public void AdminDelete()
+        {
+            if (!gameObject.activeSelf) return;
+
+            IsDead = true;
+
+            if (currentTile != null && currentTile.currentUnit == this)
+                currentTile.currentUnit = null;
+
+            UnitManager.NotifyUnitDied(this);
+            UnitManager.UnregisterUnit(this);
+
+            gameObject.SetActive(false);
         }
 
         public void Die(Unit killer = null)

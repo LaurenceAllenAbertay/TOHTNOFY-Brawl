@@ -377,7 +377,7 @@ namespace DDD.TNFY.BRAWL
 
         private void OnEnemyCountDec()
         {
-            if (_enemyCount <= 1) return;
+            if (_enemyCount <= 0) return;
             _enemyCount--;
             _enemyPrefabIndices.RemoveAt(_enemyPrefabIndices.Count - 1);
             RefreshEnemyRows();
@@ -444,7 +444,7 @@ namespace DDD.TNFY.BRAWL
         {
             bool anyPlayerIncluded = _selectionQueue.Count > 0;
 
-            bool valid = anyPlayerIncluded && _enemyCount > 0;
+            bool valid = anyPlayerIncluded;
 
             if (startBattleButton != null)
                 startBattleButton.interactable = valid;
@@ -476,7 +476,7 @@ namespace DDD.TNFY.BRAWL
                 var cd = allCharacters[charIndex];
                 if (cd == null) continue;
 
-                UnitLoadoutManager.Instance.SetPlayerLoadout(
+                UnitLoadoutManager.Instance.SetLoadout(
                     cd,
                     (Ability[])_abilities[charIndex].Clone(),
                     _passives[charIndex]);

@@ -16,7 +16,7 @@ namespace DDD.TNFY.BRAWL
         [Header("Fallback (for running Debug scene without lobby)")]
         [SerializeField] private CharacterData[] fallbackPlayerCharacters;
         
-        [SerializeField] private GameObject[] fallbackEnemyPrefabs;
+        [SerializeField] private CharacterData[] fallbackEnemyCharacters;
         
         [Header("Debug Navigation")]
         [SerializeField] private string debugLobbySceneName = "DemoLobby";
@@ -63,7 +63,7 @@ namespace DDD.TNFY.BRAWL
                 var tile = PickRandomTile(enemySpawnTiles, config.prefab.name);
                 if (tile == null) break;
 
-                SpawnEnemyUnit(config.prefab, tile);
+                SpawnEnemyUnit(config.prefab, tile, config.characterData);
             }
         }
         
@@ -76,18 +76,6 @@ namespace DDD.TNFY.BRAWL
                 foreach (var cd in fallbackPlayerCharacters)
                 {
                     if (cd == null) continue;
-                    
-                    if (UnitLoadoutManager.Instance != null &&
-                        !UnitLoadoutManager.Instance.HasPlayerLoadout(cd))
-                    {
-                        var pool = cd.availableAbilities;
-                        var fallbackAbilities = new Ability[3];
-                        if (pool != null)
-                            for (int s = 0; s < 3 && s < pool.Length; s++)
-                                fallbackAbilities[s] = pool[s];
-
-                        UnitLoadoutManager.Instance.SetPlayerLoadout(cd, fallbackAbilities, passive: null);
-                    }
 
                     var tile = PickRandomTile(playerSpawnTiles, cd.characterName);
                     if (tile == null) break;
@@ -96,16 +84,16 @@ namespace DDD.TNFY.BRAWL
                 }
             }
 
-            if (fallbackEnemyPrefabs != null)
+            if (fallbackEnemyCharacters != null)
             {
-                foreach (var prefab in fallbackEnemyPrefabs)
+                foreach (var cd in fallbackEnemyCharacters)
                 {
-                    if (prefab == null) continue;
+                    if (cd == null) continue;
 
-                    var tile = PickRandomTile(enemySpawnTiles, prefab.name);
+                    var tile = PickRandomTile(enemySpawnTiles, cd.characterName);
                     if (tile == null) break;
 
-                    SpawnEnemyUnit(prefab, tile);
+                    SpawnEnemyUnit(cd.prefab, tile, cd);
                 }
             }
         }
@@ -166,11 +154,13 @@ namespace DDD.TNFY.BRAWL
             go.SetActive(true);
         }
         
-        private void SpawnEnemyUnit(GameObject prefab, Tile tile)
+        private void SpawnEnemyUnit(GameObject prefab, Tile tile, CharacterData data = null)
         {
             if (prefab == null)
             {
-                Debug.LogError("[DebugMapSpawner] Enemy prefab is null.");
+                string label = data != null ? $"'{data.characterName}'" : "Enemy";
+                Debug.LogError($"[DebugMapSpawner] {label} has no prefab assigned" +
+                               (data != null ? " — set CharacterData.prefab in the Inspector." : "."));
                 return;
             }
 
@@ -180,12 +170,19 @@ namespace DDD.TNFY.BRAWL
                 return;
             }
 
-            if (prefab.GetComponent<EnemyLoadout>() == null)
-                Debug.LogWarning($"[DebugMapSpawner] Enemy prefab '{prefab.name}' has no EnemyLoadout component. " +
-                                 $"The unit will have no abilities or passive.");
+            if (data == null)
+                Debug.LogWarning($"[DebugMapSpawner] Enemy prefab '{prefab.name}' has no CharacterData — " +
+                                 $"it will have no abilities or passive (no default loadout to fall back to).");
 
             var go = Instantiate(prefab, tile.transform.position + spawnOffset, prefab.transform.rotation);
             go.name = go.name.Replace("(Clone)", "").Trim() + " (Enemy)";
+
+            if (data != null)
+            {
+                var unit = go.GetComponent<Unit>();
+                if (unit != null)
+                    unit.characterData = data;
+            }
         }
         
         public void ReturnToLobby()

@@ -72,7 +72,6 @@ GameObject:
   - component: {fileID: 2985432743634409166}
   - component: {fileID: 6808859278931663867}
   - component: {fileID: 3239805607177353534}
-  - component: {fileID: -5667562654134815427}
   - component: {fileID: 3501584977938740816}
   m_Layer: 8
   m_Name: Evil Lorns
@@ -187,9 +186,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24484f0df14ab4d4fa53028920014d35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterData: {fileID: 11400000, guid: 88a185d244b55a54cb36452b6bc6d1bb, type: 2}
+  characterData: {fileID: 11400000, guid: 702f262e989d5494fbf8d86e80dace8e, type: 2}
+  team: -1
   goesFirst: 0
   currentHealth: 0
+  maxHealth: 0
   currentTile: {fileID: 0}
   currentSpeed: 0
   canMove: 0
@@ -235,8 +236,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71024218b10efc34d9ec8ad2d09d1f89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teamId: 1
-  hostileToAllNonTeam: 0
   aggressionBias: 0.5
   lookAheadSteps: 2
   targetCandidateCount: 2
@@ -258,23 +257,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddea3100216f92f448f8216bc00fccb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-5667562654134815427
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3963197675195542672}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e5802e6bf8374d49a08c9cb870363d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abilityLoadout:
-  - {fileID: 11400000, guid: eedbfca08973fdd47b54a7525675f82a, type: 2}
-  - {fileID: 11400000, guid: b76ac2ff104713646bdfe8a5a9ee6c37, type: 2}
-  - {fileID: 11400000, guid: 7b5298c02649ca24194198c32229b6fd, type: 2}
-  passive: {fileID: 0}
 --- !u!65 &3501584977938740816
 BoxCollider:
   m_ObjectHideFlags: 0

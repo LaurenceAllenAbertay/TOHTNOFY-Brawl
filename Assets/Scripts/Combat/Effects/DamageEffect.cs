@@ -13,8 +13,10 @@ namespace DDD.TNFY.BRAWL
         public override void Apply(AbilityContext ctx, IReadOnlyList<Unit> targets)
         {
             if (ctx == null || ctx.ability == null || targets == null) return;
-            
-            int baseDamage = ctx.ability.damage + (ctx.caster != null ? ctx.caster.currentAttack : 0);
+
+            int rawAttack = ctx.caster != null ? ctx.caster.baseAttack : 0;
+            float attackMultiplier = ctx.caster != null ? StatusEffectManager.GetAttackMultiplier(ctx.caster) : 1f;
+            int baseDamage = Mathf.RoundToInt((ctx.ability.damage + rawAttack) * attackMultiplier);
 
             foreach (var u in targets)
             {

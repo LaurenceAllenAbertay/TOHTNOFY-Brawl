@@ -186,6 +186,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterData: {fileID: 11400000, guid: 1e97e95d272eb8f449bd2b5c8cd1075a, type: 2}
+  team: -1
   goesFirst: 0
   currentHealth: 0
   maxHealth: 0

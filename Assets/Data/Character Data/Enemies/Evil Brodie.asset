@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Evil Brodie
   portrait: {fileID: -533732562, guid: e531406b1ba316c4b88a0291c8240e66, type: 3}
-  prefab: {fileID: 0}
+  prefab: {fileID: 4885748180280455429, guid: 0f2a6b56aaaadd04b91a794e2b412f0f, type: 3}
+  overworldPrefab: {fileID: 0}
   maxHealth: 200
   attack: 0
   defense: 0
@@ -31,4 +32,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5dfeed738c598fa4ea415fbcfc9d197c, type: 2}
   - {fileID: 11400000, guid: ed436482412c22d4db9374ae87bf9f07, type: 2}
   - {fileID: 11400000, guid: 699d1c001879b6b489f3ed3550e1a565, type: 2}
+  defaultAbilities:
+  - {fileID: 11400000, guid: 7126174003f5d844ea16ff7816f08e3c, type: 2}
+  - {fileID: 11400000, guid: 4cfb28c2b36b0ca4da3b1db584b0a6db, type: 2}
+  - {fileID: 11400000, guid: 301414d99915e044abbe4fd473e9b043, type: 2}
+  uiColour: {r: 1, g: 1, b: 1, a: 1}
   dialogueData: {fileID: 11400000, guid: 4ce082129a219f24fad93f8ebbd9102c, type: 2}

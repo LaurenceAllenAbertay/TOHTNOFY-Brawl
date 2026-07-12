@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace DDD.TNFY.BRAWL
 {
@@ -57,13 +58,17 @@ namespace DDD.TNFY.BRAWL
             var abilityNames = command.GetValues("abilities");
             var passiveName = command.GetSingleValue("passive");
 
-            Ability[] resolvedAbilities = new Ability[3];
-            for (int i = 0; i < abilityNames.Count && i < 3; i++)
+            Ability[] resolvedAbilities = null;
+            if (abilityNames.Count > 0)
             {
-                var ability = AdminCommandRegistry.ResolveAbilityOnCharacter(characterData, abilityNames[i]);
-                if (ability == null)
-                    return $"Error: '{abilityNames[i]}' is not in {characterData.characterName}'s available abilities.";
-                resolvedAbilities[i] = ability;
+                resolvedAbilities = new Ability[3];
+                for (int i = 0; i < abilityNames.Count && i < 3; i++)
+                {
+                    var ability = AdminCommandRegistry.ResolveAbilityOnCharacter(characterData, abilityNames[i]);
+                    if (ability == null)
+                        return $"Error: '{abilityNames[i]}' is not in {characterData.characterName}'s available abilities.";
+                    resolvedAbilities[i] = ability;
+                }
             }
             if (abilityNames.Count > 3)
                 return "Error: /spawn supports at most 3 abilities.";
@@ -79,7 +84,9 @@ namespace DDD.TNFY.BRAWL
             if (UnitLoadoutManager.Instance == null)
                 return "Error: UnitLoadoutManager not present in scene.";
 
-            UnitLoadoutManager.Instance.SetPlayerLoadout(characterData, resolvedAbilities, resolvedPassive);
+            bool hasExplicitLoadout = abilityNames.Count > 0 || !string.IsNullOrEmpty(passiveName);
+            if (hasExplicitLoadout)
+                UnitLoadoutManager.Instance.SetLoadout(characterData, resolvedAbilities, resolvedPassive);
 
             var prefab = characterData.prefab;
             bool wasPrefabActive = prefab.activeSelf;
@@ -228,6 +235,13 @@ namespace DDD.TNFY.BRAWL
             return $"Teleported {activeUnit.name} to tile {targetTile.name}.";
         }
 
+        public static string ExecuteReset()
+        {
+            string sceneName = SceneManager.GetActiveScene().name;
+            SceneManager.LoadScene(sceneName);
+            return $"Reset combat — reloading '{sceneName}' from the beginning.";
+        }
+
         public static IEnumerator ExecuteKill(Unit targetUnit, System.Action<string> onComplete)
         {
             if (targetUnit == null)
@@ -253,6 +267,21 @@ namespace DDD.TNFY.BRAWL
                     UnitDownedSequencer.Instance.DrainDownedQueue(returnToUnit));
 
             onComplete?.Invoke($"Killed '{killedName}'.");
+        }
+
+        public static string ExecuteDelete(Unit targetUnit)
+        {
+            if (targetUnit == null)
+                return "Error: no target unit.";
+
+            if (!targetUnit.gameObject.activeSelf)
+                return $"Error: '{targetUnit.name}' has already been deleted.";
+
+            string deletedName = targetUnit.name;
+
+            targetUnit.AdminDelete();
+
+            return $"Deleted '{deletedName}' — removed instantly, no body left behind.";
         }
 
         public static string ExecuteHeal(AdminParsedCommand command, Unit targetUnit)
@@ -371,18 +400,12 @@ namespace DDD.TNFY.BRAWL
             }
 
             float power = 0f;
-            if (command.HasKey("power"))
+            bool hasPower = command.HasKey("power");
+            if (hasPower)
             {
-                if (effectData.stackingBehavior != StatusEffectData.StackingBehavior.AddStacks)
-                    return $"Syntax error: '{effectData.effectName}' does not use Power " +
-                           $"(stacking behavior is {effectData.stackingBehavior}, not AddStacks).";
-
                 string powerRaw = command.GetSingleValue("power");
                 if (!int.TryParse(powerRaw, out int powerInt))
                     return $"Syntax error: 'Power' must be a whole number, got '{powerRaw}'.";
-
-                if (powerInt < 1)
-                    return "Syntax error: 'Power' must be at least 1.";
 
                 power = powerInt;
             }
@@ -396,8 +419,12 @@ namespace DDD.TNFY.BRAWL
             if (instance == null)
                 return $"'{effectData.effectName}' failed to apply to '{targetUnit.name}'.";
 
+            bool showsStacks = effectData.stackingBehavior == StatusEffectData.StackingBehavior.AddStacks;
+
             return $"Applied '{effectData.effectName}' to '{targetUnit.name}' for {duration} turns" +
-                   (command.HasKey("power") ? $" ({instance.stackCount} stacks)." : ".");
+                   (hasPower && showsStacks ? $" ({instance.stackCount} stacks)."
+                    : hasPower ? $" (power {power})."
+                    : ".");
         }
 
         public static IEnumerator ExecuteSkip(Unit targetUnit, System.Action<string> onComplete)

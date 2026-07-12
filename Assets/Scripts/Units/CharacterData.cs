@@ -27,6 +27,9 @@ namespace DDD.TNFY.BRAWL
         [Header("Passive")]
         public PassiveAbility[] availablePassives = new PassiveAbility[0];
 
+        [Header("Default Loadout")]
+        public Ability[] defaultAbilities = new Ability[3];
+
         [Header("UI")]
         public Color uiColour = Color.white;
 

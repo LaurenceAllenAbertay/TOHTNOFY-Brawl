@@ -73,7 +73,6 @@ GameObject:
   - component: {fileID: 352830190778597358}
   - component: {fileID: 2625288850969681487}
   - component: {fileID: -2197407118727056976}
-  - component: {fileID: 9161790594171957198}
   - component: {fileID: 3658487184363969294}
   m_Layer: 8
   m_Name: Evil Kallper
@@ -189,8 +188,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterData: {fileID: 11400000, guid: 2dffe3279076dbe4ea2f409c177a4f24, type: 2}
+  team: -1
   goesFirst: 0
   currentHealth: 0
+  maxHealth: 0
   currentTile: {fileID: 0}
   currentSpeed: 0
   canMove: 0
@@ -248,8 +249,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71024218b10efc34d9ec8ad2d09d1f89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teamId: 1
-  hostileToAllNonTeam: 0
   aggressionBias: 0.8
   lookAheadSteps: 2
   targetCandidateCount: 2
@@ -271,23 +270,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddea3100216f92f448f8216bc00fccb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &9161790594171957198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6696446961002669605}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e5802e6bf8374d49a08c9cb870363d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abilityLoadout:
-  - {fileID: 11400000, guid: 4eb69a60d76d8c44bb70460bcb2bab37, type: 2}
-  - {fileID: 11400000, guid: 9e5b289da219a024fa81bd9df4ea3bac, type: 2}
-  - {fileID: 11400000, guid: b65c5eda89671b047b5d32a5862ef3b9, type: 2}
-  passive: {fileID: 0}
 --- !u!65 &3658487184363969294
 BoxCollider:
   m_ObjectHideFlags: 0

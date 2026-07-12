@@ -84,18 +84,6 @@ namespace DDD.TNFY.BRAWL
                                      $"has no overworldPrefab — skipped.");
                     continue;
                 }
-                
-                if (UnitLoadoutManager.Instance != null &&
-                    !UnitLoadoutManager.Instance.HasPlayerLoadout(cd))
-                {
-                    var pool             = cd.availableAbilities;
-                    var fallbackAbilities = new Ability[3];
-                    if (pool != null)
-                        for (int s = 0; s < 3 && s < pool.Length; s++)
-                            fallbackAbilities[s] = pool[s];
-
-                    UnitLoadoutManager.Instance.SetPlayerLoadout(cd, fallbackAbilities, passive: null);
-                }
 
                 characters.Add(cd);
             }

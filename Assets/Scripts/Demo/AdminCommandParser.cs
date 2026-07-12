@@ -7,12 +7,14 @@ namespace DDD.TNFY.BRAWL
     {
         Spawn,
         Kill,
+        Delete,
         Heal,
         Damage,
         TrueDamage,
         StatusEffect,
         Teleport,
         Skip,
+        Reset,
         Help
     }
 
@@ -59,12 +61,14 @@ namespace DDD.TNFY.BRAWL
             {
                 { "spawn",        AdminCommandType.Spawn },
                 { "kill",         AdminCommandType.Kill },
+                { "delete",       AdminCommandType.Delete },
                 { "heal",         AdminCommandType.Heal },
                 { "damage",       AdminCommandType.Damage },
                 { "truedamage",   AdminCommandType.TrueDamage },
                 { "statuseffect", AdminCommandType.StatusEffect },
                 { "teleport",     AdminCommandType.Teleport },
                 { "skip",         AdminCommandType.Skip },
+                { "reset",        AdminCommandType.Reset },
                 { "help",         AdminCommandType.Help },
             };
 

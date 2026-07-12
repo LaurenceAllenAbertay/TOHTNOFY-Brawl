@@ -25,5 +25,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   availablePassives: []
+  defaultAbilities:
+  - {fileID: 11400000, guid: 0ce5ddba0f25a7445a195649b2c341ed, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
   uiColour: {r: 1, g: 0.8556017, b: 0.2216981, a: 1}
   dialogueData: {fileID: 11400000, guid: 45e75badcc766d74d8fb0c8fb30d8ed1, type: 2}

@@ -73,7 +73,6 @@ GameObject:
   - component: {fileID: 6760930971082672950}
   - component: {fileID: 3635465470440769816}
   - component: {fileID: 1897822839676078520}
-  - component: {fileID: -5193970609984620637}
   - component: {fileID: 7829493198531706217}
   m_Layer: 8
   m_Name: Evil Brodie
@@ -189,8 +188,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterData: {fileID: 11400000, guid: 6027d6b32a9fe1e47baa46cc08e251a8, type: 2}
+  team: -1
   goesFirst: 0
   currentHealth: 0
+  maxHealth: 0
   currentTile: {fileID: 0}
   currentSpeed: 0
   canMove: 0
@@ -248,8 +249,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71024218b10efc34d9ec8ad2d09d1f89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  teamId: 1
-  hostileToAllNonTeam: 0
   aggressionBias: 1
   lookAheadSteps: 1
   targetCandidateCount: 2
@@ -271,23 +270,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddea3100216f92f448f8216bc00fccb3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-5193970609984620637
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4885748180280455429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e5802e6bf8374d49a08c9cb870363d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  abilityLoadout:
-  - {fileID: 11400000, guid: 7126174003f5d844ea16ff7816f08e3c, type: 2}
-  - {fileID: 11400000, guid: 720bc8571d3f4854bb5c108dbefb42c6, type: 2}
-  - {fileID: 11400000, guid: 4cfb28c2b36b0ca4da3b1db584b0a6db, type: 2}
-  passive: {fileID: 0}
 --- !u!65 &7829493198531706217
 BoxCollider:
   m_ObjectHideFlags: 0

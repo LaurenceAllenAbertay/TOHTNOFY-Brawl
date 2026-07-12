@@ -146,11 +146,18 @@ namespace DDD.TNFY.BRAWL
                 return;
             }
 
+            if (command.commandType == AdminCommandType.Reset)
+            {
+                Log(AdminCommandExecutor.ExecuteReset());
+                return;
+            }
+
             switch (command.commandType)
             {
                 case AdminCommandType.Spawn:
                 case AdminCommandType.Teleport:
                 case AdminCommandType.Kill:
+                case AdminCommandType.Delete:
                 case AdminCommandType.Heal:
                 case AdminCommandType.Damage:
                 case AdminCommandType.TrueDamage:
@@ -224,6 +231,10 @@ namespace DDD.TNFY.BRAWL
             {
                 case AdminCommandType.Kill:
                     RunKill(targetUnit);
+                    break;
+
+                case AdminCommandType.Delete:
+                    RunSync(AdminCommandExecutor.ExecuteDelete(targetUnit));
                     break;
 
                 case AdminCommandType.Heal:

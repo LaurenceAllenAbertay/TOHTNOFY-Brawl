@@ -5329,6 +5329,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a2cfea01f0bb708488987177284d6666, type: 2}
   - {fileID: 11400000, guid: 88a185d244b55a54cb36452b6bc6d1bb, type: 2}
   - {fileID: 11400000, guid: 1e97e95d272eb8f449bd2b5c8cd1075a, type: 2}
+  - {fileID: 11400000, guid: 6027d6b32a9fe1e47baa46cc08e251a8, type: 2}
+  - {fileID: 11400000, guid: 2dffe3279076dbe4ea2f409c177a4f24, type: 2}
+  - {fileID: 11400000, guid: 702f262e989d5494fbf8d86e80dace8e, type: 2}
   statusEffects:
   - {fileID: 11400000, guid: 18410f1fe61e1854ab2998a9b877482c, type: 2}
   - {fileID: 11400000, guid: 6a7b59aef7ba37f4ba315c16b68a92d2, type: 2}
@@ -8110,10 +8113,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a2cfea01f0bb708488987177284d6666, type: 2}
   - {fileID: 11400000, guid: 88a185d244b55a54cb36452b6bc6d1bb, type: 2}
   - {fileID: 11400000, guid: 1e97e95d272eb8f449bd2b5c8cd1075a, type: 2}
-  fallbackEnemyPrefabs:
-  - {fileID: 3963197675195542672, guid: 1f1284a26ffca4a439896715431ac139, type: 3}
-  - {fileID: 4885748180280455429, guid: 0f2a6b56aaaadd04b91a794e2b412f0f, type: 3}
-  - {fileID: 6696446961002669605, guid: 9407a4654bbdb9b408b519fb75b83a83, type: 3}
+  fallbackEnemyCharacters:
+  - {fileID: 11400000, guid: 6027d6b32a9fe1e47baa46cc08e251a8, type: 2}
+  - {fileID: 11400000, guid: 2dffe3279076dbe4ea2f409c177a4f24, type: 2}
+  - {fileID: 11400000, guid: 702f262e989d5494fbf8d86e80dace8e, type: 2}
   debugLobbySceneName: DemoLobby
 --- !u!4 &648349977
 Transform:

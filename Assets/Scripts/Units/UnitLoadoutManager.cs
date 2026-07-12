@@ -7,7 +7,7 @@ namespace DDD.TNFY.BRAWL
     {
         public static UnitLoadoutManager Instance { get; private set; }
 
-        private readonly Dictionary<CharacterData, UnitLoadout> _playerLoadouts
+        private readonly Dictionary<CharacterData, UnitLoadout> _loadouts
             = new Dictionary<CharacterData, UnitLoadout>();
 
         private void Awake()
@@ -22,96 +22,48 @@ namespace DDD.TNFY.BRAWL
             DontDestroyOnLoad(gameObject);
         }
 
-        public void SetPlayerLoadout(CharacterData characterData, Ability[] abilities, PassiveAbility passive)
+        public void SetLoadout(CharacterData characterData, Ability[] abilities, PassiveAbility passive)
         {
             if (characterData == null)
             {
-                Debug.LogWarning("[UnitLoadoutManager] SetPlayerLoadout called with null CharacterData.");
+                Debug.LogWarning("[UnitLoadoutManager] SetLoadout called with null CharacterData.");
                 return;
             }
 
-            _playerLoadouts[characterData] = new UnitLoadout
+            if (!_loadouts.TryGetValue(characterData, out var loadout))
             {
-                abilities = SanitiseAbilityArray(abilities),
-                passive   = passive
-            };
+                loadout = new UnitLoadout();
+                _loadouts[characterData] = loadout;
+            }
+
+            if (abilities != null)
+                loadout.abilities = SanitiseAbilityArray(abilities);
+
+            loadout.passive = passive;
         }
 
-        public bool HasPlayerLoadout(CharacterData characterData)
-            => characterData != null && _playerLoadouts.ContainsKey(characterData);
+        public bool HasLoadout(CharacterData characterData)
+            => characterData != null && _loadouts.ContainsKey(characterData);
 
-        public void ClearAllPlayerLoadouts()
-            => _playerLoadouts.Clear();
+        public void ClearAllLoadouts()
+            => _loadouts.Clear();
 
         public static Ability[] GetAbilities(Unit unit)
         {
-            if (unit == null) return new Ability[3];
+            if (unit == null || unit.characterData == null) return new Ability[3];
 
-            if (unit is PlayerUnit)
-                return GetPlayerAbilities(unit.characterData);
+            if (Instance != null && Instance._loadouts.TryGetValue(unit.characterData, out var loadout)
+                                  && loadout.abilities != null)
+                return SanitiseAbilityArray(loadout.abilities);
 
-            if (unit is NpcUnit)
-            {
-                var enemyLoadout = unit.GetComponent<EnemyLoadout>();
-                if (enemyLoadout != null)
-                    return SanitiseAbilityArray(enemyLoadout.abilityLoadout);
-
-                Debug.LogWarning($"[UnitLoadoutManager] NpcUnit '{unit.name}' has no EnemyLoadout component.");
-                return new Ability[3];
-            }
-
-            return new Ability[3];
+            return SanitiseAbilityArray(unit.characterData.defaultAbilities);
         }
 
         public static PassiveAbility GetPassive(Unit unit)
         {
-            if (unit == null) return null;
+            if (unit == null || unit.characterData == null) return null;
 
-            if (unit is PlayerUnit)
-                return GetPlayerPassive(unit.characterData);
-
-            if (unit is NpcUnit)
-            {
-                var enemyLoadout = unit.GetComponent<EnemyLoadout>();
-                if (enemyLoadout != null)
-                    return enemyLoadout.passive;
-
-                Debug.LogWarning($"[UnitLoadoutManager] NpcUnit '{unit.name}' has no EnemyLoadout component.");
-                return null;
-            }
-
-            return null;
-        }
-
-        private static Ability[] GetPlayerAbilities(CharacterData characterData)
-        {
-            if (characterData == null) return new Ability[3];
-
-            if (Instance == null)
-            {
-                Debug.LogWarning("[UnitLoadoutManager] Instance is null — manager not in scene.");
-                return new Ability[3];
-            }
-
-            if (Instance._playerLoadouts.TryGetValue(characterData, out var loadout))
-                return SanitiseAbilityArray(loadout.abilities);
-
-            Debug.LogWarning($"[UnitLoadoutManager] No player loadout found for '{characterData.characterName}'. " +
-                             $"Was SetPlayerLoadout called before combat started?");
-            return new Ability[3];
-        }
-
-        private static PassiveAbility GetPlayerPassive(CharacterData characterData)
-        {
-            if (characterData == null) return null;
-
-            if (Instance == null)
-            {
-                Debug.LogWarning("[UnitLoadoutManager] Instance is null — manager not in scene.");
-                return null;
-            }
-
-            if (Instance._playerLoadouts.TryGetValue(characterData, out var loadout))
+            if (Instance != null && Instance._loadouts.TryGetValue(unit.characterData, out var loadout))
                 return loadout.passive;
 
             return null;
@@ -130,7 +82,7 @@ namespace DDD.TNFY.BRAWL
     [System.Serializable]
     public class UnitLoadout
     {
-        public Ability[] abilities = new Ability[3];
+        public Ability[] abilities;
 
         public PassiveAbility passive;
     }

@@ -32,5 +32,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5dfeed738c598fa4ea415fbcfc9d197c, type: 2}
   - {fileID: 11400000, guid: ed436482412c22d4db9374ae87bf9f07, type: 2}
   - {fileID: 11400000, guid: 699d1c001879b6b489f3ed3550e1a565, type: 2}
+  defaultAbilities:
+  - {fileID: 11400000, guid: 7126174003f5d844ea16ff7816f08e3c, type: 2}
+  - {fileID: 11400000, guid: 720bc8571d3f4854bb5c108dbefb42c6, type: 2}
+  - {fileID: 11400000, guid: 008eac43d54df864ab6cdff34a881e11, type: 2}
   uiColour: {r: 0.28064516, g: 0.8773585, b: 0.12829298, a: 1}
   dialogueData: {fileID: 11400000, guid: 4ce082129a219f24fad93f8ebbd9102c, type: 2}

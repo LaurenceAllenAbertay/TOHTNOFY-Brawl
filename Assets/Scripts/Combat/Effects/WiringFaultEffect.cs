@@ -70,7 +70,9 @@ namespace DDD.TNFY.BRAWL
             
             if (!hookedUnit.IsDead)
             {
-                int baseDamage = ctx.ability.damage + (ctx.caster != null ? ctx.caster.currentAttack : 0);
+                float attackMultiplier = ctx.caster != null ? StatusEffectManager.GetAttackMultiplier(ctx.caster) : 1f;
+                int rawAttack = ctx.caster != null ? ctx.caster.baseAttack : 0;
+                int baseDamage = Mathf.RoundToInt((ctx.ability.damage + rawAttack) * attackMultiplier);
                 int finalDamage = Mathf.Max(1, baseDamage - hookedUnit.currentDefense);
                 hookedUnit.ReceiveDamage(finalDamage, ctx.caster);
                 UnitManager.NotifyUnitDamaged(hookedUnit, ctx.caster);
@@ -116,7 +118,9 @@ namespace DDD.TNFY.BRAWL
                 collisionHit = true;
                 Unit victim = beyondTile.currentUnit;
 
-                int baseDamage = ctx.ability.damage + (ctx.caster != null ? ctx.caster.currentAttack : 0);
+                float attackMultiplier = ctx.caster != null ? StatusEffectManager.GetAttackMultiplier(ctx.caster) : 1f;
+                int rawAttack = ctx.caster != null ? ctx.caster.baseAttack : 0;
+                int baseDamage = Mathf.RoundToInt((ctx.ability.damage + rawAttack) * attackMultiplier);
                 int doubleDamage = Mathf.Max(1, (baseDamage - victim.currentDefense) * 2);
                 victim.ReceiveDamage(doubleDamage, ctx.caster);
                 UnitManager.NotifyUnitDamaged(victim, ctx.caster);

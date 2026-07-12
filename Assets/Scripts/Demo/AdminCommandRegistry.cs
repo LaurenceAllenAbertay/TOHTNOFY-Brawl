@@ -31,7 +31,7 @@ namespace DDD.TNFY.BRAWL
 
         private void BuildLookups()
         {
-            _characterLookup = new Dictionary<string, CharacterData>();
+            _characterLookup = new Dictionary<string, CharacterData>(System.StringComparer.OrdinalIgnoreCase);
             foreach (var character in spawnableCharacters)
             {
                 if (character == null) continue;
@@ -48,7 +48,7 @@ namespace DDD.TNFY.BRAWL
                 _characterLookup[character.characterName] = character;
             }
 
-            _statusEffectLookup = new Dictionary<string, StatusEffectData>();
+            _statusEffectLookup = new Dictionary<string, StatusEffectData>(System.StringComparer.OrdinalIgnoreCase);
             foreach (var effect in statusEffects)
             {
                 if (effect == null) continue;
@@ -89,7 +89,8 @@ namespace DDD.TNFY.BRAWL
             string normalised = NormaliseToken(typedName);
 
             return character.availableAbilities?
-                .FirstOrDefault(a => a != null && a.abilityName == normalised);
+                .FirstOrDefault(a => a != null &&
+                    string.Equals(a.abilityName, normalised, System.StringComparison.OrdinalIgnoreCase));
         }
 
         public static PassiveAbility ResolvePassiveOnCharacter(CharacterData character, string typedName)
@@ -98,7 +99,8 @@ namespace DDD.TNFY.BRAWL
             string normalised = NormaliseToken(typedName);
 
             return character.availablePassives?
-                .FirstOrDefault(p => p != null && p.passiveName == normalised);
+                .FirstOrDefault(p => p != null &&
+                    string.Equals(p.passiveName, normalised, System.StringComparison.OrdinalIgnoreCase));
         }
     }
 }

@@ -15,6 +15,7 @@ MonoBehaviour:
   characterName: Evil Lorns
   portrait: {fileID: 1000542386, guid: 85dd2a411dee5264ca097828f8075603, type: 3}
   prefab: {fileID: 3963197675195542672, guid: 1f1284a26ffca4a439896715431ac139, type: 3}
+  overworldPrefab: {fileID: 0}
   maxHealth: 100
   attack: 0
   defense: 0
@@ -30,4 +31,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b102e4cd046cc0045b85375e0352a3d0, type: 2}
   - {fileID: 11400000, guid: 7befbbbf25e6359448e7c61876e2e209, type: 2}
   - {fileID: 11400000, guid: 01e4b1ba29e93c34c96abcf76fe22a46, type: 2}
+  defaultAbilities:
+  - {fileID: 11400000, guid: eedbfca08973fdd47b54a7525675f82a, type: 2}
+  - {fileID: 11400000, guid: b76ac2ff104713646bdfe8a5a9ee6c37, type: 2}
+  - {fileID: 11400000, guid: 7b5298c02649ca24194198c32229b6fd, type: 2}
+  uiColour: {r: 1, g: 1, b: 1, a: 1}
   dialogueData: {fileID: 11400000, guid: d2242ee6d89e8554ab7a1dff7802ede5, type: 2}

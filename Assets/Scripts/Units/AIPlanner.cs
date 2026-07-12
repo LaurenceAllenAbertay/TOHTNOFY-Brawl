@@ -496,7 +496,8 @@ namespace DDD.TNFY.BRAWL
                 StatusEffectManager.Instance.HasStatusEffect(target, StatusEffectType.Immune))
                 return 0;
 
-            int baseDamage = ability.damage + unit.currentAttack;
+            float attackMultiplier = StatusEffectManager.GetAttackMultiplier(unit);
+            int baseDamage = Mathf.RoundToInt((ability.damage + unit.baseAttack) * attackMultiplier);
             return Mathf.Max(1, baseDamage - target.currentDefense);
         }
 
