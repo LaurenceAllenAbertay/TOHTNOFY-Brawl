@@ -90,9 +90,8 @@ namespace DDD.TNFY.BRAWL
 
         protected bool IsAlly(Unit a, Unit b)
         {
-            bool aIsEnemy = a is EnemyUnit;
-            bool bIsEnemy = b is EnemyUnit;
-            return aIsEnemy == bIsEnemy;
+            if (a == null || b == null) return false;
+            return a.IsAllyOf(b);
         }
         
         protected void ShowTraversalPreview(AbilityContext ctx)

@@ -48,7 +48,7 @@ namespace DDD.TNFY.BRAWL
                     canHit = ctx.ability.canTargetNeutral;
                 else
                 {
-                    bool isAlly = unit is EnemyUnit == ctx.caster is EnemyUnit;
+                    bool isAlly = IsAlly(unit, ctx.caster);
                     canHit = (isAlly && ctx.ability.canHitAllies) ||
                              (!isAlly && ctx.ability.canHitEnemies);
                 }

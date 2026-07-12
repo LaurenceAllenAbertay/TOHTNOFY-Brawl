@@ -9,6 +9,9 @@ namespace DDD.TNFY.BRAWL
     {
         public CharacterData characterData;
 
+        [Header("Team")]
+        public int team = -1;
+
         [Header("Turn Order")]
         public bool goesFirst = false;
 
@@ -30,6 +33,12 @@ namespace DDD.TNFY.BRAWL
                 _baseAttack = attack.Value;
             if (defense.HasValue)
                 _baseDefense = defense.Value;
+        }
+
+        public void EnsureTeamResolved()
+        {
+            if (team < 0)
+                team = this is PlayerUnit ? 0 : 1;
         }
         
         public int currentAttack
@@ -65,6 +74,8 @@ namespace DDD.TNFY.BRAWL
         
         private void Awake()
         {
+            EnsureTeamResolved();
+
             unitAnimator = GetComponent<UnitAnimator>();
             unitSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
             abilitySequencer = GetComponent<AbilitySequencer>();
@@ -351,7 +362,7 @@ namespace DDD.TNFY.BRAWL
             if (currentTile != null && currentTile.currentUnit == this)
                 currentTile.currentUnit = null;
 
-            if (this is EnemyUnit && killer is PlayerUnit)
+            if (killer is PlayerUnit && team != killer.team)
                 DialogueManager.Trigger(DialogueTrigger.AllyDownsEnemy, instigator: killer);
 
             UnitManager.NotifyUnitDied(this);
@@ -426,9 +437,7 @@ namespace DDD.TNFY.BRAWL
         public bool IsAllyOf(Unit other)
         {
             if (other == null) return false;
-            bool thisIsEnemy = this is EnemyUnit;
-            bool otherIsEnemy = other is EnemyUnit;
-            return thisIsEnemy == otherIsEnemy;
+            return team == other.team;
         }
         
         [System.Diagnostics.Conditional("UNITY_EDITOR")]

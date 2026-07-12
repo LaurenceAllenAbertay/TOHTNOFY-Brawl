@@ -92,7 +92,7 @@ namespace DDD.TNFY.BRAWL
 
         private void HandleUnitDamaged(Unit victim, Unit attacker)
         {
-            if (!(victim is EnemyUnit)) return;
+            if (!(victim is NpcUnit)) return;
             if (victim.maxHealth <= 0) return;
             if (_enemiesBelowHalfHealthFired.Contains(victim)) return;
 

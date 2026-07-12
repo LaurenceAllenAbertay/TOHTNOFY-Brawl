@@ -594,7 +594,7 @@ namespace DDD.TNFY.BRAWL
             {
                 if (target == null) continue;
 
-                bool targetIsAlly = (target is EnemyUnit) == (ctx.caster is EnemyUnit);
+                bool targetIsAlly = target.IsAllyOf(ctx.caster);
                 if (targetIsAlly) continue;
 
                 var warned = StatusEffectManager.Instance.GetStatusEffect(target, StatusEffectType.Warned);

@@ -103,7 +103,7 @@ namespace DDD.TNFY.BRAWL
             yield return new WaitForSeconds(lingerAfterDownedSeconds);
 
             bool shouldLeaveBody = victim is PlayerUnit ||
-                                   (victim is EnemyUnit enemy && enemy.leavesBodyOnDown);
+                                   (victim is NpcUnit npc && npc.leavesBodyOnDown);
 
             if (shouldLeaveBody)
                 victim.BecomeBody();
@@ -143,7 +143,7 @@ namespace DDD.TNFY.BRAWL
             yield return new WaitForSeconds(lingerAfterDownedSeconds);
             
             bool shouldLeaveBody = victim is PlayerUnit ||
-                                   (victim is EnemyUnit enemy && enemy.leavesBodyOnDown);
+                                   (victim is NpcUnit npc && npc.leavesBodyOnDown);
 
             if (shouldLeaveBody)
             {

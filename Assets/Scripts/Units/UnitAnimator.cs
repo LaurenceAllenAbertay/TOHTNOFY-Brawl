@@ -119,7 +119,7 @@ namespace DDD.TNFY.BRAWL
             
             int bodyCount     = UnitManager.AllBodies.Count;
             int playerCount   = UnitManager.PlayerUnits.Count;
-            int enemyCount    = UnitManager.EnemyUnits.Count;
+            int enemyCount    = UnitManager.NpcUnits.Count;
             _isBadIdle = bodyCount >= 2 && playerCount < enemyCount;
             
             if ((_isHurtIdle != wasHurt || _isBadIdle != wasBad) && IsCurrentlyIdling())

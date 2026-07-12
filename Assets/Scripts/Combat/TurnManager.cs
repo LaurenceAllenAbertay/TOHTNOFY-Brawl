@@ -85,9 +85,21 @@ namespace DDD.TNFY.BRAWL
                 currentIndex = Mathf.Clamp(currentIndex, 0, turnOrder.Count - 1);
         }
 
+        public bool AddUnitToTurnOrder(Unit unit)
+        {
+            if (unit == null) return false;
+            if (!(unit is PlayerUnit || unit is NpcUnit)) return false;
+            if (turnOrder.Contains(unit)) return false;
+
+            turnOrder.Add(unit);
+
+            OnTurnNumberChanged?.Invoke(totalTurnCount, currentIndex);
+            return true;
+        }
+
         void BuildTurnOrder()
         {
-            var validUnits = UnitManager.AllUnits.Where(u => u is PlayerUnit || u is EnemyUnit);
+            var validUnits = UnitManager.AllUnits.Where(u => u is PlayerUnit || u is NpcUnit);
 
             var rolled = validUnits.Select(u => new
             {

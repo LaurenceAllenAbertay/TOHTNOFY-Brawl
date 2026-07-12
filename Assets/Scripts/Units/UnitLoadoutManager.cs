@@ -50,13 +50,13 @@ namespace DDD.TNFY.BRAWL
             if (unit is PlayerUnit)
                 return GetPlayerAbilities(unit.characterData);
 
-            if (unit is EnemyUnit)
+            if (unit is NpcUnit)
             {
                 var enemyLoadout = unit.GetComponent<EnemyLoadout>();
                 if (enemyLoadout != null)
                     return SanitiseAbilityArray(enemyLoadout.abilityLoadout);
 
-                Debug.LogWarning($"[UnitLoadoutManager] EnemyUnit '{unit.name}' has no EnemyLoadout component.");
+                Debug.LogWarning($"[UnitLoadoutManager] NpcUnit '{unit.name}' has no EnemyLoadout component.");
                 return new Ability[3];
             }
 
@@ -70,13 +70,13 @@ namespace DDD.TNFY.BRAWL
             if (unit is PlayerUnit)
                 return GetPlayerPassive(unit.characterData);
 
-            if (unit is EnemyUnit)
+            if (unit is NpcUnit)
             {
                 var enemyLoadout = unit.GetComponent<EnemyLoadout>();
                 if (enemyLoadout != null)
                     return enemyLoadout.passive;
 
-                Debug.LogWarning($"[UnitLoadoutManager] EnemyUnit '{unit.name}' has no EnemyLoadout component.");
+                Debug.LogWarning($"[UnitLoadoutManager] NpcUnit '{unit.name}' has no EnemyLoadout component.");
                 return null;
             }
 

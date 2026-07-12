@@ -7,11 +7,6 @@ namespace DDD.TNFY.BRAWL
 {
     public class UnitAI : MonoBehaviour
     {
-        [Header("Team")]
-        [SerializeField] private int teamId = 1;
-        
-        [SerializeField] private bool hostileToAllNonTeam = false;
-
         [Header("AI Behaviour")]
         [Range(0f, 1f)]
         [SerializeField] private float aggressionBias = 1f;
@@ -60,6 +55,7 @@ namespace DDD.TNFY.BRAWL
                 return;
             }
 
+            unit.EnsureTeamResolved();
             RegisterWithTeam();
 
             TurnManager.OnTurnStarted                 += OnTurnStarted;
@@ -198,8 +194,6 @@ namespace DDD.TNFY.BRAWL
             if (candidate.IsNeutral) return false;
             
             if (IsAlly(candidate)) return false;
-            
-            if (!hostileToAllNonTeam && !(candidate is PlayerUnit)) return false;
 
             return true;
         }
@@ -209,12 +203,8 @@ namespace DDD.TNFY.BRAWL
 
         public bool IsAlly(Unit candidate)
         {
-            if (candidate is EnemyUnit enemy)
-            {
-                var ai = enemy.GetComponent<UnitAI>();
-                return ai != null && ai.teamId == teamId;
-            }
-            return false;
+            if (candidate == null) return false;
+            return unit.IsAllyOf(candidate);
         }
 
         public void AddUntargetableUnit(Unit target, int duration)
@@ -276,24 +266,26 @@ namespace DDD.TNFY.BRAWL
         
         private void RegisterWithTeam()
         {
-            if (!teamGroups.ContainsKey(teamId))
-                teamGroups[teamId] = new List<UnitAI>();
-            if (!teamGroups[teamId].Contains(this))
-                teamGroups[teamId].Add(this);
+            int team = unit.team;
+            if (!teamGroups.ContainsKey(team))
+                teamGroups[team] = new List<UnitAI>();
+            if (!teamGroups[team].Contains(this))
+                teamGroups[team].Add(this);
         }
 
         private void UnregisterFromTeam()
         {
-            if (!teamGroups.ContainsKey(teamId)) return;
-            teamGroups[teamId].Remove(this);
-            if (teamGroups[teamId].Count == 0)
-                teamGroups.Remove(teamId);
+            int team = unit.team;
+            if (!teamGroups.ContainsKey(team)) return;
+            teamGroups[team].Remove(this);
+            if (teamGroups[team].Count == 0)
+                teamGroups.Remove(team);
         }
 
         private List<Unit> GetTeammateUnits()
         {
             var result = new List<Unit>();
-            if (!teamGroups.TryGetValue(teamId, out var teammates)) return result;
+            if (!teamGroups.TryGetValue(unit.team, out var teammates)) return result;
             foreach (var ai in teammates)
             {
                 if (ai == this || ai.unit == null || ai.unit.IsDead) continue;

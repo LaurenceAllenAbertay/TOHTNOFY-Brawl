@@ -34,6 +34,26 @@ namespace DDD.TNFY.BRAWL
             if (overrideError != null)
                 return overrideError;
 
+            int? team = null;
+            if (command.HasKey("team"))
+            {
+                string teamRaw = command.GetSingleValue("team");
+                if (!int.TryParse(teamRaw, out int teamInt))
+                    return $"Syntax error: 'team' must be a whole number, got '{teamRaw}'.";
+                if (teamInt < 0)
+                    return "Syntax error: 'team' must be >= 0.";
+                team = teamInt;
+            }
+
+            bool? forceAI = null;
+            if (command.HasKey("ai"))
+            {
+                string aiRaw = command.GetSingleValue("ai");
+                if (!bool.TryParse(aiRaw, out bool aiBool))
+                    return $"Syntax error: 'ai' must be true or false, got '{aiRaw}'.";
+                forceAI = aiBool;
+            }
+
             var abilityNames = command.GetValues("abilities");
             var passiveName = command.GetSingleValue("passive");
 
@@ -77,12 +97,57 @@ namespace DDD.TNFY.BRAWL
             }
 
             unit.characterData = characterData;
+
+            if (team.HasValue)
+                unit.team = team.Value;
+
             unit.SetCurrentTile(targetTile);
             go.SetActive(true);
 
             ApplySpawnOverrides(unit, overrides);
 
-            return $"Spawned '{characterData.characterName}' on tile {targetTile.name}.";
+            string aiMessage = ApplyAIOverride(unit, forceAI);
+
+            bool addedToTurnOrder = TurnManager.Instance != null && TurnManager.Instance.AddUnitToTurnOrder(unit);
+
+            string result = $"Spawned '{characterData.characterName}' on tile {targetTile.name}" +
+                             (team.HasValue ? $", team {team.Value}" : "") +
+                             (aiMessage != null ? $", {aiMessage}" : "") + ".";
+
+            if (!addedToTurnOrder && (unit is PlayerUnit || unit is NpcUnit))
+                result += " Warning: unit was not added to the turn order (already present or TurnManager missing).";
+
+            return result;
+        }
+
+        private static string ApplyAIOverride(Unit unit, bool? forceAI)
+        {
+            if (!forceAI.HasValue) return null;
+
+            var existingAI = unit.GetComponent<UnitAI>();
+
+            if (forceAI.Value)
+            {
+                if (existingAI != null)
+                    return "AI-controlled";
+
+                if (unit.GetComponent<AIExecutor>() == null)
+                    unit.gameObject.AddComponent<AIExecutor>();
+
+                unit.gameObject.AddComponent<UnitAI>();
+                return "AI-controlled";
+            }
+            else
+            {
+                if (existingAI != null)
+                    Object.Destroy(existingAI);
+
+                var existingExecutor = unit.GetComponent<AIExecutor>();
+                if (existingExecutor != null)
+                    Object.Destroy(existingExecutor);
+
+                return "player-controlled";
+            }
         }
 
         private class SpawnOverrides

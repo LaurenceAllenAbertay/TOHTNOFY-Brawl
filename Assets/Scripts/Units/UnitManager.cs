@@ -18,7 +18,7 @@ namespace DDD.TNFY.BRAWL
 
         private readonly List<Unit> allUnits = new List<Unit>();
         private readonly List<PlayerUnit> playerUnits = new List<PlayerUnit>();
-        private readonly List<EnemyUnit> enemyUnits = new List<EnemyUnit>();
+        private readonly List<NpcUnit> npcUnits = new List<NpcUnit>();
 
         private readonly List<NeutralUnit> neutralUnits = new List<NeutralUnit>();
 
@@ -29,7 +29,7 @@ namespace DDD.TNFY.BRAWL
 
         public static IReadOnlyList<Unit> AllUnits => Instance?.allUnits ?? new List<Unit>();
         public static IReadOnlyList<PlayerUnit> PlayerUnits => Instance?.playerUnits ?? new List<PlayerUnit>();
-        public static IReadOnlyList<EnemyUnit> EnemyUnits => Instance?.enemyUnits ?? new List<EnemyUnit>();
+        public static IReadOnlyList<NpcUnit> NpcUnits => Instance?.npcUnits ?? new List<NpcUnit>();
 
         public static IReadOnlyList<NeutralUnit> AllNeutralUnits => Instance?.neutralUnits ?? new List<NeutralUnit>();
 
@@ -69,8 +69,8 @@ namespace DDD.TNFY.BRAWL
 
             if (unit is PlayerUnit player && !Instance.playerUnits.Contains(player))
                 Instance.playerUnits.Add(player);
-            else if (unit is EnemyUnit enemy && !Instance.enemyUnits.Contains(enemy))
-                Instance.enemyUnits.Add(enemy);
+            else if (unit is NpcUnit npc && !Instance.npcUnits.Contains(npc))
+                Instance.npcUnits.Add(npc);
             else if (unit is NeutralUnit neutral && !Instance.neutralUnits.Contains(neutral))
                 Instance.neutralUnits.Add(neutral);
 
@@ -86,8 +86,8 @@ namespace DDD.TNFY.BRAWL
 
             if (unit is PlayerUnit player)
                 Instance.playerUnits.Remove(player);
-            else if (unit is EnemyUnit enemy)
-                Instance.enemyUnits.Remove(enemy);
+            else if (unit is NpcUnit npc)
+                Instance.npcUnits.Remove(npc);
             else if (unit is NeutralUnit neutral)
                 Instance.neutralUnits.Remove(neutral);
 
@@ -112,8 +112,8 @@ namespace DDD.TNFY.BRAWL
 
             if (unit is PlayerUnit player)
                 Instance.playerUnits.Remove(player);
-            else if (unit is EnemyUnit enemy)
-                Instance.enemyUnits.Remove(enemy);
+            else if (unit is NpcUnit npc)
+                Instance.npcUnits.Remove(npc);
             else if (unit is NeutralUnit neutral)
             {
                 Instance.neutralUnits.Remove(neutral);
@@ -138,10 +138,9 @@ namespace DDD.TNFY.BRAWL
             {
                 if (unit == caster) continue;
 
-                bool isAlly = (unit is EnemyUnit) == (caster is EnemyUnit);
-                if (isAlly) continue; 
+                if (caster.IsAllyOf(unit)) continue;
 
-                if (caster is EnemyUnit enemy && !enemy.CanTarget(unit)) continue;
+                if (caster is NpcUnit npc && !npc.CanTarget(unit)) continue;
 
                 if (additionalFilter != null && !additionalFilter(unit)) continue;
 
@@ -200,8 +199,8 @@ namespace DDD.TNFY.BRAWL
 
             if (typeof(T) == typeof(PlayerUnit))
                 return Instance.playerUnits.Count;
-            else if (typeof(T) == typeof(EnemyUnit))
-                return Instance.enemyUnits.Count;
+            else if (typeof(T) == typeof(NpcUnit))
+                return Instance.npcUnits.Count;
             else if (typeof(T) == typeof(NeutralUnit))
                 return Instance.neutralUnits.Count;
             else

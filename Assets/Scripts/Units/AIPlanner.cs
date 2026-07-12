@@ -325,7 +325,7 @@ namespace DDD.TNFY.BRAWL
 
                 if (occupant.IsNeutral || occupant.IsDead) return null;
 
-                bool occupantIsAlly = occupant is EnemyUnit == unit is EnemyUnit;
+                bool occupantIsAlly = occupant.IsAllyOf(unit);
                 if (!( (!occupantIsAlly && ability.canHitEnemies) || (occupantIsAlly && ability.canHitAllies) ))
                     return null;
 

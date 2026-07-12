@@ -686,7 +686,7 @@ namespace DDD.TNFY.BRAWL
                         canHit = ability.canTargetNeutral;
                     else
                     {
-                        bool isAlly = u is EnemyUnit == unit is EnemyUnit;
+                        bool isAlly = u.IsAllyOf(unit);
                         canHit = (isAlly && ability.canHitAllies) || (!isAlly && ability.canHitEnemies);
                     }
 
