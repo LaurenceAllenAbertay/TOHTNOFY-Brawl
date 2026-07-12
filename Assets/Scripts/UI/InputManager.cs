@@ -22,6 +22,7 @@ namespace DDD.TNFY.BRAWL
         
         public static event Action OnEscapePressed;
         public static event Action OnEndTurnRequested;
+        public static event Action OnConsoleTogglePressed;
         
         public static event Action<Vector2> OnCameraMove;
         public static event Action<float> OnCameraElevate;
@@ -29,7 +30,10 @@ namespace DDD.TNFY.BRAWL
         public static event Action<Unit> OnUnitHovered;
         public static event Action<Unit> OnUnitHoverExited;
 
-        private InputActionMap gameplayMap;
+        private InputActionMap gameplayMouseMap;
+        private InputActionMap gameplayKeysMap;
+        private InputActionMap consoleMap;
+
         private InputAction clickAction;
         private InputAction rightClickAction;
         private InputAction mousePositionAction;
@@ -38,12 +42,21 @@ namespace DDD.TNFY.BRAWL
         private InputAction ability3Action;
         private InputAction cancelAction;
         private InputAction endTurnAction;
+        private InputAction consoleAction;
         private InputAction cameraMoveAction;
         private InputAction cameraElevateAction;
 
         private Tile hoveredTile;
 
         private Unit _hoveredUnit;
+
+        private Func<bool> tileClickConsumer;
+
+        public static void SetTileClickConsumer(Func<bool> isConsuming)
+        {
+            if (Instance == null) return;
+            Instance.tileClickConsumer = isConsuming;
+        }
 
         private void Awake()
         {
@@ -53,23 +66,30 @@ namespace DDD.TNFY.BRAWL
             if (mainCamera == null)
                 mainCamera = Camera.main;
 
-            gameplayMap = inputActions.FindActionMap("Gameplay", throwIfNotFound: true);
+            gameplayMouseMap = inputActions.FindActionMap("GameplayMouse", throwIfNotFound: true);
+            gameplayKeysMap  = inputActions.FindActionMap("GameplayKeys",  throwIfNotFound: true);
+            consoleMap       = inputActions.FindActionMap("Console",       throwIfNotFound: true);
 
-            clickAction         = gameplayMap.FindAction("Click",         throwIfNotFound: true);
-            rightClickAction    = gameplayMap.FindAction("RightClick",    throwIfNotFound: true);
-            mousePositionAction = gameplayMap.FindAction("MousePosition", throwIfNotFound: true);
-            ability1Action      = gameplayMap.FindAction("Ability1",      throwIfNotFound: true);
-            ability2Action      = gameplayMap.FindAction("Ability2",      throwIfNotFound: true);
-            ability3Action      = gameplayMap.FindAction("Ability3",      throwIfNotFound: true);
-            cancelAction        = gameplayMap.FindAction("Cancel",        throwIfNotFound: true);
-            endTurnAction       = gameplayMap.FindAction("EndTurn",       throwIfNotFound: true);
-            cameraMoveAction    = gameplayMap.FindAction("CameraMove",    throwIfNotFound: true);
-            cameraElevateAction = gameplayMap.FindAction("CameraElevate", throwIfNotFound: true);
+            clickAction         = gameplayMouseMap.FindAction("Click",         throwIfNotFound: true);
+            rightClickAction    = gameplayMouseMap.FindAction("RightClick",    throwIfNotFound: true);
+            mousePositionAction = gameplayMouseMap.FindAction("MousePosition", throwIfNotFound: true);
+
+            ability1Action      = gameplayKeysMap.FindAction("Ability1",      throwIfNotFound: true);
+            ability2Action      = gameplayKeysMap.FindAction("Ability2",      throwIfNotFound: true);
+            ability3Action      = gameplayKeysMap.FindAction("Ability3",      throwIfNotFound: true);
+            cancelAction        = gameplayKeysMap.FindAction("Cancel",        throwIfNotFound: true);
+            endTurnAction       = gameplayKeysMap.FindAction("EndTurn",       throwIfNotFound: true);
+            cameraMoveAction    = gameplayKeysMap.FindAction("CameraMove",    throwIfNotFound: true);
+            cameraElevateAction = gameplayKeysMap.FindAction("CameraElevate", throwIfNotFound: true);
+
+            consoleAction       = consoleMap.FindAction("Console", throwIfNotFound: true);
         }
 
         private void OnEnable()
         {
-            gameplayMap.Enable();
+            gameplayMouseMap.Enable();
+            gameplayKeysMap.Enable();
+            consoleMap.Enable();
 
             clickAction.performed         += OnClick;
             rightClickAction.performed    += OnRightClick;
@@ -78,6 +98,7 @@ namespace DDD.TNFY.BRAWL
             ability3Action.performed      += OnAbility3;
             cancelAction.performed        += OnCancel;
             endTurnAction.performed       += OnEndTurn;
+            consoleAction.performed       += OnConsoleToggle;
         }
 
         private void OnDisable()
@@ -89,37 +110,64 @@ namespace DDD.TNFY.BRAWL
             ability3Action.performed      -= OnAbility3;
             cancelAction.performed        -= OnCancel;
             endTurnAction.performed       -= OnEndTurn;
+            consoleAction.performed       -= OnConsoleToggle;
 
-            gameplayMap.Disable();
+            gameplayMouseMap.Disable();
+            gameplayKeysMap.Disable();
+            consoleMap.Disable();
+        }
+
+        public static void SetGameplayKeysEnabled(bool enabled)
+        {
+            if (Instance == null || Instance.gameplayKeysMap == null) return;
+
+            if (enabled)
+                Instance.gameplayKeysMap.Enable();
+            else
+                Instance.gameplayKeysMap.Disable();
         }
 
         private void Update()
         {
-            if (!gameplayMap.enabled) return;
+            if (gameplayMouseMap.enabled)
+            {
+                Vector2 screenPos = mousePositionAction.ReadValue<Vector2>();
 
-            Vector2 screenPos = mousePositionAction.ReadValue<Vector2>();
+                Tile tileUnderCursor = RaycastTile(screenPos);
+                UpdateHoveredTile(tileUnderCursor);
 
-            Tile tileUnderCursor = RaycastTile(screenPos);
-            UpdateHoveredTile(tileUnderCursor);
+                Unit unitUnderCursor = RaycastUnit(screenPos);
+                UpdateHoveredUnit(unitUnderCursor);
 
-            Unit unitUnderCursor = RaycastUnit(screenPos);
-            UpdateHoveredUnit(unitUnderCursor);
+                OnMouseMoved?.Invoke(ScreenToWorld(screenPos));
+            }
 
-            OnMouseMoved?.Invoke(ScreenToWorld(screenPos));
-
-            OnCameraMove?.Invoke(cameraMoveAction.ReadValue<Vector2>());
-            OnCameraElevate?.Invoke(cameraElevateAction.ReadValue<float>());
+            if (gameplayKeysMap.enabled)
+            {
+                OnCameraMove?.Invoke(cameraMoveAction.ReadValue<Vector2>());
+                OnCameraElevate?.Invoke(cameraElevateAction.ReadValue<float>());
+            }
         }
 
         private void OnClick(InputAction.CallbackContext ctx)
         {
             if (IsMouseOverUI()) return;
 
+            if (tileClickConsumer != null && tileClickConsumer())
+            {
+                NotifyConsumedClick(hoveredTile, _hoveredUnit);
+                return;
+            }
+
             if (hoveredTile != null)
                 Tile.NotifyClicked(hoveredTile);
 
             OnMouseClicked?.Invoke(ScreenToWorld(mousePositionAction.ReadValue<Vector2>()));
         }
+
+        public static event Action<Tile, Unit> OnConsumedClick;
+
+        private static void NotifyConsumedClick(Tile tile, Unit unit) => OnConsumedClick?.Invoke(tile, unit);
 
         private void OnRightClick(InputAction.CallbackContext ctx)
         {
@@ -134,6 +182,8 @@ namespace DDD.TNFY.BRAWL
         private void OnCancel(InputAction.CallbackContext ctx) => OnEscapePressed?.Invoke();
 
         private void OnEndTurn(InputAction.CallbackContext ctx) => OnEndTurnRequested?.Invoke();
+
+        private void OnConsoleToggle(InputAction.CallbackContext ctx) => OnConsoleTogglePressed?.Invoke();
 
         private Tile RaycastTile(Vector2 screenPos)
         {

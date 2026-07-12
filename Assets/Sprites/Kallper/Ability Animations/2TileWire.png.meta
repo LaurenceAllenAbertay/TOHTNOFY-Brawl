@@ -198,9 +198,9 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 16384
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -235,6 +235,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -242,12 +255,12 @@ TextureImporter:
       name: 2TileWire_0
       rect:
         serializedVersion: 2
-        x: 1312
-        y: 5634
-        width: 608
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 5509
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -264,12 +277,12 @@ TextureImporter:
       name: 2TileWire_1
       rect:
         serializedVersion: 2
-        x: 4014
-        y: 5634
-        width: 608
-        height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2702
+        y: 5509
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -286,12 +299,12 @@ TextureImporter:
       name: 2TileWire_2
       rect:
         serializedVersion: 2
-        x: 6206
-        y: 5657
-        width: 1104
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5404
+        y: 5509
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -308,12 +321,12 @@ TextureImporter:
       name: 2TileWire_3
       rect:
         serializedVersion: 2
-        x: 8908
-        y: 5657
-        width: 1104
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8106
+        y: 5509
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -330,12 +343,12 @@ TextureImporter:
       name: 2TileWire_4
       rect:
         serializedVersion: 2
-        x: 11195
-        y: 5655
-        width: 1495
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 10808
+        y: 5509
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -352,12 +365,12 @@ TextureImporter:
       name: 2TileWire_5
       rect:
         serializedVersion: 2
-        x: 13897
-        y: 5655
-        width: 1495
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 13510
+        y: 5509
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -375,11 +388,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 4866
-        width: 1868
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        y: 4722
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -396,12 +409,12 @@ TextureImporter:
       name: 2TileWire_7
       rect:
         serializedVersion: 2
-        x: 2701
-        y: 4866
-        width: 1869
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2702
+        y: 4722
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -418,12 +431,12 @@ TextureImporter:
       name: 2TileWire_8
       rect:
         serializedVersion: 2
-        x: 5503
-        y: 4866
-        width: 1869
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5404
+        y: 4722
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -440,12 +453,12 @@ TextureImporter:
       name: 2TileWire_9
       rect:
         serializedVersion: 2
-        x: 8205
-        y: 4866
-        width: 1869
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8106
+        y: 4722
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -462,12 +475,12 @@ TextureImporter:
       name: 2TileWire_10
       rect:
         serializedVersion: 2
-        x: 10907
-        y: 4866
-        width: 1869
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 10808
+        y: 4722
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -484,12 +497,12 @@ TextureImporter:
       name: 2TileWire_11
       rect:
         serializedVersion: 2
-        x: 13609
-        y: 4866
-        width: 1869
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 13510
+        y: 4722
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -506,12 +519,12 @@ TextureImporter:
       name: 2TileWire_12
       rect:
         serializedVersion: 2
-        x: 99
-        y: 4079
-        width: 1869
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 3935
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -528,12 +541,12 @@ TextureImporter:
       name: 2TileWire_13
       rect:
         serializedVersion: 2
-        x: 2801
-        y: 4079
-        width: 1869
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2702
+        y: 3935
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -550,12 +563,12 @@ TextureImporter:
       name: 2TileWire_14
       rect:
         serializedVersion: 2
-        x: 5503
-        y: 4079
-        width: 1869
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5404
+        y: 3935
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -572,12 +585,12 @@ TextureImporter:
       name: 2TileWire_15
       rect:
         serializedVersion: 2
-        x: 8205
-        y: 4079
-        width: 1869
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8106
+        y: 3935
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -594,12 +607,12 @@ TextureImporter:
       name: 2TileWire_16
       rect:
         serializedVersion: 2
-        x: 10907
-        y: 4079
-        width: 1869
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 10808
+        y: 3935
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -616,12 +629,12 @@ TextureImporter:
       name: 2TileWire_17
       rect:
         serializedVersion: 2
-        x: 13609
-        y: 4079
-        width: 1869
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 13510
+        y: 3935
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -638,12 +651,12 @@ TextureImporter:
       name: 2TileWire_18
       rect:
         serializedVersion: 2
-        x: 99
-        y: 3292
-        width: 1869
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 3148
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -660,12 +673,12 @@ TextureImporter:
       name: 2TileWire_19
       rect:
         serializedVersion: 2
-        x: 2801
-        y: 3292
-        width: 1869
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2702
+        y: 3148
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -682,12 +695,12 @@ TextureImporter:
       name: 2TileWire_20
       rect:
         serializedVersion: 2
-        x: 5503
-        y: 3292
-        width: 1869
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5404
+        y: 3148
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -704,12 +717,12 @@ TextureImporter:
       name: 2TileWire_21
       rect:
         serializedVersion: 2
-        x: 8205
-        y: 3292
-        width: 1869
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8106
+        y: 3148
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -726,12 +739,12 @@ TextureImporter:
       name: 2TileWire_22
       rect:
         serializedVersion: 2
-        x: 10907
-        y: 3292
-        width: 1869
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 10808
+        y: 3148
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -748,12 +761,12 @@ TextureImporter:
       name: 2TileWire_23
       rect:
         serializedVersion: 2
-        x: 13609
-        y: 3292
-        width: 1869
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 13510
+        y: 3148
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -770,12 +783,12 @@ TextureImporter:
       name: 2TileWire_24
       rect:
         serializedVersion: 2
-        x: 99
-        y: 2505
-        width: 1869
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 2361
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -792,12 +805,12 @@ TextureImporter:
       name: 2TileWire_25
       rect:
         serializedVersion: 2
-        x: 2801
-        y: 2505
-        width: 1869
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2702
+        y: 2361
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -814,12 +827,12 @@ TextureImporter:
       name: 2TileWire_26
       rect:
         serializedVersion: 2
-        x: 5503
-        y: 2505
-        width: 1869
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5404
+        y: 2361
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -836,12 +849,12 @@ TextureImporter:
       name: 2TileWire_27
       rect:
         serializedVersion: 2
-        x: 8288
-        y: 2505
-        width: 1869
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8106
+        y: 2361
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -858,12 +871,12 @@ TextureImporter:
       name: 2TileWire_28
       rect:
         serializedVersion: 2
-        x: 10990
-        y: 2505
-        width: 1869
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 10808
+        y: 2361
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -880,12 +893,12 @@ TextureImporter:
       name: 2TileWire_29
       rect:
         serializedVersion: 2
-        x: 13815
-        y: 2505
-        width: 1870
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 13510
+        y: 2361
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -902,12 +915,12 @@ TextureImporter:
       name: 2TileWire_30
       rect:
         serializedVersion: 2
-        x: 3273
-        y: 1743
-        width: 1749
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1574
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -924,12 +937,12 @@ TextureImporter:
       name: 2TileWire_31
       rect:
         serializedVersion: 2
-        x: 5975
-        y: 1743
-        width: 1749
-        height: 74
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2702
+        y: 1574
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -946,12 +959,12 @@ TextureImporter:
       name: 2TileWire_32
       rect:
         serializedVersion: 2
-        x: 8785
-        y: 1720
-        width: 1749
-        height: 134
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5404
+        y: 1574
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -968,12 +981,12 @@ TextureImporter:
       name: 2TileWire_33
       rect:
         serializedVersion: 2
-        x: 11487
-        y: 1720
-        width: 1749
-        height: 134
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8106
+        y: 1574
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -990,12 +1003,12 @@ TextureImporter:
       name: 2TileWire_34
       rect:
         serializedVersion: 2
-        x: 14334
-        y: 1703
-        width: 1637
-        height: 412
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 10808
+        y: 1574
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1012,12 +1025,12 @@ TextureImporter:
       name: 2TileWire_35
       rect:
         serializedVersion: 2
-        x: 305
-        y: 1718
-        width: 1870
-        height: 14
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 13510
+        y: 1574
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1034,12 +1047,12 @@ TextureImporter:
       name: 2TileWire_36
       rect:
         serializedVersion: 2
-        x: 824
-        y: 916
-        width: 1637
-        height: 412
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 787
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1056,12 +1069,12 @@ TextureImporter:
       name: 2TileWire_37
       rect:
         serializedVersion: 2
-        x: 4002
-        y: 889
-        width: 1108
-        height: 651
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2702
+        y: 787
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1078,12 +1091,12 @@ TextureImporter:
       name: 2TileWire_38
       rect:
         serializedVersion: 2
-        x: 6704
-        y: 889
-        width: 1108
-        height: 651
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 5404
+        y: 787
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1100,12 +1113,12 @@ TextureImporter:
       name: 2TileWire_39
       rect:
         serializedVersion: 2
-        x: 9587
-        y: 786
-        width: 1081
-        height: 789
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8106
+        y: 787
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1122,12 +1135,12 @@ TextureImporter:
       name: 2TileWire_40
       rect:
         serializedVersion: 2
-        x: 12289
-        y: 786
-        width: 1081
-        height: 789
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 10808
+        y: 787
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1144,12 +1157,12 @@ TextureImporter:
       name: 2TileWire_41
       rect:
         serializedVersion: 2
-        x: 15931
-        y: 863
-        width: 281
-        height: 572
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 13510
+        y: 787
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1166,12 +1179,12 @@ TextureImporter:
       name: 2TileWire_42
       rect:
         serializedVersion: 2
-        x: 2421
-        y: 76
-        width: 282
-        height: 572
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1184,11 +1197,77 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: 2TileWire_43
+      rect:
+        serializedVersion: 2
+        x: 2702
+        y: 0
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d85d4fb16e62abb499515dbcb61292b0
+      internalID: -404535495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_44
+      rect:
+        serializedVersion: 2
+        x: 8106
+        y: 0
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 610a700648daf5343ab80d2299d522d9
+      internalID: 1314806948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2TileWire_45
+      rect:
+        serializedVersion: 2
+        x: 10808
+        y: 0
+        width: 2702
+        height: 787
+      alignment: 5
+      pivot: {x: 1, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1447f627570202c41825e5c31222af16
+      internalID: -2083014236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 6458e9e2409969d4faeacb97eda1dd9d
     internalID: 0
     vertices: []
     indices: 
@@ -1196,7 +1275,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":8.0},"gridSpriteSize":{"x":2702.0,"y":787.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":1.0,"y":0.5},"autoSlicingMethod":0,"spriteAlignment":5,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       2TileWire_0: -4915528306770613232
       2TileWire_1: -7399023893250864655
@@ -1236,6 +1317,9 @@ TextureImporter:
       2TileWire_40: -3571040416776085343
       2TileWire_41: -8562023120597705010
       2TileWire_42: -2306728265946533611
+      2TileWire_43: -404535495
+      2TileWire_44: 1314806948
+      2TileWire_45: -2083014236
       2TileWire_5: -746280329423231032
       2TileWire_6: 3409668494366122462
       2TileWire_7: -4754341806637074879

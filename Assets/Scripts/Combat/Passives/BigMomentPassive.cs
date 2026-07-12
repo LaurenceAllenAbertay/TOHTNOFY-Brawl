@@ -57,7 +57,7 @@ namespace DDD.TNFY.BRAWL
         {
             var unitAnimator = _owner.GetComponent<UnitAnimator>();
             var healthBar    = _owner.GetComponentInChildren<UnitHealthBarDisplay>();
-            int maxHealth    = _owner.characterData != null ? _owner.characterData.maxHealth : 1;
+            int maxHealth    = _owner.maxHealth > 0 ? _owner.maxHealth : 1;
             
             if (unitAnimator != null)
                 yield return _handler.StartCoroutine(unitAnimator.WaitForHurtAnimation());

@@ -484,8 +484,8 @@ namespace DDD.TNFY.BRAWL
         }
 
         private float HealthPct(Unit u)
-            => u?.characterData != null && u.characterData.maxHealth > 0
-                ? u.currentHealth / (float)u.characterData.maxHealth
+            => u != null && u.maxHealth > 0
+                ? u.currentHealth / (float)u.maxHealth
                 : 1f;
 
         private int SimulateDamage(Ability ability, Unit target)

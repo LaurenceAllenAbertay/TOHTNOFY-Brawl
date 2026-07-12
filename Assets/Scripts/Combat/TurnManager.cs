@@ -8,6 +8,8 @@ namespace DDD.TNFY.BRAWL
 {
     public class TurnManager : MonoBehaviour
     {
+        public static TurnManager Instance { get; private set; }
+
         public static event System.Action<Unit> OnTurnStarted; 
         public static event System.Action<Unit> OnTurnEnded; 
         public static event System.Action<int, int> OnTurnNumberChanged;
@@ -30,12 +32,30 @@ namespace DDD.TNFY.BRAWL
         
         private bool _activeUnitDiedThisTurn = false;
 
+        private int _roundNumber = 1;
+
+        void Awake()
+        {
+            if (Instance != null && Instance != this)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            Instance = this;
+        }
+
         void Start()
         {
             combatManager = FindAnyObjectByType<CombatManager>();
             cameraController = FindAnyObjectByType<CameraController>();
             BuildTurnOrder();
             StartNextTurn();
+        }
+
+        void OnDestroy()
+        {
+            if (Instance == this)
+                Instance = null;
         }
 
         void OnEnable()
@@ -127,13 +147,12 @@ namespace DDD.TNFY.BRAWL
             OnTotalTurnChanged?.Invoke(totalTurnCount);
         }
 
-        public void EndTurn()
+        public Coroutine EndTurn()
         {
             if (_activeUnitDiedThisTurn)
             {
                 Debug.Log("[TurnManager] Active unit died during their own turn — skipping EndTurn calls and advancing sequence.");
-                StartCoroutine(EndTurnSequence());
-                return;
+                return StartCoroutine(EndTurnSequence());
             }
 
             Unit currentUnit = CurrentUnit;
@@ -147,7 +166,7 @@ namespace DDD.TNFY.BRAWL
             
             OnTurnEnded?.Invoke(currentUnit);
 
-            StartCoroutine(EndTurnSequence());
+            return StartCoroutine(EndTurnSequence());
         }
 
         private IEnumerator HandleStunnedTurn(Unit unit)
@@ -219,6 +238,7 @@ namespace DDD.TNFY.BRAWL
             if (currentIndex >= turnOrder.Count)
             {
                 currentIndex = 0;
+                _roundNumber++;
                 
                 _stableRoundCount = turnOrder.Count;
                 yield return StartCoroutine(TriggerEnvironmentEffects());
@@ -281,9 +301,26 @@ namespace DDD.TNFY.BRAWL
 
         public int GetCurrentRound()
         {
-            int count = _stableRoundCount > 0 ? _stableRoundCount : turnOrder.Count;
-            if (count == 0) return 0;
-            return (totalTurnCount - 1) / count + 1;
+            return _roundNumber;
+        }
+
+        public bool AdminForceSkipToUnit(Unit targetUnit)
+        {
+            if (targetUnit == null) return false;
+
+            int targetIndex = turnOrder.IndexOf(targetUnit);
+            if (targetIndex < 0) return false;
+
+            bool willWrap = targetIndex <= currentIndex;
+
+            currentIndex = targetIndex;
+            if (willWrap)
+                _roundNumber++;
+
+            OnTurnNumberChanged?.Invoke(totalTurnCount, currentIndex);
+
+            StartNextTurn();
+            return true;
         }
 
         public int GetTurnInCurrentRound()

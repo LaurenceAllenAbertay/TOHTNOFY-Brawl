@@ -35,8 +35,8 @@ namespace DDD.TNFY.BRAWL
                 
                 if (target.IsBody) continue;
 
-                int maxHealth = target.characterData != null
-                    ? target.characterData.maxHealth
+                int maxHealth = target.maxHealth > 0
+                    ? target.maxHealth
                     : target.currentHealth;
 
                 int before = target.currentHealth;

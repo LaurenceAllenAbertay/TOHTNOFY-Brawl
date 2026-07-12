@@ -771,9 +771,9 @@ namespace DDD.TNFY.BRAWL
 
             foreach (var unit in units)
             {
-                if (unit?.characterData == null) continue;
+                if (unit == null || unit.maxHealth <= 0) continue;
 
-                float healthPercent = (float)unit.currentHealth / unit.characterData.maxHealth;
+                float healthPercent = (float)unit.currentHealth / unit.maxHealth;
 
                 if (healthPercent <= 0.3f)
                 {

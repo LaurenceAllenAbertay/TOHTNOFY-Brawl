@@ -120,18 +120,18 @@ namespace DDD.TNFY.BRAWL
 
         private void ShowStatic()
         {
-            if (_unit.characterData == null || _unit.characterData.maxHealth <= 0) return;
-            float fraction = Mathf.Clamp01((float)_unit.currentHealth / _unit.characterData.maxHealth);
+            if (_unit.maxHealth <= 0) return;
+            float fraction = Mathf.Clamp01((float)_unit.currentHealth / _unit.maxHealth);
             healthBarRoot.SetActive(true);
             ApplyBarValues(fraction);
         }
 
         private void RefreshBar()
         {
-            if (_unit.characterData == null || _unit.characterData.maxHealth <= 0)
+            if (_unit.maxHealth <= 0)
                 return;
 
-            float targetFraction = Mathf.Clamp01((float)_unit.currentHealth / _unit.characterData.maxHealth);
+            float targetFraction = Mathf.Clamp01((float)_unit.currentHealth / _unit.maxHealth);
             
             _isDamageActive = true;
             CancelLinger();
@@ -158,7 +158,7 @@ namespace DDD.TNFY.BRAWL
         {
             float startFill = healthBarImage.fillAmount;
 
-            int maxHealth    = _unit.characterData.maxHealth;
+            int maxHealth    = _unit.maxHealth;
             int targetHealth = targetHealthOverride ?? _unit.currentHealth;
             int startHealth  = Mathf.RoundToInt(startFill * maxHealth);
 
@@ -203,7 +203,7 @@ namespace DDD.TNFY.BRAWL
             healthBarImage.fillAmount = fraction;
             healthBarImage.color = ColourForFraction(fraction);
             int displayHealth = healthOverride ?? _unit.currentHealth;
-            SetHealthNumberText(displayHealth, _unit.characterData.maxHealth);
+            SetHealthNumberText(displayHealth, _unit.maxHealth);
         }
 
         private Color ColourForFraction(float fraction)

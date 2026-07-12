@@ -114,7 +114,7 @@ namespace DDD.TNFY.BRAWL
             bool wasHurt = _isHurtIdle;
             bool wasBad  = _isBadIdle;
 
-            int maxHp = _unit.characterData != null ? _unit.characterData.maxHealth : 0;
+            int maxHp = _unit.maxHealth;
             _isHurtIdle = maxHp > 0 && _unit.currentHealth < maxHp * 0.25f;
             
             int bodyCount     = UnitManager.AllBodies.Count;

@@ -15,6 +15,8 @@ namespace DDD.TNFY.BRAWL
 
     public class CombatManager : MonoBehaviour
     {
+        public static CombatManager Instance { get; private set; }
+
         #region Properties
 
         public bool CanMove => currentState == CombatState.WaitingForInput &&
@@ -37,6 +39,27 @@ namespace DDD.TNFY.BRAWL
                                   !isMoving && !isWaitingForAnimation &&
                                   currentActiveUnit is PlayerUnit &&
                                   (Time.time - turnStartTime >= turnStartProtectionDuration);
+
+        public bool IsSafeForAdminCommand
+        {
+            get
+            {
+                if (currentState != CombatState.WaitingForInput) return false;
+                if (isMoving || isWaitingForAnimation) return false;
+                if (!(currentActiveUnit is PlayerUnit)) return false;
+                if (IsTargetingAbility) return false;
+                if (jumpSystem != null && jumpSystem.IsTargetingJump) return false;
+                if (cameraController != null && cameraController.IsTransitioning) return false;
+
+                foreach (var unit in UnitManager.AllUnits)
+                {
+                    var unitAnimator = unit.GetComponent<UnitAnimator>();
+                    if (unitAnimator != null && unitAnimator.IsInKnockbackSequence) return false;
+                }
+
+                return true;
+            }
+        }
 
         public int GetRemainingMovement() => Mathf.Max(0, totalMovementPoints - movementPointsUsed);
         public int GetTotalMovement() => totalMovementPoints;
@@ -84,6 +107,16 @@ namespace DDD.TNFY.BRAWL
 
         #region Unity Lifecycle
 
+        void Awake()
+        {
+            if (Instance != null && Instance != this)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            Instance = this;
+        }
+
         void Start()
         {
             InitializeComponents();
@@ -93,6 +126,9 @@ namespace DDD.TNFY.BRAWL
         void OnDestroy()
         {
             UnsubscribeFromEvents();
+
+            if (Instance == this)
+                Instance = null;
         }
 
         #endregion

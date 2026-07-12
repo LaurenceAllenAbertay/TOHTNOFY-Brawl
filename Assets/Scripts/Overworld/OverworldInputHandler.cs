@@ -17,7 +17,9 @@ namespace DDD.TNFY.BRAWL
         public static event Action OnCancelPressed;
         
         private InputActionMap overworldMap;
-        private InputActionMap gameplayMap;
+        private InputActionMap gameplayMouseMap;
+        private InputActionMap gameplayKeysMap;
+        private InputActionMap consoleMap;
 
         private InputAction moveAction;
         private InputAction interactAction;
@@ -28,8 +30,10 @@ namespace DDD.TNFY.BRAWL
             if (Instance != null && Instance != this) { Destroy(gameObject); return; }
             Instance = this;
 
-            overworldMap = inputActions.FindActionMap("Overworld", throwIfNotFound: true);
-            gameplayMap  = inputActions.FindActionMap("Gameplay",  throwIfNotFound: true);
+            overworldMap     = inputActions.FindActionMap("Overworld",     throwIfNotFound: true);
+            gameplayMouseMap = inputActions.FindActionMap("GameplayMouse", throwIfNotFound: true);
+            gameplayKeysMap  = inputActions.FindActionMap("GameplayKeys",  throwIfNotFound: true);
+            consoleMap       = inputActions.FindActionMap("Console",       throwIfNotFound: true);
 
             moveAction     = overworldMap.FindAction("Move",     throwIfNotFound: true);
             interactAction = overworldMap.FindAction("Interact", throwIfNotFound: true);
@@ -38,7 +42,9 @@ namespace DDD.TNFY.BRAWL
 
         private void OnEnable()
         {
-            gameplayMap.Disable();
+            gameplayMouseMap.Disable();
+            gameplayKeysMap.Disable();
+            consoleMap.Disable();
             overworldMap.Enable();
 
             interactAction.performed += OnInteract;
@@ -52,7 +58,9 @@ namespace DDD.TNFY.BRAWL
 
             overworldMap.Disable();
 
-            gameplayMap.Enable();
+            gameplayMouseMap.Enable();
+            gameplayKeysMap.Enable();
+            consoleMap.Enable();
         }
 
         private void Update()

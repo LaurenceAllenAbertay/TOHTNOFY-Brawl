@@ -93,10 +93,10 @@ namespace DDD.TNFY.BRAWL
         private void HandleUnitDamaged(Unit victim, Unit attacker)
         {
             if (!(victim is EnemyUnit)) return;
-            if (victim.characterData == null) return;
+            if (victim.maxHealth <= 0) return;
             if (_enemiesBelowHalfHealthFired.Contains(victim)) return;
 
-            float healthPercent = (float)victim.currentHealth / victim.characterData.maxHealth;
+            float healthPercent = (float)victim.currentHealth / victim.maxHealth;
             if (healthPercent <= 0.5f)
             {
                 _enemiesBelowHalfHealthFired.Add(victim);

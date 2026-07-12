@@ -30,6 +30,9 @@ namespace DDD.TNFY.BRAWL
 
         private bool _playerInputEnabled = false;
 
+        private Vector2 _cameraMoveInput;
+        private float _cameraElevateInput;
+
         private Coroutine _shakeCoroutine;
         private float _currentShakeMagnitude = 0f;
         
@@ -48,6 +51,8 @@ namespace DDD.TNFY.BRAWL
 
             TurnManager.OnTurnStarted += OnTurnStarted;
             Unit.OnDamageDealt += OnUnitTookDamage;
+            InputManager.OnCameraMove += HandleCameraMoveInput;
+            InputManager.OnCameraElevate += HandleCameraElevateInput;
 
             var turnManager = FindAnyObjectByType<TurnManager>();
             if (turnManager != null && turnManager.CurrentUnit != null)
@@ -58,9 +63,20 @@ namespace DDD.TNFY.BRAWL
         {
             TurnManager.OnTurnStarted -= OnTurnStarted;
             Unit.OnDamageDealt -= OnUnitTookDamage;
+            InputManager.OnCameraMove -= HandleCameraMoveInput;
+            InputManager.OnCameraElevate -= HandleCameraElevateInput;
 
             if (Instance == this)
                 Instance = null;
+        }
+
+        private void HandleCameraMoveInput(Vector2 moveInput) => _cameraMoveInput = moveInput;
+        private void HandleCameraElevateInput(float elevateInput) => _cameraElevateInput = elevateInput;
+
+        public void ClearMovementInput()
+        {
+            _cameraMoveInput = Vector2.zero;
+            _cameraElevateInput = 0f;
         }
 
         void Update()
@@ -201,13 +217,7 @@ namespace DDD.TNFY.BRAWL
 
         private void HandleMovement()
         {
-            Vector3 movement = Vector3.zero;
-            if (Input.GetKey(KeyCode.W)) movement.z += 1f;
-            if (Input.GetKey(KeyCode.S)) movement.z -= 1f;
-            if (Input.GetKey(KeyCode.A)) movement.x -= 1f;
-            if (Input.GetKey(KeyCode.D)) movement.x += 1f;
-            if (Input.GetKey(KeyCode.E)) movement.y += 1f;
-            if (Input.GetKey(KeyCode.Q)) movement.y -= 1f;
+            Vector3 movement = new Vector3(_cameraMoveInput.x, _cameraElevateInput, _cameraMoveInput.y);
 
             movement = movement.normalized * moveSpeed * Time.deltaTime;
             transform.position = ClampToBounds(transform.position + movement);

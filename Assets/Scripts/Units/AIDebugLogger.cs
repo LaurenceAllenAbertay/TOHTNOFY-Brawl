@@ -24,7 +24,7 @@ namespace DDD.TNFY.BRAWL
             if (!enableDebugLogging) return;
             Debug.Log($"=== [{unit.name}] TURN START ===");
             Debug.Log($"[{unit.name}] Position: {unit.currentTile?.name ?? "Unknown"}");
-            Debug.Log($"[{unit.name}] Health: {unit.currentHealth}/{unit.characterData.maxHealth}");
+            Debug.Log($"[{unit.name}] Health: {unit.currentHealth}/{unit.maxHealth}");
         }
 
         public void LogTurnEnd()

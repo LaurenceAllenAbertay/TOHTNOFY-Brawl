@@ -14,6 +14,7 @@ namespace DDD.TNFY.BRAWL
 
         [Header("Runtime Stats")]
         public int currentHealth;
+        public int maxHealth;
         public Tile currentTile;
         public int currentSpeed;
         public bool canMove;
@@ -22,6 +23,14 @@ namespace DDD.TNFY.BRAWL
         
         private int _baseAttack;
         private int _baseDefense;
+
+        public void AdminOverrideBaseStats(int? attack, int? defense)
+        {
+            if (attack.HasValue)
+                _baseAttack = attack.Value;
+            if (defense.HasValue)
+                _baseDefense = defense.Value;
+        }
         
         public int currentAttack
             => Mathf.Max(0, Mathf.RoundToInt(_baseAttack * StatusEffectManager.GetAttackMultiplier(this)));
@@ -63,6 +72,7 @@ namespace DDD.TNFY.BRAWL
             if (characterData)
             {
                 currentHealth  = characterData.maxHealth;
+                maxHealth      = characterData.maxHealth;
                 _baseAttack    = characterData.attack;
                 _baseDefense   = characterData.defense;
                 currentSpeed   = characterData.speed;
@@ -298,7 +308,20 @@ namespace DDD.TNFY.BRAWL
                     }
                 }
             }
-            
+
+            ApplyDamageAndNotify(amount, attacker, sourceAbility);
+        }
+
+        public void AdminApplyTrueDamage(int amount, Unit attacker = null)
+        {
+            if (IsDead) return;
+            if (IsBody) return;
+
+            ApplyDamageAndNotify(amount, attacker, null);
+        }
+
+        private void ApplyDamageAndNotify(int amount, Unit attacker, Ability sourceAbility)
+        {
             if (OnPreReceiveDamage != null)
             {
                 foreach (System.Func<Unit, Unit, Ability, int, int> modifier in OnPreReceiveDamage.GetInvocationList())

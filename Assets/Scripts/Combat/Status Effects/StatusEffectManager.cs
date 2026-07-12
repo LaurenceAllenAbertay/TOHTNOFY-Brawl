@@ -206,7 +206,7 @@ namespace DDD.TNFY.BRAWL
 
                 case StatusEffectType.Healthy:
                     effect.target.currentHealth = Mathf.Min(effect.target.currentHealth + Mathf.RoundToInt(effect.effectPower),
-                                                            effect.target.characterData.maxHealth);
+                                                            effect.target.maxHealth);
                     break;
 
                 case StatusEffectType.Fire:
@@ -274,7 +274,7 @@ namespace DDD.TNFY.BRAWL
             switch (effectData.stackingBehavior)
             {
                 case StatusEffectData.StackingBehavior.None:
-                    return existing; // Do nothing
+                    return existing; 
 
                 case StatusEffectData.StackingBehavior.RefreshDuration:
                     existing.RefreshDuration(duration);

@@ -188,6 +188,7 @@ MonoBehaviour:
   characterData: {fileID: 11400000, guid: a2cfea01f0bb708488987177284d6666, type: 2}
   goesFirst: 1
   currentHealth: 0
+  maxHealth: 0
   currentTile: {fileID: 0}
   currentSpeed: 0
   canMove: 0
