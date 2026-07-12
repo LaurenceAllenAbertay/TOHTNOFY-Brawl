@@ -634,12 +634,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_0
       rect:
         serializedVersion: 2
-        x: 779
-        y: 13791
-        width: 468
-        height: 602
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 13634
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -656,12 +656,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_1
       rect:
         serializedVersion: 2
-        x: 3004
-        y: 13791
-        width: 468
-        height: 602
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2247
+        y: 13634
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -678,12 +678,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_2
       rect:
         serializedVersion: 2
-        x: 5245
-        y: 13792
-        width: 456
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4450
+        y: 13634
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -700,12 +700,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_3
       rect:
         serializedVersion: 2
-        x: 7470
-        y: 13792
-        width: 456
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6675
+        y: 13634
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -722,12 +722,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_4
       rect:
         serializedVersion: 2
-        x: 9707
-        y: 13792
-        width: 445
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8900
+        y: 13634
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -744,12 +744,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_5
       rect:
         serializedVersion: 2
-        x: 11932
-        y: 13792
-        width: 445
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 11125
+        y: 13634
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -766,12 +766,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_6
       rect:
         serializedVersion: 2
-        x: 14161
-        y: 13792
-        width: 440
-        height: 618
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 13350
+        y: 13634
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -788,12 +788,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_7
       rect:
         serializedVersion: 2
-        x: 811
-        y: 12990
-        width: 440
-        height: 618
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 12832
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -810,12 +810,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_8
       rect:
         serializedVersion: 2
-        x: 3049
-        y: 12989
-        width: 430
-        height: 616
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2225
+        y: 12832
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -832,12 +832,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_9
       rect:
         serializedVersion: 2
-        x: 5274
-        y: 12989
-        width: 430
-        height: 616
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4450
+        y: 12832
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -854,12 +854,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_10
       rect:
         serializedVersion: 2
-        x: 7504
-        y: 12996
-        width: 426
-        height: 605
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6675
+        y: 12832
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -876,12 +876,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_11
       rect:
         serializedVersion: 2
-        x: 9729
-        y: 12996
-        width: 426
-        height: 605
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8900
+        y: 12832
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -898,12 +898,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_12
       rect:
         serializedVersion: 2
-        x: 11919
-        y: 12992
-        width: 462
-        height: 610
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 11125
+        y: 12832
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -920,12 +920,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_13
       rect:
         serializedVersion: 2
-        x: 14144
-        y: 12992
-        width: 462
-        height: 610
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 13350
+        y: 12832
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -942,12 +942,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_14
       rect:
         serializedVersion: 2
-        x: 817
-        y: 12187
-        width: 438
-        height: 613
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 12030
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -964,12 +964,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_15
       rect:
         serializedVersion: 2
-        x: 3042
-        y: 12187
-        width: 438
-        height: 613
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2225
+        y: 12030
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -986,12 +986,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_16
       rect:
         serializedVersion: 2
-        x: 5267
-        y: 12187
-        width: 438
-        height: 613
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4450
+        y: 12030
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1008,12 +1008,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_17
       rect:
         serializedVersion: 2
-        x: 7492
-        y: 12187
-        width: 438
-        height: 613
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6675
+        y: 12030
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1030,12 +1030,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_18
       rect:
         serializedVersion: 2
-        x: 9719
-        y: 12187
-        width: 436
-        height: 613
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8900
+        y: 12030
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1052,12 +1052,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_19
       rect:
         serializedVersion: 2
-        x: 11944
-        y: 12187
-        width: 436
-        height: 613
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 11125
+        y: 12030
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1074,12 +1074,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_20
       rect:
         serializedVersion: 2
-        x: 14169
-        y: 12187
-        width: 436
-        height: 614
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 13350
+        y: 12030
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1096,12 +1096,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_21
       rect:
         serializedVersion: 2
-        x: 819
-        y: 11385
-        width: 436
-        height: 614
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 11228
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1118,12 +1118,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_22
       rect:
         serializedVersion: 2
-        x: 3044
-        y: 11385
-        width: 436
-        height: 614
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2225
+        y: 11228
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1140,12 +1140,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_23
       rect:
         serializedVersion: 2
-        x: 5269
-        y: 11385
-        width: 436
-        height: 614
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4450
+        y: 11228
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1162,12 +1162,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_24
       rect:
         serializedVersion: 2
-        x: 7494
-        y: 11385
-        width: 436
-        height: 614
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6675
+        y: 11228
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1184,12 +1184,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_25
       rect:
         serializedVersion: 2
-        x: 9719
-        y: 11385
-        width: 436
-        height: 614
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8900
+        y: 11228
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1206,12 +1206,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_26
       rect:
         serializedVersion: 2
-        x: 11944
-        y: 11385
-        width: 436
-        height: 614
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 11125
+        y: 11228
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1228,12 +1228,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_27
       rect:
         serializedVersion: 2
-        x: 14169
-        y: 11385
-        width: 436
-        height: 614
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 13350
+        y: 11228
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1250,12 +1250,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_28
       rect:
         serializedVersion: 2
-        x: 819
-        y: 10583
-        width: 436
-        height: 614
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 10426
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1272,12 +1272,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_29
       rect:
         serializedVersion: 2
-        x: 3044
-        y: 10583
-        width: 436
-        height: 614
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2225
+        y: 10426
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1294,12 +1294,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_30
       rect:
         serializedVersion: 2
-        x: 5269
-        y: 10583
-        width: 436
-        height: 614
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4450
+        y: 10426
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1316,12 +1316,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_31
       rect:
         serializedVersion: 2
-        x: 7497
-        y: 10584
-        width: 436
-        height: 597
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6675
+        y: 10426
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1338,12 +1338,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_32
       rect:
         serializedVersion: 2
-        x: 9722
-        y: 10584
-        width: 436
-        height: 597
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8900
+        y: 10426
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1360,12 +1360,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_33
       rect:
         serializedVersion: 2
-        x: 11919
-        y: 10583
-        width: 450
-        height: 611
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 11125
+        y: 10426
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1382,12 +1382,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_34
       rect:
         serializedVersion: 2
-        x: 14144
-        y: 10583
-        width: 450
-        height: 611
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 13350
+        y: 10426
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1404,12 +1404,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_35
       rect:
         serializedVersion: 2
-        x: 770
-        y: 9786
-        width: 470
-        height: 602
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 9624
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1426,12 +1426,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_36
       rect:
         serializedVersion: 2
-        x: 2995
-        y: 9786
-        width: 470
-        height: 602
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2225
+        y: 9624
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1448,12 +1448,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_37
       rect:
         serializedVersion: 2
-        x: 5218
-        y: 9786
-        width: 461
-        height: 593
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4450
+        y: 9624
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1470,12 +1470,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_38
       rect:
         serializedVersion: 2
-        x: 7443
-        y: 9786
-        width: 461
-        height: 593
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6675
+        y: 9624
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1492,12 +1492,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_39
       rect:
         serializedVersion: 2
-        x: 9550
-        y: 9786
-        width: 570
-        height: 590
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8900
+        y: 9624
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1514,12 +1514,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_40
       rect:
         serializedVersion: 2
-        x: 11775
-        y: 9786
-        width: 570
-        height: 590
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 11125
+        y: 9624
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1536,12 +1536,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_41
       rect:
         serializedVersion: 2
-        x: 14003
-        y: 9786
-        width: 560
-        height: 590
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 13350
+        y: 9624
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1558,12 +1558,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_42
       rect:
         serializedVersion: 2
-        x: 653
-        y: 8984
-        width: 560
-        height: 590
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 8822
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1580,12 +1580,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_43
       rect:
         serializedVersion: 2
-        x: 2884
-        y: 8984
-        width: 548
-        height: 590
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2225
+        y: 8822
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1602,12 +1602,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_44
       rect:
         serializedVersion: 2
-        x: 5109
-        y: 8984
-        width: 548
-        height: 590
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4450
+        y: 8822
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1624,12 +1624,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_45
       rect:
         serializedVersion: 2
-        x: 7302
-        y: 8982
-        width: 577
-        height: 592
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6675
+        y: 8822
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1646,12 +1646,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_46
       rect:
         serializedVersion: 2
-        x: 9527
-        y: 8982
-        width: 577
-        height: 592
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8900
+        y: 8822
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1668,12 +1668,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_47
       rect:
         serializedVersion: 2
-        x: 11776
-        y: 8984
-        width: 552
-        height: 605
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 11125
+        y: 8822
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1690,12 +1690,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_48
       rect:
         serializedVersion: 2
-        x: 14001
-        y: 8984
-        width: 552
-        height: 605
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 13350
+        y: 8822
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1712,12 +1712,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_49
       rect:
         serializedVersion: 2
-        x: 632
-        y: 8138
-        width: 570
-        height: 638
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 8020
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1734,12 +1734,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_50
       rect:
         serializedVersion: 2
-        x: 2857
-        y: 8138
-        width: 570
-        height: 638
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2225
+        y: 8020
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1756,12 +1756,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_51
       rect:
         serializedVersion: 2
-        x: 5096
-        y: 8175
-        width: 556
-        height: 595
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4450
+        y: 8020
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1778,12 +1778,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_52
       rect:
         serializedVersion: 2
-        x: 7321
-        y: 8175
-        width: 556
-        height: 595
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6675
+        y: 8020
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1800,12 +1800,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_53
       rect:
         serializedVersion: 2
-        x: 9612
-        y: 8182
-        width: 490
-        height: 588
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8900
+        y: 8020
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1822,12 +1822,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_54
       rect:
         serializedVersion: 2
-        x: 11837
-        y: 8182
-        width: 490
-        height: 588
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 11125
+        y: 8020
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1844,12 +1844,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_55
       rect:
         serializedVersion: 2
-        x: 14073
-        y: 8182
-        width: 479
-        height: 588
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 13350
+        y: 8020
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1866,12 +1866,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_56
       rect:
         serializedVersion: 2
-        x: 723
-        y: 7380
-        width: 479
-        height: 588
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 7218
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1888,12 +1888,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_57
       rect:
         serializedVersion: 2
-        x: 2960
-        y: 7380
-        width: 467
-        height: 588
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2225
+        y: 7218
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1910,12 +1910,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_58
       rect:
         serializedVersion: 2
-        x: 5185
-        y: 7380
-        width: 467
-        height: 588
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4450
+        y: 7218
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1932,12 +1932,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_59
       rect:
         serializedVersion: 2
-        x: 7410
-        y: 7380
-        width: 474
-        height: 588
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6675
+        y: 7218
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1954,12 +1954,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_60
       rect:
         serializedVersion: 2
-        x: 9635
-        y: 7380
-        width: 474
-        height: 588
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8900
+        y: 7218
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1976,12 +1976,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_61
       rect:
         serializedVersion: 2
-        x: 11886
-        y: 7380
-        width: 429
-        height: 591
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 11125
+        y: 7218
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1998,12 +1998,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_62
       rect:
         serializedVersion: 2
-        x: 14111
-        y: 7380
-        width: 429
-        height: 591
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 13350
+        y: 7218
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2020,12 +2020,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_63
       rect:
         serializedVersion: 2
-        x: 786
-        y: 6578
-        width: 411
-        height: 590
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 6416
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2042,12 +2042,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_64
       rect:
         serializedVersion: 2
-        x: 3011
-        y: 6578
-        width: 411
-        height: 590
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2225
+        y: 6416
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2064,12 +2064,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_65
       rect:
         serializedVersion: 2
-        x: 5236
-        y: 6579
-        width: 430
-        height: 594
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4450
+        y: 6416
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2086,12 +2086,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_66
       rect:
         serializedVersion: 2
-        x: 7461
-        y: 6579
-        width: 430
-        height: 594
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6675
+        y: 6416
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2108,12 +2108,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_67
       rect:
         serializedVersion: 2
-        x: 9570
-        y: 6578
-        width: 703
-        height: 601
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8900
+        y: 6416
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2130,12 +2130,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_68
       rect:
         serializedVersion: 2
-        x: 11795
-        y: 6578
-        width: 703
-        height: 601
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 11125
+        y: 6416
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2152,12 +2152,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_69
       rect:
         serializedVersion: 2
-        x: 13925
-        y: 6573
-        width: 892
-        height: 569
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 13350
+        y: 6416
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2174,12 +2174,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_70
       rect:
         serializedVersion: 2
-        x: 575
-        y: 5771
-        width: 892
-        height: 569
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 5614
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2196,12 +2196,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_71
       rect:
         serializedVersion: 2
-        x: 2715
-        y: 5770
-        width: 1100
-        height: 613
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2225
+        y: 5614
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2218,12 +2218,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_72
       rect:
         serializedVersion: 2
-        x: 4940
-        y: 5770
-        width: 1100
-        height: 613
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4450
+        y: 5614
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2240,12 +2240,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_73
       rect:
         serializedVersion: 2
-        x: 7161
-        y: 5771
-        width: 1441
-        height: 610
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6675
+        y: 5614
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2262,12 +2262,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_74
       rect:
         serializedVersion: 2
-        x: 9386
-        y: 5771
-        width: 1441
-        height: 610
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8900
+        y: 5614
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2284,12 +2284,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_75
       rect:
         serializedVersion: 2
-        x: 11501
-        y: 6073
-        width: 233
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 11125
+        y: 5614
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2306,12 +2306,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_76
       rect:
         serializedVersion: 2
-        x: 11506
-        y: 6126
-        width: 105
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 13350
+        y: 5614
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2328,12 +2328,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_77
       rect:
         serializedVersion: 2
-        x: 11930
-        y: 5771
-        width: 584
-        height: 613
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 4812
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2350,12 +2350,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_78
       rect:
         serializedVersion: 2
-        x: 12967
-        y: 6017
-        width: 290
-        height: 235
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2225
+        y: 4812
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2372,12 +2372,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_79
       rect:
         serializedVersion: 2
-        x: 13726
-        y: 6073
-        width: 233
-        height: 72
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4450
+        y: 4812
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2394,12 +2394,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_80
       rect:
         serializedVersion: 2
-        x: 13731
-        y: 6126
-        width: 105
-        height: 31
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6675
+        y: 4812
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2416,12 +2416,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_81
       rect:
         serializedVersion: 2
-        x: 14155
-        y: 5771
-        width: 584
-        height: 613
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8900
+        y: 4812
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2438,12 +2438,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_82
       rect:
         serializedVersion: 2
-        x: 15192
-        y: 6017
-        width: 290
-        height: 235
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 11125
+        y: 4812
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2460,12 +2460,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_83
       rect:
         serializedVersion: 2
-        x: 2649
-        y: 6000
-        width: 18
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 13350
+        y: 4812
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2482,12 +2482,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_84
       rect:
         serializedVersion: 2
-        x: 4874
-        y: 6000
-        width: 18
-        height: 21
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 4010
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2504,12 +2504,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_85
       rect:
         serializedVersion: 2
-        x: 6949
-        y: 5993
-        width: 22
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2225
+        y: 4010
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2526,12 +2526,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_86
       rect:
         serializedVersion: 2
-        x: 7032
-        y: 5908
-        width: 350
-        height: 206
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4450
+        y: 4010
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2548,12 +2548,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_87
       rect:
         serializedVersion: 2
-        x: 9174
-        y: 5993
-        width: 22
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6675
+        y: 4010
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2570,12 +2570,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_88
       rect:
         serializedVersion: 2
-        x: 9257
-        y: 5908
-        width: 350
-        height: 206
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8900
+        y: 4010
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2592,12 +2592,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_89
       rect:
         serializedVersion: 2
-        x: 11193
-        y: 5969
-        width: 28
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 11125
+        y: 4010
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2614,12 +2614,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_90
       rect:
         serializedVersion: 2
-        x: 11298
-        y: 5845
-        width: 220
-        height: 196
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 13350
+        y: 4010
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2636,12 +2636,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_91
       rect:
         serializedVersion: 2
-        x: 13418
-        y: 5969
-        width: 28
-        height: 35
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 3208
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2658,12 +2658,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_92
       rect:
         serializedVersion: 2
-        x: 13523
-        y: 5845
-        width: 220
-        height: 196
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2225
+        y: 3208
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2680,12 +2680,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_93
       rect:
         serializedVersion: 2
-        x: 2691
-        y: 5961
-        width: 6
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4450
+        y: 3208
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2702,12 +2702,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_94
       rect:
         serializedVersion: 2
-        x: 4916
-        y: 5961
-        width: 6
-        height: 11
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6675
+        y: 3208
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2724,12 +2724,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_95
       rect:
         serializedVersion: 2
-        x: 7003
-        y: 5950
-        width: 6
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8900
+        y: 3208
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2746,12 +2746,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_96
       rect:
         serializedVersion: 2
-        x: 9228
-        y: 5950
-        width: 6
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 11125
+        y: 3208
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2768,12 +2768,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_97
       rect:
         serializedVersion: 2
-        x: 11261
-        y: 5906
-        width: 7
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 13350
+        y: 3208
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2790,12 +2790,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_98
       rect:
         serializedVersion: 2
-        x: 11743
-        y: 5846
-        width: 126
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 2406
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2812,12 +2812,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_99
       rect:
         serializedVersion: 2
-        x: 13486
-        y: 5906
-        width: 7
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2225
+        y: 2406
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2834,12 +2834,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_100
       rect:
         serializedVersion: 2
-        x: 13968
-        y: 5846
-        width: 126
-        height: 67
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4450
+        y: 2406
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2856,12 +2856,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_101
       rect:
         serializedVersion: 2
-        x: 826
-        y: 4969
-        width: 463
-        height: 613
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6675
+        y: 2406
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2878,12 +2878,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_102
       rect:
         serializedVersion: 2
-        x: 1259
-        y: 5503
-        width: 38
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8900
+        y: 2406
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2900,12 +2900,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_103
       rect:
         serializedVersion: 2
-        x: 3051
-        y: 4969
-        width: 463
-        height: 613
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 11125
+        y: 2406
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2922,12 +2922,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_104
       rect:
         serializedVersion: 2
-        x: 3484
-        y: 5503
-        width: 38
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 13350
+        y: 2406
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2944,12 +2944,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_105
       rect:
         serializedVersion: 2
-        x: 5242
-        y: 5504
-        width: 24
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 1604
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2966,12 +2966,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_106
       rect:
         serializedVersion: 2
-        x: 5276
-        y: 4969
-        width: 461
-        height: 613
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2225
+        y: 1604
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -2988,12 +2988,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_107
       rect:
         serializedVersion: 2
-        x: 7467
-        y: 5504
-        width: 24
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4450
+        y: 1604
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3010,12 +3010,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_108
       rect:
         serializedVersion: 2
-        x: 7501
-        y: 4969
-        width: 461
-        height: 613
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6675
+        y: 1604
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3032,12 +3032,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_109
       rect:
         serializedVersion: 2
-        x: 9729
-        y: 4969
-        width: 428
-        height: 613
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8900
+        y: 1604
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3054,12 +3054,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_110
       rect:
         serializedVersion: 2
-        x: 11954
-        y: 4969
-        width: 428
-        height: 613
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 11125
+        y: 1604
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3076,12 +3076,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_111
       rect:
         serializedVersion: 2
-        x: 14165
-        y: 4969
-        width: 435
-        height: 613
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 13350
+        y: 1604
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3098,12 +3098,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_112
       rect:
         serializedVersion: 2
-        x: 685
-        y: 5400
-        width: 146
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 802
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3120,12 +3120,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_113
       rect:
         serializedVersion: 2
-        x: 1880
-        y: 5225
-        width: 318
-        height: 247
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2225
+        y: 802
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3142,12 +3142,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_114
       rect:
         serializedVersion: 2
-        x: 2910
-        y: 5400
-        width: 146
-        height: 63
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4450
+        y: 802
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3164,12 +3164,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_115
       rect:
         serializedVersion: 2
-        x: 4105
-        y: 5225
-        width: 318
-        height: 247
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6675
+        y: 802
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3186,12 +3186,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_116
       rect:
         serializedVersion: 2
-        x: 6655
-        y: 5346
-        width: 21
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8900
+        y: 802
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3208,12 +3208,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_117
       rect:
         serializedVersion: 2
-        x: 8880
-        y: 5346
-        width: 21
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 11125
+        y: 802
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3230,12 +3230,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_118
       rect:
         serializedVersion: 2
-        x: 32
-        y: 5069
-        width: 104
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 13350
+        y: 802
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3252,12 +3252,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_119
       rect:
         serializedVersion: 2
-        x: 2257
-        y: 5069
-        width: 104
-        height: 163
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 0
+        y: 0
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3274,12 +3274,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_120
       rect:
         serializedVersion: 2
-        x: 4449
-        y: 5133
-        width: 17
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2225
+        y: 0
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3296,12 +3296,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_121
       rect:
         serializedVersion: 2
-        x: 6674
-        y: 5133
-        width: 17
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 4450
+        y: 0
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3318,12 +3318,12 @@ TextureImporter:
       name: Corgi_Fu_Hurt_122
       rect:
         serializedVersion: 2
-        x: 701
-        y: 4864
-        width: 718
-        height: 169
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 6675
+        y: 0
+        width: 2225
+        height: 802
+      alignment: 9
+      pivot: {x: 0.454, y: 0.198}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -3336,935 +3336,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_123
-      rect:
-        serializedVersion: 2
-        x: 2926
-        y: 4864
-        width: 718
-        height: 169
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: acb8366908a515510800000000000000
-      internalID: 1536108456235469770
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_124
-      rect:
-        serializedVersion: 2
-        x: 5416
-        y: 4811
-        width: 150
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a217ed8fc7a0a5180800000000000000
-      internalID: -9125970163045338838
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_125
-      rect:
-        serializedVersion: 2
-        x: 7641
-        y: 4811
-        width: 150
-        height: 50
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 81addf30a7b1413d0800000000000000
-      internalID: -3236932021305615848
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_126
-      rect:
-        serializedVersion: 2
-        x: 815
-        y: 4167
-        width: 435
-        height: 613
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b3829c79ffc2f8f40800000000000000
-      internalID: 5732850326940756027
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_127
-      rect:
-        serializedVersion: 2
-        x: 3021
-        y: 4167
-        width: 443
-        height: 613
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ff509c3267995ded0800000000000000
-      internalID: -2389835294564612609
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_128
-      rect:
-        serializedVersion: 2
-        x: 5246
-        y: 4167
-        width: 443
-        height: 613
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2edc41432d2352ad0800000000000000
-      internalID: -2727718120904667678
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_129
-      rect:
-        serializedVersion: 2
-        x: 7462
-        y: 4167
-        width: 448
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3a9c2af8c7c78dfa0800000000000000
-      internalID: -5775729647675061853
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_130
-      rect:
-        serializedVersion: 2
-        x: 9687
-        y: 4167
-        width: 448
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4e70dc9d7300641f0800000000000000
-      internalID: -1061160422321879068
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_131
-      rect:
-        serializedVersion: 2
-        x: 11904
-        y: 4167
-        width: 456
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5d294fcb7597b3dd0800000000000000
-      internalID: -2505275349962288427
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_132
-      rect:
-        serializedVersion: 2
-        x: 14129
-        y: 4167
-        width: 456
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 16d6f1fd26d2c02d0800000000000000
-      internalID: -3311221723350733471
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_133
-      rect:
-        serializedVersion: 2
-        x: 773
-        y: 3365
-        width: 462
-        height: 611
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2a5bcfd13dbee24c0800000000000000
-      internalID: -4310248501373258334
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_134
-      rect:
-        serializedVersion: 2
-        x: 2998
-        y: 3365
-        width: 462
-        height: 611
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 080517240c7efc310800000000000000
-      internalID: 1427614419834196096
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_135
-      rect:
-        serializedVersion: 2
-        x: 5221
-        y: 3365
-        width: 464
-        height: 611
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 6cdffd5fd9f8cd3f0800000000000000
-      internalID: -874666319018983994
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_136
-      rect:
-        serializedVersion: 2
-        x: 7446
-        y: 3365
-        width: 464
-        height: 611
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8f976ca002fb5fdd0800000000000000
-      internalID: -2452844277692728840
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_137
-      rect:
-        serializedVersion: 2
-        x: 9679
-        y: 3365
-        width: 456
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5861b302849453c90800000000000000
-      internalID: -7190760655899912571
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_138
-      rect:
-        serializedVersion: 2
-        x: 11904
-        y: 3365
-        width: 456
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 34e404472d417d7b0800000000000000
-      internalID: -5199664350649889213
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_139
-      rect:
-        serializedVersion: 2
-        x: 14130
-        y: 3365
-        width: 455
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 199da80f017343fa0800000000000000
-      internalID: -5821967872388572783
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_140
-      rect:
-        serializedVersion: 2
-        x: 780
-        y: 2563
-        width: 455
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5c35b6c66e85c97c0800000000000000
-      internalID: -4063275017110334523
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_141
-      rect:
-        serializedVersion: 2
-        x: 3005
-        y: 2563
-        width: 455
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bb33eb680a6b5a770800000000000000
-      internalID: 8621497862242317243
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_142
-      rect:
-        serializedVersion: 2
-        x: 5230
-        y: 2563
-        width: 455
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 820e1188196fbe0d0800000000000000
-      internalID: -3392346789379973080
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_143
-      rect:
-        serializedVersion: 2
-        x: 7455
-        y: 2563
-        width: 459
-        height: 609
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cd68745b7a242ae60800000000000000
-      internalID: 7972007578467534556
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_144
-      rect:
-        serializedVersion: 2
-        x: 9680
-        y: 2563
-        width: 459
-        height: 609
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0bc3e73ca88414e50800000000000000
-      internalID: 6791789473873935536
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_145
-      rect:
-        serializedVersion: 2
-        x: 11905
-        y: 2567
-        width: 446
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 78ea7dc97f67fe940800000000000000
-      internalID: 5327607690062966407
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_146
-      rect:
-        serializedVersion: 2
-        x: 14130
-        y: 2567
-        width: 446
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a632ff928b62e3e30800000000000000
-      internalID: 4485064851328017258
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_147
-      rect:
-        serializedVersion: 2
-        x: 780
-        y: 1762
-        width: 444
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 947715023196203a0800000000000000
-      internalID: -6700677764706371767
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_148
-      rect:
-        serializedVersion: 2
-        x: 3005
-        y: 1762
-        width: 444
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d91c2e379bf580a40800000000000000
-      internalID: 5334619008738181533
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_149
-      rect:
-        serializedVersion: 2
-        x: 5231
-        y: 1761
-        width: 458
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: db647ef20209bc1f0800000000000000
-      internalID: -1023566022379616579
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_150
-      rect:
-        serializedVersion: 2
-        x: 7456
-        y: 1761
-        width: 458
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 357ed209807dbf8c0800000000000000
-      internalID: -3964338615190952109
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_151
-      rect:
-        serializedVersion: 2
-        x: 9681
-        y: 1761
-        width: 467
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 29a794a1975473270800000000000000
-      internalID: 8230123230477253266
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_152
-      rect:
-        serializedVersion: 2
-        x: 11906
-        y: 1761
-        width: 467
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 1b6f0220fb0747ed0800000000000000
-      internalID: -2417183134314334543
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_153
-      rect:
-        serializedVersion: 2
-        x: 14131
-        y: 1761
-        width: 468
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cce5e328a5c992970800000000000000
-      internalID: 8730681265180532428
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_154
-      rect:
-        serializedVersion: 2
-        x: 781
-        y: 959
-        width: 468
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0cf5b8e33ca2ff9a0800000000000000
-      internalID: -6197187544182202432
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_155
-      rect:
-        serializedVersion: 2
-        x: 3006
-        y: 959
-        width: 467
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 32bd409dbeb30bcf0800000000000000
-      internalID: -238624896106308829
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_156
-      rect:
-        serializedVersion: 2
-        x: 5231
-        y: 959
-        width: 467
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e632e1941198f01d0800000000000000
-      internalID: -3382334087797791890
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_157
-      rect:
-        serializedVersion: 2
-        x: 7456
-        y: 959
-        width: 467
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2fc7af5456dfe9ad0800000000000000
-      internalID: -2693436915713409806
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_158
-      rect:
-        serializedVersion: 2
-        x: 9681
-        y: 959
-        width: 467
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d63c606ea7d1e43f0800000000000000
-      internalID: -914761260627213459
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_159
-      rect:
-        serializedVersion: 2
-        x: 11906
-        y: 959
-        width: 467
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 32200a4ea62aea240800000000000000
-      internalID: 4804956432436822563
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_160
-      rect:
-        serializedVersion: 2
-        x: 14131
-        y: 959
-        width: 467
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5b0b9a06371b62550800000000000000
-      internalID: 6135786651439968437
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_161
-      rect:
-        serializedVersion: 2
-        x: 780
-        y: 158
-        width: 468
-        height: 611
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e1fc68e29a49b3040800000000000000
-      internalID: 4628456496404287262
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_162
-      rect:
-        serializedVersion: 2
-        x: 3005
-        y: 158
-        width: 468
-        height: 611
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b0e38e0d7c7cec800800000000000000
-      internalID: 634664258523119115
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_163
-      rect:
-        serializedVersion: 2
-        x: 5243
-        y: 157
-        width: 455
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 792cd43a5814111b0800000000000000
-      internalID: -5687692812165987689
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Corgi_Fu_Hurt_164
-      rect:
-        serializedVersion: 2
-        x: 7468
-        y: 157
-        width: 455
-        height: 612
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 561646eab936cfaa0800000000000000
-      internalID: -6125911872833822363
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 115ebe21604629b48a496c9707c04a79
     internalID: 0
     vertices: []
     indices: 
@@ -4272,7 +3348,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":7.0,"y":18.0},"gridSpriteSize":{"x":2225.0,"y":802.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.45399999618530276,"y":0.1979999989271164},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Corgi_Fu_Hurt_0: -202345287524920012
       Corgi_Fu_Hurt_1: 7158741807741511157
@@ -4302,52 +3380,10 @@ TextureImporter:
       Corgi_Fu_Hurt_120: 2640456965690014799
       Corgi_Fu_Hurt_121: -1782678645749198972
       Corgi_Fu_Hurt_122: -1443118814332276023
-      Corgi_Fu_Hurt_123: 1536108456235469770
-      Corgi_Fu_Hurt_124: -9125970163045338838
-      Corgi_Fu_Hurt_125: -3236932021305615848
-      Corgi_Fu_Hurt_126: 5732850326940756027
-      Corgi_Fu_Hurt_127: -2389835294564612609
-      Corgi_Fu_Hurt_128: -2727718120904667678
-      Corgi_Fu_Hurt_129: -5775729647675061853
       Corgi_Fu_Hurt_13: -6212861545625375220
-      Corgi_Fu_Hurt_130: -1061160422321879068
-      Corgi_Fu_Hurt_131: -2505275349962288427
-      Corgi_Fu_Hurt_132: -3311221723350733471
-      Corgi_Fu_Hurt_133: -4310248501373258334
-      Corgi_Fu_Hurt_134: 1427614419834196096
-      Corgi_Fu_Hurt_135: -874666319018983994
-      Corgi_Fu_Hurt_136: -2452844277692728840
-      Corgi_Fu_Hurt_137: -7190760655899912571
-      Corgi_Fu_Hurt_138: -5199664350649889213
-      Corgi_Fu_Hurt_139: -5821967872388572783
       Corgi_Fu_Hurt_14: 6908092844627003462
-      Corgi_Fu_Hurt_140: -4063275017110334523
-      Corgi_Fu_Hurt_141: 8621497862242317243
-      Corgi_Fu_Hurt_142: -3392346789379973080
-      Corgi_Fu_Hurt_143: 7972007578467534556
-      Corgi_Fu_Hurt_144: 6791789473873935536
-      Corgi_Fu_Hurt_145: 5327607690062966407
-      Corgi_Fu_Hurt_146: 4485064851328017258
-      Corgi_Fu_Hurt_147: -6700677764706371767
-      Corgi_Fu_Hurt_148: 5334619008738181533
-      Corgi_Fu_Hurt_149: -1023566022379616579
       Corgi_Fu_Hurt_15: 2871418822621671280
-      Corgi_Fu_Hurt_150: -3964338615190952109
-      Corgi_Fu_Hurt_151: 8230123230477253266
-      Corgi_Fu_Hurt_152: -2417183134314334543
-      Corgi_Fu_Hurt_153: 8730681265180532428
-      Corgi_Fu_Hurt_154: -6197187544182202432
-      Corgi_Fu_Hurt_155: -238624896106308829
-      Corgi_Fu_Hurt_156: -3382334087797791890
-      Corgi_Fu_Hurt_157: -2693436915713409806
-      Corgi_Fu_Hurt_158: -914761260627213459
-      Corgi_Fu_Hurt_159: 4804956432436822563
       Corgi_Fu_Hurt_16: -8581606930265685354
-      Corgi_Fu_Hurt_160: 6135786651439968437
-      Corgi_Fu_Hurt_161: 4628456496404287262
-      Corgi_Fu_Hurt_162: 634664258523119115
-      Corgi_Fu_Hurt_163: -5687692812165987689
-      Corgi_Fu_Hurt_164: -6125911872833822363
       Corgi_Fu_Hurt_17: -1040216940840081374
       Corgi_Fu_Hurt_18: 9054635333968324857
       Corgi_Fu_Hurt_19: 4871961121664258239

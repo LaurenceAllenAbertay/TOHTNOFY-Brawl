@@ -1,1306 +1,1306 @@
 fileFormatVersion: 2
-guid: 5e734b258bf38fc47b66c8671e33936a
+guid: 6a2a7ad908fc5754cb84c3eeba752904
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4049353971949860654
-    second: Heads_Up_0
+      213: -7030021235811521466
+    second: HeadsUp_hurt_0
   - first:
-      213: 4226290401504660355
-    second: Heads_Up_1
+      213: -6285631573377648739
+    second: HeadsUp_hurt_1
   - first:
-      213: -476554290501213953
-    second: Heads_Up_2
+      213: 5272205920098388303
+    second: HeadsUp_hurt_2
   - first:
-      213: 8451882897636171896
-    second: Heads_Up_3
+      213: -2330336207334430154
+    second: HeadsUp_hurt_3
   - first:
-      213: -5779925578145934861
-    second: Heads_Up_4
+      213: 660886969245619962
+    second: HeadsUp_hurt_4
   - first:
-      213: -5187308326798464356
-    second: Heads_Up_5
+      213: 6724333954987794715
+    second: HeadsUp_hurt_5
   - first:
-      213: 6044939776556626429
-    second: Heads_Up_6
+      213: 7401146491910870348
+    second: HeadsUp_hurt_6
   - first:
-      213: 3444477064895342866
-    second: Heads_Up_7
+      213: -274921308440427152
+    second: HeadsUp_hurt_7
   - first:
-      213: -3356602780710478050
-    second: Heads_Up_8
+      213: 9069337264607387297
+    second: HeadsUp_hurt_8
   - first:
-      213: 6562243711824783844
-    second: Heads_Up_9
+      213: -7673090865899991776
+    second: HeadsUp_hurt_9
   - first:
-      213: 1697082064610629770
-    second: Heads_Up_10
+      213: -903119433842219188
+    second: HeadsUp_hurt_10
   - first:
-      213: -1116676284447620098
-    second: Heads_Up_11
+      213: 3760925814390668948
+    second: HeadsUp_hurt_11
   - first:
-      213: 253169492379312021
-    second: Heads_Up_12
+      213: 6988089482053957739
+    second: HeadsUp_hurt_12
   - first:
-      213: -1610315064791886555
-    second: Heads_Up_13
+      213: 962888014009157663
+    second: HeadsUp_hurt_13
   - first:
-      213: -6949961045169146967
-    second: Heads_Up_14
+      213: -148265795933798019
+    second: HeadsUp_hurt_14
   - first:
-      213: 1350183704152229665
-    second: Heads_Up_15
+      213: -8523999989244864074
+    second: HeadsUp_hurt_15
   - first:
-      213: -8208080974023812754
-    second: Heads_Up_16
+      213: -1053186126867583981
+    second: HeadsUp_hurt_16
   - first:
-      213: -1414299230064330521
-    second: Heads_Up_17
+      213: -6715429394864804653
+    second: HeadsUp_hurt_17
   - first:
-      213: -1984317121442226333
-    second: Heads_Up_18
+      213: -1234687039994504708
+    second: HeadsUp_hurt_18
   - first:
-      213: -8515963397544582756
-    second: Heads_Up_19
+      213: 1227262625322077255
+    second: HeadsUp_hurt_19
   - first:
-      213: -710054413724079974
-    second: Heads_Up_20
+      213: 3398656668058455479
+    second: HeadsUp_hurt_20
   - first:
-      213: -6561707694756963573
-    second: Heads_Up_21
+      213: -4924874872567267733
+    second: HeadsUp_hurt_21
   - first:
-      213: -3756890581647511602
-    second: Heads_Up_22
+      213: 77825185251258717
+    second: HeadsUp_hurt_22
   - first:
-      213: -2473308457920083626
-    second: Heads_Up_23
+      213: -5293522572662815017
+    second: HeadsUp_hurt_23
   - first:
-      213: 3654691976267291885
-    second: Heads_Up_24
+      213: 7585610609094887757
+    second: HeadsUp_hurt_24
   - first:
-      213: 3324304276929793604
-    second: Heads_Up_25
+      213: 6192999360746581811
+    second: HeadsUp_hurt_25
   - first:
-      213: -5860797482904525635
-    second: Heads_Up_26
+      213: -388671349821599889
+    second: HeadsUp_hurt_26
   - first:
-      213: 3398329008201958190
-    second: Heads_Up_27
+      213: -2053004491092465046
+    second: HeadsUp_hurt_27
   - first:
-      213: 4581732038348653302
-    second: Heads_Up_28
+      213: 2668632056245604114
+    second: HeadsUp_hurt_28
   - first:
-      213: 399363092149839627
-    second: Heads_Up_29
+      213: 7917195391006480069
+    second: HeadsUp_hurt_29
   - first:
-      213: -1399936653866676901
-    second: Heads_Up_30
+      213: 4331580032755701069
+    second: HeadsUp_hurt_30
   - first:
-      213: 5775762200322993800
-    second: Heads_Up_31
+      213: 6780609169379752636
+    second: HeadsUp_hurt_31
   - first:
-      213: -7749380984563629763
-    second: Heads_Up_32
+      213: 3426726259541993960
+    second: HeadsUp_hurt_32
   - first:
-      213: -1619709569154723319
-    second: Heads_Up_33
+      213: 455740438382701250
+    second: HeadsUp_hurt_33
   - first:
-      213: 1314430900862861074
-    second: Heads_Up_34
+      213: 2454780519946078007
+    second: HeadsUp_hurt_34
   - first:
-      213: -1198505657074831298
-    second: Heads_Up_35
+      213: -3567017374358407703
+    second: HeadsUp_hurt_35
   - first:
-      213: 6684218159336283776
-    second: Heads_Up_36
+      213: 6891662283990044586
+    second: HeadsUp_hurt_36
   - first:
-      213: 2437606426518751035
-    second: Heads_Up_37
+      213: 5087578697278090953
+    second: HeadsUp_hurt_37
   - first:
-      213: 3341127441688717561
-    second: Heads_Up_38
+      213: 4313857283591200562
+    second: HeadsUp_hurt_38
   - first:
-      213: -1770705617823680392
-    second: Heads_Up_39
+      213: -4743742638711593472
+    second: HeadsUp_hurt_39
   - first:
-      213: 7289441090751148465
-    second: Heads_Up_40
+      213: 2897958783243780233
+    second: HeadsUp_hurt_40
   - first:
-      213: 2195087563115359873
-    second: Heads_Up_41
+      213: -2114186549554949840
+    second: HeadsUp_hurt_41
   - first:
-      213: -4185769366207573321
-    second: Heads_Up_42
+      213: -8574699577837785092
+    second: HeadsUp_hurt_42
   - first:
-      213: -8432894777287105765
-    second: Heads_Up_43
+      213: 3964890708406289600
+    second: HeadsUp_hurt_43
   - first:
-      213: -3640453299856287215
-    second: Heads_Up_44
+      213: 4074183918251646654
+    second: HeadsUp_hurt_44
   - first:
-      213: -5173057284588654867
-    second: Heads_Up_45
+      213: -791151062420916832
+    second: HeadsUp_hurt_45
   - first:
-      213: 3006234079674794919
-    second: Heads_Up_46
+      213: 4643297944112662287
+    second: HeadsUp_hurt_46
   - first:
-      213: 3546807075095860791
-    second: Heads_Up_47
+      213: 496756600003626344
+    second: HeadsUp_hurt_47
   - first:
-      213: -7273460344338876933
-    second: Heads_Up_48
+      213: -66622973298107404
+    second: HeadsUp_hurt_48
   - first:
-      213: 6777053152297490634
-    second: Heads_Up_49
+      213: -3430480396630974124
+    second: HeadsUp_hurt_49
   - first:
-      213: 866024818721028801
-    second: Heads_Up_50
+      213: -5566084768939594779
+    second: HeadsUp_hurt_50
   - first:
-      213: 1270721681775923790
-    second: Heads_Up_51
+      213: 7872258831285600044
+    second: HeadsUp_hurt_51
   - first:
-      213: -6281066910094870292
-    second: Heads_Up_52
+      213: -2376007406610465029
+    second: HeadsUp_hurt_52
   - first:
-      213: -2856788066745934798
-    second: Heads_Up_53
+      213: 6055117167298371617
+    second: HeadsUp_hurt_53
   - first:
-      213: -5816006032386827483
-    second: Heads_Up_54
+      213: -1981729861173470233
+    second: HeadsUp_hurt_54
   - first:
-      213: -6796141057323846512
-    second: Heads_Up_55
+      213: 8579352618228205216
+    second: HeadsUp_hurt_55
   - first:
-      213: -107275198024704595
-    second: Heads_Up_56
+      213: 5279843032803369067
+    second: HeadsUp_hurt_56
   - first:
-      213: 2114081646980089127
-    second: Heads_Up_57
+      213: -5515133737697521791
+    second: HeadsUp_hurt_57
   - first:
-      213: 5993659996390802656
-    second: Heads_Up_58
+      213: -25833020263209145
+    second: HeadsUp_hurt_58
   - first:
-      213: -6127241749609960508
-    second: Heads_Up_59
+      213: -7819502865245982477
+    second: HeadsUp_hurt_59
   - first:
-      213: -2986514158628745247
-    second: Heads_Up_60
+      213: -408576020963319262
+    second: HeadsUp_hurt_60
   - first:
-      213: -8446320444887167096
-    second: Heads_Up_61
+      213: 8569413508150269480
+    second: HeadsUp_hurt_61
   - first:
-      213: -8181245496972212387
-    second: Heads_Up_62
+      213: 2059117762560315999
+    second: HeadsUp_hurt_62
   - first:
-      213: 1680612247508881064
-    second: Heads_Up_63
+      213: -7216670645907202157
+    second: HeadsUp_hurt_63
   - first:
-      213: -5041066556645629148
-    second: Heads_Up_64
+      213: 654570268012750993
+    second: HeadsUp_hurt_64
   - first:
-      213: -5203312215322966574
-    second: Heads_Up_65
+      213: 3251621374220247501
+    second: HeadsUp_hurt_65
   - first:
-      213: 6554130232526862094
-    second: Heads_Up_66
+      213: -7746694991740570
+    second: HeadsUp_hurt_66
   - first:
-      213: -7822282608047551611
-    second: Heads_Up_67
+      213: -4361459494584411909
+    second: HeadsUp_hurt_67
   - first:
-      213: -7103397681673913097
-    second: Heads_Up_68
+      213: 3381316794402204165
+    second: HeadsUp_hurt_68
   - first:
-      213: -260389031178208388
-    second: Heads_Up_69
+      213: -654899715985457342
+    second: HeadsUp_hurt_69
   - first:
-      213: -6645701501568415232
-    second: Heads_Up_70
+      213: -7669788253618507056
+    second: HeadsUp_hurt_70
   - first:
-      213: -491698354671039992
-    second: Heads_Up_71
+      213: 3917768174313194758
+    second: HeadsUp_hurt_71
   - first:
-      213: -5583184963935999975
-    second: Heads_Up_72
+      213: 1336551808843976662
+    second: HeadsUp_hurt_72
   - first:
-      213: -9179950780506087382
-    second: Heads_Up_73
+      213: 2053208054781267815
+    second: HeadsUp_hurt_73
   - first:
-      213: 7913255034179116410
-    second: Heads_Up_74
+      213: 1139948274553973726
+    second: HeadsUp_hurt_74
   - first:
-      213: 4062066550348187662
-    second: Heads_Up_75
+      213: 1289936479034099371
+    second: HeadsUp_hurt_75
   - first:
-      213: -5788019316405700059
-    second: Heads_Up_76
+      213: -177060307710602466
+    second: HeadsUp_hurt_76
   - first:
-      213: 9151688461050371050
-    second: Heads_Up_77
+      213: -6567180963420787841
+    second: HeadsUp_hurt_77
   - first:
-      213: -1339604496683437079
-    second: Heads_Up_78
+      213: -2273555153225599882
+    second: HeadsUp_hurt_78
   - first:
-      213: -206208999563010634
-    second: Heads_Up_79
+      213: 3309497726635808573
+    second: HeadsUp_hurt_79
   - first:
-      213: -456660346293784440
-    second: Heads_Up_80
+      213: 5214352176690504642
+    second: HeadsUp_hurt_80
   - first:
-      213: 8018997741767329031
-    second: Heads_Up_81
+      213: -7044785038604142179
+    second: HeadsUp_hurt_81
   - first:
-      213: 9214439076914946619
-    second: Heads_Up_82
+      213: -3999806458422242414
+    second: HeadsUp_hurt_82
   - first:
-      213: 6523252442178383322
-    second: Heads_Up_83
+      213: 6393116792546125561
+    second: HeadsUp_hurt_83
   - first:
-      213: 3543806165655214337
-    second: Heads_Up_84
+      213: -1993372822312118817
+    second: HeadsUp_hurt_84
   - first:
-      213: -1486525526896085383
-    second: Heads_Up_85
+      213: -3867737683219996753
+    second: HeadsUp_hurt_85
   - first:
-      213: 4074817825747287405
-    second: Heads_Up_86
+      213: 7394805815538023919
+    second: HeadsUp_hurt_86
   - first:
-      213: -358318595073633166
-    second: Heads_Up_87
+      213: 1501843002033023969
+    second: HeadsUp_hurt_87
   - first:
-      213: -263552054822428961
-    second: Heads_Up_88
+      213: 2389370698998724976
+    second: HeadsUp_hurt_88
   - first:
-      213: 643395645402260790
-    second: Heads_Up_89
+      213: 7926866068289853984
+    second: HeadsUp_hurt_89
   - first:
-      213: -843837714048042187
-    second: Heads_Up_90
+      213: 6123010564873861746
+    second: HeadsUp_hurt_90
   - first:
-      213: -529484760024248650
-    second: Heads_Up_91
+      213: 7714356081701885331
+    second: HeadsUp_hurt_91
   - first:
-      213: 4242685513604061128
-    second: Heads_Up_92
+      213: -7043432115667997433
+    second: HeadsUp_hurt_92
   - first:
-      213: 2874196419167193151
-    second: Heads_Up_93
+      213: 155502116173604930
+    second: HeadsUp_hurt_93
   - first:
-      213: -459061621929920133
-    second: Heads_Up_94
+      213: -7728783573471735898
+    second: HeadsUp_hurt_94
   - first:
-      213: -3857965371752821283
-    second: Heads_Up_95
+      213: 6174780705020528746
+    second: HeadsUp_hurt_95
   - first:
-      213: -6547496778827486649
-    second: Heads_Up_96
+      213: -1948443228775709619
+    second: HeadsUp_hurt_96
   - first:
-      213: 6804140457511041901
-    second: Heads_Up_97
+      213: 8043427637338919197
+    second: HeadsUp_hurt_97
   - first:
-      213: -4409803593522081698
-    second: Heads_Up_98
+      213: 6187447470311889973
+    second: HeadsUp_hurt_98
   - first:
-      213: -5111295680551071421
-    second: Heads_Up_99
+      213: -6480845071161048442
+    second: HeadsUp_hurt_99
   - first:
-      213: 873670284226086004
-    second: Heads_Up_100
+      213: 4361077490892437043
+    second: HeadsUp_hurt_100
   - first:
-      213: -8951676873310383587
-    second: Heads_Up_101
+      213: -6556636777759477167
+    second: HeadsUp_hurt_101
   - first:
-      213: -4622530841876267875
-    second: Heads_Up_102
+      213: 729371635508318319
+    second: HeadsUp_hurt_102
   - first:
-      213: -6180646456944654004
-    second: Heads_Up_103
+      213: -915183150807591518
+    second: HeadsUp_hurt_103
   - first:
-      213: -6322641374497891352
-    second: Heads_Up_104
+      213: 1214089834731981980
+    second: HeadsUp_hurt_104
   - first:
-      213: -7488553758998295244
-    second: Heads_Up_105
+      213: 6440407366930375556
+    second: HeadsUp_hurt_105
   - first:
-      213: 8849320544257061889
-    second: Heads_Up_106
+      213: -6685185318271844923
+    second: HeadsUp_hurt_106
   - first:
-      213: -6747406635450221289
-    second: Heads_Up_107
+      213: -960129563506439736
+    second: HeadsUp_hurt_107
   - first:
-      213: 1976554822012224664
-    second: Heads_Up_108
+      213: 5072163344234687709
+    second: HeadsUp_hurt_108
   - first:
-      213: -5678384182633054448
-    second: Heads_Up_109
+      213: 492526052997040559
+    second: HeadsUp_hurt_109
   - first:
-      213: -6170169598709104477
-    second: Heads_Up_110
+      213: -4230532262133173635
+    second: HeadsUp_hurt_110
   - first:
-      213: -5283030032021550517
-    second: Heads_Up_111
+      213: 1024607254565469711
+    second: HeadsUp_hurt_111
   - first:
-      213: -5317096517383835089
-    second: Heads_Up_112
+      213: -1305987544043062031
+    second: HeadsUp_hurt_112
   - first:
-      213: -5687817101077856771
-    second: Heads_Up_113
+      213: -7413504407830642780
+    second: HeadsUp_hurt_113
   - first:
-      213: -2374702119038111611
-    second: Heads_Up_114
+      213: 8356809135324949935
+    second: HeadsUp_hurt_114
   - first:
-      213: 2988121989407063120
-    second: Heads_Up_115
+      213: 2428247971248187585
+    second: HeadsUp_hurt_115
   - first:
-      213: -2371665450283505858
-    second: Heads_Up_116
+      213: 5939348257218935297
+    second: HeadsUp_hurt_116
   - first:
-      213: 8364145766298708979
-    second: Heads_Up_117
+      213: -2164202733913883865
+    second: HeadsUp_hurt_117
   - first:
-      213: -5157413214875759509
-    second: Heads_Up_118
+      213: 1235473568004013849
+    second: HeadsUp_hurt_118
   - first:
-      213: -8498183384156361293
-    second: Heads_Up_119
+      213: -3410491391059544948
+    second: HeadsUp_hurt_119
   - first:
-      213: -1766156571983182403
-    second: Heads_Up_120
+      213: -7044284296541328293
+    second: HeadsUp_hurt_120
   - first:
-      213: 9208355918718671100
-    second: Heads_Up_121
+      213: 3352460234935176155
+    second: HeadsUp_hurt_121
   - first:
-      213: 1331850786756340391
-    second: Heads_Up_122
+      213: -903442091478917875
+    second: HeadsUp_hurt_122
   - first:
-      213: -7193858071798926434
-    second: Heads_Up_123
+      213: -4043033445589358245
+    second: HeadsUp_hurt_123
   - first:
-      213: -5654275965064351471
-    second: Heads_Up_124
+      213: 6575150411969067767
+    second: HeadsUp_hurt_124
   - first:
-      213: 1994119086860560484
-    second: Heads_Up_125
+      213: 4160010361142727952
+    second: HeadsUp_hurt_125
   - first:
-      213: 6526307552097636162
-    second: Heads_Up_126
+      213: -4510241874748490616
+    second: HeadsUp_hurt_126
   - first:
-      213: 2935473285830718957
-    second: Heads_Up_127
+      213: 8636743135143969909
+    second: HeadsUp_hurt_127
   - first:
-      213: 530528599840003952
-    second: Heads_Up_128
+      213: -7331109783105945264
+    second: HeadsUp_hurt_128
   - first:
-      213: 3897320203534657519
-    second: Heads_Up_129
+      213: -4542726733471715321
+    second: HeadsUp_hurt_129
   - first:
-      213: -8397994293072609286
-    second: Heads_Up_130
+      213: -8216028576721511112
+    second: HeadsUp_hurt_130
   - first:
-      213: -3070281448073825254
-    second: Heads_Up_131
+      213: -7050919797439095929
+    second: HeadsUp_hurt_131
   - first:
-      213: -2620535008705028457
-    second: Heads_Up_132
+      213: 8932663161871460348
+    second: HeadsUp_hurt_132
   - first:
-      213: -6122206320173312185
-    second: Heads_Up_133
+      213: 8800239520965501434
+    second: HeadsUp_hurt_133
   - first:
-      213: -6836557195953073832
-    second: Heads_Up_134
+      213: -814014428509549358
+    second: HeadsUp_hurt_134
   - first:
-      213: 2306547718055904306
-    second: Heads_Up_135
+      213: 6716607578311545274
+    second: HeadsUp_hurt_135
   - first:
-      213: 89447786746547321
-    second: Heads_Up_136
+      213: -4109123015385402147
+    second: HeadsUp_hurt_136
   - first:
-      213: -7185396893571188085
-    second: Heads_Up_137
+      213: -8090171914287773703
+    second: HeadsUp_hurt_137
   - first:
-      213: -3575740908726145613
-    second: Heads_Up_138
+      213: -7292524781327882933
+    second: HeadsUp_hurt_138
   - first:
-      213: 1473690979805110638
-    second: Heads_Up_139
+      213: 6199034704113624206
+    second: HeadsUp_hurt_139
   - first:
-      213: 8713931707789927672
-    second: Heads_Up_140
+      213: 1385641840090622691
+    second: HeadsUp_hurt_140
   - first:
-      213: 5845896876499355591
-    second: Heads_Up_141
+      213: 4867671459062165040
+    second: HeadsUp_hurt_141
   - first:
-      213: -6125957930544829617
-    second: Heads_Up_142
+      213: 6866720019120542888
+    second: HeadsUp_hurt_142
   - first:
-      213: 3130056789633325717
-    second: Heads_Up_143
+      213: 4519346083655613004
+    second: HeadsUp_hurt_143
   - first:
-      213: 2369169999205311336
-    second: Heads_Up_144
+      213: 6694887276366997489
+    second: HeadsUp_hurt_144
   - first:
-      213: 1493373841629268121
-    second: Heads_Up_145
+      213: -7168659728219578679
+    second: HeadsUp_hurt_145
   - first:
-      213: 3561500416437006386
-    second: Heads_Up_146
+      213: 7426402166529282670
+    second: HeadsUp_hurt_146
   - first:
-      213: -7911321420811011491
-    second: Heads_Up_147
+      213: -3819209894060975892
+    second: HeadsUp_hurt_147
   - first:
-      213: -766171281979450297
-    second: Heads_Up_148
+      213: 3163815489650081832
+    second: HeadsUp_hurt_148
   - first:
-      213: 6103968583821266921
-    second: Heads_Up_149
+      213: -2986400896508414882
+    second: HeadsUp_hurt_149
   - first:
-      213: -6789091988391503890
-    second: Heads_Up_150
+      213: 4704421788593950106
+    second: HeadsUp_hurt_150
   - first:
-      213: 3966783287739899701
-    second: Heads_Up_151
+      213: -2238636756861958710
+    second: HeadsUp_hurt_151
   - first:
-      213: -3410177015684287097
-    second: Heads_Up_152
+      213: -8922158266942389980
+    second: HeadsUp_hurt_152
   - first:
-      213: -2527131909938615896
-    second: Heads_Up_153
+      213: -5696889482232396341
+    second: HeadsUp_hurt_153
   - first:
-      213: -2147951615838296116
-    second: Heads_Up_154
+      213: 2412377171290106522
+    second: HeadsUp_hurt_154
   - first:
-      213: 4873928422849899826
-    second: Heads_Up_155
+      213: 228984296097425136
+    second: HeadsUp_hurt_155
   - first:
-      213: 3540581597898006880
-    second: Heads_Up_156
+      213: 1438919943512987742
+    second: HeadsUp_hurt_156
   - first:
-      213: 8063990243469284986
-    second: Heads_Up_157
+      213: -8661880225493434807
+    second: HeadsUp_hurt_157
   - first:
-      213: 6924769295283856687
-    second: Heads_Up_158
+      213: -30311676805837150
+    second: HeadsUp_hurt_158
   - first:
-      213: 8013649926929037498
-    second: Heads_Up_159
+      213: -1553181155367348324
+    second: HeadsUp_hurt_159
   - first:
-      213: -8488232283695277190
-    second: Heads_Up_160
+      213: 1157632815300140665
+    second: HeadsUp_hurt_160
   - first:
-      213: -8370475085401072059
-    second: Heads_Up_161
+      213: -7631682830183913589
+    second: HeadsUp_hurt_161
   - first:
-      213: -842579971274196870
-    second: Heads_Up_162
+      213: -6125741589163169440
+    second: HeadsUp_hurt_162
   - first:
-      213: -7351578717078273784
-    second: Heads_Up_163
+      213: 5681237926655932066
+    second: HeadsUp_hurt_163
   - first:
-      213: -383645113989803707
-    second: Heads_Up_164
+      213: -2873537687988458207
+    second: HeadsUp_hurt_164
   - first:
-      213: 692010012479601758
-    second: Heads_Up_165
+      213: -3681334428454049847
+    second: HeadsUp_hurt_165
   - first:
-      213: 8921746147068304796
-    second: Heads_Up_166
+      213: 2140483572488418125
+    second: HeadsUp_hurt_166
   - first:
-      213: 7588472412938657014
-    second: Heads_Up_167
+      213: -2956198061084079847
+    second: HeadsUp_hurt_167
   - first:
-      213: 2336091251327499202
-    second: Heads_Up_168
+      213: -2281529328038068252
+    second: HeadsUp_hurt_168
   - first:
-      213: 6884810984464701838
-    second: Heads_Up_169
+      213: 1967777623625153370
+    second: HeadsUp_hurt_169
   - first:
-      213: -7182791231065771200
-    second: Heads_Up_170
+      213: 1068742413276828708
+    second: HeadsUp_hurt_170
   - first:
-      213: -553542282837712478
-    second: Heads_Up_171
+      213: 4505923919859711364
+    second: HeadsUp_hurt_171
   - first:
-      213: -8683516470451868749
-    second: Heads_Up_172
+      213: 2812674484215033548
+    second: HeadsUp_hurt_172
   - first:
-      213: 4985510803310291000
-    second: Heads_Up_173
+      213: -1055432256827117738
+    second: HeadsUp_hurt_173
   - first:
-      213: 4380451056948762307
-    second: Heads_Up_174
+      213: -8144530284675706069
+    second: HeadsUp_hurt_174
   - first:
-      213: 2508007429311490485
-    second: Heads_Up_175
+      213: 512928779529345212
+    second: HeadsUp_hurt_175
   - first:
-      213: -2372889518744643210
-    second: Heads_Up_176
+      213: 6606350949362732640
+    second: HeadsUp_hurt_176
   - first:
-      213: -7708824297292105959
-    second: Heads_Up_177
+      213: -1047163934603615088
+    second: HeadsUp_hurt_177
   - first:
-      213: 1243576383016238074
-    second: Heads_Up_178
+      213: -7716320959552432239
+    second: HeadsUp_hurt_178
   - first:
-      213: 6759703693023380840
-    second: Heads_Up_179
+      213: 5253295510509071792
+    second: HeadsUp_hurt_179
   - first:
-      213: -8930562733140997435
-    second: Heads_Up_180
+      213: -1547413135536313576
+    second: HeadsUp_hurt_180
   - first:
-      213: 5233431498963116389
-    second: Heads_Up_181
+      213: -6741675940643733453
+    second: HeadsUp_hurt_181
   - first:
-      213: 2765186258267789320
-    second: Heads_Up_182
+      213: -6909723833064379098
+    second: HeadsUp_hurt_182
   - first:
-      213: -348765980622197181
-    second: Heads_Up_183
+      213: 3725126122570857200
+    second: HeadsUp_hurt_183
   - first:
-      213: 6771970210012165336
-    second: Heads_Up_184
+      213: 1308763608940249298
+    second: HeadsUp_hurt_184
   - first:
-      213: 6765524769963629967
-    second: Heads_Up_185
+      213: 1306155017207850145
+    second: HeadsUp_hurt_185
   - first:
-      213: -2737906425574034489
-    second: Heads_Up_186
+      213: 8132107532649264415
+    second: HeadsUp_hurt_186
   - first:
-      213: -647523521941793851
-    second: Heads_Up_187
+      213: 8074351096783783582
+    second: HeadsUp_hurt_187
   - first:
-      213: -1316007159620133941
-    second: Heads_Up_188
+      213: 7492887693845210189
+    second: HeadsUp_hurt_188
   - first:
-      213: -1955550962968122598
-    second: Heads_Up_189
+      213: 2234834335197406630
+    second: HeadsUp_hurt_189
   - first:
-      213: 1460778203594162247
-    second: Heads_Up_190
+      213: -3160163552274399491
+    second: HeadsUp_hurt_190
   - first:
-      213: -2742031525175908033
-    second: Heads_Up_191
+      213: -844837460490536941
+    second: HeadsUp_hurt_191
   - first:
-      213: -6781170506700123608
-    second: Heads_Up_192
+      213: 3678909340365976938
+    second: HeadsUp_hurt_192
   - first:
-      213: 7247313138513207857
-    second: Heads_Up_193
+      213: -8141713025422404816
+    second: HeadsUp_hurt_193
   - first:
-      213: -6892196740390608662
-    second: Heads_Up_194
+      213: -2247210904315608642
+    second: HeadsUp_hurt_194
   - first:
-      213: -1042734365767351555
-    second: Heads_Up_195
+      213: -4802093685704966528
+    second: HeadsUp_hurt_195
   - first:
-      213: 7508904782974424807
-    second: Heads_Up_196
+      213: -4424615145925287679
+    second: HeadsUp_hurt_196
   - first:
-      213: -6327644154241211809
-    second: Heads_Up_197
+      213: 4780781084429008001
+    second: HeadsUp_hurt_197
   - first:
-      213: 2572885483972554309
-    second: Heads_Up_198
+      213: -4908823537245191098
+    second: HeadsUp_hurt_198
   - first:
-      213: 5771493122316531832
-    second: Heads_Up_199
+      213: 6885932188225466266
+    second: HeadsUp_hurt_199
   - first:
-      213: -2891561158384510436
-    second: Heads_Up_200
+      213: 3292747822395234843
+    second: HeadsUp_hurt_200
   - first:
-      213: 8267154793002202340
-    second: Heads_Up_201
+      213: -7766692656454313355
+    second: HeadsUp_hurt_201
   - first:
-      213: 8274050188556484364
-    second: Heads_Up_202
+      213: -8855203572655346338
+    second: HeadsUp_hurt_202
   - first:
-      213: -4041471884665538640
-    second: Heads_Up_203
+      213: 8839457034071115379
+    second: HeadsUp_hurt_203
   - first:
-      213: 5802548412599744820
-    second: Heads_Up_204
+      213: -2491931515469648963
+    second: HeadsUp_hurt_204
   - first:
-      213: -3953718223397037775
-    second: Heads_Up_205
+      213: 5092308020854229714
+    second: HeadsUp_hurt_205
   - first:
-      213: -3002374213027833528
-    second: Heads_Up_206
+      213: -5053079087248142506
+    second: HeadsUp_hurt_206
   - first:
-      213: 27321134321720946
-    second: Heads_Up_207
+      213: -3703488647600657196
+    second: HeadsUp_hurt_207
   - first:
-      213: 4106171028782992291
-    second: Heads_Up_208
+      213: -1938932745154790807
+    second: HeadsUp_hurt_208
   - first:
-      213: 3050785336600490689
-    second: Heads_Up_209
+      213: -6013940803917866871
+    second: HeadsUp_hurt_209
   - first:
-      213: -5075832322858781668
-    second: Heads_Up_210
+      213: 2168117207371576328
+    second: HeadsUp_hurt_210
   - first:
-      213: -4664588453131480093
-    second: Heads_Up_211
+      213: 586422266597198836
+    second: HeadsUp_hurt_211
   - first:
-      213: 8055665212335067770
-    second: Heads_Up_212
+      213: 8476465988027028281
+    second: HeadsUp_hurt_212
   - first:
-      213: -2595783254455609641
-    second: Heads_Up_213
+      213: -8864759438977738447
+    second: HeadsUp_hurt_213
   - first:
-      213: 8449090613933769268
-    second: Heads_Up_214
+      213: 6740258321014131437
+    second: HeadsUp_hurt_214
   - first:
-      213: -4365520376564040033
-    second: Heads_Up_215
+      213: 3758990175232760468
+    second: HeadsUp_hurt_215
   - first:
-      213: 5829481669549762247
-    second: Heads_Up_216
+      213: 5091338084854388057
+    second: HeadsUp_hurt_216
   - first:
-      213: 2141793789207738469
-    second: Heads_Up_217
+      213: -460675396553790269
+    second: HeadsUp_hurt_217
   - first:
-      213: 9083151144907355648
-    second: Heads_Up_218
+      213: -5904779053511358464
+    second: HeadsUp_hurt_218
   - first:
-      213: -6048241465113130941
-    second: Heads_Up_219
+      213: -8423688952354675656
+    second: HeadsUp_hurt_219
   - first:
-      213: -1845414487050327095
-    second: Heads_Up_220
+      213: -2049174549406614273
+    second: HeadsUp_hurt_220
   - first:
-      213: -6727327077005320386
-    second: Heads_Up_221
+      213: 2652809017654500437
+    second: HeadsUp_hurt_221
   - first:
-      213: 6928821833344976733
-    second: Heads_Up_222
+      213: 837450445010624148
+    second: HeadsUp_hurt_222
   - first:
-      213: -6978112260781122823
-    second: Heads_Up_223
+      213: 1785434490222268534
+    second: HeadsUp_hurt_223
   - first:
-      213: -5764768545569796514
-    second: Heads_Up_224
+      213: 842790315142221267
+    second: HeadsUp_hurt_224
   - first:
-      213: 4000950922770864835
-    second: Heads_Up_225
+      213: 2843234526977827668
+    second: HeadsUp_hurt_225
   - first:
-      213: 825087703550824055
-    second: Heads_Up_226
+      213: 8597440481122633504
+    second: HeadsUp_hurt_226
   - first:
-      213: -4679721150525485128
-    second: Heads_Up_227
+      213: 2313504184190595755
+    second: HeadsUp_hurt_227
   - first:
-      213: -1774300644602018481
-    second: Heads_Up_228
+      213: -851615089471042005
+    second: HeadsUp_hurt_228
   - first:
-      213: -5467231817829265808
-    second: Heads_Up_229
+      213: 1284030842151994890
+    second: HeadsUp_hurt_229
   - first:
-      213: -9177447295439058678
-    second: Heads_Up_230
+      213: 6540842555826326361
+    second: HeadsUp_hurt_230
   - first:
-      213: -5031714711470485290
-    second: Heads_Up_231
+      213: 5006753229985102125
+    second: HeadsUp_hurt_231
   - first:
-      213: -725287638166545045
-    second: Heads_Up_232
+      213: 7308777147567738933
+    second: HeadsUp_hurt_232
   - first:
-      213: -686542528090220858
-    second: Heads_Up_233
+      213: -5185614810277764521
+    second: HeadsUp_hurt_233
   - first:
-      213: -1705112467822905336
-    second: Heads_Up_234
+      213: -6392081138294479790
+    second: HeadsUp_hurt_234
   - first:
-      213: -980538805493571741
-    second: Heads_Up_235
+      213: -4836882730749905501
+    second: HeadsUp_hurt_235
   - first:
-      213: -4776255516396065910
-    second: Heads_Up_236
+      213: -1241608852558509609
+    second: HeadsUp_hurt_236
   - first:
-      213: 3391691888665385032
-    second: Heads_Up_237
+      213: -1755331552085804016
+    second: HeadsUp_hurt_237
   - first:
-      213: -7878800689376502809
-    second: Heads_Up_238
+      213: 7751422235790339343
+    second: HeadsUp_hurt_238
   - first:
-      213: 8650144443115045007
-    second: Heads_Up_239
+      213: 4134012114993925537
+    second: HeadsUp_hurt_239
   - first:
-      213: 5915135780961590349
-    second: Heads_Up_240
+      213: -5776948454527546964
+    second: HeadsUp_hurt_240
   - first:
-      213: 1097459110507534506
-    second: Heads_Up_241
+      213: 5436302704895717287
+    second: HeadsUp_hurt_241
   - first:
-      213: 5325393426451451689
-    second: Heads_Up_242
+      213: 3305356663927750702
+    second: HeadsUp_hurt_242
   - first:
-      213: -4243800102380554374
-    second: Heads_Up_243
+      213: 1318510591824872947
+    second: HeadsUp_hurt_243
   - first:
-      213: -8159233926730290403
-    second: Heads_Up_244
+      213: 6404855605053277476
+    second: HeadsUp_hurt_244
   - first:
-      213: 1627157360393565813
-    second: Heads_Up_245
+      213: 8322274700566740909
+    second: HeadsUp_hurt_245
   - first:
-      213: 2528367714843119452
-    second: Heads_Up_246
+      213: -6922408205301807052
+    second: HeadsUp_hurt_246
   - first:
-      213: -523184512960250400
-    second: Heads_Up_247
+      213: 9149722842520743898
+    second: HeadsUp_hurt_247
   - first:
-      213: 762378202168633863
-    second: Heads_Up_248
+      213: -4729048512426663386
+    second: HeadsUp_hurt_248
   - first:
-      213: -2431453583024315276
-    second: Heads_Up_249
+      213: 4898664766411562959
+    second: HeadsUp_hurt_249
   - first:
-      213: -7983388322127497046
-    second: Heads_Up_250
+      213: -9137918067870753856
+    second: HeadsUp_hurt_250
   - first:
-      213: -2402687393655032544
-    second: Heads_Up_251
+      213: -4168530582754074898
+    second: HeadsUp_hurt_251
   - first:
-      213: 7962182171955849676
-    second: Heads_Up_252
+      213: 3536243057129671146
+    second: HeadsUp_hurt_252
   - first:
-      213: -2695680815787349511
-    second: Heads_Up_253
+      213: 1939916982655501500
+    second: HeadsUp_hurt_253
   - first:
-      213: 3902814214105563125
-    second: Heads_Up_254
+      213: -2937527416908769606
+    second: HeadsUp_hurt_254
   - first:
-      213: -3884414287484045208
-    second: Heads_Up_255
+      213: 6795533934512663784
+    second: HeadsUp_hurt_255
   - first:
-      213: 2042085722916756086
-    second: Heads_Up_256
+      213: 5039186022512305823
+    second: HeadsUp_hurt_256
   - first:
-      213: 5347624773721720426
-    second: Heads_Up_257
+      213: 6091336108627120697
+    second: HeadsUp_hurt_257
   - first:
-      213: -3387320969208197262
-    second: Heads_Up_258
+      213: -7067913685333250311
+    second: HeadsUp_hurt_258
   - first:
-      213: 5303574705653642177
-    second: Heads_Up_259
+      213: 1793862518568569482
+    second: HeadsUp_hurt_259
   - first:
-      213: -8901198553547163190
-    second: Heads_Up_260
+      213: 5905047112575041491
+    second: HeadsUp_hurt_260
   - first:
-      213: 3161839944284478160
-    second: Heads_Up_261
+      213: -4761080185254630006
+    second: HeadsUp_hurt_261
   - first:
-      213: 5936088260659287690
-    second: Heads_Up_262
+      213: -8649943600897431901
+    second: HeadsUp_hurt_262
   - first:
-      213: -4874384336088223997
-    second: Heads_Up_263
+      213: -3448227675078072908
+    second: HeadsUp_hurt_263
   - first:
-      213: 7583715154561109805
-    second: Heads_Up_264
+      213: 4775383540694951417
+    second: HeadsUp_hurt_264
   - first:
-      213: 510696251408229479
-    second: Heads_Up_265
+      213: 5249185721845722446
+    second: HeadsUp_hurt_265
   - first:
-      213: -7213857219914767639
-    second: Heads_Up_266
+      213: 1912002216786225696
+    second: HeadsUp_hurt_266
   - first:
-      213: -2944583995834742089
-    second: Heads_Up_267
+      213: 6022178764407012342
+    second: HeadsUp_hurt_267
   - first:
-      213: -6950797260320672103
-    second: Heads_Up_268
+      213: -8433324074761963366
+    second: HeadsUp_hurt_268
   - first:
-      213: -6673079909236120479
-    second: Heads_Up_269
+      213: -479046076072801845
+    second: HeadsUp_hurt_269
   - first:
-      213: 8373816769184492491
-    second: Heads_Up_270
+      213: 1403955007849405975
+    second: HeadsUp_hurt_270
   - first:
-      213: -4595464050786399922
-    second: Heads_Up_271
+      213: -4036017816416572020
+    second: HeadsUp_hurt_271
   - first:
-      213: -7688052891083783226
-    second: Heads_Up_272
+      213: -970767043533352893
+    second: HeadsUp_hurt_272
   - first:
-      213: -5567434759310638925
-    second: Heads_Up_273
+      213: 783640429396352205
+    second: HeadsUp_hurt_273
   - first:
-      213: 7240697241021167267
-    second: Heads_Up_274
+      213: -6638541073556622579
+    second: HeadsUp_hurt_274
   - first:
-      213: 197542694973051480
-    second: Heads_Up_275
+      213: 1112002326517338749
+    second: HeadsUp_hurt_275
   - first:
-      213: 620862551681021278
-    second: Heads_Up_276
+      213: 3635547516125493641
+    second: HeadsUp_hurt_276
   - first:
-      213: -1292877832765867877
-    second: Heads_Up_277
+      213: -6370595810141294580
+    second: HeadsUp_hurt_277
   - first:
-      213: 2036383522871727754
-    second: Heads_Up_278
+      213: -2115032276372711435
+    second: HeadsUp_hurt_278
   - first:
-      213: -6826124631120542454
-    second: Heads_Up_279
+      213: -7153560389483828882
+    second: HeadsUp_hurt_279
   - first:
-      213: 2340838253816008592
-    second: Heads_Up_280
+      213: -1099357563348912442
+    second: HeadsUp_hurt_280
   - first:
-      213: 6160398999828403030
-    second: Heads_Up_281
+      213: -4891953143928305161
+    second: HeadsUp_hurt_281
   - first:
-      213: 1134247063899253308
-    second: Heads_Up_282
+      213: 4345570249366156564
+    second: HeadsUp_hurt_282
   - first:
-      213: -726539233376994544
-    second: Heads_Up_283
+      213: -8246365783098039589
+    second: HeadsUp_hurt_283
   - first:
-      213: -3954037349800869724
-    second: Heads_Up_284
+      213: -3239890526077263244
+    second: HeadsUp_hurt_284
   - first:
-      213: 2642902462736087873
-    second: Heads_Up_285
+      213: -754050904672634896
+    second: HeadsUp_hurt_285
   - first:
-      213: 7781765157404565401
-    second: Heads_Up_286
+      213: 2531285535171988020
+    second: HeadsUp_hurt_286
   - first:
-      213: 2915750936088250807
-    second: Heads_Up_287
+      213: 3129657601374829992
+    second: HeadsUp_hurt_287
   - first:
-      213: -5172428790058045726
-    second: Heads_Up_288
+      213: 2065383298312443553
+    second: HeadsUp_hurt_288
   - first:
-      213: -795513029402460799
-    second: Heads_Up_289
+      213: 6485587408477989264
+    second: HeadsUp_hurt_289
   - first:
-      213: -6590735519304660437
-    second: Heads_Up_290
+      213: -7799814434832795774
+    second: HeadsUp_hurt_290
   - first:
-      213: 5846982351201851548
-    second: Heads_Up_291
+      213: 6544831704576419392
+    second: HeadsUp_hurt_291
   - first:
-      213: 3358420652894842981
-    second: Heads_Up_292
+      213: -4116955043831730962
+    second: HeadsUp_hurt_292
   - first:
-      213: 867012422463185224
-    second: Heads_Up_293
+      213: 5926587068279455028
+    second: HeadsUp_hurt_293
   - first:
-      213: -5109120695967689210
-    second: Heads_Up_294
+      213: -2961468543837533363
+    second: HeadsUp_hurt_294
   - first:
-      213: 4541550138451875360
-    second: Heads_Up_295
+      213: -4695820187599486396
+    second: HeadsUp_hurt_295
   - first:
-      213: 7392130060173169475
-    second: Heads_Up_296
+      213: -3021471900950221007
+    second: HeadsUp_hurt_296
   - first:
-      213: 7071637253687143696
-    second: Heads_Up_297
+      213: -5759601340986121040
+    second: HeadsUp_hurt_297
   - first:
-      213: 7045425873006698379
-    second: Heads_Up_298
+      213: -1167368640242911448
+    second: HeadsUp_hurt_298
   - first:
-      213: -4595592041890962181
-    second: Heads_Up_299
+      213: 2380099752115745965
+    second: HeadsUp_hurt_299
   - first:
-      213: -4315845568683426284
-    second: Heads_Up_300
+      213: 2470854023990431516
+    second: HeadsUp_hurt_300
   - first:
-      213: -5508968541833208410
-    second: Heads_Up_301
+      213: 7583279935088065018
+    second: HeadsUp_hurt_301
   - first:
-      213: -3161542139237367050
-    second: Heads_Up_302
+      213: 4493865072083370349
+    second: HeadsUp_hurt_302
   - first:
-      213: 5188267176824482857
-    second: Heads_Up_303
+      213: 2803344812894599517
+    second: HeadsUp_hurt_303
   - first:
-      213: -8187340942381411719
-    second: Heads_Up_304
+      213: 6328893190677749185
+    second: HeadsUp_hurt_304
   - first:
-      213: -3793004224707286547
-    second: Heads_Up_305
+      213: 3079431655516383038
+    second: HeadsUp_hurt_305
   - first:
-      213: 2103506804306654885
-    second: Heads_Up_306
+      213: -9172332148933489120
+    second: HeadsUp_hurt_306
   - first:
-      213: 5219266508562755144
-    second: Heads_Up_307
+      213: -2695669342989491653
+    second: HeadsUp_hurt_307
   - first:
-      213: -2476723267507575829
-    second: Heads_Up_308
+      213: -7079168732374284457
+    second: HeadsUp_hurt_308
   - first:
-      213: -2710269576949320535
-    second: Heads_Up_309
+      213: 1708826877937615889
+    second: HeadsUp_hurt_309
   - first:
-      213: -2888550632264423267
-    second: Heads_Up_310
+      213: 5646556920566672048
+    second: HeadsUp_hurt_310
   - first:
-      213: 3898574040260498580
-    second: Heads_Up_311
+      213: 147160177178845960
+    second: HeadsUp_hurt_311
   - first:
-      213: 3257051408174549375
-    second: Heads_Up_312
+      213: 1336490873118571362
+    second: HeadsUp_hurt_312
   - first:
-      213: 857298868130295786
-    second: Heads_Up_313
+      213: 1031535809208818563
+    second: HeadsUp_hurt_313
   - first:
-      213: -3407570336839817854
-    second: Heads_Up_314
+      213: 995101705715762505
+    second: HeadsUp_hurt_314
   - first:
-      213: 2920498412609910821
-    second: Heads_Up_315
+      213: -8537051474076386317
+    second: HeadsUp_hurt_315
   - first:
-      213: -2150023681263538885
-    second: Heads_Up_316
+      213: -5159904069263042776
+    second: HeadsUp_hurt_316
   - first:
-      213: 2109944147489275080
-    second: Heads_Up_317
+      213: 5269805013042717714
+    second: HeadsUp_hurt_317
   - first:
-      213: 1163748818342760368
-    second: Heads_Up_318
+      213: -7692464089723472753
+    second: HeadsUp_hurt_318
   - first:
-      213: -4935991417215353685
-    second: Heads_Up_319
+      213: 4760236241128804332
+    second: HeadsUp_hurt_319
   - first:
-      213: -7131828420115444264
-    second: Heads_Up_320
+      213: 3847630095951715966
+    second: HeadsUp_hurt_320
   - first:
-      213: -5653161986440447802
-    second: Heads_Up_321
+      213: 6326146672059361265
+    second: HeadsUp_hurt_321
   - first:
-      213: 4516504617691769787
-    second: Heads_Up_322
+      213: -1805005149485702086
+    second: HeadsUp_hurt_322
   - first:
-      213: 8069612278150809285
-    second: Heads_Up_323
+      213: -3561264343660057898
+    second: HeadsUp_hurt_323
   - first:
-      213: -2934056509048121701
-    second: Heads_Up_324
+      213: 8416209740913435653
+    second: HeadsUp_hurt_324
   - first:
-      213: 5201369812624702647
-    second: Heads_Up_325
+      213: 3470163722697853498
+    second: HeadsUp_hurt_325
   - first:
-      213: -8090554437340775656
-    second: Heads_Up_326
+      213: 2547610490682849778
+    second: HeadsUp_hurt_326
   - first:
-      213: 1491073145670177034
-    second: Heads_Up_327
+      213: 901270989177220525
+    second: HeadsUp_hurt_327
   - first:
-      213: 8129444093235052201
-    second: Heads_Up_328
+      213: 3656596122873114902
+    second: HeadsUp_hurt_328
   - first:
-      213: -3526487918196654527
-    second: Heads_Up_329
+      213: -2550702305556849847
+    second: HeadsUp_hurt_329
   - first:
-      213: -3176126314264636249
-    second: Heads_Up_330
+      213: 3989487933050298628
+    second: HeadsUp_hurt_330
   - first:
-      213: -6015648807679576397
-    second: Heads_Up_331
+      213: 2911064015929348972
+    second: HeadsUp_hurt_331
   - first:
-      213: 7413323901866620872
-    second: Heads_Up_332
+      213: 4650629831834728431
+    second: HeadsUp_hurt_332
   - first:
-      213: -5940791997804560850
-    second: Heads_Up_333
+      213: 2275324538927810542
+    second: HeadsUp_hurt_333
   - first:
-      213: -6653065089385835312
-    second: Heads_Up_334
+      213: -7152500839860252856
+    second: HeadsUp_hurt_334
   - first:
-      213: -7005741856852680931
-    second: Heads_Up_335
+      213: 7009043675139962336
+    second: HeadsUp_hurt_335
   - first:
-      213: 1503901515663018391
-    second: Heads_Up_336
+      213: 799120302189750842
+    second: HeadsUp_hurt_336
   - first:
-      213: -2010864212128607810
-    second: Heads_Up_337
+      213: 1538963177445901957
+    second: HeadsUp_hurt_337
   - first:
-      213: -8269057737532125331
-    second: Heads_Up_338
+      213: -6210868653474142033
+    second: HeadsUp_hurt_338
   - first:
-      213: 5071431949859293648
-    second: Heads_Up_339
+      213: -5636540962588285511
+    second: HeadsUp_hurt_339
   - first:
-      213: -4071516107183926485
-    second: Heads_Up_340
+      213: -4868744151039960867
+    second: HeadsUp_hurt_340
   - first:
-      213: 7758421828321276099
-    second: Heads_Up_341
+      213: -1399484572180678334
+    second: HeadsUp_hurt_341
   - first:
-      213: -1512689044587820868
-    second: Heads_Up_342
+      213: 5538023041532204202
+    second: HeadsUp_hurt_342
   - first:
-      213: 5068459113389896137
-    second: Heads_Up_343
+      213: 7818799811469013161
+    second: HeadsUp_hurt_343
   - first:
-      213: -6674538026371273364
-    second: Heads_Up_344
+      213: -94420948883849699
+    second: HeadsUp_hurt_344
   - first:
-      213: -4688538549177102991
-    second: Heads_Up_345
+      213: -3862795906341335216
+    second: HeadsUp_hurt_345
   - first:
-      213: 5930118323570584243
-    second: Heads_Up_346
+      213: 461047031282354085
+    second: HeadsUp_hurt_346
   - first:
-      213: 5459480099592608092
-    second: Heads_Up_347
+      213: 7402145226855796403
+    second: HeadsUp_hurt_347
   - first:
-      213: -1415572079823512646
-    second: Heads_Up_348
+      213: 4149185757980931890
+    second: HeadsUp_hurt_348
   - first:
-      213: -3846804463696320703
-    second: Heads_Up_349
+      213: 2935109038564091055
+    second: HeadsUp_hurt_349
   - first:
-      213: -2605539142464214820
-    second: Heads_Up_350
+      213: 7371963987361490685
+    second: HeadsUp_hurt_350
   - first:
-      213: 6898083404709372224
-    second: Heads_Up_351
+      213: -2214421144339476897
+    second: HeadsUp_hurt_351
   - first:
-      213: 2465486871221219316
-    second: Heads_Up_352
+      213: 5879913602699830410
+    second: HeadsUp_hurt_352
   - first:
-      213: 7070640505529052538
-    second: Heads_Up_353
+      213: 8375670510767344876
+    second: HeadsUp_hurt_353
   - first:
-      213: -2797818748112678034
-    second: Heads_Up_354
+      213: -6312575029700581734
+    second: HeadsUp_hurt_354
   - first:
-      213: -8791251156658952508
-    second: Heads_Up_355
+      213: 3613004962843722147
+    second: HeadsUp_hurt_355
   - first:
-      213: 907677749739925131
-    second: Heads_Up_356
+      213: -2347303117953785118
+    second: HeadsUp_hurt_356
   - first:
-      213: 6115753452003928848
-    second: Heads_Up_357
+      213: -1495572542055617384
+    second: HeadsUp_hurt_357
   - first:
-      213: 3478149492691352708
-    second: Heads_Up_358
+      213: -1454184937317992829
+    second: HeadsUp_hurt_358
   - first:
-      213: 7720601069070337254
-    second: Heads_Up_359
+      213: -5349990528444814266
+    second: HeadsUp_hurt_359
   - first:
-      213: -6832960402726332420
-    second: Heads_Up_360
+      213: 2814190637037563411
+    second: HeadsUp_hurt_360
   - first:
-      213: -394855923475969301
-    second: Heads_Up_361
+      213: 7904652741274799676
+    second: HeadsUp_hurt_361
   - first:
-      213: 2794732186711515413
-    second: Heads_Up_362
+      213: -480324964332374023
+    second: HeadsUp_hurt_362
   - first:
-      213: -8776176308720845246
-    second: Heads_Up_363
+      213: -3921508220663759019
+    second: HeadsUp_hurt_363
   - first:
-      213: -1106669718500921046
-    second: Heads_Up_364
+      213: -1160014039531939280
+    second: HeadsUp_hurt_364
   - first:
-      213: -6208636622953471215
-    second: Heads_Up_365
+      213: -1523320122145749295
+    second: HeadsUp_hurt_365
   - first:
-      213: -2265758506177953181
-    second: Heads_Up_366
+      213: 3016088783256800391
+    second: HeadsUp_hurt_366
   - first:
-      213: -3454822357914058675
-    second: Heads_Up_367
+      213: -1745283110281418345
+    second: HeadsUp_hurt_367
   - first:
-      213: -6795577696415201443
-    second: Heads_Up_368
+      213: 4186061411741073479
+    second: HeadsUp_hurt_368
   - first:
-      213: -6491983542955831994
-    second: Heads_Up_369
+      213: -4790744037086668040
+    second: HeadsUp_hurt_369
   - first:
-      213: 7415478205529045277
-    second: Heads_Up_370
+      213: 5965312443857145215
+    second: HeadsUp_hurt_370
   - first:
-      213: 4926446959636902752
-    second: Heads_Up_371
+      213: -2315183419390597455
+    second: HeadsUp_hurt_371
   - first:
-      213: -6261182316972114765
-    second: Heads_Up_372
+      213: 8909317337378212026
+    second: HeadsUp_hurt_372
   - first:
-      213: 7208930675032416688
-    second: Heads_Up_373
+      213: -5445754748261336595
+    second: HeadsUp_hurt_373
   - first:
-      213: 8062774202711362165
-    second: Heads_Up_374
+      213: 2303215710144303432
+    second: HeadsUp_hurt_374
   - first:
-      213: 6806815598320940412
-    second: Heads_Up_375
+      213: -6251914648325069823
+    second: HeadsUp_hurt_375
   - first:
-      213: -7577899516369671159
-    second: Heads_Up_376
+      213: -3529711273826239206
+    second: HeadsUp_hurt_376
   - first:
-      213: -6141189320060152751
-    second: Heads_Up_377
+      213: -6011718178016874624
+    second: HeadsUp_hurt_377
   - first:
-      213: -7054043040082197072
-    second: Heads_Up_378
+      213: -8034312033703470313
+    second: HeadsUp_hurt_378
   - first:
-      213: 1028195262442535819
-    second: Heads_Up_379
+      213: 3086927155495076951
+    second: HeadsUp_hurt_379
   - first:
-      213: -6410740641095916507
-    second: Heads_Up_380
+      213: 3912279797519586028
+    second: HeadsUp_hurt_380
   - first:
-      213: -4810843537457225876
-    second: Heads_Up_381
+      213: 6854091831615330019
+    second: HeadsUp_hurt_381
   - first:
-      213: -1588695973137114892
-    second: Heads_Up_382
+      213: -8775485989087036311
+    second: HeadsUp_hurt_382
   - first:
-      213: 6041393134545526865
-    second: Heads_Up_383
+      213: 7671479503110124138
+    second: HeadsUp_hurt_383
   - first:
-      213: 6160695515268764840
-    second: Heads_Up_384
+      213: -5913735046596333088
+    second: HeadsUp_hurt_384
   - first:
-      213: 3351072689941676242
-    second: Heads_Up_385
+      213: 8918238618058731222
+    second: HeadsUp_hurt_385
   - first:
-      213: -2266071358345442007
-    second: Heads_Up_386
+      213: 6784575456476943861
+    second: HeadsUp_hurt_386
   - first:
-      213: -4349629742729678393
-    second: Heads_Up_387
+      213: 6907256035060716942
+    second: HeadsUp_hurt_387
   - first:
-      213: -3444886395381810852
-    second: Heads_Up_388
+      213: -7571215922271396221
+    second: HeadsUp_hurt_388
   - first:
-      213: -4355567817362997295
-    second: Heads_Up_389
+      213: -6105419055017708543
+    second: HeadsUp_hurt_389
   - first:
-      213: 8335573896359389778
-    second: Heads_Up_390
+      213: 9040061224522652988
+    second: HeadsUp_hurt_390
   - first:
-      213: 833413081058729021
-    second: Heads_Up_391
+      213: -1541605313700325823
+    second: HeadsUp_hurt_391
   - first:
-      213: -4690666256226595245
-    second: Heads_Up_392
+      213: 3525648276307919266
+    second: HeadsUp_hurt_392
   - first:
-      213: -6626757410997764948
-    second: Heads_Up_393
+      213: -2668246171630800463
+    second: HeadsUp_hurt_393
   - first:
-      213: -4681350153620748121
-    second: Heads_Up_394
+      213: -5094642639515777172
+    second: HeadsUp_hurt_394
   - first:
-      213: 4158230429262598284
-    second: Heads_Up_395
+      213: -7527333176173306314
+    second: HeadsUp_hurt_395
   - first:
-      213: -4155095114982396318
-    second: Heads_Up_396
+      213: 8698445808475909825
+    second: HeadsUp_hurt_396
   - first:
-      213: 2020726609655245968
-    second: Heads_Up_397
+      213: 1339526183849041692
+    second: HeadsUp_hurt_397
   - first:
-      213: 3610892939680270972
-    second: Heads_Up_398
+      213: -5110017523495549082
+    second: HeadsUp_hurt_398
   - first:
-      213: 5954759045361093780
-    second: Heads_Up_399
+      213: -914252273976984780
+    second: HeadsUp_hurt_399
   - first:
-      213: -4698080303195079563
-    second: Heads_Up_400
+      213: 5056947031152562554
+    second: HeadsUp_hurt_400
   - first:
-      213: 9077357384387571862
-    second: Heads_Up_401
+      213: 8741821246200137567
+    second: HeadsUp_hurt_401
   - first:
-      213: 5686973037569629634
-    second: Heads_Up_402
+      213: -4276689708601510381
+    second: HeadsUp_hurt_402
   - first:
-      213: -6317386726275794196
-    second: Heads_Up_403
+      213: -872555856158668739
+    second: HeadsUp_hurt_403
   - first:
-      213: -657056673677541632
-    second: Heads_Up_404
+      213: -3792492933952079267
+    second: HeadsUp_hurt_404
   - first:
-      213: 2693845046641012666
-    second: Heads_Up_405
+      213: -3234783025529958381
+    second: HeadsUp_hurt_405
   - first:
-      213: 7793474341662702287
-    second: Heads_Up_406
+      213: 9113344279353118292
+    second: HeadsUp_hurt_406
   - first:
-      213: 751505591002930968
-    second: Heads_Up_407
+      213: -7736596085149169429
+    second: HeadsUp_hurt_407
   - first:
-      213: -6510318103698958626
-    second: Heads_Up_408
+      213: -4680311655375918840
+    second: HeadsUp_hurt_408
   - first:
-      213: 8104103138545607054
-    second: Heads_Up_409
+      213: 2214015758361924539
+    second: HeadsUp_hurt_409
   - first:
-      213: -1413372361916919282
-    second: Heads_Up_410
+      213: -3965701331231652724
+    second: HeadsUp_hurt_410
   - first:
-      213: -3047134486641477672
-    second: Heads_Up_411
+      213: -8649579393956103282
+    second: HeadsUp_hurt_411
   - first:
-      213: 1812080798956949322
-    second: Heads_Up_412
+      213: -8767525707162464311
+    second: HeadsUp_hurt_412
   - first:
-      213: -2732677816327811606
-    second: Heads_Up_413
+      213: 8285939854054239731
+    second: HeadsUp_hurt_413
   - first:
-      213: -195047290045507150
-    second: Heads_Up_414
+      213: -1159112708465114712
+    second: HeadsUp_hurt_414
   - first:
-      213: -1392248427733003622
-    second: Heads_Up_415
+      213: 1601136599316365571
+    second: HeadsUp_hurt_415
   - first:
-      213: -4525181537777859464
-    second: Heads_Up_416
+      213: 6852536078595342957
+    second: HeadsUp_hurt_416
   - first:
-      213: 6025031816859057716
-    second: Heads_Up_417
+      213: 607454599124766501
+    second: HeadsUp_hurt_417
   - first:
-      213: 4703562988189706596
-    second: Heads_Up_418
+      213: 5300309933384176482
+    second: HeadsUp_hurt_418
   - first:
-      213: -1253410943278062506
-    second: Heads_Up_419
+      213: -7888606217491845748
+    second: HeadsUp_hurt_419
   - first:
-      213: -3438497086052169939
-    second: Heads_Up_420
+      213: 7244316747675708141
+    second: HeadsUp_hurt_420
   - first:
-      213: 1552034250997100657
-    second: Heads_Up_421
+      213: -3622082427571666436
+    second: HeadsUp_hurt_421
   - first:
-      213: -5461855649158322871
-    second: Heads_Up_422
+      213: 5956181883637511011
+    second: HeadsUp_hurt_422
   - first:
-      213: 6502056152423071848
-    second: Heads_Up_423
+      213: 4473738834272247062
+    second: HeadsUp_hurt_423
   - first:
-      213: -6804192280882208
-    second: Heads_Up_424
+      213: -131685831097827774
+    second: HeadsUp_hurt_424
   - first:
-      213: 8129155663121889742
-    second: Heads_Up_425
+      213: -1237421376714630252
+    second: HeadsUp_hurt_425
   - first:
-      213: -1005804340228093188
-    second: Heads_Up_426
+      213: 2393500973649029320
+    second: HeadsUp_hurt_426
   - first:
-      213: -1595057850194393613
-    second: Heads_Up_427
+      213: -8886293682479725292
+    second: HeadsUp_hurt_427
   - first:
-      213: 774389696065678171
-    second: Heads_Up_428
+      213: 5857369893963033538
+    second: HeadsUp_hurt_428
   - first:
-      213: 2480986014361999802
-    second: Heads_Up_429
+      213: -1575862853883780349
+    second: HeadsUp_hurt_429
   - first:
-      213: 8305359221478991528
-    second: Heads_Up_430
+      213: 8621550441352933818
+    second: HeadsUp_hurt_430
   - first:
-      213: -7521424370064685081
-    second: Heads_Up_431
+      213: -2307430806118622703
+    second: HeadsUp_hurt_431
   - first:
-      213: 1582824311478856689
-    second: Heads_Up_432
+      213: 5711851166864626773
+    second: HeadsUp_hurt_432
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -1435,7 +1435,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Heads_Up_0
+      name: HeadsUp_hurt_0
       rect:
         serializedVersion: 2
         x: 0
@@ -1450,14 +1450,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e2773ebabf1323830800000000000000
-      internalID: 4049353971949860654
+      spriteID: 64c6004cee8507e90800000000000000
+      internalID: -7030021235811521466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_1
+      name: HeadsUp_hurt_1
       rect:
         serializedVersion: 2
         x: 714
@@ -1472,14 +1472,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 38b04537abcc6aa30800000000000000
-      internalID: 4226290401504660355
+      spriteID: d9778dff263f4c8a0800000000000000
+      internalID: -6285631573377648739
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_2
+      name: HeadsUp_hurt_2
       rect:
         serializedVersion: 2
         x: 1428
@@ -1494,14 +1494,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ff0ac7ec560f269f0800000000000000
-      internalID: -476554290501213953
+      spriteID: f490d2ad953aa2940800000000000000
+      internalID: 5272205920098388303
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_3
+      name: HeadsUp_hurt_3
       rect:
         serializedVersion: 2
         x: 2142
@@ -1516,14 +1516,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 870adc427be1b4570800000000000000
-      internalID: 8451882897636171896
+      spriteID: 63aa99ae09bf8afd0800000000000000
+      internalID: -2330336207334430154
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_4
+      name: HeadsUp_hurt_4
       rect:
         serializedVersion: 2
         x: 2856
@@ -1538,14 +1538,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3f1da6e5f4499cfa0800000000000000
-      internalID: -5779925578145934861
+      spriteID: af6d19e6231fb2900800000000000000
+      internalID: 660886969245619962
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_5
+      name: HeadsUp_hurt_5
       rect:
         serializedVersion: 2
         x: 3570
@@ -1560,14 +1560,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c9a60c07f8af208b0800000000000000
-      internalID: -5187308326798464356
+      spriteID: b112522ea12a15d50800000000000000
+      internalID: 6724333954987794715
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_6
+      name: HeadsUp_hurt_6
       rect:
         serializedVersion: 2
         x: 4284
@@ -1582,14 +1582,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: df1794603b0f3e350800000000000000
-      internalID: 6044939776556626429
+      spriteID: c45d9fc758726b660800000000000000
+      internalID: 7401146491910870348
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_7
+      name: HeadsUp_hurt_7
       rect:
         serializedVersion: 2
         x: 4998
@@ -1604,14 +1604,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 219211214ad3dcf20800000000000000
-      internalID: 3444477064895342866
+      spriteID: 075093dc6884f2cf0800000000000000
+      internalID: -274921308440427152
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_8
+      name: HeadsUp_hurt_8
       rect:
         serializedVersion: 2
         x: 5712
@@ -1626,14 +1626,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e1fd9a31e83fa61d0800000000000000
-      internalID: -3356602780710478050
+      spriteID: 1aed225d032ccdd70800000000000000
+      internalID: 9069337264607387297
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_9
+      name: HeadsUp_hurt_9
       rect:
         serializedVersion: 2
         x: 6426
@@ -1648,14 +1648,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4e96bdc33e5c11b50800000000000000
-      internalID: 6562243711824783844
+      spriteID: 02d8cb0e284b38590800000000000000
+      internalID: -7673090865899991776
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_10
+      name: HeadsUp_hurt_10
       rect:
         serializedVersion: 2
         x: 0
@@ -1670,14 +1670,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a889dcf652f3d8710800000000000000
-      internalID: 1697082064610629770
+      spriteID: c47251ce8a97773f0800000000000000
+      internalID: -903119433842219188
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_11
+      name: HeadsUp_hurt_11
       rect:
         serializedVersion: 2
         x: 714
@@ -1692,14 +1692,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ef38560f5d4c080f0800000000000000
-      internalID: -1116676284447620098
+      spriteID: 49e3a591a1e713430800000000000000
+      internalID: 3760925814390668948
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_12
+      name: HeadsUp_hurt_12
       rect:
         serializedVersion: 2
         x: 1428
@@ -1714,14 +1714,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 59f1c3ddf40738300800000000000000
-      internalID: 253169492379312021
+      spriteID: b6838740c5eaaf060800000000000000
+      internalID: 6988089482053957739
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_13
+      name: HeadsUp_hurt_13
       rect:
         serializedVersion: 2
         x: 2142
@@ -1736,14 +1736,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5259e9afaf207a9e0800000000000000
-      internalID: -1610315064791886555
+      spriteID: f184f711c8ddc5d00800000000000000
+      internalID: 962888014009157663
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_14
+      name: HeadsUp_hurt_14
       rect:
         serializedVersion: 2
         x: 2856
@@ -1758,14 +1758,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9a3f3eb7047cc8f90800000000000000
-      internalID: -6949961045169146967
+      spriteID: d71860d4b0141fdf0800000000000000
+      internalID: -148265795933798019
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_15
+      name: HeadsUp_hurt_15
       rect:
         serializedVersion: 2
         x: 3570
@@ -1780,14 +1780,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 127c383ece0dcb210800000000000000
-      internalID: 1350183704152229665
+      spriteID: 6b950affb2ba4b980800000000000000
+      internalID: -8523999989244864074
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_16
+      name: HeadsUp_hurt_16
       rect:
         serializedVersion: 2
         x: 4284
@@ -1802,14 +1802,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e691ba7a7d9071e80800000000000000
-      internalID: -8208080974023812754
+      spriteID: 31c20b13cc45261f0800000000000000
+      internalID: -1053186126867583981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_17
+      name: HeadsUp_hurt_17
       rect:
         serializedVersion: 2
         x: 4998
@@ -1824,14 +1824,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e838e1f7566f5ce0800000000000000
-      internalID: -1414299230064330521
+      spriteID: 3dcedd49b800ec2a0800000000000000
+      internalID: -6715429394864804653
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_18
+      name: HeadsUp_hurt_18
       rect:
         serializedVersion: 2
         x: 5712
@@ -1846,14 +1846,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 36fd5b6671a4674e0800000000000000
-      internalID: -1984317121442226333
+      spriteID: cf95954cda28ddee0800000000000000
+      internalID: -1234687039994504708
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_19
+      name: HeadsUp_hurt_19
       rect:
         serializedVersion: 2
         x: 6426
@@ -1868,14 +1868,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c916021d86831d980800000000000000
-      internalID: -8515963397544582756
+      spriteID: 74c8f6cfadc180110800000000000000
+      internalID: 1227262625322077255
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_20
+      name: HeadsUp_hurt_20
       rect:
         serializedVersion: 2
         x: 0
@@ -1890,14 +1890,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a9827c2d5416526f0800000000000000
-      internalID: -710054413724079974
+      spriteID: 7bd03259b347a2f20800000000000000
+      internalID: 3398656668058455479
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_21
+      name: HeadsUp_hurt_21
       rect:
         serializedVersion: 2
         x: 714
@@ -1912,14 +1912,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b0b5016fd9120f4a0800000000000000
-      internalID: -6561707694756963573
+      spriteID: b6e7161856457abb0800000000000000
+      internalID: -4924874872567267733
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_22
+      name: HeadsUp_hurt_22
       rect:
         serializedVersion: 2
         x: 1428
@@ -1934,14 +1934,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ecfa3ecbbe7dcdbc0800000000000000
-      internalID: -3756890581647511602
+      spriteID: d51fa79f79d741100800000000000000
+      internalID: 77825185251258717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_23
+      name: HeadsUp_hurt_23
       rect:
         serializedVersion: 2
         x: 2142
@@ -1956,14 +1956,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 65944b9cf0b0dadd0800000000000000
-      internalID: -2473308457920083626
+      spriteID: 7d6cbe53441a986b0800000000000000
+      internalID: -5293522572662815017
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_24
+      name: HeadsUp_hurt_24
       rect:
         serializedVersion: 2
         x: 2856
@@ -1978,14 +1978,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: decd1e03df218b230800000000000000
-      internalID: 3654691976267291885
+      spriteID: d49098f98a0854960800000000000000
+      internalID: 7585610609094887757
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_25
+      name: HeadsUp_hurt_25
       rect:
         serializedVersion: 2
         x: 3570
@@ -2000,14 +2000,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 44e46bf702d422e20800000000000000
-      internalID: 3324304276929793604
+      spriteID: 33f658f4b14f1f550800000000000000
+      internalID: 6192999360746581811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_26
+      name: HeadsUp_hurt_26
       rect:
         serializedVersion: 2
         x: 4284
@@ -2022,14 +2022,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: db4e8fabdb34aaea0800000000000000
-      internalID: -5860797482904525635
+      spriteID: f6f038377792b9af0800000000000000
+      internalID: -388671349821599889
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_27
+      name: HeadsUp_hurt_27
       rect:
         serializedVersion: 2
         x: 4998
@@ -2044,14 +2044,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e2388c35a3a492f20800000000000000
-      internalID: 3398329008201958190
+      spriteID: a6ae62aea434283e0800000000000000
+      internalID: -2053004491092465046
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_28
+      name: HeadsUp_hurt_28
       rect:
         serializedVersion: 2
         x: 5712
@@ -2066,14 +2066,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6f24cc98305959f30800000000000000
-      internalID: 4581732038348653302
+      spriteID: 21f4db457b2e80520800000000000000
+      internalID: 2668632056245604114
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_29
+      name: HeadsUp_hurt_29
       rect:
         serializedVersion: 2
         x: 6426
@@ -2088,14 +2088,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b072efbcd92da8500800000000000000
-      internalID: 399363092149839627
+      spriteID: 5c61d42d2478fdd60800000000000000
+      internalID: 7917195391006480069
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_30
+      name: HeadsUp_hurt_30
       rect:
         serializedVersion: 2
         x: 0
@@ -2110,14 +2110,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b5d4a3ec70d629ce0800000000000000
-      internalID: -1399936653866676901
+      spriteID: d451490171ddc1c30800000000000000
+      internalID: 4331580032755701069
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_31
+      name: HeadsUp_hurt_31
       rect:
         serializedVersion: 2
         x: 714
@@ -2132,14 +2132,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 88e6161be11a72050800000000000000
-      internalID: 5775762200322993800
+      spriteID: cbaf2a54d10991e50800000000000000
+      internalID: 6780609169379752636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_32
+      name: HeadsUp_hurt_32
       rect:
         serializedVersion: 2
         x: 1428
@@ -2154,14 +2154,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d310be17d0ba47490800000000000000
-      internalID: -7749380984563629763
+      spriteID: 8e9e082a06d2e8f20800000000000000
+      internalID: 3426726259541993960
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_33
+      name: HeadsUp_hurt_33
       rect:
         serializedVersion: 2
         x: 2142
@@ -2176,14 +2176,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9025b3b7ab2a589e0800000000000000
-      internalID: -1619709569154723319
+      spriteID: 2cae49b938d135600800000000000000
+      internalID: 455740438382701250
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_34
+      name: HeadsUp_hurt_34
       rect:
         serializedVersion: 2
         x: 2856
@@ -2198,14 +2198,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 21f3abfa0fbcd3210800000000000000
-      internalID: 1314430900862861074
+      spriteID: 7374fec70e1211220800000000000000
+      internalID: 2454780519946078007
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_35
+      name: HeadsUp_hurt_35
       rect:
         serializedVersion: 2
         x: 3570
@@ -2220,14 +2220,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e3032c0747d0e5fe0800000000000000
-      internalID: -1198505657074831298
+      spriteID: 9e578bdc8986f7ec0800000000000000
+      internalID: -3567017374358407703
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_36
+      name: HeadsUp_hurt_36
       rect:
         serializedVersion: 2
         x: 4284
@@ -2242,14 +2242,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 08e547c500d13cc50800000000000000
-      internalID: 6684218159336283776
+      spriteID: aaf0f2d655a14af50800000000000000
+      internalID: 6891662283990044586
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_37
+      name: HeadsUp_hurt_37
       rect:
         serializedVersion: 2
         x: 4998
@@ -2264,14 +2264,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b370cd2412e14d120800000000000000
-      internalID: 2437606426518751035
+      spriteID: 9ceea1abed5ba9640800000000000000
+      internalID: 5087578697278090953
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_38
+      name: HeadsUp_hurt_38
       rect:
         serializedVersion: 2
         x: 5712
@@ -2286,14 +2286,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9f86a27c4b11e5e20800000000000000
-      internalID: 3341127441688717561
+      spriteID: 23f5f28f756eddb30800000000000000
+      internalID: 4313857283591200562
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_39
+      name: HeadsUp_hurt_39
       rect:
         serializedVersion: 2
         x: 6426
@@ -2308,14 +2308,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 878b4d74f903d67e0800000000000000
-      internalID: -1770705617823680392
+      spriteID: 006a8b91437da2eb0800000000000000
+      internalID: -4743742638711593472
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_40
+      name: HeadsUp_hurt_40
       rect:
         serializedVersion: 2
         x: 0
@@ -2330,14 +2330,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1b1bb590d0c492560800000000000000
-      internalID: 7289441090751148465
+      spriteID: 98008f8c82e973820800000000000000
+      internalID: 2897958783243780233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_41
+      name: HeadsUp_hurt_41
       rect:
         serializedVersion: 2
         x: 714
@@ -2352,14 +2352,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 18e6e523284867e10800000000000000
-      internalID: 2195087563115359873
+      spriteID: 0315edcd886e8a2e0800000000000000
+      internalID: -2114186549554949840
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_42
+      name: HeadsUp_hurt_42
       rect:
         serializedVersion: 2
         x: 1428
@@ -2374,14 +2374,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7b25c7740f829e5c0800000000000000
-      internalID: -4185769366207573321
+      spriteID: cff69472a2c800980800000000000000
+      internalID: -8574699577837785092
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_43
+      name: HeadsUp_hurt_43
       rect:
         serializedVersion: 2
         x: 2142
@@ -2396,14 +2396,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b132e8321e658fa80800000000000000
-      internalID: -8432894777287105765
+      spriteID: 0c4cdc7a71f160730800000000000000
+      internalID: 3964890708406289600
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_44
+      name: HeadsUp_hurt_44
       rect:
         serializedVersion: 2
         x: 2856
@@ -2418,14 +2418,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 11adaa003038a7dc0800000000000000
-      internalID: -3640453299856287215
+      spriteID: ebe9ffc00b86a8830800000000000000
+      internalID: 4074183918251646654
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_45
+      name: HeadsUp_hurt_45
       rect:
         serializedVersion: 2
         x: 3570
@@ -2440,14 +2440,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: deea855cecb9538b0800000000000000
-      internalID: -5173057284588654867
+      spriteID: 0a57ab8ec444505f0800000000000000
+      internalID: -791151062420916832
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_46
+      name: HeadsUp_hurt_46
       rect:
         serializedVersion: 2
         x: 4284
@@ -2462,14 +2462,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7a380beb7f948b920800000000000000
-      internalID: 3006234079674794919
+      spriteID: f07032101ee407040800000000000000
+      internalID: 4643297944112662287
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_47
+      name: HeadsUp_hurt_47
       rect:
         serializedVersion: 2
         x: 4998
@@ -2484,14 +2484,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7365ee53e3ac83130800000000000000
-      internalID: 3546807075095860791
+      spriteID: 8650c0bee75d4e600800000000000000
+      internalID: 496756600003626344
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_48
+      name: HeadsUp_hurt_48
       rect:
         serializedVersion: 2
         x: 5712
@@ -2506,14 +2506,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bf57acf6a5a7f0b90800000000000000
-      internalID: -7273460344338876933
+      spriteID: 4fb9fae32ce431ff0800000000000000
+      internalID: -66622973298107404
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_49
+      name: HeadsUp_hurt_49
       rect:
         serializedVersion: 2
         x: 6426
@@ -2528,14 +2528,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ac812a68fedec0e50800000000000000
-      internalID: 6777053152297490634
+      spriteID: 451aed5314c7460d0800000000000000
+      internalID: -3430480396630974124
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_50
+      name: HeadsUp_hurt_50
       rect:
         serializedVersion: 2
         x: 0
@@ -2550,14 +2550,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1caf986fbfcb40c00800000000000000
-      internalID: 866024818721028801
+      spriteID: 5eba4ad946b41c2b0800000000000000
+      internalID: -5566084768939594779
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_51
+      name: HeadsUp_hurt_51
       rect:
         serializedVersion: 2
         x: 714
@@ -2572,14 +2572,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e4214a213a282a110800000000000000
-      internalID: 1270721681775923790
+      spriteID: c2fb5b2b2b1ef3d60800000000000000
+      internalID: 7872258831285600044
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_52
+      name: HeadsUp_hurt_52
       rect:
         serializedVersion: 2
         x: 1428
@@ -2594,14 +2594,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ce8b55d7cea25d8a0800000000000000
-      internalID: -6281066910094870292
+      spriteID: bfe39413ad9b60fd0800000000000000
+      internalID: -2376007406610465029
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_53
+      name: HeadsUp_hurt_53
       rect:
         serializedVersion: 2
         x: 2142
@@ -2616,14 +2616,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 23c9803a366aa58d0800000000000000
-      internalID: -2856788066745934798
+      spriteID: 12060367bf8180450800000000000000
+      internalID: 6055117167298371617
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_54
+      name: HeadsUp_hurt_54
       rect:
         serializedVersion: 2
         x: 2856
@@ -2638,14 +2638,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 52bdd0cf355694fa0800000000000000
-      internalID: -5816006032386827483
+      spriteID: 7eb98ffd03b7f74e0800000000000000
+      internalID: -1981729861173470233
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_55
+      name: HeadsUp_hurt_55
       rect:
         serializedVersion: 2
         x: 3570
@@ -2660,14 +2660,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 094b3c247b14fa1a0800000000000000
-      internalID: -6796141057323846512
+      spriteID: 0a64f4c30cbff0770800000000000000
+      internalID: 8579352618228205216
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_56
+      name: HeadsUp_hurt_56
       rect:
         serializedVersion: 2
         x: 4284
@@ -2682,14 +2682,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dad178896c1e28ef0800000000000000
-      internalID: -107275198024704595
+      spriteID: b60e018b345c54940800000000000000
+      internalID: 5279843032803369067
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_57
+      name: HeadsUp_hurt_57
       rect:
         serializedVersion: 2
         x: 4998
@@ -2704,14 +2704,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 725cb6a9e0ab65d10800000000000000
-      internalID: 2114081646980089127
+      spriteID: 18f44c3061f4673b0800000000000000
+      internalID: -5515133737697521791
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_58
+      name: HeadsUp_hurt_58
       rect:
         serializedVersion: 2
         x: 5712
@@ -2726,14 +2726,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0e4c75dc202cd2350800000000000000
-      internalID: 5993659996390802656
+      spriteID: 7476cb3410934aff0800000000000000
+      internalID: -25833020263209145
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_59
+      name: HeadsUp_hurt_59
       rect:
         serializedVersion: 2
         x: 6426
@@ -2748,14 +2748,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4cb2e8d971aa7faa0800000000000000
-      internalID: -6127241749609960508
+      spriteID: 3f03dd4d29b8b7390800000000000000
+      internalID: -7819502865245982477
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_60
+      name: HeadsUp_hurt_60
       rect:
         serializedVersion: 2
         x: 0
@@ -2770,14 +2770,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1ef424a2235cd86d0800000000000000
-      internalID: -2986514158628745247
+      spriteID: 2222dbe0642745af0800000000000000
+      internalID: -408576020963319262
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_61
+      name: HeadsUp_hurt_61
       rect:
         serializedVersion: 2
         x: 714
@@ -2792,14 +2792,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 88f816f4e44a8ca80800000000000000
-      internalID: -8446320444887167096
+      spriteID: 8261bb6de2cace670800000000000000
+      internalID: 8569413508150269480
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_62
+      name: HeadsUp_hurt_62
       rect:
         serializedVersion: 2
         x: 1428
@@ -2814,14 +2814,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d5705bc0190667e80800000000000000
-      internalID: -8181245496972212387
+      spriteID: f52da1402b4739c10800000000000000
+      internalID: 2059117762560315999
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_63
+      name: HeadsUp_hurt_63
       rect:
         serializedVersion: 2
         x: 2142
@@ -2836,14 +2836,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8ae00f15febb25710800000000000000
-      internalID: 1680612247508881064
+      spriteID: 39f56b9784c39db90800000000000000
+      internalID: -7216670645907202157
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_64
+      name: HeadsUp_hurt_64
       rect:
         serializedVersion: 2
         x: 2856
@@ -2858,14 +2858,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 423290aeca88a0ab0800000000000000
-      internalID: -5041066556645629148
+      spriteID: 198ae61d030851900800000000000000
+      internalID: 654570268012750993
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_65
+      name: HeadsUp_hurt_65
       rect:
         serializedVersion: 2
         x: 3570
@@ -2880,14 +2880,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2d54936cb1f1ac7b0800000000000000
-      internalID: -5203312215322966574
+      spriteID: dc1277a7964102d20800000000000000
+      internalID: 3251621374220247501
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_66
+      name: HeadsUp_hurt_66
       rect:
         serializedVersion: 2
         x: 4284
@@ -2902,14 +2902,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e077961a8b2f4fa50800000000000000
-      internalID: 6554130232526862094
+      spriteID: 66185d40c6a74eff0800000000000000
+      internalID: -7746694991740570
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_67
+      name: HeadsUp_hurt_67
       rect:
         serializedVersion: 2
         x: 4998
@@ -2924,14 +2924,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 58b0c96896ba17390800000000000000
-      internalID: -7822282608047551611
+      spriteID: bf89a0b92bbf873c0800000000000000
+      internalID: -4361459494584411909
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_68
+      name: HeadsUp_hurt_68
       rect:
         serializedVersion: 2
         x: 5712
@@ -2946,14 +2946,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7fc3e75a179ab6d90800000000000000
-      internalID: -7103397681673913097
+      spriteID: 50ae763a5b9dcee20800000000000000
+      internalID: 3381316794402204165
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_69
+      name: HeadsUp_hurt_69
       rect:
         serializedVersion: 2
         x: 6426
@@ -2968,14 +2968,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c7bf6354e89e26cf0800000000000000
-      internalID: -260389031178208388
+      spriteID: 24fbe299d2459e6f0800000000000000
+      internalID: -654899715985457342
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_70
+      name: HeadsUp_hurt_70
       rect:
         serializedVersion: 2
         x: 0
@@ -2990,14 +2990,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 00a0cbbd1b9b5c3a0800000000000000
-      internalID: -6645701501568415232
+      spriteID: 0d2fa9838307f8590800000000000000
+      internalID: -7669788253618507056
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_71
+      name: HeadsUp_hurt_71
       rect:
         serializedVersion: 2
         x: 714
@@ -3012,14 +3012,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 80a403993f22d29f0800000000000000
-      internalID: -491698354671039992
+      spriteID: 605c446b565be5630800000000000000
+      internalID: 3917768174313194758
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_72
+      name: HeadsUp_hurt_72
       rect:
         serializedVersion: 2
         x: 1428
@@ -3034,14 +3034,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 918ea453bda8482b0800000000000000
-      internalID: -5583184963935999975
+      spriteID: 6df0d0ee9c26c8210800000000000000
+      internalID: 1336551808843976662
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_73
+      name: HeadsUp_hurt_73
       rect:
         serializedVersion: 2
         x: 2142
@@ -3056,14 +3056,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a206d5017634a9080800000000000000
-      internalID: -9179950780506087382
+      spriteID: 76f4533f8d57e7c10800000000000000
+      internalID: 2053208054781267815
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_74
+      name: HeadsUp_hurt_74
       rect:
         serializedVersion: 2
         x: 2856
@@ -3078,14 +3078,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a7d5151078781dd60800000000000000
-      internalID: 7913255034179116410
+      spriteID: edbeb1f7ae8e1df00800000000000000
+      internalID: 1139948274553973726
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_75
+      name: HeadsUp_hurt_75
       rect:
         serializedVersion: 2
         x: 3570
@@ -3100,14 +3100,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e08008b710c5f5830800000000000000
-      internalID: 4062066550348187662
+      spriteID: ba645afa466c6e110800000000000000
+      internalID: 1289936479034099371
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_76
+      name: HeadsUp_hurt_76
       rect:
         serializedVersion: 2
         x: 4284
@@ -3122,14 +3122,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 52af9841913dcafa0800000000000000
-      internalID: -5788019316405700059
+      spriteID: e1396179694fa8df0800000000000000
+      internalID: -177060307710602466
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_77
+      name: HeadsUp_hurt_77
       rect:
         serializedVersion: 2
         x: 4998
@@ -3144,14 +3144,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aebd2f7ea24510f70800000000000000
-      internalID: 9151688461050371050
+      spriteID: f7ba89b45bfacd4a0800000000000000
+      internalID: -6567180963420787841
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_78
+      name: HeadsUp_hurt_78
       rect:
         serializedVersion: 2
         x: 5712
@@ -3166,14 +3166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9e3faabcec4c86de0800000000000000
-      internalID: -1339604496683437079
+      spriteID: 674baba42a5b270e0800000000000000
+      internalID: -2273555153225599882
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_79
+      name: HeadsUp_hurt_79
       rect:
         serializedVersion: 2
         x: 6426
@@ -3188,14 +3188,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6bdde87e106632df0800000000000000
-      internalID: -206208999563010634
+      spriteID: d37171dd5a2bded20800000000000000
+      internalID: 3309497726635808573
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_80
+      name: HeadsUp_hurt_80
       rect:
         serializedVersion: 2
         x: 0
@@ -3210,14 +3210,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 880f624a5dd99a9f0800000000000000
-      internalID: -456660346293784440
+      spriteID: 2c32c698da91d5840800000000000000
+      internalID: 5214352176690504642
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_81
+      name: HeadsUp_hurt_81
       rect:
         serializedVersion: 2
         x: 714
@@ -3232,14 +3232,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 70583bca5f3394f60800000000000000
-      internalID: 8018997741767329031
+      spriteID: d99730f0555eb3e90800000000000000
+      internalID: -7044785038604142179
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_82
+      name: HeadsUp_hurt_82
       rect:
         serializedVersion: 2
         x: 1428
@@ -3254,14 +3254,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b326eff258340ef70800000000000000
-      internalID: 9214439076914946619
+      spriteID: 293dd6bc735dd78c0800000000000000
+      internalID: -3999806458422242414
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_83
+      name: HeadsUp_hurt_83
       rect:
         serializedVersion: 2
         x: 2142
@@ -3276,14 +3276,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: added34d88f378a50800000000000000
-      internalID: 6523252442178383322
+      spriteID: 9f6eb43c9d9e8b850800000000000000
+      internalID: 6393116792546125561
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_84
+      name: HeadsUp_hurt_84
       rect:
         serializedVersion: 2
         x: 2856
@@ -3298,14 +3298,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 109d7b88ee02e2130800000000000000
-      internalID: 3543806165655214337
+      spriteID: fd51b2dbafd1654e0800000000000000
+      internalID: -1993372822312118817
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_85
+      name: HeadsUp_hurt_85
       rect:
         serializedVersion: 2
         x: 3570
@@ -3320,14 +3320,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 976fec3c8ecce5be0800000000000000
-      internalID: -1486525526896085383
+      spriteID: faf974bb119035ac0800000000000000
+      internalID: -3867737683219996753
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_86
+      name: HeadsUp_hurt_86
       rect:
         serializedVersion: 2
         x: 4284
@@ -3342,14 +3342,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d6db8142939ac8830800000000000000
-      internalID: 4074817825747287405
+      spriteID: fedf22ab5b0af9660800000000000000
+      internalID: 7394805815538023919
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_87
+      name: HeadsUp_hurt_87
       rect:
         serializedVersion: 2
         x: 4998
@@ -3364,14 +3364,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2741830e22ff60bf0800000000000000
-      internalID: -358318595073633166
+      spriteID: 1eba594d04e97d410800000000000000
+      internalID: 1501843002033023969
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_88
+      name: HeadsUp_hurt_88
       rect:
         serializedVersion: 2
         x: 5712
@@ -3386,14 +3386,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fde1c707dcca75cf0800000000000000
-      internalID: -263552054822428961
+      spriteID: 079bb86cdffb82120800000000000000
+      internalID: 2389370698998724976
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_89
+      name: HeadsUp_hurt_89
       rect:
         serializedVersion: 2
         x: 6426
@@ -3408,14 +3408,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6352c3e3eeccde800800000000000000
-      internalID: 643395645402260790
+      spriteID: 02a9386d0b2e10e60800000000000000
+      internalID: 7926866068289853984
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_90
+      name: HeadsUp_hurt_90
       rect:
         serializedVersion: 2
         x: 0
@@ -3430,14 +3430,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 53bb616e1161a44f0800000000000000
-      internalID: -843837714048042187
+      spriteID: 27a354beaad49f450800000000000000
+      internalID: 6123010564873861746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_91
+      name: HeadsUp_hurt_91
       rect:
         serializedVersion: 2
         x: 714
@@ -3452,14 +3452,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6be85c48a64e6a8f0800000000000000
-      internalID: -529484760024248650
+      spriteID: 39517b0ebf5ee0b60800000000000000
+      internalID: 7714356081701885331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_92
+      name: HeadsUp_hurt_92
       rect:
         serializedVersion: 2
         x: 1428
@@ -3474,14 +3474,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8c7d014fefb01ea30800000000000000
-      internalID: 4242685513604061128
+      spriteID: 70de70afec3b04e90800000000000000
+      internalID: -7043432115667997433
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_93
+      name: HeadsUp_hurt_93
       rect:
         serializedVersion: 2
         x: 2142
@@ -3496,14 +3496,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f3809234a6233e720800000000000000
-      internalID: 2874196419167193151
+      spriteID: 248695cc954782200800000000000000
+      internalID: 155502116173604930
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_94
+      name: HeadsUp_hurt_94
       rect:
         serializedVersion: 2
         x: 2856
@@ -3518,14 +3518,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b793ad613e511a9f0800000000000000
-      internalID: -459061621929920133
+      spriteID: 6afc75de948ddb490800000000000000
+      internalID: -7728783573471735898
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_95
+      name: HeadsUp_hurt_95
       rect:
         serializedVersion: 2
         x: 3570
@@ -3540,14 +3540,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ddd4aec4fe0c57ac0800000000000000
-      internalID: -3857965371752821283
+      spriteID: a684fa8f55a31b550800000000000000
+      internalID: 6174780705020528746
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_96
+      name: HeadsUp_hurt_96
       rect:
         serializedVersion: 2
         x: 4284
@@ -3562,14 +3562,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 74a29f9ae5e9225a0800000000000000
-      internalID: -6547496778827486649
+      spriteID: d440fcbe43db5f4e0800000000000000
+      internalID: -1948443228775709619
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_97
+      name: HeadsUp_hurt_97
       rect:
         serializedVersion: 2
         x: 4998
@@ -3584,14 +3584,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d6b3fcb32b92d6e50800000000000000
-      internalID: 6804140457511041901
+      spriteID: d11552cf1deff9f60800000000000000
+      internalID: 8043427637338919197
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_98
+      name: HeadsUp_hurt_98
       rect:
         serializedVersion: 2
         x: 5712
@@ -3606,14 +3606,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e5010eeeefa3dc2c0800000000000000
-      internalID: -4409803593522081698
+      spriteID: 53c545611ba3ed550800000000000000
+      internalID: 6187447470311889973
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heads_Up_99
+      name: HeadsUp_hurt_99
       rect:
         serializedVersion: 2
         x: 6426
@@ -3628,8 +3628,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 341d3cac8a70119b0800000000000000
-      internalID: -5111295680551071421
+      spriteID: 682ca19aeb96f06a0800000000000000
+      internalID: -6480845071161048442
       vertices: []
       indices: 
       edges: []
@@ -3638,7 +3638,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: dce2d2404f1df174f8e7329dd42937ca
+    spriteID: 389f1e7594f664144b1582087d139523
     internalID: 0
     vertices: []
     indices: 
@@ -3650,106 +3650,106 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":10.0,"y":10.0},"gridSpriteSize":{"x":714.0,"y":905.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.4465000033378601,"y":0.01600000075995922},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Heads_Up_0: 4049353971949860654
-      Heads_Up_1: 4226290401504660355
-      Heads_Up_10: 1697082064610629770
-      Heads_Up_11: -1116676284447620098
-      Heads_Up_12: 253169492379312021
-      Heads_Up_13: -1610315064791886555
-      Heads_Up_14: -6949961045169146967
-      Heads_Up_15: 1350183704152229665
-      Heads_Up_16: -8208080974023812754
-      Heads_Up_17: -1414299230064330521
-      Heads_Up_18: -1984317121442226333
-      Heads_Up_19: -8515963397544582756
-      Heads_Up_2: -476554290501213953
-      Heads_Up_20: -710054413724079974
-      Heads_Up_21: -6561707694756963573
-      Heads_Up_22: -3756890581647511602
-      Heads_Up_23: -2473308457920083626
-      Heads_Up_24: 3654691976267291885
-      Heads_Up_25: 3324304276929793604
-      Heads_Up_26: -5860797482904525635
-      Heads_Up_27: 3398329008201958190
-      Heads_Up_28: 4581732038348653302
-      Heads_Up_29: 399363092149839627
-      Heads_Up_3: 8451882897636171896
-      Heads_Up_30: -1399936653866676901
-      Heads_Up_31: 5775762200322993800
-      Heads_Up_32: -7749380984563629763
-      Heads_Up_33: -1619709569154723319
-      Heads_Up_34: 1314430900862861074
-      Heads_Up_35: -1198505657074831298
-      Heads_Up_36: 6684218159336283776
-      Heads_Up_37: 2437606426518751035
-      Heads_Up_38: 3341127441688717561
-      Heads_Up_39: -1770705617823680392
-      Heads_Up_4: -5779925578145934861
-      Heads_Up_40: 7289441090751148465
-      Heads_Up_41: 2195087563115359873
-      Heads_Up_42: -4185769366207573321
-      Heads_Up_43: -8432894777287105765
-      Heads_Up_44: -3640453299856287215
-      Heads_Up_45: -5173057284588654867
-      Heads_Up_46: 3006234079674794919
-      Heads_Up_47: 3546807075095860791
-      Heads_Up_48: -7273460344338876933
-      Heads_Up_49: 6777053152297490634
-      Heads_Up_5: -5187308326798464356
-      Heads_Up_50: 866024818721028801
-      Heads_Up_51: 1270721681775923790
-      Heads_Up_52: -6281066910094870292
-      Heads_Up_53: -2856788066745934798
-      Heads_Up_54: -5816006032386827483
-      Heads_Up_55: -6796141057323846512
-      Heads_Up_56: -107275198024704595
-      Heads_Up_57: 2114081646980089127
-      Heads_Up_58: 5993659996390802656
-      Heads_Up_59: -6127241749609960508
-      Heads_Up_6: 6044939776556626429
-      Heads_Up_60: -2986514158628745247
-      Heads_Up_61: -8446320444887167096
-      Heads_Up_62: -8181245496972212387
-      Heads_Up_63: 1680612247508881064
-      Heads_Up_64: -5041066556645629148
-      Heads_Up_65: -5203312215322966574
-      Heads_Up_66: 6554130232526862094
-      Heads_Up_67: -7822282608047551611
-      Heads_Up_68: -7103397681673913097
-      Heads_Up_69: -260389031178208388
-      Heads_Up_7: 3444477064895342866
-      Heads_Up_70: -6645701501568415232
-      Heads_Up_71: -491698354671039992
-      Heads_Up_72: -5583184963935999975
-      Heads_Up_73: -9179950780506087382
-      Heads_Up_74: 7913255034179116410
-      Heads_Up_75: 4062066550348187662
-      Heads_Up_76: -5788019316405700059
-      Heads_Up_77: 9151688461050371050
-      Heads_Up_78: -1339604496683437079
-      Heads_Up_79: -206208999563010634
-      Heads_Up_8: -3356602780710478050
-      Heads_Up_80: -456660346293784440
-      Heads_Up_81: 8018997741767329031
-      Heads_Up_82: 9214439076914946619
-      Heads_Up_83: 6523252442178383322
-      Heads_Up_84: 3543806165655214337
-      Heads_Up_85: -1486525526896085383
-      Heads_Up_86: 4074817825747287405
-      Heads_Up_87: -358318595073633166
-      Heads_Up_88: -263552054822428961
-      Heads_Up_89: 643395645402260790
-      Heads_Up_9: 6562243711824783844
-      Heads_Up_90: -843837714048042187
-      Heads_Up_91: -529484760024248650
-      Heads_Up_92: 4242685513604061128
-      Heads_Up_93: 2874196419167193151
-      Heads_Up_94: -459061621929920133
-      Heads_Up_95: -3857965371752821283
-      Heads_Up_96: -6547496778827486649
-      Heads_Up_97: 6804140457511041901
-      Heads_Up_98: -4409803593522081698
-      Heads_Up_99: -5111295680551071421
+      HeadsUp_hurt_0: -7030021235811521466
+      HeadsUp_hurt_1: -6285631573377648739
+      HeadsUp_hurt_10: -903119433842219188
+      HeadsUp_hurt_11: 3760925814390668948
+      HeadsUp_hurt_12: 6988089482053957739
+      HeadsUp_hurt_13: 962888014009157663
+      HeadsUp_hurt_14: -148265795933798019
+      HeadsUp_hurt_15: -8523999989244864074
+      HeadsUp_hurt_16: -1053186126867583981
+      HeadsUp_hurt_17: -6715429394864804653
+      HeadsUp_hurt_18: -1234687039994504708
+      HeadsUp_hurt_19: 1227262625322077255
+      HeadsUp_hurt_2: 5272205920098388303
+      HeadsUp_hurt_20: 3398656668058455479
+      HeadsUp_hurt_21: -4924874872567267733
+      HeadsUp_hurt_22: 77825185251258717
+      HeadsUp_hurt_23: -5293522572662815017
+      HeadsUp_hurt_24: 7585610609094887757
+      HeadsUp_hurt_25: 6192999360746581811
+      HeadsUp_hurt_26: -388671349821599889
+      HeadsUp_hurt_27: -2053004491092465046
+      HeadsUp_hurt_28: 2668632056245604114
+      HeadsUp_hurt_29: 7917195391006480069
+      HeadsUp_hurt_3: -2330336207334430154
+      HeadsUp_hurt_30: 4331580032755701069
+      HeadsUp_hurt_31: 6780609169379752636
+      HeadsUp_hurt_32: 3426726259541993960
+      HeadsUp_hurt_33: 455740438382701250
+      HeadsUp_hurt_34: 2454780519946078007
+      HeadsUp_hurt_35: -3567017374358407703
+      HeadsUp_hurt_36: 6891662283990044586
+      HeadsUp_hurt_37: 5087578697278090953
+      HeadsUp_hurt_38: 4313857283591200562
+      HeadsUp_hurt_39: -4743742638711593472
+      HeadsUp_hurt_4: 660886969245619962
+      HeadsUp_hurt_40: 2897958783243780233
+      HeadsUp_hurt_41: -2114186549554949840
+      HeadsUp_hurt_42: -8574699577837785092
+      HeadsUp_hurt_43: 3964890708406289600
+      HeadsUp_hurt_44: 4074183918251646654
+      HeadsUp_hurt_45: -791151062420916832
+      HeadsUp_hurt_46: 4643297944112662287
+      HeadsUp_hurt_47: 496756600003626344
+      HeadsUp_hurt_48: -66622973298107404
+      HeadsUp_hurt_49: -3430480396630974124
+      HeadsUp_hurt_5: 6724333954987794715
+      HeadsUp_hurt_50: -5566084768939594779
+      HeadsUp_hurt_51: 7872258831285600044
+      HeadsUp_hurt_52: -2376007406610465029
+      HeadsUp_hurt_53: 6055117167298371617
+      HeadsUp_hurt_54: -1981729861173470233
+      HeadsUp_hurt_55: 8579352618228205216
+      HeadsUp_hurt_56: 5279843032803369067
+      HeadsUp_hurt_57: -5515133737697521791
+      HeadsUp_hurt_58: -25833020263209145
+      HeadsUp_hurt_59: -7819502865245982477
+      HeadsUp_hurt_6: 7401146491910870348
+      HeadsUp_hurt_60: -408576020963319262
+      HeadsUp_hurt_61: 8569413508150269480
+      HeadsUp_hurt_62: 2059117762560315999
+      HeadsUp_hurt_63: -7216670645907202157
+      HeadsUp_hurt_64: 654570268012750993
+      HeadsUp_hurt_65: 3251621374220247501
+      HeadsUp_hurt_66: -7746694991740570
+      HeadsUp_hurt_67: -4361459494584411909
+      HeadsUp_hurt_68: 3381316794402204165
+      HeadsUp_hurt_69: -654899715985457342
+      HeadsUp_hurt_7: -274921308440427152
+      HeadsUp_hurt_70: -7669788253618507056
+      HeadsUp_hurt_71: 3917768174313194758
+      HeadsUp_hurt_72: 1336551808843976662
+      HeadsUp_hurt_73: 2053208054781267815
+      HeadsUp_hurt_74: 1139948274553973726
+      HeadsUp_hurt_75: 1289936479034099371
+      HeadsUp_hurt_76: -177060307710602466
+      HeadsUp_hurt_77: -6567180963420787841
+      HeadsUp_hurt_78: -2273555153225599882
+      HeadsUp_hurt_79: 3309497726635808573
+      HeadsUp_hurt_8: 9069337264607387297
+      HeadsUp_hurt_80: 5214352176690504642
+      HeadsUp_hurt_81: -7044785038604142179
+      HeadsUp_hurt_82: -3999806458422242414
+      HeadsUp_hurt_83: 6393116792546125561
+      HeadsUp_hurt_84: -1993372822312118817
+      HeadsUp_hurt_85: -3867737683219996753
+      HeadsUp_hurt_86: 7394805815538023919
+      HeadsUp_hurt_87: 1501843002033023969
+      HeadsUp_hurt_88: 2389370698998724976
+      HeadsUp_hurt_89: 7926866068289853984
+      HeadsUp_hurt_9: -7673090865899991776
+      HeadsUp_hurt_90: 6123010564873861746
+      HeadsUp_hurt_91: 7714356081701885331
+      HeadsUp_hurt_92: -7043432115667997433
+      HeadsUp_hurt_93: 155502116173604930
+      HeadsUp_hurt_94: -7728783573471735898
+      HeadsUp_hurt_95: 6174780705020528746
+      HeadsUp_hurt_96: -1948443228775709619
+      HeadsUp_hurt_97: 8043427637338919197
+      HeadsUp_hurt_98: 6187447470311889973
+      HeadsUp_hurt_99: -6480845071161048442
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

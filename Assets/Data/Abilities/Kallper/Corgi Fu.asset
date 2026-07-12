@@ -18,6 +18,7 @@ MonoBehaviour:
   rangeType: 2
   range: 1
   damage: 20
+  cooldown: 0
   attackType: 1
   canHitEnemies: 1
   canHitAllies: 0
@@ -27,8 +28,9 @@ MonoBehaviour:
   canExecuteWithoutTargets: 0
   endTurnOnCast: 0
   suppressCameraTransitions: 0
-  animationState: Heads_Up
-  animationStateHurt: Heads_Up
+  animationState: Corgi_Fu
+  animationHoldState: 
+  animationHoldReleaseState: 
   castEffectPrefab: {fileID: 0}
   castEffectOffset: {x: 0, y: 0, z: 0}
   parentCastEffectToCaster: 0
