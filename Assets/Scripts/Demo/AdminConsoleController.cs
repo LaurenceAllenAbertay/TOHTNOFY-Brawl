@@ -152,6 +152,12 @@ namespace DDD.TNFY.BRAWL
                 return;
             }
 
+            if (command.commandType == AdminCommandType.Clear)
+            {
+                RunSync(AdminCommandExecutor.ExecuteClear(command));
+                return;
+            }
+
             switch (command.commandType)
             {
                 case AdminCommandType.Spawn:

@@ -359,7 +359,7 @@ namespace DDD.TNFY.BRAWL
 
         public void AdminDelete()
         {
-            if (!gameObject.activeSelf) return;
+            if (this == null || !gameObject.activeSelf) return;
 
             IsDead = true;
 
@@ -369,7 +369,7 @@ namespace DDD.TNFY.BRAWL
             UnitManager.NotifyUnitDied(this);
             UnitManager.UnregisterUnit(this);
 
-            gameObject.SetActive(false);
+            Destroy(gameObject);
         }
 
         public void Die(Unit killer = null)

@@ -14,6 +14,7 @@ namespace DDD.TNFY.BRAWL
         public static event System.Action<Unit> OnTurnEnded; 
         public static event System.Action<int, int> OnTurnNumberChanged;
         public static event System.Action<int> OnTotalTurnChanged;
+        public static event System.Action OnCombatEmpty;
 
         private List<Unit> turnOrder = new List<Unit>();
         private int currentIndex = 0;
@@ -31,6 +32,8 @@ namespace DDD.TNFY.BRAWL
         private int _stableRoundCount = 0;
         
         private bool _activeUnitDiedThisTurn = false;
+
+        private Unit _activeUnit;
 
         private int _roundNumber = 1;
 
@@ -72,8 +75,8 @@ namespace DDD.TNFY.BRAWL
         {
             int diedIndex = turnOrder.IndexOf(unit);
             if (diedIndex < 0) return;
-            
-            if (diedIndex == currentIndex)
+
+            if (unit == _activeUnit)
                 _activeUnitDiedThisTurn = true;
 
             turnOrder.RemoveAt(diedIndex);
@@ -91,9 +94,18 @@ namespace DDD.TNFY.BRAWL
             if (!(unit is PlayerUnit || unit is NpcUnit)) return false;
             if (turnOrder.Contains(unit)) return false;
 
+            bool wasEmpty = _activeUnit == null;
+
             turnOrder.Add(unit);
 
             OnTurnNumberChanged?.Invoke(totalTurnCount, currentIndex);
+
+            if (wasEmpty)
+            {
+                currentIndex = turnOrder.Count - 1;
+                StartNextTurn();
+            }
+
             return true;
         }
 
@@ -130,6 +142,8 @@ namespace DDD.TNFY.BRAWL
             if (turnOrder.Count == 0)
             {
                 Debug.LogWarning("TurnManager: No units in turn order!");
+                _activeUnit = null;
+                OnCombatEmpty?.Invoke();
                 return;
             }
             
@@ -138,6 +152,7 @@ namespace DDD.TNFY.BRAWL
             _activeUnitDiedThisTurn = false;
 
             Unit current = CurrentUnit;
+            _activeUnit = current;
             
             if (StatusEffectManager.Instance != null &&
                 StatusEffectManager.Instance.HasStatusEffect(current, StatusEffectType.Stunned))
@@ -246,6 +261,12 @@ namespace DDD.TNFY.BRAWL
 
         private IEnumerator EndTurnSequence()
         {
+            if (turnOrder.Count == 0)
+            {
+                StartNextTurn();
+                yield break;
+            }
+
             currentIndex++;
             if (currentIndex >= turnOrder.Count)
             {
@@ -259,8 +280,6 @@ namespace DDD.TNFY.BRAWL
 
             OnTurnNumberChanged?.Invoke(totalTurnCount, currentIndex);
             
-            if (turnOrder.Count == 0) yield break;
-
             StartNextTurn();
         }
 

@@ -30,6 +30,13 @@ namespace DDD.TNFY.BRAWL
                     "    removed from the turn order immediately. Works on living units and existing bodies alike."
                 },
                 {
+                    AdminCommandType.Clear,
+                    "> /clear target:player/enemy/all\n" +
+                    "    Instantly deletes every matching unit - no death animation, no body left behind, no target click.\n" +
+                    "    target:player clears team 0. target:enemy clears every unit not on team 0. target:all (default) clears everyone, including neutrals.\n" +
+                    "    e.g. /clear on its own is the same as /clear target:all"
+                },
+                {
                     AdminCommandType.Heal,
                     "> /heal amount:X\n" +
                     "    Click a unit to heal it. Does not overheal past max health. amount must be >= 0."

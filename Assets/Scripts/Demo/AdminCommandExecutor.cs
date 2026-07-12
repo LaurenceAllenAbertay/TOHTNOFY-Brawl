@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -282,6 +283,47 @@ namespace DDD.TNFY.BRAWL
             targetUnit.AdminDelete();
 
             return $"Deleted '{deletedName}' — removed instantly, no body left behind.";
+        }
+
+        public static string ExecuteClear(AdminParsedCommand command)
+        {
+            string targetRaw = command.ResolvePositional("target");
+            if (string.IsNullOrEmpty(targetRaw))
+                targetRaw = "all";
+
+            System.Func<Unit, bool> matchesTarget;
+            switch (targetRaw.ToLowerInvariant())
+            {
+                case "player":
+                    matchesTarget = u => u.team == 0;
+                    break;
+                case "enemy":
+                    matchesTarget = u => u.team != 0;
+                    break;
+                case "all":
+                    matchesTarget = u => true;
+                    break;
+                default:
+                    return $"Syntax error: 'target' must be player, enemy, or all — got '{targetRaw}'.";
+            }
+
+            var toDelete = new List<Unit>();
+            foreach (var unit in UnitManager.AllUnits)
+            {
+                if (unit == null) continue;
+                if (!unit.gameObject.activeSelf) continue;
+                if (matchesTarget(unit))
+                    toDelete.Add(unit);
+            }
+
+            if (toDelete.Count == 0)
+                return $"No units matched target:{targetRaw.ToLowerInvariant()} — nothing to clear.";
+
+            int count = toDelete.Count;
+            foreach (var unit in toDelete)
+                unit.AdminDelete();
+
+            return $"Cleared {count} unit(s) — target:{targetRaw.ToLowerInvariant()}.";
         }
 
         public static string ExecuteHeal(AdminParsedCommand command, Unit targetUnit)

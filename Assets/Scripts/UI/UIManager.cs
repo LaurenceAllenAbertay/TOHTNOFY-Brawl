@@ -129,6 +129,7 @@ namespace DDD.TNFY.BRAWL
 
             TurnManager.OnTurnStarted += HandleTurnStarted;
             TurnManager.OnTurnNumberChanged += HandleTurnIndexChanged;
+            TurnManager.OnCombatEmpty += HandleCombatEmpty;
         }
 
         private void UnsubscribeFromEvents()
@@ -151,6 +152,7 @@ namespace DDD.TNFY.BRAWL
 
             TurnManager.OnTurnStarted -= HandleTurnStarted;
             TurnManager.OnTurnNumberChanged -= HandleTurnIndexChanged;
+            TurnManager.OnCombatEmpty -= HandleCombatEmpty;
         }
 
         private void HandleTurnStarted(Unit unit)
@@ -173,6 +175,16 @@ namespace DDD.TNFY.BRAWL
                 SetUIVisibility(false);
                 if (endTurnButton != null) endTurnButton.gameObject.SetActive(false);
             }
+        }
+
+        private void HandleCombatEmpty()
+        {
+            currentPlayer = null;
+            StopAllCoroutines();
+            turnOrderController?.HandleCombatEmpty();
+
+            if (endTurnButton != null) endTurnButton.gameObject.SetActive(false);
+            SetUIVisibility(false);
         }
 
         private IEnumerator DelayedTurnUISetup()

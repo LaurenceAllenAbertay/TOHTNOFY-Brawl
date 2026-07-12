@@ -46,7 +46,7 @@ namespace DDD.TNFY.BRAWL
             {
                 if (currentState != CombatState.WaitingForInput) return false;
                 if (isMoving || isWaitingForAnimation) return false;
-                if (!(currentActiveUnit is PlayerUnit)) return false;
+                if (currentActiveUnit != null && !(currentActiveUnit is PlayerUnit)) return false;
                 if (IsTargetingAbility) return false;
                 if (jumpSystem != null && jumpSystem.IsTargetingJump) return false;
                 if (cameraController != null && cameraController.IsTransitioning) return false;
@@ -103,6 +103,8 @@ namespace DDD.TNFY.BRAWL
         private bool _hasMovedThisTurn;
         private bool _movementLockedByAbility;
 
+        private Coroutine _cameraTransitionWaitCoroutine;
+
         #endregion
 
         #region Unity Lifecycle
@@ -149,12 +151,14 @@ namespace DDD.TNFY.BRAWL
             Tile.OnTileHovered += HandleTileHovered;
             Tile.OnTileHoverExited += HandleTileHoverExited;
             TurnManager.OnTurnStarted += OnTurnStarted;
+            TurnManager.OnCombatEmpty += HandleCombatEmpty;
             InputManager.OnMouseMoved += HandleMouseMoved;
             InputManager.OnMouseClicked += HandleMouseClicked;
             InputManager.OnMouseRightClicked += HandleMouseRightClicked;
             InputManager.OnAbilitySelected += HandleAbilitySelected;
             InputManager.OnEscapePressed += HandleEscapePressed;
             InputManager.OnEndTurnRequested += EndTurn;
+            UnitManager.OnUnitDied += HandleUnitDied;
         }
 
         private void UnsubscribeFromEvents()
@@ -163,6 +167,8 @@ namespace DDD.TNFY.BRAWL
             Tile.OnTileHovered -= HandleTileHovered;
             Tile.OnTileHoverExited -= HandleTileHoverExited;
             TurnManager.OnTurnStarted -= OnTurnStarted;
+            TurnManager.OnCombatEmpty -= HandleCombatEmpty;
+            UnitManager.OnUnitDied -= HandleUnitDied;
 
             if (InputManager.Instance != null)
             {
@@ -181,6 +187,12 @@ namespace DDD.TNFY.BRAWL
 
         public void OnTurnStarted(Unit activeUnit)
         {
+            if (_cameraTransitionWaitCoroutine != null)
+            {
+                StopCoroutine(_cameraTransitionWaitCoroutine);
+                _cameraTransitionWaitCoroutine = null;
+            }
+
             currentActiveUnit = activeUnit;
             ResetTurnState();
             NotifyAllTargetingTurnStarted();
@@ -191,7 +203,7 @@ namespace DDD.TNFY.BRAWL
             if (cameraController != null)
             {
                 currentState = CombatState.CameraTransition;
-                StartCoroutine(WaitForCameraTransition());
+                _cameraTransitionWaitCoroutine = StartCoroutine(WaitForCameraTransition());
             }
             else
             {
@@ -244,11 +256,16 @@ namespace DDD.TNFY.BRAWL
             }
 
             SetupTurnAfterCameraTransition();
+            _cameraTransitionWaitCoroutine = null;
         }
 
         private void SetupTurnAfterCameraTransition()
         {
             _turnTransitionPending = false;
+
+            if (currentActiveUnit == null)
+                return;
+
             targetingController?.ClearAbilityTargeting();
             GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
             
@@ -319,6 +336,45 @@ namespace DDD.TNFY.BRAWL
             GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
             targetingController?.CancelAbilityTargeting(currentActiveUnit);
             turnManager.EndTurn();
+        }
+
+        private void HandleUnitDied(Unit unit)
+        {
+            if (unit != currentActiveUnit) return;
+            if (_turnTransitionPending) return;
+            if (isWaitingForAnimation || currentState == CombatState.ExecutingAction) return;
+
+            if (_cameraTransitionWaitCoroutine != null)
+            {
+                StopCoroutine(_cameraTransitionWaitCoroutine);
+                _cameraTransitionWaitCoroutine = null;
+            }
+
+            _turnTransitionPending = true;
+            currentState = CombatState.TurnEnding;
+            isMoving = false;
+            GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
+            targetingController?.CancelAbilityTargeting(currentActiveUnit);
+            currentActiveUnit = null;
+            turnManager.EndTurn();
+        }
+
+        private void HandleCombatEmpty()
+        {
+            _turnTransitionPending = false;
+            currentState = CombatState.WaitingForInput;
+            currentActiveUnit = null;
+            isMoving = false;
+            isWaitingForAnimation = false;
+
+            if (_cameraTransitionWaitCoroutine != null)
+            {
+                StopCoroutine(_cameraTransitionWaitCoroutine);
+                _cameraTransitionWaitCoroutine = null;
+            }
+
+            GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
+            UIEvents.OnActiveUnitChanged();
         }
 
         #endregion

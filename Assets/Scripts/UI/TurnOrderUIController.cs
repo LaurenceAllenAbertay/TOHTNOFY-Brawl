@@ -104,6 +104,31 @@ namespace DDD.TNFY.BRAWL
             RefreshAllSlots();
         }
 
+        public void HandleCombatEmpty()
+        {
+            if (transitionCoroutine != null)
+            {
+                StopCoroutine(transitionCoroutine);
+                transitionCoroutine = null;
+            }
+
+            for (int slot = 0; slot < slotUnits.Length; slot++)
+            {
+                slotUnits[slot] = null;
+
+                if (portraitImages[slot] != null)
+                    portraitImages[slot].sprite = null;
+
+                if (overlayImages[slot] != null)
+                    overlayImages[slot].color = OverlayHidden;
+
+                if (slotButtons[slot] != null)
+                    slotButtons[slot].onClick.RemoveAllListeners();
+            }
+
+            SetAllButtonsInteractable(false);
+        }
+
         
         private void RefreshAllSlots()
         {
@@ -127,6 +152,8 @@ namespace DDD.TNFY.BRAWL
             IReadOnlyList<Unit> order = turnManager.TurnOrder;
             int count        = order.Count;
             int currentIndex = turnManager.CurrentTurnIndex;
+
+            if (count == 0) return;
 
             for (int slot = 0; slot < 8; slot++)
             {
@@ -162,6 +189,12 @@ namespace DDD.TNFY.BRAWL
             IReadOnlyList<Unit> order = turnManager.TurnOrder;
             int count        = order.Count;
             int currentIndex = turnManager.CurrentTurnIndex;
+
+            if (count == 0)
+            {
+                transitionCoroutine = null;
+                yield break;
+            }
 
             for (int slot = 0; slot < 8; slot++)
             {
