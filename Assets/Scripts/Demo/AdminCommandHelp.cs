@@ -5,7 +5,7 @@ namespace DDD.TNFY.BRAWL
     public static class AdminCommandHelp
     {
         private const string Divider =
-            "---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
+            "-------------------------------------------------------------------------------------------------------------------";
 
         private static readonly Dictionary<AdminCommandType, string> CommandHelp =
             new Dictionary<AdminCommandType, string>
@@ -14,7 +14,8 @@ namespace DDD.TNFY.BRAWL
                     AdminCommandType.Spawn,
                     "> /spawn CharacterName, abilities:A, B, C, passive:P, current_health:X, max_health:X, speed:X, attack:X, defense:X, jump_range:X, team:X, ai:true/false\n" +
                     "    Spawns CharacterName on the tile you click next. abilities/passive must exist on that character's CharacterData.\n" +
-                    "    If abilities: is omitted, the character's default abilities are used (set on the CharacterData asset). Giving any abilities: overrides the default entirely (no top-up to 3). There is no default passive; omitting passive: means none.\n" +
+                    "    If abilities: is omitted, the character's default abilities are used (set on the CharacterData asset). Giving any abilities: \n" +
+                    "    overrides the default entirely (no top-up to 3). There is no default passive; omitting passive: means none.\n" +
                     "    team:X sets allegiance (0, 1, 2, ...). ai:true/false forces AI or player control regardless of prefab setup.\n" +
                     "    e.g. /spawn Lorns, abilities:Straight_Shot, Teleport, Recoil_Shot, passive:Mastermind, team:0, ai:false"
                 },
@@ -56,7 +57,9 @@ namespace DDD.TNFY.BRAWL
                 {
                     AdminCommandType.StatusEffect,
                     "> /statuseffect effect_name, duration:2, power:1\n" +
-                    "    Click a unit to apply effect_name. duration is always valid (default 2). power is optional and any whole number (including negative or 0); it sets the effect's magnitude (e.g. stacks for AddStacks effects like Bleeding, or +10% per point for AttackUp/DefenseUp/etc). Effects that don't read power ignore it harmlessly."
+                    "    Click a unit to apply effect_name. duration is always valid (default 2). power is optional and any whole number (including negative\n" +
+                    "    or 0); it sets the effect's magnitude (e.g. stacks for AddStacks effects like Bleeding, or +10% per point for AttackUp/DefenseUp/etc).\n" +
+                    "    Effects that don't read power ignore it harmlessly."
                 },
                 {
                     AdminCommandType.Teleport,
