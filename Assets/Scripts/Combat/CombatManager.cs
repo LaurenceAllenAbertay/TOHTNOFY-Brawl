@@ -37,7 +37,7 @@ namespace DDD.TNFY.BRAWL
 
         public bool CanEndTurn => currentState == CombatState.WaitingForInput &&
                                   !isMoving && !isWaitingForAnimation &&
-                                  currentActiveUnit is PlayerUnit &&
+                                  currentActiveUnit is PlayerUnit && !currentActiveUnit.IsAIControlled &&
                                   (Time.time - turnStartTime >= turnStartProtectionDuration);
 
         public bool IsSafeForAdminCommand
@@ -46,7 +46,7 @@ namespace DDD.TNFY.BRAWL
             {
                 if (currentState != CombatState.WaitingForInput) return false;
                 if (isMoving || isWaitingForAnimation) return false;
-                if (currentActiveUnit != null && !(currentActiveUnit is PlayerUnit)) return false;
+                if (currentActiveUnit != null && (!(currentActiveUnit is PlayerUnit) || currentActiveUnit.IsAIControlled)) return false;
                 if (IsTargetingAbility) return false;
                 if (jumpSystem != null && jumpSystem.IsTargetingJump) return false;
                 if (cameraController != null && cameraController.IsTransitioning) return false;
@@ -294,7 +294,7 @@ namespace DDD.TNFY.BRAWL
 
             currentState = CombatState.WaitingForInput;
 
-            if (currentActiveUnit is PlayerUnit)
+            if (currentActiveUnit is PlayerUnit && !currentActiveUnit.IsAIControlled)
             {
                 GridManager.Instance.SetHighlightMode(
                     GridManager.HighlightMode.Movement,
@@ -324,7 +324,7 @@ namespace DDD.TNFY.BRAWL
 
         public void EndTurn()
         {
-            if (!(currentActiveUnit is PlayerUnit)) return;
+            if (!(currentActiveUnit is PlayerUnit) || currentActiveUnit.IsAIControlled) return;
             if (_turnTransitionPending) return;
             if (Time.time - turnStartTime < turnStartProtectionDuration) return;
             if (isMoving || currentState == CombatState.MovingUnit) return;
@@ -386,7 +386,7 @@ namespace DDD.TNFY.BRAWL
             if (isBlockingAllInput) return true;
             if (currentState != CombatState.WaitingForInput) return true;
             if (currentActiveUnit == null) return true;
-            if (!(currentActiveUnit is PlayerUnit)) return true;
+            if (!(currentActiveUnit is PlayerUnit) || currentActiveUnit.IsAIControlled) return true;
             if (isWaitingForAnimation || isMoving) return true;
 
             var unitAnimator = currentActiveUnit.GetComponent<UnitAnimator>();
@@ -662,7 +662,7 @@ namespace DDD.TNFY.BRAWL
 
                     NotifyCurrentUnitTargetingTurnStarted();
 
-                    if (currentActiveUnit is PlayerUnit && GetRemainingMovement() > 0)
+                    if (currentActiveUnit is PlayerUnit && !currentActiveUnit.IsAIControlled && GetRemainingMovement() > 0)
                     {
                         GridManager.Instance.SetHighlightMode(
                             GridManager.HighlightMode.Movement,

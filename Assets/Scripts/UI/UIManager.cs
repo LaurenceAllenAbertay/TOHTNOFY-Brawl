@@ -160,7 +160,7 @@ namespace DDD.TNFY.BRAWL
             currentPlayer = unit;
             turnOrderController?.HandleTurnStarted(unit);
 
-            if (unit is PlayerUnit)
+            if (unit is PlayerUnit && !unit.IsAIControlled)
             {
 
                 if (endTurnButton != null) endTurnButton.gameObject.SetActive(false);
@@ -201,7 +201,7 @@ namespace DDD.TNFY.BRAWL
                 yield return null;
             }
 
-            if (unitForThisTurn is PlayerUnit)
+            if (unitForThisTurn is PlayerUnit && !unitForThisTurn.IsAIControlled)
             {
                 if (endTurnButton != null) endTurnButton.gameObject.SetActive(true);
                 UpdateEndTurnButtonColour(unitForThisTurn);
@@ -224,8 +224,9 @@ namespace DDD.TNFY.BRAWL
             {
                 if (endTurnButton != null)
                 {
-                    endTurnButton.gameObject.SetActive(currentPlayer is PlayerUnit);
-                    if (currentPlayer is PlayerUnit)
+                    bool isHumanControlled = currentPlayer is PlayerUnit && !currentPlayer.IsAIControlled;
+                    endTurnButton.gameObject.SetActive(isHumanControlled);
+                    if (isHumanControlled)
                         UpdateEndTurnButtonColour(currentPlayer);
                 }
                 SetUIVisibility(true);
@@ -345,7 +346,7 @@ namespace DDD.TNFY.BRAWL
             if (turnManager != null && turnManager.CurrentUnit != currentPlayer)
                 currentPlayer = turnManager.CurrentUnit;
 
-            if (!(currentPlayer is PlayerUnit)) return false;
+            if (!(currentPlayer is PlayerUnit) || currentPlayer.IsAIControlled) return false;
             if (IsCurrentlyTargeting() || IsExecutingAbility() || uiHiddenForAnimation || uiHiddenForMovement)
                 return false;
 
@@ -417,7 +418,7 @@ namespace DDD.TNFY.BRAWL
 
             bool uiIsActive = turnUI != null && turnUI.activeSelf;
             bool unitStillCurrent = currentPlayer == expectedUnit;
-            bool stillPlayerUnit = expectedUnit is PlayerUnit;
+            bool stillPlayerUnit = expectedUnit is PlayerUnit && !expectedUnit.IsAIControlled;
             bool cameraStillMoving = cameraController != null && cameraController.IsTransitioning;
             bool inCameraState = combatManager != null && combatManager.currentState == CombatState.CameraTransition;
             bool turnIsEnding  = combatManager != null && combatManager.currentState == CombatState.TurnEnding;

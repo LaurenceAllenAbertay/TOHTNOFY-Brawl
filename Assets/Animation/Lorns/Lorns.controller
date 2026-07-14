@@ -8,7 +8,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Recoil_Shot
-  m_Speed: 1.4
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -60,7 +60,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Idle_Good
-  m_Speed: 0.75
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -86,7 +86,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Straight_Shot_Hurt
-  m_Speed: 0.75
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -170,7 +170,7 @@ AnimatorStateMachine:
     m_Position: {x: 250, y: 160, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 9071635137280128439}
-    m_Position: {x: 40, y: 60, z: 0}
+    m_Position: {x: -170, y: 60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1674090903433453378}
     m_Position: {x: 460, y: 10, z: 0}
@@ -179,13 +179,13 @@ AnimatorStateMachine:
     m_Position: {x: 460, y: 60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -8890031451015837991}
-    m_Position: {x: 40, y: 10, z: 0}
+    m_Position: {x: -170, y: 10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 2082457699318187945}
-    m_Position: {x: 40, y: -40, z: 0}
+    m_Position: {x: -170, y: -40, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -7342153570617939945}
-    m_Position: {x: 50, y: -70, z: 0}
+    m_Position: {x: -170, y: -90, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 7588905328972852886}
     m_Position: {x: 250, y: 110, z: 0}
@@ -194,7 +194,7 @@ AnimatorStateMachine:
     m_Position: {x: 460, y: 160, z: 0}
   - serializedVersion: 1
     m_State: {fileID: -4235692195686782602}
-    m_Position: {x: 250, y: 60, z: 0}
+    m_Position: {x: 40, y: 60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1108839107347371631}
     m_Position: {x: 460, y: 110, z: 0}
@@ -222,7 +222,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Knockback_End
-  m_Speed: 0.75
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -270,7 +270,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Hurt
-  m_Speed: 0.75
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -296,7 +296,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Knockback_Start
-  m_Speed: 0.75
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -348,7 +348,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Downed
-  m_Speed: 0.75
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -374,7 +374,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Idle_Good_Talking
-  m_Speed: 0.75
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []
@@ -400,7 +400,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Straight_Shot
-  m_Speed: 0.75
+  m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
   m_StateMachineBehaviours: []

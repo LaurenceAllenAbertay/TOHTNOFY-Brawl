@@ -68,7 +68,9 @@ namespace DDD.TNFY.BRAWL
         public bool IsBody { get; private set; } = false;
         
         public virtual bool IsNeutral => IsBody;
-        
+
+        public bool IsAIControlled => GetComponent<UnitAI>() != null;
+
         public AbilityContext currentAbilityContext => abilitySequencer?.CurrentAbilityContext;
 
         private UnitAnimator unitAnimator;
