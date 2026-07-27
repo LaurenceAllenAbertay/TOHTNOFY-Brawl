@@ -35,7 +35,12 @@ namespace DDD.TNFY.BRAWL
             if (from == null || to == null || GridManager.Instance == null)
                 return Vector2Int.zero;
 
-            Vector3 delta = to.transform.position - from.transform.position;
+            return CardinalFromPositions(from.transform.position, to.transform.position);
+        }
+
+        public static Vector2Int CardinalFromPositions(Vector3 from, Vector3 to)
+        {
+            Vector3 delta = to - from;
             float absX = Mathf.Abs(delta.x);
             float absZ = Mathf.Abs(delta.z);
             
@@ -45,6 +50,20 @@ namespace DDD.TNFY.BRAWL
             return absX >= absZ
                 ? new Vector2Int(delta.x > 0f ? 1 : -1, 0)
                 : new Vector2Int(0, delta.z > 0f ? 1 : -1);
+        }
+
+        public static Vector2Int DirectionFromPositions(Vector3 from, Vector3 to)
+        {
+            Vector3 delta = to - from;
+            float absX = Mathf.Abs(delta.x);
+            float absZ = Mathf.Abs(delta.z);
+
+            if (absX < 0.001f && absZ < 0.001f)
+                return Vector2Int.zero;
+
+            int x = absX < 0.001f ? 0 : (delta.x > 0f ? 1 : -1);
+            int z = absZ < 0.001f ? 0 : (delta.z > 0f ? 1 : -1);
+            return new Vector2Int(x, z);
         }
 
         public static string ToName(Vector2Int dir)

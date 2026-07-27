@@ -1,0 +1,1172 @@
+fileFormatVersion: 2
+guid: 3dab0c3cd3446804da6fda46b50aa3f2
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2633411968737828142
+    second: PMRG_Death_Weapon3_0
+  - first:
+      213: 4912573992332737773
+    second: PMRG_Death_Weapon3_1
+  - first:
+      213: -5303055540309374544
+    second: PMRG_Death_Weapon3_2
+  - first:
+      213: 5181029075563577310
+    second: PMRG_Death_Weapon3_3
+  - first:
+      213: -8880515328044683468
+    second: PMRG_Death_Weapon3_4
+  - first:
+      213: 5707602680165249383
+    second: PMRG_Death_Weapon3_5
+  - first:
+      213: -464840279632177728
+    second: PMRG_Death_Weapon3_6
+  - first:
+      213: 4316827902624549490
+    second: PMRG_Death_Weapon3_7
+  - first:
+      213: 1057428262372074622
+    second: PMRG_Death_Weapon3_8
+  - first:
+      213: -6673652835095174750
+    second: PMRG_Death_Weapon3_9
+  - first:
+      213: -969938203159520439
+    second: PMRG_Death_Weapon3_10
+  - first:
+      213: 792666746400107643
+    second: PMRG_Death_Weapon3_11
+  - first:
+      213: 1484134666154639200
+    second: PMRG_Death_Weapon3_12
+  - first:
+      213: 4744766929584199362
+    second: PMRG_Death_Weapon3_13
+  - first:
+      213: 4420291412381314687
+    second: PMRG_Death_Weapon3_14
+  - first:
+      213: -8898598958829411638
+    second: PMRG_Death_Weapon3_15
+  - first:
+      213: 958378432712610486
+    second: PMRG_Death_Weapon3_16
+  - first:
+      213: -4606300827805920079
+    second: PMRG_Death_Weapon3_17
+  - first:
+      213: 3700340243798971781
+    second: PMRG_Death_Weapon3_18
+  - first:
+      213: 7173002578887476703
+    second: PMRG_Death_Weapon3_19
+  - first:
+      213: 3891942050515603475
+    second: PMRG_Death_Weapon3_20
+  - first:
+      213: 4908378118406324367
+    second: PMRG_Death_Weapon3_21
+  - first:
+      213: -8214459191660556452
+    second: PMRG_Death_Weapon3_22
+  - first:
+      213: 6782210410792892587
+    second: PMRG_Death_Weapon3_23
+  - first:
+      213: -4297543590538400690
+    second: PMRG_Death_Weapon3_24
+  - first:
+      213: 9184001828901589704
+    second: PMRG_Death_Weapon3_25
+  - first:
+      213: 4638484212114926995
+    second: PMRG_Death_Weapon3_26
+  - first:
+      213: 8907674493928481977
+    second: PMRG_Death_Weapon3_27
+  - first:
+      213: -8846195506668603569
+    second: PMRG_Death_Weapon3_28
+  - first:
+      213: -4334685302950508554
+    second: PMRG_Death_Weapon3_29
+  - first:
+      213: 8915571074180327628
+    second: PMRG_Death_Weapon3_30
+  - first:
+      213: 5582653504783464568
+    second: PMRG_Death_Weapon3_31
+  - first:
+      213: -7300145841496400160
+    second: PMRG_Death_Weapon3_32
+  - first:
+      213: 4705114112840532427
+    second: PMRG_Death_Weapon3_33
+  - first:
+      213: -7246294065669245813
+    second: PMRG_Death_Weapon3_34
+  - first:
+      213: -5244374135221032085
+    second: PMRG_Death_Weapon3_35
+  - first:
+      213: -6327326882718149600
+    second: PMRG_Death_Weapon3_36
+  - first:
+      213: 8266699322381273169
+    second: PMRG_Death_Weapon3_37
+  - first:
+      213: -1217759269050580373
+    second: PMRG_Death_Weapon3_38
+  - first:
+      213: 1040860085160491583
+    second: PMRG_Death_Weapon3_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7008
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2d51efab32cb8420800000000000000
+      internalID: 2633411968737828142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_1
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 7008
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: decb0d1a408fc2440800000000000000
+      internalID: 4912573992332737773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_2
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 7008
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b941b73513c766b0800000000000000
+      internalID: -5303055540309374544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_3
+      rect:
+        serializedVersion: 2
+        x: 3045
+        y: 7008
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edfffe37e76b6e740800000000000000
+      internalID: 5181029075563577310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_4
+      rect:
+        serializedVersion: 2
+        x: 4060
+        y: 7008
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43f2c713c5212c480800000000000000
+      internalID: -8880515328044683468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_5
+      rect:
+        serializedVersion: 2
+        x: 5075
+        y: 7008
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 761315eb56a753f40800000000000000
+      internalID: 5707602680165249383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5840
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c51b3f7a3e8c89f0800000000000000
+      internalID: -464840279632177728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_7
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 5840
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27a4e6c1b1478eb30800000000000000
+      internalID: 4316827902624549490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_8
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 5840
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e746522f66dbcae00800000000000000
+      internalID: 1057428262372074622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_9
+      rect:
+        serializedVersion: 2
+        x: 3045
+        y: 5840
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a1afd1ea1c6263a0800000000000000
+      internalID: -6673652835095174750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_10
+      rect:
+        serializedVersion: 2
+        x: 4060
+        y: 5840
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94b989ad7561a82f0800000000000000
+      internalID: -969938203159520439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_11
+      rect:
+        serializedVersion: 2
+        x: 5075
+        y: 5840
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7c6174c43e100b00800000000000000
+      internalID: 792666746400107643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4672
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06f7df69d94b89410800000000000000
+      internalID: 1484134666154639200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_13
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 4672
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c613e3326cc8d140800000000000000
+      internalID: 4744766929584199362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_14
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 4672
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7ea2beae97085d30800000000000000
+      internalID: 4420291412381314687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_15
+      rect:
+        serializedVersion: 2
+        x: 3045
+        y: 4672
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac2ef4cc463d18480800000000000000
+      internalID: -8898598958829411638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_16
+      rect:
+        serializedVersion: 2
+        x: 4060
+        y: 4672
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b21b3a5b18dc4d00800000000000000
+      internalID: 958378432712610486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_17
+      rect:
+        serializedVersion: 2
+        x: 5075
+        y: 4672
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b45a066dc12310c0800000000000000
+      internalID: -4606300827805920079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3504
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58558b3b8df3a5330800000000000000
+      internalID: 3700340243798971781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_19
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 3504
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd58c8f57df9b8360800000000000000
+      internalID: 7173002578887476703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_20
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 3504
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 310536faca4f20630800000000000000
+      internalID: 3891942050515603475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_21
+      rect:
+        serializedVersion: 2
+        x: 3045
+        y: 3504
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f80c8ea94ef0e1440800000000000000
+      internalID: 4908378118406324367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_22
+      rect:
+        serializedVersion: 2
+        x: 4060
+        y: 3504
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5f412323e0600e80800000000000000
+      internalID: -8214459191660556452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_23
+      rect:
+        serializedVersion: 2
+        x: 5075
+        y: 3504
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba834475f604f1e50800000000000000
+      internalID: 6782210410792892587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2336
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4ca33fafde0c54c0800000000000000
+      internalID: -4297543590538400690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_25
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 2336
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c297342101247f70800000000000000
+      internalID: 9184001828901589704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_26
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 2336
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39d2e5fa0d43f5040800000000000000
+      internalID: 4638484212114926995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_27
+      rect:
+        serializedVersion: 2
+        x: 3045
+        y: 2336
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b42a61e1ca6e9b70800000000000000
+      internalID: 8907674493928481977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_28
+      rect:
+        serializedVersion: 2
+        x: 4060
+        y: 2336
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f477c5b4e000c3580800000000000000
+      internalID: -8846195506668603569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_29
+      rect:
+        serializedVersion: 2
+        x: 5075
+        y: 2336
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f74780eeaa18d3c0800000000000000
+      internalID: -4334685302950508554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1168
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc8244eb7a87abb70800000000000000
+      internalID: 8915571074180327628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_31
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 1168
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87835b0d8c1997d40800000000000000
+      internalID: 5582653504783464568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_32
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 1168
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0eedf05f80ca0ba90800000000000000
+      internalID: -7300145841496400160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_33
+      rect:
+        serializedVersion: 2
+        x: 3045
+        y: 1168
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc1898b5b5ceb4140800000000000000
+      internalID: 4705114112840532427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_34
+      rect:
+        serializedVersion: 2
+        x: 4060
+        y: 1168
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8473c590fdff6b90800000000000000
+      internalID: -7246294065669245813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_35
+      rect:
+        serializedVersion: 2
+        x: 5075
+        y: 1168
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6b67e8828d3837b0800000000000000
+      internalID: -5244374135221032085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0241ec949b1d038a0800000000000000
+      internalID: -6327326882718149600
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_37
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 0
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1588f7f1c3739b270800000000000000
+      internalID: 8266699322381273169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_38
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 0
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b620d429566a91fe0800000000000000
+      internalID: -1217759269050580373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Weapon3_39
+      rect:
+        serializedVersion: 2
+        x: 3045
+        y: 0
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3abfd49bb0e17e00800000000000000
+      internalID: 1040860085160491583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1c1ef496e89235d45b4bdaa42108e0a9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":7.0},"gridSpriteSize":{"x":1015.0,"y":1168.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5609999895095825,"y":0.24899999797344209},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      PMRG_Death_Weapon3_0: 2633411968737828142
+      PMRG_Death_Weapon3_1: 4912573992332737773
+      PMRG_Death_Weapon3_10: -969938203159520439
+      PMRG_Death_Weapon3_11: 792666746400107643
+      PMRG_Death_Weapon3_12: 1484134666154639200
+      PMRG_Death_Weapon3_13: 4744766929584199362
+      PMRG_Death_Weapon3_14: 4420291412381314687
+      PMRG_Death_Weapon3_15: -8898598958829411638
+      PMRG_Death_Weapon3_16: 958378432712610486
+      PMRG_Death_Weapon3_17: -4606300827805920079
+      PMRG_Death_Weapon3_18: 3700340243798971781
+      PMRG_Death_Weapon3_19: 7173002578887476703
+      PMRG_Death_Weapon3_2: -5303055540309374544
+      PMRG_Death_Weapon3_20: 3891942050515603475
+      PMRG_Death_Weapon3_21: 4908378118406324367
+      PMRG_Death_Weapon3_22: -8214459191660556452
+      PMRG_Death_Weapon3_23: 6782210410792892587
+      PMRG_Death_Weapon3_24: -4297543590538400690
+      PMRG_Death_Weapon3_25: 9184001828901589704
+      PMRG_Death_Weapon3_26: 4638484212114926995
+      PMRG_Death_Weapon3_27: 8907674493928481977
+      PMRG_Death_Weapon3_28: -8846195506668603569
+      PMRG_Death_Weapon3_29: -4334685302950508554
+      PMRG_Death_Weapon3_3: 5181029075563577310
+      PMRG_Death_Weapon3_30: 8915571074180327628
+      PMRG_Death_Weapon3_31: 5582653504783464568
+      PMRG_Death_Weapon3_32: -7300145841496400160
+      PMRG_Death_Weapon3_33: 4705114112840532427
+      PMRG_Death_Weapon3_34: -7246294065669245813
+      PMRG_Death_Weapon3_35: -5244374135221032085
+      PMRG_Death_Weapon3_36: -6327326882718149600
+      PMRG_Death_Weapon3_37: 8266699322381273169
+      PMRG_Death_Weapon3_38: -1217759269050580373
+      PMRG_Death_Weapon3_39: 1040860085160491583
+      PMRG_Death_Weapon3_4: -8880515328044683468
+      PMRG_Death_Weapon3_5: 5707602680165249383
+      PMRG_Death_Weapon3_6: -464840279632177728
+      PMRG_Death_Weapon3_7: 4316827902624549490
+      PMRG_Death_Weapon3_8: 1057428262372074622
+      PMRG_Death_Weapon3_9: -6673652835095174750
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

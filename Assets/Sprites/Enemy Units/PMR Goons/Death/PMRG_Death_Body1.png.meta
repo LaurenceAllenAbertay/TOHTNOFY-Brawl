@@ -1,0 +1,1172 @@
+fileFormatVersion: 2
+guid: 6c30e574117047341a0a386f955efa35
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6480033995258365188
+    second: PMRG_Death_Body1_0
+  - first:
+      213: 6468260055372705690
+    second: PMRG_Death_Body1_1
+  - first:
+      213: -2192401307899005909
+    second: PMRG_Death_Body1_2
+  - first:
+      213: 2874689075690272097
+    second: PMRG_Death_Body1_3
+  - first:
+      213: 6137175559762782596
+    second: PMRG_Death_Body1_4
+  - first:
+      213: -172770666754402064
+    second: PMRG_Death_Body1_5
+  - first:
+      213: 7077660175087973031
+    second: PMRG_Death_Body1_6
+  - first:
+      213: 4030760889413234064
+    second: PMRG_Death_Body1_7
+  - first:
+      213: 3054422841940722800
+    second: PMRG_Death_Body1_8
+  - first:
+      213: -2041724448394620772
+    second: PMRG_Death_Body1_9
+  - first:
+      213: -7814004679970664934
+    second: PMRG_Death_Body1_10
+  - first:
+      213: 8012858671436843116
+    second: PMRG_Death_Body1_11
+  - first:
+      213: -146250203699562138
+    second: PMRG_Death_Body1_12
+  - first:
+      213: 8123317693212691154
+    second: PMRG_Death_Body1_13
+  - first:
+      213: -6471890984457290972
+    second: PMRG_Death_Body1_14
+  - first:
+      213: -6890143249676710825
+    second: PMRG_Death_Body1_15
+  - first:
+      213: 8403831652693202995
+    second: PMRG_Death_Body1_16
+  - first:
+      213: -8032888126849277786
+    second: PMRG_Death_Body1_17
+  - first:
+      213: 7708620265971359117
+    second: PMRG_Death_Body1_18
+  - first:
+      213: 5659411338605646632
+    second: PMRG_Death_Body1_19
+  - first:
+      213: 7629950005096155651
+    second: PMRG_Death_Body1_20
+  - first:
+      213: -75410868724808020
+    second: PMRG_Death_Body1_21
+  - first:
+      213: 3669455631151281708
+    second: PMRG_Death_Body1_22
+  - first:
+      213: 9175274482512180597
+    second: PMRG_Death_Body1_23
+  - first:
+      213: 4623297236168128143
+    second: PMRG_Death_Body1_24
+  - first:
+      213: -8843444714946163375
+    second: PMRG_Death_Body1_25
+  - first:
+      213: 2503035675423574372
+    second: PMRG_Death_Body1_26
+  - first:
+      213: -5015911680340376074
+    second: PMRG_Death_Body1_27
+  - first:
+      213: -3727312081605637317
+    second: PMRG_Death_Body1_28
+  - first:
+      213: -5075036968556178615
+    second: PMRG_Death_Body1_29
+  - first:
+      213: 1852838415712497573
+    second: PMRG_Death_Body1_30
+  - first:
+      213: 714478956662703961
+    second: PMRG_Death_Body1_31
+  - first:
+      213: 5257918724972113223
+    second: PMRG_Death_Body1_32
+  - first:
+      213: -5330196114953599788
+    second: PMRG_Death_Body1_33
+  - first:
+      213: 7459298230994572746
+    second: PMRG_Death_Body1_34
+  - first:
+      213: 4480404809053044999
+    second: PMRG_Death_Body1_35
+  - first:
+      213: -8161631155029226326
+    second: PMRG_Death_Body1_36
+  - first:
+      213: 1304502898937300675
+    second: PMRG_Death_Body1_37
+  - first:
+      213: -1005344408599768609
+    second: PMRG_Death_Body1_38
+  - first:
+      213: 4571641367631732698
+    second: PMRG_Death_Body1_39
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7008
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40584d30694bde950800000000000000
+      internalID: 6480033995258365188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_1
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 7008
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9fa6530040e3c950800000000000000
+      internalID: 6468260055372705690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_2
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 7008
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b24f39550a60391e0800000000000000
+      internalID: -2192401307899005909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_3
+      rect:
+        serializedVersion: 2
+        x: 3045
+        y: 7008
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 165f63ccb72f4e720800000000000000
+      internalID: 2874689075690272097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_4
+      rect:
+        serializedVersion: 2
+        x: 4060
+        y: 7008
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 489aedbc7a0ab2550800000000000000
+      internalID: 6137175559762782596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_5
+      rect:
+        serializedVersion: 2
+        x: 5075
+        y: 7008
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f81f747ef13a9df0800000000000000
+      internalID: -172770666754402064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5840
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a23c012e66e83260800000000000000
+      internalID: 7077660175087973031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_7
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 5840
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09d630c4ca320f730800000000000000
+      internalID: 4030760889413234064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_8
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 5840
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07447b7446d736a20800000000000000
+      internalID: 3054422841940722800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_9
+      rect:
+        serializedVersion: 2
+        x: 3045
+        y: 5840
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9055348e665aa3e0800000000000000
+      internalID: -2041724448394620772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_10
+      rect:
+        serializedVersion: 2
+        x: 4060
+        y: 5840
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a1ecb19d4241f8390800000000000000
+      internalID: -7814004679970664934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_11
+      rect:
+        serializedVersion: 2
+        x: 5075
+        y: 5840
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c68c66af184633f60800000000000000
+      internalID: 8012858671436843116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4672
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 669b820f63a68fdf0800000000000000
+      internalID: -146250203699562138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_13
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 4672
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2da869d1762dbb070800000000000000
+      internalID: 8123317693212691154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_14
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 4672
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42bbe5e60793f26a0800000000000000
+      internalID: -6471890984457290972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_15
+      rect:
+        serializedVersion: 2
+        x: 3045
+        y: 4672
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75cc67f483b4160a0800000000000000
+      internalID: -6890143249676710825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_16
+      rect:
+        serializedVersion: 2
+        x: 4060
+        y: 4672
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33856fadc5860a470800000000000000
+      internalID: 8403831652693202995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_17
+      rect:
+        serializedVersion: 2
+        x: 5075
+        y: 4672
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a022b60fc2758090800000000000000
+      internalID: -8032888126849277786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3504
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8d99953a458afa60800000000000000
+      internalID: 7708620265971359117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_19
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 3504
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 823586ba0a44a8e40800000000000000
+      internalID: 5659411338605646632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_20
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 3504
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30a0fbbba1703e960800000000000000
+      internalID: 7629950005096155651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_21
+      rect:
+        serializedVersion: 2
+        x: 3045
+        y: 3504
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca64475e63614fef0800000000000000
+      internalID: -75410868724808020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_22
+      rect:
+        serializedVersion: 2
+        x: 4060
+        y: 3504
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2634d574768ce230800000000000000
+      internalID: 3669455631151281708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_23
+      rect:
+        serializedVersion: 2
+        x: 5075
+        y: 3504
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57538d6778f155f70800000000000000
+      internalID: 9175274482512180597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2336
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f86b8dc4750492040800000000000000
+      internalID: 4623297236168128143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_25
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 2336
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15d04d6e2e5c54580800000000000000
+      internalID: -8843444714946163375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_26
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 2336
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46980c56fa19cb220800000000000000
+      internalID: 2503035675423574372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_27
+      rect:
+        serializedVersion: 2
+        x: 3045
+        y: 2336
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f54494f6e6e36ab0800000000000000
+      internalID: -5015911680340376074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_28
+      rect:
+        serializedVersion: 2
+        x: 4060
+        y: 2336
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3bcfd0f86de54cc0800000000000000
+      internalID: -3727312081605637317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_29
+      rect:
+        serializedVersion: 2
+        x: 5075
+        y: 2336
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 943db3b04c8d199b0800000000000000
+      internalID: -5075036968556178615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1168
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5afadbae8ba96b910800000000000000
+      internalID: 1852838415712497573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_31
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 1168
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9574f5b53d65ae900800000000000000
+      internalID: 714478956662703961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_32
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 1168
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74d66d30931e7f840800000000000000
+      internalID: 5257918724972113223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_33
+      rect:
+        serializedVersion: 2
+        x: 3045
+        y: 1168
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d40601cfd65706b0800000000000000
+      internalID: -5330196114953599788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_34
+      rect:
+        serializedVersion: 2
+        x: 4060
+        y: 1168
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac591245830c48760800000000000000
+      internalID: 7459298230994572746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_35
+      rect:
+        serializedVersion: 2
+        x: 5075
+        y: 1168
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7010f858f689d2e30800000000000000
+      internalID: 4480404809053044999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aacc8b8e4bf0cbe80800000000000000
+      internalID: -8161631155029226326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_37
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 0
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c600ab99768a1210800000000000000
+      internalID: 1304502898937300675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_38
+      rect:
+        serializedVersion: 2
+        x: 2030
+        y: 0
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd15c70469c4c02f0800000000000000
+      internalID: -1005344408599768609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Death_Body1_39
+      rect:
+        serializedVersion: 2
+        x: 3045
+        y: 0
+        width: 1015
+        height: 1168
+      alignment: 9
+      pivot: {x: 0.561, y: 0.249}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adf9b2e2a9bb17f30800000000000000
+      internalID: 4571641367631732698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5cf8607933377e74e9ea749f043ec9d6
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":7.0},"gridSpriteSize":{"x":1015.0,"y":1168.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5609999895095825,"y":0.24899999797344209},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      PMRG_Death_Body1_0: 6480033995258365188
+      PMRG_Death_Body1_1: 6468260055372705690
+      PMRG_Death_Body1_10: -7814004679970664934
+      PMRG_Death_Body1_11: 8012858671436843116
+      PMRG_Death_Body1_12: -146250203699562138
+      PMRG_Death_Body1_13: 8123317693212691154
+      PMRG_Death_Body1_14: -6471890984457290972
+      PMRG_Death_Body1_15: -6890143249676710825
+      PMRG_Death_Body1_16: 8403831652693202995
+      PMRG_Death_Body1_17: -8032888126849277786
+      PMRG_Death_Body1_18: 7708620265971359117
+      PMRG_Death_Body1_19: 5659411338605646632
+      PMRG_Death_Body1_2: -2192401307899005909
+      PMRG_Death_Body1_20: 7629950005096155651
+      PMRG_Death_Body1_21: -75410868724808020
+      PMRG_Death_Body1_22: 3669455631151281708
+      PMRG_Death_Body1_23: 9175274482512180597
+      PMRG_Death_Body1_24: 4623297236168128143
+      PMRG_Death_Body1_25: -8843444714946163375
+      PMRG_Death_Body1_26: 2503035675423574372
+      PMRG_Death_Body1_27: -5015911680340376074
+      PMRG_Death_Body1_28: -3727312081605637317
+      PMRG_Death_Body1_29: -5075036968556178615
+      PMRG_Death_Body1_3: 2874689075690272097
+      PMRG_Death_Body1_30: 1852838415712497573
+      PMRG_Death_Body1_31: 714478956662703961
+      PMRG_Death_Body1_32: 5257918724972113223
+      PMRG_Death_Body1_33: -5330196114953599788
+      PMRG_Death_Body1_34: 7459298230994572746
+      PMRG_Death_Body1_35: 4480404809053044999
+      PMRG_Death_Body1_36: -8161631155029226326
+      PMRG_Death_Body1_37: 1304502898937300675
+      PMRG_Death_Body1_38: -1005344408599768609
+      PMRG_Death_Body1_39: 4571641367631732698
+      PMRG_Death_Body1_4: 6137175559762782596
+      PMRG_Death_Body1_5: -172770666754402064
+      PMRG_Death_Body1_6: 7077660175087973031
+      PMRG_Death_Body1_7: 4030760889413234064
+      PMRG_Death_Body1_8: 3054422841940722800
+      PMRG_Death_Body1_9: -2041724448394620772
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

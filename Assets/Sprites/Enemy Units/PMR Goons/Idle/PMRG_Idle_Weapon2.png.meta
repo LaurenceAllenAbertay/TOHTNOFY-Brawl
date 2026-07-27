@@ -1,0 +1,1276 @@
+fileFormatVersion: 2
+guid: b8e4b4161cff42b46940d02564334908
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6578949863947768939
+    second: PMRG_Idle_Weapon2_0
+  - first:
+      213: 1995167384033963359
+    second: PMRG_Idle_Weapon2_1
+  - first:
+      213: 6491628096361213856
+    second: PMRG_Idle_Weapon2_2
+  - first:
+      213: -7384615764328353261
+    second: PMRG_Idle_Weapon2_3
+  - first:
+      213: -1695002051170128862
+    second: PMRG_Idle_Weapon2_4
+  - first:
+      213: -8989062469423194864
+    second: PMRG_Idle_Weapon2_5
+  - first:
+      213: -4119553131126760816
+    second: PMRG_Idle_Weapon2_6
+  - first:
+      213: -732880545288282175
+    second: PMRG_Idle_Weapon2_7
+  - first:
+      213: -4690835080423828578
+    second: PMRG_Idle_Weapon2_8
+  - first:
+      213: 7745819406418726998
+    second: PMRG_Idle_Weapon2_9
+  - first:
+      213: 123567796293159128
+    second: PMRG_Idle_Weapon2_10
+  - first:
+      213: 1569841587877063342
+    second: PMRG_Idle_Weapon2_11
+  - first:
+      213: 2302723589357341005
+    second: PMRG_Idle_Weapon2_12
+  - first:
+      213: 6239769757103206883
+    second: PMRG_Idle_Weapon2_13
+  - first:
+      213: 5959491864146191055
+    second: PMRG_Idle_Weapon2_14
+  - first:
+      213: 7020336757794165232
+    second: PMRG_Idle_Weapon2_15
+  - first:
+      213: -7807140032562945716
+    second: PMRG_Idle_Weapon2_16
+  - first:
+      213: -310062259736925054
+    second: PMRG_Idle_Weapon2_17
+  - first:
+      213: -2721726481708561042
+    second: PMRG_Idle_Weapon2_18
+  - first:
+      213: -1803836680121790497
+    second: PMRG_Idle_Weapon2_19
+  - first:
+      213: 24612011712221187
+    second: PMRG_Idle_Weapon2_20
+  - first:
+      213: -2075824869176713138
+    second: PMRG_Idle_Weapon2_21
+  - first:
+      213: 5490796199663516034
+    second: PMRG_Idle_Weapon2_22
+  - first:
+      213: 319743985983933077
+    second: PMRG_Idle_Weapon2_23
+  - first:
+      213: -2515728908644794631
+    second: PMRG_Idle_Weapon2_24
+  - first:
+      213: 5566287336018817721
+    second: PMRG_Idle_Weapon2_25
+  - first:
+      213: -1242720502821466338
+    second: PMRG_Idle_Weapon2_26
+  - first:
+      213: -8451523294070943211
+    second: PMRG_Idle_Weapon2_27
+  - first:
+      213: 8807027524087914901
+    second: PMRG_Idle_Weapon2_28
+  - first:
+      213: -2525881756164829340
+    second: PMRG_Idle_Weapon2_29
+  - first:
+      213: 5072707312880451348
+    second: PMRG_Idle_Weapon2_30
+  - first:
+      213: -3339632313317021895
+    second: PMRG_Idle_Weapon2_31
+  - first:
+      213: -4455137004905446270
+    second: PMRG_Idle_Weapon2_32
+  - first:
+      213: -2364737894899025197
+    second: PMRG_Idle_Weapon2_33
+  - first:
+      213: 2422019770302838732
+    second: PMRG_Idle_Weapon2_34
+  - first:
+      213: -1638275937337384242
+    second: PMRG_Idle_Weapon2_35
+  - first:
+      213: -6392907733977239942
+    second: PMRG_Idle_Weapon2_36
+  - first:
+      213: -4629574136782055176
+    second: PMRG_Idle_Weapon2_37
+  - first:
+      213: -7440697698789374905
+    second: PMRG_Idle_Weapon2_38
+  - first:
+      213: -2504266323772829493
+    second: PMRG_Idle_Weapon2_39
+  - first:
+      213: 1417278106276910606
+    second: PMRG_Idle_Weapon2_40
+  - first:
+      213: 4004430523607427203
+    second: PMRG_Idle_Weapon2_41
+  - first:
+      213: -7639839641546021626
+    second: PMRG_Idle_Weapon2_42
+  - first:
+      213: -5889628985364334863
+    second: PMRG_Idle_Weapon2_43
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5544
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59be94c94ffd2b4a0800000000000000
+      internalID: -6578949863947768939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_1
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 5544
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5d2ac83a2240bb10800000000000000
+      internalID: 1995167384033963359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_2
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 5544
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0af2e890c55e61a50800000000000000
+      internalID: 6491628096361213856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_3
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 5544
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31275747613948990800000000000000
+      internalID: -7384615764328353261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_4
+      rect:
+        serializedVersion: 2
+        x: 3112
+        y: 5544
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22c227e6d942a78e0800000000000000
+      internalID: -1695002051170128862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_5
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 5544
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01d1c366f4f604380800000000000000
+      internalID: -8989062469423194864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4752
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09a57d9e04864d6c0800000000000000
+      internalID: -4119553131126760816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_7
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 4752
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cf1c4be60944d5f0800000000000000
+      internalID: -732880545288282175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_8
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 4752
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e939563f85ec6eeb0800000000000000
+      internalID: -4690835080423828578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_9
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 4752
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6505ae506bdae7b60800000000000000
+      internalID: 7745819406418726998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_10
+      rect:
+        serializedVersion: 2
+        x: 3112
+        y: 4752
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d84bbb814007b100800000000000000
+      internalID: 123567796293159128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_11
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 4752
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaa2c075b9239c510800000000000000
+      internalID: 1569841587877063342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3960
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d498e8777eae4ff10800000000000000
+      internalID: 2302723589357341005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_13
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 3960
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e1bc5cc88d189650800000000000000
+      internalID: 6239769757103206883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_14
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 3960
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc2a344964e54b250800000000000000
+      internalID: 5959491864146191055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_15
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 3960
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f150fbf51f3d6160800000000000000
+      internalID: 7020336757794165232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_16
+      rect:
+        serializedVersion: 2
+        x: 3112
+        y: 3960
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c41aa5f118777a390800000000000000
+      internalID: -7807140032562945716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_17
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 3960
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28c202e740072bbf0800000000000000
+      internalID: -310062259736925054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3168
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6dccf96f2c7a3ad0800000000000000
+      internalID: -2721726481708561042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_19
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 3168
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdf4588b81c77f6e0800000000000000
+      internalID: -1803836680121790497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_20
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 3168
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30090578e70775000800000000000000
+      internalID: 24612011712221187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_21
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 3168
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e40ecc897403133e0800000000000000
+      internalID: -2075824869176713138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_22
+      rect:
+        serializedVersion: 2
+        x: 3112
+        y: 3168
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28932075d0a333c40800000000000000
+      internalID: 5490796199663516034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_23
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 3168
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59ac3af0675ff6400800000000000000
+      internalID: 319743985983933077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2376
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9febb01f2e5561dd0800000000000000
+      internalID: -2515728908644794631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_25
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 2376
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9b2382537dc6f3d40800000000000000
+      internalID: 5566287336018817721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_26
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 2376
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1f4b327948f0cee0800000000000000
+      internalID: -1242720502821466338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_27
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 2376
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51256f5975826ba80800000000000000
+      internalID: -8451523294070943211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_28
+      rect:
+        serializedVersion: 2
+        x: 3112
+        y: 2376
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 591295c1fd8d83a70800000000000000
+      internalID: 8807027524087914901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_29
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 2376
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46fc72bece342fcd0800000000000000
+      internalID: -2525881756164829340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1584
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41ff3c9bc60e56640800000000000000
+      internalID: 5072707312880451348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_31
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 1584
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 937a25cea1e37a1d0800000000000000
+      internalID: -3339632313317021895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_32
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 1584
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 284c9e49f7c2c22c0800000000000000
+      internalID: -4455137004905446270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_33
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 1584
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3da73abd963ce2fd0800000000000000
+      internalID: -2364737894899025197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_34
+      rect:
+        serializedVersion: 2
+        x: 3112
+        y: 1584
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc7bfdf062ebc9120800000000000000
+      internalID: 2422019770302838732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_35
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 1584
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec26fe607bca349e0800000000000000
+      internalID: -1638275937337384242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 792
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7e607a7944d747a0800000000000000
+      internalID: -6392907733977239942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_37
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 792
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f815c3e9d270cfb0800000000000000
+      internalID: -4629574136782055176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_38
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 792
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 744c79e8dd45db890800000000000000
+      internalID: -7440697698789374905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_39
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 792
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc01c84fb0f0f3dd0800000000000000
+      internalID: -2504266323772829493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_40
+      rect:
+        serializedVersion: 2
+        x: 3112
+        y: 792
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e06d298bdee2ba310800000000000000
+      internalID: 1417278106276910606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_41
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 792
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3882a574858929730800000000000000
+      internalID: 4004430523607427203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 605a3b8d256d9f590800000000000000
+      internalID: -7639839641546021626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Weapon2_43
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 0
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f6b38474a5d34ea0800000000000000
+      internalID: -5889628985364334863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 6cdcafcf22aeaa148ba74dedeb91c5ba
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":8.0},"gridSpriteSize":{"x":778.0,"y":792.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.38600000739097597,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      PMRG_Idle_Weapon2_0: -6578949863947768939
+      PMRG_Idle_Weapon2_1: 1995167384033963359
+      PMRG_Idle_Weapon2_10: 123567796293159128
+      PMRG_Idle_Weapon2_11: 1569841587877063342
+      PMRG_Idle_Weapon2_12: 2302723589357341005
+      PMRG_Idle_Weapon2_13: 6239769757103206883
+      PMRG_Idle_Weapon2_14: 5959491864146191055
+      PMRG_Idle_Weapon2_15: 7020336757794165232
+      PMRG_Idle_Weapon2_16: -7807140032562945716
+      PMRG_Idle_Weapon2_17: -310062259736925054
+      PMRG_Idle_Weapon2_18: -2721726481708561042
+      PMRG_Idle_Weapon2_19: -1803836680121790497
+      PMRG_Idle_Weapon2_2: 6491628096361213856
+      PMRG_Idle_Weapon2_20: 24612011712221187
+      PMRG_Idle_Weapon2_21: -2075824869176713138
+      PMRG_Idle_Weapon2_22: 5490796199663516034
+      PMRG_Idle_Weapon2_23: 319743985983933077
+      PMRG_Idle_Weapon2_24: -2515728908644794631
+      PMRG_Idle_Weapon2_25: 5566287336018817721
+      PMRG_Idle_Weapon2_26: -1242720502821466338
+      PMRG_Idle_Weapon2_27: -8451523294070943211
+      PMRG_Idle_Weapon2_28: 8807027524087914901
+      PMRG_Idle_Weapon2_29: -2525881756164829340
+      PMRG_Idle_Weapon2_3: -7384615764328353261
+      PMRG_Idle_Weapon2_30: 5072707312880451348
+      PMRG_Idle_Weapon2_31: -3339632313317021895
+      PMRG_Idle_Weapon2_32: -4455137004905446270
+      PMRG_Idle_Weapon2_33: -2364737894899025197
+      PMRG_Idle_Weapon2_34: 2422019770302838732
+      PMRG_Idle_Weapon2_35: -1638275937337384242
+      PMRG_Idle_Weapon2_36: -6392907733977239942
+      PMRG_Idle_Weapon2_37: -4629574136782055176
+      PMRG_Idle_Weapon2_38: -7440697698789374905
+      PMRG_Idle_Weapon2_39: -2504266323772829493
+      PMRG_Idle_Weapon2_4: -1695002051170128862
+      PMRG_Idle_Weapon2_40: 1417278106276910606
+      PMRG_Idle_Weapon2_41: 4004430523607427203
+      PMRG_Idle_Weapon2_42: -7639839641546021626
+      PMRG_Idle_Weapon2_43: -5889628985364334863
+      PMRG_Idle_Weapon2_5: -8989062469423194864
+      PMRG_Idle_Weapon2_6: -4119553131126760816
+      PMRG_Idle_Weapon2_7: -732880545288282175
+      PMRG_Idle_Weapon2_8: -4690835080423828578
+      PMRG_Idle_Weapon2_9: 7745819406418726998
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

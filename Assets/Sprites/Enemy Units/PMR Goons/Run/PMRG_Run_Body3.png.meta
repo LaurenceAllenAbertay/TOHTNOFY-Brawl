@@ -1,0 +1,912 @@
+fileFormatVersion: 2
+guid: c69e45eb609f2e34d9a9036b110ffc83
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8424700886609076376
+    second: PMRG_Run_Body3_0
+  - first:
+      213: -951680723226723074
+    second: PMRG_Run_Body3_1
+  - first:
+      213: -676055067749414770
+    second: PMRG_Run_Body3_2
+  - first:
+      213: 8757035715022461455
+    second: PMRG_Run_Body3_3
+  - first:
+      213: -7919159471712302497
+    second: PMRG_Run_Body3_4
+  - first:
+      213: -4161875357582781686
+    second: PMRG_Run_Body3_5
+  - first:
+      213: 5315715766672505180
+    second: PMRG_Run_Body3_6
+  - first:
+      213: -2048506554638375579
+    second: PMRG_Run_Body3_7
+  - first:
+      213: -3673429020318942396
+    second: PMRG_Run_Body3_8
+  - first:
+      213: 4181494499864941296
+    second: PMRG_Run_Body3_9
+  - first:
+      213: 208040406176066590
+    second: PMRG_Run_Body3_10
+  - first:
+      213: 5089976202836881172
+    second: PMRG_Run_Body3_11
+  - first:
+      213: 4909559466118331521
+    second: PMRG_Run_Body3_12
+  - first:
+      213: 2574212126769481215
+    second: PMRG_Run_Body3_13
+  - first:
+      213: -2312787865895277603
+    second: PMRG_Run_Body3_14
+  - first:
+      213: 6791161831478268161
+    second: PMRG_Run_Body3_15
+  - first:
+      213: -9000258726302814047
+    second: PMRG_Run_Body3_16
+  - first:
+      213: 7702100276217727097
+    second: PMRG_Run_Body3_17
+  - first:
+      213: -6923411452483285745
+    second: PMRG_Run_Body3_18
+  - first:
+      213: -1231588305258500879
+    second: PMRG_Run_Body3_19
+  - first:
+      213: -4975122158421587511
+    second: PMRG_Run_Body3_20
+  - first:
+      213: -2809431958003155511
+    second: PMRG_Run_Body3_21
+  - first:
+      213: -958762920866893193
+    second: PMRG_Run_Body3_22
+  - first:
+      213: 1818878295106689824
+    second: PMRG_Run_Body3_23
+  - first:
+      213: 1063746526338701321
+    second: PMRG_Run_Body3_24
+  - first:
+      213: -77117399629293864
+    second: PMRG_Run_Body3_25
+  - first:
+      213: -799929219953476351
+    second: PMRG_Run_Body3_26
+  - first:
+      213: -7345284724853610413
+    second: PMRG_Run_Body3_27
+  - first:
+      213: -2217869898073073124
+    second: PMRG_Run_Body3_28
+  - first:
+      213: 3029745485012353606
+    second: PMRG_Run_Body3_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3316
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 890a04502dc8ae470800000000000000
+      internalID: 8424700886609076376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_1
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 3316
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efcfb78ac63fac2f0800000000000000
+      internalID: -951680723226723074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_2
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 3316
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e88813e6f7b2e96f0800000000000000
+      internalID: -676055067749414770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_3
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 3316
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0a9257069d378970800000000000000
+      internalID: 8757035715022461455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_4
+      rect:
+        serializedVersion: 2
+        x: 2812
+        y: 3316
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5a0be00b6e791290800000000000000
+      internalID: -7919159471712302497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_5
+      rect:
+        serializedVersion: 2
+        x: 3515
+        y: 3316
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0393dfa96c0e36c0800000000000000
+      internalID: -4161875357582781686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2487
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c59357f635735c940800000000000000
+      internalID: 5315715766672505180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_7
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 2487
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56568ba542e3293e0800000000000000
+      internalID: -2048506554638375579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_8
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 2487
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44b3748c4cb550dc0800000000000000
+      internalID: -3673429020318942396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_9
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 2487
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f213b6d717a70a30800000000000000
+      internalID: 4181494499864941296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_10
+      rect:
+        serializedVersion: 2
+        x: 2812
+        y: 2487
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1c6d0da5ab13e200800000000000000
+      internalID: 208040406176066590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_11
+      rect:
+        serializedVersion: 2
+        x: 3515
+        y: 2487
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41fa84d736a33a640800000000000000
+      internalID: 5089976202836881172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1658
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 18cb3ad8252422440800000000000000
+      internalID: 4909559466118331521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_13
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 1658
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff509906a4079b320800000000000000
+      internalID: 2574212126769481215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_14
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 1658
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddb6a7c80b357efd0800000000000000
+      internalID: -2312787865895277603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_15
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 1658
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 101147164bd0f3e50800000000000000
+      internalID: 6791161831478268161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_16
+      rect:
+        serializedVersion: 2
+        x: 2812
+        y: 1658
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a07c14bf58a81380800000000000000
+      internalID: -9000258726302814047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_17
+      rect:
+        serializedVersion: 2
+        x: 3515
+        y: 1658
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 978456cc46b53ea60800000000000000
+      internalID: 7702100276217727097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 829
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0dccdc37f91bef90800000000000000
+      internalID: -6923411452483285745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_19
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 829
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fcaa8b26f488eee0800000000000000
+      internalID: -1231588305258500879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_20
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 829
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c94b1991c0d4fab0800000000000000
+      internalID: -4975122158421587511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_21
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 829
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cd779ae484e209d0800000000000000
+      internalID: -2809431958003155511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_22
+      rect:
+        serializedVersion: 2
+        x: 2812
+        y: 829
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 772b9e5043ac1b2f0800000000000000
+      internalID: -958762920866893193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_23
+      rect:
+        serializedVersion: 2
+        x: 3515
+        y: 829
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02b908d2c24fd3910800000000000000
+      internalID: 1818878295106689824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 908597964df23ce00800000000000000
+      internalID: 1063746526338701321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_25
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 0
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d6181532260eeef0800000000000000
+      internalID: -77117399629293864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_26
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 0
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10db737dc9416e4f0800000000000000
+      internalID: -799929219953476351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_27
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 0
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3586ff0b57e401a90800000000000000
+      internalID: -7345284724853610413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_28
+      rect:
+        serializedVersion: 2
+        x: 2812
+        y: 0
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1a9257141b8831e0800000000000000
+      internalID: -2217869898073073124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Body3_29
+      rect:
+        serializedVersion: 2
+        x: 3515
+        y: 0
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64241026771db0a20800000000000000
+      internalID: 3029745485012353606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: b80dae253a0d9844db17dc00ffb95cfc
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":5.0},"gridSpriteSize":{"x":703.0,"y":829.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.38600000739097597,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      PMRG_Run_Body3_0: 8424700886609076376
+      PMRG_Run_Body3_1: -951680723226723074
+      PMRG_Run_Body3_10: 208040406176066590
+      PMRG_Run_Body3_11: 5089976202836881172
+      PMRG_Run_Body3_12: 4909559466118331521
+      PMRG_Run_Body3_13: 2574212126769481215
+      PMRG_Run_Body3_14: -2312787865895277603
+      PMRG_Run_Body3_15: 6791161831478268161
+      PMRG_Run_Body3_16: -9000258726302814047
+      PMRG_Run_Body3_17: 7702100276217727097
+      PMRG_Run_Body3_18: -6923411452483285745
+      PMRG_Run_Body3_19: -1231588305258500879
+      PMRG_Run_Body3_2: -676055067749414770
+      PMRG_Run_Body3_20: -4975122158421587511
+      PMRG_Run_Body3_21: -2809431958003155511
+      PMRG_Run_Body3_22: -958762920866893193
+      PMRG_Run_Body3_23: 1818878295106689824
+      PMRG_Run_Body3_24: 1063746526338701321
+      PMRG_Run_Body3_25: -77117399629293864
+      PMRG_Run_Body3_26: -799929219953476351
+      PMRG_Run_Body3_27: -7345284724853610413
+      PMRG_Run_Body3_28: -2217869898073073124
+      PMRG_Run_Body3_29: 3029745485012353606
+      PMRG_Run_Body3_3: 8757035715022461455
+      PMRG_Run_Body3_4: -7919159471712302497
+      PMRG_Run_Body3_5: -4161875357582781686
+      PMRG_Run_Body3_6: 5315715766672505180
+      PMRG_Run_Body3_7: -2048506554638375579
+      PMRG_Run_Body3_8: -3673429020318942396
+      PMRG_Run_Body3_9: 4181494499864941296
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

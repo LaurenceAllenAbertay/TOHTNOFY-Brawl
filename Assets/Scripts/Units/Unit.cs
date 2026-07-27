@@ -74,7 +74,7 @@ namespace DDD.TNFY.BRAWL
         public AbilityContext currentAbilityContext => abilitySequencer?.CurrentAbilityContext;
 
         private UnitAnimator unitAnimator;
-        private SpriteRenderer unitSpriteRenderer;
+        private SpriteRenderer[] unitSpriteRenderers;
         private AbilitySequencer abilitySequencer;
         
         private void Awake()
@@ -82,7 +82,7 @@ namespace DDD.TNFY.BRAWL
             EnsureTeamResolved();
 
             unitAnimator = GetComponent<UnitAnimator>();
-            unitSpriteRenderer = GetComponentInChildren<SpriteRenderer>();
+            unitSpriteRenderers = GetComponentsInChildren<SpriteRenderer>(includeInactive: true);
             abilitySequencer = GetComponent<AbilitySequencer>();
 
             if (characterData)
@@ -197,14 +197,23 @@ namespace DDD.TNFY.BRAWL
 
         public void FaceDirection(Vector2Int direction)
         {
-            if (unitSpriteRenderer == null) return;
+            if (unitSpriteRenderers == null || unitSpriteRenderers.Length == 0) return;
 
             currentFacing = direction;
 
+            bool flipX;
             if (direction == Vector2Int.left)
-                unitSpriteRenderer.flipX = false;
+                flipX = false;
             else if (direction == Vector2Int.right)
-                unitSpriteRenderer.flipX = true;
+                flipX = true;
+            else
+                return;
+
+            foreach (var sr in unitSpriteRenderers)
+            {
+                if (sr == null) continue;
+                sr.flipX = flipX;
+            }
         }
 
         public void SetCurrentTile(Tile newTile)

@@ -1,0 +1,2226 @@
+fileFormatVersion: 2
+guid: 531010c90edcabf47ab42b8eb92f35a4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4992565228399710767
+    second: PMRG_Attack_Weapon_2_0
+  - first:
+      213: 640018914989009269
+    second: PMRG_Attack_Weapon_2_1
+  - first:
+      213: -1601065932394797151
+    second: PMRG_Attack_Weapon_2_2
+  - first:
+      213: -1603114067624093769
+    second: PMRG_Attack_Weapon_2_3
+  - first:
+      213: -5329101541098555738
+    second: PMRG_Attack_Weapon_2_4
+  - first:
+      213: 67587999258814661
+    second: PMRG_Attack_Weapon_2_5
+  - first:
+      213: -6455029206213824617
+    second: PMRG_Attack_Weapon_2_6
+  - first:
+      213: 522390676175454565
+    second: PMRG_Attack_Weapon_2_7
+  - first:
+      213: -7976356400969114733
+    second: PMRG_Attack_Weapon_2_8
+  - first:
+      213: -7016358161702358760
+    second: PMRG_Attack_Weapon_2_9
+  - first:
+      213: -3218920953266131517
+    second: PMRG_Attack_Weapon_2_10
+  - first:
+      213: -3892510570055604123
+    second: PMRG_Attack_Weapon_2_11
+  - first:
+      213: -3605147379833561817
+    second: PMRG_Attack_Weapon_2_12
+  - first:
+      213: 7584295955084914255
+    second: PMRG_Attack_Weapon_2_13
+  - first:
+      213: 4378731845082089468
+    second: PMRG_Attack_Weapon_2_14
+  - first:
+      213: 4220292652591757801
+    second: PMRG_Attack_Weapon_2_15
+  - first:
+      213: -370906865962403519
+    second: PMRG_Attack_Weapon_2_16
+  - first:
+      213: 6724715491584018545
+    second: PMRG_Attack_Weapon_2_17
+  - first:
+      213: -8061949084173247819
+    second: PMRG_Attack_Weapon_2_18
+  - first:
+      213: 8788715846166352684
+    second: PMRG_Attack_Weapon_2_19
+  - first:
+      213: -8230736083136420116
+    second: PMRG_Attack_Weapon_2_20
+  - first:
+      213: -8293439239411093302
+    second: PMRG_Attack_Weapon_2_21
+  - first:
+      213: 6260263056925932398
+    second: PMRG_Attack_Weapon_2_22
+  - first:
+      213: -2209299341329356900
+    second: PMRG_Attack_Weapon_2_23
+  - first:
+      213: 4952176727981511638
+    second: PMRG_Attack_Weapon_2_24
+  - first:
+      213: 6835699461050065940
+    second: PMRG_Attack_Weapon_2_25
+  - first:
+      213: 6812645285225413666
+    second: PMRG_Attack_Weapon_2_26
+  - first:
+      213: -5949678722902688814
+    second: PMRG_Attack_Weapon_2_27
+  - first:
+      213: 1500006711934916054
+    second: PMRG_Attack_Weapon_2_28
+  - first:
+      213: 7118764102524017703
+    second: PMRG_Attack_Weapon_2_29
+  - first:
+      213: 9065324012072978648
+    second: PMRG_Attack_Weapon_2_30
+  - first:
+      213: 9088971171578464490
+    second: PMRG_Attack_Weapon_2_31
+  - first:
+      213: -6621587272518540958
+    second: PMRG_Attack_Weapon_2_32
+  - first:
+      213: 6465759897462188856
+    second: PMRG_Attack_Weapon_2_33
+  - first:
+      213: 7467061780516079474
+    second: PMRG_Attack_Weapon_2_34
+  - first:
+      213: -19334989372259389
+    second: PMRG_Attack_Weapon_2_35
+  - first:
+      213: -8067016612268218336
+    second: PMRG_Attack_Weapon_2_36
+  - first:
+      213: -2306595779737577163
+    second: PMRG_Attack_Weapon_2_37
+  - first:
+      213: -7032638412334775301
+    second: PMRG_Attack_Weapon_2_38
+  - first:
+      213: -941916800824624936
+    second: PMRG_Attack_Weapon_2_39
+  - first:
+      213: 1021534804172494960
+    second: PMRG_Attack_Weapon_2_40
+  - first:
+      213: 6600969631064215443
+    second: PMRG_Attack_Weapon_2_41
+  - first:
+      213: -1135617361862035920
+    second: PMRG_Attack_Weapon_2_42
+  - first:
+      213: -5943606581207825121
+    second: PMRG_Attack_Weapon_2_43
+  - first:
+      213: 430956650364311343
+    second: PMRG_Attack_Weapon_2_44
+  - first:
+      213: 8743082839872262105
+    second: PMRG_Attack_Weapon_2_45
+  - first:
+      213: -1616315176359989303
+    second: PMRG_Attack_Weapon_2_46
+  - first:
+      213: 6722811457023187940
+    second: PMRG_Attack_Weapon_2_47
+  - first:
+      213: 8514650269658264074
+    second: PMRG_Attack_Weapon_2_48
+  - first:
+      213: 1838090203680880486
+    second: PMRG_Attack_Weapon_2_49
+  - first:
+      213: 3608031382249174697
+    second: PMRG_Attack_Weapon_2_50
+  - first:
+      213: -3085433417482831042
+    second: PMRG_Attack_Weapon_2_51
+  - first:
+      213: 8837258744483258789
+    second: PMRG_Attack_Weapon_2_52
+  - first:
+      213: -3920502184481874609
+    second: PMRG_Attack_Weapon_2_53
+  - first:
+      213: -3852866759691382941
+    second: PMRG_Attack_Weapon_2_54
+  - first:
+      213: 3563679421704604657
+    second: PMRG_Attack_Weapon_2_55
+  - first:
+      213: -6385499452729311994
+    second: PMRG_Attack_Weapon_2_56
+  - first:
+      213: -5980158878302772243
+    second: PMRG_Attack_Weapon_2_57
+  - first:
+      213: -3816518071944229325
+    second: PMRG_Attack_Weapon_2_58
+  - first:
+      213: 4039686841049491848
+    second: PMRG_Attack_Weapon_2_59
+  - first:
+      213: -7634060010703387001
+    second: PMRG_Attack_Weapon_2_60
+  - first:
+      213: 4894157097780924369
+    second: PMRG_Attack_Weapon_2_61
+  - first:
+      213: 5863070385226510138
+    second: PMRG_Attack_Weapon_2_62
+  - first:
+      213: 5136390295935130598
+    second: PMRG_Attack_Weapon_2_63
+  - first:
+      213: -2164101940179539586
+    second: PMRG_Attack_Weapon_2_64
+  - first:
+      213: 6474549449039837249
+    second: PMRG_Attack_Weapon_2_65
+  - first:
+      213: -4122634429659123777
+    second: PMRG_Attack_Weapon_2_66
+  - first:
+      213: 5819347958726887204
+    second: PMRG_Attack_Weapon_2_67
+  - first:
+      213: -67682989466090323
+    second: PMRG_Attack_Weapon_2_68
+  - first:
+      213: 390785408684389495
+    second: PMRG_Attack_Weapon_2_69
+  - first:
+      213: -9048235593445077244
+    second: PMRG_Attack_Weapon_2_70
+  - first:
+      213: 493308599342410430
+    second: PMRG_Attack_Weapon_2_71
+  - first:
+      213: -5804936697069363678
+    second: PMRG_Attack_Weapon_2_72
+  - first:
+      213: -7446106739350514102
+    second: PMRG_Attack_Weapon_2_73
+  - first:
+      213: -7608970281166267139
+    second: PMRG_Attack_Weapon_2_74
+  - first:
+      213: 7263767496556417023
+    second: PMRG_Attack_Weapon_2_75
+  - first:
+      213: -7231362244111866219
+    second: PMRG_Attack_Weapon_2_76
+  - first:
+      213: -1107207317136168260
+    second: PMRG_Attack_Weapon_2_77
+  - first:
+      213: -2555347277043279957
+    second: PMRG_Attack_Weapon_2_78
+  - first:
+      213: 7960474086704895067
+    second: PMRG_Attack_Weapon_2_79
+  - first:
+      213: -7468075784439775304
+    second: PMRG_Attack_Weapon_2_80
+  - first:
+      213: 6231421008448504580
+    second: PMRG_Attack_Weapon_2_81
+  - first:
+      213: 2269401283351937217
+    second: PMRG_Attack_Weapon_2_82
+  - first:
+      213: 223809376683446075
+    second: PMRG_Attack_Weapon_2_83
+  - first:
+      213: 5453290155852764212
+    second: PMRG_Attack_Weapon_2_84
+  - first:
+      213: -7480887445232913653
+    second: PMRG_Attack_Weapon_2_85
+  - first:
+      213: -1957305081123369226
+    second: PMRG_Attack_Weapon_2_86
+  - first:
+      213: 4792594632526152780
+    second: PMRG_Attack_Weapon_2_87
+  - first:
+      213: 8775519191742410797
+    second: PMRG_Attack_Weapon_2_88
+  - first:
+      213: 2892379080671240185
+    second: PMRG_Attack_Weapon_2_89
+  - first:
+      213: 5705528932096900131
+    second: PMRG_Attack_Weapon_2_90
+  - first:
+      213: -2492233054512418934
+    second: PMRG_Attack_Weapon_2_91
+  - first:
+      213: -2578515988072172394
+    second: PMRG_Attack_Weapon_2_92
+  - first:
+      213: -2871536542420500067
+    second: PMRG_Attack_Weapon_2_93
+  - first:
+      213: -3032442794187401362
+    second: PMRG_Attack_Weapon_2_94
+  - first:
+      213: 7430258074702738190
+    second: PMRG_Attack_Weapon_2_95
+  - first:
+      213: 7089005009521397880
+    second: PMRG_Attack_Weapon_2_96
+  - first:
+      213: -4009105642281528297
+    second: PMRG_Attack_Weapon_2_97
+  - first:
+      213: -1652467001604076591
+    second: PMRG_Attack_Weapon_2_98
+  - first:
+      213: -1437536957274109789
+    second: PMRG_Attack_Weapon_2_99
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11028
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dda4436068d6bab0800000000000000
+      internalID: -4992565228399710767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_1
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 11028
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 579637defcdc1e800800000000000000
+      internalID: 640018914989009269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_2
+      rect:
+        serializedVersion: 2
+        x: 3250
+        y: 11028
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a7e0ad640fd7c9e0800000000000000
+      internalID: -1601065932394797151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_3
+      rect:
+        serializedVersion: 2
+        x: 4875
+        y: 11028
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b795d8cf3890c9e0800000000000000
+      internalID: -1603114067624093769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_4
+      rect:
+        serializedVersion: 2
+        x: 6500
+        y: 11028
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a675d6126a3b06b0800000000000000
+      internalID: -5329101541098555738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_5
+      rect:
+        serializedVersion: 2
+        x: 8125
+        y: 11028
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c8a6ee5dee10f000800000000000000
+      internalID: 67587999258814661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10109
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79f6adc13212b66a0800000000000000
+      internalID: -6455029206213824617
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_7
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 10109
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5610a6f5d87ef3700800000000000000
+      internalID: 522390676175454565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_8
+      rect:
+        serializedVersion: 2
+        x: 3250
+        y: 10109
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39b92562d1a4e4190800000000000000
+      internalID: -7976356400969114733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_9
+      rect:
+        serializedVersion: 2
+        x: 4875
+        y: 10109
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81171da1d63e0ae90800000000000000
+      internalID: -7016358161702358760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_10
+      rect:
+        serializedVersion: 2
+        x: 6500
+        y: 10109
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3cda28492781453d0800000000000000
+      internalID: -3218920953266131517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_11
+      rect:
+        serializedVersion: 2
+        x: 8125
+        y: 10109
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 568e16b82460bf9c0800000000000000
+      internalID: -3892510570055604123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9190
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72d17161f81f7fdc0800000000000000
+      internalID: -3605147379833561817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_13
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 9190
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4ea442ecf4d04960800000000000000
+      internalID: 7584295955084914255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_14
+      rect:
+        serializedVersion: 2
+        x: 3250
+        y: 9190
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf70fc0e96164cc30800000000000000
+      internalID: 4378731845082089468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_15
+      rect:
+        serializedVersion: 2
+        x: 4875
+        y: 9190
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e93ce5becd719a30800000000000000
+      internalID: 4220292652591757801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_16
+      rect:
+        serializedVersion: 2
+        x: 6500
+        y: 9190
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 149be89ab264adaf0800000000000000
+      internalID: -370906865962403519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_17
+      rect:
+        serializedVersion: 2
+        x: 8125
+        y: 9190
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1788e6b4c1df25d50800000000000000
+      internalID: 6724715491584018545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8271
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ba5190a5043e1090800000000000000
+      internalID: -8061949084173247819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_19
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 8271
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c23979a5f7ac7f970800000000000000
+      internalID: 8788715846166352684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_20
+      rect:
+        serializedVersion: 2
+        x: 3250
+        y: 8271
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce6e9a4042d86cd80800000000000000
+      internalID: -8230736083136420116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_21
+      rect:
+        serializedVersion: 2
+        x: 4875
+        y: 8271
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac0bd98c3f8c7ec80800000000000000
+      internalID: -8293439239411093302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_22
+      rect:
+        serializedVersion: 2
+        x: 6500
+        y: 8271
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6b329cf41ce0e650800000000000000
+      internalID: 6260263056925932398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_23
+      rect:
+        serializedVersion: 2
+        x: 8125
+        y: 8271
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c972f8554fdf651e0800000000000000
+      internalID: -2209299341329356900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7352
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d35b401f7aa9b440800000000000000
+      internalID: 4952176727981511638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_25
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 7352
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 414e73751784dde50800000000000000
+      internalID: 6835699461050065940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_26
+      rect:
+        serializedVersion: 2
+        x: 3250
+        y: 7352
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22cb99ebac06b8e50800000000000000
+      internalID: 6812645285225413666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_27
+      rect:
+        serializedVersion: 2
+        x: 4875
+        y: 7352
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2db7fa969be7e6da0800000000000000
+      internalID: -5949678722902688814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_28
+      rect:
+        serializedVersion: 2
+        x: 6500
+        y: 7352
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d51599382811d410800000000000000
+      internalID: 1500006711934916054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_29
+      rect:
+        serializedVersion: 2
+        x: 8125
+        y: 7352
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72c1fb20c3eeac260800000000000000
+      internalID: 7118764102524017703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6433
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d8cd69a8208ecd70800000000000000
+      internalID: 9065324012072978648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_31
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 6433
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae843b70023822e70800000000000000
+      internalID: 9088971171578464490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_32
+      rect:
+        serializedVersion: 2
+        x: 3250
+        y: 6433
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 261e84455756b14a0800000000000000
+      internalID: -6621587272518540958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_33
+      rect:
+        serializedVersion: 2
+        x: 4875
+        y: 6433
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83b2333ae5efab950800000000000000
+      internalID: 6465759897462188856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_34
+      rect:
+        serializedVersion: 2
+        x: 6500
+        y: 6433
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2778e8f802550a760800000000000000
+      internalID: 7467061780516079474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_35
+      rect:
+        serializedVersion: 2
+        x: 8125
+        y: 6433
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c30bbafdee4bbff0800000000000000
+      internalID: -19334989372259389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5514
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 028e39cc1233c0090800000000000000
+      internalID: -8067016612268218336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_37
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 5514
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5399354fb535dffd0800000000000000
+      internalID: -2306595779737577163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_38
+      rect:
+        serializedVersion: 2
+        x: 3250
+        y: 5514
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf3c40fdf9c076e90800000000000000
+      internalID: -7032638412334775301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_39
+      rect:
+        serializedVersion: 2
+        x: 4875
+        y: 5514
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d830eef8a3ade2f0800000000000000
+      internalID: -941916800824624936
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_40
+      rect:
+        serializedVersion: 2
+        x: 6500
+        y: 5514
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0785668fd783d2e00800000000000000
+      internalID: 1021534804172494960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_41
+      rect:
+        serializedVersion: 2
+        x: 8125
+        y: 5514
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39f49b0f7ea5b9b50800000000000000
+      internalID: 6600969631064215443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4595
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0367271b60a7d30f0800000000000000
+      internalID: -1135617361862035920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_43
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 4595
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f150f621e41148da0800000000000000
+      internalID: -5943606581207825121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_44
+      rect:
+        serializedVersion: 2
+        x: 3250
+        y: 4595
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f279e8a4ac01bf500800000000000000
+      internalID: 430956650364311343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_45
+      rect:
+        serializedVersion: 2
+        x: 4875
+        y: 4595
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9df4660258ba55970800000000000000
+      internalID: 8743082839872262105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_46
+      rect:
+        serializedVersion: 2
+        x: 6500
+        y: 4595
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9cf6df329e1b199e0800000000000000
+      internalID: -1616315176359989303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_47
+      rect:
+        serializedVersion: 2
+        x: 8125
+        y: 4595
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4eb1bc3b6693c4d50800000000000000
+      internalID: 6722811457023187940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3676
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a023aa5ce4d1a2670800000000000000
+      internalID: 8514650269658264074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_49
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 3676
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66736873d45328910800000000000000
+      internalID: 1838090203680880486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_50
+      rect:
+        serializedVersion: 2
+        x: 3250
+        y: 3676
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a67c6d0d6d421230800000000000000
+      internalID: 3608031382249174697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_51
+      rect:
+        serializedVersion: 2
+        x: 4875
+        y: 3676
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3bf0d477a65e25d0800000000000000
+      internalID: -3085433417482831042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_52
+      rect:
+        serializedVersion: 2
+        x: 6500
+        y: 3676
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a1a32d910044aa70800000000000000
+      internalID: 8837258744483258789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_53
+      rect:
+        serializedVersion: 2
+        x: 8125
+        y: 3676
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4d90d0f8049799c0800000000000000
+      internalID: -3920502184481874609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2757
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 36f4fad681ed78ac0800000000000000
+      internalID: -3852866759691382941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_55
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 2757
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1fb82188d8bb47130800000000000000
+      internalID: 3563679421704604657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_56
+      rect:
+        serializedVersion: 2
+        x: 3250
+        y: 2757
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60d3e9e54162267a0800000000000000
+      internalID: -6385499452729311994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_57
+      rect:
+        serializedVersion: 2
+        x: 4875
+        y: 2757
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de36d563f25320da0800000000000000
+      internalID: -5980158878302772243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_58
+      rect:
+        serializedVersion: 2
+        x: 6500
+        y: 2757
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 33ec7eac801090bc0800000000000000
+      internalID: -3816518071944229325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_59
+      rect:
+        serializedVersion: 2
+        x: 8125
+        y: 2757
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 889239c57c9df0830800000000000000
+      internalID: 4039686841049491848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1838
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78682040ede5e0690800000000000000
+      internalID: -7634060010703387001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_61
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 1838
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1df403833f98be340800000000000000
+      internalID: 4894157097780924369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_62
+      rect:
+        serializedVersion: 2
+        x: 3250
+        y: 1838
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3fe984937fcd5150800000000000000
+      internalID: 5863070385226510138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_63
+      rect:
+        serializedVersion: 2
+        x: 4875
+        y: 1838
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6eb1af8a2cf184740800000000000000
+      internalID: 5136390295935130598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_64
+      rect:
+        serializedVersion: 2
+        x: 6500
+        y: 1838
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e796dd550c097f1e0800000000000000
+      internalID: -2164101940179539586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_65
+      rect:
+        serializedVersion: 2
+        x: 8125
+        y: 1838
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14878b69b683ad950800000000000000
+      internalID: 6474549449039837249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 919
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbf6f5134d579c6c0800000000000000
+      internalID: -4122634429659123777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_67
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 919
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4278f40e22a72c050800000000000000
+      internalID: 5819347958726887204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_68
+      rect:
+        serializedVersion: 2
+        x: 3250
+        y: 919
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da4898ffdaa8f0ff0800000000000000
+      internalID: -67682989466090323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_69
+      rect:
+        serializedVersion: 2
+        x: 4875
+        y: 919
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 774f90c32495c6500800000000000000
+      internalID: 390785408684389495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_70
+      rect:
+        serializedVersion: 2
+        x: 6500
+        y: 919
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40f09a8daa53e6280800000000000000
+      internalID: -9048235593445077244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_71
+      rect:
+        serializedVersion: 2
+        x: 8125
+        y: 919
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eba2374be8598d600800000000000000
+      internalID: 493308599342410430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e1d8374d8b07fa0800000000000000
+      internalID: -5804936697069363678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_73
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 0
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a46de592f5d1aa890800000000000000
+      internalID: -7446106739350514102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_74
+      rect:
+        serializedVersion: 2
+        x: 3250
+        y: 0
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dfc9494e7d1876690800000000000000
+      internalID: -7608970281166267139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_75
+      rect:
+        serializedVersion: 2
+        x: 4875
+        y: 0
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fff06439d061ec460800000000000000
+      internalID: 7263767496556417023
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_76
+      rect:
+        serializedVersion: 2
+        x: 6500
+        y: 0
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5966a853a5a05ab90800000000000000
+      internalID: -7231362244111866219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Weapon_2_77
+      rect:
+        serializedVersion: 2
+        x: 8125
+        y: 0
+        width: 1625
+        height: 919
+      alignment: 9
+      pivot: {x: 0.707, y: 0.136}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbaa261bfc862a0f0800000000000000
+      internalID: -1107207317136168260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: ba85fe9adf5c4444c9badabf60756759
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":13.0},"gridSpriteSize":{"x":1625.0,"y":919.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.7070000171661377,"y":0.13600000739097596},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      PMRG_Attack_Weapon_2_0: -4992565228399710767
+      PMRG_Attack_Weapon_2_1: 640018914989009269
+      PMRG_Attack_Weapon_2_10: -3218920953266131517
+      PMRG_Attack_Weapon_2_11: -3892510570055604123
+      PMRG_Attack_Weapon_2_12: -3605147379833561817
+      PMRG_Attack_Weapon_2_13: 7584295955084914255
+      PMRG_Attack_Weapon_2_14: 4378731845082089468
+      PMRG_Attack_Weapon_2_15: 4220292652591757801
+      PMRG_Attack_Weapon_2_16: -370906865962403519
+      PMRG_Attack_Weapon_2_17: 6724715491584018545
+      PMRG_Attack_Weapon_2_18: -8061949084173247819
+      PMRG_Attack_Weapon_2_19: 8788715846166352684
+      PMRG_Attack_Weapon_2_2: -1601065932394797151
+      PMRG_Attack_Weapon_2_20: -8230736083136420116
+      PMRG_Attack_Weapon_2_21: -8293439239411093302
+      PMRG_Attack_Weapon_2_22: 6260263056925932398
+      PMRG_Attack_Weapon_2_23: -2209299341329356900
+      PMRG_Attack_Weapon_2_24: 4952176727981511638
+      PMRG_Attack_Weapon_2_25: 6835699461050065940
+      PMRG_Attack_Weapon_2_26: 6812645285225413666
+      PMRG_Attack_Weapon_2_27: -5949678722902688814
+      PMRG_Attack_Weapon_2_28: 1500006711934916054
+      PMRG_Attack_Weapon_2_29: 7118764102524017703
+      PMRG_Attack_Weapon_2_3: -1603114067624093769
+      PMRG_Attack_Weapon_2_30: 9065324012072978648
+      PMRG_Attack_Weapon_2_31: 9088971171578464490
+      PMRG_Attack_Weapon_2_32: -6621587272518540958
+      PMRG_Attack_Weapon_2_33: 6465759897462188856
+      PMRG_Attack_Weapon_2_34: 7467061780516079474
+      PMRG_Attack_Weapon_2_35: -19334989372259389
+      PMRG_Attack_Weapon_2_36: -8067016612268218336
+      PMRG_Attack_Weapon_2_37: -2306595779737577163
+      PMRG_Attack_Weapon_2_38: -7032638412334775301
+      PMRG_Attack_Weapon_2_39: -941916800824624936
+      PMRG_Attack_Weapon_2_4: -5329101541098555738
+      PMRG_Attack_Weapon_2_40: 1021534804172494960
+      PMRG_Attack_Weapon_2_41: 6600969631064215443
+      PMRG_Attack_Weapon_2_42: -1135617361862035920
+      PMRG_Attack_Weapon_2_43: -5943606581207825121
+      PMRG_Attack_Weapon_2_44: 430956650364311343
+      PMRG_Attack_Weapon_2_45: 8743082839872262105
+      PMRG_Attack_Weapon_2_46: -1616315176359989303
+      PMRG_Attack_Weapon_2_47: 6722811457023187940
+      PMRG_Attack_Weapon_2_48: 8514650269658264074
+      PMRG_Attack_Weapon_2_49: 1838090203680880486
+      PMRG_Attack_Weapon_2_5: 67587999258814661
+      PMRG_Attack_Weapon_2_50: 3608031382249174697
+      PMRG_Attack_Weapon_2_51: -3085433417482831042
+      PMRG_Attack_Weapon_2_52: 8837258744483258789
+      PMRG_Attack_Weapon_2_53: -3920502184481874609
+      PMRG_Attack_Weapon_2_54: -3852866759691382941
+      PMRG_Attack_Weapon_2_55: 3563679421704604657
+      PMRG_Attack_Weapon_2_56: -6385499452729311994
+      PMRG_Attack_Weapon_2_57: -5980158878302772243
+      PMRG_Attack_Weapon_2_58: -3816518071944229325
+      PMRG_Attack_Weapon_2_59: 4039686841049491848
+      PMRG_Attack_Weapon_2_6: -6455029206213824617
+      PMRG_Attack_Weapon_2_60: -7634060010703387001
+      PMRG_Attack_Weapon_2_61: 4894157097780924369
+      PMRG_Attack_Weapon_2_62: 5863070385226510138
+      PMRG_Attack_Weapon_2_63: 5136390295935130598
+      PMRG_Attack_Weapon_2_64: -2164101940179539586
+      PMRG_Attack_Weapon_2_65: 6474549449039837249
+      PMRG_Attack_Weapon_2_66: -4122634429659123777
+      PMRG_Attack_Weapon_2_67: 5819347958726887204
+      PMRG_Attack_Weapon_2_68: -67682989466090323
+      PMRG_Attack_Weapon_2_69: 390785408684389495
+      PMRG_Attack_Weapon_2_7: 522390676175454565
+      PMRG_Attack_Weapon_2_70: -9048235593445077244
+      PMRG_Attack_Weapon_2_71: 493308599342410430
+      PMRG_Attack_Weapon_2_72: -5804936697069363678
+      PMRG_Attack_Weapon_2_73: -7446106739350514102
+      PMRG_Attack_Weapon_2_74: -7608970281166267139
+      PMRG_Attack_Weapon_2_75: 7263767496556417023
+      PMRG_Attack_Weapon_2_76: -7231362244111866219
+      PMRG_Attack_Weapon_2_77: -1107207317136168260
+      PMRG_Attack_Weapon_2_8: -7976356400969114733
+      PMRG_Attack_Weapon_2_9: -7016358161702358760
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

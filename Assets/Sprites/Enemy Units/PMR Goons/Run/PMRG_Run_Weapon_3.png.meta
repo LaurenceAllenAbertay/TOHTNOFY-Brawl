@@ -1,0 +1,912 @@
+fileFormatVersion: 2
+guid: fb8751624bb89ca4da4547a050699fd0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1197005504894465959
+    second: PMRG_Run_Weapon_3_0
+  - first:
+      213: -793294911832806370
+    second: PMRG_Run_Weapon_3_1
+  - first:
+      213: -3316931368087804399
+    second: PMRG_Run_Weapon_3_2
+  - first:
+      213: 6889980248248747127
+    second: PMRG_Run_Weapon_3_3
+  - first:
+      213: -6763050589200209076
+    second: PMRG_Run_Weapon_3_4
+  - first:
+      213: -2066184383300565639
+    second: PMRG_Run_Weapon_3_5
+  - first:
+      213: -5778828820413113987
+    second: PMRG_Run_Weapon_3_6
+  - first:
+      213: 604253630849817687
+    second: PMRG_Run_Weapon_3_7
+  - first:
+      213: -3794633335783217799
+    second: PMRG_Run_Weapon_3_8
+  - first:
+      213: -6481500886858337383
+    second: PMRG_Run_Weapon_3_9
+  - first:
+      213: -8887486356900787332
+    second: PMRG_Run_Weapon_3_10
+  - first:
+      213: -3694512217862729118
+    second: PMRG_Run_Weapon_3_11
+  - first:
+      213: -8433425774998044921
+    second: PMRG_Run_Weapon_3_12
+  - first:
+      213: 5409911985885778224
+    second: PMRG_Run_Weapon_3_13
+  - first:
+      213: -5122086890722172273
+    second: PMRG_Run_Weapon_3_14
+  - first:
+      213: -361317718475266980
+    second: PMRG_Run_Weapon_3_15
+  - first:
+      213: 7644781554034813124
+    second: PMRG_Run_Weapon_3_16
+  - first:
+      213: 2610479979363867012
+    second: PMRG_Run_Weapon_3_17
+  - first:
+      213: 947409298031167630
+    second: PMRG_Run_Weapon_3_18
+  - first:
+      213: 8621053590792190728
+    second: PMRG_Run_Weapon_3_19
+  - first:
+      213: 6707330377628874207
+    second: PMRG_Run_Weapon_3_20
+  - first:
+      213: -1692387655919316493
+    second: PMRG_Run_Weapon_3_21
+  - first:
+      213: -3919742502326481314
+    second: PMRG_Run_Weapon_3_22
+  - first:
+      213: -3424927311181660866
+    second: PMRG_Run_Weapon_3_23
+  - first:
+      213: 1059585603129427825
+    second: PMRG_Run_Weapon_3_24
+  - first:
+      213: 3393093199701342219
+    second: PMRG_Run_Weapon_3_25
+  - first:
+      213: -6264147667098406387
+    second: PMRG_Run_Weapon_3_26
+  - first:
+      213: -2546757274310586142
+    second: PMRG_Run_Weapon_3_27
+  - first:
+      213: 4650356200488674126
+    second: PMRG_Run_Weapon_3_28
+  - first:
+      213: 8283554476339887419
+    second: PMRG_Run_Weapon_3_29
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3316
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9580496d5d1636fe0800000000000000
+      internalID: -1197005504894465959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_1
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 3316
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1ca4121b76adf4f0800000000000000
+      internalID: -793294911832806370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_2
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 3316
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 116a6cc9e74e7f1d0800000000000000
+      internalID: -3316931368087804399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_3
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 3316
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7740356f7802e9f50800000000000000
+      internalID: 6889980248248747127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_4
+      rect:
+        serializedVersion: 2
+        x: 2812
+        y: 3316
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4ba9b04251d422a0800000000000000
+      internalID: -6763050589200209076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_5
+      rect:
+        serializedVersion: 2
+        x: 3515
+        y: 3316
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97509e020407353e0800000000000000
+      internalID: -2066184383300565639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2487
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d799c7d2ec97dcfa0800000000000000
+      internalID: -5778828820413113987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_7
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 2487
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75c1b0dc97db26800800000000000000
+      internalID: 604253630849817687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_8
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 2487
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97529cff511c65bc0800000000000000
+      internalID: -3794633335783217799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_9
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 2487
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 993fd6ba8451d06a0800000000000000
+      internalID: -6481500886858337383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_10
+      rect:
+        serializedVersion: 2
+        x: 2812
+        y: 2487
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7b4cce0f3e49a480800000000000000
+      internalID: -8887486356900787332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_11
+      rect:
+        serializedVersion: 2
+        x: 3515
+        y: 2487
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26293f356b47abcc0800000000000000
+      internalID: -3694512217862729118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1658
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70f3e9990f376fa80800000000000000
+      internalID: -8433425774998044921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_13
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 1658
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03199d8c94ed31b40800000000000000
+      internalID: 5409911985885778224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_14
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 1658
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f82e1d16c11bae8b0800000000000000
+      internalID: -5122086890722172273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_15
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 1658
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c542a3b03775cfaf0800000000000000
+      internalID: -361317718475266980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_16
+      rect:
+        serializedVersion: 2
+        x: 2812
+        y: 1658
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c824b1d158b71a60800000000000000
+      internalID: 7644781554034813124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_17
+      rect:
+        serializedVersion: 2
+        x: 3515
+        y: 1658
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4899047d5b94a3420800000000000000
+      internalID: 2610479979363867012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 829
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e88cc0aacbfd52d00800000000000000
+      internalID: 947409298031167630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_19
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 829
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80b36c4809224a770800000000000000
+      internalID: 8621053590792190728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_20
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 829
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd571c50179351d50800000000000000
+      internalID: 6707330377628874207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_21
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 829
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f15ca2c46e6388e0800000000000000
+      internalID: -1692387655919316493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_22
+      rect:
+        serializedVersion: 2
+        x: 2812
+        y: 829
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5e44d936f64a99c0800000000000000
+      internalID: -3919742502326481314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_23
+      rect:
+        serializedVersion: 2
+        x: 3515
+        y: 829
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3dbb7ba1c63870d0800000000000000
+      internalID: -3424927311181660866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 177c5abfd7764be00800000000000000
+      internalID: 1059585603129427825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_25
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 0
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b08fdf9a940b61f20800000000000000
+      internalID: 3393093199701342219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_26
+      rect:
+        serializedVersion: 2
+        x: 1406
+        y: 0
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d02f10ab2e64119a0800000000000000
+      internalID: -6264147667098406387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_27
+      rect:
+        serializedVersion: 2
+        x: 2109
+        y: 0
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e0539790c918acd0800000000000000
+      internalID: -2546757274310586142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_28
+      rect:
+        serializedVersion: 2
+        x: 2812
+        y: 0
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e43a9216352698040800000000000000
+      internalID: 4650356200488674126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Run_Weapon_3_29
+      rect:
+        serializedVersion: 2
+        x: 3515
+        y: 0
+        width: 703
+        height: 829
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3df5d778e815f270800000000000000
+      internalID: 8283554476339887419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 4f9c13e34ad1ca64eb27a28444a223da
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":5.0},"gridSpriteSize":{"x":703.0,"y":829.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.38600000739097597,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      PMRG_Run_Weapon_3_0: -1197005504894465959
+      PMRG_Run_Weapon_3_1: -793294911832806370
+      PMRG_Run_Weapon_3_10: -8887486356900787332
+      PMRG_Run_Weapon_3_11: -3694512217862729118
+      PMRG_Run_Weapon_3_12: -8433425774998044921
+      PMRG_Run_Weapon_3_13: 5409911985885778224
+      PMRG_Run_Weapon_3_14: -5122086890722172273
+      PMRG_Run_Weapon_3_15: -361317718475266980
+      PMRG_Run_Weapon_3_16: 7644781554034813124
+      PMRG_Run_Weapon_3_17: 2610479979363867012
+      PMRG_Run_Weapon_3_18: 947409298031167630
+      PMRG_Run_Weapon_3_19: 8621053590792190728
+      PMRG_Run_Weapon_3_2: -3316931368087804399
+      PMRG_Run_Weapon_3_20: 6707330377628874207
+      PMRG_Run_Weapon_3_21: -1692387655919316493
+      PMRG_Run_Weapon_3_22: -3919742502326481314
+      PMRG_Run_Weapon_3_23: -3424927311181660866
+      PMRG_Run_Weapon_3_24: 1059585603129427825
+      PMRG_Run_Weapon_3_25: 3393093199701342219
+      PMRG_Run_Weapon_3_26: -6264147667098406387
+      PMRG_Run_Weapon_3_27: -2546757274310586142
+      PMRG_Run_Weapon_3_28: 4650356200488674126
+      PMRG_Run_Weapon_3_29: 8283554476339887419
+      PMRG_Run_Weapon_3_3: 6889980248248747127
+      PMRG_Run_Weapon_3_4: -6763050589200209076
+      PMRG_Run_Weapon_3_5: -2066184383300565639
+      PMRG_Run_Weapon_3_6: -5778828820413113987
+      PMRG_Run_Weapon_3_7: 604253630849817687
+      PMRG_Run_Weapon_3_8: -3794633335783217799
+      PMRG_Run_Weapon_3_9: -6481500886858337383
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

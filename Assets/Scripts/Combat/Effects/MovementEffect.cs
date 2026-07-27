@@ -64,7 +64,7 @@ namespace DDD.TNFY.BRAWL
             }
             
             var unitAnimator = unitToMove.GetComponent<UnitAnimator>();
-            var spriteRenderer = unitToMove.GetComponentInChildren<SpriteRenderer>();
+            var spriteRenderers = unitToMove.GetComponentsInChildren<SpriteRenderer>(includeInactive: false);
             
             if (unitAnimator != null)
             {
@@ -79,13 +79,18 @@ namespace DDD.TNFY.BRAWL
                 Vector3 segmentEnd = tile.transform.position;
                 float segmentDuration = movementDurationPerTile;
                 
-                if (spriteRenderer != null)
+                if (spriteRenderers != null)
                 {
                     Vector3 direction = (segmentEnd - segmentStart).normalized;
 
                     if (Mathf.Abs(direction.x) > 0.1f)
                     {
-                        spriteRenderer.flipX = direction.x > 0;
+                        bool flipX = direction.x > 0;
+                        foreach (var sr in spriteRenderers)
+                        {
+                            if (sr == null) continue;
+                            sr.flipX = flipX;
+                        }
                     }
                 }
                 

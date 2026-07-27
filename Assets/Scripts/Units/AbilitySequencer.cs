@@ -19,7 +19,7 @@ namespace DDD.TNFY.BRAWL
         void Awake()
         {
             unit = GetComponent<Unit>();
-            unitAnimator = GetComponent<UnitAnimator>();
+            unitAnimator = GetComponentInChildren<UnitAnimator>();
         }
 
         void Start()
@@ -274,7 +274,7 @@ namespace DDD.TNFY.BRAWL
                 foreach (var target in targets)
                 {
                     if (target == null) continue;
-                    var targetAnimator  = target.GetComponent<UnitAnimator>();
+                    var targetAnimator  = target.GetComponentInChildren<UnitAnimator>();
                     var targetHealthBar = target.GetComponentInChildren<UnitHealthBarDisplay>();
 
                     if (target.IsDead)
@@ -363,7 +363,7 @@ namespace DDD.TNFY.BRAWL
                 foreach (var target in targets)
                 {
                     if (target == null) continue;
-                    var targetAnimator  = target.GetComponent<UnitAnimator>();
+                    var targetAnimator  = target.GetComponentInChildren<UnitAnimator>();
                     var targetHealthBar = target.GetComponentInChildren<UnitHealthBarDisplay>();
 
                     if (target.IsDead)
@@ -540,7 +540,7 @@ namespace DDD.TNFY.BRAWL
         private void PlayTargetAnimation(Unit target, string hint)
         {
             if (target == null || hint == null) return;
-            var targetAnimator = target.GetComponent<UnitAnimator>();
+            var targetAnimator = target.GetComponentInChildren<UnitAnimator>();
             if (targetAnimator == null) return;
 
             switch (hint)

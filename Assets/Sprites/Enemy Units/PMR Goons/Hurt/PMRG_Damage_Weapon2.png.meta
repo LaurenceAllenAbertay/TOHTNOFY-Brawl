@@ -1,0 +1,2290 @@
+fileFormatVersion: 2
+guid: d6c9f09a0b53c0f4899088338dd296d7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5085931891085263258
+    second: PMRG_Damage_Weapon2_0
+  - first:
+      213: 8679951267582673671
+    second: PMRG_Damage_Weapon2_1
+  - first:
+      213: -8113893932421589694
+    second: PMRG_Damage_Weapon2_2
+  - first:
+      213: -202382598828555448
+    second: PMRG_Damage_Weapon2_3
+  - first:
+      213: 6291805187732908164
+    second: PMRG_Damage_Weapon2_4
+  - first:
+      213: 7113267029214771291
+    second: PMRG_Damage_Weapon2_5
+  - first:
+      213: 8277730422838881945
+    second: PMRG_Damage_Weapon2_6
+  - first:
+      213: 277343128294247200
+    second: PMRG_Damage_Weapon2_7
+  - first:
+      213: 7976376043989027742
+    second: PMRG_Damage_Weapon2_8
+  - first:
+      213: -7544584498374438919
+    second: PMRG_Damage_Weapon2_9
+  - first:
+      213: 4962396317492049817
+    second: PMRG_Damage_Weapon2_10
+  - first:
+      213: -6202923483259146293
+    second: PMRG_Damage_Weapon2_11
+  - first:
+      213: -4190489587232303358
+    second: PMRG_Damage_Weapon2_12
+  - first:
+      213: 2752272208805319578
+    second: PMRG_Damage_Weapon2_13
+  - first:
+      213: -8865881987472091619
+    second: PMRG_Damage_Weapon2_14
+  - first:
+      213: 3312776223852807068
+    second: PMRG_Damage_Weapon2_15
+  - first:
+      213: 7796857151821120785
+    second: PMRG_Damage_Weapon2_16
+  - first:
+      213: -8596399010970451283
+    second: PMRG_Damage_Weapon2_17
+  - first:
+      213: 7605389005057503030
+    second: PMRG_Damage_Weapon2_18
+  - first:
+      213: 3102669359033604431
+    second: PMRG_Damage_Weapon2_19
+  - first:
+      213: -7728634947714679877
+    second: PMRG_Damage_Weapon2_20
+  - first:
+      213: -4493841940143464290
+    second: PMRG_Damage_Weapon2_21
+  - first:
+      213: 5398626181459916884
+    second: PMRG_Damage_Weapon2_22
+  - first:
+      213: 511026881812682999
+    second: PMRG_Damage_Weapon2_23
+  - first:
+      213: 774205450067818916
+    second: PMRG_Damage_Weapon2_24
+  - first:
+      213: -4553295838538124180
+    second: PMRG_Damage_Weapon2_25
+  - first:
+      213: 7792029238404612608
+    second: PMRG_Damage_Weapon2_26
+  - first:
+      213: 8127363152680014744
+    second: PMRG_Damage_Weapon2_27
+  - first:
+      213: -4088925701890368762
+    second: PMRG_Damage_Weapon2_28
+  - first:
+      213: 6529870614120076687
+    second: PMRG_Damage_Weapon2_29
+  - first:
+      213: -5322397502284712965
+    second: PMRG_Damage_Weapon2_30
+  - first:
+      213: 313358158513023761
+    second: PMRG_Damage_Weapon2_31
+  - first:
+      213: 5545689037285468389
+    second: PMRG_Damage_Weapon2_32
+  - first:
+      213: -459854655056309499
+    second: PMRG_Damage_Weapon2_33
+  - first:
+      213: 1645114154511523773
+    second: PMRG_Damage_Weapon2_34
+  - first:
+      213: 4402843160847993153
+    second: PMRG_Damage_Weapon2_35
+  - first:
+      213: 8829959506458722934
+    second: PMRG_Damage_Weapon2_36
+  - first:
+      213: 6154511386414136074
+    second: PMRG_Damage_Weapon2_37
+  - first:
+      213: -9126221091799462083
+    second: PMRG_Damage_Weapon2_38
+  - first:
+      213: -8333587052575091559
+    second: PMRG_Damage_Weapon2_39
+  - first:
+      213: 8596573982263946020
+    second: PMRG_Damage_Weapon2_40
+  - first:
+      213: 8134072513346421141
+    second: PMRG_Damage_Weapon2_41
+  - first:
+      213: -740748568254024783
+    second: PMRG_Damage_Weapon2_42
+  - first:
+      213: -6956266279355484579
+    second: PMRG_Damage_Weapon2_43
+  - first:
+      213: 3438510824570474347
+    second: PMRG_Damage_Weapon2_44
+  - first:
+      213: -2414696737351698774
+    second: PMRG_Damage_Weapon2_45
+  - first:
+      213: -7786589120143629126
+    second: PMRG_Damage_Weapon2_46
+  - first:
+      213: 3321474306565849850
+    second: PMRG_Damage_Weapon2_47
+  - first:
+      213: -2313328131063855848
+    second: PMRG_Damage_Weapon2_48
+  - first:
+      213: 4287706554152139165
+    second: PMRG_Damage_Weapon2_49
+  - first:
+      213: -7301388645022489342
+    second: PMRG_Damage_Weapon2_50
+  - first:
+      213: -3100446125346682110
+    second: PMRG_Damage_Weapon2_51
+  - first:
+      213: -4485876720095428101
+    second: PMRG_Damage_Weapon2_52
+  - first:
+      213: 5095369858686208877
+    second: PMRG_Damage_Weapon2_53
+  - first:
+      213: -8007071439123736625
+    second: PMRG_Damage_Weapon2_54
+  - first:
+      213: -2242194702921262436
+    second: PMRG_Damage_Weapon2_55
+  - first:
+      213: -6568687510182959249
+    second: PMRG_Damage_Weapon2_56
+  - first:
+      213: -2267749863968150536
+    second: PMRG_Damage_Weapon2_57
+  - first:
+      213: -6514206702903219655
+    second: PMRG_Damage_Weapon2_58
+  - first:
+      213: -1927173088297774571
+    second: PMRG_Damage_Weapon2_59
+  - first:
+      213: 3090061524596123963
+    second: PMRG_Damage_Weapon2_60
+  - first:
+      213: 7850322278655603249
+    second: PMRG_Damage_Weapon2_61
+  - first:
+      213: -1606404634986690227
+    second: PMRG_Damage_Weapon2_62
+  - first:
+      213: 7991629036610426108
+    second: PMRG_Damage_Weapon2_63
+  - first:
+      213: 2680845239596844204
+    second: PMRG_Damage_Weapon2_64
+  - first:
+      213: -3679798898461451366
+    second: PMRG_Damage_Weapon2_65
+  - first:
+      213: -2113863924674779542
+    second: PMRG_Damage_Weapon2_66
+  - first:
+      213: 1902965611917232275
+    second: PMRG_Damage_Weapon2_67
+  - first:
+      213: -279692025442659315
+    second: PMRG_Damage_Weapon2_68
+  - first:
+      213: -6496780567344573091
+    second: PMRG_Damage_Weapon2_69
+  - first:
+      213: -8629380593290129134
+    second: PMRG_Damage_Weapon2_70
+  - first:
+      213: 1143200333288723864
+    second: PMRG_Damage_Weapon2_71
+  - first:
+      213: -7203533503298669823
+    second: PMRG_Damage_Weapon2_72
+  - first:
+      213: 4629356434113681616
+    second: PMRG_Damage_Weapon2_73
+  - first:
+      213: -1270670605195791507
+    second: PMRG_Damage_Weapon2_74
+  - first:
+      213: 4468206689301231592
+    second: PMRG_Damage_Weapon2_75
+  - first:
+      213: 1223162668386782282
+    second: PMRG_Damage_Weapon2_76
+  - first:
+      213: -3014817752424205397
+    second: PMRG_Damage_Weapon2_77
+  - first:
+      213: -7204867221565653551
+    second: PMRG_Damage_Weapon2_78
+  - first:
+      213: 8325230626744149552
+    second: PMRG_Damage_Weapon2_79
+  - first:
+      213: 3235341631156200792
+    second: PMRG_Damage_Weapon2_80
+  - first:
+      213: -6251026614986544517
+    second: PMRG_Damage_Weapon2_81
+  - first:
+      213: 1770425751529534660
+    second: PMRG_Damage_Weapon2_82
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12376
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66e380834e32b69b0800000000000000
+      internalID: -5085931891085263258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_1
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 12376
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70387f380b1657870800000000000000
+      internalID: 8679951267582673671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_2
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 12376
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24550dc2578a56f80800000000000000
+      internalID: -8113893932421589694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_3
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 12376
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8438a10491ef03df0800000000000000
+      internalID: -202382598828555448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_4
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 12376
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 488a7ca9b7bf05750800000000000000
+      internalID: 6291805187732908164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_5
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 12376
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5838d4eca667b260800000000000000
+      internalID: 7113267029214771291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11424
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99e61c756f760e270800000000000000
+      internalID: 8277730422838881945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_7
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 11424
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02bcfd21b1259d300800000000000000
+      internalID: 277343128294247200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_8
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 11424
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e9bc6e850c7c1be60800000000000000
+      internalID: 7976376043989027742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_9
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 11424
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ff09742f504c4790800000000000000
+      internalID: -7544584498374438919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_10
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 11424
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 997f1daa829fdd440800000000000000
+      internalID: 4962396317492049817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_11
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 11424
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bcfe86bd4f9cae9a0800000000000000
+      internalID: -6202923483259146293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10472
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2079b0e2ce368d5c0800000000000000
+      internalID: -4190489587232303358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_13
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 10472
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a935503edf8023620800000000000000
+      internalID: 2752272208805319578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_14
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 10472
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d16113c4e4f06f480800000000000000
+      internalID: -8865881987472091619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_15
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 10472
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c934b1b7c6859fd20800000000000000
+      internalID: 3312776223852807068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_16
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 10472
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11503c22540043c60800000000000000
+      internalID: 7796857151821120785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_17
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 10472
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da2469b25a473b880800000000000000
+      internalID: -8596399010970451283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9520
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63f2d194105cb8960800000000000000
+      internalID: 7605389005057503030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_19
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 9520
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f49dfa8e755ee0b20800000000000000
+      internalID: 3102669359033604431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_20
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 9520
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbbfbce867f5eb490800000000000000
+      internalID: -7728634947714679877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_21
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 9520
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e902ff8909aa2a1c0800000000000000
+      internalID: -4493841940143464290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_22
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 9520
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 458ba0da8e5cbea40800000000000000
+      internalID: 5398626181459916884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_23
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 9520
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f8de11dd38871700800000000000000
+      internalID: 511026881812682999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8568
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a9b67241c78eba00800000000000000
+      internalID: 774205450067818916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_25
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 8568
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c64bbaa2f817fc0c0800000000000000
+      internalID: -4553295838538124180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_26
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 8568
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0028092fe49d22c60800000000000000
+      internalID: 7792029238404612608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_27
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 8568
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 893571c0ab13ac070800000000000000
+      internalID: 8127363152680014744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_28
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 8568
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60b1cd9fcb73147c0800000000000000
+      internalID: -4088925701890368762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_29
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 8568
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8593ef0ab2ce9a50800000000000000
+      internalID: 6529870614120076687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7616
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf3b4e2cbab0326b0800000000000000
+      internalID: -5322397502284712965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_31
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 7616
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 11ba3adb595495400800000000000000
+      internalID: 313358158513023761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_32
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 7616
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e8ad2e0cce36fc40800000000000000
+      internalID: 5545689037285468389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_33
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 7616
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5031f0da0a44e99f0800000000000000
+      internalID: -459854655056309499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_34
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 7616
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbf50aa7b9e94d610800000000000000
+      internalID: 1645114154511523773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_35
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 7616
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1494a1c078a0a1d30800000000000000
+      internalID: 4402843160847993153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6664
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6724e8353615a8a70800000000000000
+      internalID: 8829959506458722934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_37
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 6664
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0bbf497f77396550800000000000000
+      internalID: 6154511386414136074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_38
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 6664
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3f8d911546295180800000000000000
+      internalID: -9126221091799462083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_39
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 6664
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 994977a9ab6295c80800000000000000
+      internalID: -8333587052575091559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_40
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 6664
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42b25328d7a2d4770800000000000000
+      internalID: 8596573982263946020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_41
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 6664
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 591484fcad702e070800000000000000
+      internalID: 8134072513346421141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5712
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b3f6511a1558b5f0800000000000000
+      internalID: -740748568254024783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_43
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 5712
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d56fcffbca0667f90800000000000000
+      internalID: -6956266279355484579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_44
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 5712
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6fcbde706b08bf20800000000000000
+      internalID: 3438510824570474347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_45
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 5712
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa67bd96c164d7ed0800000000000000
+      internalID: -2414696737351698774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_46
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 5712
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab4eae9437a70f390800000000000000
+      internalID: -7786589120143629126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_47
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 5712
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af2c17da84f381e20800000000000000
+      internalID: 3321474306565849850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4760
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8154503425865efd0800000000000000
+      internalID: -2313328131063855848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_49
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 4760
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d993a5dc46ef08b30800000000000000
+      internalID: 4287706554152139165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_50
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 4760
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2052d5636b14caa90800000000000000
+      internalID: -7301388645022489342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_51
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 4760
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 20b89750da009f4d0800000000000000
+      internalID: -3100446125346682110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_52
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 4760
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf18488e3e6feb1c0800000000000000
+      internalID: -4485876720095428101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_53
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 4760
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6b493ad3e366b640800000000000000
+      internalID: 5095369858686208877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3808
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc79adb03fa21e090800000000000000
+      internalID: -8007071439123736625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_55
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 3808
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9a9d1f1ccf12e0e0800000000000000
+      internalID: -2242194702921262436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_56
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 3808
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f67effa038557d4a0800000000000000
+      internalID: -6568687510182959249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_57
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 3808
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fbecb683855780e0800000000000000
+      internalID: -2267749863968150536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_58
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 3808
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93a2cf77483e895a0800000000000000
+      internalID: -6514206702903219655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_59
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 3808
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 512915b694e4145e0800000000000000
+      internalID: -1927173088297774571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2856
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3967a3b59a12ea20800000000000000
+      internalID: 3090061524596123963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_61
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 2856
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1323a970582f1fc60800000000000000
+      internalID: 7850322278655603249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_62
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 2856
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d49c31ede77e4b9e0800000000000000
+      internalID: -1606404634986690227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_63
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 2856
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf49cdf6448f7ee60800000000000000
+      internalID: 7991629036610426108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_64
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 2856
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca487fbaa86443520800000000000000
+      internalID: 2680845239596844204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_65
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 2856
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9bd454f56abeecc0800000000000000
+      internalID: -3679798898461451366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1904
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a662f32d5fb0aa2e0800000000000000
+      internalID: -2113863924674779542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_67
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 1904
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3984c164421b86a10800000000000000
+      internalID: 1902965611917232275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_68
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 1904
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d041bf0b5955e1cf0800000000000000
+      internalID: -279692025442659315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_69
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 1904
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5514c3de7cc6d5a0800000000000000
+      internalID: -6496780567344573091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_70
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 1904
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 211da4122184e3880800000000000000
+      internalID: -8629380593290129134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_71
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 1904
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89558cc65a67ddf00800000000000000
+      internalID: 1143200333288723864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 952
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 103f148d178e70c90800000000000000
+      internalID: -7203533503298669823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_73
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 952
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d8d3024627ce3040800000000000000
+      internalID: 4629356434113681616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_74
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 952
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6336ce11dbad5ee0800000000000000
+      internalID: -1270670605195791507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_75
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 952
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e7f2d27f42420e30800000000000000
+      internalID: 4468206689301231592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_76
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 952
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4c86bf57fb89f010800000000000000
+      internalID: 1223162668386782282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_77
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 952
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba3b6343a373926d0800000000000000
+      internalID: -3014817752424205397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_78
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1dd39bc5f6b230c90800000000000000
+      internalID: -7204867221565653551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_79
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 0
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 036a9446529298370800000000000000
+      internalID: 8325230626744149552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_80
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 0
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 855291c621e36ec20800000000000000
+      internalID: 3235341631156200792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_81
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 0
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7ae63cb964ef39a0800000000000000
+      internalID: -6251026614986544517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Weapon2_82
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 0
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c43f1547d0d19810800000000000000
+      internalID: 1770425751529534660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 43f374126129fa94badae3df7027e0f3
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":14.0},"gridSpriteSize":{"x":1237.0,"y":952.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5410000085830689,"y":0.07999999821186066},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      PMRG_Damage_Weapon2_0: -5085931891085263258
+      PMRG_Damage_Weapon2_1: 8679951267582673671
+      PMRG_Damage_Weapon2_10: 4962396317492049817
+      PMRG_Damage_Weapon2_11: -6202923483259146293
+      PMRG_Damage_Weapon2_12: -4190489587232303358
+      PMRG_Damage_Weapon2_13: 2752272208805319578
+      PMRG_Damage_Weapon2_14: -8865881987472091619
+      PMRG_Damage_Weapon2_15: 3312776223852807068
+      PMRG_Damage_Weapon2_16: 7796857151821120785
+      PMRG_Damage_Weapon2_17: -8596399010970451283
+      PMRG_Damage_Weapon2_18: 7605389005057503030
+      PMRG_Damage_Weapon2_19: 3102669359033604431
+      PMRG_Damage_Weapon2_2: -8113893932421589694
+      PMRG_Damage_Weapon2_20: -7728634947714679877
+      PMRG_Damage_Weapon2_21: -4493841940143464290
+      PMRG_Damage_Weapon2_22: 5398626181459916884
+      PMRG_Damage_Weapon2_23: 511026881812682999
+      PMRG_Damage_Weapon2_24: 774205450067818916
+      PMRG_Damage_Weapon2_25: -4553295838538124180
+      PMRG_Damage_Weapon2_26: 7792029238404612608
+      PMRG_Damage_Weapon2_27: 8127363152680014744
+      PMRG_Damage_Weapon2_28: -4088925701890368762
+      PMRG_Damage_Weapon2_29: 6529870614120076687
+      PMRG_Damage_Weapon2_3: -202382598828555448
+      PMRG_Damage_Weapon2_30: -5322397502284712965
+      PMRG_Damage_Weapon2_31: 313358158513023761
+      PMRG_Damage_Weapon2_32: 5545689037285468389
+      PMRG_Damage_Weapon2_33: -459854655056309499
+      PMRG_Damage_Weapon2_34: 1645114154511523773
+      PMRG_Damage_Weapon2_35: 4402843160847993153
+      PMRG_Damage_Weapon2_36: 8829959506458722934
+      PMRG_Damage_Weapon2_37: 6154511386414136074
+      PMRG_Damage_Weapon2_38: -9126221091799462083
+      PMRG_Damage_Weapon2_39: -8333587052575091559
+      PMRG_Damage_Weapon2_4: 6291805187732908164
+      PMRG_Damage_Weapon2_40: 8596573982263946020
+      PMRG_Damage_Weapon2_41: 8134072513346421141
+      PMRG_Damage_Weapon2_42: -740748568254024783
+      PMRG_Damage_Weapon2_43: -6956266279355484579
+      PMRG_Damage_Weapon2_44: 3438510824570474347
+      PMRG_Damage_Weapon2_45: -2414696737351698774
+      PMRG_Damage_Weapon2_46: -7786589120143629126
+      PMRG_Damage_Weapon2_47: 3321474306565849850
+      PMRG_Damage_Weapon2_48: -2313328131063855848
+      PMRG_Damage_Weapon2_49: 4287706554152139165
+      PMRG_Damage_Weapon2_5: 7113267029214771291
+      PMRG_Damage_Weapon2_50: -7301388645022489342
+      PMRG_Damage_Weapon2_51: -3100446125346682110
+      PMRG_Damage_Weapon2_52: -4485876720095428101
+      PMRG_Damage_Weapon2_53: 5095369858686208877
+      PMRG_Damage_Weapon2_54: -8007071439123736625
+      PMRG_Damage_Weapon2_55: -2242194702921262436
+      PMRG_Damage_Weapon2_56: -6568687510182959249
+      PMRG_Damage_Weapon2_57: -2267749863968150536
+      PMRG_Damage_Weapon2_58: -6514206702903219655
+      PMRG_Damage_Weapon2_59: -1927173088297774571
+      PMRG_Damage_Weapon2_6: 8277730422838881945
+      PMRG_Damage_Weapon2_60: 3090061524596123963
+      PMRG_Damage_Weapon2_61: 7850322278655603249
+      PMRG_Damage_Weapon2_62: -1606404634986690227
+      PMRG_Damage_Weapon2_63: 7991629036610426108
+      PMRG_Damage_Weapon2_64: 2680845239596844204
+      PMRG_Damage_Weapon2_65: -3679798898461451366
+      PMRG_Damage_Weapon2_66: -2113863924674779542
+      PMRG_Damage_Weapon2_67: 1902965611917232275
+      PMRG_Damage_Weapon2_68: -279692025442659315
+      PMRG_Damage_Weapon2_69: -6496780567344573091
+      PMRG_Damage_Weapon2_7: 277343128294247200
+      PMRG_Damage_Weapon2_70: -8629380593290129134
+      PMRG_Damage_Weapon2_71: 1143200333288723864
+      PMRG_Damage_Weapon2_72: -7203533503298669823
+      PMRG_Damage_Weapon2_73: 4629356434113681616
+      PMRG_Damage_Weapon2_74: -1270670605195791507
+      PMRG_Damage_Weapon2_75: 4468206689301231592
+      PMRG_Damage_Weapon2_76: 1223162668386782282
+      PMRG_Damage_Weapon2_77: -3014817752424205397
+      PMRG_Damage_Weapon2_78: -7204867221565653551
+      PMRG_Damage_Weapon2_79: 8325230626744149552
+      PMRG_Damage_Weapon2_8: 7976376043989027742
+      PMRG_Damage_Weapon2_80: 3235341631156200792
+      PMRG_Damage_Weapon2_81: -6251026614986544517
+      PMRG_Damage_Weapon2_82: 1770425751529534660
+      PMRG_Damage_Weapon2_9: -7544584498374438919
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

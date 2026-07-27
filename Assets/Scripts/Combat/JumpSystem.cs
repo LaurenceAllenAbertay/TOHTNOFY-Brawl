@@ -7,6 +7,9 @@ namespace DDD.TNFY.BRAWL
     public class JumpSystem : MonoBehaviour
     {
         [SerializeField] private float jumpHeight = 2f;
+        [SerializeField] private float fallbackArcDuration = 0.5f;
+
+        private static readonly Dictionary<string, float> measuredArcDurations = new Dictionary<string, float>();
 
         private CombatManager combatManager;
         private bool isTargetingJump = false;
@@ -224,7 +227,6 @@ namespace DDD.TNFY.BRAWL
             unit.FaceDirection(GetJumpDirection(jumpDirection));
             
             var unitAnimator = unit.GetComponent<UnitAnimator>();
-            float arcDuration = 0.5f; 
 
             if (unitAnimator != null && unitAnimator.HasJumpAnimation)
             {
@@ -232,6 +234,8 @@ namespace DDD.TNFY.BRAWL
                 System.Action onLaunch = () => launched = true;
                 unitAnimator.OnJumpLaunchEvent += onLaunch;
                 unitAnimator.PlayJump();
+
+                string jumpStateName = unitAnimator.CurrentAnimation;
 
                 const float launchMaxWait = 3f;
                 float launchElapsed = 0f;
@@ -247,37 +251,65 @@ namespace DDD.TNFY.BRAWL
                                      "AnimEvent_JumpLaunch event placed at the launch frame.");
 
                 unitAnimator.OnJumpLaunchEvent -= onLaunch;
-                
-                var anim = unit.GetComponent<Animator>();
-                if (anim != null)
+
+                bool landed = false;
+                System.Action onLand = () => landed = true;
+                unitAnimator.OnJumpLandEvent += onLand;
+
+                float launchTime = Time.time;
+
+                float arcDuration = (jumpStateName != null && measuredArcDurations.TryGetValue(jumpStateName, out float cached))
+                    ? cached
+                    : fallbackArcDuration;
+
+                const float landMaxWait = 3f;
+                float landElapsed = 0f;
+
+                while (!landed && landElapsed < landMaxWait)
                 {
-                    var info = anim.GetCurrentAnimatorStateInfo(0);
-                    float remaining = (1f - Mathf.Clamp01(info.normalizedTime)) * info.length;
-                    if (remaining > 0.05f)
-                        arcDuration = remaining;
+                    landElapsed += Time.deltaTime;
+                    float t = Mathf.Clamp01(landElapsed / arcDuration);
+
+                    Vector3 currentPos = Vector3.Lerp(startPos, endPos, t);
+                    currentPos.y += Mathf.Sin(t * Mathf.PI) * jumpHeight;
+                    unit.transform.position = currentPos;
+
+                    yield return null;
                 }
-            }
-            
-            float elapsed = 0f;
 
-            while (elapsed < arcDuration)
+                if (!landed)
+                    Debug.LogWarning($"[JumpSystem] AnimEvent_JumpLand never fired on {unit.name}. " +
+                                     "Ensure every Jump clip (Jump, Jump_Bad, Jump_Hurt) has the " +
+                                     "AnimEvent_JumpLand event placed at the landing frame.");
+                else if (jumpStateName != null)
+                    measuredArcDurations[jumpStateName] = Mathf.Max(0.05f, Time.time - launchTime);
+
+                unitAnimator.OnJumpLandEvent -= onLand;
+            }
+            else
             {
-                elapsed += Time.deltaTime;
-                float t = elapsed / arcDuration;
+                float arcDuration = fallbackArcDuration;
+                float elapsed = 0f;
 
-                Vector3 currentPos = Vector3.Lerp(startPos, endPos, t);
-                currentPos.y += Mathf.Sin(t * Mathf.PI) * jumpHeight;
-                unit.transform.position = currentPos;
+                while (elapsed < arcDuration)
+                {
+                    elapsed += Time.deltaTime;
+                    float t = elapsed / arcDuration;
 
-                yield return null;
+                    Vector3 currentPos = Vector3.Lerp(startPos, endPos, t);
+                    currentPos.y += Mathf.Sin(t * Mathf.PI) * jumpHeight;
+                    unit.transform.position = currentPos;
+
+                    yield return null;
+                }
+
+                unitAnimator?.PlayIdle();
             }
-            
+
             unit.transform.position = endPos;
             
             if (stompTarget != null)
                 ExecuteStomp(unit, stompTarget, originTile);
-            
-            unitAnimator?.PlayIdle();
         }
 
         private void ExecuteStomp(Unit stomper, Unit victim, Tile originTile)

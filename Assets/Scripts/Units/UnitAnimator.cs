@@ -73,7 +73,7 @@ namespace DDD.TNFY.BRAWL
             EvaluateIdleTier();
 
             if (playIdleOnStart)
-                PlayIdle();
+                PlayIdleAtRandomTime();
 
             SubscribeToEvents();
         }
@@ -235,6 +235,10 @@ namespace DDD.TNFY.BRAWL
 
         public void AnimEvent_JumpLaunch() => OnJumpLaunchEvent?.Invoke();
 
+        public event System.Action OnJumpLandEvent;
+
+        public void AnimEvent_JumpLand() => OnJumpLandEvent?.Invoke();
+
         public event System.Action<int> OnAbilityEffectEvent;
         
         public void AnimEvent_AbilityEffect0() => OnAbilityEffectEvent?.Invoke(0);
@@ -247,6 +251,13 @@ namespace DDD.TNFY.BRAWL
             if (isInKnockbackSequence) return;
             string idleState = ResolveIdleState(_isTalking);
             PlayAnimation(idleState, true);
+        }
+
+        private void PlayIdleAtRandomTime()
+        {
+            if (isInKnockbackSequence) return;
+            string idleState = ResolveIdleState(_isTalking);
+            PlayIdleAtTime(idleState, Random.Range(0f, 1f));
         }
         
         public void PlayMove()
@@ -264,7 +275,11 @@ namespace DDD.TNFY.BRAWL
         public void PlayJump()
         {
             if (isInKnockbackSequence) return;
-            PlayAnimation(ResolveJumpState(), false);
+
+            string jumpState = ResolveJumpState();
+            PlayAnimation(jumpState, false);
+
+            StartCoroutine(ReturnToIdleAfterAnimation(jumpState));
         }
 
         public void PlayAttack()

@@ -1,0 +1,1368 @@
+fileFormatVersion: 2
+guid: 88cfd43f2b9c82c4f95f4b0c4ed92408
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2497233732767543397
+    second: PMRG_Idle_Shirt1_0
+  - first:
+      213: -7390389174261459695
+    second: PMRG_Idle_Shirt1_1
+  - first:
+      213: -7371217935057310784
+    second: PMRG_Idle_Shirt1_2
+  - first:
+      213: -7559754994774754399
+    second: PMRG_Idle_Shirt1_3
+  - first:
+      213: 1641926740092452110
+    second: PMRG_Idle_Shirt1_4
+  - first:
+      213: 8351168952540467632
+    second: PMRG_Idle_Shirt1_5
+  - first:
+      213: -7279857269160415502
+    second: PMRG_Idle_Shirt1_6
+  - first:
+      213: 6859622317037789517
+    second: PMRG_Idle_Shirt1_7
+  - first:
+      213: -1909115636569237070
+    second: PMRG_Idle_Shirt1_8
+  - first:
+      213: 773758207564587896
+    second: PMRG_Idle_Shirt1_9
+  - first:
+      213: -6996149860610382824
+    second: PMRG_Idle_Shirt1_10
+  - first:
+      213: -6736013408403644591
+    second: PMRG_Idle_Shirt1_11
+  - first:
+      213: 5483626485671502115
+    second: PMRG_Idle_Shirt1_12
+  - first:
+      213: 7590616003310371751
+    second: PMRG_Idle_Shirt1_13
+  - first:
+      213: -3025311841629674513
+    second: PMRG_Idle_Shirt1_14
+  - first:
+      213: -3197215100742356434
+    second: PMRG_Idle_Shirt1_15
+  - first:
+      213: 4041002559940030576
+    second: PMRG_Idle_Shirt1_16
+  - first:
+      213: -8952297762368409993
+    second: PMRG_Idle_Shirt1_17
+  - first:
+      213: -647782156348872256
+    second: PMRG_Idle_Shirt1_18
+  - first:
+      213: 41978850054744693
+    second: PMRG_Idle_Shirt1_19
+  - first:
+      213: 5842928804098781816
+    second: PMRG_Idle_Shirt1_20
+  - first:
+      213: 2159965296231395330
+    second: PMRG_Idle_Shirt1_21
+  - first:
+      213: 5446134619525494855
+    second: PMRG_Idle_Shirt1_22
+  - first:
+      213: -5472448934747293519
+    second: PMRG_Idle_Shirt1_23
+  - first:
+      213: -4738346007429163258
+    second: PMRG_Idle_Shirt1_24
+  - first:
+      213: 2791833508618505661
+    second: PMRG_Idle_Shirt1_25
+  - first:
+      213: -7811498701541461160
+    second: PMRG_Idle_Shirt1_26
+  - first:
+      213: 6985177345829834095
+    second: PMRG_Idle_Shirt1_27
+  - first:
+      213: 4542494961883673105
+    second: PMRG_Idle_Shirt1_28
+  - first:
+      213: 101936824744974252
+    second: PMRG_Idle_Shirt1_29
+  - first:
+      213: 6789850005785013147
+    second: PMRG_Idle_Shirt1_30
+  - first:
+      213: -3707089630871876507
+    second: PMRG_Idle_Shirt1_31
+  - first:
+      213: -9085183582029230757
+    second: PMRG_Idle_Shirt1_32
+  - first:
+      213: 6967135973829063319
+    second: PMRG_Idle_Shirt1_33
+  - first:
+      213: -1586714815074108773
+    second: PMRG_Idle_Shirt1_34
+  - first:
+      213: -2054187534231665616
+    second: PMRG_Idle_Shirt1_35
+  - first:
+      213: 5622910470923577144
+    second: PMRG_Idle_Shirt1_36
+  - first:
+      213: 2120325207172361019
+    second: PMRG_Idle_Shirt1_37
+  - first:
+      213: -8509650565531313768
+    second: PMRG_Idle_Shirt1_38
+  - first:
+      213: 7117258077358386623
+    second: PMRG_Idle_Shirt1_39
+  - first:
+      213: -3476439584587941418
+    second: PMRG_Idle_Shirt1_40
+  - first:
+      213: -1431881848146368224
+    second: PMRG_Idle_Shirt1_41
+  - first:
+      213: -6343619195240166040
+    second: PMRG_Idle_Shirt1_42
+  - first:
+      213: -1030488397426173422
+    second: PMRG_Idle_Shirt1_43
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5544
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5607bba59d4f7a220800000000000000
+      internalID: 2497233732767543397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_1
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 5544
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 115d044b330107990800000000000000
+      internalID: -7390389174261459695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_2
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 5544
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cbabeaa75c24b990800000000000000
+      internalID: -7371217935057310784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_3
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 5544
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ab3773b2ea561790800000000000000
+      internalID: -7559754994774754399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_4
+      rect:
+        serializedVersion: 2
+        x: 3112
+        y: 5544
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0dfc6abbab49c610800000000000000
+      internalID: 1641926740092452110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_5
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 5544
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b1127b7aef45e370800000000000000
+      internalID: 8351168952540467632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4752
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fee5205260c8fa90800000000000000
+      internalID: -7279857269160415502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_7
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 4752
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d41216c4726423f50800000000000000
+      internalID: 6859622317037789517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_8
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 4752
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b9952781757185e0800000000000000
+      internalID: -1909115636569237070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_9
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 4752
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8732eef7df0fcba00800000000000000
+      internalID: 773758207564587896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_10
+      rect:
+        serializedVersion: 2
+        x: 3112
+        y: 4752
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8146bead4cea8ee90800000000000000
+      internalID: -6996149860610382824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_11
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 4752
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15f15d57e7fd482a0800000000000000
+      internalID: -6736013408403644591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3960
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 321af573c31c91c40800000000000000
+      internalID: 5483626485671502115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_13
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 3960
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a3c5b7c909475960800000000000000
+      internalID: 7590616003310371751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_14
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 3960
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe361e8a8eee306d0800000000000000
+      internalID: -3025311841629674513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_15
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 3960
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e22bcb13ec531a3d0800000000000000
+      internalID: -3197215100742356434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_16
+      rect:
+        serializedVersion: 2
+        x: 3112
+        y: 3960
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0707ba90b66841830800000000000000
+      internalID: 4041002559940030576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_17
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 3960
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77ea18ecd9c03c380800000000000000
+      internalID: -8952297762368409993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3168
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c92df69f8d9207f0800000000000000
+      internalID: -647782156348872256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_19
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 3168
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57aa79daa83259000800000000000000
+      internalID: 41978850054744693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_20
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 3168
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 872b4384ac0461150800000000000000
+      internalID: 5842928804098781816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_21
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 3168
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2003b013efcb9fd10800000000000000
+      internalID: 2159965296231395330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_22
+      rect:
+        serializedVersion: 2
+        x: 3112
+        y: 3168
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74836c3e49e849b40800000000000000
+      internalID: 5446134619525494855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_23
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 3168
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b83ce820b4fd04b0800000000000000
+      internalID: -5472448934747293519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2376
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6075b4c39630e3eb0800000000000000
+      internalID: -4738346007429163258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_25
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 2376
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbd0d39c8c59eb620800000000000000
+      internalID: 2791833508618505661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_26
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 2376
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 853323b615bf79390800000000000000
+      internalID: -7811498701541461160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_27
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 2376
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6d0b4779c550f060800000000000000
+      internalID: 6985177345829834095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_28
+      rect:
+        serializedVersion: 2
+        x: 3112
+        y: 2376
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 112f315c91f2a0f30800000000000000
+      internalID: 4542494961883673105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_29
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 2376
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca7947480072a6100800000000000000
+      internalID: 101936824744974252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1584
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9beff82b946a3e50800000000000000
+      internalID: 6789850005785013147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_31
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 1584
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56c09592f95cd8cc0800000000000000
+      internalID: -3707089630871876507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_32
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 1584
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5dcfe1eaa1fae180800000000000000
+      internalID: -9085183582029230757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_33
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 1584
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7923de5314d30b060800000000000000
+      internalID: 6967135973829063319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_34
+      rect:
+        serializedVersion: 2
+        x: 3112
+        y: 1584
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9a78af484bdaf9e0800000000000000
+      internalID: -1586714815074108773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_35
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 1584
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0340618325f0e73e0800000000000000
+      internalID: -2054187534231665616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 792
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83769372847980e40800000000000000
+      internalID: 5622910470923577144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_37
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 792
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3ba0ddba88ec6d10800000000000000
+      internalID: 2120325207172361019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_38
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 792
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 899ddce85e5a7e980800000000000000
+      internalID: -8509650565531313768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_39
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 792
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbde9b3338495c260800000000000000
+      internalID: 7117258077358386623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_40
+      rect:
+        serializedVersion: 2
+        x: 3112
+        y: 792
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d97785ed9431cfc0800000000000000
+      internalID: -3476439584587941418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_41
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 792
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 029e7e8ab0fe02ce0800000000000000
+      internalID: -1431881848146368224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86d4c5da3ffe6f7a0800000000000000
+      internalID: -6343619195240166040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_43
+      rect:
+        serializedVersion: 2
+        x: 778
+        y: 0
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21a50462348f2b1f0800000000000000
+      internalID: -1030488397426173422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_44
+      rect:
+        serializedVersion: 2
+        x: 1556
+        y: 0
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1937cbb782bf7d94788d1ef3a3ec8562
+      internalID: 603142084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_45
+      rect:
+        serializedVersion: 2
+        x: 2334
+        y: 0
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b95443439a3b54a4baab5ad1b5e319c2
+      internalID: -195597046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_46
+      rect:
+        serializedVersion: 2
+        x: 3112
+        y: 0
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 615ac1bae99153f428a7bafc9b176d8f
+      internalID: 1661897891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Idle_Shirt1_47
+      rect:
+        serializedVersion: 2
+        x: 3890
+        y: 0
+        width: 778
+        height: 792
+      alignment: 9
+      pivot: {x: 0.386, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f4b58968fd5d9a45a607434972b6d0f
+      internalID: 277696794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 432116acc5682564faae28d985f95e31
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":8.0},"gridSpriteSize":{"x":778.0,"y":792.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.38600000739097597,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      PMRG_Idle_Shirt1_0: 2497233732767543397
+      PMRG_Idle_Shirt1_1: -7390389174261459695
+      PMRG_Idle_Shirt1_10: -6996149860610382824
+      PMRG_Idle_Shirt1_11: -6736013408403644591
+      PMRG_Idle_Shirt1_12: 5483626485671502115
+      PMRG_Idle_Shirt1_13: 7590616003310371751
+      PMRG_Idle_Shirt1_14: -3025311841629674513
+      PMRG_Idle_Shirt1_15: -3197215100742356434
+      PMRG_Idle_Shirt1_16: 4041002559940030576
+      PMRG_Idle_Shirt1_17: -8952297762368409993
+      PMRG_Idle_Shirt1_18: -647782156348872256
+      PMRG_Idle_Shirt1_19: 41978850054744693
+      PMRG_Idle_Shirt1_2: -7371217935057310784
+      PMRG_Idle_Shirt1_20: 5842928804098781816
+      PMRG_Idle_Shirt1_21: 2159965296231395330
+      PMRG_Idle_Shirt1_22: 5446134619525494855
+      PMRG_Idle_Shirt1_23: -5472448934747293519
+      PMRG_Idle_Shirt1_24: -4738346007429163258
+      PMRG_Idle_Shirt1_25: 2791833508618505661
+      PMRG_Idle_Shirt1_26: -7811498701541461160
+      PMRG_Idle_Shirt1_27: 6985177345829834095
+      PMRG_Idle_Shirt1_28: 4542494961883673105
+      PMRG_Idle_Shirt1_29: 101936824744974252
+      PMRG_Idle_Shirt1_3: -7559754994774754399
+      PMRG_Idle_Shirt1_30: 6789850005785013147
+      PMRG_Idle_Shirt1_31: -3707089630871876507
+      PMRG_Idle_Shirt1_32: -9085183582029230757
+      PMRG_Idle_Shirt1_33: 6967135973829063319
+      PMRG_Idle_Shirt1_34: -1586714815074108773
+      PMRG_Idle_Shirt1_35: -2054187534231665616
+      PMRG_Idle_Shirt1_36: 5622910470923577144
+      PMRG_Idle_Shirt1_37: 2120325207172361019
+      PMRG_Idle_Shirt1_38: -8509650565531313768
+      PMRG_Idle_Shirt1_39: 7117258077358386623
+      PMRG_Idle_Shirt1_4: 1641926740092452110
+      PMRG_Idle_Shirt1_40: -3476439584587941418
+      PMRG_Idle_Shirt1_41: -1431881848146368224
+      PMRG_Idle_Shirt1_42: -6343619195240166040
+      PMRG_Idle_Shirt1_43: -1030488397426173422
+      PMRG_Idle_Shirt1_44: 603142084
+      PMRG_Idle_Shirt1_45: -195597046
+      PMRG_Idle_Shirt1_46: 1661897891
+      PMRG_Idle_Shirt1_47: 277696794
+      PMRG_Idle_Shirt1_5: 8351168952540467632
+      PMRG_Idle_Shirt1_6: -7279857269160415502
+      PMRG_Idle_Shirt1_7: 6859622317037789517
+      PMRG_Idle_Shirt1_8: -1909115636569237070
+      PMRG_Idle_Shirt1_9: 773758207564587896
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

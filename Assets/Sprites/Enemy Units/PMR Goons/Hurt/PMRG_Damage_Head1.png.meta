@@ -1,0 +1,2290 @@
+fileFormatVersion: 2
+guid: dd4f7a10d0a48194480cc1ec80d5b6bc
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6174765120269366589
+    second: PMRG_Damage_Head1_0
+  - first:
+      213: 4267949111457741077
+    second: PMRG_Damage_Head1_1
+  - first:
+      213: 7254435955637379586
+    second: PMRG_Damage_Head1_2
+  - first:
+      213: -4131824833717752030
+    second: PMRG_Damage_Head1_3
+  - first:
+      213: -6737109784944989504
+    second: PMRG_Damage_Head1_4
+  - first:
+      213: -8241295818418460650
+    second: PMRG_Damage_Head1_5
+  - first:
+      213: -2821016408325347241
+    second: PMRG_Damage_Head1_6
+  - first:
+      213: 7775502973755774680
+    second: PMRG_Damage_Head1_7
+  - first:
+      213: -4746178912064530507
+    second: PMRG_Damage_Head1_8
+  - first:
+      213: -5486311420731063061
+    second: PMRG_Damage_Head1_9
+  - first:
+      213: 5949452348602895767
+    second: PMRG_Damage_Head1_10
+  - first:
+      213: -4488591827801903322
+    second: PMRG_Damage_Head1_11
+  - first:
+      213: -3858092046123630054
+    second: PMRG_Damage_Head1_12
+  - first:
+      213: 1282758198525455634
+    second: PMRG_Damage_Head1_13
+  - first:
+      213: 9190191294131414937
+    second: PMRG_Damage_Head1_14
+  - first:
+      213: -8384135488662509995
+    second: PMRG_Damage_Head1_15
+  - first:
+      213: 7755515374085861571
+    second: PMRG_Damage_Head1_16
+  - first:
+      213: 6134608735034349441
+    second: PMRG_Damage_Head1_17
+  - first:
+      213: 5020971535414657092
+    second: PMRG_Damage_Head1_18
+  - first:
+      213: -8588630530870387326
+    second: PMRG_Damage_Head1_19
+  - first:
+      213: 118834774948765102
+    second: PMRG_Damage_Head1_20
+  - first:
+      213: -5985657600612738652
+    second: PMRG_Damage_Head1_21
+  - first:
+      213: -521526429940260124
+    second: PMRG_Damage_Head1_22
+  - first:
+      213: 6934811274038216149
+    second: PMRG_Damage_Head1_23
+  - first:
+      213: -6586934604366258494
+    second: PMRG_Damage_Head1_24
+  - first:
+      213: 6325214784373795060
+    second: PMRG_Damage_Head1_25
+  - first:
+      213: 4051408176990975878
+    second: PMRG_Damage_Head1_26
+  - first:
+      213: -819113581614085680
+    second: PMRG_Damage_Head1_27
+  - first:
+      213: 793974436525312700
+    second: PMRG_Damage_Head1_28
+  - first:
+      213: -1384411919140423210
+    second: PMRG_Damage_Head1_29
+  - first:
+      213: -7888864983594719451
+    second: PMRG_Damage_Head1_30
+  - first:
+      213: 6963647895049651540
+    second: PMRG_Damage_Head1_31
+  - first:
+      213: -5501890619418250117
+    second: PMRG_Damage_Head1_32
+  - first:
+      213: -7073939787646331212
+    second: PMRG_Damage_Head1_33
+  - first:
+      213: 1894453083317781047
+    second: PMRG_Damage_Head1_34
+  - first:
+      213: 3810999526945160257
+    second: PMRG_Damage_Head1_35
+  - first:
+      213: 7255625117629346132
+    second: PMRG_Damage_Head1_36
+  - first:
+      213: 4881713824226282060
+    second: PMRG_Damage_Head1_37
+  - first:
+      213: -7262106624194717423
+    second: PMRG_Damage_Head1_38
+  - first:
+      213: -4364595637059046938
+    second: PMRG_Damage_Head1_39
+  - first:
+      213: 4045066989165833755
+    second: PMRG_Damage_Head1_40
+  - first:
+      213: 4406891265134161082
+    second: PMRG_Damage_Head1_41
+  - first:
+      213: -3326031694426327449
+    second: PMRG_Damage_Head1_42
+  - first:
+      213: 3580917815886437685
+    second: PMRG_Damage_Head1_43
+  - first:
+      213: 6016496998040114619
+    second: PMRG_Damage_Head1_44
+  - first:
+      213: -2222579049271451285
+    second: PMRG_Damage_Head1_45
+  - first:
+      213: 5901649285523454113
+    second: PMRG_Damage_Head1_46
+  - first:
+      213: -9179855293279765953
+    second: PMRG_Damage_Head1_47
+  - first:
+      213: -6356021029788737293
+    second: PMRG_Damage_Head1_48
+  - first:
+      213: -4472184533813121585
+    second: PMRG_Damage_Head1_49
+  - first:
+      213: 5583049664283266457
+    second: PMRG_Damage_Head1_50
+  - first:
+      213: 2143140903960684479
+    second: PMRG_Damage_Head1_51
+  - first:
+      213: 1714776176429281739
+    second: PMRG_Damage_Head1_52
+  - first:
+      213: 6786549591640617263
+    second: PMRG_Damage_Head1_53
+  - first:
+      213: 4789416604715581691
+    second: PMRG_Damage_Head1_54
+  - first:
+      213: -9038023539517563842
+    second: PMRG_Damage_Head1_55
+  - first:
+      213: -5986442816660253350
+    second: PMRG_Damage_Head1_56
+  - first:
+      213: -4937553834373798251
+    second: PMRG_Damage_Head1_57
+  - first:
+      213: -565505032145501163
+    second: PMRG_Damage_Head1_58
+  - first:
+      213: 1923113979583249740
+    second: PMRG_Damage_Head1_59
+  - first:
+      213: 5873266302290699081
+    second: PMRG_Damage_Head1_60
+  - first:
+      213: 1800446486042938807
+    second: PMRG_Damage_Head1_61
+  - first:
+      213: -3534942685408829303
+    second: PMRG_Damage_Head1_62
+  - first:
+      213: 5464217596918356308
+    second: PMRG_Damage_Head1_63
+  - first:
+      213: 6557675819763697396
+    second: PMRG_Damage_Head1_64
+  - first:
+      213: -7191623599149936564
+    second: PMRG_Damage_Head1_65
+  - first:
+      213: -6482939654208072194
+    second: PMRG_Damage_Head1_66
+  - first:
+      213: 6618761874541101860
+    second: PMRG_Damage_Head1_67
+  - first:
+      213: -47237136119300102
+    second: PMRG_Damage_Head1_68
+  - first:
+      213: 7767591782615516679
+    second: PMRG_Damage_Head1_69
+  - first:
+      213: 4479725619462795975
+    second: PMRG_Damage_Head1_70
+  - first:
+      213: -3444321228749134782
+    second: PMRG_Damage_Head1_71
+  - first:
+      213: 6021426130043378234
+    second: PMRG_Damage_Head1_72
+  - first:
+      213: -6267767378469918126
+    second: PMRG_Damage_Head1_73
+  - first:
+      213: 1172250238764155141
+    second: PMRG_Damage_Head1_74
+  - first:
+      213: 642210749252116651
+    second: PMRG_Damage_Head1_75
+  - first:
+      213: 3183816715965109071
+    second: PMRG_Damage_Head1_76
+  - first:
+      213: -5891710164900190293
+    second: PMRG_Damage_Head1_77
+  - first:
+      213: -7729054219964667025
+    second: PMRG_Damage_Head1_78
+  - first:
+      213: 3614267719007303984
+    second: PMRG_Damage_Head1_79
+  - first:
+      213: 1307993233523943199
+    second: PMRG_Damage_Head1_80
+  - first:
+      213: 7032967344247725353
+    second: PMRG_Damage_Head1_81
+  - first:
+      213: -4843533271532026730
+    second: PMRG_Damage_Head1_82
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12376
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d35b02d592c21b550800000000000000
+      internalID: 6174765120269366589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_1
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 12376
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 519f1e3ba1dca3b30800000000000000
+      internalID: 4267949111457741077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_2
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 12376
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2026695e01feca460800000000000000
+      internalID: 7254435955637379586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_3
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 12376
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22fad10843fc8a6c0800000000000000
+      internalID: -4131824833717752030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_4
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 12376
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0caab87685af082a0800000000000000
+      internalID: -6737109784944989504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_5
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 12376
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 618614e0e1901ad80800000000000000
+      internalID: -8241295818418460650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11424
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7582834e58cb9d8d0800000000000000
+      internalID: -2821016408325347241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_7
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 11424
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d6d4bc12c228eb60800000000000000
+      internalID: 7775502973755774680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_8
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 11424
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b791f10d6f222eb0800000000000000
+      internalID: -4746178912064530507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_9
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 11424
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be40820a4d4bcd3b0800000000000000
+      internalID: -5486311420731063061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_10
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 11424
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79dc696b363b09250800000000000000
+      internalID: 5949452348602895767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_11
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 11424
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62f6522a38155b1c0800000000000000
+      internalID: -4488591827801903322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10472
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a128a00a9bd457ac0800000000000000
+      internalID: -3858092046123630054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_13
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 10472
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21d64d309c54dc110800000000000000
+      internalID: 1282758198525455634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_14
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 10472
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99727905a4e1a8f70800000000000000
+      internalID: 9190191294131414937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_15
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 10472
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5566681b13195ab80800000000000000
+      internalID: -8384135488662509995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_16
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 10472
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c0f77a642021ab60800000000000000
+      internalID: 7755515374085861571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_17
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 10472
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1871bb75422822550800000000000000
+      internalID: 6134608735034349441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9520
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4400dbb52031ea540800000000000000
+      internalID: 5020971535414657092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_19
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 9520
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28d5564690e0fc880800000000000000
+      internalID: -8588630530870387326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_20
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 9520
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eadd8c3299f26a100800000000000000
+      internalID: 118834774948765102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_21
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 9520
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a95c58202caeeca0800000000000000
+      internalID: -5985657600612738652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_22
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 9520
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e2ee62a97a23c8f0800000000000000
+      internalID: -521526429940260124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_23
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 9520
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d50c6d8c166d3060800000000000000
+      internalID: 6934811274038216149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8568
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ce550c50e18694a0800000000000000
+      internalID: -6586934604366258494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_25
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 8568
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f826ae755da7c750800000000000000
+      internalID: 6325214784373795060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_26
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 8568
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 687f8ad854e793830800000000000000
+      internalID: 4051408176990975878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_27
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 8568
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d9c131998ce1a4f0800000000000000
+      internalID: -819113581614085680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_28
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 8568
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cba05d91b83c40b00800000000000000
+      internalID: 793974436525312700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_29
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 8568
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d971d8c1b499cce0800000000000000
+      internalID: -1384411919140423210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7616
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 527a1db281f158290800000000000000
+      internalID: -7888864983594719451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_31
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 7616
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 455c4559dd8d3a060800000000000000
+      internalID: 6963647895049651540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_32
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 7616
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b747584c1ab55a3b0800000000000000
+      internalID: -5501890619418250117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_33
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 7616
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b696d21e3154dd90800000000000000
+      internalID: -7073939787646331212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_34
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 7616
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 732ccc2ca037a4a10800000000000000
+      internalID: 1894453083317781047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_35
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 7616
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14c7fb2d0e363e430800000000000000
+      internalID: 3810999526945160257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6664
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 451f2bf3a9821b460800000000000000
+      internalID: 7255625117629346132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_37
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 6664
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4a0f14dbd45fb340800000000000000
+      internalID: 4881713824226282060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_38
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 6664
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 119dcd76080d73b90800000000000000
+      internalID: -7262106624194717423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_39
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 6664
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e130e88467dd63c0800000000000000
+      internalID: -4364595637059046938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_40
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 6664
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1e63e5bef6f22830800000000000000
+      internalID: 4045066989165833755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_41
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 6664
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abce716c14c682d30800000000000000
+      internalID: 4406891265134161082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5712
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7663706cbcf87d1d0800000000000000
+      internalID: -3326031694426327449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_43
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 5712
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53d57c1f7c9f1b130800000000000000
+      internalID: 3580917815886437685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_44
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 5712
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb592689424ee7350800000000000000
+      internalID: 6016496998040114619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_45
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 5712
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6123f26120d721e0800000000000000
+      internalID: -2222579049271451285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_46
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 5712
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a83094c1ced6e150800000000000000
+      internalID: 5901649285523454113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_47
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 5712
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3af19a6f3a9a9080800000000000000
+      internalID: -9179855293279765953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4760
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f0a78e8c80eac7a0800000000000000
+      internalID: -6356021029788737293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_49
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 4760
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fcda2147cdb9fe1c0800000000000000
+      internalID: -4472184533813121585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_50
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 4760
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99dc7f2e61afa7d40800000000000000
+      internalID: 5583049664283266457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_51
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 4760
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb7af2c1c47fdbd10800000000000000
+      internalID: 2143140903960684479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_52
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 4760
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc1be51e8db1cc710800000000000000
+      internalID: 1714776176429281739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_53
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 4760
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f21bf4c95eaae2e50800000000000000
+      internalID: 6786549591640617263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3808
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf00e6dc60d677240800000000000000
+      internalID: 4789416604715581691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_55
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 3808
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e3cdf6fe97d729280800000000000000
+      internalID: -9038023539517563842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_56
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 3808
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a55d6ccc9f1ebeca0800000000000000
+      internalID: -5986442816660253350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_57
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 3808
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59628caa2f84a7bb0800000000000000
+      internalID: -4937553834373798251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_58
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 3808
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51485406b2ce628f0800000000000000
+      internalID: -565505032145501163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_59
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 3808
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4db5afa9f540ba10800000000000000
+      internalID: 1923113979583249740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2856
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9432f438598028150800000000000000
+      internalID: 5873266302290699081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_61
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 2856
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7bd80b53a887cf810800000000000000
+      internalID: 1800446486042938807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_62
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 2856
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98067d64b5c51fec0800000000000000
+      internalID: -3534942685408829303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_63
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 2856
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 459d1c724fcc4db40800000000000000
+      internalID: 5464217596918356308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_64
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 2856
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f60f2df96b810b50800000000000000
+      internalID: 6557675819763697396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_65
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 2856
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c401a5e7078323c90800000000000000
+      internalID: -7191623599149936564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1904
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef552aa8bb8f706a0800000000000000
+      internalID: -6482939654208072194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_67
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 1904
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 423cbe07bd09adb50800000000000000
+      internalID: 6618761874541101860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_68
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 1904
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afff661331e285ff0800000000000000
+      internalID: -47237136119300102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_69
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 1904
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7068a0362970ccb60800000000000000
+      internalID: 7767591782615516679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_70
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 1904
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c2fb4f57be2b2e30800000000000000
+      internalID: 4479725619462795975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_71
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 1904
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 244221c57105330d0800000000000000
+      internalID: -3444321228749134782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 952
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3a9d729927609350800000000000000
+      internalID: 6021426130043378234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_73
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 952
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25ae48ff6ca6409a0800000000000000
+      internalID: -6267767378469918126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_74
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 952
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 501876d916ba44010800000000000000
+      internalID: 1172250238764155141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_75
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 952
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba02c1c164799e800800000000000000
+      internalID: 642210749252116651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_76
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 952
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f431d014f603f2c20800000000000000
+      internalID: 3183816715965109071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_77
+      rect:
+        serializedVersion: 2
+        x: 6185
+        y: 952
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba7e09512d07c3ea0800000000000000
+      internalID: -5891710164900190293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_78
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6ba5412322ecb490800000000000000
+      internalID: -7729054219964667025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_79
+      rect:
+        serializedVersion: 2
+        x: 1237
+        y: 0
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 039779a5755782230800000000000000
+      internalID: 3614267719007303984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_80
+      rect:
+        serializedVersion: 2
+        x: 2474
+        y: 0
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f172fc47aece62210800000000000000
+      internalID: 1307993233523943199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_81
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 0
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92ddece898e1a9160800000000000000
+      internalID: 7032967344247725353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Damage_Head1_82
+      rect:
+        serializedVersion: 2
+        x: 4948
+        y: 0
+        width: 1237
+        height: 952
+      alignment: 9
+      pivot: {x: 0.541, y: 0.08}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6944c84d62058ccb0800000000000000
+      internalID: -4843533271532026730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 196ca82cc6c230e4fb13b8658d7a3ad4
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":14.0},"gridSpriteSize":{"x":1237.0,"y":952.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5410000085830689,"y":0.07999999821186066},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      PMRG_Damage_Head1_0: 6174765120269366589
+      PMRG_Damage_Head1_1: 4267949111457741077
+      PMRG_Damage_Head1_10: 5949452348602895767
+      PMRG_Damage_Head1_11: -4488591827801903322
+      PMRG_Damage_Head1_12: -3858092046123630054
+      PMRG_Damage_Head1_13: 1282758198525455634
+      PMRG_Damage_Head1_14: 9190191294131414937
+      PMRG_Damage_Head1_15: -8384135488662509995
+      PMRG_Damage_Head1_16: 7755515374085861571
+      PMRG_Damage_Head1_17: 6134608735034349441
+      PMRG_Damage_Head1_18: 5020971535414657092
+      PMRG_Damage_Head1_19: -8588630530870387326
+      PMRG_Damage_Head1_2: 7254435955637379586
+      PMRG_Damage_Head1_20: 118834774948765102
+      PMRG_Damage_Head1_21: -5985657600612738652
+      PMRG_Damage_Head1_22: -521526429940260124
+      PMRG_Damage_Head1_23: 6934811274038216149
+      PMRG_Damage_Head1_24: -6586934604366258494
+      PMRG_Damage_Head1_25: 6325214784373795060
+      PMRG_Damage_Head1_26: 4051408176990975878
+      PMRG_Damage_Head1_27: -819113581614085680
+      PMRG_Damage_Head1_28: 793974436525312700
+      PMRG_Damage_Head1_29: -1384411919140423210
+      PMRG_Damage_Head1_3: -4131824833717752030
+      PMRG_Damage_Head1_30: -7888864983594719451
+      PMRG_Damage_Head1_31: 6963647895049651540
+      PMRG_Damage_Head1_32: -5501890619418250117
+      PMRG_Damage_Head1_33: -7073939787646331212
+      PMRG_Damage_Head1_34: 1894453083317781047
+      PMRG_Damage_Head1_35: 3810999526945160257
+      PMRG_Damage_Head1_36: 7255625117629346132
+      PMRG_Damage_Head1_37: 4881713824226282060
+      PMRG_Damage_Head1_38: -7262106624194717423
+      PMRG_Damage_Head1_39: -4364595637059046938
+      PMRG_Damage_Head1_4: -6737109784944989504
+      PMRG_Damage_Head1_40: 4045066989165833755
+      PMRG_Damage_Head1_41: 4406891265134161082
+      PMRG_Damage_Head1_42: -3326031694426327449
+      PMRG_Damage_Head1_43: 3580917815886437685
+      PMRG_Damage_Head1_44: 6016496998040114619
+      PMRG_Damage_Head1_45: -2222579049271451285
+      PMRG_Damage_Head1_46: 5901649285523454113
+      PMRG_Damage_Head1_47: -9179855293279765953
+      PMRG_Damage_Head1_48: -6356021029788737293
+      PMRG_Damage_Head1_49: -4472184533813121585
+      PMRG_Damage_Head1_5: -8241295818418460650
+      PMRG_Damage_Head1_50: 5583049664283266457
+      PMRG_Damage_Head1_51: 2143140903960684479
+      PMRG_Damage_Head1_52: 1714776176429281739
+      PMRG_Damage_Head1_53: 6786549591640617263
+      PMRG_Damage_Head1_54: 4789416604715581691
+      PMRG_Damage_Head1_55: -9038023539517563842
+      PMRG_Damage_Head1_56: -5986442816660253350
+      PMRG_Damage_Head1_57: -4937553834373798251
+      PMRG_Damage_Head1_58: -565505032145501163
+      PMRG_Damage_Head1_59: 1923113979583249740
+      PMRG_Damage_Head1_6: -2821016408325347241
+      PMRG_Damage_Head1_60: 5873266302290699081
+      PMRG_Damage_Head1_61: 1800446486042938807
+      PMRG_Damage_Head1_62: -3534942685408829303
+      PMRG_Damage_Head1_63: 5464217596918356308
+      PMRG_Damage_Head1_64: 6557675819763697396
+      PMRG_Damage_Head1_65: -7191623599149936564
+      PMRG_Damage_Head1_66: -6482939654208072194
+      PMRG_Damage_Head1_67: 6618761874541101860
+      PMRG_Damage_Head1_68: -47237136119300102
+      PMRG_Damage_Head1_69: 7767591782615516679
+      PMRG_Damage_Head1_7: 7775502973755774680
+      PMRG_Damage_Head1_70: 4479725619462795975
+      PMRG_Damage_Head1_71: -3444321228749134782
+      PMRG_Damage_Head1_72: 6021426130043378234
+      PMRG_Damage_Head1_73: -6267767378469918126
+      PMRG_Damage_Head1_74: 1172250238764155141
+      PMRG_Damage_Head1_75: 642210749252116651
+      PMRG_Damage_Head1_76: 3183816715965109071
+      PMRG_Damage_Head1_77: -5891710164900190293
+      PMRG_Damage_Head1_78: -7729054219964667025
+      PMRG_Damage_Head1_79: 3614267719007303984
+      PMRG_Damage_Head1_8: -4746178912064530507
+      PMRG_Damage_Head1_80: 1307993233523943199
+      PMRG_Damage_Head1_81: 7032967344247725353
+      PMRG_Damage_Head1_82: -4843533271532026730
+      PMRG_Damage_Head1_9: -5486311420731063061
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

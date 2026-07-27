@@ -53,15 +53,15 @@ namespace DDD.TNFY.BRAWL
             onMovementStarted?.Invoke();
 
             var unitAnimator = movingUnit.GetComponent<UnitAnimator>();
-            var spriteRenderer = movingUnit.GetComponentInChildren<SpriteRenderer>();
+            var spriteRenderers = movingUnit.GetComponentsInChildren<SpriteRenderer>(includeInactive: false);
 
             if (unitAnimator != null)
                 unitAnimator.PlayMove();
 
             if (followCameraForAI)
-                yield return StartCoroutine(MoveAlongWaypointsWithCamera(movingUnit, pathToUse, spriteRenderer));
+                yield return StartCoroutine(MoveAlongWaypointsWithCamera(movingUnit, pathToUse, spriteRenderers));
             else
-                yield return StartCoroutine(MoveAlongWaypoints(movingUnit, pathToUse, spriteRenderer));
+                yield return StartCoroutine(MoveAlongWaypoints(movingUnit, pathToUse, spriteRenderers));
 
             if (unitAnimator != null)
                 unitAnimator.PlayIdle();
@@ -90,12 +90,15 @@ namespace DDD.TNFY.BRAWL
 
         #region Private Movement Coroutines
 
-        private IEnumerator MoveAlongWaypoints(Unit movingUnit, List<Tile> waypoints, SpriteRenderer spriteRenderer)
+        private IEnumerator MoveAlongWaypoints(Unit movingUnit, List<Tile> waypoints, SpriteRenderer[] spriteRenderers)
         {
             Vector3 currentPos = movingUnit.transform.position;
 
             float totalDistance = CalculateTotalDistance(currentPos, waypoints);
             float totalTime = totalDistance / movementSpeed;
+
+            var dustFX = movingUnit.GetComponent<UnitMoveDustFX>();
+            bool hasPlayedBurst = false;
 
             foreach (var waypoint in waypoints)
             {
@@ -104,7 +107,18 @@ namespace DDD.TNFY.BRAWL
                 float segmentDistance = Vector3.Distance(segmentStart, segmentEnd);
                 float segmentTime = (segmentDistance / totalDistance) * totalTime;
 
-                UpdateSpriteFacing(spriteRenderer, segmentStart, segmentEnd);
+                UpdateSpriteFacing(spriteRenderers, segmentStart, segmentEnd);
+
+                Vector2Int segmentDirection = GridDirectionUtility.DirectionFromPositions(segmentStart, segmentEnd);
+                if (dustFX != null && segmentDirection != Vector2Int.zero)
+                {
+                    if (!hasPlayedBurst)
+                    {
+                        dustFX.PlayBurst(segmentDirection);
+                        hasPlayedBurst = true;
+                    }
+                    dustFX.StartTrail(segmentDirection);
+                }
 
                 float segmentElapsed = 0f;
                 while (segmentElapsed < segmentTime)
@@ -121,15 +135,21 @@ namespace DDD.TNFY.BRAWL
                     yield return StartCoroutine(waypoint.TriggerOnEnterEffects(movingUnit));
             }
 
+            if (dustFX != null)
+                dustFX.StopTrail();
+
             movingUnit.transform.position = waypoints[waypoints.Count - 1].transform.position;
         }
 
-        private IEnumerator MoveAlongWaypointsWithCamera(Unit movingUnit, List<Tile> waypoints, SpriteRenderer spriteRenderer)
+        private IEnumerator MoveAlongWaypointsWithCamera(Unit movingUnit, List<Tile> waypoints, SpriteRenderer[] spriteRenderers)
         {
             Vector3 currentPos = movingUnit.transform.position;
 
             float totalDistance = CalculateTotalDistance(currentPos, waypoints);
             float totalTime = totalDistance / movementSpeed;
+
+            var dustFX = movingUnit.GetComponent<UnitMoveDustFX>();
+            bool hasPlayedBurst = false;
 
             bool shouldMoveCamera = cameraController != null;
             Vector3 cameraStartPos = Vector3.zero;
@@ -156,7 +176,18 @@ namespace DDD.TNFY.BRAWL
                 float segmentDistance = Vector3.Distance(segmentStart, segmentEnd);
                 float segmentTime = (segmentDistance / totalDistance) * totalTime;
 
-                UpdateSpriteFacing(spriteRenderer, segmentStart, segmentEnd);
+                UpdateSpriteFacing(spriteRenderers, segmentStart, segmentEnd);
+
+                Vector2Int segmentDirection = GridDirectionUtility.DirectionFromPositions(segmentStart, segmentEnd);
+                if (dustFX != null && segmentDirection != Vector2Int.zero)
+                {
+                    if (!hasPlayedBurst)
+                    {
+                        dustFX.PlayBurst(segmentDirection);
+                        hasPlayedBurst = true;
+                    }
+                    dustFX.StartTrail(segmentDirection);
+                }
 
                 float segmentElapsed = 0f;
                 while (segmentElapsed < segmentTime)
@@ -182,6 +213,9 @@ namespace DDD.TNFY.BRAWL
                     yield return StartCoroutine(waypoint.TriggerOnEnterEffects(movingUnit));
             }
 
+            if (dustFX != null)
+                dustFX.StopTrail();
+
             movingUnit.transform.position = waypoints[waypoints.Count - 1].transform.position;
             if (shouldMoveCamera)
                 cameraController.transform.position = cameraTargetPos;
@@ -203,13 +237,19 @@ namespace DDD.TNFY.BRAWL
             return Mathf.Max(total, 0.001f);
         }
 
-        private static void UpdateSpriteFacing(SpriteRenderer sr, Vector3 from, Vector3 to)
+        private static void UpdateSpriteFacing(SpriteRenderer[] renderers, Vector3 from, Vector3 to)
         {
-            if (sr == null) return;
+            if (renderers == null) return;
             Vector3 dir = (to - from).normalized;
-            
-            if (Mathf.Abs(dir.x) > 0.1f)
-                sr.flipX = dir.x > 0;
+
+            if (Mathf.Abs(dir.x) <= 0.1f) return;
+
+            bool flipX = dir.x > 0;
+            foreach (var sr in renderers)
+            {
+                if (sr == null) continue;
+                sr.flipX = flipX;
+            }
         }
 
         #endregion

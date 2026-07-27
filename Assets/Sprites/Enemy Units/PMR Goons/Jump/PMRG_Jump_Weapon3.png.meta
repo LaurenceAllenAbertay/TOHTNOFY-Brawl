@@ -1,0 +1,1588 @@
+fileFormatVersion: 2
+guid: b773002e14f6f55489b3550361ab0935
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5803958098501235397
+    second: PMRG_Jump_Weapon3_0
+  - first:
+      213: 7825038296394044895
+    second: PMRG_Jump_Weapon3_1
+  - first:
+      213: -8883557149385384846
+    second: PMRG_Jump_Weapon3_2
+  - first:
+      213: -637161817629368536
+    second: PMRG_Jump_Weapon3_3
+  - first:
+      213: 8167607846109006004
+    second: PMRG_Jump_Weapon3_4
+  - first:
+      213: 2086883902200686707
+    second: PMRG_Jump_Weapon3_5
+  - first:
+      213: 3580460231634188939
+    second: PMRG_Jump_Weapon3_6
+  - first:
+      213: -2136529405791290806
+    second: PMRG_Jump_Weapon3_7
+  - first:
+      213: 2011360898547754412
+    second: PMRG_Jump_Weapon3_8
+  - first:
+      213: 179341150980053544
+    second: PMRG_Jump_Weapon3_9
+  - first:
+      213: -3876628011012566322
+    second: PMRG_Jump_Weapon3_10
+  - first:
+      213: -4389445723419878069
+    second: PMRG_Jump_Weapon3_11
+  - first:
+      213: 5796016814282095520
+    second: PMRG_Jump_Weapon3_12
+  - first:
+      213: -2755865669472599755
+    second: PMRG_Jump_Weapon3_13
+  - first:
+      213: 5471421755681156125
+    second: PMRG_Jump_Weapon3_14
+  - first:
+      213: 7628466860773952978
+    second: PMRG_Jump_Weapon3_15
+  - first:
+      213: 2628412803448190158
+    second: PMRG_Jump_Weapon3_16
+  - first:
+      213: 8587127226770093790
+    second: PMRG_Jump_Weapon3_17
+  - first:
+      213: 1448516384932601494
+    second: PMRG_Jump_Weapon3_18
+  - first:
+      213: -4235463597280381475
+    second: PMRG_Jump_Weapon3_19
+  - first:
+      213: -672450289445848751
+    second: PMRG_Jump_Weapon3_20
+  - first:
+      213: 3438152386040433981
+    second: PMRG_Jump_Weapon3_21
+  - first:
+      213: -6166905473835226516
+    second: PMRG_Jump_Weapon3_22
+  - first:
+      213: 7224584104410438127
+    second: PMRG_Jump_Weapon3_23
+  - first:
+      213: 872416915004059908
+    second: PMRG_Jump_Weapon3_24
+  - first:
+      213: 1324735177481218408
+    second: PMRG_Jump_Weapon3_25
+  - first:
+      213: -8718142285288083035
+    second: PMRG_Jump_Weapon3_26
+  - first:
+      213: 8847403786875409033
+    second: PMRG_Jump_Weapon3_27
+  - first:
+      213: -6327695691554540992
+    second: PMRG_Jump_Weapon3_28
+  - first:
+      213: -6357396507487642423
+    second: PMRG_Jump_Weapon3_29
+  - first:
+      213: 4681647527076946145
+    second: PMRG_Jump_Weapon3_30
+  - first:
+      213: -247119458233595610
+    second: PMRG_Jump_Weapon3_31
+  - first:
+      213: -325169698693954758
+    second: PMRG_Jump_Weapon3_32
+  - first:
+      213: -1912468772350668780
+    second: PMRG_Jump_Weapon3_33
+  - first:
+      213: -4059427260423468195
+    second: PMRG_Jump_Weapon3_34
+  - first:
+      213: -8408340470854110940
+    second: PMRG_Jump_Weapon3_35
+  - first:
+      213: 2925338912509500138
+    second: PMRG_Jump_Weapon3_36
+  - first:
+      213: -7192625707778091141
+    second: PMRG_Jump_Weapon3_37
+  - first:
+      213: -5627360834879797810
+    second: PMRG_Jump_Weapon3_38
+  - first:
+      213: -3555378001547453219
+    second: PMRG_Jump_Weapon3_39
+  - first:
+      213: 7420714401505546825
+    second: PMRG_Jump_Weapon3_40
+  - first:
+      213: 561740233556410551
+    second: PMRG_Jump_Weapon3_41
+  - first:
+      213: 5347940326412632707
+    second: PMRG_Jump_Weapon3_42
+  - first:
+      213: 4192378586706914560
+    second: PMRG_Jump_Weapon3_43
+  - first:
+      213: 4265697103359227529
+    second: PMRG_Jump_Weapon3_44
+  - first:
+      213: -4003576592962806138
+    second: PMRG_Jump_Weapon3_45
+  - first:
+      213: 4149632464073531685
+    second: PMRG_Jump_Weapon3_46
+  - first:
+      213: 2086685207482105465
+    second: PMRG_Jump_Weapon3_47
+  - first:
+      213: 5011771399051088667
+    second: PMRG_Jump_Weapon3_48
+  - first:
+      213: -3036538433363521785
+    second: PMRG_Jump_Weapon3_49
+  - first:
+      213: 2558128507174762773
+    second: PMRG_Jump_Weapon3_50
+  - first:
+      213: 244909386948476596
+    second: PMRG_Jump_Weapon3_51
+  - first:
+      213: 9100090832769201657
+    second: PMRG_Jump_Weapon3_52
+  - first:
+      213: -9019437139920825503
+    second: PMRG_Jump_Weapon3_53
+  - first:
+      213: 442271707929734059
+    second: PMRG_Jump_Weapon3_54
+  - first:
+      213: -8696465485408738832
+    second: PMRG_Jump_Weapon3_55
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10647
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c2fa60d32dcb8050800000000000000
+      internalID: 5803958098501235397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_1
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 10647
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd5156a2fde189c60800000000000000
+      internalID: 7825038296394044895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_2
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 10647
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27c9009f6d347b480800000000000000
+      internalID: -8883557149385384846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_3
+      rect:
+        serializedVersion: 2
+        x: 2667
+        y: 10647
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82f52c3e3b85827f0800000000000000
+      internalID: -637161817629368536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_4
+      rect:
+        serializedVersion: 2
+        x: 3556
+        y: 10647
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b8450cef0c295170800000000000000
+      internalID: 8167607846109006004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_5
+      rect:
+        serializedVersion: 2
+        x: 4445
+        y: 10647
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 378272e2ad916fc10800000000000000
+      internalID: 2086883902200686707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9464
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8af7fe4c9950b130800000000000000
+      internalID: 3580460231634188939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_7
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 9464
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4a32a343d58952e0800000000000000
+      internalID: -2136529405791290806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_8
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 9464
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca5ac01a41ac9eb10800000000000000
+      internalID: 2011360898547754412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_9
+      rect:
+        serializedVersion: 2
+        x: 2667
+        y: 9464
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82a96cd93d52d7200800000000000000
+      internalID: 179341150980053544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_10
+      rect:
+        serializedVersion: 2
+        x: 3556
+        y: 9464
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec2544dfc53733ac0800000000000000
+      internalID: -3876628011012566322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_11
+      rect:
+        serializedVersion: 2
+        x: 4445
+        y: 9464
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4d53beee5e8513c0800000000000000
+      internalID: -4389445723419878069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8281
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0abb97f75969f6050800000000000000
+      internalID: 5796016814282095520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_13
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 8281
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 531446a56c231c9d0800000000000000
+      internalID: -2755865669472599755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_14
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 8281
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1c28b319156eeb40800000000000000
+      internalID: 5471421755681156125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_15
+      rect:
+        serializedVersion: 2
+        x: 2667
+        y: 8281
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dd45494132cdd960800000000000000
+      internalID: 7628466860773952978
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_16
+      rect:
+        serializedVersion: 2
+        x: 3556
+        y: 8281
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec43e90d48ff97420800000000000000
+      internalID: 2628412803448190158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_17
+      rect:
+        serializedVersion: 2
+        x: 4445
+        y: 8281
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed677b857ba9b2770800000000000000
+      internalID: 8587127226770093790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7098
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 69e9d3f3af92a1410800000000000000
+      internalID: 1448516384932601494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_19
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 7098
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd531097c4c9835c0800000000000000
+      internalID: -4235463597280381475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_20
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 7098
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 159b878460afaa6f0800000000000000
+      internalID: -672450289445848751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_21
+      rect:
+        serializedVersion: 2
+        x: 2667
+        y: 7098
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d3d0a950165c6bf20800000000000000
+      internalID: 3438152386040433981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_22
+      rect:
+        serializedVersion: 2
+        x: 3556
+        y: 7098
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6aa3ac2520ca6aa0800000000000000
+      internalID: -6166905473835226516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_23
+      rect:
+        serializedVersion: 2
+        x: 4445
+        y: 7098
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fe9515927f0e24460800000000000000
+      internalID: 7224584104410438127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5915
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 401fbdadf827b1c00800000000000000
+      internalID: 872416915004059908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_25
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 5915
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8696b3b00a7626210800000000000000
+      internalID: 1324735177481218408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_26
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 5915
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a1771048cfe20780800000000000000
+      internalID: -8718142285288083035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_27
+      rect:
+        serializedVersion: 2
+        x: 2667
+        y: 5915
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 982972d5eda48ca70800000000000000
+      internalID: 8847403786875409033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_28
+      rect:
+        serializedVersion: 2
+        x: 3556
+        y: 5915
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0423f1a4b428f28a0800000000000000
+      internalID: -6327695691554540992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_29
+      rect:
+        serializedVersion: 2
+        x: 4445
+        y: 5915
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ccd3e23f8df5c7a0800000000000000
+      internalID: -6357396507487642423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4732
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e0e1071f9d88f040800000000000000
+      internalID: 4681647527076946145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_31
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 4732
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62946ea792e029cf0800000000000000
+      internalID: -247119458233595610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_32
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 4732
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3340a1c1e3cc7bf0800000000000000
+      internalID: -325169698693954758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_33
+      rect:
+        serializedVersion: 2
+        x: 2667
+        y: 4732
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 410d204c8cb8575e0800000000000000
+      internalID: -1912468772350668780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_34
+      rect:
+        serializedVersion: 2
+        x: 3556
+        y: 4732
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5b0ce61a640aa7c0800000000000000
+      internalID: -4059427260423468195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_35
+      rect:
+        serializedVersion: 2
+        x: 4445
+        y: 4732
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 421333c14e29f4b80800000000000000
+      internalID: -8408340470854110940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3549
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aea91c7ed34e89820800000000000000
+      internalID: 2925338912509500138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_37
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 3549
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b775b85e609ae2c90800000000000000
+      internalID: -7192625707778091141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_38
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 3549
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec54b0eb22997e1b0800000000000000
+      internalID: -5627360834879797810
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_39
+      rect:
+        serializedVersion: 2
+        x: 2667
+        y: 3549
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddc96877b82c8aec0800000000000000
+      internalID: -3555378001547453219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_40
+      rect:
+        serializedVersion: 2
+        x: 3556
+        y: 3549
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9421d597e6cabf660800000000000000
+      internalID: 7420714401505546825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_41
+      rect:
+        serializedVersion: 2
+        x: 4445
+        y: 3549
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b0cc2524c3bbc700800000000000000
+      internalID: 561740233556410551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2366
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 382cfcb6463b73a40800000000000000
+      internalID: 5347940326412632707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_43
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 2366
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00dae98cc125e2a30800000000000000
+      internalID: 4192378586706914560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_44
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 2366
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 986b3253aecc23b30800000000000000
+      internalID: 4265697103359227529
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_45
+      rect:
+        serializedVersion: 2
+        x: 2667
+        y: 2366
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68e1261fc407078c0800000000000000
+      internalID: -4003576592962806138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_46
+      rect:
+        serializedVersion: 2
+        x: 3556
+        y: 2366
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52128898db4769930800000000000000
+      internalID: 4149632464073531685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_47
+      rect:
+        serializedVersion: 2
+        x: 4445
+        y: 2366
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97e7806f32565fc10800000000000000
+      internalID: 2086685207482105465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1183
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1317efa8836d8540800000000000000
+      internalID: 5011771399051088667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_49
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 1183
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70fcb84126c0cd5d0800000000000000
+      internalID: -3036538433363521785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_50
+      rect:
+        serializedVersion: 2
+        x: 1778
+        y: 1183
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 519b3ffd25c408320800000000000000
+      internalID: 2558128507174762773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_51
+      rect:
+        serializedVersion: 2
+        x: 2667
+        y: 1183
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bef8333ac7166300800000000000000
+      internalID: 244909386948476596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_52
+      rect:
+        serializedVersion: 2
+        x: 3556
+        y: 1183
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f53ff6e5640a4e70800000000000000
+      internalID: 9100090832769201657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_53
+      rect:
+        serializedVersion: 2
+        x: 4445
+        y: 1183
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 163dd0155b584d280800000000000000
+      internalID: -9019437139920825503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bab6b5d66c3432600800000000000000
+      internalID: 442271707929734059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Jump_Weapon3_55
+      rect:
+        serializedVersion: 2
+        x: 889
+        y: 0
+        width: 889
+        height: 1183
+      alignment: 9
+      pivot: {x: 0.525, y: 0.075}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f164c487b2ff4780800000000000000
+      internalID: -8696465485408738832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9b7b822a768378741a5728ef989c2bf0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":10.0},"gridSpriteSize":{"x":889.0,"y":1183.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5249999761581421,"y":0.07500000298023224},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      PMRG_Jump_Weapon3_0: 5803958098501235397
+      PMRG_Jump_Weapon3_1: 7825038296394044895
+      PMRG_Jump_Weapon3_10: -3876628011012566322
+      PMRG_Jump_Weapon3_11: -4389445723419878069
+      PMRG_Jump_Weapon3_12: 5796016814282095520
+      PMRG_Jump_Weapon3_13: -2755865669472599755
+      PMRG_Jump_Weapon3_14: 5471421755681156125
+      PMRG_Jump_Weapon3_15: 7628466860773952978
+      PMRG_Jump_Weapon3_16: 2628412803448190158
+      PMRG_Jump_Weapon3_17: 8587127226770093790
+      PMRG_Jump_Weapon3_18: 1448516384932601494
+      PMRG_Jump_Weapon3_19: -4235463597280381475
+      PMRG_Jump_Weapon3_2: -8883557149385384846
+      PMRG_Jump_Weapon3_20: -672450289445848751
+      PMRG_Jump_Weapon3_21: 3438152386040433981
+      PMRG_Jump_Weapon3_22: -6166905473835226516
+      PMRG_Jump_Weapon3_23: 7224584104410438127
+      PMRG_Jump_Weapon3_24: 872416915004059908
+      PMRG_Jump_Weapon3_25: 1324735177481218408
+      PMRG_Jump_Weapon3_26: -8718142285288083035
+      PMRG_Jump_Weapon3_27: 8847403786875409033
+      PMRG_Jump_Weapon3_28: -6327695691554540992
+      PMRG_Jump_Weapon3_29: -6357396507487642423
+      PMRG_Jump_Weapon3_3: -637161817629368536
+      PMRG_Jump_Weapon3_30: 4681647527076946145
+      PMRG_Jump_Weapon3_31: -247119458233595610
+      PMRG_Jump_Weapon3_32: -325169698693954758
+      PMRG_Jump_Weapon3_33: -1912468772350668780
+      PMRG_Jump_Weapon3_34: -4059427260423468195
+      PMRG_Jump_Weapon3_35: -8408340470854110940
+      PMRG_Jump_Weapon3_36: 2925338912509500138
+      PMRG_Jump_Weapon3_37: -7192625707778091141
+      PMRG_Jump_Weapon3_38: -5627360834879797810
+      PMRG_Jump_Weapon3_39: -3555378001547453219
+      PMRG_Jump_Weapon3_4: 8167607846109006004
+      PMRG_Jump_Weapon3_40: 7420714401505546825
+      PMRG_Jump_Weapon3_41: 561740233556410551
+      PMRG_Jump_Weapon3_42: 5347940326412632707
+      PMRG_Jump_Weapon3_43: 4192378586706914560
+      PMRG_Jump_Weapon3_44: 4265697103359227529
+      PMRG_Jump_Weapon3_45: -4003576592962806138
+      PMRG_Jump_Weapon3_46: 4149632464073531685
+      PMRG_Jump_Weapon3_47: 2086685207482105465
+      PMRG_Jump_Weapon3_48: 5011771399051088667
+      PMRG_Jump_Weapon3_49: -3036538433363521785
+      PMRG_Jump_Weapon3_5: 2086883902200686707
+      PMRG_Jump_Weapon3_50: 2558128507174762773
+      PMRG_Jump_Weapon3_51: 244909386948476596
+      PMRG_Jump_Weapon3_52: 9100090832769201657
+      PMRG_Jump_Weapon3_53: -9019437139920825503
+      PMRG_Jump_Weapon3_54: 442271707929734059
+      PMRG_Jump_Weapon3_55: -8696465485408738832
+      PMRG_Jump_Weapon3_6: 3580460231634188939
+      PMRG_Jump_Weapon3_7: -2136529405791290806
+      PMRG_Jump_Weapon3_8: 2011360898547754412
+      PMRG_Jump_Weapon3_9: 179341150980053544
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
