@@ -10,6 +10,8 @@ namespace DDD.TNFY.BRAWL
         [SerializeField] private int flatHeal = 10;
 
         [SerializeField] [Range(0f, 2f)] private float attackScaling = 0f;
+
+        private const int HealVarianceRange = 4;
         
         public override EffectAnimationPhase AnimationPhase => EffectAnimationPhase.StatusBuff;
 
@@ -35,12 +37,17 @@ namespace DDD.TNFY.BRAWL
                 
                 if (target.IsBody) continue;
 
+                int variance = Random.Range(-HealVarianceRange, HealVarianceRange + 1);
+                int variedHeal = Mathf.Max(0, healAmount + variance);
+
+                if (variedHeal <= 0) continue;
+
                 int maxHealth = target.maxHealth > 0
                     ? target.maxHealth
                     : target.currentHealth;
 
                 int before = target.currentHealth;
-                target.currentHealth = Mathf.Min(target.currentHealth + healAmount, maxHealth);
+                target.currentHealth = Mathf.Min(target.currentHealth + variedHeal, maxHealth);
                 int actualHeal = target.currentHealth - before;
 
                 if (actualHeal <= 0) continue;

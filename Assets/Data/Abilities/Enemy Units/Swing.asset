@@ -17,7 +17,7 @@ MonoBehaviour:
   image: {fileID: 0}
   rangeType: 0
   range: 1
-  damage: 25
+  damage: 200
   cooldown: 0
   attackType: 1
   canHitEnemies: 1

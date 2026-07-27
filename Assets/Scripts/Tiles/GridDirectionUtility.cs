@@ -32,10 +32,18 @@ namespace DDD.TNFY.BRAWL
         
         public static Vector2Int CardinalFromTiles(Tile from, Tile to)
         {
-            if (from == null || to == null || GridManager.Instance == null)
+            if (from == null || to == null)
                 return Vector2Int.zero;
 
-            return CardinalFromPositions(from.transform.position, to.transform.position);
+            int dx = to.gridPosition.x - from.gridPosition.x;
+            int dz = to.gridPosition.y - from.gridPosition.y;
+
+            if (dx == 0 && dz == 0)
+                return Vector2Int.zero;
+
+            return Mathf.Abs(dx) >= Mathf.Abs(dz)
+                ? new Vector2Int(dx > 0 ? 1 : -1, 0)
+                : new Vector2Int(0, dz > 0 ? 1 : -1);
         }
 
         public static Vector2Int CardinalFromPositions(Vector3 from, Vector3 to)

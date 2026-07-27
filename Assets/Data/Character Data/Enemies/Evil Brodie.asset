@@ -16,7 +16,7 @@ MonoBehaviour:
   portrait: {fileID: -533732562, guid: e531406b1ba316c4b88a0291c8240e66, type: 3}
   prefab: {fileID: 4885748180280455429, guid: 0f2a6b56aaaadd04b91a794e2b412f0f, type: 3}
   overworldPrefab: {fileID: 0}
-  maxHealth: 200
+  maxHealth: 2000
   attack: 0
   defense: 0
   speed: 2

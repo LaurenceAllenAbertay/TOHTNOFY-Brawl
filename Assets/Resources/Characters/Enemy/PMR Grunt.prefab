@@ -144,6 +144,10 @@ MonoBehaviour:
   - {fileID: 1641921135064934262}
   - {fileID: 1469441408511300665}
   - {fileID: 1779667319932489842}
+  headPortraits:
+  - {fileID: 21300000, guid: 2327d5ab6123034499820ee4be9ae686, type: 3}
+  - {fileID: 21300000, guid: a61042d5d3ca216418bf3fee7329b0e8, type: 3}
+  - {fileID: 21300000, guid: 2832b80f7c990e849b1ef3ad7d16b22d, type: 3}
   bodyVariants:
   - {fileID: 1819080343460237730}
   - {fileID: 8708054876805570511}

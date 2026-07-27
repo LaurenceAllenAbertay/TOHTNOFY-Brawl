@@ -27,6 +27,7 @@ namespace DDD.TNFY.BRAWL
 
         [Header("Grid Info")]
         public Vector2Int gridPosition;
+        public int yLevel;
         
         public bool passableTerrain = true;
 

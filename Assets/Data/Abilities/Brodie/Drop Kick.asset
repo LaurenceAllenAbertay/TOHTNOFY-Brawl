@@ -17,7 +17,8 @@ MonoBehaviour:
   image: {fileID: 21300000, guid: 6f25e6eef642e084b85a4ece579731f3, type: 3}
   rangeType: 0
   range: 1
-  damage: 10
+  damage: 150
+  cooldown: 0
   attackType: 1
   canHitEnemies: 1
   canHitAllies: 0
@@ -28,7 +29,8 @@ MonoBehaviour:
   endTurnOnCast: 0
   suppressCameraTransitions: 0
   animationState: No_Animation
-  animationStateHurt: No_Animation
+  animationHoldState: 
+  animationHoldReleaseState: 
   castEffectPrefab: {fileID: 0}
   castEffectOffset: {x: 0, y: 0, z: 0}
   parentCastEffectToCaster: 0

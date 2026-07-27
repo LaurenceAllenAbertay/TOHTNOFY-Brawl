@@ -10,6 +10,8 @@ namespace DDD.TNFY.BRAWL
         public override string TargetAnimationHint => "Hurt";
         public override float ExpectedAnimationDuration => 0.8f;
 
+        private const int DamageVarianceRange = 4;
+
         public override void Apply(AbilityContext ctx, IReadOnlyList<Unit> targets)
         {
             if (ctx == null || ctx.ability == null || targets == null) return;
@@ -21,7 +23,8 @@ namespace DDD.TNFY.BRAWL
             foreach (var u in targets)
             {
                 if (u == null) continue;
-                int dmg = Mathf.Max(1, baseDamage - u.currentDefense);
+                int variance = Random.Range(-DamageVarianceRange, DamageVarianceRange + 1);
+                int dmg = Mathf.Max(1, baseDamage + variance - u.currentDefense);
                 u.ReceiveDamage(dmg, ctx.caster, ctx.ability);
                 UnitManager.NotifyUnitDamaged(u, ctx.caster);
                 

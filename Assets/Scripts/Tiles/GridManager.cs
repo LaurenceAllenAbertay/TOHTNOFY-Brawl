@@ -60,6 +60,20 @@ namespace DDD.TNFY.BRAWL
             {
                 ValidateGridSpacing();
             }
+
+            AssignTileGridCoordinates();
+        }
+
+        private void AssignTileGridCoordinates()
+        {
+            foreach (var tile in allTiles)
+            {
+                Vector3 pos = tile.transform.position;
+                tile.gridPosition = new Vector2Int(
+                    Mathf.RoundToInt(pos.x / tileSpacing.x),
+                    Mathf.RoundToInt(pos.z / tileSpacing.z));
+                tile.yLevel = Mathf.RoundToInt(pos.y / tileSpacing.y);
+            }
         }
 
         public void ValidateGridSpacing()
@@ -261,20 +275,15 @@ namespace DDD.TNFY.BRAWL
         {
             if (tile1 == null || tile2 == null) return false;
 
-            Vector3 diff = tile2.transform.position - tile1.transform.position;
-            
-            int nonZeroAxes = 0;
-            if (Mathf.Abs(diff.x) > 0.1f) nonZeroAxes++;
-            if (Mathf.Abs(diff.z) > 0.1f) nonZeroAxes++;
-            if (Mathf.Abs(diff.y) > 0.1f) nonZeroAxes++;
+            if (tile1.yLevel != tile2.yLevel) return false;
 
-            if (nonZeroAxes != 1) return false;
+            int dx = tile2.gridPosition.x - tile1.gridPosition.x;
+            int dz = tile2.gridPosition.y - tile1.gridPosition.y;
 
-            bool xMatch = Mathf.Abs(Mathf.Abs(diff.x) - tileSpacing.x) < 0.1f;
-            bool zMatch = Mathf.Abs(Mathf.Abs(diff.z) - tileSpacing.z) < 0.1f;
-            bool yMatch = Mathf.Abs(diff.y) < 0.1f; 
+            bool xMatch = Mathf.Abs(dx) == 1 && dz == 0;
+            bool zMatch = Mathf.Abs(dz) == 1 && dx == 0;
 
-            return (xMatch && yMatch) || (zMatch && yMatch);
+            return xMatch || zMatch;
         }
 
         #endregion
@@ -482,11 +491,9 @@ namespace DDD.TNFY.BRAWL
         
         public Vector2Int GetGridDirection(Tile from, Tile to)
         {
-            Vector3 delta = to.transform.position - from.transform.position;
-            
-            int gridX = Mathf.RoundToInt(delta.x / tileSpacing.x);
-            int gridZ = Mathf.RoundToInt(delta.z / tileSpacing.z);
-            
+            int gridX = to.gridPosition.x - from.gridPosition.x;
+            int gridZ = to.gridPosition.y - from.gridPosition.y;
+
             gridX = Mathf.Clamp(gridX, -1, 1);
             gridZ = Mathf.Clamp(gridZ, -1, 1);
 
@@ -598,12 +605,9 @@ namespace DDD.TNFY.BRAWL
         {
             if (tile1 == null || tile2 == null) return int.MaxValue;
 
-            Vector3 pos1 = tile1.transform.position;
-            Vector3 pos2 = tile2.transform.position;
-            
-            int xDistance = Mathf.RoundToInt(Mathf.Abs(pos2.x - pos1.x) / tileSpacing.x);
-            int zDistance = Mathf.RoundToInt(Mathf.Abs(pos2.z - pos1.z) / tileSpacing.z);
-            int yDistance = Mathf.RoundToInt(Mathf.Abs(pos2.y - pos1.y) / tileSpacing.y);
+            int xDistance = Mathf.Abs(tile2.gridPosition.x - tile1.gridPosition.x);
+            int zDistance = Mathf.Abs(tile2.gridPosition.y - tile1.gridPosition.y);
+            int yDistance = Mathf.Abs(tile2.yLevel - tile1.yLevel);
 
             return xDistance + zDistance + yDistance;
         }
@@ -616,12 +620,10 @@ namespace DDD.TNFY.BRAWL
             }
 
             if (tile1 == null || tile2 == null) return int.MaxValue;
-            Vector3 pos1 = tile1.transform.position;
-            Vector3 pos2 = tile2.transform.position;
-            
-            int xDistance = Mathf.RoundToInt(Mathf.Abs(pos2.x - pos1.x) / tileSpacing.x);
-            int zDistance = Mathf.RoundToInt(Mathf.Abs(pos2.z - pos1.z) / tileSpacing.z);
-            
+
+            int xDistance = Mathf.Abs(tile2.gridPosition.x - tile1.gridPosition.x);
+            int zDistance = Mathf.Abs(tile2.gridPosition.y - tile1.gridPosition.y);
+
             return xDistance + zDistance;
         }
 
@@ -736,14 +738,13 @@ namespace DDD.TNFY.BRAWL
         {
             if (tile1 == null || tile2 == null) return false;
 
-            float yDiff = Mathf.Abs(tile1.transform.position.y - tile2.transform.position.y);
-            return yDiff < (tileSpacing.y * 0.5f);
+            return tile1.yLevel == tile2.yLevel;
         }
 
         public int GetYLevel(Tile tile)
         {
             if (tile == null) return 0;
-            return Mathf.RoundToInt(tile.transform.position.y / tileSpacing.y);
+            return tile.yLevel;
         }
 
         #region Editor Tools

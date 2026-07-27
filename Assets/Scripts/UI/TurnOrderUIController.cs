@@ -255,7 +255,12 @@ namespace DDD.TNFY.BRAWL
             Image portrait = portraitImages[slot];
             if (portrait == null || unit == null) return;
 
-            if (unit.characterData != null && unit.characterData.portrait != null)
+            var variantRandomizer = unit.GetComponentInChildren<GruntVisualRandomizer>();
+            if (variantRandomizer != null && variantRandomizer.ChosenHeadPortrait != null)
+            {
+                portrait.sprite = variantRandomizer.ChosenHeadPortrait;
+            }
+            else if (unit.characterData != null && unit.characterData.portrait != null)
             {
                 portrait.sprite = unit.characterData.portrait;
             }
