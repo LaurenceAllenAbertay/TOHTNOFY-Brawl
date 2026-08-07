@@ -19,7 +19,7 @@ public class TitleCardManager : MonoBehaviour
 
 	private IEnumerator MoveScene()
 	{
-		yield return new WaitForSeconds(8f);
+		yield return new WaitForSeconds(7.99f);
 		SceneManager.LoadScene("DemoLobby");
 	}
 }

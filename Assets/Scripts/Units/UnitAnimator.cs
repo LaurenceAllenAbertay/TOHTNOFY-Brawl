@@ -117,10 +117,7 @@ namespace DDD.TNFY.BRAWL
             int maxHp = _unit.maxHealth;
             _isHurtIdle = maxHp > 0 && _unit.currentHealth < maxHp * 0.25f;
             
-            int bodyCount     = UnitManager.AllBodies.Count;
-            int playerCount   = UnitManager.PlayerUnits.Count;
-            int enemyCount    = UnitManager.NpcUnits.Count;
-            _isBadIdle = bodyCount >= 2 && playerCount < enemyCount;
+            _isBadIdle = UnitManager.IsPlayerTeamInBadState;
             
             if ((_isHurtIdle != wasHurt || _isBadIdle != wasBad) && IsCurrentlyIdling())
                 PlayIdle();

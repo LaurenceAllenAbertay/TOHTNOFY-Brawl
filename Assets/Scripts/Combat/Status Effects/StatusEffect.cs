@@ -156,7 +156,7 @@ namespace DDD.TNFY.BRAWL
                     return $"gains +{power} Speed for {duration} turns";
                 case StatusEffectType.SpeedDown:
                     return $"loses {power} Speed for {duration} turns";
-                case StatusEffectType.Bleeding:
+                case StatusEffectType.Bleed:
                     return $"is bleeding ({power} damage/turn, {duration} stacks)";
                 case StatusEffectType.Poison:
                     return $"is poisoned for {duration} turns";

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace DDD.TNFY.BRAWL
@@ -26,6 +27,9 @@ namespace DDD.TNFY.BRAWL
 
         private readonly List<Unit> cachedValidTargets = new List<Unit>();
         private readonly List<Unit> cachedUnitsInRange = new List<Unit>();
+
+        private int _playerTeamMaxHealthPool;
+        private bool _hasMaxHealthSnapshot;
 
         public static IReadOnlyList<Unit> AllUnits => Instance?.allUnits ?? new List<Unit>();
         public static IReadOnlyList<PlayerUnit> PlayerUnits => Instance?.playerUnits ?? new List<PlayerUnit>();
@@ -210,6 +214,38 @@ namespace DDD.TNFY.BRAWL
         public static bool HasUnitsOfType<T>() where T : Unit
         {
             return GetUnitCount<T>() > 0;
+        }
+
+        public static bool IsPlayerTeamInBadState =>
+            Instance != null && Instance.ComputeIsPlayerTeamInBadState();
+
+        private bool ComputeIsPlayerTeamInBadState()
+        {
+            if (!_hasMaxHealthSnapshot)
+            {
+                _playerTeamMaxHealthPool = playerUnits.Sum(p => p.maxHealth);
+                _hasMaxHealthSnapshot = true;
+            }
+
+            if (_playerTeamMaxHealthPool <= 0) return false;
+
+            int livingPlayerHealth = playerUnits.Where(p => !p.IsDead).Sum(p => p.currentHealth);
+            if (livingPlayerHealth >= _playerTeamMaxHealthPool * 0.5f) return false;
+
+            int livingPlayerCount = playerUnits.Count(p => !p.IsDead);
+
+            int largestEnemyTeam = npcUnits
+                .Where(n => !n.IsDead)
+                .GroupBy(n => n.team)
+                .Select(g => g.Count())
+                .DefaultIfEmpty(0)
+                .Max();
+
+            int livingNeutrals = neutralUnits.Count(n => !n.IsDead);
+
+            int largestThreat = Mathf.Max(largestEnemyTeam, livingNeutrals);
+
+            return livingPlayerCount < largestThreat;
         }
 
         private void OnDestroy()

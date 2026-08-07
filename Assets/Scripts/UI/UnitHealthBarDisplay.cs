@@ -40,6 +40,8 @@ namespace DDD.TNFY.BRAWL
         
         private bool _isDamageActive;
 
+        private bool _isAbilitySequenceActive;
+
         private void Start()
         {
             _unit = GetComponentInParent<Unit>();
@@ -63,6 +65,9 @@ namespace DDD.TNFY.BRAWL
             TurnManager.OnTurnEnded        += HandleTurnEnded;
             InputManager.OnUnitHovered     += HandleUnitHovered;
             InputManager.OnUnitHoverExited += HandleUnitHoverExited;
+
+            UIUpdateSystem.OnAbilityAnimationStarted  += HandleAbilitySequenceStarted;
+            UIUpdateSystem.OnAbilityAnimationComplete += HandleAbilitySequenceComplete;
         }
 
         private void OnDestroy()
@@ -72,6 +77,9 @@ namespace DDD.TNFY.BRAWL
             TurnManager.OnTurnEnded        -= HandleTurnEnded;
             InputManager.OnUnitHovered     -= HandleUnitHovered;
             InputManager.OnUnitHoverExited -= HandleUnitHoverExited;
+
+            UIUpdateSystem.OnAbilityAnimationStarted  -= HandleAbilitySequenceStarted;
+            UIUpdateSystem.OnAbilityAnimationComplete -= HandleAbilitySequenceComplete;
         }
 
         private void HandleHealthChanged(Unit changedUnit)
@@ -108,9 +116,21 @@ namespace DDD.TNFY.BRAWL
             EvaluateVisibility();
         }
 
+        private void HandleAbilitySequenceStarted()
+        {
+            _isAbilitySequenceActive = true;
+            EvaluateVisibility();
+        }
+
+        private void HandleAbilitySequenceComplete()
+        {
+            _isAbilitySequenceActive = false;
+            EvaluateVisibility();
+        }
+
         private void EvaluateVisibility()
         {
-            bool shouldBeVisible = _isActiveTurn || _isHovered || _isDamageActive;
+            bool shouldBeVisible = (_isActiveTurn && !_isAbilitySequenceActive) || _isHovered || _isDamageActive;
 
             if (shouldBeVisible && !healthBarRoot.activeSelf)
                 ShowStatic();
@@ -136,16 +156,15 @@ namespace DDD.TNFY.BRAWL
             _isDamageActive = true;
             CancelLinger();
             
-            if (!healthBarRoot.activeSelf)
-            {
+            bool wasHidden = !healthBarRoot.activeSelf;
+            if (wasHidden)
                 healthBarRoot.SetActive(true);
-                ApplyBarValues(1f);
-                
-                if (Mathf.Approximately(targetFraction, 1f))
-                {
-                    _lingerCoroutine = StartCoroutine(LingerThenHide());
-                    return;
-                }
+
+            if (wasHidden && Mathf.Approximately(targetFraction, healthBarImage.fillAmount))
+            {
+                ApplyBarValues(targetFraction);
+                _lingerCoroutine = StartCoroutine(LingerThenHide());
+                return;
             }
             
             if (_tweenCoroutine != null)

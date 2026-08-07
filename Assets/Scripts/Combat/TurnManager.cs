@@ -354,6 +354,25 @@ namespace DDD.TNFY.BRAWL
             return true;
         }
 
+        public bool MoveUnitToNextInTurnOrder(Unit unit)
+        {
+            if (unit == null) return false;
+
+            int fromIndex = turnOrder.IndexOf(unit);
+            if (fromIndex < 0 || fromIndex == currentIndex) return false;
+
+            turnOrder.RemoveAt(fromIndex);
+
+            int activeIndex = fromIndex < currentIndex ? currentIndex - 1 : currentIndex;
+            int insertIndex = Mathf.Clamp(activeIndex + 1, 0, turnOrder.Count);
+
+            turnOrder.Insert(insertIndex, unit);
+            currentIndex = activeIndex;
+
+            OnTurnNumberChanged?.Invoke(totalTurnCount, currentIndex);
+            return true;
+        }
+
         public int GetTurnInCurrentRound()
         {
             int count = _stableRoundCount > 0 ? _stableRoundCount : turnOrder.Count;

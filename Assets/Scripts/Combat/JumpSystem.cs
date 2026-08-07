@@ -37,6 +37,8 @@ namespace DDD.TNFY.BRAWL
             if (combatManager.currentState != CombatState.WaitingForInput) return false;
             if (combatManager.IsMovementLocked) return false;
             if (!unit.CanMove()) return false;
+            if (StatusEffectManager.Instance != null &&
+                StatusEffectManager.Instance.HasStatusEffect(unit, StatusEffectType.Encumbered)) return false;
             
             return combatManager.HasEnoughMovementForJump(2);
         }
@@ -223,6 +225,8 @@ namespace DDD.TNFY.BRAWL
 
         public IEnumerator JumpAnimation(Unit unit, Vector3 startPos, Vector3 endPos, Unit stompTarget = null, Tile originTile = null)
         {
+            UIEvents.OnMovementAnimationStarted();
+
             Vector3 jumpDirection = (endPos - startPos).normalized;
             unit.FaceDirection(GetJumpDirection(jumpDirection));
             
@@ -307,7 +311,9 @@ namespace DDD.TNFY.BRAWL
             }
 
             unit.transform.position = endPos;
-            
+
+            UIEvents.OnMovementAnimationComplete();
+
             if (stompTarget != null)
                 ExecuteStomp(unit, stompTarget, originTile);
         }

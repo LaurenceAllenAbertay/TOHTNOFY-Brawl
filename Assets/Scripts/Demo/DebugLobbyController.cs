@@ -12,7 +12,7 @@ namespace DDD.TNFY.BRAWL
         [Header("Asset Lists (drag from Project window)")]
         [SerializeField] private CharacterData[] allCharacters;
         
-        [SerializeField] private GameObject[] allEnemyPrefabs;
+        [SerializeField] private CharacterData[] allEnemyCharacters;
 
         [Header("Left Panel — Character Cards")]
         [SerializeField] private Transform characterCardContainer;
@@ -121,15 +121,15 @@ namespace DDD.TNFY.BRAWL
         private void BuildSharedDropdownOptions()
         {
             _enemyPrefabOptions = new List<TMP_Dropdown.OptionData>();
-            if (allEnemyPrefabs != null)
+            if (allEnemyCharacters != null)
             {
-                foreach (var prefab in allEnemyPrefabs)
-                    if (prefab != null)
-                        _enemyPrefabOptions.Add(new TMP_Dropdown.OptionData(prefab.name));
+                foreach (var cd in allEnemyCharacters)
+                    if (cd != null)
+                        _enemyPrefabOptions.Add(new TMP_Dropdown.OptionData(cd.characterName));
             }
 
             if (_enemyPrefabOptions.Count == 0)
-                Debug.LogWarning("[DebugLobby] allEnemyPrefabs is empty — enemy rows will have no options.");
+                Debug.LogWarning("[DebugLobby] allEnemyCharacters is empty — enemy rows will have no options.");
         }
 
         private List<TMP_Dropdown.OptionData> BuildAbilityOptionsForCharacter(int charIndex)
@@ -487,24 +487,16 @@ namespace DDD.TNFY.BRAWL
                 });
             }
             
-            foreach (int prefabIndex in _enemyPrefabIndices)
+            foreach (int charIndex in _enemyPrefabIndices)
             {
-                if (allEnemyPrefabs == null || prefabIndex >= allEnemyPrefabs.Length) continue;
+                if (allEnemyCharacters == null || charIndex >= allEnemyCharacters.Length) continue;
 
-                var prefab = allEnemyPrefabs[prefabIndex];
-                if (prefab == null) continue;
-
-                var unitComponent = prefab.GetComponent<Unit>();
-                if (unitComponent == null)
-                {
-                    Debug.LogWarning($"[DebugLobby] Enemy prefab '{prefab.name}' has no Unit component — skipped.");
-                    continue;
-                }
+                var cd = allEnemyCharacters[charIndex];
+                if (cd == null) continue;
 
                 DebugSessionConfig.EnemySpawns.Add(new EnemySpawnConfig
                 {
-                    characterData = unitComponent.characterData,
-                    prefab        = prefab
+                    characterData = cd
                 });
             }
 

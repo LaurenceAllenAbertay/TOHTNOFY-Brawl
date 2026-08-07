@@ -26,7 +26,5 @@ namespace DDD.TNFY.BRAWL
     public class EnemySpawnConfig
     {
         public CharacterData characterData;
-        
-        public GameObject prefab;
     }
 }

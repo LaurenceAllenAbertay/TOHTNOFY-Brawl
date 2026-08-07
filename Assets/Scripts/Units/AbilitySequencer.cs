@@ -573,7 +573,7 @@ namespace DDD.TNFY.BRAWL
         {
             if (StatusEffectManager.Instance == null) return false;
 
-            return StatusEffectManager.Instance.HasStatusEffect(target, StatusEffectType.Immune)
+            return StatusEffectManager.Instance.HasStatusEffect(target, StatusEffectType.Invulnerable)
                 || StatusEffectManager.Instance.HasStatusEffect(target, StatusEffectType.Shielded);
         }
 

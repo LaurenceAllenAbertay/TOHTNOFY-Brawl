@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 namespace DDD.TNFY.BRAWL
 {
@@ -36,6 +37,19 @@ namespace DDD.TNFY.BRAWL
                 _baseAttack = attack.Value;
             if (defense.HasValue)
                 _baseDefense = defense.Value;
+        }
+
+        public void ApplyCharacterData(CharacterData data)
+        {
+            characterData = data;
+
+            if (data == null) return;
+
+            currentHealth = data.maxHealth;
+            maxHealth     = data.maxHealth;
+            _baseAttack   = data.attack;
+            _baseDefense  = data.defense;
+            currentSpeed  = data.speed;
         }
 
         public void EnsureTeamResolved()
@@ -123,6 +137,7 @@ namespace DDD.TNFY.BRAWL
         void OnDestroy()
         {
             UnitManager.UnregisterUnit(this);
+            Addressables.ReleaseInstance(gameObject);
         }
         
         public IEnumerator ExecuteAbilityAnimationSequence(AbilityContext ctx, List<Unit> targets)
@@ -305,7 +320,7 @@ namespace DDD.TNFY.BRAWL
                     return;
                 }
 
-                if (StatusEffectManager.Instance.HasStatusEffect(this, StatusEffectType.Immune))
+                if (StatusEffectManager.Instance.HasStatusEffect(this, StatusEffectType.Invulnerable))
                 {
                     return;
                 }
@@ -320,17 +335,6 @@ namespace DDD.TNFY.BRAWL
                     }
                     
                     return;
-                }
-
-                if (StatusEffectManager.Instance.HasStatusEffect(this, StatusEffectType.Alerted))
-                {
-                    var alertEffect = StatusEffectManager.Instance.GetStatusEffect(this, StatusEffectType.Alerted);
-                    if (Random.Range(0f, 1f) < alertEffect.effectPower)
-                    {
-                        Debug.Log($"{name} dodged the attack!");
-                        StatusEffectManager.Instance.RemoveStatusEffect(this, alertEffect);
-                        return;
-                    }
                 }
             }
 
@@ -416,8 +420,7 @@ namespace DDD.TNFY.BRAWL
         {
             if (!canMove) return false;
             if (StatusEffectManager.Instance != null &&
-                (StatusEffectManager.Instance.HasStatusEffect(this, StatusEffectType.Ensnared) ||
-                 StatusEffectManager.Instance.HasStatusEffect(this, StatusEffectType.Stuck)))
+                StatusEffectManager.Instance.HasStatusEffect(this, StatusEffectType.Stuck))
                 return false;
             return true;
         }
@@ -432,14 +435,7 @@ namespace DDD.TNFY.BRAWL
 
         public virtual int GetEffectiveMovementRange()
         {
-            int baseSpeed = currentSpeed;
-            if (StatusEffectManager.Instance != null &&
-                StatusEffectManager.Instance.HasStatusEffect(this, StatusEffectType.Encumbered))
-            {
-                var enc = StatusEffectManager.Instance.GetStatusEffect(this, StatusEffectType.Encumbered);
-                baseSpeed = Mathf.Max(1, baseSpeed - Mathf.RoundToInt(enc.effectPower));
-            }
-            return baseSpeed;
+            return currentSpeed;
         }
 
         public virtual bool CanTarget(Unit unit)

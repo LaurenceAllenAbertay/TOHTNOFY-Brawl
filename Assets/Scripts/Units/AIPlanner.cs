@@ -493,7 +493,7 @@ namespace DDD.TNFY.BRAWL
             if (!DealsDamage(ability)) return 0;
 
             if (StatusEffectManager.Instance != null &&
-                StatusEffectManager.Instance.HasStatusEffect(target, StatusEffectType.Immune))
+                StatusEffectManager.Instance.HasStatusEffect(target, StatusEffectType.Invulnerable))
                 return 0;
 
             float attackMultiplier = StatusEffectManager.GetAttackMultiplier(unit);
@@ -555,6 +555,8 @@ namespace DDD.TNFY.BRAWL
         {
             var result = new List<Tile>();
             if (unit.currentTile == null || unit.JumpRange < 2 || !unit.CanMove()) return result;
+            if (StatusEffectManager.Instance != null &&
+                StatusEffectManager.Instance.HasStatusEffect(unit, StatusEffectType.Encumbered)) return result;
 
             Tile startTile    = unit.currentTile;
             int  maxRange     = unit.JumpRange;

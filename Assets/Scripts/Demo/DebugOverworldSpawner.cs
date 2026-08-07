@@ -1,5 +1,8 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.SceneManagement;
 
 namespace DDD.TNFY.BRAWL
@@ -49,7 +52,7 @@ namespace DDD.TNFY.BRAWL
                     continue;
                 }
 
-                if (spawn.characterData.overworldPrefab == null)
+                if (spawn.characterData.overworldPrefab == null || !spawn.characterData.overworldPrefab.RuntimeKeyIsValid())
                 {
                     Debug.LogWarning($"[DebugOverworldSpawner] '{spawn.characterData.characterName}' " +
                                      $"has no overworldPrefab assigned on CharacterData — skipped.");
@@ -59,7 +62,7 @@ namespace DDD.TNFY.BRAWL
                 characters.Add(spawn.characterData);
             }
 
-            SpawnParty(characters);
+            StartCoroutine(SpawnParty(characters));
         }
         
         private void SpawnFallback()
@@ -78,7 +81,7 @@ namespace DDD.TNFY.BRAWL
             {
                 if (cd == null) continue;
 
-                if (cd.overworldPrefab == null)
+                if (cd.overworldPrefab == null || !cd.overworldPrefab.RuntimeKeyIsValid())
                 {
                     Debug.LogWarning($"[DebugOverworldSpawner] Fallback '{cd.characterName}' " +
                                      $"has no overworldPrefab — skipped.");
@@ -88,35 +91,49 @@ namespace DDD.TNFY.BRAWL
                 characters.Add(cd);
             }
 
-            SpawnParty(characters);
+            StartCoroutine(SpawnParty(characters));
         }
         
-        private void SpawnParty(List<CharacterData> characters)
+        private IEnumerator SpawnParty(List<CharacterData> characters)
         {
             if (characters.Count == 0)
             {
                 Debug.LogWarning("[DebugOverworldSpawner] No valid characters to spawn.");
-                return;
+                yield break;
             }
 
-            Vector3          origin      = spawnPoint != null ? spawnPoint.position : Vector3.zero;
-            var              partyObjects = new List<GameObject>(characters.Count);
+            Vector3 origin = spawnPoint != null ? spawnPoint.position : Vector3.zero;
+            var     partyObjects = new List<GameObject>(characters.Count);
 
             for (int i = 0; i < characters.Count; i++)
             {
                 var cd = characters[i];
-                
-                Vector3 spawnPos = origin + new Vector3(0f, 0f, -i * spawnSpacing);
-                var go = Instantiate(cd.overworldPrefab, spawnPos,
-                                     cd.overworldPrefab.transform.rotation);
+
+                AsyncOperationHandle<GameObject> handle = cd.overworldPrefab.InstantiateAsync();
+                yield return handle;
+
+                if (handle.Status != AsyncOperationStatus.Succeeded)
+                {
+                    Debug.LogError($"[DebugOverworldSpawner] Failed to load overworldPrefab for '{cd.characterName}'.");
+                    continue;
+                }
+
+                var go = handle.Result;
+                go.transform.position = origin + new Vector3(0f, 0f, -partyObjects.Count * spawnSpacing);
                 go.name = cd.characterName;
 
-                if (i == 0)
+                if (partyObjects.Count == 0)
                     go.AddComponent<OverworldPartyLeader>();
 
                 partyObjects.Add(go);
             }
-            
+
+            if (partyObjects.Count == 0)
+            {
+                Debug.LogWarning("[DebugOverworldSpawner] No valid characters to spawn.");
+                yield break;
+            }
+
             partyManager.Initialise(partyObjects);
             
             if (cameraController != null)

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
 
 namespace DDD.TNFY.BRAWL
 {
@@ -11,9 +12,9 @@ namespace DDD.TNFY.BRAWL
         public string characterName;
         public Sprite portrait;
         
-        public GameObject prefab;
+        public AssetReferenceGameObject prefab;
 
-        public GameObject overworldPrefab;
+        public AssetReferenceGameObject overworldPrefab;
 
         [Header("Stats")]
         public int maxHealth;

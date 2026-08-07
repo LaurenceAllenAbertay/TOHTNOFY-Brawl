@@ -1,49 +1,81 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AddressableAssets;
+using UnityEngine.ResourceManagement.AsyncOperations;
 using UnityEngine.SceneManagement;
 
 namespace DDD.TNFY.BRAWL
 {
     public static class AdminCommandExecutor
     {
-        public static string ExecuteSpawn(AdminParsedCommand command, Tile targetTile)
+        public static IEnumerator ExecuteSpawn(AdminParsedCommand command, Tile targetTile, System.Action<string> onComplete)
         {
             if (AdminCommandRegistry.Instance == null)
-                return "Error: AdminCommandRegistry not present in scene.";
+            {
+                onComplete?.Invoke("Error: AdminCommandRegistry not present in scene.");
+                yield break;
+            }
 
             string characterName = command.positionalArg;
             if (string.IsNullOrEmpty(characterName))
-                return "Syntax error: /spawn requires a character name.";
+            {
+                onComplete?.Invoke("Syntax error: /spawn requires a character name.");
+                yield break;
+            }
 
             var characterData = AdminCommandRegistry.Instance.ResolveCharacter(characterName);
             if (characterData == null)
-                return $"Error: no spawnable character named '{characterName}'.";
+            {
+                onComplete?.Invoke($"Error: no spawnable character named '{characterName}'.");
+                yield break;
+            }
 
-            if (characterData.prefab == null)
-                return $"Error: '{characterName}' has no prefab assigned on its CharacterData.";
+            if (characterData.prefab == null || !characterData.prefab.RuntimeKeyIsValid())
+            {
+                onComplete?.Invoke($"Error: '{characterName}' has no prefab assigned on its CharacterData.");
+                yield break;
+            }
 
             if (targetTile == null)
-                return "Error: no target tile.";
+            {
+                onComplete?.Invoke("Error: no target tile.");
+                yield break;
+            }
 
             if (targetTile.occupied)
-                return "Error: target tile is occupied.";
+            {
+                onComplete?.Invoke("Error: target tile is occupied.");
+                yield break;
+            }
 
             if (!targetTile.passableTerrain)
-                return "Error: target tile is not passable.";
+            {
+                onComplete?.Invoke("Error: target tile is not passable.");
+                yield break;
+            }
 
             var overrides = ParseSpawnOverrides(command, out string overrideError);
             if (overrideError != null)
-                return overrideError;
+            {
+                onComplete?.Invoke(overrideError);
+                yield break;
+            }
 
             int? team = null;
             if (command.HasKey("team"))
             {
                 string teamRaw = command.GetSingleValue("team");
                 if (!int.TryParse(teamRaw, out int teamInt))
-                    return $"Syntax error: 'team' must be a whole number, got '{teamRaw}'.";
+                {
+                    onComplete?.Invoke($"Syntax error: 'team' must be a whole number, got '{teamRaw}'.");
+                    yield break;
+                }
                 if (teamInt < 0)
-                    return "Syntax error: 'team' must be >= 0.";
+                {
+                    onComplete?.Invoke("Syntax error: 'team' must be >= 0.");
+                    yield break;
+                }
                 team = teamInt;
             }
 
@@ -52,12 +84,21 @@ namespace DDD.TNFY.BRAWL
             {
                 string aiRaw = command.GetSingleValue("ai");
                 if (!bool.TryParse(aiRaw, out bool aiBool))
-                    return $"Syntax error: 'ai' must be true or false, got '{aiRaw}'.";
+                {
+                    onComplete?.Invoke($"Syntax error: 'ai' must be true or false, got '{aiRaw}'.");
+                    yield break;
+                }
                 forceAI = aiBool;
             }
 
             var abilityNames = command.GetValues("abilities");
             var passiveName = command.GetSingleValue("passive");
+
+            if (abilityNames.Count > 3)
+            {
+                onComplete?.Invoke("Error: /spawn supports at most 3 abilities.");
+                yield break;
+            }
 
             Ability[] resolvedAbilities = null;
             if (abilityNames.Count > 0)
@@ -67,50 +108,62 @@ namespace DDD.TNFY.BRAWL
                 {
                     var ability = AdminCommandRegistry.ResolveAbilityOnCharacter(characterData, abilityNames[i]);
                     if (ability == null)
-                        return $"Error: '{abilityNames[i]}' is not in {characterData.characterName}'s available abilities.";
+                    {
+                        onComplete?.Invoke($"Error: '{abilityNames[i]}' is not in {characterData.characterName}'s available abilities.");
+                        yield break;
+                    }
                     resolvedAbilities[i] = ability;
                 }
             }
-            if (abilityNames.Count > 3)
-                return "Error: /spawn supports at most 3 abilities.";
 
             PassiveAbility resolvedPassive = null;
             if (!string.IsNullOrEmpty(passiveName))
             {
                 resolvedPassive = AdminCommandRegistry.ResolvePassiveOnCharacter(characterData, passiveName);
                 if (resolvedPassive == null)
-                    return $"Error: '{passiveName}' is not in {characterData.characterName}'s available passives.";
+                {
+                    onComplete?.Invoke($"Error: '{passiveName}' is not in {characterData.characterName}'s available passives.");
+                    yield break;
+                }
             }
 
             if (UnitLoadoutManager.Instance == null)
-                return "Error: UnitLoadoutManager not present in scene.";
+            {
+                onComplete?.Invoke("Error: UnitLoadoutManager not present in scene.");
+                yield break;
+            }
 
             bool hasExplicitLoadout = abilityNames.Count > 0 || !string.IsNullOrEmpty(passiveName);
             if (hasExplicitLoadout)
                 UnitLoadoutManager.Instance.SetLoadout(characterData, resolvedAbilities, resolvedPassive);
 
-            var prefab = characterData.prefab;
-            bool wasPrefabActive = prefab.activeSelf;
-            prefab.SetActive(false);
-            var go = Object.Instantiate(prefab, targetTile.transform.position, prefab.transform.rotation);
-            prefab.SetActive(wasPrefabActive);
+            AsyncOperationHandle<GameObject> handle = characterData.prefab.InstantiateAsync();
+            yield return handle;
 
+            if (handle.Status != AsyncOperationStatus.Succeeded)
+            {
+                onComplete?.Invoke($"Error: failed to load prefab for '{characterName}'.");
+                yield break;
+            }
+
+            var go = handle.Result;
+            go.transform.position = targetTile.transform.position;
             go.name = characterData.characterName;
 
             var unit = go.GetComponent<Unit>();
             if (unit == null)
             {
-                Object.Destroy(go);
-                return $"Error: prefab for '{characterName}' has no Unit component.";
+                Addressables.ReleaseInstance(go);
+                onComplete?.Invoke($"Error: prefab for '{characterName}' has no Unit component.");
+                yield break;
             }
 
-            unit.characterData = characterData;
+            unit.ApplyCharacterData(characterData);
 
             if (team.HasValue)
                 unit.team = team.Value;
 
             unit.SetCurrentTile(targetTile);
-            go.SetActive(true);
 
             ApplySpawnOverrides(unit, overrides);
 
@@ -125,7 +178,7 @@ namespace DDD.TNFY.BRAWL
             if (!addedToTurnOrder && (unit is PlayerUnit || unit is NpcUnit))
                 result += " Warning: unit was not added to the turn order (already present or TurnManager missing).";
 
-            return result;
+            onComplete?.Invoke(result);
         }
 
         private static string ApplyAIOverride(Unit unit, bool? forceAI)

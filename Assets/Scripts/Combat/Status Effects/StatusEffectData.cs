@@ -60,46 +60,51 @@ namespace DDD.TNFY.BRAWL
     public enum StatusEffectType
     {
         // Damage Over Time
-        Bleeding,
-        Poison,
-        Fire,
+        Bleed = 0,      // Snowballing DOT — damage increases each turn it's active
+        Poison = 1,     // Opposite of Bleed — starts higher, damage decreases each turn
+        Fire = 2,       // Consistent DOT — same damage every turn
+
+        // Delayed Damage
+        Shocked = 29,   // Bursts 1 turn after activating, also hits allies within 3x3 tiles
 
         // Defensive
-        Shielded,
-        Guarded,
-        Untargetable,
-        Immune,
+        Shielded = 3,       // Prevents all damage, then breaks
+        Guarded = 4,        // Damage taken is redirected to whoever applied the effect
+        Untargetable = 5,   // Cannot be targeted by enemies
+        Immune = 6,         // Clears and prevents all status effects
+        Invulnerable = 31,  // Prevents all damage taken
+        Warned = 28,        // Dodges attacks that would've otherwise hit
 
         // Stat Modifiers
-        AttackUp,
-        DefenseUp,
-        SpeedUp,
-        AttackDown,
-        DefenseDown,
-        SpeedDown,
+        AttackUp = 7,       // +10% damage dealt
+        DefenseUp = 8,      // -10% damage taken from most sources
+        SpeedUp = 9,        // +1 movement
+        AttackDown = 10,    // -10% damage dealt
+        DefenseDown = 11,   // +10% damage taken from most sources
+        SpeedDown = 12,     // -1 movement
+
+        // Health
+        Healthy = 20,    // Max health increase
+        Unhealthy = 32,  // Max health decrease
+        Saturated = 21,  // More healing from healing sources
 
         // Turn Order
-        Hastened,
-        Urged,
-        Distracted,
+        Hastened = 13,  // Skips the affected character to next in turn order
+        Urged = 14,     // Inflicted by The Urge — effect not yet defined/implemented
 
         // Movement
-        Ensnared,
-        Encumbered,
-        
-        Stuck,
-        Scared,
-        Healthy,
-        Saturated,
-        Controlled,
-        Panicked,
-        Alerted,
-        Intimidated,
-        Taunting,
-        Stunned,
-        Warned,
-        Shocked,
-        Dizzy
+        Encumbered = 17,  // Prevents jumping
+        Stuck = 18,       // Prevents movement
+
+        // Crowd Control
+        Scared = 19,   // Prevents attacking
+        Stunned = 27,  // Skips the affected character's turn
+        Dizzy = 30,    // Forces random movement on their turn
+
+        // Targeting
+        Intimidated = 25,  // Enemies won't target whoever intimidated them
+        Taunting = 26,     // Enemies are more likely to target you
+        Charmed = 33       // Enemies will fight for the opposite team (not yet implemented)
     }
     
     public static class StatusEffectTypeExtensions
@@ -112,6 +117,7 @@ namespace DDD.TNFY.BRAWL
                 case StatusEffectType.Guarded:
                 case StatusEffectType.Untargetable:
                 case StatusEffectType.Immune:
+                case StatusEffectType.Invulnerable:
                 case StatusEffectType.Warned:
                 case StatusEffectType.AttackUp:
                 case StatusEffectType.DefenseUp:
@@ -120,7 +126,6 @@ namespace DDD.TNFY.BRAWL
                 case StatusEffectType.Urged:
                 case StatusEffectType.Healthy:
                 case StatusEffectType.Saturated:
-                case StatusEffectType.Alerted:
                     return true;
                 default:
                     return false;

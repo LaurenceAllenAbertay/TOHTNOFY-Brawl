@@ -40,6 +40,8 @@ namespace DDD.TNFY.BRAWL
                 int variance = Random.Range(-HealVarianceRange, HealVarianceRange + 1);
                 int variedHeal = Mathf.Max(0, healAmount + variance);
 
+                variedHeal = Mathf.RoundToInt(variedHeal * StatusEffectManager.GetHealingMultiplier(target));
+
                 if (variedHeal <= 0) continue;
 
                 int maxHealth = target.maxHealth > 0

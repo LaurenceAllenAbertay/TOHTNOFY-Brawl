@@ -216,7 +216,7 @@ namespace DDD.TNFY.BRAWL
             switch (command.commandType)
             {
                 case AdminCommandType.Spawn:
-                    RunSync(AdminCommandExecutor.ExecuteSpawn(command, tile));
+                    RunSpawn(command, tile);
                     return;
 
                 case AdminCommandType.Teleport:
@@ -283,6 +283,23 @@ namespace DDD.TNFY.BRAWL
         private void RunSync(string resultMessage)
         {
             Log(resultMessage);
+            FocusInputField();
+        }
+
+        private void RunSpawn(AdminParsedCommand command, Tile tile)
+        {
+            _pendingRunning = true;
+            StartCoroutine(RunSpawnCoroutine(command, tile));
+        }
+
+        private System.Collections.IEnumerator RunSpawnCoroutine(AdminParsedCommand command, Tile tile)
+        {
+            yield return StartCoroutine(AdminCommandExecutor.ExecuteSpawn(command, tile, message =>
+            {
+                Log(message);
+            }));
+
+            _pendingRunning = false;
             FocusInputField();
         }
 

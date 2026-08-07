@@ -49,7 +49,14 @@ namespace DDD.TNFY.BRAWL
 
             if (!activeEffects.ContainsKey(target))
                 activeEffects[target] = new List<StatusEffectInstance>();
-            
+
+            if (effectData.effectType != StatusEffectType.Immune &&
+                HasStatusEffect(target, StatusEffectType.Immune))
+            {
+                Debug.Log($"[Immune] {target.name} is immune — blocked application of {effectData.effectName}.");
+                return null;
+            }
+
             bool isUnique = effectData.stackingBehavior == StatusEffectData.StackingBehavior.Unique;
 
             var existingEffect = isUnique ? null : FindExistingEffect(target, effectData);
@@ -192,7 +199,7 @@ namespace DDD.TNFY.BRAWL
         {
             switch (effect.effectData.effectType)
             {
-                case StatusEffectType.Bleeding:
+                case StatusEffectType.Bleed:
                     effect.target.ReceiveDamage(effect.stackCount);
                     effect.stackCount = Mathf.Min(effect.stackCount + 1, effect.effectData.maxStacks);
                     break;
@@ -202,11 +209,6 @@ namespace DDD.TNFY.BRAWL
                     effect.stackCount = Mathf.Max(0, effect.stackCount - 1);
                     if (effect.stackCount == 0)
                         RemoveStatusEffect(effect.target, effect);
-                    break;
-
-                case StatusEffectType.Healthy:
-                    effect.target.currentHealth = Mathf.Min(effect.target.currentHealth + Mathf.RoundToInt(effect.effectPower),
-                                                            effect.target.maxHealth);
                     break;
 
                 case StatusEffectType.Fire:
@@ -324,6 +326,28 @@ namespace DDD.TNFY.BRAWL
                 case StatusEffectType.SpeedDown:
                     effect.target.currentSpeed -= Mathf.RoundToInt(effect.effectPower);
                     break;
+                case StatusEffectType.Healthy:
+                {
+                    int gain = Mathf.RoundToInt(effect.effectPower);
+                    effect.target.maxHealth += gain;
+                    effect.target.currentHealth += gain;
+                    Unit.NotifyHealthChanged(effect.target);
+                    break;
+                }
+                case StatusEffectType.Unhealthy:
+                {
+                    int loss = Mathf.RoundToInt(effect.effectPower);
+                    effect.target.maxHealth = Mathf.Max(1, effect.target.maxHealth - loss);
+                    effect.target.currentHealth = Mathf.Min(effect.target.currentHealth, effect.target.maxHealth);
+                    Unit.NotifyHealthChanged(effect.target);
+                    break;
+                }
+                case StatusEffectType.Hastened:
+                    TurnManager.Instance?.MoveUnitToNextInTurnOrder(effect.target);
+                    break;
+                case StatusEffectType.Saturated:
+                    // Nothing to apply immediately — read live via GetHealingMultiplier
+                    break;
                 case StatusEffectType.Intimidated:
                     // Nothing to apply immediately
                     break;
@@ -334,6 +358,15 @@ namespace DDD.TNFY.BRAWL
                     // Nothing to apply immediately
                     break;
                 case StatusEffectType.Immune:
+                {
+                    var effectsToClear = activeEffects[effect.target]
+                        .Where(e => e != effect)
+                        .ToList();
+                    foreach (var toClear in effectsToClear)
+                        RemoveStatusEffect(effect.target, toClear);
+                    break;
+                }
+                case StatusEffectType.Invulnerable:
                     // Nothing to apply immediately
                     break;
                 case StatusEffectType.Warned:
@@ -379,6 +412,27 @@ namespace DDD.TNFY.BRAWL
                 case StatusEffectType.SpeedDown:
                     effect.target.currentSpeed += Mathf.RoundToInt(effect.effectPower);
                     break;
+                case StatusEffectType.Healthy:
+                {
+                    int gain = Mathf.RoundToInt(effect.effectPower);
+                    effect.target.maxHealth = Mathf.Max(1, effect.target.maxHealth - gain);
+                    effect.target.currentHealth = Mathf.Min(effect.target.currentHealth, effect.target.maxHealth);
+                    Unit.NotifyHealthChanged(effect.target);
+                    break;
+                }
+                case StatusEffectType.Unhealthy:
+                {
+                    int loss = Mathf.RoundToInt(effect.effectPower);
+                    effect.target.maxHealth += loss;
+                    Unit.NotifyHealthChanged(effect.target);
+                    break;
+                }
+                case StatusEffectType.Hastened:
+                    // One-time reposition on apply — nothing to reverse
+                    break;
+                case StatusEffectType.Saturated:
+                    // Nothing to reverse — read live via GetHealingMultiplier
+                    break;
                 case StatusEffectType.Intimidated:
                     // Nothing to reverse
                     break;
@@ -389,6 +443,9 @@ namespace DDD.TNFY.BRAWL
                     // Nothing to reverse
                     break;
                 case StatusEffectType.Immune:
+                    // Nothing to reverse
+                    break;
+                case StatusEffectType.Invulnerable:
                     // Nothing to reverse
                     break;
                 case StatusEffectType.Warned:
@@ -450,6 +507,20 @@ namespace DDD.TNFY.BRAWL
                     multiplier += effect.effectPower * 0.1f;
                 else if (effect.effectData.effectType == StatusEffectType.DefenseDown)
                     multiplier -= effect.effectPower * 0.1f;
+            }
+            return Mathf.Max(0f, multiplier);
+        }
+
+        public static float GetHealingMultiplier(Unit unit)
+        {
+            if (Instance == null || unit == null) return 1f;
+            if (!Instance.activeEffects.TryGetValue(unit, out var effects)) return 1f;
+
+            float multiplier = 1f;
+            foreach (var effect in effects)
+            {
+                if (effect.effectData.effectType == StatusEffectType.Saturated)
+                    multiplier += effect.effectPower * 0.1f;
             }
             return Mathf.Max(0f, multiplier);
         }
