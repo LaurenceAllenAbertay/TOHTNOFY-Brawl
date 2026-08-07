@@ -37,6 +37,8 @@ namespace DDD.TNFY.BRAWL
 
         private int _roundNumber = 1;
 
+        private bool _combatStarted = false;
+
         void Awake()
         {
             if (Instance != null && Instance != this)
@@ -51,7 +53,23 @@ namespace DDD.TNFY.BRAWL
         {
             combatManager = FindAnyObjectByType<CombatManager>();
             cameraController = FindAnyObjectByType<CameraController>();
+            BeginCombat();
+        }
+
+        public void BeginCombat()
+        {
+            if (_combatStarted) return;
+
             BuildTurnOrder();
+
+            if (turnOrder.Count == 0)
+            {
+                Debug.Log("[TurnManager] No units present yet — waiting for the spawner to call BeginCombat().");
+                return;
+            }
+
+            _combatStarted = true;
+            currentIndex = 0;
             StartNextTurn();
         }
 

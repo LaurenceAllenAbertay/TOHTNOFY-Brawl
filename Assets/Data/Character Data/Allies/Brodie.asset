@@ -14,8 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Brodie
   portrait: {fileID: 0}
-  prefab: {fileID: 1853854094929722269, guid: be2f2a38fd9d3804a84f23c51183ccc9, type: 3}
-  overworldPrefab: {fileID: 8468779021554782505, guid: 04bef15e28affd14caa39021d5917fc2, type: 3}
+  prefab:
+    m_AssetGUID: be2f2a38fd9d3804a84f23c51183ccc9
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  overworldPrefab:
+    m_AssetGUID: 04bef15e28affd14caa39021d5917fc2
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
   maxHealth: 2000
   attack: 0
   defense: 0

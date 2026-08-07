@@ -14,7 +14,72 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_GroupName: Default Local Group
   m_GUID: f31e2e9ff8d810346ad24cce6ba81eba
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 04bef15e28affd14caa39021d5917fc2
+    m_Address: Characters/Overworld/Ally/Overworld_Brodie
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0f2a6b56aaaadd04b91a794e2b412f0f
+    m_Address: Characters/Enemy/Evil Brodie
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1f1284a26ffca4a439896715431ac139
+    m_Address: Characters/Enemy/Evil Lorns
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5ac354fc51b23e04984bba32fb6442d2
+    m_Address: Characters/Overworld/Ally/Overworld_Lorns
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9407a4654bbdb9b408b519fb75b83a83
+    m_Address: Characters/Enemy/Evil Kallper
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b78f1e0899f598a469c80980a0785bd8
+    m_Address: Characters/Ally/Lorns
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: be2f2a38fd9d3804a84f23c51183ccc9
+    m_Address: Characters/Ally/Brodie
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e00964b9cdd292540adf00515fbcf420
+    m_Address: Characters/Ally/Kallper
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e02c7cdef2e4dd44c955861a847055ca
+    m_Address: Neutral Units/MegaMug
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e4ddbbcc4ba2fc64ab537aeae8f63f99
+    m_Address: Characters/Overworld/Ally/Overworld_Kallper
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e807ad9e2715aa943a798caa41080029
+    m_Address: Characters/Enemy/PMR Grunt
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ed5171bb55a18bf4f946bdf77e3b1d92
+    m_Address: Characters/Overworld/Ally/Overworld_Oliver
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff3a7c448e9ed2d428a0d1c08b1514f9
+    m_Address: Characters/Ally/Oliver
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 986cf878ffe1dc44ea52e5acc786f8e4, type: 2}
   m_SchemaSet:

@@ -14,8 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Kallper
   portrait: {fileID: 6885363256995489153, guid: f5bf866effc397242bec92f2f9fad0b3, type: 3}
-  prefab: {fileID: 7349237561839375101, guid: e00964b9cdd292540adf00515fbcf420, type: 3}
-  overworldPrefab: {fileID: 1048228900617914572, guid: e4ddbbcc4ba2fc64ab537aeae8f63f99, type: 3}
+  prefab:
+    m_AssetGUID: e00964b9cdd292540adf00515fbcf420
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  overworldPrefab:
+    m_AssetGUID: e4ddbbcc4ba2fc64ab537aeae8f63f99
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
   maxHealth: 2000
   attack: 0
   defense: 0

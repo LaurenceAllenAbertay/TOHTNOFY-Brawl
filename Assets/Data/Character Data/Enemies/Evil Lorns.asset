@@ -14,8 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterName: Evil Lorns
   portrait: {fileID: 1000542386, guid: 85dd2a411dee5264ca097828f8075603, type: 3}
-  prefab: {fileID: 3963197675195542672, guid: 1f1284a26ffca4a439896715431ac139, type: 3}
-  overworldPrefab: {fileID: 0}
+  prefab:
+    m_AssetGUID: 1f1284a26ffca4a439896715431ac139
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  overworldPrefab:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
   maxHealth: 1000
   attack: 0
   defense: 0

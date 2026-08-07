@@ -137,7 +137,8 @@ namespace DDD.TNFY.BRAWL
             if (hasExplicitLoadout)
                 UnitLoadoutManager.Instance.SetLoadout(characterData, resolvedAbilities, resolvedPassive);
 
-            AsyncOperationHandle<GameObject> handle = characterData.prefab.InstantiateAsync();
+            AsyncOperationHandle<GameObject> handle =
+                characterData.prefab.InstantiateAsync(targetTile.transform.position, Quaternion.identity);
             yield return handle;
 
             if (handle.Status != AsyncOperationStatus.Succeeded)
@@ -147,7 +148,6 @@ namespace DDD.TNFY.BRAWL
             }
 
             var go = handle.Result;
-            go.transform.position = targetTile.transform.position;
             go.name = characterData.characterName;
 
             var unit = go.GetComponent<Unit>();

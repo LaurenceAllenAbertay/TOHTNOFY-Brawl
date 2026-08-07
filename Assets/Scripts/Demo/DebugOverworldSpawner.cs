@@ -104,23 +104,30 @@ namespace DDD.TNFY.BRAWL
 
             Vector3 origin = spawnPoint != null ? spawnPoint.position : Vector3.zero;
             var     partyObjects = new List<GameObject>(characters.Count);
+            var     handles      = new List<AsyncOperationHandle<GameObject>>(characters.Count);
 
             for (int i = 0; i < characters.Count; i++)
             {
-                var cd = characters[i];
+                Vector3 spawnPos = origin + new Vector3(0f, 0f, -i * spawnSpacing);
+                handles.Add(characters[i].overworldPrefab.InstantiateAsync(spawnPos, Quaternion.identity));
+            }
 
-                AsyncOperationHandle<GameObject> handle = cd.overworldPrefab.InstantiateAsync();
-                yield return handle;
+            for (int i = 0; i < handles.Count; i++)
+            {
+                if (!handles[i].IsDone)
+                    yield return handles[i];
+            }
 
-                if (handle.Status != AsyncOperationStatus.Succeeded)
+            for (int i = 0; i < handles.Count; i++)
+            {
+                if (handles[i].Status != AsyncOperationStatus.Succeeded)
                 {
-                    Debug.LogError($"[DebugOverworldSpawner] Failed to load overworldPrefab for '{cd.characterName}'.");
+                    Debug.LogError($"[DebugOverworldSpawner] Failed to load overworldPrefab for '{characters[i].characterName}'.");
                     continue;
                 }
 
-                var go = handle.Result;
-                go.transform.position = origin + new Vector3(0f, 0f, -partyObjects.Count * spawnSpacing);
-                go.name = cd.characterName;
+                var go = handles[i].Result;
+                go.name = characters[i].characterName;
 
                 if (partyObjects.Count == 0)
                     go.AddComponent<OverworldPartyLeader>();

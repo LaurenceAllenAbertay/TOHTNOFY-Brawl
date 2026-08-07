@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
 using UnityEngine.ResourceManagement.AsyncOperations;
@@ -23,20 +24,32 @@ namespace DDD.TNFY.BRAWL
         
         [Header("Debug Navigation")]
         [SerializeField] private string debugLobbySceneName = "DemoLobby";
+
+        private readonly HashSet<Tile> _claimedThisBatch = new HashSet<Tile>();
+
+        private struct SpawnRequest
+        {
+            public CharacterData data;
+            public Tile tile;
+            public bool isEnemy;
+        }
         
         private void Awake()
         {
             bool hasLobbyData = DebugSessionConfig.PlayerSpawns.Count > 0
                              || DebugSessionConfig.EnemySpawns.Count  > 0;
 
-            if (hasLobbyData)
-                SpawnFromConfig();
-            else
-                SpawnFallback();
+            _claimedThisBatch.Clear();
+
+            var requests = hasLobbyData ? BuildRequestsFromConfig() : BuildFallbackRequests();
+
+            StartCoroutine(SpawnAll(requests));
         }
         
-        private void SpawnFromConfig()
+        private List<SpawnRequest> BuildRequestsFromConfig()
         {
+            var requests = new List<SpawnRequest>();
+
             var playerSpawns = DebugSessionConfig.PlayerSpawns;
             for (int i = 0; i < playerSpawns.Count; i++)
             {
@@ -50,7 +63,7 @@ namespace DDD.TNFY.BRAWL
                 var tile = PickRandomTile(playerSpawnTiles, config.characterData.characterName);
                 if (tile == null) break;
 
-                StartCoroutine(SpawnPlayerUnit(config.characterData, tile));
+                requests.Add(new SpawnRequest { data = config.characterData, tile = tile, isEnemy = false });
             }
             
             var enemySpawns = DebugSessionConfig.EnemySpawns;
@@ -66,13 +79,17 @@ namespace DDD.TNFY.BRAWL
                 var tile = PickRandomTile(enemySpawnTiles, config.characterData.characterName);
                 if (tile == null) break;
 
-                StartCoroutine(SpawnEnemyUnit(config.characterData, tile));
+                requests.Add(new SpawnRequest { data = config.characterData, tile = tile, isEnemy = true });
             }
+
+            return requests;
         }
         
-        private void SpawnFallback()
+        private List<SpawnRequest> BuildFallbackRequests()
         {
             Debug.Log("[DebugMapSpawner] No lobby config found — using fallback spawn.");
+
+            var requests = new List<SpawnRequest>();
 
             if (fallbackPlayerCharacters != null)
             {
@@ -83,7 +100,7 @@ namespace DDD.TNFY.BRAWL
                     var tile = PickRandomTile(playerSpawnTiles, cd.characterName);
                     if (tile == null) break;
 
-                    StartCoroutine(SpawnPlayerUnit(cd, tile));
+                    requests.Add(new SpawnRequest { data = cd, tile = tile, isEnemy = false });
                 }
             }
 
@@ -96,9 +113,11 @@ namespace DDD.TNFY.BRAWL
                     var tile = PickRandomTile(enemySpawnTiles, cd.characterName);
                     if (tile == null) break;
 
-                    StartCoroutine(SpawnEnemyUnit(cd, tile));
+                    requests.Add(new SpawnRequest { data = cd, tile = tile, isEnemy = true });
                 }
             }
+
+            return requests;
         }
         
         private Tile PickRandomTile(Tile[] pool, string unitName)
@@ -109,10 +128,10 @@ namespace DDD.TNFY.BRAWL
                 return null;
             }
             
-            var available = new System.Collections.Generic.List<Tile>(pool.Length);
+            var available = new List<Tile>(pool.Length);
             foreach (var tile in pool)
             {
-                if (tile != null && !tile.occupied)
+                if (tile != null && !tile.occupied && !_claimedThisBatch.Contains(tile))
                     available.Add(tile);
             }
 
@@ -122,83 +141,70 @@ namespace DDD.TNFY.BRAWL
                 return null;
             }
 
-            return available[Random.Range(0, available.Count)];
+            var picked = available[Random.Range(0, available.Count)];
+            _claimedThisBatch.Add(picked);
+            return picked;
         }
 
-        private IEnumerator SpawnPlayerUnit(CharacterData data, Tile tile)
+        private IEnumerator SpawnAll(List<SpawnRequest> requests)
         {
-            if (data.prefab == null || !data.prefab.RuntimeKeyIsValid())
+            var handles  = new List<AsyncOperationHandle<GameObject>>(requests.Count);
+            var launched = new List<SpawnRequest>(requests.Count);
+
+            foreach (var request in requests)
             {
-                Debug.LogError($"[DebugMapSpawner] '{data.characterName}' has no prefab assigned — set CharacterData.prefab in the Inspector.");
+                if (request.data.prefab == null || !request.data.prefab.RuntimeKeyIsValid())
+                {
+                    Debug.LogError($"[DebugMapSpawner] '{request.data.characterName}' has no prefab assigned — set CharacterData.prefab in the Inspector.");
+                    continue;
+                }
+
+                handles.Add(request.data.prefab.InstantiateAsync(
+                    request.tile.transform.position + spawnOffset, Quaternion.identity));
+                launched.Add(request);
+            }
+
+            for (int i = 0; i < handles.Count; i++)
+            {
+                if (!handles[i].IsDone)
+                    yield return handles[i];
+            }
+
+            for (int i = 0; i < handles.Count; i++)
+            {
+                var request = launched[i];
+
+                if (handles[i].Status != AsyncOperationStatus.Succeeded)
+                {
+                    Debug.LogError($"[DebugMapSpawner] Failed to load prefab for '{request.data.characterName}'.");
+                    continue;
+                }
+
+                var go = handles[i].Result;
+                go.name = request.isEnemy
+                    ? request.data.characterName + " (Enemy)"
+                    : request.data.characterName;
+
+                var unit = go.GetComponent<Unit>();
+                if (unit == null)
+                {
+                    Debug.LogError($"[DebugMapSpawner] Prefab '{go.name}' has no Unit component.");
+                    Addressables.ReleaseInstance(go);
+                    continue;
+                }
+
+                unit.ApplyCharacterData(request.data);
+                unit.SetCurrentTile(request.tile);
+                UnitManager.RegisterUnit(unit);
+            }
+
+            if (TurnManager.Instance == null)
+            {
+                Debug.LogError("[DebugMapSpawner] TurnManager not found in scene — combat cannot start.");
                 yield break;
             }
 
-            if (tile == null)
-            {
-                Debug.LogError($"[DebugMapSpawner] Spawn tile for '{data.characterName}' is null — assign it in the Inspector.");
-                yield break;
-            }
-
-            AsyncOperationHandle<GameObject> handle = data.prefab.InstantiateAsync();
-            yield return handle;
-
-            if (handle.Status != AsyncOperationStatus.Succeeded)
-            {
-                Debug.LogError($"[DebugMapSpawner] Failed to load prefab for '{data.characterName}'.");
-                yield break;
-            }
-
-            var go = handle.Result;
-            go.transform.position = tile.transform.position + spawnOffset;
-            go.name = data.characterName;
-
-            var unit = go.GetComponent<Unit>();
-            if (unit == null)
-            {
-                Debug.LogError($"[DebugMapSpawner] Player prefab '{go.name}' has no Unit component.");
-                Addressables.ReleaseInstance(go);
-                yield break;
-            }
-
-            unit.ApplyCharacterData(data);
-        }
-        
-        private IEnumerator SpawnEnemyUnit(CharacterData data, Tile tile)
-        {
-            if (data.prefab == null || !data.prefab.RuntimeKeyIsValid())
-            {
-                Debug.LogError($"[DebugMapSpawner] '{data.characterName}' has no prefab assigned — set CharacterData.prefab in the Inspector.");
-                yield break;
-            }
-
-            if (tile == null)
-            {
-                Debug.LogError($"[DebugMapSpawner] Spawn tile for enemy '{data.characterName}' is null — assign it in the Inspector.");
-                yield break;
-            }
-
-            AsyncOperationHandle<GameObject> handle = data.prefab.InstantiateAsync();
-            yield return handle;
-
-            if (handle.Status != AsyncOperationStatus.Succeeded)
-            {
-                Debug.LogError($"[DebugMapSpawner] Failed to load prefab for enemy '{data.characterName}'.");
-                yield break;
-            }
-
-            var go = handle.Result;
-            go.transform.position = tile.transform.position + spawnOffset;
-            go.name = data.characterName + " (Enemy)";
-
-            var unit = go.GetComponent<Unit>();
-            if (unit == null)
-            {
-                Debug.LogError($"[DebugMapSpawner] Enemy prefab '{go.name}' has no Unit component.");
-                Addressables.ReleaseInstance(go);
-                yield break;
-            }
-
-            unit.ApplyCharacterData(data);
+            TurnManager.Instance.BeginCombat();
         }
         
         public void ReturnToLobby()
