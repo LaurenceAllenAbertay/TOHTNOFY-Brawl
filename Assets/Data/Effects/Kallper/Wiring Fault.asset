@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3c6be9f8f749744aa157a470b7e1dc4, type: 3}
   m_Name: Wiring Fault
   m_EditorClassIdentifier: 
-  midAnimationEventIndex: -1
+  midAnimationEventIndex: 0
   shockedStatusData: {fileID: 11400000, guid: 5db250c01b2e8614ebabee8efbc04455, type: 2}
   shockedDuration: 2
   shockedDamage: 5
   recoilDistance: 2
-  pullDurationPerTile: 0.15
+  pullDuration: 0.15
   knockbackStartDelay: 0.1
   pullKnockbackEndDuration: 0.1
   pauseAfterPull: 0
@@ -25,3 +25,11 @@ MonoBehaviour:
   knockbackEndDuration: 0.2
   wallRecoilAnimDuration: 0.3
   missAnimDuration: 0.5
+  wirePrefab: {fileID: 344119661819069563, guid: 7722e508bc5390f49885b09f9c0032fd, type: 3}
+  wireStateNamesByDistance:
+  - Wire_1
+  - Wire_2
+  - Wire_3
+  - Wire_4
+  wireSpawnOffset: {x: 0.15, y: 0.35, z: 0}
+  wireCueMaxWait: 2

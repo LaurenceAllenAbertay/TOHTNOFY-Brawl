@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Characters_Combat
+  m_EditorClassIdentifier: 
+  m_GroupName: Characters_Combat
+  m_GUID: 21551f8bc505c814597cb4865f1ddb61
+  m_SerializeEntries:
+  - m_GUID: 0f2a6b56aaaadd04b91a794e2b412f0f
+    m_Address: Characters/Enemy/Evil Brodie
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1f1284a26ffca4a439896715431ac139
+    m_Address: Characters/Enemy/Evil Lorns
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9407a4654bbdb9b408b519fb75b83a83
+    m_Address: Characters/Enemy/Evil Kallper
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b78f1e0899f598a469c80980a0785bd8
+    m_Address: Characters/Ally/Lorns
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: be2f2a38fd9d3804a84f23c51183ccc9
+    m_Address: Characters/Ally/Brodie
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e00964b9cdd292540adf00515fbcf420
+    m_Address: Characters/Ally/Kallper
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e02c7cdef2e4dd44c955861a847055ca
+    m_Address: Neutral Units/MegaMug
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e807ad9e2715aa943a798caa41080029
+    m_Address: Characters/Enemy/PMR Grunt
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ff3a7c448e9ed2d428a0d1c08b1514f9
+    m_Address: Characters/Ally/Oliver
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 986cf878ffe1dc44ea52e5acc786f8e4, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 1b6e6daa224f3a949a5a5856162b1bc1, type: 2}
+    - {fileID: 11400000, guid: bc95b3a8f2128ea40b2f419e918c849c, type: 2}

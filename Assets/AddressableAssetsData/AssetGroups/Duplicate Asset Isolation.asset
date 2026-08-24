@@ -1,0 +1,433 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Duplicate Asset Isolation
+  m_EditorClassIdentifier: 
+  m_GroupName: Duplicate Asset Isolation
+  m_GUID: 7602d9b489d1a6942bfd92af0eb893ae
+  m_SerializeEntries:
+  - m_GUID: 05f2e0721a0977f409ddc1f807dec895
+    m_Address: Assets/Animation/Kallper/Corgi_Fu_Hurt.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0abf7e2df1d36b84693564ef8f74e00a
+    m_Address: Assets/Sprites/Kallper/Ability Animations/Bunker_Down.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0ca79e91a37b71e48be60f340ee10122
+    m_Address: Assets/Sprites/Kallper/Kallper_Idle_Hurt_Talking.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0de94494b2948b04ea5a4ff4da95ad9f
+    m_Address: Assets/Sprites/Kallper/Kallper_Damage.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0ecf1182791d4c8488d3ee67f5273515
+    m_Address: Assets/Sprites/Kallper/Cody_Jump_Bad.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 13c02b14c4d048fa9653293d54f6e0e1
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/2D/Sprite-Unlit-Default.shader
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1bd75a5b4da9b504eb26b51fb8fbfc11
+    m_Address: Assets/Animation/Kallper/Kallper_Idle_Bad.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1d4765665657ac64f8c970db925258f2
+    m_Address: Assets/Animation/Kallper/Kallper_Jump_Bad.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1eb8c99862862694f8e8d9b013b031d1
+    m_Address: Assets/Animation/Kallper/Kallper_Targeting.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2a402095f9da3b64694da30452e1f87f
+    m_Address: Assets/Animation/Kallper/Kallper_Celebrate.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2b6d9190b91da49488c187126b100ecb
+    m_Address: Assets/Sprites/Lorns/Ability Animations/Straight_Shot.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2c0a3767f3916c94b82c02715068b02e
+    m_Address: Assets/Sprites/Kallper/Cody_Targeting_Hurt.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2c2d0928c346c474e8c4bb51f84a4067
+    m_Address: Assets/Animation/Brodie/Brodie.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2e85854d82c99194ea6dfd6765739d5b
+    m_Address: Assets/Animation/Kallper/Kallper_Hurt.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 30ed52ceb8e131e4cb148e87386eeb94
+    m_Address: Assets/Animation/Kallper/Bunker_Down_Idle.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 325e6214c77927541b082d6b5b4e944b
+    m_Address: Assets/Sprites/Kallper/Cody_Run.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 34afdf99b6e27b14a834a972a34212e5
+    m_Address: Assets/Sprites/Kallper/Ability Animations/NoSurvivors.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 34e3e1f4dcaf50848a74803959c30a5f
+    m_Address: Assets/Animation/Kallper/Heads_Up.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 36ee8743560b79847863c229167afbc2
+    m_Address: Assets/Animation/Kallper/Kallper_Idle_Hurt_Talking.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 36ffbcf3efc6a5a4fb3e0e0367211524
+    m_Address: Assets/Animation/Oliver/Oliver_Downed.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3b75f706541745a42944c61464e87f5b
+    m_Address: Assets/Sprites/Oliver/Oliver_Idle.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 40ea18ddddbbbce49bbf03a698e0ca5e
+    m_Address: Assets/Animation/Kallper/Kallper_Idle_Good_Talking.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4b012eb26174d7347b5495b632857557
+    m_Address: Assets/Animation/Brodie/Brodie_Idle.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4c39a1176037c7f4d9b04e020bcfadac
+    m_Address: Assets/Sprites/Kallper/Kallper_Idle_Good_Talking.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4ea8236aaafc07f4c9dd4031bc8f71e4
+    m_Address: Assets/Animation/Lorns/Straight_Shot_Hurt.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4f02a1372bf98984fad0dc9a44bebd79
+    m_Address: Assets/Animation/Kallper/Kallper_Idle_Good.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 50b994180f2136d4d92081c9c17a57c3
+    m_Address: Assets/Animation/Kallper/No_Survivors.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5122f5b13094cb940b2ef3c1d8f6a21c
+    m_Address: Assets/Animation/No_Animation.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5447fd5d07ec6424594eca26254254f0
+    m_Address: Assets/Animation/Kallper/Kallper_Move_Hurt.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 544fa5a3d118a1140996432295bf10df
+    m_Address: Assets/Animation/Lorns/Straight_Shot.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 55806bbc0631ee842a234049ae7485ac
+    m_Address: Assets/Animation/Kallper/Kallper_Idle_Bad_Talking.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 566dab65d9f60ae43b9a4b6b584dc898
+    m_Address: Assets/Animation/Lorns/Lorns_Downed.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5e734b258bf38fc47b66c8671e33936a
+    m_Address: Assets/Sprites/Kallper/Ability Animations/Heads_Up.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 608b119918737c24f8909ad120061b2d
+    m_Address: Assets/Animation/Kallper/Heads_Up_Hurt.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 658e199efc1b0c94ba96ba49cfe7d7da
+    m_Address: Assets/Animation/Brodie/Brodie_Downed.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6a2a7ad908fc5754cb84c3eeba752904
+    m_Address: Assets/Sprites/Kallper/Ability Animations/Heads_Up_hurt.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6c874cde0f534b447bc97a111d03ee27
+    m_Address: Assets/Sprites/Lorns/Lorns_Idle_Hurt.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 735e4b1e32a8dfa46904b8e9a79cacee
+    m_Address: Assets/Animation/Kallper/Corgi_Fu.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7513035b06258494880132165bb343d0
+    m_Address: Assets/Animation/Kallper/Kallper_Idle_Hurt.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7ef80e014bb44dc4f932bb29cb054e3f
+    m_Address: Assets/Animation/Lorns/Lorns_Idle.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 807319766574dfa4799eade8c89ed28d
+    m_Address: Assets/Sprites/Kallper/Cody_Jump.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86421107eca47f2429bdc3635c05f3f0
+    m_Address: Assets/Sprites/Kallper/Ability Animations/Bassriff_Hurt.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 89dbcac73c9c6594c9b7fe13d202027b
+    m_Address: Assets/Animation/Lorns/Lorns.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c447f2e4998476449a3e70f22a751bb
+    m_Address: Assets/Animation/Kallper/Kallper_Jump.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8d1f3538245ccf740b05fd7c9e431504
+    m_Address: Assets/Sprites/Kallper/Ability Animations/Bassriff_Good.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 91a814acc3fa6914f968a8bb6703dba6
+    m_Address: Assets/Sprites/Lorns/Ability Animations/Straight_Shot_Hurt.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 93561ae5ddba81e4088de67c22beb88b
+    m_Address: Assets/Animation/Kallper/Kallper_Move_Bad.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9908dfb7f1f738945ace6af0c6ce05fd
+    m_Address: Assets/Sprites/Lorns/Lorns_Idle.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9b4e681081e2b4c469111bb649e2f7ee
+    m_Address: Packages/com.unity.render-pipelines.universal/Shaders/Decal.shadergraph
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9bf7f4e48b14a0746a450377f52d016a
+    m_Address: Assets/Sprites/Kallper/Cody_Celebrate.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9dfc825aed78fcd4ba02077103263b40
+    m_Address: Packages/com.unity.render-pipelines.universal/Runtime/Materials/Sprite-Unlit-Default.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9e8418b4c63f3e248a4d1743fb027009
+    m_Address: Assets/Animation/Oliver/Oliver.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a1ddba094f423fa41a572ad113f802c8
+    m_Address: Assets/Animation/Kallper/Kallper.controller
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a5d158c82a3a2964bbb4aa059ef80b83
+    m_Address: Assets/Sprites/BlobShadow.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a5e444e3ea9db87458126d05c4b1de4a
+    m_Address: Assets/Animation/Lorns/Lorns_Idle_Hurt.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a6732581c8a56af4d87233465ee6f029
+    m_Address: Assets/Animation/Kallper/Bass_Riff.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ada0245fe2419ec44aa777cd5a5a1eb1
+    m_Address: Assets/Sprites/Kallper/Kallper_Idle_Hurt.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b05f5302ab30b6643bb0c0bc6b2558c8
+    m_Address: Assets/Sprites/Kallper/Kallper_Idle_Good.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b371b69b4ed1a3a4abecbd2e26776941
+    m_Address: Assets/Sprites/Kallper/Ability Animations/Corgi_Fu.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bd5e3c4fab2a4044dbac88abbaefc22b
+    m_Address: Assets/Animation/Kallper/Kallper_Targeting_Hurt.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bed6c3c0f8b172945b3ffc343c65aa56
+    m_Address: Assets/Sprites/Debug/No_Animation.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c2484f0890fa53e46b0a0e96f09b6f93
+    m_Address: Assets/Animation/Kallper/Kallper_Downed.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c3eb1b97305bb4048b45aa25521ea199
+    m_Address: Assets/Sprites/Kallper/Cody_Downed.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c5dd185d3330d4c4d81e56f244eacaf0
+    m_Address: Assets/Sprites/Kallper/Cody_Targeting.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c6cc647e9e1e5f0458e2bfdf23929524
+    m_Address: Assets/Sprites/Kallper/Ability Animations/NoSurvivors_Hurt.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf85d4f58686f0945b73ea06ac59340a
+    m_Address: Assets/Animation/Oliver/Oliver_Idle.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d490e1a020f73c94aadd3bab87426efa
+    m_Address: Assets/Animation/Kallper/Bass_Riff_Hurt.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d61fef43e702d714f9ab3cbaf8d330eb
+    m_Address: Assets/Sprites/Kallper/Cody_Run_Hurt.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dbdc27b0e699f6c438d06a24b4ce5fd7
+    m_Address: Assets/Animation/Kallper/Bunker_Down_Start.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e21938ab9821f8044bd2bfed8ade438f
+    m_Address: Assets/Animation/Kallper/Kallper_Jump_Hurt.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e2477b189de61ac42b93ee00305bd27f
+    m_Address: Assets/Animation/Kallper/Kallper_Targeting_Bad.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e333f5c7bde530e4c884e2a5503f1595
+    m_Address: Assets/Animation/Kallper/Kallper_Move_Good.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e508603f7e1870549b69960a64f6fc08
+    m_Address: Assets/Sprites/Kallper/Kallper_Idle_Bad.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e531406b1ba316c4b88a0291c8240e66
+    m_Address: Assets/Sprites/Brodie/Brodie_Idle.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e9036832bd2678a49a42da46c4662e1d
+    m_Address: Assets/Sprites/Kallper/Kallper_Idle_Bad_Talking.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f366b8b8c9b0a5f40bd04a0052336eea
+    m_Address: Assets/Sprites/Kallper/Ability Animations/Corgi_Fu_Hurt.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f52b5595dc02031419199e224bbe133e
+    m_Address: Assets/Animation/Kallper/No_Survivors_Hurt.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f77ff233e06c156488c3ba5b5d5aa76d
+    m_Address: Assets/Sprites/Kallper/Cody_Jump_Hurt.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f7ff3f0fe2f54364ab85504b70a3f702
+    m_Address: Assets/Animation/Kallper/Bunker_Down_End.anim
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc315222300785844aa915ce05525ab6
+    m_Address: Assets/Materials/BlobShadow.mat
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fddfd29d697fa6f43a07aca8cd1f1315
+    m_Address: Assets/Sprites/Kallper/Cody_Targeting_Bad.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe58b12815863aa44a7e0eb5113aeea1
+    m_Address: Assets/Sprites/Kallper/Cody_Run_Bad.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 986cf878ffe1dc44ea52e5acc786f8e4, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 54dadf2496f68ef40b8c04291f438b03, type: 2}
+    - {fileID: 11400000, guid: 19c33dc5843625045b4b0cdd0a7497bf, type: 2}

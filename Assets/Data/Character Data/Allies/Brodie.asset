@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Brodie
   m_EditorClassIdentifier: 
   characterName: Brodie
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 73b12279b83a44b468c2a93e1bf3a0ea, type: 3}
   prefab:
     m_AssetGUID: be2f2a38fd9d3804a84f23c51183ccc9
     m_SubObjectName: 

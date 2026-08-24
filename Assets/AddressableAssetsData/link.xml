@@ -1,0 +1,118 @@
+<linker>
+  <assembly fullname="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="DDD.TNFY.BRAWL.Ability" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.AbilitySequencer" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.AIExecutor" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.AOETargeting" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.BigMomentPassive" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.BrodieBootsPassive" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.CannoneerPassive" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.CharacterData" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.CharacterDialogueData" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.ChargeEffect" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.DamageEffect" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.EffectCueRelay" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.GruntVisualRandomizer" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.HealEffect" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.KnockbackEffect" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.LineTargeting" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.LoneWolfPassive" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.MastermindPassive" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.MovementLineTargeting" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.NeutralUnit" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.NpcUnit" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.PassiveAbilityHandler" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.PlayerUnit" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.QueuedActionEffect" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.RandomAOETargeting" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.RascalPassive" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.RecoilDamageEffect" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.SelfTargeting" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.SingleTargeting" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.SocialSpongePassive" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.SpawnNeutralUnitEffect" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.SquareAOETargeting" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.StaticyPassive" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.StatusEffect" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.StatusEffectData" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.StatusEffectIconDisplay" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.TeleportEffect" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.UnitAI" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.UnitAnimator" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.UnitHealthBarDisplay" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.UnitMoveDustFX" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.WiringFaultEffect" preserve="all" />
+    <type fullname="DDD.TNFY.BRAWL.DialogueEntry" preserve="nothing" serialized="true" />
+    <type fullname="DDD.TNFY.BRAWL.StatusEffect/StatusApplication" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="Unity.Addressables, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" preserve="all">
+    <type fullname="UnityEngine.AddressableAssets.Addressables" preserve="all" />
+    <type fullname="UnityEngine.AddressableAssets.AssetReferenceGameObject" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.Rendering.Universal.DecalProjector" preserve="all" />
+  </assembly>
+  <assembly fullname="Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" preserve="all">
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.AssetBundleProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.BundledAssetProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.InstanceProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.SceneProvider" preserve="all" />
+  </assembly>
+  <assembly fullname="Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="TMPro.TextMeshProUGUI" preserve="all" />
+    <type fullname="TMPro.TMP_FontAsset" preserve="all" />
+    <type fullname="TMPro.FaceInfo_Legacy" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.FontAssetCreationSettings" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.KerningTable" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_FontFeatureTable" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_FontWeightPair" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.VertexGradient" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.AnimationClip" preserve="all" />
+    <type fullname="UnityEngine.Animator" preserve="all" />
+    <type fullname="UnityEngine.RuntimeAnimatorController" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.GameObject" preserve="all" />
+    <type fullname="UnityEngine.Material" preserve="all" />
+    <type fullname="UnityEngine.Object" preserve="all" />
+    <type fullname="UnityEngine.RectTransform" preserve="all" />
+    <type fullname="UnityEngine.Shader" preserve="all" />
+    <type fullname="UnityEngine.Sprite" preserve="all" />
+    <type fullname="UnityEngine.SpriteRenderer" preserve="all" />
+    <type fullname="UnityEngine.Texture2D" preserve="all" />
+    <type fullname="UnityEngine.Transform" preserve="all" />
+    <type fullname="UnityEngine.Events.PersistentCallGroup" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.RectOffset" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.ParticleSystem" preserve="all" />
+    <type fullname="UnityEngine.ParticleSystemRenderer" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.BoxCollider" preserve="all" />
+    <type fullname="UnityEngine.Rigidbody" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.Font" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.UI.CanvasScaler" preserve="all" />
+    <type fullname="UnityEngine.UI.GraphicRaycaster" preserve="all" />
+    <type fullname="UnityEngine.UI.HorizontalLayoutGroup" preserve="all" />
+    <type fullname="UnityEngine.UI.Image" preserve="all" />
+    <type fullname="UnityEngine.UI.MaskableGraphic/CullStateChangedEvent" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="UnityEngine.UIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.Canvas" preserve="all" />
+    <type fullname="UnityEngine.CanvasRenderer" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.TextCoreFontEngineModule">
+    <type fullname="UnityEngine.TextCore.FaceInfo" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.TextCore.GlyphRect" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.TextCore.LowLevel.GlyphValueRecord" preserve="nothing" serialized="true" />
+  </assembly>
+</linker>

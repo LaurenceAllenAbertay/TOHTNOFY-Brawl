@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Characters_Overworld
+  m_EditorClassIdentifier: 
+  m_GroupName: Characters_Overworld
+  m_GUID: ac8f6030929cea24f87f2ae0b1418c0f
+  m_SerializeEntries:
+  - m_GUID: 04bef15e28affd14caa39021d5917fc2
+    m_Address: Characters/Overworld/Ally/Overworld_Brodie
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5ac354fc51b23e04984bba32fb6442d2
+    m_Address: Characters/Overworld/Ally/Overworld_Lorns
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e4ddbbcc4ba2fc64ab537aeae8f63f99
+    m_Address: Characters/Overworld/Ally/Overworld_Kallper
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ed5171bb55a18bf4f946bdf77e3b1d92
+    m_Address: Characters/Overworld/Ally/Overworld_Oliver
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 986cf878ffe1dc44ea52e5acc786f8e4, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 19799d7cfd00d6c48a7b98fa68ec0e79, type: 2}
+    - {fileID: 11400000, guid: 58185ce567647c44bbbea0a29797b439, type: 2}

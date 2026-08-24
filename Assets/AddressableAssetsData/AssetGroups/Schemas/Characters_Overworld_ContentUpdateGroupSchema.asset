@@ -9,11 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dea69d41f90c6ea4fa55c27c1d60c145, type: 3}
-  m_Name: AddressableAssetGroupSortSettings
+  m_Script: {fileID: 11500000, guid: 5834b5087d578d24c926ce20cd31e6d6, type: 3}
+  m_Name: Characters_Overworld_ContentUpdateGroupSchema
   m_EditorClassIdentifier: 
-  sortOrder:
-  - 7602d9b489d1a6942bfd92af0eb893ae
-  - 21551f8bc505c814597cb4865f1ddb61
-  - ac8f6030929cea24f87f2ae0b1418c0f
-  - f31e2e9ff8d810346ad24cce6ba81eba
+  m_Group: {fileID: 11400000, guid: c2e08416adc9f0048b631c04449ab84e, type: 2}
+  m_StaticContent: 0

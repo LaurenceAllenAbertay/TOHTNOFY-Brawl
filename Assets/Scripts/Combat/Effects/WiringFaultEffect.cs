@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace DDD.TNFY.BRAWL
 {
@@ -18,7 +19,8 @@ namespace DDD.TNFY.BRAWL
         public int recoilDistance = 2;
 
         [Header("Animation Timing")]
-        public float pullDurationPerTile = 0.15f;
+        [FormerlySerializedAs("pullDurationPerTile")]
+        public float pullDuration = 0.3f;
         
         public float knockbackStartDelay = 0.1f;
         
@@ -33,6 +35,15 @@ namespace DDD.TNFY.BRAWL
         public float wallRecoilAnimDuration = 0.3f;
 
         public float missAnimDuration = 0.5f;
+
+        [Header("Wire VFX")]
+        public GameObject wirePrefab;
+
+        public string[] wireStateNamesByDistance = { "Wire_1", "Wire_2", "Wire_3", "Wire_4" };
+
+        public Vector3 wireSpawnOffset = Vector3.zero;
+
+        public float wireCueMaxWait = 2f;
         
         public override EffectAnimationPhase AnimationPhase => EffectAnimationPhase.Displacement;
         
@@ -188,20 +199,107 @@ namespace DDD.TNFY.BRAWL
             if (distance == 0) yield break;
 
             var hookedAnimator = hookedUnit.GetComponent<UnitAnimator>();
+            var casterAnimator = ctx.caster.GetComponent<UnitAnimator>();
             
             hookedUnit.FaceDirection(new Vector2Int(-ctx.aimDir.x, -ctx.aimDir.y));
 
-            hookedAnimator?.PlayKnockbackStart();
-            yield return new WaitForSeconds(knockbackStartDelay);
+            GameObject wireInstance = SpawnWire(ctx, distance);
+            EffectCueRelay cueRelay = wireInstance != null ? wireInstance.GetComponent<EffectCueRelay>() : null;
 
-            float totalDuration = distance * pullDurationPerTile;
+            bool beginPull = false;
+            bool pullSettled = false;
+            void OnWireCue(int index)
+            {
+                if (index == 0) beginPull = true;
+                else if (index == 1) pullSettled = true;
+            }
+            if (cueRelay != null) cueRelay.OnCue += OnWireCue;
+
+            hookedAnimator?.PlayKnockbackStart();
+
+            if (cueRelay != null)
+            {
+                float waited = 0f;
+                while (!beginPull && waited < wireCueMaxWait)
+                {
+                    waited += Time.deltaTime;
+                    yield return null;
+                }
+
+                if (!beginPull)
+                    Debug.LogWarning($"[WiringFault] AnimEvent_Cue0 never fired on {wireInstance.name} — " +
+                                      $"ensure the {distance}-tile wire clip has the Cue0 event placed at the wrap/grab frame.");
+            }
+            else
+            {
+                yield return new WaitForSeconds(knockbackStartDelay);
+            }
+
+            float totalDuration = pullDuration;
             bool pullComplete = false;
             hookedUnit.AnimateToTile(destination, totalDuration, () => pullComplete = true);
             while (!pullComplete)
                 yield return null;
 
+            if (cueRelay != null)
+            {
+                float waited = 0f;
+                while (!pullSettled && waited < wireCueMaxWait)
+                {
+                    waited += Time.deltaTime;
+                    yield return null;
+                }
+
+                if (!pullSettled)
+                    Debug.LogWarning($"[WiringFault] AnimEvent_Cue1 never fired on {wireInstance.name} — " +
+                                      $"ensure the {distance}-tile wire clip has the Cue1 event placed at the settle frame.");
+            }
+
             hookedAnimator?.PlayKnockbackEnd();
+            casterAnimator?.ReleaseHold();
             yield return new WaitForSeconds(pullKnockbackEndDuration);
+
+            if (cueRelay != null) cueRelay.OnCue -= OnWireCue;
+            if (wireInstance != null) Object.Destroy(wireInstance);
+        }
+
+        private GameObject SpawnWire(AbilityContext ctx, int distance)
+        {
+            if (wirePrefab == null || ctx.caster == null) return null;
+
+            Vector3 spawnPos = ctx.caster.transform.position + wireSpawnOffset;
+            GameObject instance = Object.Instantiate(wirePrefab, spawnPos, ctx.caster.transform.rotation);
+
+            var wireSpriteRenderers = instance.GetComponentsInChildren<SpriteRenderer>(includeInactive: true);
+            if (wireSpriteRenderers != null && wireSpriteRenderers.Length > 0 && ctx.aimDir.x != 0)
+            {
+                bool flipX = ctx.aimDir.x > 0;
+                foreach (var sr in wireSpriteRenderers)
+                {
+                    if (sr == null) continue;
+                    sr.flipX = flipX;
+                }
+            }
+
+            string stateName = GetWireStateName(distance);
+            var wireAnimator = instance.GetComponent<Animator>();
+            if (wireAnimator != null && !string.IsNullOrEmpty(stateName))
+            {
+                if (wireAnimator.HasState(0, Animator.StringToHash(stateName)))
+                    wireAnimator.Play(stateName);
+                else
+                    Debug.LogWarning($"[WiringFault] Wire prefab has no state named '{stateName}' for a {distance}-tile pull.");
+            }
+
+            return instance;
+        }
+
+        private string GetWireStateName(int distance)
+        {
+            if (wireStateNamesByDistance == null || wireStateNamesByDistance.Length == 0) return null;
+
+            int index = Mathf.Clamp(distance - 1, 0, wireStateNamesByDistance.Length - 1);
+            return wireStateNamesByDistance[index];
         }
         
         private IEnumerator ApplyRecoilWithAnimation(Unit caster, Vector2Int recoilDir, List<Tile> recoilPath)
