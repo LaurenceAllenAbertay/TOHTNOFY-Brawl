@@ -27,7 +27,8 @@ MonoBehaviour:
   maxTargets: 99
   canExecuteWithoutTargets: 1
   endTurnOnCast: 0
-  suppressCameraTransitions: 1
+  legacySuppressCameraTransitions: 0
+  cameraModeOverride: 3
   animationState: Bass_Riff
   animationHoldState: 
   animationHoldReleaseState: 

@@ -17,8 +17,6 @@ namespace DDD.TNFY.BRAWL
 
         public virtual bool ConfirmsOnTileClick => false;
 
-        public virtual bool UsesCameraTransitionsPerTarget => false;
-
         public virtual void ShowEnterPreview(AbilityContext ctx, Tile hoveredTile) { }
 
         public virtual void ShowHoverPreview(AbilityContext ctx, Tile hoveredTile) { }
@@ -34,8 +32,6 @@ namespace DDD.TNFY.BRAWL
         public virtual void OnCancel(AbilityContext ctx) { }
 
         public virtual void ResetForNewTurn() { }
-
-        public virtual bool UsesCameraZoomAfterExecution => false;
 
         public virtual bool IsValidAimDirection(Vector2Int aimDir) => true;
 

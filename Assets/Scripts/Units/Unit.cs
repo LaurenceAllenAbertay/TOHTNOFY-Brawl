@@ -83,7 +83,26 @@ namespace DDD.TNFY.BRAWL
         
         public virtual bool IsNeutral => IsBody;
 
-        public bool IsAIControlled => GetComponent<UnitAI>() != null;
+        private bool? _forcedAIControl = null;
+
+        public bool IsAIControlled => _forcedAIControl ?? !(this is PlayerUnit);
+
+        public void SetControlOverride(bool? forceAIControlled)
+        {
+            _forcedAIControl = forceAIControlled;
+        }
+
+        public void SetTeam(int newTeam)
+        {
+            if (team == newTeam) return;
+
+            var ai = GetComponent<UnitAI>();
+            ai?.UnregisterFromTeam();
+
+            team = newTeam;
+
+            ai?.RegisterWithTeam();
+        }
 
         public AbilityContext currentAbilityContext => abilitySequencer?.CurrentAbilityContext;
 
@@ -317,6 +336,8 @@ namespace DDD.TNFY.BRAWL
             {
                 if (StatusEffectManager.Instance.HasStatusEffect(this, StatusEffectType.Shielded))
                 {
+                    var shieldEffect = StatusEffectManager.Instance.GetStatusEffect(this, StatusEffectType.Shielded);
+                    StatusEffectManager.Instance.RemoveStatusEffect(this, shieldEffect);
                     return;
                 }
 
@@ -333,7 +354,13 @@ namespace DDD.TNFY.BRAWL
                     {
                         StatusEffectManager.Instance.RemoveStatusEffect(this, guardEffect);
                     }
-                    
+
+                    Unit redirectTarget = guardEffect.source;
+                    if (redirectTarget != null && redirectTarget != this && !redirectTarget.IsDead)
+                    {
+                        redirectTarget.ReceiveDamage(amount, attacker, sourceAbility);
+                    }
+
                     return;
                 }
             }

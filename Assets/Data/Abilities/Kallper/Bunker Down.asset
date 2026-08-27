@@ -27,7 +27,8 @@ MonoBehaviour:
   maxTargets: 1
   canExecuteWithoutTargets: 1
   endTurnOnCast: 1
-  suppressCameraTransitions: 0
+  legacySuppressCameraTransitions: 0
+  cameraModeOverride: 1
   animationState: Bunker_Down_Start
   animationHoldState: Bunker_Down_Idle
   animationHoldReleaseState: Bunker_Down_End

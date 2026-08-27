@@ -38,8 +38,9 @@ namespace DDD.TNFY.BRAWL
         private const string ATTACK_STATE         = "Recoil_Shot";
         private const string HURT_STATE           = "Hurt";
         private const string DOWNED_STATE          = "Downed";
-        private const string KNOCKBACK_START_STATE = "Knockback_Start";
-        private const string KNOCKBACK_END_STATE   = "Knockback_End";
+        private const string KNOCKBACK_START_STATE  = "Knockback_Start";
+        private const string KNOCKBACK_MOVING_STATE = "Knockback_Moving";
+        private const string KNOCKBACK_END_STATE    = "Knockback_End";
         private const string TARGETING_STATE       = "Targeting";
         private const string TARGETING_BAD_STATE   = "Targeting_Bad";
         private const string TARGETING_HURT_STATE  = "Targeting_Hurt";
@@ -421,7 +422,7 @@ namespace DDD.TNFY.BRAWL
             }
         }
         
-        public void PlayKnockbackStart()
+        public void PlayKnockbackStart(string stateNameOverride = null)
         {
             if (knockbackSequence != null)
             {
@@ -429,18 +430,58 @@ namespace DDD.TNFY.BRAWL
             }
 
             isInKnockbackSequence = true;
-            
-            ForcePlayAnimation(KNOCKBACK_START_STATE);
+
+            string resolvedState = ResolveKnockbackState(stateNameOverride, KNOCKBACK_START_STATE);
+            ForcePlayAnimation(resolvedState);
         }
 
-        public void PlayKnockbackEnd()
+        public void PlayKnockbackMoving(string stateNameOverride = null)
+        {
+            string resolvedState = ResolveKnockbackState(stateNameOverride, KNOCKBACK_MOVING_STATE);
+            PlayKnockbackPhaseAnimation(resolvedState);
+        }
+
+        public void PlayKnockbackEnd(string stateNameOverride = null)
         {
             SetActiveTurn();
-            
-            PlayAnimation(KNOCKBACK_END_STATE, false);
 
+            string resolvedState = ResolveKnockbackState(stateNameOverride, KNOCKBACK_END_STATE);
+            PlayKnockbackPhaseAnimation(resolvedState);
 
-            knockbackSequence = StartCoroutine(ReturnToIdleAfterKnockbackEnd());
+            knockbackSequence = StartCoroutine(ReturnToIdleAfterKnockbackEnd(resolvedState));
+        }
+
+        public void PlayFullKnockback(string stateNameOverride = null)
+        {
+            if (knockbackSequence != null)
+            {
+                StopCoroutine(knockbackSequence);
+            }
+
+            SetActiveTurn();
+            isInKnockbackSequence = true;
+
+            string resolvedState = ResolveKnockbackState(stateNameOverride, KNOCKBACK_START_STATE);
+            ForcePlayAnimation(resolvedState);
+
+            knockbackSequence = StartCoroutine(ReturnToIdleAfterKnockbackEnd(resolvedState));
+        }
+
+        private string ResolveKnockbackState(string stateNameOverride, string fallbackState)
+        {
+            if (!string.IsNullOrEmpty(stateNameOverride) && HasState(stateNameOverride))
+                return stateNameOverride;
+
+            return fallbackState;
+        }
+
+        private void PlayKnockbackPhaseAnimation(string stateName)
+        {
+            if (animator == null || !HasState(stateName)) return;
+            if (currentAnimation == DOWNED_STATE) return;
+
+            animator.Play(stateName);
+            currentAnimation = stateName;
         }
 
         public void CancelKnockback()
@@ -516,11 +557,11 @@ namespace DDD.TNFY.BRAWL
             }
         }
         
-        private IEnumerator ReturnToIdleAfterKnockbackEnd()
+        private IEnumerator ReturnToIdleAfterKnockbackEnd(string endState)
         {
             yield return new WaitForSeconds(0.1f);
 
-            while (animator.GetCurrentAnimatorStateInfo(0).IsName(KNOCKBACK_END_STATE) &&
+            while (animator.GetCurrentAnimatorStateInfo(0).IsName(endState) &&
                    animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 0.95f)
             {
                 yield return null;

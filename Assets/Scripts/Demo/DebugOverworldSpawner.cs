@@ -24,7 +24,7 @@ namespace DDD.TNFY.BRAWL
         
         [Header("Fallback (run DebugOverworld without lobby)")]
         [SerializeField] private CharacterData[] fallbackCharacters;
-        
+
         private void Awake()
         {
             if (partyManager == null)
@@ -112,10 +112,17 @@ namespace DDD.TNFY.BRAWL
                 handles.Add(characters[i].overworldPrefab.InstantiateAsync(spawnPos, Quaternion.identity));
             }
 
-            for (int i = 0; i < handles.Count; i++)
+            if (LoadingScreenController.Instance != null)
             {
-                if (!handles[i].IsDone)
-                    yield return handles[i];
+                yield return LoadingScreenController.Instance.TrackHandles(handles);
+            }
+            else
+            {
+                for (int i = 0; i < handles.Count; i++)
+                {
+                    if (!handles[i].IsDone)
+                        yield return handles[i];
+                }
             }
 
             for (int i = 0; i < handles.Count; i++)
@@ -153,7 +160,11 @@ namespace DDD.TNFY.BRAWL
         public void ReturnToLobby()
         {
             DebugSessionConfig.Clear();
-            SceneManager.LoadScene(debugLobbySceneName);
+
+            if (LoadingScreenController.Instance != null)
+                LoadingScreenController.Instance.LoadScene(debugLobbySceneName);
+            else
+                SceneManager.LoadScene(debugLobbySceneName);
         }
     }
 }

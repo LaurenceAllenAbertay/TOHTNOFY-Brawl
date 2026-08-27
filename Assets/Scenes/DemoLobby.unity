@@ -840,10 +840,10 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 88a185d244b55a54cb36452b6bc6d1bb, type: 2}
   - {fileID: 11400000, guid: 1e97e95d272eb8f449bd2b5c8cd1075a, type: 2}
   allEnemyCharacters:
+  - {fileID: 11400000, guid: 8b8108f5cdb4797428a536b6a6ba49f1, type: 2}
   - {fileID: 11400000, guid: 6027d6b32a9fe1e47baa46cc08e251a8, type: 2}
   - {fileID: 11400000, guid: 2dffe3279076dbe4ea2f409c177a4f24, type: 2}
   - {fileID: 11400000, guid: 702f262e989d5494fbf8d86e80dace8e, type: 2}
-  - {fileID: 11400000, guid: 8b8108f5cdb4797428a536b6a6ba49f1, type: 2}
   characterCardContainer: {fileID: 746862019}
   characterCardPrefab: {fileID: 4905273611843481817, guid: 8ac59b1b19e06214690a326724b68745, type: 3}
   detailPanel: {fileID: 470949474}

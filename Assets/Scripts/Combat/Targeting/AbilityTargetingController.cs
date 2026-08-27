@@ -211,7 +211,7 @@ namespace DDD.TNFY.BRAWL
             if (suppressMovement) return;
             if (combatManager != null && combatManager.IsExecutingPendingAction) return;
 
-            if (activeUnit is PlayerUnit && combatManager != null && combatManager.CanMove)
+            if (activeUnit != null && !activeUnit.IsAIControlled && combatManager != null && combatManager.CanMove)
             {
                 GridManager.Instance.SetHighlightMode(
                     GridManager.HighlightMode.Movement,

@@ -1,0 +1,1783 @@
+fileFormatVersion: 2
+guid: b7da1d34bf0136045ad2c831dc86dcec
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4778104390814500613
+    second: Cody_Knockback_0
+  - first:
+      213: 8580757372928469373
+    second: Cody_Knockback_1
+  - first:
+      213: -4744283316849968903
+    second: Cody_Knockback_2
+  - first:
+      213: 7730530616141366317
+    second: Cody_Knockback_3
+  - first:
+      213: -6404687010353191042
+    second: Cody_Knockback_4
+  - first:
+      213: -4768817814792367832
+    second: Cody_Knockback_5
+  - first:
+      213: 1751331376258893690
+    second: Cody_Knockback_6
+  - first:
+      213: -481365565993786286
+    second: Cody_Knockback_7
+  - first:
+      213: -4166173811722889522
+    second: Cody_Knockback_8
+  - first:
+      213: 4052788935341721708
+    second: Cody_Knockback_9
+  - first:
+      213: 395225091708059025
+    second: Cody_Knockback_10
+  - first:
+      213: -457113185695227075
+    second: Cody_Knockback_11
+  - first:
+      213: -8038652263148168071
+    second: Cody_Knockback_12
+  - first:
+      213: -4331334713804032465
+    second: Cody_Knockback_13
+  - first:
+      213: 2106188237963927354
+    second: Cody_Knockback_14
+  - first:
+      213: 8321968378337219838
+    second: Cody_Knockback_15
+  - first:
+      213: -4042748757525803146
+    second: Cody_Knockback_16
+  - first:
+      213: 1584825789000382295
+    second: Cody_Knockback_17
+  - first:
+      213: 1325410239948734040
+    second: Cody_Knockback_18
+  - first:
+      213: 249158003061225341
+    second: Cody_Knockback_19
+  - first:
+      213: 6415049271061904037
+    second: Cody_Knockback_20
+  - first:
+      213: -1763648195678900623
+    second: Cody_Knockback_21
+  - first:
+      213: 2769199536448303557
+    second: Cody_Knockback_22
+  - first:
+      213: -7089255683517573990
+    second: Cody_Knockback_23
+  - first:
+      213: 4689463563430533007
+    second: Cody_Knockback_24
+  - first:
+      213: 486159208208760432
+    second: Cody_Knockback_25
+  - first:
+      213: 1163700588983716316
+    second: Cody_Knockback_26
+  - first:
+      213: -9008152627637025689
+    second: Cody_Knockback_27
+  - first:
+      213: -4780663896239537156
+    second: Cody_Knockback_28
+  - first:
+      213: 247536398470851681
+    second: Cody_Knockback_29
+  - first:
+      213: -418817764367929040
+    second: Cody_Knockback_30
+  - first:
+      213: 2206030623388996656
+    second: Cody_Knockback_31
+  - first:
+      213: -7067512767520146563
+    second: Cody_Knockback_32
+  - first:
+      213: -8205223196451394983
+    second: Cody_Knockback_33
+  - first:
+      213: 2392415658042741079
+    second: Cody_Knockback_34
+  - first:
+      213: 7610692656612986972
+    second: Cody_Knockback_35
+  - first:
+      213: -1655691438893734413
+    second: Cody_Knockback_36
+  - first:
+      213: 8718306239997782182
+    second: Cody_Knockback_37
+  - first:
+      213: -929175554597949773
+    second: Cody_Knockback_38
+  - first:
+      213: -2701689667621602774
+    second: Cody_Knockback_39
+  - first:
+      213: 4350045728710379210
+    second: Cody_Knockback_40
+  - first:
+      213: -2701522350345117727
+    second: Cody_Knockback_41
+  - first:
+      213: 7192508459456884384
+    second: Cody_Knockback_42
+  - first:
+      213: -845454258672992327
+    second: Cody_Knockback_43
+  - first:
+      213: 3003530225774228798
+    second: Cody_Knockback_44
+  - first:
+      213: -1124693934132474120
+    second: Cody_Knockback_45
+  - first:
+      213: 315908637430778818
+    second: Cody_Knockback_46
+  - first:
+      213: 7400733753870861725
+    second: Cody_Knockback_47
+  - first:
+      213: 3146316275838822786
+    second: Cody_Knockback_48
+  - first:
+      213: -6104016729340618800
+    second: Cody_Knockback_49
+  - first:
+      213: 501313337530820710
+    second: Cody_Knockback_50
+  - first:
+      213: -2467531079859968993
+    second: Cody_Knockback_51
+  - first:
+      213: 1517216575384304776
+    second: Cody_Knockback_52
+  - first:
+      213: -1601642805463107789
+    second: Cody_Knockback_53
+  - first:
+      213: 4990921615892511262
+    second: Cody_Knockback_54
+  - first:
+      213: -8770603629261791076
+    second: Cody_Knockback_55
+  - first:
+      213: 183465705245004092
+    second: Cody_Knockback_56
+  - first:
+      213: 2639898200174262615
+    second: Cody_Knockback_57
+  - first:
+      213: 7203461951350053618
+    second: Cody_Knockback_58
+  - first:
+      213: 8624356888318473483
+    second: Cody_Knockback_59
+  - first:
+      213: -8934033201427371465
+    second: Cody_Knockback_60
+  - first:
+      213: 1316297057511705664
+    second: Cody_Knockback_61
+  - first:
+      213: -7132874921485429867
+    second: Cody_Knockback_62
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cody_Knockback_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6660
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf874cd3f53c0bdb0800000000000000
+      internalID: -4778104390814500613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_1
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 6660
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d79273d2e59f41770800000000000000
+      internalID: 8580757372928469373
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_2
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 6660
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f87859a57be82eb0800000000000000
+      internalID: -4744283316849968903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_3
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 6660
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d24436423ac584b60800000000000000
+      internalID: 7730530616141366317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_4
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 6660
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e77e65af81bfd17a0800000000000000
+      internalID: -6404687010353191042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_5
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 6660
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8211fb6b671c1ddb0800000000000000
+      internalID: -4768817814792367832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5994
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7748e59b9afd4810800000000000000
+      internalID: 1751331376258893690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_7
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 5994
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 254e5df6198d159f0800000000000000
+      internalID: -481365565993786286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_8
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 5994
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec6d8b7ddf6ce26c0800000000000000
+      internalID: -4166173811722889522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_9
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 5994
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c684da860166e3830800000000000000
+      internalID: 4052788935341721708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_10
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 5994
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19d749d702f1c7500800000000000000
+      internalID: 395225091708059025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_11
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 5994
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d332d70caf108a9f0800000000000000
+      internalID: -457113185695227075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5328
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97cd9267b58f07090800000000000000
+      internalID: -8038652263148168071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_13
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 5328
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f267464b60204e3c0800000000000000
+      internalID: -4331334713804032465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_14
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 5328
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3f12f91b0faa3d10800000000000000
+      internalID: 2106188237963927354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_15
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 5328
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef4d2def5229d7370800000000000000
+      internalID: 8321968378337219838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_16
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 5328
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67fc587ac6545e7c0800000000000000
+      internalID: -4042748757525803146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_17
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 5328
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 757fe3888ae6ef510800000000000000
+      internalID: 1584825789000382295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4662
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85e3fc5479dc46210800000000000000
+      internalID: 1325410239948734040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_19
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 4662
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d77f86932ef257300800000000000000
+      internalID: 249158003061225341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_20
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 4662
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5aaf54ad255d60950800000000000000
+      internalID: 6415049271061904037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_21
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 4662
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17eeccb6f434687e0800000000000000
+      internalID: -1763648195678900623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_22
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 4662
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c17d2a7e4c2e6620800000000000000
+      internalID: 2769199536448303557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_23
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 4662
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a94140e2487ed9d90800000000000000
+      internalID: -7089255683517573990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3996
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f871a6dd342541140800000000000000
+      internalID: 4689463563430533007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_25
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 3996
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07e719d593f2fb600800000000000000
+      internalID: 486159208208760432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_26
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 3996
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd98947258b462010800000000000000
+      internalID: 1163700588983716316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_27
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 3996
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 764813399ec9cf280800000000000000
+      internalID: -9008152627637025689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_28
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 3996
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf38b12f38ba7adb0800000000000000
+      internalID: -4780663896239537156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_29
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 3996
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16ca5dbfa0d6f6300800000000000000
+      internalID: 247536398470851681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3330
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 031f939567f003af0800000000000000
+      internalID: -418817764367929040
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_31
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 3330
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0341cb6f9256d9e10800000000000000
+      internalID: 2206030623388996656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_32
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 3330
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7b7c6e45962bed90800000000000000
+      internalID: -7067512767520146563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_33
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 3330
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95a28b8d9f0312e80800000000000000
+      internalID: -8205223196451394983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_34
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 3330
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75158bc8d51933120800000000000000
+      internalID: 2392415658042741079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_35
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 3330
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c505714e5ac9e9960800000000000000
+      internalID: 7610692656612986972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2664
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f56517986dc509e0800000000000000
+      internalID: -1655691438893734413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_37
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 2664
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6a8a32e6555adf870800000000000000
+      internalID: 8718306239997782182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_38
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 2664
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3be663e81c7ea13f0800000000000000
+      internalID: -929175554597949773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_39
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 2664
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2a321cbf8ba18ad0800000000000000
+      internalID: -2701689667621602774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_40
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 2664
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac6cc70fa877e5c30800000000000000
+      internalID: 4350045728710379210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_41
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 2664
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ef96e25cb3428ad0800000000000000
+      internalID: -2701522350345117727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1998
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ae6be9165ce0d360800000000000000
+      internalID: 7192508459456884384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_43
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 1998
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bf74f5c4d75444f0800000000000000
+      internalID: -845454258672992327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_44
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 1998
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e35fb63b3deaea920800000000000000
+      internalID: 3003530225774228798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_45
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 1998
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8fe4ff663d84460f0800000000000000
+      internalID: -1124693934132474120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_46
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 1998
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cb0a836b35526400800000000000000
+      internalID: 315908637430778818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_47
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 1998
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9547bc6320b4b660800000000000000
+      internalID: 7400733753870861725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1332
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2892764abf5f9ab20800000000000000
+      internalID: 3146316275838822786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_49
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 1332
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d75c98002d2a4ba0800000000000000
+      internalID: -6104016729340618800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_50
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 1332
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 668a0bc03d505f600800000000000000
+      internalID: 501313337530820710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_51
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 1332
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f14e5b07e8191cdd0800000000000000
+      internalID: -2467531079859968993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_52
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 1332
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88cbd1fcf6c3e0510800000000000000
+      internalID: 1517216575384304776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_53
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 1332
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 337bf43ba52d5c9e0800000000000000
+      internalID: -1601642805463107789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 666
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1a771144c0534540800000000000000
+      internalID: 4990921615892511262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_55
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 666
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c906914c77e884680800000000000000
+      internalID: -8770603629261791076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_56
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 666
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c31589d361dcb8200800000000000000
+      internalID: 183465705245004092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_57
+      rect:
+        serializedVersion: 2
+        x: 1776
+        y: 666
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75974902d6dc2a420800000000000000
+      internalID: 2639898200174262615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_58
+      rect:
+        serializedVersion: 2
+        x: 2368
+        y: 666
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fa134baa76d7f360800000000000000
+      internalID: 7203461951350053618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_59
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 666
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b057a6865eedfa770800000000000000
+      internalID: 8624356888318473483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73a20694320f30480800000000000000
+      internalID: -8934033201427371465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_61
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 0
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04c80e3233d644210800000000000000
+      internalID: 1316297057511705664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cody_Knockback_62
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 0
+        width: 592
+        height: 666
+      alignment: 9
+      pivot: {x: 0.357, y: 0.084}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 593919dec00f20d90800000000000000
+      internalID: -7132874921485429867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 9ac823598a30d32428dfbf6c6e50ea9e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":11.0},"gridSpriteSize":{"x":592.0,"y":666.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.3569999933242798,"y":0.08399999886751175},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Cody_Knockback_0: -4778104390814500613
+      Cody_Knockback_1: 8580757372928469373
+      Cody_Knockback_10: 395225091708059025
+      Cody_Knockback_11: -457113185695227075
+      Cody_Knockback_12: -8038652263148168071
+      Cody_Knockback_13: -4331334713804032465
+      Cody_Knockback_14: 2106188237963927354
+      Cody_Knockback_15: 8321968378337219838
+      Cody_Knockback_16: -4042748757525803146
+      Cody_Knockback_17: 1584825789000382295
+      Cody_Knockback_18: 1325410239948734040
+      Cody_Knockback_19: 249158003061225341
+      Cody_Knockback_2: -4744283316849968903
+      Cody_Knockback_20: 6415049271061904037
+      Cody_Knockback_21: -1763648195678900623
+      Cody_Knockback_22: 2769199536448303557
+      Cody_Knockback_23: -7089255683517573990
+      Cody_Knockback_24: 4689463563430533007
+      Cody_Knockback_25: 486159208208760432
+      Cody_Knockback_26: 1163700588983716316
+      Cody_Knockback_27: -9008152627637025689
+      Cody_Knockback_28: -4780663896239537156
+      Cody_Knockback_29: 247536398470851681
+      Cody_Knockback_3: 7730530616141366317
+      Cody_Knockback_30: -418817764367929040
+      Cody_Knockback_31: 2206030623388996656
+      Cody_Knockback_32: -7067512767520146563
+      Cody_Knockback_33: -8205223196451394983
+      Cody_Knockback_34: 2392415658042741079
+      Cody_Knockback_35: 7610692656612986972
+      Cody_Knockback_36: -1655691438893734413
+      Cody_Knockback_37: 8718306239997782182
+      Cody_Knockback_38: -929175554597949773
+      Cody_Knockback_39: -2701689667621602774
+      Cody_Knockback_4: -6404687010353191042
+      Cody_Knockback_40: 4350045728710379210
+      Cody_Knockback_41: -2701522350345117727
+      Cody_Knockback_42: 7192508459456884384
+      Cody_Knockback_43: -845454258672992327
+      Cody_Knockback_44: 3003530225774228798
+      Cody_Knockback_45: -1124693934132474120
+      Cody_Knockback_46: 315908637430778818
+      Cody_Knockback_47: 7400733753870861725
+      Cody_Knockback_48: 3146316275838822786
+      Cody_Knockback_49: -6104016729340618800
+      Cody_Knockback_5: -4768817814792367832
+      Cody_Knockback_50: 501313337530820710
+      Cody_Knockback_51: -2467531079859968993
+      Cody_Knockback_52: 1517216575384304776
+      Cody_Knockback_53: -1601642805463107789
+      Cody_Knockback_54: 4990921615892511262
+      Cody_Knockback_55: -8770603629261791076
+      Cody_Knockback_56: 183465705245004092
+      Cody_Knockback_57: 2639898200174262615
+      Cody_Knockback_58: 7203461951350053618
+      Cody_Knockback_59: 8624356888318473483
+      Cody_Knockback_6: 1751331376258893690
+      Cody_Knockback_60: -8934033201427371465
+      Cody_Knockback_61: 1316297057511705664
+      Cody_Knockback_62: -7132874921485429867
+      Cody_Knockback_7: -481365565993786286
+      Cody_Knockback_8: -4166173811722889522
+      Cody_Knockback_9: 4052788935341721708
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

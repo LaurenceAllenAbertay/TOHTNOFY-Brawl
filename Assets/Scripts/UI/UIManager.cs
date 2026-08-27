@@ -160,7 +160,7 @@ namespace DDD.TNFY.BRAWL
             currentPlayer = unit;
             turnOrderController?.HandleTurnStarted(unit);
 
-            if (unit is PlayerUnit && !unit.IsAIControlled)
+            if (unit != null && !unit.IsAIControlled)
             {
 
                 if (endTurnButton != null) endTurnButton.gameObject.SetActive(false);
@@ -201,7 +201,7 @@ namespace DDD.TNFY.BRAWL
                 yield return null;
             }
 
-            if (unitForThisTurn is PlayerUnit && !unitForThisTurn.IsAIControlled)
+            if (unitForThisTurn != null && !unitForThisTurn.IsAIControlled)
             {
                 if (endTurnButton != null) endTurnButton.gameObject.SetActive(true);
                 UpdateEndTurnButtonColour(unitForThisTurn);
@@ -224,7 +224,7 @@ namespace DDD.TNFY.BRAWL
             {
                 if (endTurnButton != null)
                 {
-                    bool isHumanControlled = currentPlayer is PlayerUnit && !currentPlayer.IsAIControlled;
+                    bool isHumanControlled = currentPlayer != null && !currentPlayer.IsAIControlled;
                     endTurnButton.gameObject.SetActive(isHumanControlled);
                     if (isHumanControlled)
                         UpdateEndTurnButtonColour(currentPlayer);
@@ -346,7 +346,7 @@ namespace DDD.TNFY.BRAWL
             if (turnManager != null && turnManager.CurrentUnit != currentPlayer)
                 currentPlayer = turnManager.CurrentUnit;
 
-            if (!(currentPlayer is PlayerUnit) || currentPlayer.IsAIControlled) return false;
+            if (currentPlayer == null || currentPlayer.IsAIControlled) return false;
             if (IsCurrentlyTargeting() || IsExecutingAbility() || uiHiddenForAnimation || uiHiddenForMovement)
                 return false;
 
@@ -418,12 +418,12 @@ namespace DDD.TNFY.BRAWL
 
             bool uiIsActive = turnUI != null && turnUI.activeSelf;
             bool unitStillCurrent = currentPlayer == expectedUnit;
-            bool stillPlayerUnit = expectedUnit is PlayerUnit && !expectedUnit.IsAIControlled;
+            bool stillHumanControlled = expectedUnit != null && !expectedUnit.IsAIControlled;
             bool cameraStillMoving = cameraController != null && cameraController.IsTransitioning;
             bool inCameraState = combatManager != null && combatManager.currentState == CombatState.CameraTransition;
             bool turnIsEnding  = combatManager != null && combatManager.currentState == CombatState.TurnEnding;
 
-            if (!uiIsActive && unitStillCurrent && stillPlayerUnit && !cameraStillMoving && !inCameraState && !turnIsEnding)
+            if (!uiIsActive && unitStillCurrent && stillHumanControlled && !cameraStillMoving && !inCameraState && !turnIsEnding)
             {
                 Debug.LogError(
                     $"[UIManager] TurnUIWatchdog FIRED for unit='{expectedUnit?.name}' at F={Time.frameCount} T={Time.time:F3}s.\n" +

@@ -10,7 +10,6 @@ namespace DDD.TNFY.BRAWL
         public override bool UsesDirectionalInput => false;
         public override bool UsesHoverTracking    => true;
         public override bool ConfirmsOnTileClick  => true;
-        public override bool UsesCameraTransitionsPerTarget => true;
         
         public override void ShowEnterPreview(AbilityContext ctx, Tile hoveredTile)
         {

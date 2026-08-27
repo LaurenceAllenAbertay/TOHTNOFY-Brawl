@@ -30,11 +30,10 @@ namespace DDD.TNFY.BRAWL
 
         public float recoilDurationPerTile = 0.18f;
 
-        public float knockbackEndDuration = 0.4f;
-        
-        public float wallRecoilAnimDuration = 0.3f;
-
         public float missAnimDuration = 0.5f;
+
+        [Header("Recoil Animation State")]
+        public string recoilKnockbackState;
 
         [Header("Wire VFX")]
         public GameObject wirePrefab;
@@ -95,10 +94,9 @@ namespace DDD.TNFY.BRAWL
             {
                 Debug.Log("[WiringFault] Caster is against a wall — recoil and Shocked skipped.");
                 var casterAnimator = ctx.caster.GetComponent<UnitAnimator>();
-                casterAnimator?.PlayKnockbackStart();
-                yield return new WaitForSeconds(wallRecoilAnimDuration);
-                casterAnimator?.PlayKnockbackEnd();
-                yield return new WaitForSeconds(knockbackEndDuration);
+                casterAnimator?.PlayFullKnockback(recoilKnockbackState);
+                while (casterAnimator != null && casterAnimator.IsInKnockbackSequence)
+                    yield return null;
                 yield break;
             }
             
@@ -306,18 +304,16 @@ namespace DDD.TNFY.BRAWL
         {
             var casterAnimator = caster.GetComponent<UnitAnimator>();
 
-            casterAnimator?.PlayKnockbackStart();
+            casterAnimator?.PlayFullKnockback(recoilKnockbackState);
             yield return new WaitForSeconds(knockbackStartDelay);
 
             Tile landingTile = recoilPath[recoilPath.Count - 1];
             float totalDuration = recoilPath.Count * recoilDurationPerTile;
             bool recoilComplete = false;
             caster.AnimateToTile(landingTile, totalDuration, () => recoilComplete = true);
-            while (!recoilComplete)
-                yield return null;
 
-            casterAnimator?.PlayKnockbackEnd();
-            yield return new WaitForSeconds(knockbackEndDuration);
+            while (!recoilComplete || (casterAnimator != null && casterAnimator.IsInKnockbackSequence))
+                yield return null;
         }
         
         private List<Tile> CalculatePath(Unit unit, Vector2Int dir, int distance)

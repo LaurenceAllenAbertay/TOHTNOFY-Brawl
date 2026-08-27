@@ -31,7 +31,7 @@ namespace DDD.TNFY.BRAWL
         public bool CanUseJump(Unit unit)
         {
             if (unit == null || combatManager == null) return false;
-            if (!(unit is PlayerUnit)) return false;
+            if (unit.IsAIControlled) return false;
             if (combatManager.CurrentActiveUnit != unit) return false;
             if (combatManager.IsExecutingAbility || combatManager.IsMoving) return false;
             if (combatManager.currentState != CombatState.WaitingForInput) return false;
@@ -63,7 +63,7 @@ namespace DDD.TNFY.BRAWL
 
             GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
             
-            if (combatManager.CanMove && combatManager.CurrentActiveUnit is PlayerUnit)
+            if (combatManager.CanMove && combatManager.CurrentActiveUnit != null && !combatManager.CurrentActiveUnit.IsAIControlled)
             {
                 GridManager.Instance.SetHighlightMode(
                     GridManager.HighlightMode.Movement,

@@ -384,6 +384,16 @@ namespace DDD.TNFY.BRAWL
                 case StatusEffectType.Scared:
                     // Nothing to apply immediately
                     break;
+                case StatusEffectType.Charmed:
+                {
+                    if (effect.source != null)
+                    {
+                        effect.customData = effect.target.team;
+                        effect.target.SetTeam(effect.source.team);
+                        effect.target.SetControlOverride(effect.source.IsAIControlled);
+                    }
+                    break;
+                }
             }
             
             if (effect.effectData.applicationVFX != null)
@@ -468,6 +478,13 @@ namespace DDD.TNFY.BRAWL
                 case StatusEffectType.Scared:
                     // Nothing to reverse
                     break;
+                case StatusEffectType.Charmed:
+                {
+                    if (effect.customData is int originalTeam)
+                        effect.target.SetTeam(originalTeam);
+                    effect.target.SetControlOverride(null);
+                    break;
+                }
             }
             
             if (effect.effectData.removalVFX != null)

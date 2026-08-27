@@ -73,6 +73,8 @@ namespace DDD.TNFY.BRAWL
 
         private void Awake()
         {
+            LoadingScreenController.Instance?.Hide();
+
             if (allCharacters == null || allCharacters.Length == 0)
             {
                 Debug.LogError("[DebugLobby] allCharacters is empty — assign CharacterData assets in the Inspector.");
@@ -500,7 +502,10 @@ namespace DDD.TNFY.BRAWL
                 });
             }
 
-            SceneManager.LoadScene(overworldSceneName);
+            if (LoadingScreenController.Instance != null)
+                LoadingScreenController.Instance.LoadScene(overworldSceneName);
+            else
+                SceneManager.LoadScene(overworldSceneName);
         }
     }
 }

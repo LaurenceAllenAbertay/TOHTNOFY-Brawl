@@ -7,7 +7,6 @@ namespace DDD.TNFY.BRAWL
     public class LineTargeting : AbilityTargeting
     {
         public override bool UsesDirectionalInput => true;
-        public override bool UsesCameraTransitionsPerTarget => true;
         
         public bool horizontalOnly = true;
         

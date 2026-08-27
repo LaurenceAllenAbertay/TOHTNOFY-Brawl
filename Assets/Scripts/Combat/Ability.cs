@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace DDD.TNFY.BRAWL
 {
@@ -17,6 +18,13 @@ namespace DDD.TNFY.BRAWL
     {
         Ranged, 
         Melee, 
+    }
+
+    public enum CameraMode
+    {
+        None = 1,
+        Targeted = 2,
+        PostExecutionZoom = 3
     }
 
     [CreateAssetMenu(menuName = "TNFY Brawl/Ability")]
@@ -52,7 +60,11 @@ namespace DDD.TNFY.BRAWL
         
         public bool endTurnOnCast = false;
         
-        public bool suppressCameraTransitions = false;
+        [FormerlySerializedAs("suppressCameraTransitions")]
+        [SerializeField, HideInInspector] private bool legacySuppressCameraTransitions = false;
+
+        [Tooltip("How the camera behaves during this ability. Must be set explicitly — there is no fallback.")]
+        public CameraMode cameraMode = CameraMode.None;
         
         [SerializeField] private string animationState = "";
 
@@ -156,6 +168,71 @@ namespace DDD.TNFY.BRAWL
                     $"Set an Animation State in the Inspector. ({name})",
                     this);
             }
+
+            MigrateLegacyCameraSuppression();
+
+            if (!System.Enum.IsDefined(typeof(CameraMode), cameraMode))
+            {
+                Debug.LogWarning(
+                    $"[Ability] '{abilityName}' has no Camera Mode set. " +
+                    $"There is no fallback anymore — pick None, Targeted, or PostExecutionZoom explicitly. ({name})",
+                    this);
+            }
+        }
+
+        private void MigrateLegacyCameraSuppression()
+        {
+            if (!legacySuppressCameraTransitions) return;
+
+            cameraMode = CameraMode.None;
+            legacySuppressCameraTransitions = false;
+            UnityEditor.EditorUtility.SetDirty(this);
+        }
+
+        [UnityEditor.MenuItem("Tools/DDD/Migrate Ability Camera Modes")]
+        private static void MigrateAllAbilityCameraModes()
+        {
+            var guids = UnityEditor.AssetDatabase.FindAssets("t:Ability");
+            int migrated = 0;
+
+            foreach (var guid in guids)
+            {
+                var path = UnityEditor.AssetDatabase.GUIDToAssetPath(guid);
+                var ability = UnityEditor.AssetDatabase.LoadAssetAtPath<Ability>(path);
+                if (ability == null || !ability.legacySuppressCameraTransitions) continue;
+
+                ability.MigrateLegacyCameraSuppression();
+                migrated++;
+            }
+
+            UnityEditor.AssetDatabase.SaveAssets();
+            Debug.Log($"[Ability] Migrated camera mode on {migrated} ability asset(s).");
+        }
+
+        [UnityEditor.MenuItem("Tools/DDD/List Abilities With Unset Camera Mode")]
+        private static void ListAbilitiesWithUnsetCameraMode()
+        {
+            var guids = UnityEditor.AssetDatabase.FindAssets("t:Ability");
+            var unset = new List<string>();
+
+            foreach (var guid in guids)
+            {
+                var path = UnityEditor.AssetDatabase.GUIDToAssetPath(guid);
+                var ability = UnityEditor.AssetDatabase.LoadAssetAtPath<Ability>(path);
+                if (ability == null) continue;
+
+                if (!System.Enum.IsDefined(typeof(CameraMode), ability.cameraMode))
+                    unset.Add($"{ability.abilityName} ({path})");
+            }
+
+            if (unset.Count == 0)
+            {
+                Debug.Log("[Ability] Every ability has an explicit Camera Mode set.");
+                return;
+            }
+
+            Debug.LogWarning($"[Ability] {unset.Count} ability asset(s) still need a Camera Mode set:\n" +
+                              string.Join("\n", unset));
         }
 #endif
     }

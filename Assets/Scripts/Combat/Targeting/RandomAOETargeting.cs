@@ -49,8 +49,6 @@ namespace DDD.TNFY.BRAWL
                    lastAbility != ctx.ability;
         }
 
-        public override bool UsesCameraZoomAfterExecution => true;
-        
         public override void ResetForNewTurn()
         {
             isInPreviewMode = false;

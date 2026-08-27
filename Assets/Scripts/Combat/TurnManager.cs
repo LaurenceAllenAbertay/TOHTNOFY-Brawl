@@ -202,7 +202,7 @@ namespace DDD.TNFY.BRAWL
 
             Unit currentUnit = CurrentUnit;
             
-            if (currentUnit is PlayerUnit)
+            if (currentUnit != null && !currentUnit.IsAIControlled)
             {
                 UIEvents.OnTurnChanged();
             }

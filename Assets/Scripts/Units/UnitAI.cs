@@ -96,14 +96,11 @@ namespace DDD.TNFY.BRAWL
         private void OnTurnStarted(Unit activeUnit)
         {
             if (activeUnit != unit) return;
+            if (!unit.IsAIControlled) return;
 
-            if (StatusEffectManager.Instance != null)
-            {
-                if (StatusEffectManager.Instance.HasStatusEffect(unit, StatusEffectType.Stunned)  ||
-                    StatusEffectManager.Instance.HasStatusEffect(unit, StatusEffectType.Shocked)  ||
-                    StatusEffectManager.Instance.HasStatusEffect(unit, StatusEffectType.Dizzy))
-                    return;
-            }
+            if (StatusEffectManager.Instance != null &&
+                StatusEffectManager.Instance.HasStatusEffect(unit, StatusEffectType.Dizzy))
+                return;
 
             StartCoroutine(ExecuteAITurn());
         }
@@ -264,7 +261,7 @@ namespace DDD.TNFY.BRAWL
         
         private Unit GetLastAttacker() => lastAttacker;
         
-        private void RegisterWithTeam()
+        public void RegisterWithTeam()
         {
             int team = unit.team;
             if (!teamGroups.ContainsKey(team))
@@ -273,7 +270,7 @@ namespace DDD.TNFY.BRAWL
                 teamGroups[team].Add(this);
         }
 
-        private void UnregisterFromTeam()
+        public void UnregisterFromTeam()
         {
             int team = unit.team;
             if (!teamGroups.ContainsKey(team)) return;

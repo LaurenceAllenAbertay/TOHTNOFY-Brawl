@@ -37,7 +37,7 @@ namespace DDD.TNFY.BRAWL
 
         public bool CanEndTurn => currentState == CombatState.WaitingForInput &&
                                   !isMoving && !isWaitingForAnimation &&
-                                  currentActiveUnit is PlayerUnit && !currentActiveUnit.IsAIControlled &&
+                                  currentActiveUnit != null && !currentActiveUnit.IsAIControlled &&
                                   (Time.time - turnStartTime >= turnStartProtectionDuration);
 
         public bool IsSafeForAdminCommand
@@ -46,7 +46,7 @@ namespace DDD.TNFY.BRAWL
             {
                 if (currentState != CombatState.WaitingForInput) return false;
                 if (isMoving || isWaitingForAnimation) return false;
-                if (currentActiveUnit != null && (!(currentActiveUnit is PlayerUnit) || currentActiveUnit.IsAIControlled)) return false;
+                if (currentActiveUnit != null && currentActiveUnit.IsAIControlled) return false;
                 if (IsTargetingAbility) return false;
                 if (jumpSystem != null && jumpSystem.IsTargetingJump) return false;
                 if (cameraController != null && cameraController.IsTransitioning) return false;
@@ -73,6 +73,9 @@ namespace DDD.TNFY.BRAWL
 
         [Header("State")]
         public CombatState currentState = CombatState.WaitingForInput;
+
+        [Header("Post-Execution Zoom")]
+        [SerializeField] private float postExecutionZoomLingerDuration = 3f;
 
         [Header("Debug")]
         [SerializeField] private bool debugMode = false;
@@ -294,7 +297,7 @@ namespace DDD.TNFY.BRAWL
 
             currentState = CombatState.WaitingForInput;
 
-            if (currentActiveUnit is PlayerUnit && !currentActiveUnit.IsAIControlled)
+            if (currentActiveUnit != null && !currentActiveUnit.IsAIControlled)
             {
                 GridManager.Instance.SetHighlightMode(
                     GridManager.HighlightMode.Movement,
@@ -324,7 +327,7 @@ namespace DDD.TNFY.BRAWL
 
         public void EndTurn()
         {
-            if (!(currentActiveUnit is PlayerUnit) || currentActiveUnit.IsAIControlled) return;
+            if (currentActiveUnit == null || currentActiveUnit.IsAIControlled) return;
             if (_turnTransitionPending) return;
             if (Time.time - turnStartTime < turnStartProtectionDuration) return;
             if (isMoving || currentState == CombatState.MovingUnit) return;
@@ -386,7 +389,7 @@ namespace DDD.TNFY.BRAWL
             if (isBlockingAllInput) return true;
             if (currentState != CombatState.WaitingForInput) return true;
             if (currentActiveUnit == null) return true;
-            if (!(currentActiveUnit is PlayerUnit) || currentActiveUnit.IsAIControlled) return true;
+            if (currentActiveUnit.IsAIControlled) return true;
             if (isWaitingForAnimation || isMoving) return true;
 
             var unitAnimator = currentActiveUnit.GetComponent<UnitAnimator>();
@@ -506,7 +509,8 @@ namespace DDD.TNFY.BRAWL
             BlockAllInput();
             UIEvents.OnAbilityAnimationStarted();
 
-            bool isRandomAOE = (ability?.targeting?.UsesCameraZoomAfterExecution == true) && cameraController != null;
+            bool isRandomAOE = (ability != null && ability.cameraMode == CameraMode.PostExecutionZoom)
+                               && cameraController != null;
 
             bool executionSuccessful;
             if (isDirectional)
@@ -525,14 +529,7 @@ namespace DDD.TNFY.BRAWL
                 yield return StartCoroutine(WaitForCompleteAbilitySequence(ability));
 
                 if (isRandomAOE)
-                {
-                    Vector3 tileSpacing = GridManager.Instance.GetTileSpacing();
-                    float worldRadius = ability.range * Mathf.Max(tileSpacing.x, tileSpacing.z);
-                    yield return StartCoroutine(cameraController.TransitionTo(
-                        cameraController.FitRadius(currentActiveUnit.transform.position, worldRadius)));
-                    yield return StartCoroutine(cameraController.TransitionTo(
-                        cameraController.UnitFocusPosition(currentActiveUnit)));
-                }
+                    yield return StartCoroutine(PlayPostExecutionZoom(ability, ctx));
 
                 if (currentActiveUnit != null && currentActiveUnit.IsDead)
                 {
@@ -580,6 +577,36 @@ namespace DDD.TNFY.BRAWL
                 GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
                 turnManager.EndTurn();
             }
+        }
+
+        private IEnumerator PlayPostExecutionZoom(Ability ability, AbilityContext ctx)
+        {
+            if (currentActiveUnit == null || ability.targeting == null) yield break;
+
+            var revealCtx = ctx ?? new AbilityContext { caster = currentActiveUnit, ability = ability };
+            var affectedTiles = ability.targeting.GetTraversal(revealCtx);
+
+            Vector3 casterPosition = currentActiveUnit.transform.position;
+            float worldRadius = 0f;
+
+            if (affectedTiles != null)
+            {
+                foreach (var tile in affectedTiles)
+                {
+                    if (tile == null) continue;
+                    worldRadius = Mathf.Max(worldRadius, Vector3.Distance(casterPosition, tile.transform.position));
+                }
+            }
+
+            if (worldRadius <= 0f) yield break;
+
+            yield return StartCoroutine(cameraController.TransitionTo(
+                cameraController.FitRadius(casterPosition, worldRadius)));
+
+            yield return new WaitForSeconds(postExecutionZoomLingerDuration);
+
+            yield return StartCoroutine(cameraController.TransitionTo(
+                cameraController.UnitFocusPosition(currentActiveUnit)));
         }
 
         private IEnumerator WaitForCompleteAbilitySequence(Ability ability)
@@ -662,7 +689,7 @@ namespace DDD.TNFY.BRAWL
 
                     NotifyCurrentUnitTargetingTurnStarted();
 
-                    if (currentActiveUnit is PlayerUnit && !currentActiveUnit.IsAIControlled && GetRemainingMovement() > 0)
+                    if (currentActiveUnit != null && !currentActiveUnit.IsAIControlled && GetRemainingMovement() > 0)
                     {
                         GridManager.Instance.SetHighlightMode(
                             GridManager.HighlightMode.Movement,

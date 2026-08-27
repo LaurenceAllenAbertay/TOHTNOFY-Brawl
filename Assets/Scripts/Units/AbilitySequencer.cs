@@ -113,7 +113,7 @@ namespace DDD.TNFY.BRAWL
             var midAnimFiredEffects = new HashSet<AbilityEffect>();
             void OnAbilityEffect(int slot)
             {
-                if (!ctx.ability.suppressCameraTransitions) return;
+                if (ctx.ability.cameraMode != CameraMode.None) return;
 
                 var slotEffects = ctx.ability.effects
                     .Where(e => e.midAnimationEventIndex == slot)
@@ -234,7 +234,9 @@ namespace DDD.TNFY.BRAWL
                 yield break;
             }
 
-            if (ctx.ability.suppressCameraTransitions)
+            CameraMode cameraMode = ctx.ability.cameraMode;
+
+            if (cameraMode == CameraMode.None)
             {
                 ApplyAbilityEffectsToTargets(ctx, targets, midAnimFiredEffects);
                 SpawnHitEffects(ctx, targets);
@@ -242,7 +244,7 @@ namespace DDD.TNFY.BRAWL
                 yield break;
             }
 
-            bool shouldUseTransitions = ctx.ability.targeting.UsesCameraTransitionsPerTarget;
+            bool shouldUseTransitions = cameraMode == CameraMode.Targeted;
             bool hasMovementEffect = ctx.ability.effects.Any(e =>
                 e.AnimationPhase == EffectAnimationPhase.Displacement && !e.IsSelfOnly(ctx));
 
@@ -308,12 +310,14 @@ namespace DDD.TNFY.BRAWL
 
         private IEnumerator HandleSingleTargetingEffects(AbilityContext ctx, List<Unit> targets)
         {
+            bool wideFraming = ctx.ability.effects.Any(e => e.NeedsWideFraming);
+
             foreach (var target in targets)
             {
                 if (target == null) continue;
 
                 yield return StartCoroutine(cameraController.TransitionTo(
-                    cameraController.UnitFocusPosition(target)));
+                    GetFocusPositionForTarget(target, wideFraming)));
 
                 yield return StartCoroutine(PlayTargetEffectsWithAnimation(ctx, new List<Unit> { target }));
                 
@@ -323,6 +327,17 @@ namespace DDD.TNFY.BRAWL
             
             yield return StartCoroutine(cameraController.TransitionTo(
                 cameraController.UnitFocusPosition(unit)));
+        }
+
+        private Vector3 GetFocusPositionForTarget(Unit target, bool wideFraming)
+        {
+            if (!wideFraming || unit == null)
+                return cameraController.UnitFocusPosition(target);
+
+            Vector3 midpoint = (unit.transform.position + target.transform.position) / 2f;
+            float radius = Vector3.Distance(unit.transform.position, target.transform.position) / 2f;
+
+            return cameraController.FitRadius(midpoint, radius);
         }
 
         private IEnumerator PlayTargetEffectsWithAnimation(AbilityContext ctx, List<Unit> targets)
@@ -415,19 +430,9 @@ namespace DDD.TNFY.BRAWL
 
         private IEnumerator HandleRemainingEffects(AbilityContext ctx, List<Unit> targets, HashSet<AbilityEffect> midAnimFiredEffects = null)
         {
-            bool usedCameraTransitions = ctx.ability.targeting.UsesCameraTransitionsPerTarget
-                                         && !ctx.ability.suppressCameraTransitions;
-            
-            bool effectsAlreadyApplied = usedCameraTransitions
-                                         || ctx.ability.suppressCameraTransitions
-                                         || !ctx.ability.targeting.UsesCameraTransitionsPerTarget;
-
             foreach (var effect in ctx.ability.effects)
             {
-                if (effect.AnimationPhase == EffectAnimationPhase.PreEffect) continue;
-                
-                if (effectsAlreadyApplied &&
-                    effect.AnimationPhase != EffectAnimationPhase.PostEffect) continue;
+                if (effect.AnimationPhase != EffectAnimationPhase.PostEffect) continue;
 
                 if (effect is ChargeEffect) continue;
                 

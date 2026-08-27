@@ -34,7 +34,9 @@ namespace DDD.TNFY.BRAWL
             focusTile = null;
             return false;
         }
-        
+
+        public virtual bool NeedsWideFraming => false;
+
         public int midAnimationEventIndex = -1;
 
         public abstract void Apply(AbilityContext ctx, IReadOnlyList<Unit> targets);

@@ -57,7 +57,10 @@ namespace DDD.TNFY.BRAWL
                 return;
             }
 
-            SceneManager.LoadScene(destinationSceneName);
+            if (LoadingScreenController.Instance != null)
+                LoadingScreenController.Instance.LoadScene(destinationSceneName);
+            else
+                SceneManager.LoadScene(destinationSceneName);
         }
         
         private void ShowPrompt() => interactPromptUI?.SetActive(true);

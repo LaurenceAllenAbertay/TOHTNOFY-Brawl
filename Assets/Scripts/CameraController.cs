@@ -225,7 +225,7 @@ namespace DDD.TNFY.BRAWL
 
         private void OnTurnStarted(Unit newActiveUnit)
         {
-            _playerInputEnabled = newActiveUnit is PlayerUnit;
+            _playerInputEnabled = newActiveUnit != null && !newActiveUnit.IsAIControlled;
             if (newActiveUnit != null)
                 StartCoroutine(SmoothFocusOnUnit(newActiveUnit));
         }

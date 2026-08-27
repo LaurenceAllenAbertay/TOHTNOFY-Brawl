@@ -146,8 +146,18 @@ namespace DDD.TNFY.BRAWL
 
                 yield return new WaitForSeconds(0.1f);
 
+                unitAnimator.PlayKnockbackMoving();
+
+                bool endTriggered = false;
+
                 for (int i = 0; i < knockbackPath.Count; i++)
                 {
+                    if (i == knockbackPath.Count - 1)
+                    {
+                        unitAnimator.PlayKnockbackEnd();
+                        endTriggered = true;
+                    }
+
                     bool moveComplete = false;
                     target.AnimateToTile(knockbackPath[i], movementDurationPerTile, () => moveComplete = true);
                     while (!moveComplete) yield return null;
@@ -163,12 +173,9 @@ namespace DDD.TNFY.BRAWL
                     }
                 }
 
-                float totalMovement  = knockbackPath.Count * movementDurationPerTile;
-                float remainingStart = knockbackStartDuration - 0.1f - totalMovement;
-                if (remainingStart > 0f)
-                    yield return new WaitForSeconds(remainingStart);
+                if (!endTriggered)
+                    unitAnimator.PlayKnockbackEnd();
 
-                unitAnimator.PlayKnockbackEnd();
                 yield return new WaitForSeconds(knockbackEndDuration);
             }
 
