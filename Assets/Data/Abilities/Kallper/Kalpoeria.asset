@@ -28,8 +28,9 @@ MonoBehaviour:
   maxTargets: 4
   canExecuteWithoutTargets: 0
   endTurnOnCast: 1
-  suppressCameraTransitions: 0
-  animationState: Heads_Up
+  legacySuppressCameraTransitions: 0
+  cameraMode: 4
+  animationState: Kalpoeria
   animationHoldState: 
   animationHoldReleaseState: 
   castEffectPrefab: {fileID: 0}

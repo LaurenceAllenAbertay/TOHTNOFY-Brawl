@@ -1,0 +1,4539 @@
+fileFormatVersion: 2
+guid: 220ffd1d8a262514f9a1f63401c7e477
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1497957623892631155
+    second: Kalpoeria_Hurt_0
+  - first:
+      213: -6130176105131584530
+    second: Kalpoeria_Hurt_1
+  - first:
+      213: -7273667917249153760
+    second: Kalpoeria_Hurt_2
+  - first:
+      213: -414473627712350479
+    second: Kalpoeria_Hurt_3
+  - first:
+      213: 8823329597376169733
+    second: Kalpoeria_Hurt_4
+  - first:
+      213: -1680038392497523325
+    second: Kalpoeria_Hurt_5
+  - first:
+      213: 4599559297273569108
+    second: Kalpoeria_Hurt_6
+  - first:
+      213: -5043837238560466412
+    second: Kalpoeria_Hurt_7
+  - first:
+      213: -3436079229852023821
+    second: Kalpoeria_Hurt_8
+  - first:
+      213: 5703990940641039064
+    second: Kalpoeria_Hurt_9
+  - first:
+      213: -7601177605647820112
+    second: Kalpoeria_Hurt_10
+  - first:
+      213: 6199892871235832577
+    second: Kalpoeria_Hurt_11
+  - first:
+      213: 3140848377447762033
+    second: Kalpoeria_Hurt_12
+  - first:
+      213: -3013127954911971007
+    second: Kalpoeria_Hurt_13
+  - first:
+      213: -8838765473688124813
+    second: Kalpoeria_Hurt_14
+  - first:
+      213: -8327984942379176780
+    second: Kalpoeria_Hurt_15
+  - first:
+      213: -5635329384176019891
+    second: Kalpoeria_Hurt_16
+  - first:
+      213: 5478769020879091204
+    second: Kalpoeria_Hurt_17
+  - first:
+      213: 2264944588969008886
+    second: Kalpoeria_Hurt_18
+  - first:
+      213: 5238414987160590776
+    second: Kalpoeria_Hurt_19
+  - first:
+      213: -265945637326058638
+    second: Kalpoeria_Hurt_20
+  - first:
+      213: -1080942486000220644
+    second: Kalpoeria_Hurt_21
+  - first:
+      213: -4392040093854236481
+    second: Kalpoeria_Hurt_22
+  - first:
+      213: -3942350554411575322
+    second: Kalpoeria_Hurt_23
+  - first:
+      213: 3481942601697298147
+    second: Kalpoeria_Hurt_24
+  - first:
+      213: 1284667537763830282
+    second: Kalpoeria_Hurt_25
+  - first:
+      213: -5271518338813975928
+    second: Kalpoeria_Hurt_26
+  - first:
+      213: 5404436124700341449
+    second: Kalpoeria_Hurt_27
+  - first:
+      213: 7823780437344893962
+    second: Kalpoeria_Hurt_28
+  - first:
+      213: -3421405646279931928
+    second: Kalpoeria_Hurt_29
+  - first:
+      213: 5694726719354624119
+    second: Kalpoeria_Hurt_30
+  - first:
+      213: -9092388772375132834
+    second: Kalpoeria_Hurt_31
+  - first:
+      213: -6745517081832001346
+    second: Kalpoeria_Hurt_32
+  - first:
+      213: -1866848049814602835
+    second: Kalpoeria_Hurt_33
+  - first:
+      213: -2877575898418372278
+    second: Kalpoeria_Hurt_34
+  - first:
+      213: 5826232788426840988
+    second: Kalpoeria_Hurt_35
+  - first:
+      213: 1398601730825246516
+    second: Kalpoeria_Hurt_36
+  - first:
+      213: -7756466672440875469
+    second: Kalpoeria_Hurt_37
+  - first:
+      213: -9147894567469497599
+    second: Kalpoeria_Hurt_38
+  - first:
+      213: -345530262272308729
+    second: Kalpoeria_Hurt_39
+  - first:
+      213: 8723493506180148112
+    second: Kalpoeria_Hurt_40
+  - first:
+      213: 255244054145013274
+    second: Kalpoeria_Hurt_41
+  - first:
+      213: 2256867107200258998
+    second: Kalpoeria_Hurt_42
+  - first:
+      213: -5370878835572000960
+    second: Kalpoeria_Hurt_43
+  - first:
+      213: 5553176383688299236
+    second: Kalpoeria_Hurt_44
+  - first:
+      213: 1502367161021936921
+    second: Kalpoeria_Hurt_45
+  - first:
+      213: -5767434592553982767
+    second: Kalpoeria_Hurt_46
+  - first:
+      213: -7511355573427063984
+    second: Kalpoeria_Hurt_47
+  - first:
+      213: -4382707963707943779
+    second: Kalpoeria_Hurt_48
+  - first:
+      213: -1379292066881503401
+    second: Kalpoeria_Hurt_49
+  - first:
+      213: -6831331177928390870
+    second: Kalpoeria_Hurt_50
+  - first:
+      213: 5636751510766860673
+    second: Kalpoeria_Hurt_51
+  - first:
+      213: 7899752377568933085
+    second: Kalpoeria_Hurt_52
+  - first:
+      213: 8206181422475058119
+    second: Kalpoeria_Hurt_53
+  - first:
+      213: -2262271429423765543
+    second: Kalpoeria_Hurt_54
+  - first:
+      213: 8064357577199346875
+    second: Kalpoeria_Hurt_55
+  - first:
+      213: -9193767547277678111
+    second: Kalpoeria_Hurt_56
+  - first:
+      213: 6613458929191668830
+    second: Kalpoeria_Hurt_57
+  - first:
+      213: 339743719566002293
+    second: Kalpoeria_Hurt_58
+  - first:
+      213: 6444545662267011808
+    second: Kalpoeria_Hurt_59
+  - first:
+      213: 835611459940342773
+    second: Kalpoeria_Hurt_60
+  - first:
+      213: -5586867007674964581
+    second: Kalpoeria_Hurt_61
+  - first:
+      213: 7809028232104502968
+    second: Kalpoeria_Hurt_62
+  - first:
+      213: 540402411070703288
+    second: Kalpoeria_Hurt_63
+  - first:
+      213: -5116511142390722201
+    second: Kalpoeria_Hurt_64
+  - first:
+      213: -2172031216896745476
+    second: Kalpoeria_Hurt_65
+  - first:
+      213: 4207604030721868189
+    second: Kalpoeria_Hurt_66
+  - first:
+      213: -6796796040919161156
+    second: Kalpoeria_Hurt_67
+  - first:
+      213: -5323109198096306128
+    second: Kalpoeria_Hurt_68
+  - first:
+      213: -2418769311312829279
+    second: Kalpoeria_Hurt_69
+  - first:
+      213: -6767132791273533652
+    second: Kalpoeria_Hurt_70
+  - first:
+      213: -2446442139577911850
+    second: Kalpoeria_Hurt_71
+  - first:
+      213: 6870066953032944626
+    second: Kalpoeria_Hurt_72
+  - first:
+      213: -7925807653853705969
+    second: Kalpoeria_Hurt_73
+  - first:
+      213: -8687006627775712247
+    second: Kalpoeria_Hurt_74
+  - first:
+      213: -1429369320454096685
+    second: Kalpoeria_Hurt_75
+  - first:
+      213: -6695054732124302592
+    second: Kalpoeria_Hurt_76
+  - first:
+      213: -6805705461302339268
+    second: Kalpoeria_Hurt_77
+  - first:
+      213: 3932960764267159168
+    second: Kalpoeria_Hurt_78
+  - first:
+      213: 5353092188613646787
+    second: Kalpoeria_Hurt_79
+  - first:
+      213: -8994629907064464813
+    second: Kalpoeria_Hurt_80
+  - first:
+      213: 7884881939042821887
+    second: Kalpoeria_Hurt_81
+  - first:
+      213: 5000636684672466017
+    second: Kalpoeria_Hurt_82
+  - first:
+      213: 4996735788289863199
+    second: Kalpoeria_Hurt_83
+  - first:
+      213: -8432798105591267721
+    second: Kalpoeria_Hurt_84
+  - first:
+      213: 6907651441037547585
+    second: Kalpoeria_Hurt_85
+  - first:
+      213: -9094367155987317071
+    second: Kalpoeria_Hurt_86
+  - first:
+      213: 6851659373195223177
+    second: Kalpoeria_Hurt_87
+  - first:
+      213: -8377859996982375661
+    second: Kalpoeria_Hurt_88
+  - first:
+      213: 5924842188842229858
+    second: Kalpoeria_Hurt_89
+  - first:
+      213: 3479503981587543003
+    second: Kalpoeria_Hurt_90
+  - first:
+      213: 2299845698735455324
+    second: Kalpoeria_Hurt_91
+  - first:
+      213: -4512679698409661681
+    second: Kalpoeria_Hurt_92
+  - first:
+      213: -1164537194092798858
+    second: Kalpoeria_Hurt_93
+  - first:
+      213: 1336505968290858730
+    second: Kalpoeria_Hurt_94
+  - first:
+      213: -3902739153276145342
+    second: Kalpoeria_Hurt_95
+  - first:
+      213: -5184644463243162803
+    second: Kalpoeria_Hurt_96
+  - first:
+      213: -2739978030810287565
+    second: Kalpoeria_Hurt_97
+  - first:
+      213: 1293970164235419234
+    second: Kalpoeria_Hurt_98
+  - first:
+      213: -5024418535255364703
+    second: Kalpoeria_Hurt_99
+  - first:
+      213: -7701468870334676799
+    second: Kalpoeria_Hurt_100
+  - first:
+      213: 8201736674324973503
+    second: Kalpoeria_Hurt_101
+  - first:
+      213: -2620500967634323761
+    second: Kalpoeria_Hurt_102
+  - first:
+      213: 7526291731477914272
+    second: Kalpoeria_Hurt_103
+  - first:
+      213: 8499725437544487579
+    second: Kalpoeria_Hurt_104
+  - first:
+      213: 8371585441813952633
+    second: Kalpoeria_Hurt_105
+  - first:
+      213: 6562967576351401669
+    second: Kalpoeria_Hurt_106
+  - first:
+      213: -3139626069899238621
+    second: Kalpoeria_Hurt_107
+  - first:
+      213: -4585616756785212521
+    second: Kalpoeria_Hurt_108
+  - first:
+      213: 6325017786406429933
+    second: Kalpoeria_Hurt_109
+  - first:
+      213: 1924149880856543805
+    second: Kalpoeria_Hurt_110
+  - first:
+      213: -7417680609429922673
+    second: Kalpoeria_Hurt_111
+  - first:
+      213: -3199350565934481349
+    second: Kalpoeria_Hurt_112
+  - first:
+      213: 584662516689162904
+    second: Kalpoeria_Hurt_113
+  - first:
+      213: -2381810223717828251
+    second: Kalpoeria_Hurt_114
+  - first:
+      213: -1996778315103667070
+    second: Kalpoeria_Hurt_115
+  - first:
+      213: 4089093758347058763
+    second: Kalpoeria_Hurt_116
+  - first:
+      213: -7247951881135207519
+    second: Kalpoeria_Hurt_117
+  - first:
+      213: 6986613084469236683
+    second: Kalpoeria_Hurt_118
+  - first:
+      213: 1560195739704560088
+    second: Kalpoeria_Hurt_119
+  - first:
+      213: -7867848996644442969
+    second: Kalpoeria_Hurt_120
+  - first:
+      213: 1527976258257436535
+    second: Kalpoeria_Hurt_121
+  - first:
+      213: 6820416847421375541
+    second: Kalpoeria_Hurt_122
+  - first:
+      213: -6970675194950300191
+    second: Kalpoeria_Hurt_123
+  - first:
+      213: 6938185053838252713
+    second: Kalpoeria_Hurt_124
+  - first:
+      213: 9100582474713791125
+    second: Kalpoeria_Hurt_125
+  - first:
+      213: -1585330179584383311
+    second: Kalpoeria_Hurt_126
+  - first:
+      213: -8409879355416439784
+    second: Kalpoeria_Hurt_127
+  - first:
+      213: 4559188893528451524
+    second: Kalpoeria_Hurt_128
+  - first:
+      213: -7782879126216284959
+    second: Kalpoeria_Hurt_129
+  - first:
+      213: -3833928254958589082
+    second: Kalpoeria_Hurt_130
+  - first:
+      213: -203255052334094261
+    second: Kalpoeria_Hurt_131
+  - first:
+      213: -3524862195736697051
+    second: Kalpoeria_Hurt_132
+  - first:
+      213: 5526710071871545240
+    second: Kalpoeria_Hurt_133
+  - first:
+      213: -4610884100486156448
+    second: Kalpoeria_Hurt_134
+  - first:
+      213: -2026086744910217090
+    second: Kalpoeria_Hurt_135
+  - first:
+      213: 4216567493729651093
+    second: Kalpoeria_Hurt_136
+  - first:
+      213: -6130483283687201989
+    second: Kalpoeria_Hurt_137
+  - first:
+      213: 7405616056358503331
+    second: Kalpoeria_Hurt_138
+  - first:
+      213: -7535806651128661178
+    second: Kalpoeria_Hurt_139
+  - first:
+      213: -2452507562091741750
+    second: Kalpoeria_Hurt_140
+  - first:
+      213: -227162423834850598
+    second: Kalpoeria_Hurt_141
+  - first:
+      213: 8506107879265712027
+    second: Kalpoeria_Hurt_142
+  - first:
+      213: 8217349370967018478
+    second: Kalpoeria_Hurt_143
+  - first:
+      213: 9200897671196647789
+    second: Kalpoeria_Hurt_144
+  - first:
+      213: 8638700650082225925
+    second: Kalpoeria_Hurt_145
+  - first:
+      213: 1395550078545209172
+    second: Kalpoeria_Hurt_146
+  - first:
+      213: 3593877742853853877
+    second: Kalpoeria_Hurt_147
+  - first:
+      213: 3992863278478472047
+    second: Kalpoeria_Hurt_148
+  - first:
+      213: -2543568428874125277
+    second: Kalpoeria_Hurt_149
+  - first:
+      213: 6760550057612728606
+    second: Kalpoeria_Hurt_150
+  - first:
+      213: 3156130415262988435
+    second: Kalpoeria_Hurt_151
+  - first:
+      213: 2231583335593376155
+    second: Kalpoeria_Hurt_152
+  - first:
+      213: 5124624102118122260
+    second: Kalpoeria_Hurt_153
+  - first:
+      213: 2516835196516956972
+    second: Kalpoeria_Hurt_154
+  - first:
+      213: 2071646605311406824
+    second: Kalpoeria_Hurt_155
+  - first:
+      213: 455730669512580496
+    second: Kalpoeria_Hurt_156
+  - first:
+      213: 2226401190116567154
+    second: Kalpoeria_Hurt_157
+  - first:
+      213: -7463126259964084136
+    second: Kalpoeria_Hurt_158
+  - first:
+      213: -3383863218983355091
+    second: Kalpoeria_Hurt_159
+  - first:
+      213: 7032672852716496828
+    second: Kalpoeria_Hurt_160
+  - first:
+      213: 4150173544652812524
+    second: Kalpoeria_Hurt_161
+  - first:
+      213: -8907486587160692888
+    second: Kalpoeria_Hurt_162
+  - first:
+      213: 5165603526387291694
+    second: Kalpoeria_Hurt_163
+  - first:
+      213: 2231985815799288549
+    second: Kalpoeria_Hurt_164
+  - first:
+      213: 6238498203240371448
+    second: Kalpoeria_Hurt_165
+  - first:
+      213: -6718192288010925131
+    second: Kalpoeria_Hurt_166
+  - first:
+      213: -3298042879518015457
+    second: Kalpoeria_Hurt_167
+  - first:
+      213: 2464906807199412024
+    second: Kalpoeria_Hurt_168
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 14040
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37e55bcb580d9c410800000000000000
+      internalID: 1497957623892631155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_1
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 14040
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee35b0bbf4d3deaa0800000000000000
+      internalID: -6130176105131584530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_2
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 14040
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 025753a119dbe0b90800000000000000
+      internalID: -7273667917249153760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_3
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 14040
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f6107b7e6e7f3af0800000000000000
+      internalID: -414473627712350479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_4
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 14040
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5070cc35583c27a70800000000000000
+      internalID: 8823329597376169733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_5
+      rect:
+        serializedVersion: 2
+        x: 5225
+        y: 14040
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 385ba26bbfd4fa8e0800000000000000
+      internalID: -1680038392497523325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_6
+      rect:
+        serializedVersion: 2
+        x: 6270
+        y: 14040
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45f1655bfcae4df30800000000000000
+      internalID: 4599559297273569108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_7
+      rect:
+        serializedVersion: 2
+        x: 7315
+        y: 14040
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41a57b241c0b00ab0800000000000000
+      internalID: -5043837238560466412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_8
+      rect:
+        serializedVersion: 2
+        x: 8360
+        y: 14040
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f3829445289050d0800000000000000
+      internalID: -3436079229852023821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 13260
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d294fa1a85a82f40800000000000000
+      internalID: 5703990940641039064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_10
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 13260
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ba15bc8d31338690800000000000000
+      internalID: -7601177605647820112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_11
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 13260
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10b0d7bc7b17a0650800000000000000
+      internalID: 6199892871235832577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_12
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 13260
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 178c22755f8869b20800000000000000
+      internalID: 3140848377447762033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_13
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 13260
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1493ca8d6183f26d0800000000000000
+      internalID: -3013127954911971007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_14
+      rect:
+        serializedVersion: 2
+        x: 5225
+        y: 13260
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37205d7a1a5665580800000000000000
+      internalID: -8838765473688124813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_15
+      rect:
+        serializedVersion: 2
+        x: 6270
+        y: 13260
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bcefa681dd0d6c80800000000000000
+      internalID: -8327984942379176780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_16
+      rect:
+        serializedVersion: 2
+        x: 7315
+        y: 13260
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d461ed748c94bc1b0800000000000000
+      internalID: -5635329384176019891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_17
+      rect:
+        serializedVersion: 2
+        x: 8360
+        y: 13260
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 406b9ef856f780c40800000000000000
+      internalID: 5478769020879091204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 12480
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fed07d7a13be6f10800000000000000
+      internalID: 2264944588969008886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_19
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 12480
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b91acf2da692b840800000000000000
+      internalID: 5238414987160590776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_20
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 12480
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27b8d951adb2f4cf0800000000000000
+      internalID: -265945637326058638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_21
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 12480
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c16445b3988bff0f0800000000000000
+      internalID: -1080942486000220644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_22
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 12480
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb08b8efdc65c03c0800000000000000
+      internalID: -4392040093854236481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_23
+      rect:
+        serializedVersion: 2
+        x: 5225
+        y: 12480
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e7db38ee05f949c0800000000000000
+      internalID: -3942350554411575322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_24
+      rect:
+        serializedVersion: 2
+        x: 6270
+        y: 12480
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e6877e1958525030800000000000000
+      internalID: 3481942601697298147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_25
+      rect:
+        serializedVersion: 2
+        x: 7315
+        y: 12480
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0a83e2b15e04d110800000000000000
+      internalID: 1284667537763830282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_26
+      rect:
+        serializedVersion: 2
+        x: 8360
+        y: 12480
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8822904200ec7d6b0800000000000000
+      internalID: -5271518338813975928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 11700
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c47d00850a600b40800000000000000
+      internalID: 5404436124700341449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_28
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 11700
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0cb7980bd6a39c60800000000000000
+      internalID: 7823780437344893962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_29
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 11700
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e708fc21b9b480d0800000000000000
+      internalID: -3421405646279931928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_30
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 11700
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 778de0087cbb70f40800000000000000
+      internalID: 5694726719354624119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_31
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 11700
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5584d6c59851d180800000000000000
+      internalID: -9092388772375132834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_32
+      rect:
+        serializedVersion: 2
+        x: 5225
+        y: 11700
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb0f21f04fb1362a0800000000000000
+      internalID: -6745517081832001346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_33
+      rect:
+        serializedVersion: 2
+        x: 6270
+        y: 11700
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dab7b25f69f9716e0800000000000000
+      internalID: -1866848049814602835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_34
+      rect:
+        serializedVersion: 2
+        x: 7315
+        y: 11700
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a412c8867fbc018d0800000000000000
+      internalID: -2877575898418372278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_35
+      rect:
+        serializedVersion: 2
+        x: 8360
+        y: 11700
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9b5ae43adfead050800000000000000
+      internalID: 5826232788426840988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10920
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 437d5143dd4d86310800000000000000
+      internalID: 1398601730825246516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_37
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 10920
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 336610d28ae7b5490800000000000000
+      internalID: -7756466672440875469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_38
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 10920
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1034147cb562c0180800000000000000
+      internalID: -9147894567469497599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_39
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 10920
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70a8c12ae0e643bf0800000000000000
+      internalID: -345530262272308729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_40
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 10920
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09b6b44ff13101970800000000000000
+      internalID: 8723493506180148112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_41
+      rect:
+        serializedVersion: 2
+        x: 5225
+        y: 10920
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a16185a6d1fca8300800000000000000
+      internalID: 255244054145013274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_42
+      rect:
+        serializedVersion: 2
+        x: 6270
+        y: 10920
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b35fe53da0025f10800000000000000
+      internalID: 2256867107200258998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_43
+      rect:
+        serializedVersion: 2
+        x: 7315
+        y: 10920
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 047311ab72ec675b0800000000000000
+      internalID: -5370878835572000960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_44
+      rect:
+        serializedVersion: 2
+        x: 8360
+        y: 10920
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e254dcbf78d01d40800000000000000
+      internalID: 5553176383688299236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 10140
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 915bcea19fa79d410800000000000000
+      internalID: 1502367161021936921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_46
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 10140
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d425859bc4f5ffa0800000000000000
+      internalID: -5767434592553982767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_47
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 10140
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 053ba3027ed42c790800000000000000
+      internalID: -7511355573427063984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_48
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 10140
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9499ecd35e7d23c0800000000000000
+      internalID: -4382707963707943779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_49
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 10140
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75f73084c25cbdce0800000000000000
+      internalID: -1379292066881503401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_50
+      rect:
+        serializedVersion: 2
+        x: 5225
+        y: 10140
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a270784dc7c3231a0800000000000000
+      internalID: -6831331177928390870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_51
+      rect:
+        serializedVersion: 2
+        x: 6270
+        y: 10140
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 189b76e52a3c93e40800000000000000
+      internalID: 5636751510766860673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_52
+      rect:
+        serializedVersion: 2
+        x: 7315
+        y: 10140
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd43b86ceee81ad60800000000000000
+      internalID: 7899752377568933085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_53
+      rect:
+        serializedVersion: 2
+        x: 8360
+        y: 10140
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cb1909868632e170800000000000000
+      internalID: 8206181422475058119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 9360
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9d76ea7fe1cca90e0800000000000000
+      internalID: -2262271429423765543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_55
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 9360
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb462ba5d7a5aef60800000000000000
+      internalID: 8064357577199346875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_56
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 9360
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e9effc502d296080800000000000000
+      internalID: -9193767547277678111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_57
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 9360
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5cca134bd9b7cb50800000000000000
+      internalID: 6613458929191668830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_58
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 9360
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 578c667ec1307b400800000000000000
+      internalID: 339743719566002293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_59
+      rect:
+        serializedVersion: 2
+        x: 5225
+        y: 9360
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e2b53a9220af6950800000000000000
+      internalID: 6444545662267011808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_60
+      rect:
+        serializedVersion: 2
+        x: 6270
+        y: 9360
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5fb5dff0230b89b00800000000000000
+      internalID: 835611459940342773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_61
+      rect:
+        serializedVersion: 2
+        x: 7315
+        y: 9360
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b952f289e067772b0800000000000000
+      internalID: -5586867007674964581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_62
+      rect:
+        serializedVersion: 2
+        x: 8360
+        y: 9360
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b6e5979dcd3f5c60800000000000000
+      internalID: 7809028232104502968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_63
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 8580
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b642a33125ef7700800000000000000
+      internalID: 540402411070703288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_64
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 8580
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 761197479308ef8b0800000000000000
+      internalID: -5116511142390722201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_65
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 8580
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cff5fcbbd156bd1e0800000000000000
+      internalID: -2172031216896745476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_66
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 8580
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d91cda6b299646a30800000000000000
+      internalID: 4207604030721868189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_67
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 8580
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb66b32030eeca1a0800000000000000
+      internalID: -6796796040919161156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_68
+      rect:
+        serializedVersion: 2
+        x: 5225
+        y: 8580
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 030fada23648026b0800000000000000
+      internalID: -5323109198096306128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_69
+      rect:
+        serializedVersion: 2
+        x: 6270
+        y: 8580
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a42595602ece6ed0800000000000000
+      internalID: -2418769311312829279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_70
+      rect:
+        serializedVersion: 2
+        x: 7315
+        y: 8580
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2f4e3484905612a0800000000000000
+      internalID: -6767132791273533652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_71
+      rect:
+        serializedVersion: 2
+        x: 8360
+        y: 8580
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6d579eaf5dd7c0ed0800000000000000
+      internalID: -2446442139577911850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7800
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fbcdae9e71675f50800000000000000
+      internalID: 6870066953032944626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_73
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 7800
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f094af97eefd10290800000000000000
+      internalID: -7925807653853705969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_74
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 7800
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 904f6fd6f7d817780800000000000000
+      internalID: -8687006627775712247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_75
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 7800
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d8fd791d2cd92ce0800000000000000
+      internalID: -1429369320454096685
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_76
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 7800
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 003deeb61336613a0800000000000000
+      internalID: -6695054732124302592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_77
+      rect:
+        serializedVersion: 2
+        x: 5225
+        y: 7800
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c39532de0f64d81a0800000000000000
+      internalID: -6805705461302339268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_78
+      rect:
+        serializedVersion: 2
+        x: 6270
+        y: 7800
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 08e51b53afea49630800000000000000
+      internalID: 3932960764267159168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_79
+      rect:
+        serializedVersion: 2
+        x: 7315
+        y: 7800
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c91c30dbf00a4a40800000000000000
+      internalID: 5353092188613646787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_80
+      rect:
+        serializedVersion: 2
+        x: 8360
+        y: 7800
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35a515f41c7ac2380800000000000000
+      internalID: -8994629907064464813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_81
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 7020
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff66a80095abc6d60800000000000000
+      internalID: 7884881939042821887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_82
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 7020
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16c70b8f194d56540800000000000000
+      internalID: 5000636684672466017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_83
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 7020
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1eaf71c9b8f75540800000000000000
+      internalID: 4996735788289863199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_84
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 7020
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77e35a54dcea8fa80800000000000000
+      internalID: -8432798105591267721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_85
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 7020
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14812472368ecdf50800000000000000
+      internalID: 6907651441037547585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_86
+      rect:
+        serializedVersion: 2
+        x: 5225
+        y: 7020
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1be756271415ac180800000000000000
+      internalID: -9094367155987317071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_87
+      rect:
+        serializedVersion: 2
+        x: 6270
+        y: 7020
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 980e645f5ebf51f50800000000000000
+      internalID: 6851659373195223177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_88
+      rect:
+        serializedVersion: 2
+        x: 7315
+        y: 7020
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31b09e578bcdbbb80800000000000000
+      internalID: -8377859996982375661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_89
+      rect:
+        serializedVersion: 2
+        x: 8360
+        y: 7020
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26060306494493250800000000000000
+      internalID: 5924842188842229858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6240
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd33511af6ea94030800000000000000
+      internalID: 3479503981587543003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_91
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 6240
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5c36575a71baef10800000000000000
+      internalID: 2299845698735455324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_92
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 6240
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0bdc2739bdbf51c0800000000000000
+      internalID: -4512679698409661681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_93
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 6240
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67c5e5a879bb6dfe0800000000000000
+      internalID: -1164537194092798858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_94
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 6240
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae68a28d8193c8210800000000000000
+      internalID: 1336505968290858730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_95
+      rect:
+        serializedVersion: 2
+        x: 5225
+        y: 6240
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24177fdea6fa6d9c0800000000000000
+      internalID: -3902739153276145342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_96
+      rect:
+        serializedVersion: 2
+        x: 6270
+        y: 6240
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4b02b184517c08b0800000000000000
+      internalID: -5184644463243162803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_97
+      rect:
+        serializedVersion: 2
+        x: 7315
+        y: 6240
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 332bd2d7f74a9f9d0800000000000000
+      internalID: -2739978030810287565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_98
+      rect:
+        serializedVersion: 2
+        x: 8360
+        y: 6240
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26eb435320b15f110800000000000000
+      internalID: 1293970164235419234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_99
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5460
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ab273376fda54ab0800000000000000
+      internalID: -5024418535255364703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_100
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 5460
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c009f6ddd2ee1590800000000000000
+      internalID: -7701468870334676799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_101
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 5460
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb70f66fc0c62d170800000000000000
+      internalID: 8201736674324973503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_102
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 5460
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc6b692014c12abd0800000000000000
+      internalID: -2620500967634323761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_103
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 5460
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a263ba2472c27860800000000000000
+      internalID: 7526291731477914272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_104
+      rect:
+        serializedVersion: 2
+        x: 5225
+        y: 5460
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9ad031804715f570800000000000000
+      internalID: 8499725437544487579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_105
+      rect:
+        serializedVersion: 2
+        x: 6270
+        y: 5460
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 978f622da98dd2470800000000000000
+      internalID: 8371585441813952633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_106
+      rect:
+        serializedVersion: 2
+        x: 7315
+        y: 5460
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c6e4d41d38541b50800000000000000
+      internalID: 6562967576351401669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_107
+      rect:
+        serializedVersion: 2
+        x: 8360
+        y: 5460
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 323a91059becd64d0800000000000000
+      internalID: -3139626069899238621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_108
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4680
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7931db7fadd9c50c0800000000000000
+      internalID: -4585616756785212521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_109
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 4680
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de468c45a2af6c750800000000000000
+      internalID: 6325017786406429933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_110
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 4680
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d32801f3f14f3ba10800000000000000
+      internalID: 1924149880856543805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_111
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 4680
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8c50a949ca1f0990800000000000000
+      internalID: -7417680609429922673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_112
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 4680
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b30c7857c9f9993d0800000000000000
+      internalID: -3199350565934481349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_113
+      rect:
+        serializedVersion: 2
+        x: 5225
+        y: 4680
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8925eb416732d1800800000000000000
+      internalID: 584662516689162904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_114
+      rect:
+        serializedVersion: 2
+        x: 6270
+        y: 4680
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 569b7ec883c12fed0800000000000000
+      internalID: -2381810223717828251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_115
+      rect:
+        serializedVersion: 2
+        x: 7315
+        y: 4680
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28cfa09a3b40a44e0800000000000000
+      internalID: -1996778315103667070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_116
+      rect:
+        serializedVersion: 2
+        x: 8360
+        y: 4680
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4e1b87bb116fb830800000000000000
+      internalID: 4089093758347058763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_117
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3900
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1abcfc75a2a1a6b90800000000000000
+      internalID: -7247951881135207519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_118
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 3900
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc392ea659f65f060800000000000000
+      internalID: 6986613084469236683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_119
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 3900
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d90b2d42cde6a510800000000000000
+      internalID: 1560195739704560088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_120
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 3900
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ac2890f509cfc290800000000000000
+      internalID: -7867848996644442969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_121
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 3900
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77f3aa2bf46743510800000000000000
+      internalID: 1527976258257436535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_122
+      rect:
+        serializedVersion: 2
+        x: 5225
+        y: 3900
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 53404a29cfcf6ae50800000000000000
+      internalID: 6820416847421375541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_123
+      rect:
+        serializedVersion: 2
+        x: 6270
+        y: 3900
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ed4c58a7df234f90800000000000000
+      internalID: -6970675194950300191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_124
+      rect:
+        serializedVersion: 2
+        x: 7315
+        y: 3900
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9aa14ffdb82694060800000000000000
+      internalID: 6938185053838252713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_125
+      rect:
+        serializedVersion: 2
+        x: 8360
+        y: 3900
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59af5763b83cb4e70800000000000000
+      internalID: 9100582474713791125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3120
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b6aa22e996cff9e0800000000000000
+      internalID: -1585330179584383311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_127
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 3120
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8141380a84b1a4b80800000000000000
+      internalID: -8409879355416439784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_128
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 3120
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c96bae942e754f30800000000000000
+      internalID: 4559188893528451524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_129
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 3120
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e463109ba8adf390800000000000000
+      internalID: -7782879126216284959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_130
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 3120
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66b2cdca0962bcac0800000000000000
+      internalID: -3833928254958589082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_131
+      rect:
+        serializedVersion: 2
+        x: 5225
+        y: 3120
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b48a2d65b94ed2df0800000000000000
+      internalID: -203255052334094261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_132
+      rect:
+        serializedVersion: 2
+        x: 6270
+        y: 3120
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52729ec228c251fc0800000000000000
+      internalID: -3524862195736697051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_133
+      rect:
+        serializedVersion: 2
+        x: 7315
+        y: 3120
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89f1a725781d2bc40800000000000000
+      internalID: 5526710071871545240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_134
+      rect:
+        serializedVersion: 2
+        x: 8360
+        y: 3120
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06fa6021759d200c0800000000000000
+      internalID: -4610884100486156448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_135
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2340
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e70cf7517d4e1e3e0800000000000000
+      internalID: -2026086744910217090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_136
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 2340
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59907339bc1448a30800000000000000
+      internalID: 4216567493729651093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_137
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 2340
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b33aa562fe52ceaa0800000000000000
+      internalID: -6130483283687201989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_138
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 2340
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a38d2e019806c660800000000000000
+      internalID: 7405616056358503331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_139
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 2340
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64b3377f6cf6b6790800000000000000
+      internalID: -7535806651128661178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_140
+      rect:
+        serializedVersion: 2
+        x: 5225
+        y: 2340
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acdff80cd51f6fdd0800000000000000
+      internalID: -2452507562091741750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_141
+      rect:
+        serializedVersion: 2
+        x: 6270
+        y: 2340
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adac105aaf4f8dcf0800000000000000
+      internalID: -227162423834850598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_142
+      rect:
+        serializedVersion: 2
+        x: 7315
+        y: 2340
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b97b8c48c04cb0670800000000000000
+      internalID: 8506107879265712027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_143
+      rect:
+        serializedVersion: 2
+        x: 8360
+        y: 2340
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eebc4cb27b3e90270800000000000000
+      internalID: 8217349370967018478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_144
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1560
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d61256afea720bf70800000000000000
+      internalID: 9200897671196647789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_145
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 1560
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50f4611b874d2e770800000000000000
+      internalID: 8638700650082225925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_146
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 1560
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 457a4f9076dfd5310800000000000000
+      internalID: 1395550078545209172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_147
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 1560
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b29cf414c400e130800000000000000
+      internalID: 3593877742853853877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_148
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 1560
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6339662fff796730800000000000000
+      internalID: 3992863278478472047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_149
+      rect:
+        serializedVersion: 2
+        x: 5225
+        y: 1560
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3203f078dfd63bcd0800000000000000
+      internalID: -2543568428874125277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_150
+      rect:
+        serializedVersion: 2
+        x: 6270
+        y: 1560
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e19d04e557c42dd50800000000000000
+      internalID: 6760550057612728606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_151
+      rect:
+        serializedVersion: 2
+        x: 7315
+        y: 1560
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3987e8a04e3dccb20800000000000000
+      internalID: 3156130415262988435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_152
+      rect:
+        serializedVersion: 2
+        x: 8360
+        y: 1560
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9979b4683d28fe10800000000000000
+      internalID: 2231583335593376155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_153
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 780
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 413e72e28725e1740800000000000000
+      internalID: 5124624102118122260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_154
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 780
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2bf796c6489de220800000000000000
+      internalID: 2516835196516956972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_155
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 780
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e2fab98c97ffbc10800000000000000
+      internalID: 2071646605311406824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_156
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 780
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09d5c8d11a4135600800000000000000
+      internalID: 455730669512580496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_157
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 780
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 278a7602614c5ee10800000000000000
+      internalID: 2226401190116567154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_158
+      rect:
+        serializedVersion: 2
+        x: 5225
+        y: 780
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85083f83536ad6890800000000000000
+      internalID: -7463126259964084136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_159
+      rect:
+        serializedVersion: 2
+        x: 6270
+        y: 780
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2dbcffa45a1a01d0800000000000000
+      internalID: -3383863218983355091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_160
+      rect:
+        serializedVersion: 2
+        x: 7315
+        y: 780
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb723b7e2b2199160800000000000000
+      internalID: 7032672852716496828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_161
+      rect:
+        serializedVersion: 2
+        x: 8360
+        y: 780
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce0314da9d0689930800000000000000
+      internalID: 4150173544652812524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_162
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 867fab29420426480800000000000000
+      internalID: -8907486587160692888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_163
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 0
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e26d1d8e909efa740800000000000000
+      internalID: 5165603526387291694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_164
+      rect:
+        serializedVersion: 2
+        x: 2090
+        y: 0
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e25d6e164b99fe10800000000000000
+      internalID: 2231985815799288549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_165
+      rect:
+        serializedVersion: 2
+        x: 3135
+        y: 0
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f41e081019939650800000000000000
+      internalID: 6238498203240371448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_166
+      rect:
+        serializedVersion: 2
+        x: 4180
+        y: 0
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bb075465bf24c2a0800000000000000
+      internalID: -6718192288010925131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_167
+      rect:
+        serializedVersion: 2
+        x: 5225
+        y: 0
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f108250997ffa32d0800000000000000
+      internalID: -3298042879518015457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kalpoeria_Hurt_168
+      rect:
+        serializedVersion: 2
+        x: 6270
+        y: 0
+        width: 1045
+        height: 780
+      alignment: 9
+      pivot: {x: 0.666, y: 0.134}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 83f20977eab153220800000000000000
+      internalID: 2464906807199412024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 8654960e88f5bd74fa6f0b6644d9030f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":9.0,"y":19.0},"gridSpriteSize":{"x":1045.0,"y":780.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.6660000085830689,"y":0.1340000033378601},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Kalpoeria_Hurt_0: 1497957623892631155
+      Kalpoeria_Hurt_1: -6130176105131584530
+      Kalpoeria_Hurt_10: -7601177605647820112
+      Kalpoeria_Hurt_100: -7701468870334676799
+      Kalpoeria_Hurt_101: 8201736674324973503
+      Kalpoeria_Hurt_102: -2620500967634323761
+      Kalpoeria_Hurt_103: 7526291731477914272
+      Kalpoeria_Hurt_104: 8499725437544487579
+      Kalpoeria_Hurt_105: 8371585441813952633
+      Kalpoeria_Hurt_106: 6562967576351401669
+      Kalpoeria_Hurt_107: -3139626069899238621
+      Kalpoeria_Hurt_108: -4585616756785212521
+      Kalpoeria_Hurt_109: 6325017786406429933
+      Kalpoeria_Hurt_11: 6199892871235832577
+      Kalpoeria_Hurt_110: 1924149880856543805
+      Kalpoeria_Hurt_111: -7417680609429922673
+      Kalpoeria_Hurt_112: -3199350565934481349
+      Kalpoeria_Hurt_113: 584662516689162904
+      Kalpoeria_Hurt_114: -2381810223717828251
+      Kalpoeria_Hurt_115: -1996778315103667070
+      Kalpoeria_Hurt_116: 4089093758347058763
+      Kalpoeria_Hurt_117: -7247951881135207519
+      Kalpoeria_Hurt_118: 6986613084469236683
+      Kalpoeria_Hurt_119: 1560195739704560088
+      Kalpoeria_Hurt_12: 3140848377447762033
+      Kalpoeria_Hurt_120: -7867848996644442969
+      Kalpoeria_Hurt_121: 1527976258257436535
+      Kalpoeria_Hurt_122: 6820416847421375541
+      Kalpoeria_Hurt_123: -6970675194950300191
+      Kalpoeria_Hurt_124: 6938185053838252713
+      Kalpoeria_Hurt_125: 9100582474713791125
+      Kalpoeria_Hurt_126: -1585330179584383311
+      Kalpoeria_Hurt_127: -8409879355416439784
+      Kalpoeria_Hurt_128: 4559188893528451524
+      Kalpoeria_Hurt_129: -7782879126216284959
+      Kalpoeria_Hurt_13: -3013127954911971007
+      Kalpoeria_Hurt_130: -3833928254958589082
+      Kalpoeria_Hurt_131: -203255052334094261
+      Kalpoeria_Hurt_132: -3524862195736697051
+      Kalpoeria_Hurt_133: 5526710071871545240
+      Kalpoeria_Hurt_134: -4610884100486156448
+      Kalpoeria_Hurt_135: -2026086744910217090
+      Kalpoeria_Hurt_136: 4216567493729651093
+      Kalpoeria_Hurt_137: -6130483283687201989
+      Kalpoeria_Hurt_138: 7405616056358503331
+      Kalpoeria_Hurt_139: -7535806651128661178
+      Kalpoeria_Hurt_14: -8838765473688124813
+      Kalpoeria_Hurt_140: -2452507562091741750
+      Kalpoeria_Hurt_141: -227162423834850598
+      Kalpoeria_Hurt_142: 8506107879265712027
+      Kalpoeria_Hurt_143: 8217349370967018478
+      Kalpoeria_Hurt_144: 9200897671196647789
+      Kalpoeria_Hurt_145: 8638700650082225925
+      Kalpoeria_Hurt_146: 1395550078545209172
+      Kalpoeria_Hurt_147: 3593877742853853877
+      Kalpoeria_Hurt_148: 3992863278478472047
+      Kalpoeria_Hurt_149: -2543568428874125277
+      Kalpoeria_Hurt_15: -8327984942379176780
+      Kalpoeria_Hurt_150: 6760550057612728606
+      Kalpoeria_Hurt_151: 3156130415262988435
+      Kalpoeria_Hurt_152: 2231583335593376155
+      Kalpoeria_Hurt_153: 5124624102118122260
+      Kalpoeria_Hurt_154: 2516835196516956972
+      Kalpoeria_Hurt_155: 2071646605311406824
+      Kalpoeria_Hurt_156: 455730669512580496
+      Kalpoeria_Hurt_157: 2226401190116567154
+      Kalpoeria_Hurt_158: -7463126259964084136
+      Kalpoeria_Hurt_159: -3383863218983355091
+      Kalpoeria_Hurt_16: -5635329384176019891
+      Kalpoeria_Hurt_160: 7032672852716496828
+      Kalpoeria_Hurt_161: 4150173544652812524
+      Kalpoeria_Hurt_162: -8907486587160692888
+      Kalpoeria_Hurt_163: 5165603526387291694
+      Kalpoeria_Hurt_164: 2231985815799288549
+      Kalpoeria_Hurt_165: 6238498203240371448
+      Kalpoeria_Hurt_166: -6718192288010925131
+      Kalpoeria_Hurt_167: -3298042879518015457
+      Kalpoeria_Hurt_168: 2464906807199412024
+      Kalpoeria_Hurt_17: 5478769020879091204
+      Kalpoeria_Hurt_18: 2264944588969008886
+      Kalpoeria_Hurt_19: 5238414987160590776
+      Kalpoeria_Hurt_2: -7273667917249153760
+      Kalpoeria_Hurt_20: -265945637326058638
+      Kalpoeria_Hurt_21: -1080942486000220644
+      Kalpoeria_Hurt_22: -4392040093854236481
+      Kalpoeria_Hurt_23: -3942350554411575322
+      Kalpoeria_Hurt_24: 3481942601697298147
+      Kalpoeria_Hurt_25: 1284667537763830282
+      Kalpoeria_Hurt_26: -5271518338813975928
+      Kalpoeria_Hurt_27: 5404436124700341449
+      Kalpoeria_Hurt_28: 7823780437344893962
+      Kalpoeria_Hurt_29: -3421405646279931928
+      Kalpoeria_Hurt_3: -414473627712350479
+      Kalpoeria_Hurt_30: 5694726719354624119
+      Kalpoeria_Hurt_31: -9092388772375132834
+      Kalpoeria_Hurt_32: -6745517081832001346
+      Kalpoeria_Hurt_33: -1866848049814602835
+      Kalpoeria_Hurt_34: -2877575898418372278
+      Kalpoeria_Hurt_35: 5826232788426840988
+      Kalpoeria_Hurt_36: 1398601730825246516
+      Kalpoeria_Hurt_37: -7756466672440875469
+      Kalpoeria_Hurt_38: -9147894567469497599
+      Kalpoeria_Hurt_39: -345530262272308729
+      Kalpoeria_Hurt_4: 8823329597376169733
+      Kalpoeria_Hurt_40: 8723493506180148112
+      Kalpoeria_Hurt_41: 255244054145013274
+      Kalpoeria_Hurt_42: 2256867107200258998
+      Kalpoeria_Hurt_43: -5370878835572000960
+      Kalpoeria_Hurt_44: 5553176383688299236
+      Kalpoeria_Hurt_45: 1502367161021936921
+      Kalpoeria_Hurt_46: -5767434592553982767
+      Kalpoeria_Hurt_47: -7511355573427063984
+      Kalpoeria_Hurt_48: -4382707963707943779
+      Kalpoeria_Hurt_49: -1379292066881503401
+      Kalpoeria_Hurt_5: -1680038392497523325
+      Kalpoeria_Hurt_50: -6831331177928390870
+      Kalpoeria_Hurt_51: 5636751510766860673
+      Kalpoeria_Hurt_52: 7899752377568933085
+      Kalpoeria_Hurt_53: 8206181422475058119
+      Kalpoeria_Hurt_54: -2262271429423765543
+      Kalpoeria_Hurt_55: 8064357577199346875
+      Kalpoeria_Hurt_56: -9193767547277678111
+      Kalpoeria_Hurt_57: 6613458929191668830
+      Kalpoeria_Hurt_58: 339743719566002293
+      Kalpoeria_Hurt_59: 6444545662267011808
+      Kalpoeria_Hurt_6: 4599559297273569108
+      Kalpoeria_Hurt_60: 835611459940342773
+      Kalpoeria_Hurt_61: -5586867007674964581
+      Kalpoeria_Hurt_62: 7809028232104502968
+      Kalpoeria_Hurt_63: 540402411070703288
+      Kalpoeria_Hurt_64: -5116511142390722201
+      Kalpoeria_Hurt_65: -2172031216896745476
+      Kalpoeria_Hurt_66: 4207604030721868189
+      Kalpoeria_Hurt_67: -6796796040919161156
+      Kalpoeria_Hurt_68: -5323109198096306128
+      Kalpoeria_Hurt_69: -2418769311312829279
+      Kalpoeria_Hurt_7: -5043837238560466412
+      Kalpoeria_Hurt_70: -6767132791273533652
+      Kalpoeria_Hurt_71: -2446442139577911850
+      Kalpoeria_Hurt_72: 6870066953032944626
+      Kalpoeria_Hurt_73: -7925807653853705969
+      Kalpoeria_Hurt_74: -8687006627775712247
+      Kalpoeria_Hurt_75: -1429369320454096685
+      Kalpoeria_Hurt_76: -6695054732124302592
+      Kalpoeria_Hurt_77: -6805705461302339268
+      Kalpoeria_Hurt_78: 3932960764267159168
+      Kalpoeria_Hurt_79: 5353092188613646787
+      Kalpoeria_Hurt_8: -3436079229852023821
+      Kalpoeria_Hurt_80: -8994629907064464813
+      Kalpoeria_Hurt_81: 7884881939042821887
+      Kalpoeria_Hurt_82: 5000636684672466017
+      Kalpoeria_Hurt_83: 4996735788289863199
+      Kalpoeria_Hurt_84: -8432798105591267721
+      Kalpoeria_Hurt_85: 6907651441037547585
+      Kalpoeria_Hurt_86: -9094367155987317071
+      Kalpoeria_Hurt_87: 6851659373195223177
+      Kalpoeria_Hurt_88: -8377859996982375661
+      Kalpoeria_Hurt_89: 5924842188842229858
+      Kalpoeria_Hurt_9: 5703990940641039064
+      Kalpoeria_Hurt_90: 3479503981587543003
+      Kalpoeria_Hurt_91: 2299845698735455324
+      Kalpoeria_Hurt_92: -4512679698409661681
+      Kalpoeria_Hurt_93: -1164537194092798858
+      Kalpoeria_Hurt_94: 1336505968290858730
+      Kalpoeria_Hurt_95: -3902739153276145342
+      Kalpoeria_Hurt_96: -5184644463243162803
+      Kalpoeria_Hurt_97: -2739978030810287565
+      Kalpoeria_Hurt_98: 1293970164235419234
+      Kalpoeria_Hurt_99: -5024418535255364703
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

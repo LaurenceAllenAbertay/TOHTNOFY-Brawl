@@ -38,6 +38,8 @@ namespace DDD.TNFY.BRAWL
             CurrentAbilityContext = ctx;
             unit.FaceDirection(ctx.aimDir);
 
+            bool isFollowing = ctx.ability.cameraMode == CameraMode.Follow && cameraController != null;
+
             if (!string.IsNullOrEmpty(ctx.ability.AnimationState) && unitAnimator != null)
                 yield return StartCoroutine(ExecuteTimedEffects(ctx, targets));
             else
@@ -51,6 +53,9 @@ namespace DDD.TNFY.BRAWL
                 Unit returnTo = (ctx.caster != null && !ctx.caster.IsDead) ? ctx.caster : null;
                 yield return StartCoroutine(UnitDownedSequencer.Instance.DrainDownedQueue(returnTo));
             }
+
+            if (isFollowing)
+                cameraController.EndFollowing();
 
             ClearContext();
         }
@@ -66,6 +71,9 @@ namespace DDD.TNFY.BRAWL
                 yield return StartCoroutine(cameraController.TransitionTo(
                     cameraController.UnitFocusPosition(unit)));
             }
+
+            if (ctx.ability.cameraMode == CameraMode.Follow && cameraController != null)
+                cameraController.BeginFollowing(unit);
             
             var animator = unitAnimator?.GetComponent<Animator>();
             if (animator == null)
@@ -144,15 +152,6 @@ namespace DDD.TNFY.BRAWL
                 }
             }
             unitAnimator.OnAbilityEffectEvent += OnAbilityEffect;
-            
-            if (HasChargeEffect(ctx.ability))
-            {
-                yield return StartCoroutine(ExecuteChargeSequence(ctx, targets));
-                unitAnimator.OnCastEffectEvent -= OnCastEffect;
-                unitAnimator.OnAbilityEffectEvent -= OnAbilityEffect;
-                if (!castEffectTriggered) SpawnCastEffect(ctx);
-                yield break;
-            }
 
             float waitTime = 0f;
             while (waitTime < 1f && !animator.GetCurrentAnimatorStateInfo(0).IsName(resolvedAnimState))
@@ -185,6 +184,12 @@ namespace DDD.TNFY.BRAWL
             {
                 if (enableDebugLogging) Debug.Log("[AbilitySequencer] AnimEvent_CastEffect fallback triggered");
                 SpawnCastEffect(ctx);
+            }
+
+            if (HasChargeEffect(ctx.ability))
+            {
+                yield return StartCoroutine(ExecuteChargeSequence(ctx, targets));
+                yield break;
             }
             
             yield return StartCoroutine(HandlePostAnimationEffects(ctx, targets, midAnimFiredEffects));
@@ -221,7 +226,7 @@ namespace DDD.TNFY.BRAWL
             var chargeEffect = ctx.ability.effects.OfType<ChargeEffect>().FirstOrDefault();
             if (chargeEffect == null) yield break;
 
-            yield return StartCoroutine(chargeEffect.ExecuteCharge(ctx, targets, unitAnimator, cameraController));
+            yield return StartCoroutine(chargeEffect.ExecuteCharge(ctx, targets, unitAnimator));
             yield return StartCoroutine(HandleRemainingEffects(ctx, targets));
         }
 
@@ -244,7 +249,7 @@ namespace DDD.TNFY.BRAWL
                 yield break;
             }
 
-            bool shouldUseTransitions = cameraMode == CameraMode.Targeted;
+            bool shouldUseTransitions = cameraMode == CameraMode.Targeted || cameraMode == CameraMode.PreExecutionZoom;
             bool hasMovementEffect = ctx.ability.effects.Any(e =>
                 e.AnimationPhase == EffectAnimationPhase.Displacement && !e.IsSelfOnly(ctx));
 
@@ -310,7 +315,7 @@ namespace DDD.TNFY.BRAWL
 
         private IEnumerator HandleSingleTargetingEffects(AbilityContext ctx, List<Unit> targets)
         {
-            bool wideFraming = ctx.ability.effects.Any(e => e.NeedsWideFraming);
+            bool wideFraming = ctx.ability.cameraMode == CameraMode.PreExecutionZoom;
 
             foreach (var target in targets)
             {

@@ -27,7 +27,8 @@ MonoBehaviour:
   maxTargets: 1
   canExecuteWithoutTargets: 0
   endTurnOnCast: 0
-  suppressCameraTransitions: 0
+  legacySuppressCameraTransitions: 0
+  cameraMode: 1
   animationState: Swing
   animationHoldState: 
   animationHoldReleaseState: 

@@ -17,6 +17,9 @@ namespace DDD.TNFY.BRAWL
         [SerializeField] private string moveAnimationState = "";
         
         [SerializeField] private string stopAnimationState = "";
+
+        [Tooltip("Off (default): movement duration is Distance / Charge Speed, and the Move Animation State should loop to cover however long that ends up taking - use this for abilities whose charge distance varies. On: movement duration instead matches the Move Animation State's own clip length exactly (it should NOT loop) - the caster arrives right as it finishes. Use this when the animation is a single, fixed one-shot regardless of distance.")]
+        [SerializeField] private bool matchMovementToAnimationLength = false;
         
         public override EffectAnimationPhase AnimationPhase => EffectAnimationPhase.Displacement;
 
@@ -25,7 +28,7 @@ namespace DDD.TNFY.BRAWL
 
         }
         
-        public IEnumerator ExecuteCharge(AbilityContext ctx, IReadOnlyList<Unit> targets, UnitAnimator casterAnimator, CameraController cameraController)
+        public IEnumerator ExecuteCharge(AbilityContext ctx, IReadOnlyList<Unit> targets, UnitAnimator casterAnimator)
         {
             if (ctx?.caster == null) yield break;
 
@@ -71,7 +74,6 @@ namespace DDD.TNFY.BRAWL
             Vector3 startPos = caster.transform.position;
             Vector3 endPos = casterLandingTile.transform.position;
             float distance = Vector3.Distance(startPos, endPos);
-            float duration = casterWillMove ? distance / chargeSpeed : 0f;
             
             var traversalTiles = ctx.ability.targeting.GetTraversal(ctx);
             var passProgressByTarget = new Dictionary<Unit, float>();
@@ -88,14 +90,22 @@ namespace DDD.TNFY.BRAWL
             }
             var triggeredTargets = new HashSet<Unit>();
             
-            if (cameraController != null) cameraController.enabled = false;
-            
-            Vector3 cameraOffset = cameraController != null
-                ? cameraController.transform.position - caster.transform.position
-                : new Vector3(0f, 0f, -6.5f);
-            
-            if (!string.IsNullOrEmpty(moveAnimationState) && casterAnimator != null)
+            float duration;
+
+            if (casterWillMove && matchMovementToAnimationLength &&
+                !string.IsNullOrEmpty(moveAnimationState) && casterAnimator != null)
+            {
                 casterAnimator.ForcePlayAnimation(moveAnimationState);
+                yield return null;
+                duration = casterAnimator.GetCurrentAnimationLength();
+            }
+            else
+            {
+                duration = casterWillMove ? distance / chargeSpeed : 0f;
+
+                if (!string.IsNullOrEmpty(moveAnimationState) && casterAnimator != null)
+                    casterAnimator.ForcePlayAnimation(moveAnimationState);
+            }
 
             float elapsed = 0f;
             
@@ -119,12 +129,6 @@ namespace DDD.TNFY.BRAWL
 
                 caster.transform.position = Vector3.Lerp(startPos, endPos, easedT);
                 
-                if (cameraController != null)
-                {
-                    Vector3 camPos = caster.transform.position + cameraOffset;
-                    cameraController.transform.position = cameraController.ClampToBounds(camPos);
-                }
-                
                 foreach (var kvp in passProgressByTarget)
                 {
                     if (!triggeredTargets.Contains(kvp.Key) && t >= kvp.Value)
@@ -139,12 +143,28 @@ namespace DDD.TNFY.BRAWL
             
             if (casterWillMove)
                 caster.transform.position = endPos;
-            if (cameraController != null) cameraController.enabled = true;
             
             if (!string.IsNullOrEmpty(stopAnimationState) && casterAnimator != null)
+            {
                 casterAnimator.PlayAnimation(stopAnimationState);
+
+                float startWait = 0f;
+                while (startWait < 1f && !casterAnimator.IsPlayingAnimation(stopAnimationState))
+                {
+                    yield return null;
+                    startWait += Time.deltaTime;
+                }
+
+                while (casterAnimator.IsPlayingAnimation(stopAnimationState) &&
+                       casterAnimator.GetCurrentAnimationTime() < 1f)
+                {
+                    yield return null;
+                }
+            }
             else if (casterAnimator != null)
+            {
                 casterAnimator.PlayIdle();
+            }
 
             if (unitToDisplace != null)
                 yield return caster.StartCoroutine(ApplyChargeDisplacementWithAnimation(unitToDisplace, ctx.aimDir));

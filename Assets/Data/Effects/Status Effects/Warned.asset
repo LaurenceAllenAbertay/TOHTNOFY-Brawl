@@ -16,11 +16,12 @@ MonoBehaviour:
   description: 
   icon: {fileID: 21300000, guid: f54fa3e21e4662f42a28db2e51d6a94d, type: 3}
   effectColor: {r: 1, g: 1, b: 1, a: 1}
-  effectType: 26
+  effectType: 28
   stackingBehavior: 1
   maxStacks: 1
   triggerTiming: 6
   triggersOnApplication: 0
+  expiryTiming: 0
   applicationVFX: {fileID: 0}
   persistentVFX: {fileID: 0}
   removalVFX: {fileID: 0}

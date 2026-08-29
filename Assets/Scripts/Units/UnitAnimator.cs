@@ -16,6 +16,7 @@ namespace DDD.TNFY.BRAWL
         
         private bool isInKnockbackSequence = false;
         private Coroutine knockbackSequence;
+        private Coroutine returnToIdleCoroutine;
 
         private Coroutine holdSequence;
         private StatusEffectInstance activeHoldInstance;
@@ -295,8 +296,11 @@ namespace DDD.TNFY.BRAWL
             if (isInKnockbackSequence) return;
 
             PlayAnimation(animationState, false);
-            
-            StartCoroutine(ReturnToIdleAfterAnimation(animationState));
+
+            if (returnToIdleCoroutine != null)
+                StopCoroutine(returnToIdleCoroutine);
+
+            returnToIdleCoroutine = StartCoroutine(ReturnToIdleAfterAnimation(animationState));
         }
 
         public void PlayAnimationThenHold(string castState, string holdState, string releaseState)
@@ -415,11 +419,22 @@ namespace DDD.TNFY.BRAWL
 
         public void ForcePlayAnimation(string stateName)
         {
-            if (animator != null)
+            if (animator == null) return;
+
+            if (!HasState(stateName))
             {
-                animator.Play(stateName, 0, 0f); 
-                currentAnimation = stateName;
+                Debug.LogWarning($"[UnitAnimator] '{stateName}' is not a state on {gameObject.name}'s Animator Controller — nothing will play.", this);
+                return;
             }
+
+            if (returnToIdleCoroutine != null)
+            {
+                StopCoroutine(returnToIdleCoroutine);
+                returnToIdleCoroutine = null;
+            }
+
+            animator.Play(stateName, 0, 0f);
+            currentAnimation = stateName;
         }
         
         public void PlayKnockbackStart(string stateNameOverride = null)
@@ -551,6 +566,8 @@ namespace DDD.TNFY.BRAWL
                 yield return null;
             }
 
+            returnToIdleCoroutine = null;
+
             if (currentAnimation != DOWNED_STATE && !isInKnockbackSequence)
             {
                 PlayIdle();
@@ -607,6 +624,12 @@ namespace DDD.TNFY.BRAWL
         {
             if (animator == null) return 0f;
             return animator.GetCurrentAnimatorStateInfo(0).normalizedTime;
+        }
+
+        public float GetCurrentAnimationLength()
+        {
+            if (animator == null) return 0f;
+            return animator.GetCurrentAnimatorStateInfo(0).length;
         }
 
         public void SetBool(string parameterName, bool value)

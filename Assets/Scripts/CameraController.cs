@@ -35,6 +35,8 @@ namespace DDD.TNFY.BRAWL
 
         private Coroutine _shakeCoroutine;
         private float _currentShakeMagnitude = 0f;
+
+        private Coroutine followCoroutine;
         
         public static CameraController Instance { get; private set; }
 
@@ -175,6 +177,28 @@ namespace DDD.TNFY.BRAWL
             ));
         }
 
+        public void BeginFollowing(Unit target)
+        {
+            if (target == null) return;
+
+            EndFollowing();
+            enabled = false;
+
+            Vector3 offset = transform.position - target.transform.position;
+            followCoroutine = StartCoroutine(FollowRoutine(target, offset));
+        }
+
+        public void EndFollowing()
+        {
+            if (followCoroutine != null)
+            {
+                StopCoroutine(followCoroutine);
+                followCoroutine = null;
+            }
+
+            enabled = true;
+        }
+
         #endregion
 
         #region Private
@@ -221,6 +245,15 @@ namespace DDD.TNFY.BRAWL
 
             movement = movement.normalized * moveSpeed * Time.deltaTime;
             transform.position = ClampToBounds(transform.position + movement);
+        }
+
+        private IEnumerator FollowRoutine(Unit target, Vector3 offset)
+        {
+            while (target != null)
+            {
+                transform.position = ClampToBounds(target.transform.position + offset);
+                yield return null;
+            }
         }
 
         private void OnTurnStarted(Unit newActiveUnit)

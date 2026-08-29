@@ -19,6 +19,7 @@ MonoBehaviour:
   rangeType: 0
   range: 5
   damage: 0
+  cooldown: 0
   attackType: 0
   canHitEnemies: 0
   canHitAllies: 1
@@ -27,9 +28,11 @@ MonoBehaviour:
   maxTargets: 1
   canExecuteWithoutTargets: 0
   endTurnOnCast: 0
-  suppressCameraTransitions: 0
+  legacySuppressCameraTransitions: 0
+  cameraMode: 2
   animationState: Heads_Up
-  animationStateHurt: Heads_Up
+  animationHoldState: 
+  animationHoldReleaseState: 
   castEffectPrefab: {fileID: 0}
   castEffectOffset: {x: 0, y: 0, z: 0}
   parentCastEffectToCaster: 0

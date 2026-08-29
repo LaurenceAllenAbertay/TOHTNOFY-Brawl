@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e4057410d222494daf110231494a293, type: 3}
   m_Name: Kalpoeria Dizzy
   m_EditorClassIdentifier: 
+  midAnimationEventIndex: -1
   statusesToApply:
   - statusEffectData: {fileID: 11400000, guid: dfe8ee69909dbe7438f6eb20653708f7, type: 2}
     applyTo: 1
     duration: 2
     allyDuration: 0
-    effectPower: 0
+    effectPower: 1
     useAbilityDamage: 0
     damageMultiplier: 0
     scaleDurationWithDamage: 0

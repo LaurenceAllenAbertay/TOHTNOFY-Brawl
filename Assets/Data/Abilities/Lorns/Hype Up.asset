@@ -28,7 +28,7 @@ MonoBehaviour:
   canExecuteWithoutTargets: 0
   endTurnOnCast: 0
   legacySuppressCameraTransitions: 0
-  cameraModeOverride: 1
+  cameraMode: 3
   animationState: Mind_Games
   animationHoldState: 
   animationHoldReleaseState: 

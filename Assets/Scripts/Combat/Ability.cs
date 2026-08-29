@@ -24,7 +24,9 @@ namespace DDD.TNFY.BRAWL
     {
         None = 1,
         Targeted = 2,
-        PostExecutionZoom = 3
+        PostExecutionZoom = 3,
+        Follow = 4,
+        PreExecutionZoom = 5
     }
 
     [CreateAssetMenu(menuName = "TNFY Brawl/Ability")]

@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddfdb81b4d304644abd1c352f346db62, type: 3}
   m_Name: Kalpoeria Charge
   m_EditorClassIdentifier: 
+  midAnimationEventIndex: -1
   chargeSpeed: 4
   moveToEnd: 1
   chargeUntilBlocked: 0
-  moveAnimationState: Heads_Up
-  stopAnimationState: Heads_Up
+  moveAnimationState: Kalpoeria_Move
+  stopAnimationState: Kalpoeria_Stop
+  matchMovementToAnimationLength: 1

@@ -229,7 +229,7 @@ AnimationClip:
     - time: 3.4333334
       value: {fileID: -5627556497556948862, guid: 4783f69fbf14cd64fbf377a39ac6cd80, type: 3}
     attribute: m_Sprite
-    path: Root/Kallper
+    path: KallperRoot/Kallper
     classID: 114
     script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
     flags: 2
@@ -241,7 +241,7 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 2678724085
+      path: 2097512567
       attribute: 2015549526
       script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
       typeID: 114
