@@ -492,6 +492,12 @@ namespace DDD.TNFY.BRAWL
         {
             targetingController?.CancelAbilityTargeting(currentActiveUnit);
         }
+
+        public void RefreshMovementHighlightIfActive(Unit unit)
+        {
+            if (unit == null || unit != currentActiveUnit) return;
+            targetingController?.RestoreDefaultHighlights(currentActiveUnit);
+        }
         
         public void StartAbilityExecution(Ability ability, AbilityContext ctx, bool isDirectional, Vector2Int aimDir)
         {

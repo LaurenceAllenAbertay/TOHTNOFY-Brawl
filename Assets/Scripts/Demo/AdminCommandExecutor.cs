@@ -289,6 +289,92 @@ namespace DDD.TNFY.BRAWL
             return $"Teleported {activeUnit.name} to tile {targetTile.name}.";
         }
 
+        private static readonly Dictionary<string, Vector2Int> KnockbackDirections =
+            new Dictionary<string, Vector2Int>(System.StringComparer.OrdinalIgnoreCase)
+            {
+                { "north", Vector2Int.up },
+                { "south", Vector2Int.down },
+                { "east",  Vector2Int.right },
+                { "west",  Vector2Int.left },
+            };
+
+        public static IEnumerator ExecuteKnockback(AdminParsedCommand command, Unit targetUnit, System.Action<string> onComplete)
+        {
+            if (targetUnit == null)
+            {
+                onComplete?.Invoke("Error: no target unit.");
+                yield break;
+            }
+
+            if (targetUnit.IsDead || targetUnit.IsBody)
+            {
+                onComplete?.Invoke($"Error: '{targetUnit.name}' is dead or is a body and cannot be knocked back.");
+                yield break;
+            }
+
+            if (targetUnit.currentTile == null)
+            {
+                onComplete?.Invoke($"Error: '{targetUnit.name}' has no current tile.");
+                yield break;
+            }
+
+            string dirRaw = command.GetSingleValue("dir");
+            if (string.IsNullOrEmpty(dirRaw))
+            {
+                onComplete?.Invoke("Syntax error: /knockback requires dir:north/south/east/west.");
+                yield break;
+            }
+
+            if (!KnockbackDirections.TryGetValue(dirRaw, out Vector2Int direction))
+            {
+                onComplete?.Invoke($"Syntax error: 'dir' must be north, south, east, or west — got '{dirRaw}'.");
+                yield break;
+            }
+
+            string amountRaw = command.GetSingleValue("amount");
+            if (string.IsNullOrEmpty(amountRaw))
+            {
+                onComplete?.Invoke("Syntax error: /knockback requires an amount.");
+                yield break;
+            }
+
+            if (!int.TryParse(amountRaw, out int amount))
+            {
+                onComplete?.Invoke($"Syntax error: '{amountRaw}' is not a whole number.");
+                yield break;
+            }
+
+            if (amount < 1)
+            {
+                onComplete?.Invoke("Syntax error: /knockback requires an amount of at least 1.");
+                yield break;
+            }
+
+            var unitAnimator = targetUnit.GetComponentInChildren<UnitAnimator>();
+
+            var knockbackEffect = ScriptableObject.CreateInstance<KnockbackEffect>();
+            knockbackEffect.knockbackDistance = amount;
+
+            var ctx = new AbilityContext { caster = targetUnit, aimDir = direction };
+
+            knockbackEffect.Apply(ctx, new List<Unit> { targetUnit });
+
+            if (unitAnimator != null)
+                yield return new WaitUntil(() => targetUnit == null || !unitAnimator.IsInKnockbackSequence);
+
+            Object.Destroy(knockbackEffect);
+
+            if (targetUnit == null)
+            {
+                onComplete?.Invoke("Knockback applied, but the unit no longer exists.");
+                yield break;
+            }
+
+            CombatManager.Instance?.RefreshMovementHighlightIfActive(targetUnit);
+
+            onComplete?.Invoke($"Knocked back '{targetUnit.name}' {amount} tile(s) {dirRaw.ToLowerInvariant()}.");
+        }
+
         public static string ExecuteReset()
         {
             string sceneName = SceneManager.GetActiveScene().name;

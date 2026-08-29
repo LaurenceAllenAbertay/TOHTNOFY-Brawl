@@ -168,6 +168,7 @@ namespace DDD.TNFY.BRAWL
                 case AdminCommandType.Damage:
                 case AdminCommandType.TrueDamage:
                 case AdminCommandType.StatusEffect:
+                case AdminCommandType.Knockback:
                 case AdminCommandType.Skip:
                     ArmForTarget(command);
                     break;
@@ -259,6 +260,10 @@ namespace DDD.TNFY.BRAWL
                     RunSync(AdminCommandExecutor.ExecuteStatusEffect(command, targetUnit));
                     break;
 
+                case AdminCommandType.Knockback:
+                    RunKnockback(command, targetUnit);
+                    break;
+
                 case AdminCommandType.Skip:
                     RunSkip(targetUnit);
                     break;
@@ -312,6 +317,23 @@ namespace DDD.TNFY.BRAWL
         private System.Collections.IEnumerator RunKillCoroutine(Unit targetUnit)
         {
             yield return StartCoroutine(AdminCommandExecutor.ExecuteKill(targetUnit, message =>
+            {
+                Log(message);
+            }));
+
+            _pendingRunning = false;
+            FocusInputField();
+        }
+
+        private void RunKnockback(AdminParsedCommand command, Unit targetUnit)
+        {
+            _pendingRunning = true;
+            StartCoroutine(RunKnockbackCoroutine(command, targetUnit));
+        }
+
+        private System.Collections.IEnumerator RunKnockbackCoroutine(AdminParsedCommand command, Unit targetUnit)
+        {
+            yield return StartCoroutine(AdminCommandExecutor.ExecuteKnockback(command, targetUnit, message =>
             {
                 Log(message);
             }));

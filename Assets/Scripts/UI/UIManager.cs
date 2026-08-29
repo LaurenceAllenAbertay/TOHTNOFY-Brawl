@@ -250,6 +250,7 @@ namespace DDD.TNFY.BRAWL
         private void HandleAbilityAnimationStarted()
         {
             uiHiddenForAnimation = true;
+            if (endTurnButton != null) endTurnButton.gameObject.SetActive(false);
             SetUIVisibility(false);
             abilityPanel?.CollapseIfExpanded();
         }
@@ -259,6 +260,13 @@ namespace DDD.TNFY.BRAWL
             uiHiddenForAnimation = false;
             if (ShouldShowUI())
             {
+                if (endTurnButton != null)
+                {
+                    bool isHumanControlled = currentPlayer != null && !currentPlayer.IsAIControlled;
+                    endTurnButton.gameObject.SetActive(isHumanControlled);
+                    if (isHumanControlled)
+                        UpdateEndTurnButtonColour(currentPlayer);
+                }
                 SetUIVisibility(true);
                 abilityPanel?.UpdateAbilityDisplay();
                 abilityPanel?.UpdateAbilityButtonStates();

@@ -67,6 +67,14 @@ namespace DDD.TNFY.BRAWL
                     "    Click a tile to teleport the current active unit there."
                 },
                 {
+                    AdminCommandType.Knockback,
+                    "> /knockback dir:north/south/east/west, amount:X\n" +
+                    "    Click a unit to knock it back amount tiles in the given direction, respecting walls, occupied tiles,\n" +
+                    "    and ledges exactly like a real knockback ability (same animation, same camera follow on multi-tile knockbacks).\n" +
+                    "    amount must be >= 1.\n" +
+                    "    e.g. /knockback dir:north, amount:3"
+                },
+                {
                     AdminCommandType.Skip,
                     "> /skip\n" +
                     "    Click a unit to force-end the current turn and jump straight to that unit's turn.\n" +

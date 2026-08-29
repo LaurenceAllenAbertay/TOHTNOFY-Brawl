@@ -229,6 +229,15 @@ namespace DDD.TNFY.BRAWL
             }
         }
 
+        private void FaceAttacker(Unit attacker)
+        {
+            if (attacker == null || attacker.currentTile == null || currentTile == null) return;
+
+            int dx = attacker.currentTile.gridPosition.x - currentTile.gridPosition.x;
+            if (dx > 0) FaceDirection(Vector2Int.right);
+            else if (dx < 0) FaceDirection(Vector2Int.left);
+        }
+
         public void FaceDirection(Vector2Int direction)
         {
             if (unitSpriteRenderers == null || unitSpriteRenderers.Length == 0) return;
@@ -385,6 +394,8 @@ namespace DDD.TNFY.BRAWL
             }
 
             if (amount <= 0) return;
+
+            FaceAttacker(attacker);
 
             currentHealth -= amount;
             Debug.Log($"{name} took {amount} damage. HP now {currentHealth}");

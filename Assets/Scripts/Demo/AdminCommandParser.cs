@@ -14,6 +14,7 @@ namespace DDD.TNFY.BRAWL
         TrueDamage,
         StatusEffect,
         Teleport,
+        Knockback,
         Skip,
         Reset,
         Help
@@ -69,6 +70,7 @@ namespace DDD.TNFY.BRAWL
                 { "truedamage",   AdminCommandType.TrueDamage },
                 { "statuseffect", AdminCommandType.StatusEffect },
                 { "teleport",     AdminCommandType.Teleport },
+                { "knockback",    AdminCommandType.Knockback },
                 { "skip",         AdminCommandType.Skip },
                 { "reset",        AdminCommandType.Reset },
                 { "help",         AdminCommandType.Help },
