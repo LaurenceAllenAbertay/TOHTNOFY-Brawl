@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace DDD.TNFY.BRAWL
 {
@@ -36,8 +37,22 @@ namespace DDD.TNFY.BRAWL
         private Coroutine _shakeCoroutine;
         private float _currentShakeMagnitude = 0f;
 
-        private Coroutine followCoroutine;
-        
+        private class FocusRequest
+        {
+            public int id;
+            public Unit followUnit;
+            public Vector3 targetPosition;
+            public float transitionDuration;
+        }
+
+        private readonly List<FocusRequest> _focusStack = new List<FocusRequest>();
+        private int _nextFocusId = 1;
+        private Coroutine _activeFocusCoroutine;
+        private Coroutine _activeFollowCoroutine;
+
+        private Unit _idleFocusUnit;
+        private float _idleFocusDuration = 1f;
+
         public static CameraController Instance { get; private set; }
 
         void Awake()
@@ -83,12 +98,12 @@ namespace DDD.TNFY.BRAWL
 
         void Update()
         {
-            if (!isTransitioning && _playerInputEnabled)
+            if (!isTransitioning && _playerInputEnabled && _focusStack.Count == 0)
                 HandleMovement();
         }
 
         #region Public API
-        
+
         public Vector3 UnitFocusPosition(Unit unit)
         {
             if (unit == null) return transform.position;
@@ -106,29 +121,6 @@ namespace DDD.TNFY.BRAWL
                 worldPosition.y + cameraYOffset,
                 worldPosition.z - cameraZOffset
             ));
-        }
-
-        public IEnumerator TransitionTo(Vector3 targetPosition, float duration = 1f)
-        {
-            targetPosition = ClampToBounds(targetPosition);
-
-            if (Vector3.Distance(transform.position, targetPosition) < 0.01f)
-                yield break;
-
-            isTransitioning = true;
-            Vector3 startPosition = transform.position;
-            float elapsed = 0f;
-
-            while (elapsed < duration)
-            {
-                elapsed += Time.deltaTime;
-                transform.position = Vector3.Lerp(startPosition, targetPosition,
-                    Mathf.SmoothStep(0f, 1f, elapsed / duration));
-                yield return null;
-            }
-
-            transform.position = targetPosition;
-            isTransitioning = false;
         }
 
         public Vector3 ClampToBounds(Vector3 position)
@@ -155,7 +147,7 @@ namespace DDD.TNFY.BRAWL
         }
 
         public bool IsTransitioning => isTransitioning;
-        
+
         public void Shake(float magnitude, float duration)
         {
             if (_shakeCoroutine != null && magnitude <= _currentShakeMagnitude)
@@ -167,7 +159,7 @@ namespace DDD.TNFY.BRAWL
             _currentShakeMagnitude = magnitude;
             _shakeCoroutine = StartCoroutine(ShakeRoutine(magnitude, duration));
         }
-        
+
         public Vector3 FitRadius(Vector3 center, float worldRadius)
         {
             return ClampToBounds(new Vector3(
@@ -177,38 +169,177 @@ namespace DDD.TNFY.BRAWL
             ));
         }
 
-        public void BeginFollowing(Unit target)
+        public int PushFocus(Vector3 worldPosition, float transitionDuration, out Coroutine transition)
         {
-            if (target == null) return;
-
-            EndFollowing();
-            enabled = false;
-
-            Vector3 offset = transform.position - target.transform.position;
-            followCoroutine = StartCoroutine(FollowRoutine(target, offset));
-        }
-
-        public void EndFollowing()
-        {
-            if (followCoroutine != null)
+            var request = new FocusRequest
             {
-                StopCoroutine(followCoroutine);
-                followCoroutine = null;
-            }
-
-            enabled = true;
+                id = _nextFocusId++,
+                followUnit = null,
+                targetPosition = worldPosition,
+                transitionDuration = transitionDuration
+            };
+            _focusStack.Add(request);
+            transition = ActivateCurrent();
+            return request.id;
         }
+
+        public int PushFocus(Vector3 worldPosition, float transitionDuration = 1f)
+            => PushFocus(worldPosition, transitionDuration, out _);
+
+        public int PushFocus(Unit unit, float transitionDuration, out Coroutine transition)
+            => PushFocus(UnitFocusPosition(unit), transitionDuration, out transition);
+
+        public int PushFocus(Unit unit, float transitionDuration = 1f)
+            => PushFocus(unit, transitionDuration, out _);
+
+        public int PushFollow(Unit unit, float initialTransitionDuration, out Coroutine transition)
+        {
+            var request = new FocusRequest
+            {
+                id = _nextFocusId++,
+                followUnit = unit,
+                targetPosition = Vector3.zero,
+                transitionDuration = initialTransitionDuration
+            };
+            _focusStack.Add(request);
+            transition = ActivateCurrent();
+            return request.id;
+        }
+
+        public int PushFollow(Unit unit, float initialTransitionDuration = 1f)
+            => PushFollow(unit, initialTransitionDuration, out _);
+
+        public void PopFocus(int handle, out Coroutine transition)
+        {
+            transition = null;
+
+            int index = _focusStack.FindIndex(r => r.id == handle);
+            if (index < 0) return;
+
+            bool wasTop = index == _focusStack.Count - 1;
+            _focusStack.RemoveAt(index);
+
+            if (wasTop)
+                transition = ActivateCurrent();
+        }
+
+        public void PopFocus(int handle) => PopFocus(handle, out _);
+
+        public Coroutine SetIdleFocus(Unit unit, float transitionDuration = 1f)
+        {
+            _idleFocusUnit = unit;
+            _idleFocusDuration = transitionDuration;
+
+            if (_focusStack.Count == 0)
+                return ActivateCurrent();
+
+            return null;
+        }
+
+        public bool HasActiveFocusOverride => _focusStack.Count > 0;
 
         #endregion
 
         #region Private
 
+        private Coroutine ActivateCurrent()
+        {
+            if (_activeFocusCoroutine != null)
+            {
+                StopCoroutine(_activeFocusCoroutine);
+                _activeFocusCoroutine = null;
+            }
+
+            if (_activeFollowCoroutine != null)
+            {
+                StopCoroutine(_activeFollowCoroutine);
+                _activeFollowCoroutine = null;
+            }
+
+            if (_focusStack.Count > 0)
+            {
+                _activeFocusCoroutine = StartCoroutine(RunFocus(_focusStack[_focusStack.Count - 1]));
+            }
+            else if (_idleFocusUnit != null)
+            {
+                var idleRequest = new FocusRequest
+                {
+                    id = 0,
+                    followUnit = null,
+                    targetPosition = UnitFocusPosition(_idleFocusUnit),
+                    transitionDuration = _idleFocusDuration
+                };
+                _activeFocusCoroutine = StartCoroutine(RunFocus(idleRequest));
+            }
+
+            return _activeFocusCoroutine;
+        }
+
+        private bool IsActiveRequest(FocusRequest request)
+        {
+            if (_focusStack.Count > 0)
+                return ReferenceEquals(_focusStack[_focusStack.Count - 1], request);
+
+            return request.id == 0;
+        }
+
+        private IEnumerator RunFocus(FocusRequest request)
+        {
+            if (request.followUnit != null)
+            {
+                if (request.followUnit.currentTile != null)
+                    yield return StartCoroutine(TransitionTo(UnitFocusPosition(request.followUnit), request.transitionDuration));
+
+                if (IsActiveRequest(request))
+                    _activeFollowCoroutine = StartCoroutine(TrackFollow(request));
+            }
+            else
+            {
+                yield return StartCoroutine(TransitionTo(request.targetPosition, request.transitionDuration));
+            }
+        }
+
+        private IEnumerator TrackFollow(FocusRequest request)
+        {
+            Vector3 offset = transform.position - request.followUnit.transform.position;
+
+            while (IsActiveRequest(request) && request.followUnit != null)
+            {
+                transform.position = ClampToBounds(request.followUnit.transform.position + offset);
+                yield return null;
+            }
+        }
+
+        private IEnumerator TransitionTo(Vector3 targetPosition, float duration = 1f)
+        {
+            targetPosition = ClampToBounds(targetPosition);
+
+            if (Vector3.Distance(transform.position, targetPosition) < 0.01f)
+                yield break;
+
+            isTransitioning = true;
+            Vector3 startPosition = transform.position;
+            float elapsed = 0f;
+
+            while (elapsed < duration)
+            {
+                elapsed += Time.deltaTime;
+                transform.position = Vector3.Lerp(startPosition, targetPosition,
+                    Mathf.SmoothStep(0f, 1f, elapsed / duration));
+                yield return null;
+            }
+
+            transform.position = targetPosition;
+            isTransitioning = false;
+        }
+
         private void FocusOnUnitImmediate(Unit targetUnit)
         {
             if (targetUnit == null || targetUnit.currentTile == null) return;
             transform.position = UnitFocusPosition(targetUnit);
+            _idleFocusUnit = targetUnit;
         }
-        
+
         private void OnUnitTookDamage(Unit victim, int amount)
         {
             float t = Mathf.Clamp01(amount / shakeDamageReference);
@@ -216,7 +347,7 @@ namespace DDD.TNFY.BRAWL
             float duration  = Mathf.Lerp(0.1f,  shakeMaxDuration,  t);
             Shake(magnitude, duration);
         }
-        
+
         private IEnumerator ShakeRoutine(float magnitude, float duration)
         {
             Vector3 originalPosition = transform.position;
@@ -247,26 +378,11 @@ namespace DDD.TNFY.BRAWL
             transform.position = ClampToBounds(transform.position + movement);
         }
 
-        private IEnumerator FollowRoutine(Unit target, Vector3 offset)
-        {
-            while (target != null)
-            {
-                transform.position = ClampToBounds(target.transform.position + offset);
-                yield return null;
-            }
-        }
-
         private void OnTurnStarted(Unit newActiveUnit)
         {
             _playerInputEnabled = newActiveUnit != null && !newActiveUnit.IsAIControlled;
             if (newActiveUnit != null)
-                StartCoroutine(SmoothFocusOnUnit(newActiveUnit));
-        }
-
-        private IEnumerator SmoothFocusOnUnit(Unit targetUnit)
-        {
-            if (targetUnit == null || targetUnit.currentTile == null) yield break;
-            yield return StartCoroutine(TransitionTo(UnitFocusPosition(targetUnit), focusTransitionDuration));
+                SetIdleFocus(newActiveUnit, focusTransitionDuration);
         }
 
         #endregion

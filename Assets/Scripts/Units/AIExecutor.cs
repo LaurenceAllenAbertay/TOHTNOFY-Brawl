@@ -98,11 +98,16 @@ namespace DDD.TNFY.BRAWL
 
             if (waypoints.Count > 0)
             {
+                var camera = CameraController.Instance;
+                int focusHandle = camera != null ? camera.PushFollow(unit, 1f) : -1;
+
                 yield return StartCoroutine(UnitMovementController.Instance.ExecuteAnimatedMovement(
                     unit,
                     plan.movementTarget,
-                    waypoints,
-                    followCameraForAI: true));
+                    waypoints));
+
+                if (focusHandle >= 0)
+                    camera.PopFocus(focusHandle);
             }
         }
 
@@ -120,10 +125,14 @@ namespace DDD.TNFY.BRAWL
             Vector3 endPos = destination.transform.position;
 
             var cam = CameraController.Instance;
+            int focusHandle = -1;
             if (cam != null)
-                StartCoroutine(cam.TransitionTo(cam.WorldFocusPosition(endPos)));
+                focusHandle = cam.PushFocus(cam.WorldFocusPosition(endPos));
 
             yield return StartCoroutine(jumpSystem.JumpAnimation(unit, startPos, endPos));
+
+            if (focusHandle >= 0)
+                cam.PopFocus(focusHandle);
         }
 
         private bool CanAIJumpToTile(Tile targetTile)
@@ -193,7 +202,21 @@ namespace DDD.TNFY.BRAWL
                 {
                     bool cameraTransitioning = cameraController != null && cameraController.IsTransitioning;
                     bool abilityExecuting = unit.currentAbilityContext != null;
-                    if (!cameraTransitioning && !abilityExecuting) break;
+
+                    bool anyKnockbackPlaying = false;
+                    foreach (var otherUnit in UnitManager.AllUnits)
+                    {
+                        var ua = otherUnit.GetComponent<UnitAnimator>();
+                        if (ua != null && ua.IsInKnockbackSequence)
+                        {
+                            anyKnockbackPlaying = true;
+                            break;
+                        }
+                    }
+
+                    bool bigMomentActive = BigMomentSequencer.Instance != null && BigMomentSequencer.Instance.HasPending;
+
+                    if (!cameraTransitioning && !abilityExecuting && !anyKnockbackPlaying && !bigMomentActive) break;
                     elapsed += Time.deltaTime;
                     yield return null;
                 }

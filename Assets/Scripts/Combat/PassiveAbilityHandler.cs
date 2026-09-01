@@ -6,6 +6,8 @@ namespace DDD.TNFY.BRAWL
     {
         public Unit Owner { get; private set; }
         
+        private bool _initialised;
+        
         public PassiveAbility Passive => UnitLoadoutManager.GetPassive(Owner);
 
         private void Awake()
@@ -15,8 +17,16 @@ namespace DDD.TNFY.BRAWL
 
         private void Start()
         {
-            if (Passive != null)
-                Passive.Initialise(this);
+            TryInitialisePassive();
+        }
+
+        public void TryInitialisePassive()
+        {
+            if (_initialised) return;
+            if (Passive == null) return;
+
+            _initialised = true;
+            Passive.Initialise(this);
         }
 
         private void OnDestroy()

@@ -124,7 +124,7 @@ namespace DDD.TNFY.BRAWL
                 {
                     Tile beyondTile = GridManager.Instance.GetTileInDirection(knockbackPath[0], resolvedDir);
                     if (beyondTile?.currentUnit != null && beyondTile.currentUnit != target)
-                        HandleCollision(ctx, target, beyondTile.currentUnit, resolvedDir);
+                        yield return HandleCollision(ctx, target, beyondTile.currentUnit, resolvedDir);
                 }
 
                 float remainingStart = knockbackStartDuration - 0.1f - movementDurationPerTile;
@@ -137,11 +137,12 @@ namespace DDD.TNFY.BRAWL
             else
             {
                 var camera = followCamera ? Object.FindAnyObjectByType<CameraController>() : null;
+                int followHandle = -1;
                 if (camera != null)
                 {
                     float totalDuration = knockbackPath.Count * movementDurationPerTile;
                     Vector3 finalFocus  = camera.WorldFocusPosition(knockbackPath[knockbackPath.Count - 1].transform.position);
-                    ctx.caster.StartCoroutine(camera.TransitionTo(finalFocus, totalDuration));
+                    followHandle = camera.PushFocus(finalFocus, totalDuration);
                 }
 
                 yield return new WaitForSeconds(0.1f);
@@ -167,7 +168,7 @@ namespace DDD.TNFY.BRAWL
                         Tile beyondTile = GridManager.Instance.GetTileInDirection(knockbackPath[i], resolvedDir);
                         if (beyondTile?.currentUnit != null && beyondTile.currentUnit != target)
                         {
-                            HandleCollision(ctx, target, beyondTile.currentUnit, resolvedDir);
+                            yield return HandleCollision(ctx, target, beyondTile.currentUnit, resolvedDir);
                             break;
                         }
                     }
@@ -177,6 +178,9 @@ namespace DDD.TNFY.BRAWL
                     unitAnimator.PlayKnockbackEnd();
 
                 yield return new WaitForSeconds(knockbackEndDuration);
+
+                if (followHandle >= 0)
+                    camera.PopFocus(followHandle);
             }
 
             if (isPlayerSelfKnockback)
@@ -355,19 +359,22 @@ namespace DDD.TNFY.BRAWL
             }
         }
 
-        private void HandleCollision(AbilityContext ctx, Unit knockingUnit, Unit collidedUnit, Vector2Int knockbackDirection)
+        private IEnumerator HandleCollision(AbilityContext ctx, Unit knockingUnit, Unit collidedUnit, Vector2Int knockbackDirection)
         {
             if (!collidedUnit.IsBody)
             {
                 int damage = collisionDamage >= 0 ? collisionDamage : ctx.ability.damage;
                 collidedUnit.ReceiveDamage(damage);
                 Debug.Log($"[Knockback] {collidedUnit.name} takes {damage} collision damage");
+
+                if (BigMomentSequencer.Instance != null)
+                    yield return BigMomentSequencer.Instance.DrainQueue();
             }
             
             Tile destination = GridDirectionUtility.ResolveKnockbackDestination(
                 collidedUnit.currentTile, knockbackDirection);
 
-            if (destination == null) return; 
+            if (destination == null) yield break; 
 
             if (collidedUnit.IsBody)
             {

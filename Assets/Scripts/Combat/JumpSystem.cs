@@ -188,13 +188,20 @@ namespace DDD.TNFY.BRAWL
             
             currentUnit.SetCurrentTileLogical(targetTile);
 
-            StartCoroutine(JumpAnimation(currentUnit, startPos, endPos, stompTarget, originTile));
+            combatManager.BlockAnimationForEffect();
+            StartCoroutine(RunPlayerJump(currentUnit, startPos, endPos, stompTarget, originTile));
 
             SetMovementUsed();
 
             isTargetingJump = false;
             hoveredTile = null;
             GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
+        }
+
+        private IEnumerator RunPlayerJump(Unit unit, Vector3 startPos, Vector3 endPos, Unit stompTarget, Tile originTile)
+        {
+            yield return StartCoroutine(JumpAnimation(unit, startPos, endPos, stompTarget, originTile));
+            combatManager.ReleaseAnimationBlock();
         }
 
         private bool IsJumpBlockedByWalls(Tile startTile, Tile targetTile)
@@ -315,18 +322,21 @@ namespace DDD.TNFY.BRAWL
             UIEvents.OnMovementAnimationComplete();
 
             if (stompTarget != null)
-                ExecuteStomp(unit, stompTarget, originTile);
+                yield return StartCoroutine(ExecuteStomp(unit, stompTarget, originTile));
         }
 
-        private void ExecuteStomp(Unit stomper, Unit victim, Tile originTile)
+        private IEnumerator ExecuteStomp(Unit stomper, Unit victim, Tile originTile)
         {
-            if (victim == null || stomper == null) return;
+            if (victim == null || stomper == null) yield break;
 
             int damage = Mathf.Max(1, stomper.currentAttack - victim.currentDefense);
             victim.ReceiveDamage(damage);
             UnitManager.NotifyUnitDamaged(victim, stomper);
 
-            if (victim.currentHealth <= 0) return;
+            if (BigMomentSequencer.Instance != null)
+                yield return StartCoroutine(BigMomentSequencer.Instance.DrainQueue());
+
+            if (victim.currentHealth <= 0) yield break;
             
             Vector2Int knockbackDir = Vector2Int.right; 
             if (originTile != null && stomper.currentTile != null)
@@ -341,7 +351,11 @@ namespace DDD.TNFY.BRAWL
             {
                 Debug.Log($"[Stomp] {victim.name} has no valid knockback tile — killed by impact.");
                 victim.ReceiveDamage(victim.currentHealth);
-                return;
+
+                if (BigMomentSequencer.Instance != null)
+                    yield return StartCoroutine(BigMomentSequencer.Instance.DrainQueue());
+
+                yield break;
             }
 
             var victimAnimator = victim.GetComponent<UnitAnimator>();

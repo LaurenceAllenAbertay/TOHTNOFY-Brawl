@@ -38,7 +38,8 @@ namespace DDD.TNFY.BRAWL
         public bool CanEndTurn => currentState == CombatState.WaitingForInput &&
                                   !isMoving && !isWaitingForAnimation &&
                                   currentActiveUnit != null && !currentActiveUnit.IsAIControlled &&
-                                  (Time.time - turnStartTime >= turnStartProtectionDuration);
+                                  (Time.time - turnStartTime >= turnStartProtectionDuration) &&
+                                  (BigMomentSequencer.Instance == null || !BigMomentSequencer.Instance.HasPending);
 
         public bool IsSafeForAdminCommand
         {
@@ -50,6 +51,7 @@ namespace DDD.TNFY.BRAWL
                 if (IsTargetingAbility) return false;
                 if (jumpSystem != null && jumpSystem.IsTargetingJump) return false;
                 if (cameraController != null && cameraController.IsTransitioning) return false;
+                if (BigMomentSequencer.Instance != null && BigMomentSequencer.Instance.HasPending) return false;
 
                 foreach (var unit in UnitManager.AllUnits)
                 {
@@ -606,13 +608,15 @@ namespace DDD.TNFY.BRAWL
 
             if (worldRadius <= 0f) yield break;
 
-            yield return StartCoroutine(cameraController.TransitionTo(
-                cameraController.FitRadius(casterPosition, worldRadius)));
+            Coroutine transition;
+            int zoomHandle = cameraController.PushFocus(
+                cameraController.FitRadius(casterPosition, worldRadius), 1f, out transition);
+            yield return transition;
 
             yield return new WaitForSeconds(postExecutionZoomLingerDuration);
 
-            yield return StartCoroutine(cameraController.TransitionTo(
-                cameraController.UnitFocusPosition(currentActiveUnit)));
+            cameraController.PopFocus(zoomHandle, out var revealTransition);
+            if (revealTransition != null) yield return revealTransition;
         }
 
         private IEnumerator WaitForCompleteAbilitySequence(Ability ability)
@@ -642,7 +646,9 @@ namespace DDD.TNFY.BRAWL
                         }
                     }
 
-                    if (!cameraTransitioning && !abilityExecuting && !anyKnockbackPlaying) break;
+                    bool bigMomentActive = BigMomentSequencer.Instance != null && BigMomentSequencer.Instance.HasPending;
+
+                    if (!cameraTransitioning && !abilityExecuting && !anyKnockbackPlaying && !bigMomentActive) break;
 
                     elapsed += Time.deltaTime;
                     yield return null;
@@ -676,7 +682,6 @@ namespace DDD.TNFY.BRAWL
                 currentActiveUnit,
                 targetTile,
                 waypoints,
-                followCameraForAI: false,
                 onMovementStarted: () =>
                 {
                     currentState = CombatState.MovingUnit;

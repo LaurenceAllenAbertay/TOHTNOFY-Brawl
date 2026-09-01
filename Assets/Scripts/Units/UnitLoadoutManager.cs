@@ -52,8 +52,10 @@ namespace DDD.TNFY.BRAWL
         {
             if (unit == null || unit.characterData == null) return new Ability[3];
 
-            if (Instance != null && Instance._loadouts.TryGetValue(unit.characterData, out var loadout)
-                                  && loadout.abilities != null)
+            UnitLoadout loadout = null;
+            bool found = Instance != null && Instance._loadouts.TryGetValue(unit.characterData, out loadout);
+
+            if (found && loadout.abilities != null)
                 return SanitiseAbilityArray(loadout.abilities);
 
             return SanitiseAbilityArray(unit.characterData.defaultAbilities);
@@ -63,7 +65,10 @@ namespace DDD.TNFY.BRAWL
         {
             if (unit == null || unit.characterData == null) return null;
 
-            if (Instance != null && Instance._loadouts.TryGetValue(unit.characterData, out var loadout))
+            UnitLoadout loadout = null;
+            bool found = Instance != null && Instance._loadouts.TryGetValue(unit.characterData, out loadout);
+
+            if (found)
                 return loadout.passive;
 
             return null;

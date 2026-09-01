@@ -47,7 +47,7 @@ namespace DDD.TNFY.BRAWL
             _queue.Enqueue(new PendingDowned { victim = victim, killer = killer });
         }
 
-        public IEnumerator DrainDownedQueue(Unit returnToUnit)
+        public IEnumerator DrainDownedQueue()
         {
             while (_isDraining)
                 yield return null;
@@ -68,15 +68,6 @@ namespace DDD.TNFY.BRAWL
             }
 
             _presentedInline.Clear();
-            
-            if (returnToUnit != null && _camera != null && returnToUnit.gameObject != null)
-            {
-                yield return StartCoroutine(
-                    _camera.TransitionTo(
-                        _camera.UnitFocusPosition(returnToUnit),
-                        cameraTransitionDuration));
-            }
-
             _isDraining = false;
         }
 
@@ -117,13 +108,13 @@ namespace DDD.TNFY.BRAWL
         private IEnumerator PresentDowned(Unit victim)
         {
             if (victim == null) yield break;
-            
+
+            int focusHandle = -1;
             if (_camera != null)
             {
-                yield return StartCoroutine(
-                    _camera.TransitionTo(
-                        _camera.UnitFocusPosition(victim),
-                        cameraTransitionDuration));
+                Coroutine transition;
+                focusHandle = _camera.PushFocus(victim, cameraTransitionDuration, out transition);
+                yield return transition;
             }
             
             var healthBar    = victim.GetComponentInChildren<UnitHealthBarDisplay>();
@@ -141,6 +132,9 @@ namespace DDD.TNFY.BRAWL
             victim.GetComponentInChildren<StatusEffectIconDisplay>()?.HideImmediate();
 
             yield return new WaitForSeconds(lingerAfterDownedSeconds);
+
+            if (focusHandle >= 0)
+                _camera.PopFocus(focusHandle);
             
             bool shouldLeaveBody = victim is PlayerUnit ||
                                    (victim is NpcUnit npc && npc.leavesBodyOnDown);

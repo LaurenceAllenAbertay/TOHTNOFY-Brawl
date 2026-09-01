@@ -50,6 +50,8 @@ namespace DDD.TNFY.BRAWL
             _baseAttack   = data.attack;
             _baseDefense  = data.defense;
             currentSpeed  = data.speed;
+
+            GetComponent<PassiveAbilityHandler>()?.TryInitialisePassive();
         }
 
         public void EnsureTeamResolved()

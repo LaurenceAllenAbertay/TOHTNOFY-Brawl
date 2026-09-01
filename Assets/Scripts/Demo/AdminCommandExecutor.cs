@@ -404,7 +404,7 @@ namespace DDD.TNFY.BRAWL
 
             if (UnitDownedSequencer.Instance != null)
                 yield return UnitDownedSequencer.Instance.StartCoroutine(
-                    UnitDownedSequencer.Instance.DrainDownedQueue(returnToUnit));
+                    UnitDownedSequencer.Instance.DrainDownedQueue());
 
             onComplete?.Invoke($"Killed '{killedName}'.");
         }

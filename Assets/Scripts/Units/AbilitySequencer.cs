@@ -12,6 +12,7 @@ namespace DDD.TNFY.BRAWL
         private Unit unit;
         private UnitAnimator unitAnimator;
         private CameraController cameraController;
+        private int _abilityFocusHandle = -1;
 
         [Header("Debug")]
         [SerializeField] private bool enableDebugLogging = false;
@@ -37,8 +38,7 @@ namespace DDD.TNFY.BRAWL
         {
             CurrentAbilityContext = ctx;
             unit.FaceDirection(ctx.aimDir);
-
-            bool isFollowing = ctx.ability.cameraMode == CameraMode.Follow && cameraController != null;
+            _abilityFocusHandle = -1;
 
             if (!string.IsNullOrEmpty(ctx.ability.AnimationState) && unitAnimator != null)
                 yield return StartCoroutine(ExecuteTimedEffects(ctx, targets));
@@ -47,15 +47,15 @@ namespace DDD.TNFY.BRAWL
             
             if (!string.IsNullOrEmpty(ctx.ability.AnimationHoldState) && unitAnimator != null)
                 BindHoldToGrantedStatusEffect(ctx);
-            
-            if (UnitDownedSequencer.Instance != null)
-            {
-                Unit returnTo = (ctx.caster != null && !ctx.caster.IsDead) ? ctx.caster : null;
-                yield return StartCoroutine(UnitDownedSequencer.Instance.DrainDownedQueue(returnTo));
-            }
 
-            if (isFollowing)
-                cameraController.EndFollowing();
+            if (BigMomentSequencer.Instance != null)
+                yield return StartCoroutine(BigMomentSequencer.Instance.DrainQueue());
+
+            if (UnitDownedSequencer.Instance != null)
+                yield return StartCoroutine(UnitDownedSequencer.Instance.DrainDownedQueue());
+
+            if (_abilityFocusHandle >= 0 && cameraController != null)
+                cameraController.PopFocus(_abilityFocusHandle);
 
             ClearContext();
         }
@@ -68,12 +68,15 @@ namespace DDD.TNFY.BRAWL
             
             if (cameraController != null)
             {
-                yield return StartCoroutine(cameraController.TransitionTo(
-                    cameraController.UnitFocusPosition(unit)));
-            }
+                bool wantsFollow = ctx.ability.cameraMode == CameraMode.Follow;
+                Coroutine transition;
+                _abilityFocusHandle = wantsFollow
+                    ? cameraController.PushFollow(unit, 1f, out transition)
+                    : cameraController.PushFocus(unit, 1f, out transition);
 
-            if (ctx.ability.cameraMode == CameraMode.Follow && cameraController != null)
-                cameraController.BeginFollowing(unit);
+                if (transition != null)
+                    yield return transition;
+            }
             
             var animator = unitAnimator?.GetComponent<Animator>();
             if (animator == null)
@@ -316,22 +319,29 @@ namespace DDD.TNFY.BRAWL
         private IEnumerator HandleSingleTargetingEffects(AbilityContext ctx, List<Unit> targets)
         {
             bool wideFraming = ctx.ability.cameraMode == CameraMode.PreExecutionZoom;
+            int previousHandle = -1;
 
             foreach (var target in targets)
             {
                 if (target == null) continue;
 
-                yield return StartCoroutine(cameraController.TransitionTo(
-                    GetFocusPositionForTarget(target, wideFraming)));
+                Coroutine transition;
+                int handle = cameraController.PushFocus(GetFocusPositionForTarget(target, wideFraming), 1f, out transition);
+
+                if (previousHandle >= 0)
+                    cameraController.PopFocus(previousHandle);
+                previousHandle = handle;
+
+                yield return transition;
 
                 yield return StartCoroutine(PlayTargetEffectsWithAnimation(ctx, new List<Unit> { target }));
                 
                 if (!target.IsDead)
                     yield return new WaitForSeconds(0.3f);
             }
-            
-            yield return StartCoroutine(cameraController.TransitionTo(
-                cameraController.UnitFocusPosition(unit)));
+
+            if (previousHandle >= 0)
+                cameraController.PopFocus(previousHandle);
         }
 
         private Vector3 GetFocusPositionForTarget(Unit target, bool wideFraming)
@@ -517,13 +527,18 @@ namespace DDD.TNFY.BRAWL
         {
             if (effect == null) yield break;
 
+            int previewHandle = -1;
             if (cameraController != null && effect.NeedsCameraPreview(ctx, out var focusTile))
             {
                 Vector3 focusPosition = cameraController.WorldFocusPosition(focusTile.transform.position);
-                yield return StartCoroutine(cameraController.TransitionTo(focusPosition, 0.5f));
+                previewHandle = cameraController.PushFocus(focusPosition, 0.5f, out var transition);
+                yield return transition;
             }
 
             effect.Apply(ctx, targets);
+
+            if (previewHandle >= 0)
+                cameraController.PopFocus(previewHandle);
         }
 
         private void SpawnCastEffect(AbilityContext ctx)
@@ -622,23 +637,25 @@ namespace DDD.TNFY.BRAWL
                     continue;
                 }
                 
-                if (cameraController != null)
-                    yield return StartCoroutine(cameraController.TransitionTo(
-                        cameraController.UnitFocusPosition(target)));
-
                 if (enableDebugLogging)
                     Debug.Log($"[Warned] {target.name} walking to {dodgeTile.gridPosition} ({dodgePath.Count} steps)");
-                
+
+                int dodgeFocusHandle = -1;
+                if (cameraController != null)
+                {
+                    Coroutine transition;
+                    dodgeFocusHandle = cameraController.PushFollow(target, 1f, out transition);
+                    yield return transition;
+                }
+
                 if (UnitMovementController.Instance != null)
                     yield return StartCoroutine(UnitMovementController.Instance.ExecuteAnimatedMovement(
                         target,
                         dodgeTile,
-                        waypoints: dodgePath,
-                        followCameraForAI: true));
+                        waypoints: dodgePath));
 
-                if (cameraController != null)
-                    yield return StartCoroutine(cameraController.TransitionTo(
-                        cameraController.UnitFocusPosition(unit)));
+                if (dodgeFocusHandle >= 0)
+                    cameraController.PopFocus(dodgeFocusHandle);
 
                 targets.Remove(target);
                 Debug.Log($"[Warned] {target.name} successfully walked out of range.");

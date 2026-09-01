@@ -190,6 +190,9 @@ namespace DDD.TNFY.BRAWL
             
             OnTurnStarted?.Invoke(current);
             OnTotalTurnChanged?.Invoke(totalTurnCount);
+
+            if (BigMomentSequencer.Instance != null)
+                StartCoroutine(BigMomentSequencer.Instance.DrainQueue());
         }
 
         public Coroutine EndTurn()
@@ -221,8 +224,10 @@ namespace DDD.TNFY.BRAWL
             unit.TickAbilityCooldowns();
             
             if (cameraController != null)
-                yield return StartCoroutine(cameraController.TransitionTo(
-                    cameraController.UnitFocusPosition(unit)));
+            {
+                var transition = cameraController.SetIdleFocus(unit, 1f);
+                if (transition != null) yield return transition;
+            }
 
             yield return new WaitForSeconds(3f);
             
@@ -235,13 +240,18 @@ namespace DDD.TNFY.BRAWL
             Debug.Log($"[TurnManager] {unit.name} is dizzy — forcing random movement.");
             
             if (cameraController != null)
-                yield return StartCoroutine(cameraController.TransitionTo(
-                    cameraController.UnitFocusPosition(unit)));
+            {
+                var transition = cameraController.SetIdleFocus(unit, 1f);
+                if (transition != null) yield return transition;
+            }
             
             yield return new WaitForSeconds(1f);
             
             unit.StartTurn();
             OnTurnStarted?.Invoke(unit);
+
+            if (BigMomentSequencer.Instance != null)
+                yield return StartCoroutine(BigMomentSequencer.Instance.DrainQueue());
             
             if (unit.CanMove() && unit.currentTile != null && UnitMovementController.Instance != null)
             {
@@ -254,11 +264,23 @@ namespace DDD.TNFY.BRAWL
                 {
                     Tile randomDest = reachableTiles[Random.Range(0, reachableTiles.Count)];
                     Debug.Log($"[Dizzy] {unit.name} stumbles to {randomDest.name}.");
+
+                    int dizzyFocusHandle = -1;
+                    if (cameraController != null)
+                    {
+                        Coroutine transition;
+                        dizzyFocusHandle = cameraController.PushFollow(unit, 1f, out transition);
+                        yield return transition;
+                    }
+
                     yield return StartCoroutine(UnitMovementController.Instance.ExecuteAnimatedMovement(
-                        unit, randomDest, followCameraForAI: true));
+                        unit, randomDest));
+
+                    if (dizzyFocusHandle >= 0)
+                        cameraController.PopFocus(dizzyFocusHandle);
                     
                     if (UnitDownedSequencer.Instance != null)
-                        yield return StartCoroutine(UnitDownedSequencer.Instance.DrainDownedQueue(unit));
+                        yield return StartCoroutine(UnitDownedSequencer.Instance.DrainDownedQueue());
                 }
                 else
                 {
@@ -279,6 +301,9 @@ namespace DDD.TNFY.BRAWL
 
         private IEnumerator EndTurnSequence()
         {
+            if (BigMomentSequencer.Instance != null)
+                yield return StartCoroutine(BigMomentSequencer.Instance.DrainQueue());
+
             if (turnOrder.Count == 0)
             {
                 StartNextTurn();
@@ -313,18 +338,25 @@ namespace DDD.TNFY.BRAWL
                     yield return StartCoroutine(tile.TriggerEffects(currentRound));
             }
 
+            if (BigMomentSequencer.Instance != null)
+                yield return StartCoroutine(BigMomentSequencer.Instance.DrainQueue());
+
             if (UnitDownedSequencer.Instance != null)
-                yield return StartCoroutine(UnitDownedSequencer.Instance.DrainDownedQueue(returnToUnit: null));
+                yield return StartCoroutine(UnitDownedSequencer.Instance.DrainDownedQueue());
             
             var neutralSnapshot = new List<NeutralUnit>(UnitManager.AllNeutralUnits);
             foreach (var neutral in neutralSnapshot)
             {
                 if (neutral == null || neutral.IsDead) continue;
                 if (neutral.environmentAbility == null) continue;
-                
+
+                int neutralFocusHandle = -1;
                 if (cameraController != null)
-                    yield return StartCoroutine(cameraController.TransitionTo(
-                        cameraController.UnitFocusPosition(neutral)));
+                {
+                    Coroutine transition;
+                    neutralFocusHandle = cameraController.PushFocus(neutral, 1f, out transition);
+                    yield return transition;
+                }
 
                 var ctx = new AbilityContext
                 {
@@ -334,13 +366,16 @@ namespace DDD.TNFY.BRAWL
                 };
 
                 yield return StartCoroutine(neutral.ExecuteAbilityCoroutine(ctx));
+
+                if (neutralFocusHandle >= 0)
+                    cameraController.PopFocus(neutralFocusHandle);
                 
                 if (UnitDownedSequencer.Instance != null)
-                    yield return StartCoroutine(UnitDownedSequencer.Instance.DrainDownedQueue(returnToUnit: null));
+                    yield return StartCoroutine(UnitDownedSequencer.Instance.DrainDownedQueue());
             }
             
             if (UnitDownedSequencer.Instance != null)
-                yield return StartCoroutine(UnitDownedSequencer.Instance.DrainDownedQueue(returnToUnit: null));
+                yield return StartCoroutine(UnitDownedSequencer.Instance.DrainDownedQueue());
         }
         
         public void ResetTotalTurnCount()

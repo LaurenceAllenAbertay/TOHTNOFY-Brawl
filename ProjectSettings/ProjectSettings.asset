@@ -12,8 +12,8 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
-  productName: TOHTNOFYBrawl
+  companyName: Double Down Digital
+  productName: 'TOHTNOFY: Brawl'
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.003921569, g: 0.003921569, b: 0.003921569, a: 1}
@@ -140,7 +140,7 @@ PlayerSettings:
   loadStoreDebugModeEnabled: 0
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
-  bundleVersion: 0.1.1
+  bundleVersion: 0.1.7
   preloadedAssets:
   - {fileID: -944628639613478452, guid: beeaa79c8db8469418fd209e4d3b713a, type: 3}
   metroInputSource: 0

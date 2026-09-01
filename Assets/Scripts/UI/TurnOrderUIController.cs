@@ -322,7 +322,8 @@ namespace DDD.TNFY.BRAWL
         private IEnumerator SmoothCameraTransition(CameraController cameraController, Unit targetUnit)
         {
             SetAllButtonsInteractable(false);
-            yield return StartCoroutine(cameraController.TransitionTo(cameraController.UnitFocusPosition(targetUnit)));
+            var transition = cameraController.SetIdleFocus(targetUnit, 1f);
+            if (transition != null) yield return transition;
             SetAllButtonsInteractable(true);
         }
         

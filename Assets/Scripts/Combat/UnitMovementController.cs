@@ -11,8 +11,6 @@ namespace DDD.TNFY.BRAWL
         [Header("Settings")]
         [SerializeField] private float movementSpeed = 4f;
 
-        private CameraController cameraController;
-
         void Awake()
         {
             if (Instance != null && Instance != this)
@@ -23,18 +21,12 @@ namespace DDD.TNFY.BRAWL
             Instance = this;
         }
 
-        void Start()
-        {
-            cameraController = FindAnyObjectByType<CameraController>();
-        }
-
         #region Public API
         
         public IEnumerator ExecuteAnimatedMovement(
             Unit movingUnit,
             Tile destination,
             List<Tile> waypoints = null,
-            bool followCameraForAI = false,
             System.Action onMovementStarted = null,
             System.Action onMovementComplete = null)
         {
@@ -58,10 +50,7 @@ namespace DDD.TNFY.BRAWL
             if (unitAnimator != null)
                 unitAnimator.PlayMove();
 
-            if (followCameraForAI)
-                yield return StartCoroutine(MoveAlongWaypointsWithCamera(movingUnit, pathToUse, spriteRenderers));
-            else
-                yield return StartCoroutine(MoveAlongWaypoints(movingUnit, pathToUse, spriteRenderers));
+            yield return StartCoroutine(MoveAlongWaypoints(movingUnit, pathToUse, spriteRenderers));
 
             if (unitAnimator != null)
                 unitAnimator.PlayIdle();
@@ -132,93 +121,18 @@ namespace DDD.TNFY.BRAWL
                 currentPos = segmentEnd;
 
                 if (waypoint.HasActiveEffects)
+                {
                     yield return StartCoroutine(waypoint.TriggerOnEnterEffects(movingUnit));
+
+                    if (BigMomentSequencer.Instance != null)
+                        yield return StartCoroutine(BigMomentSequencer.Instance.DrainQueue());
+                }
             }
 
             if (dustFX != null)
                 dustFX.StopTrail();
 
             movingUnit.transform.position = waypoints[waypoints.Count - 1].transform.position;
-        }
-
-        private IEnumerator MoveAlongWaypointsWithCamera(Unit movingUnit, List<Tile> waypoints, SpriteRenderer[] spriteRenderers)
-        {
-            Vector3 currentPos = movingUnit.transform.position;
-
-            float totalDistance = CalculateTotalDistance(currentPos, waypoints);
-            float totalTime = totalDistance / movementSpeed;
-
-            var dustFX = movingUnit.GetComponent<UnitMoveDustFX>();
-            bool hasPlayedBurst = false;
-
-            bool shouldMoveCamera = cameraController != null;
-            Vector3 cameraStartPos = Vector3.zero;
-            Vector3 cameraTargetPos = Vector3.zero;
-
-            if (shouldMoveCamera)
-            {
-                cameraStartPos = cameraController.transform.position;
-                Vector3 finalPos = waypoints[waypoints.Count - 1].transform.position;
-                cameraTargetPos = cameraController.UnitFocusPosition(movingUnit);
-
-                cameraTargetPos = cameraController.ClampToBounds(new Vector3(
-                    finalPos.x,
-                    finalPos.y + 2f,
-                    finalPos.z - 3.5f));
-            }
-
-            float totalElapsed = 0f;
-
-            foreach (var waypoint in waypoints)
-            {
-                Vector3 segmentStart = currentPos;
-                Vector3 segmentEnd = waypoint.transform.position;
-                float segmentDistance = Vector3.Distance(segmentStart, segmentEnd);
-                float segmentTime = (segmentDistance / totalDistance) * totalTime;
-
-                UpdateSpriteFacing(spriteRenderers, segmentStart, segmentEnd);
-
-                Vector2Int segmentDirection = GridDirectionUtility.DirectionFromPositions(segmentStart, segmentEnd);
-                if (dustFX != null && segmentDirection != Vector2Int.zero)
-                {
-                    if (!hasPlayedBurst)
-                    {
-                        dustFX.PlayBurst(segmentDirection);
-                        hasPlayedBurst = true;
-                    }
-                    dustFX.StartTrail(segmentDirection);
-                }
-
-                float segmentElapsed = 0f;
-                while (segmentElapsed < segmentTime)
-                {
-                    segmentElapsed += Time.deltaTime;
-                    totalElapsed += Time.deltaTime;
-                    float smoothT = Mathf.SmoothStep(0f, 1f, segmentElapsed / segmentTime);
-                    movingUnit.transform.position = Vector3.Lerp(segmentStart, segmentEnd, smoothT);
-
-                    if (shouldMoveCamera)
-                    {
-                        float totalProgress = Mathf.Clamp01(totalElapsed / totalTime);
-                        cameraController.transform.position = Vector3.Lerp(
-                            cameraStartPos, cameraTargetPos, Mathf.SmoothStep(0f, 1f, totalProgress));
-                    }
-
-                    yield return null;
-                }
-
-                currentPos = segmentEnd;
-
-                if (waypoint.HasActiveEffects)
-                    yield return StartCoroutine(waypoint.TriggerOnEnterEffects(movingUnit));
-            }
-
-            if (dustFX != null)
-                dustFX.StopTrail();
-
-            movingUnit.transform.position = waypoints[waypoints.Count - 1].transform.position;
-            if (shouldMoveCamera)
-                cameraController.transform.position = cameraTargetPos;
         }
 
         #endregion

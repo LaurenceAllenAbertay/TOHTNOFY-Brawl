@@ -48,6 +48,7 @@ namespace DDD.TNFY.BRAWL
         private const string JUMP_STATE            = "Jump";
         private const string JUMP_BAD_STATE        = "Jump_Bad";
         private const string JUMP_HURT_STATE       = "Jump_Hurt";
+        private const string BIG_MOMENT_STATE      = "Big_Moment";
         
         public bool IsAnimating => animator != null && animator.GetCurrentAnimatorStateInfo(0).normalizedTime < 1.0f;
         public bool IsInKnockbackSequence => isInKnockbackSequence;
@@ -238,6 +239,10 @@ namespace DDD.TNFY.BRAWL
 
         public void AnimEvent_JumpLand() => OnJumpLandEvent?.Invoke();
 
+        public event System.Action OnBigMomentCompleteEvent;
+
+        public void AnimEvent_BigMomentComplete() => OnBigMomentCompleteEvent?.Invoke();
+
         public event System.Action<int> OnAbilityEffectEvent;
         
         public void AnimEvent_AbilityEffect0() => OnAbilityEffectEvent?.Invoke(0);
@@ -384,19 +389,63 @@ namespace DDD.TNFY.BRAWL
         
         public IEnumerator WaitForHurtAnimation()
         {
+            yield return WaitForAnimationToComplete(HURT_STATE);
+        }
+
+        private string IdentifyState(AnimatorStateInfo stateInfo)
+        {
+            string[] known =
+            {
+                IDLE_GOOD, IDLE_GOOD_TALKING, IDLE_BAD, IDLE_BAD_TALKING, IDLE_HURT, IDLE_HURT_TALKING,
+                MOVE_STATE, MOVE_BAD_STATE, MOVE_HURT_STATE, ATTACK_STATE, HURT_STATE, DOWNED_STATE,
+                KNOCKBACK_START_STATE, KNOCKBACK_MOVING_STATE, KNOCKBACK_END_STATE,
+                TARGETING_STATE, TARGETING_BAD_STATE, TARGETING_HURT_STATE,
+                JUMP_STATE, JUMP_BAD_STATE, JUMP_HURT_STATE, BIG_MOMENT_STATE
+            };
+
+            foreach (var candidate in known)
+            {
+                if (stateInfo.IsName(candidate))
+                    return candidate;
+            }
+
+            return $"unknown (shortNameHash={stateInfo.shortNameHash})";
+        }
+
+        public IEnumerator WaitForAnimationToComplete(string stateName, float maxWait = 5f)
+        {
             yield return null;
 
-            const float maxWait = 5f;
             float elapsed = 0f;
+            bool loggedIdentity = false;
 
             while (elapsed < maxWait)
             {
                 var stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-                if (stateInfo.IsName(HURT_STATE) && stateInfo.normalizedTime >= 1.0f && !stateInfo.loop)
-                    yield break;
 
-                if (!stateInfo.IsName(HURT_STATE))
+                if (!loggedIdentity)
+                {
+                    loggedIdentity = true;
+                    Debug.Log($"[UnitAnimator] WaitForAnimationToComplete('{stateName}') first poll on " +
+                             $"{animator.gameObject.name} (instance {animator.gameObject.GetInstanceID()}, controller " +
+                             $"'{(animator.runtimeAnimatorController != null ? animator.runtimeAnimatorController.name : "NULL")}') " +
+                             $"— IsName={stateInfo.IsName(stateName)}, normalizedTime={stateInfo.normalizedTime:F3}");
+                }
+
+                if (stateInfo.IsName(stateName) && stateInfo.normalizedTime >= 1.0f && !stateInfo.loop)
+                {
+                    Debug.Log($"[UnitAnimator] '{stateName}' on {gameObject.name} finished after {elapsed:F2}s " +
+                             $"(normalizedTime={stateInfo.normalizedTime:F2}, deltaTime this frame={Time.deltaTime:F2}s).");
                     yield break;
+                }
+
+                if (!stateInfo.IsName(stateName))
+                {
+                    Debug.LogWarning($"[UnitAnimator] Expected '{stateName}' to still be playing on {gameObject.name} " +
+                                     $"after {elapsed:F2}s, but the Animator had already moved on to " +
+                                     $"'{IdentifyState(stateInfo)}'.");
+                    yield break;
+                }
 
                 elapsed += Time.deltaTime;
                 yield return null;
@@ -435,6 +484,13 @@ namespace DDD.TNFY.BRAWL
 
             animator.Play(stateName, 0, 0f);
             currentAnimation = stateName;
+
+            var immediateCheck = animator.GetCurrentAnimatorStateInfo(0);
+            Debug.Log($"[UnitAnimator] ForcePlayAnimation('{stateName}') on {animator.gameObject.name} " +
+                     $"(instance {animator.gameObject.GetInstanceID()}, controller " +
+                     $"'{(animator.runtimeAnimatorController != null ? animator.runtimeAnimatorController.name : "NULL")}') " +
+                     $"— immediately after Play(): IsName={immediateCheck.IsName(stateName)}, " +
+                     $"normalizedTime={immediateCheck.normalizedTime:F3}");
         }
         
         public void PlayKnockbackStart(string stateNameOverride = null)

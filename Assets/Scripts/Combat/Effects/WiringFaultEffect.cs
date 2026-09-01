@@ -67,6 +67,15 @@ namespace DDD.TNFY.BRAWL
             Tile casterTile = ctx.caster.currentTile;
             if (casterTile == null) yield break;
 
+            bool isPlayerCaster = ctx.caster is PlayerUnit;
+            CombatManager combatManager = null;
+            if (isPlayerCaster)
+            {
+                combatManager = Object.FindAnyObjectByType<CombatManager>();
+                if (combatManager != null && combatManager.CurrentActiveUnit == ctx.caster)
+                    combatManager.BlockAnimationForEffect();
+            }
+
             Vector2Int recoilDir = new Vector2Int(-ctx.aimDir.x, -ctx.aimDir.y);
             List<Tile> recoilPath = CalculatePath(ctx.caster, recoilDir, recoilDistance);
 
@@ -88,6 +97,9 @@ namespace DDD.TNFY.BRAWL
                 UnitManager.NotifyUnitDamaged(hookedUnit, ctx.caster);
                 ctx.LastResolvedDamage += finalDamage;
                 Debug.Log($"[WiringFault] {hookedUnit.name} took {finalDamage} damage on arrival.");
+
+                if (BigMomentSequencer.Instance != null)
+                    yield return BigMomentSequencer.Instance.DrainQueue();
             }
             
             if (wallCase)
@@ -97,19 +109,18 @@ namespace DDD.TNFY.BRAWL
                 casterAnimator?.PlayFullKnockback(recoilKnockbackState);
                 while (casterAnimator != null && casterAnimator.IsInKnockbackSequence)
                     yield return null;
+
+                if (isPlayerCaster && combatManager != null &&
+                    combatManager.CurrentActiveUnit == ctx.caster)
+                {
+                    yield return ctx.caster.StartCoroutine(
+                        DelayedInputRestore(combatManager, ctx.caster));
+                }
+
                 yield break;
             }
             
             yield return new WaitForSeconds(pauseAfterPull);
-            
-            bool isPlayerCaster = ctx.caster is PlayerUnit;
-            CombatManager combatManager = null;
-            if (isPlayerCaster)
-            {
-                combatManager = Object.FindAnyObjectByType<CombatManager>();
-                if (combatManager != null && combatManager.CurrentActiveUnit == ctx.caster)
-                    combatManager.BlockAnimationForEffect();
-            }
 
             yield return ctx.caster.StartCoroutine(
                 ApplyRecoilWithAnimation(ctx.caster, recoilDir, recoilPath));
@@ -135,6 +146,9 @@ namespace DDD.TNFY.BRAWL
                 UnitManager.NotifyUnitDamaged(victim, ctx.caster);
                 ctx.LastResolvedDamage += doubleDamage;
                 Debug.Log($"[WiringFault] Recoil slammed into {victim.name} — {doubleDamage} damage (double).");
+
+                if (BigMomentSequencer.Instance != null)
+                    yield return BigMomentSequencer.Instance.DrainQueue();
 
                 victim.GetComponent<UnitAnimator>()?.PlayHurt();
                 ApplyShocked(victim, ctx.caster);
