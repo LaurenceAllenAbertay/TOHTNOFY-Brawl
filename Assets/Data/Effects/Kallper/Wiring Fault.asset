@@ -20,7 +20,7 @@ MonoBehaviour:
   pullDuration: 0.5
   knockbackStartDelay: 0.1
   pullKnockbackEndDuration: 0.1
-  pauseAfterPull: 0
+  pauseAfterPull: -0.5
   recoilDurationPerTile: 0.15
   missAnimDuration: 0.5
   recoilKnockbackState: Wiring_Fault_Knockback

@@ -69,10 +69,23 @@ namespace DDD.TNFY.BRAWL
             if (cameraController != null)
             {
                 bool wantsFollow = ctx.ability.cameraMode == CameraMode.Follow;
+                bool wantsPreExecutionZoom = ctx.ability.cameraMode == CameraMode.PreExecutionZoom;
                 Coroutine transition;
-                _abilityFocusHandle = wantsFollow
-                    ? cameraController.PushFollow(unit, 1f, out transition)
-                    : cameraController.PushFocus(unit, 1f, out transition);
+
+                if (wantsPreExecutionZoom)
+                {
+                    Unit primaryTarget = targets.FirstOrDefault(t => t != null && t != unit);
+                    Vector3 focusPosition = primaryTarget != null
+                        ? GetFocusPositionForTarget(primaryTarget, wideFraming: true)
+                        : cameraController.UnitFocusPosition(unit);
+                    _abilityFocusHandle = cameraController.PushFocus(focusPosition, 1f, out transition);
+                }
+                else
+                {
+                    _abilityFocusHandle = wantsFollow
+                        ? cameraController.PushFollow(unit, 1f, out transition)
+                        : cameraController.PushFocus(unit, 1f, out transition);
+                }
 
                 if (transition != null)
                     yield return transition;
@@ -124,7 +137,9 @@ namespace DDD.TNFY.BRAWL
             var midAnimFiredEffects = new HashSet<AbilityEffect>();
             void OnAbilityEffect(int slot)
             {
-                if (ctx.ability.cameraMode != CameraMode.None) return;
+                bool allowsMidAnimTrigger = ctx.ability.cameraMode == CameraMode.None
+                    || ctx.ability.cameraMode == CameraMode.PreExecutionZoom;
+                if (!allowsMidAnimTrigger) return;
 
                 var slotEffects = ctx.ability.effects
                     .Where(e => e.midAnimationEventIndex == slot)
@@ -264,7 +279,7 @@ namespace DDD.TNFY.BRAWL
                 yield break;
             }
 
-            yield return StartCoroutine(HandleSingleTargetingEffects(ctx, targets));
+            yield return StartCoroutine(HandleSingleTargetingEffects(ctx, targets, midAnimFiredEffects));
         }
         
         private IEnumerator ApplyDamageEffectsWithHurtAnimation(AbilityContext ctx, List<Unit> targets, HashSet<AbilityEffect> midAnimFiredEffects = null)
@@ -316,7 +331,7 @@ namespace DDD.TNFY.BRAWL
             }
         }
 
-        private IEnumerator HandleSingleTargetingEffects(AbilityContext ctx, List<Unit> targets)
+        private IEnumerator HandleSingleTargetingEffects(AbilityContext ctx, List<Unit> targets, HashSet<AbilityEffect> midAnimFiredEffects = null)
         {
             bool wideFraming = ctx.ability.cameraMode == CameraMode.PreExecutionZoom;
             int previousHandle = -1;
@@ -334,7 +349,7 @@ namespace DDD.TNFY.BRAWL
 
                 yield return transition;
 
-                yield return StartCoroutine(PlayTargetEffectsWithAnimation(ctx, new List<Unit> { target }));
+                yield return StartCoroutine(PlayTargetEffectsWithAnimation(ctx, new List<Unit> { target }, midAnimFiredEffects));
                 
                 if (!target.IsDead)
                     yield return new WaitForSeconds(0.3f);
@@ -355,20 +370,24 @@ namespace DDD.TNFY.BRAWL
             return cameraController.FitRadius(midpoint, radius);
         }
 
-        private IEnumerator PlayTargetEffectsWithAnimation(AbilityContext ctx, List<Unit> targets)
+        private IEnumerator PlayTargetEffectsWithAnimation(AbilityContext ctx, List<Unit> targets, HashSet<AbilityEffect> midAnimFiredEffects = null)
         {
             var displacementEffects = ctx.ability.effects
-                .Where(e => e.AnimationPhase == EffectAnimationPhase.Displacement && !e.IsSelfOnly(ctx))
+                .Where(e => e.AnimationPhase == EffectAnimationPhase.Displacement && !e.IsSelfOnly(ctx)
+                            && !(midAnimFiredEffects != null && midAnimFiredEffects.Contains(e)))
                 .ToList();
             var damageEffects = ctx.ability.effects
-                .Where(e => e.AnimationPhase == EffectAnimationPhase.Damage)
+                .Where(e => e.AnimationPhase == EffectAnimationPhase.Damage
+                            && !(midAnimFiredEffects != null && midAnimFiredEffects.Contains(e)))
                 .ToList();
             var statusEffects = ctx.ability.effects
-                .Where(e => e.AnimationPhase == EffectAnimationPhase.StatusBuff ||
+                .Where(e => (e.AnimationPhase == EffectAnimationPhase.StatusBuff ||
                             e.AnimationPhase == EffectAnimationPhase.StatusDebuff)
+                            && !(midAnimFiredEffects != null && midAnimFiredEffects.Contains(e)))
                 .ToList();
             var postEffects = ctx.ability.effects
-                .Where(e => e.AnimationPhase == EffectAnimationPhase.PostEffect)
+                .Where(e => e.AnimationPhase == EffectAnimationPhase.PostEffect
+                            && !(midAnimFiredEffects != null && midAnimFiredEffects.Contains(e)))
                 .ToList();
             
             bool hasDisplacement = displacementEffects.Count > 0;
