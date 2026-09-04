@@ -13,7 +13,7 @@ namespace DDD.TNFY.BRAWL
 
         [SerializeField] private float bigMomentEventMaxWait = 5f;
 
-        private const string BIG_MOMENT_STATE = "Big_Moment";
+        [SerializeField] private float lingerAfterBigMomentSeconds = 0.5f;
 
         private readonly Queue<PendingBigMoment> _queue = new Queue<PendingBigMoment>();
         private bool _isDraining = false;
@@ -45,6 +45,18 @@ namespace DDD.TNFY.BRAWL
         }
 
         public bool HasPending => _queue.Count > 0 || _isDraining;
+
+        public bool IsPending(Unit unit)
+        {
+            if (unit == null) return false;
+
+            foreach (var entry in _queue)
+            {
+                if (entry.victim == unit) return true;
+            }
+
+            return false;
+        }
 
         public void Enqueue(Unit victim, StatusEffectData attackUpData,
             float attackPower, int buffDuration, float restoreHealthFraction)
@@ -85,7 +97,7 @@ namespace DDD.TNFY.BRAWL
             var victim = entry.victim;
             if (victim == null) yield break;
 
-            var unitAnimator = victim.GetComponent<UnitAnimator>();
+            var unitAnimator = victim.GetComponentInChildren<UnitAnimator>();
             var healthBar    = victim.GetComponentInChildren<UnitHealthBarDisplay>();
 
             int focusHandle = -1;
@@ -93,37 +105,22 @@ namespace DDD.TNFY.BRAWL
             {
                 Coroutine transition;
                 focusHandle = _camera.PushFocus(victim, cameraTransitionDuration, out transition);
-                yield return transition;
+                if (transition != null) yield return transition;
             }
 
             healthBar?.TweenToFraction(0f, displayHealthOverride: 0);
 
-            if (unitAnimator != null && unitAnimator.HasState(BIG_MOMENT_STATE))
+            if (unitAnimator != null && unitAnimator.HasBigMomentAnimation)
             {
-                bool animationComplete = false;
-                System.Action onComplete = () => animationComplete = true;
-                unitAnimator.OnBigMomentCompleteEvent += onComplete;
+                unitAnimator.BeginBigMoment();
 
-                unitAnimator.ForcePlayAnimation(BIG_MOMENT_STATE);
+                yield return StartCoroutine(unitAnimator.WaitForBigMomentComplete(bigMomentEventMaxWait));
 
-                float elapsed = 0f;
-                while (!animationComplete && elapsed < bigMomentEventMaxWait)
-                {
-                    elapsed += Time.deltaTime;
-                    yield return null;
-                }
-
-                unitAnimator.OnBigMomentCompleteEvent -= onComplete;
-
-                if (!animationComplete)
-                    Debug.LogWarning($"[BigMomentSequencer] AnimEvent_BigMomentComplete never fired on {victim.name}. " +
-                                      "Add that Animation Event near the end of the Big_Moment clip.");
-
-                unitAnimator.PlayIdle();
+                unitAnimator.EndBigMoment();
             }
             else
             {
-                Debug.LogWarning($"[BigMomentSequencer] {victim.name}'s Animator has no '{BIG_MOMENT_STATE}' state. " +
+                Debug.LogWarning($"[BigMomentSequencer] {victim.name}'s Animator has no Big Moment state. " +
                                   "Add the state to the Animator Controller.");
             }
 
@@ -141,6 +138,9 @@ namespace DDD.TNFY.BRAWL
 
             if (healthBar != null)
                 yield return StartCoroutine(healthBar.WaitForTweenComplete());
+
+            if (lingerAfterBigMomentSeconds > 0f)
+                yield return new WaitForSeconds(lingerAfterBigMomentSeconds);
 
             if (focusHandle >= 0)
             {

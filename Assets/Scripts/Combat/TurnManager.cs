@@ -70,7 +70,7 @@ namespace DDD.TNFY.BRAWL
 
             _combatStarted = true;
             currentIndex = 0;
-            StartNextTurn();
+            StartCoroutine(StartNextTurn());
         }
 
         void OnDestroy()
@@ -121,7 +121,7 @@ namespace DDD.TNFY.BRAWL
             if (wasEmpty)
             {
                 currentIndex = turnOrder.Count - 1;
-                StartNextTurn();
+                StartCoroutine(StartNextTurn());
             }
 
             return true;
@@ -155,14 +155,14 @@ namespace DDD.TNFY.BRAWL
             }
         }
 
-        void StartNextTurn()
+        IEnumerator StartNextTurn()
         {
             if (turnOrder.Count == 0)
             {
                 Debug.LogWarning("TurnManager: No units in turn order!");
                 _activeUnit = null;
                 OnCombatEmpty?.Invoke();
-                return;
+                yield break;
             }
             
             totalTurnCount++;
@@ -176,14 +176,14 @@ namespace DDD.TNFY.BRAWL
                 StatusEffectManager.Instance.HasStatusEffect(current, StatusEffectType.Stunned))
             {
                 StartCoroutine(HandleStunnedTurn(current));
-                return;
+                yield break;
             }
 
             if (StatusEffectManager.Instance != null &&
                 StatusEffectManager.Instance.HasStatusEffect(current, StatusEffectType.Dizzy))
             {
                 StartCoroutine(HandleDizzyTurn(current));
-                return;
+                yield break;
             }
 
             current.StartTurn();
@@ -192,7 +192,7 @@ namespace DDD.TNFY.BRAWL
             OnTotalTurnChanged?.Invoke(totalTurnCount);
 
             if (BigMomentSequencer.Instance != null)
-                StartCoroutine(BigMomentSequencer.Instance.DrainQueue());
+                yield return StartCoroutine(BigMomentSequencer.Instance.DrainQueue());
         }
 
         public Coroutine EndTurn()
@@ -306,7 +306,7 @@ namespace DDD.TNFY.BRAWL
 
             if (turnOrder.Count == 0)
             {
-                StartNextTurn();
+                yield return StartCoroutine(StartNextTurn());
                 yield break;
             }
 
@@ -323,7 +323,7 @@ namespace DDD.TNFY.BRAWL
 
             OnTurnNumberChanged?.Invoke(totalTurnCount, currentIndex);
             
-            StartNextTurn();
+            yield return StartCoroutine(StartNextTurn());
         }
 
         private IEnumerator TriggerEnvironmentEffects()
@@ -403,7 +403,7 @@ namespace DDD.TNFY.BRAWL
 
             OnTurnNumberChanged?.Invoke(totalTurnCount, currentIndex);
 
-            StartNextTurn();
+            StartCoroutine(StartNextTurn());
             return true;
         }
 

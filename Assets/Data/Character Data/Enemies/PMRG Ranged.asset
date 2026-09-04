@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc194c45739c27a488e7f6200ef59a3f, type: 3}
+  m_Name: PMRG Ranged
+  m_EditorClassIdentifier: 
+  characterName: Ranged PMR Grunt
+  portrait: {fileID: 21300000, guid: 2832b80f7c990e849b1ef3ad7d16b22d, type: 3}
+  prefab:
+    m_AssetGUID: a8aac33cc6684b8489262e8d37966098
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  overworldPrefab:
+    m_AssetGUID: 
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  maxHealth: 750
+  attack: 0
+  defense: 0
+  speed: 3
+  availableAbilities:
+  - {fileID: 11400000, guid: 95ef4d686d60ba647a0a5c46d31d84c2, type: 2}
+  availablePassives: []
+  defaultAbilities:
+  - {fileID: 11400000, guid: 95ef4d686d60ba647a0a5c46d31d84c2, type: 2}
+  uiColour: {r: 0.17475082, g: 0.31132078, b: 0.22786134, a: 1}
+  dialogueData: {fileID: 0}

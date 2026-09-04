@@ -1,0 +1,1915 @@
+fileFormatVersion: 2
+guid: 828ac89ca2f10e34e9a439f34e4d960d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 6800233285842676467
+    second: PMRG_Attack_Head_2_0
+  - first:
+      213: 2381957277838310723
+    second: PMRG_Attack_Head_2_1
+  - first:
+      213: -177522174605512081
+    second: PMRG_Attack_Head_2_2
+  - first:
+      213: -747704156729114333
+    second: PMRG_Attack_Head_2_3
+  - first:
+      213: 4771771277084340253
+    second: PMRG_Attack_Head_2_4
+  - first:
+      213: -2001785887427667465
+    second: PMRG_Attack_Head_2_5
+  - first:
+      213: 7621760049924750797
+    second: PMRG_Attack_Head_2_6
+  - first:
+      213: -1676453911636380463
+    second: PMRG_Attack_Head_2_7
+  - first:
+      213: -9098937065896586297
+    second: PMRG_Attack_Head_2_8
+  - first:
+      213: -6328472580080948771
+    second: PMRG_Attack_Head_2_9
+  - first:
+      213: 6613817455386552837
+    second: PMRG_Attack_Head_2_10
+  - first:
+      213: 3938719480664020465
+    second: PMRG_Attack_Head_2_11
+  - first:
+      213: -2461269812501363478
+    second: PMRG_Attack_Head_2_12
+  - first:
+      213: -2497499615378033578
+    second: PMRG_Attack_Head_2_13
+  - first:
+      213: -2555676456465618826
+    second: PMRG_Attack_Head_2_14
+  - first:
+      213: -7018772650641826192
+    second: PMRG_Attack_Head_2_15
+  - first:
+      213: -6590539022945073866
+    second: PMRG_Attack_Head_2_16
+  - first:
+      213: -84078074080531589
+    second: PMRG_Attack_Head_2_17
+  - first:
+      213: -8411680051380716664
+    second: PMRG_Attack_Head_2_18
+  - first:
+      213: 7779208321895494367
+    second: PMRG_Attack_Head_2_19
+  - first:
+      213: -4694971549782507749
+    second: PMRG_Attack_Head_2_20
+  - first:
+      213: 6847555861160323920
+    second: PMRG_Attack_Head_2_21
+  - first:
+      213: 3223401888980080501
+    second: PMRG_Attack_Head_2_22
+  - first:
+      213: 816959289521747343
+    second: PMRG_Attack_Head_2_23
+  - first:
+      213: -9056308192565949022
+    second: PMRG_Attack_Head_2_24
+  - first:
+      213: 5250822724849667029
+    second: PMRG_Attack_Head_2_25
+  - first:
+      213: 7363018088105778185
+    second: PMRG_Attack_Head_2_26
+  - first:
+      213: 8809118048219978111
+    second: PMRG_Attack_Head_2_27
+  - first:
+      213: -3804568957339444356
+    second: PMRG_Attack_Head_2_28
+  - first:
+      213: -5241745307939345886
+    second: PMRG_Attack_Head_2_29
+  - first:
+      213: 4920063989895531424
+    second: PMRG_Attack_Head_2_30
+  - first:
+      213: 8268625749799922161
+    second: PMRG_Attack_Head_2_31
+  - first:
+      213: -6348399063608205602
+    second: PMRG_Attack_Head_2_32
+  - first:
+      213: 5190175067740772701
+    second: PMRG_Attack_Head_2_33
+  - first:
+      213: 6447809924742082277
+    second: PMRG_Attack_Head_2_34
+  - first:
+      213: -5057023388881858679
+    second: PMRG_Attack_Head_2_35
+  - first:
+      213: 4465600758461588128
+    second: PMRG_Attack_Head_2_36
+  - first:
+      213: 3730189462610654618
+    second: PMRG_Attack_Head_2_37
+  - first:
+      213: -33024527697153053
+    second: PMRG_Attack_Head_2_38
+  - first:
+      213: 5820022201122799074
+    second: PMRG_Attack_Head_2_39
+  - first:
+      213: -1074430837171745527
+    second: PMRG_Attack_Head_2_40
+  - first:
+      213: 8600323555208504011
+    second: PMRG_Attack_Head_2_41
+  - first:
+      213: -4178471144652875266
+    second: PMRG_Attack_Head_2_42
+  - first:
+      213: -1066551985084444306
+    second: PMRG_Attack_Head_2_43
+  - first:
+      213: 6738850169917005076
+    second: PMRG_Attack_Head_2_44
+  - first:
+      213: -7811011690699394195
+    second: PMRG_Attack_Head_2_45
+  - first:
+      213: -4597678049517320399
+    second: PMRG_Attack_Head_2_46
+  - first:
+      213: 8419606443110271051
+    second: PMRG_Attack_Head_2_47
+  - first:
+      213: 4165370863300261818
+    second: PMRG_Attack_Head_2_48
+  - first:
+      213: 353529573979889077
+    second: PMRG_Attack_Head_2_49
+  - first:
+      213: 8518659019789068694
+    second: PMRG_Attack_Head_2_50
+  - first:
+      213: 65359053842968094
+    second: PMRG_Attack_Head_2_51
+  - first:
+      213: 2440840203504173174
+    second: PMRG_Attack_Head_2_52
+  - first:
+      213: -213214566122436786
+    second: PMRG_Attack_Head_2_53
+  - first:
+      213: -6147440984117423384
+    second: PMRG_Attack_Head_2_54
+  - first:
+      213: 5547634403718445740
+    second: PMRG_Attack_Head_2_55
+  - first:
+      213: 2507621592372446147
+    second: PMRG_Attack_Head_2_56
+  - first:
+      213: 6544309699076937641
+    second: PMRG_Attack_Head_2_57
+  - first:
+      213: 249224623028950959
+    second: PMRG_Attack_Head_2_58
+  - first:
+      213: 7296520575343547888
+    second: PMRG_Attack_Head_2_59
+  - first:
+      213: -5177205305533880048
+    second: PMRG_Attack_Head_2_60
+  - first:
+      213: 6744877070276857997
+    second: PMRG_Attack_Head_2_61
+  - first:
+      213: 8520851992874716170
+    second: PMRG_Attack_Head_2_62
+  - first:
+      213: -6810114199385071801
+    second: PMRG_Attack_Head_2_63
+  - first:
+      213: 8082428489470739727
+    second: PMRG_Attack_Head_2_64
+  - first:
+      213: -6966763789741323473
+    second: PMRG_Attack_Head_2_65
+  - first:
+      213: 8786641376073311120
+    second: PMRG_Attack_Head_2_66
+  - first:
+      213: 7973391375493469336
+    second: PMRG_Attack_Head_2_67
+  - first:
+      213: -1063526693230920710
+    second: PMRG_Attack_Head_2_68
+  - first:
+      213: -5644630149870728322
+    second: PMRG_Attack_Head_2_69
+  - first:
+      213: 454643683153126947
+    second: PMRG_Attack_Head_2_70
+  - first:
+      213: 5438870494656337671
+    second: PMRG_Attack_Head_2_71
+  - first:
+      213: 8709992397361252090
+    second: PMRG_Attack_Head_2_72
+  - first:
+      213: 5930464163230136755
+    second: PMRG_Attack_Head_2_73
+  - first:
+      213: 3389518000892795546
+    second: PMRG_Attack_Head_2_74
+  - first:
+      213: 1016523450394883243
+    second: PMRG_Attack_Head_2_75
+  - first:
+      213: -6852558997885930755
+    second: PMRG_Attack_Head_2_76
+  - first:
+      213: 7049884930780743905
+    second: PMRG_Attack_Head_2_77
+  - first:
+      213: 7493765171088667603
+    second: PMRG_Attack_Head_2_78
+  - first:
+      213: -1485090783581122810
+    second: PMRG_Attack_Head_2_79
+  - first:
+      213: 2819045147923413310
+    second: PMRG_Attack_Head_2_80
+  - first:
+      213: -4625484612514058624
+    second: PMRG_Attack_Head_2_81
+  - first:
+      213: 7141539195958184416
+    second: PMRG_Attack_Head_2_82
+  - first:
+      213: -1489920001265953880
+    second: PMRG_Attack_Head_2_83
+  - first:
+      213: -6885743982378930691
+    second: PMRG_Attack_Head_2_84
+  - first:
+      213: -2751162155606443355
+    second: PMRG_Attack_Head_2_85
+  - first:
+      213: 2820966352136808136
+    second: PMRG_Attack_Head_2_86
+  - first:
+      213: 3244371649046444889
+    second: PMRG_Attack_Head_2_87
+  - first:
+      213: -8979006516073950367
+    second: PMRG_Attack_Head_2_88
+  - first:
+      213: -3331139779326079839
+    second: PMRG_Attack_Head_2_89
+  - first:
+      213: 8416147490813780738
+    second: PMRG_Attack_Head_2_90
+  - first:
+      213: 5490109064602205589
+    second: PMRG_Attack_Head_2_91
+  - first:
+      213: 5666826238453974173
+    second: PMRG_Attack_Head_2_92
+  - first:
+      213: 3486713659273033311
+    second: PMRG_Attack_Head_2_93
+  - first:
+      213: -213600570314587156
+    second: PMRG_Attack_Head_2_94
+  - first:
+      213: -1135849183137991128
+    second: PMRG_Attack_Head_2_95
+  - first:
+      213: -1672491997005012443
+    second: PMRG_Attack_Head_2_96
+  - first:
+      213: -968171066952432948
+    second: PMRG_Attack_Head_2_97
+  - first:
+      213: -6917498811546156326
+    second: PMRG_Attack_Head_2_98
+  - first:
+      213: 1788661704093089924
+    second: PMRG_Attack_Head_2_99
+  - first:
+      213: -7340794895960464220
+    second: PMRG_Attack_Head_2_100
+  - first:
+      213: 2775121107415334864
+    second: PMRG_Attack_Head_2_101
+  - first:
+      213: 2248463677410594615
+    second: PMRG_Attack_Head_2_102
+  - first:
+      213: -6775260252691676161
+    second: PMRG_Attack_Head_2_103
+  - first:
+      213: -3980563143498818311
+    second: PMRG_Attack_Head_2_104
+  - first:
+      213: -8082361484931643821
+    second: PMRG_Attack_Head_2_105
+  - first:
+      213: -6716339504336376960
+    second: PMRG_Attack_Head_2_106
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6622
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3faa070f4284f5e50800000000000000
+      internalID: 6800233285842676467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_1
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 6622
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34d75b726896e0120800000000000000
+      internalID: 2381957277838310723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_2
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 6622
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6232e2d580598df0800000000000000
+      internalID: -177522174605512081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_3
+      rect:
+        serializedVersion: 2
+        x: 2478
+        y: 6622
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 321041de70f9f95f0800000000000000
+      internalID: -747704156729114333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_4
+      rect:
+        serializedVersion: 2
+        x: 3304
+        y: 6622
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d103600d1bcb83240800000000000000
+      internalID: 4771771277084340253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_5
+      rect:
+        serializedVersion: 2
+        x: 4130
+        y: 6622
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f9db7f575a3834e0800000000000000
+      internalID: -2001785887427667465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_6
+      rect:
+        serializedVersion: 2
+        x: 4956
+        y: 6622
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dcd3703326ee5c960800000000000000
+      internalID: 7621760049924750797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_7
+      rect:
+        serializedVersion: 2
+        x: 5782
+        y: 6622
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d47992bc0a0cb8e0800000000000000
+      internalID: -1676453911636380463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5676
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c3599162f41ab180800000000000000
+      internalID: -9098937065896586297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_9
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 5676
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd9a975d7bfbc28a0800000000000000
+      internalID: -6328472580080948771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_10
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 5676
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50ae7952feff8cb50800000000000000
+      internalID: 6613817455386552837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_11
+      rect:
+        serializedVersion: 2
+        x: 2478
+        y: 5676
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f5d3eadf7429a630800000000000000
+      internalID: 3938719480664020465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_12
+      rect:
+        serializedVersion: 2
+        x: 3304
+        y: 5676
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae4c6795520d7ddd0800000000000000
+      internalID: -2461269812501363478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_13
+      rect:
+        serializedVersion: 2
+        x: 4130
+        y: 5676
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 654b7b60559175dd0800000000000000
+      internalID: -2497499615378033578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_14
+      rect:
+        serializedVersion: 2
+        x: 4956
+        y: 5676
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 678a98badc9688cd0800000000000000
+      internalID: -2555676456465618826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_15
+      rect:
+        serializedVersion: 2
+        x: 5782
+        y: 5676
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07e5447167f489e90800000000000000
+      internalID: -7018772650641826192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4730
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 63542034da3b984a0800000000000000
+      internalID: -6590539022945073866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_17
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 4730
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7be705ef6b45def0800000000000000
+      internalID: -84078074080531589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_18
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 4730
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88b763d6f85b34b80800000000000000
+      internalID: -8411680051380716664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_19
+      rect:
+        serializedVersion: 2
+        x: 2478
+        y: 4730
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd2f754b0cc45fb60800000000000000
+      internalID: 7779208321895494367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_20
+      rect:
+        serializedVersion: 2
+        x: 3304
+        y: 4730
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1ff5a0204c18deb0800000000000000
+      internalID: -4694971549782507749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_21
+      rect:
+        serializedVersion: 2
+        x: 4130
+        y: 4730
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05bea1c96c7670f50800000000000000
+      internalID: 6847555861160323920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_22
+      rect:
+        serializedVersion: 2
+        x: 4956
+        y: 4730
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5771bf090f2dbbc20800000000000000
+      internalID: 3223401888980080501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_23
+      rect:
+        serializedVersion: 2
+        x: 5782
+        y: 4730
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8536e7352c665b00800000000000000
+      internalID: 816959289521747343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3784
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ad85a56ea7815280800000000000000
+      internalID: -9056308192565949022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_25
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 3784
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5db863db27baed840800000000000000
+      internalID: 5250822724849667029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_26
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 3784
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90c1250b0f1be2660800000000000000
+      internalID: 7363018088105778185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_27
+      rect:
+        serializedVersion: 2
+        x: 2478
+        y: 3784
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7952a03136404a70800000000000000
+      internalID: 8809118048219978111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_28
+      rect:
+        serializedVersion: 2
+        x: 3304
+        y: 3784
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7bdd46d0b4733bc0800000000000000
+      internalID: -3804568957339444356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_29
+      rect:
+        serializedVersion: 2
+        x: 4130
+        y: 3784
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22a64351a649147b0800000000000000
+      internalID: -5241745307939345886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_30
+      rect:
+        serializedVersion: 2
+        x: 4956
+        y: 3784
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0ab0ae59124974440800000000000000
+      internalID: 4920063989895531424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_31
+      rect:
+        serializedVersion: 2
+        x: 5782
+        y: 3784
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f9e8757f4f00c270800000000000000
+      internalID: 8268625749799922161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2838
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eded539dfa4f5e7a0800000000000000
+      internalID: -6348399063608205602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_33
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 2838
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d5917c2b9b4370840800000000000000
+      internalID: 5190175067740772701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_34
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 2838
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ee6d7fe6f83b7950800000000000000
+      internalID: 6447809924742082277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_35
+      rect:
+        serializedVersion: 2
+        x: 2478
+        y: 2838
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 98fcad46508d1d9b0800000000000000
+      internalID: -5057023388881858679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_36
+      rect:
+        serializedVersion: 2
+        x: 3304
+        y: 2838
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a261d4ea3009fd30800000000000000
+      internalID: 4465600758461588128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_37
+      rect:
+        serializedVersion: 2
+        x: 4130
+        y: 2838
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9530d78d8b44c330800000000000000
+      internalID: 3730189462610654618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_38
+      rect:
+        serializedVersion: 2
+        x: 4956
+        y: 2838
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e37cb5fd5caa8ff0800000000000000
+      internalID: -33024527697153053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_39
+      rect:
+        serializedVersion: 2
+        x: 5782
+        y: 2838
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2edbfca2b5fd4c050800000000000000
+      internalID: 5820022201122799074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1892
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90d07ae98dad611f0800000000000000
+      internalID: -1074430837171745527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_41
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 1892
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bc2a0adf4bc7a5770800000000000000
+      internalID: 8600323555208504011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_42
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 1892
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef9deb6e1a61306c0800000000000000
+      internalID: -4178471144652875266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_43
+      rect:
+        serializedVersion: 2
+        x: 2478
+        y: 1892
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e61dd82de98d231f0800000000000000
+      internalID: -1066551985084444306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_44
+      rect:
+        serializedVersion: 2
+        x: 3304
+        y: 1892
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41ddb7c8684358d50800000000000000
+      internalID: 6738850169917005076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_45
+      rect:
+        serializedVersion: 2
+        x: 4130
+        y: 1892
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d6370777046b99390800000000000000
+      internalID: -7811011690699394195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_46
+      rect:
+        serializedVersion: 2
+        x: 4956
+        y: 1892
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 137c8ea6c24c130c0800000000000000
+      internalID: -4597678049517320399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_47
+      rect:
+        serializedVersion: 2
+        x: 5782
+        y: 1892
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b488d26737378d470800000000000000
+      internalID: 8419606443110271051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 946
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab736c82bbe5ec930800000000000000
+      internalID: 4165370863300261818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_49
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 946
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5bd9aa2464df7e400800000000000000
+      internalID: 353529573979889077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_50
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 946
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6996435ae3b583670800000000000000
+      internalID: 8518659019789068694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_51
+      rect:
+        serializedVersion: 2
+        x: 2478
+        y: 946
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1e6a2396b338e000800000000000000
+      internalID: 65359053842968094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_52
+      rect:
+        serializedVersion: 2
+        x: 3304
+        y: 946
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 670cb53ab3b9fd120800000000000000
+      internalID: 2440840203504173174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_53
+      rect:
+        serializedVersion: 2
+        x: 4130
+        y: 946
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4745555b728a0df0800000000000000
+      internalID: -213214566122436786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_54
+      rect:
+        serializedVersion: 2
+        x: 4956
+        y: 946
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e2d008def6efaaa0800000000000000
+      internalID: -6147440984117423384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_55
+      rect:
+        serializedVersion: 2
+        x: 5782
+        y: 946
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: caabf59f8182dfc40800000000000000
+      internalID: 5547634403718445740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c385746d8cdcc220800000000000000
+      internalID: 2507621592372446147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_57
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 0
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a7df918ffe02da50800000000000000
+      internalID: 6544309699076937641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_58
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 0
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa7dbe4697c657300800000000000000
+      internalID: 249224623028950959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_59
+      rect:
+        serializedVersion: 2
+        x: 2478
+        y: 0
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0f55eadfdc2724560800000000000000
+      internalID: 7296520575343547888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_60
+      rect:
+        serializedVersion: 2
+        x: 3304
+        y: 0
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 019a262643fd628b0800000000000000
+      internalID: -5177205305533880048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_61
+      rect:
+        serializedVersion: 2
+        x: 4130
+        y: 0
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d809783a5fd9a9d50800000000000000
+      internalID: 6744877070276857997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Head_2_62
+      rect:
+        serializedVersion: 2
+        x: 4956
+        y: 0
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0c0afafdb5204670800000000000000
+      internalID: 8520851992874716170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0c64ee492d67f234c94ab00d9264b859
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":8.0},"gridSpriteSize":{"x":826.0,"y":946.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.32899999618530276,"y":0.07100000232458115},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      PMRG_Attack_Head_2_0: 6800233285842676467
+      PMRG_Attack_Head_2_1: 2381957277838310723
+      PMRG_Attack_Head_2_10: 6613817455386552837
+      PMRG_Attack_Head_2_11: 3938719480664020465
+      PMRG_Attack_Head_2_12: -2461269812501363478
+      PMRG_Attack_Head_2_13: -2497499615378033578
+      PMRG_Attack_Head_2_14: -2555676456465618826
+      PMRG_Attack_Head_2_15: -7018772650641826192
+      PMRG_Attack_Head_2_16: -6590539022945073866
+      PMRG_Attack_Head_2_17: -84078074080531589
+      PMRG_Attack_Head_2_18: -8411680051380716664
+      PMRG_Attack_Head_2_19: 7779208321895494367
+      PMRG_Attack_Head_2_2: -177522174605512081
+      PMRG_Attack_Head_2_20: -4694971549782507749
+      PMRG_Attack_Head_2_21: 6847555861160323920
+      PMRG_Attack_Head_2_22: 3223401888980080501
+      PMRG_Attack_Head_2_23: 816959289521747343
+      PMRG_Attack_Head_2_24: -9056308192565949022
+      PMRG_Attack_Head_2_25: 5250822724849667029
+      PMRG_Attack_Head_2_26: 7363018088105778185
+      PMRG_Attack_Head_2_27: 8809118048219978111
+      PMRG_Attack_Head_2_28: -3804568957339444356
+      PMRG_Attack_Head_2_29: -5241745307939345886
+      PMRG_Attack_Head_2_3: -747704156729114333
+      PMRG_Attack_Head_2_30: 4920063989895531424
+      PMRG_Attack_Head_2_31: 8268625749799922161
+      PMRG_Attack_Head_2_32: -6348399063608205602
+      PMRG_Attack_Head_2_33: 5190175067740772701
+      PMRG_Attack_Head_2_34: 6447809924742082277
+      PMRG_Attack_Head_2_35: -5057023388881858679
+      PMRG_Attack_Head_2_36: 4465600758461588128
+      PMRG_Attack_Head_2_37: 3730189462610654618
+      PMRG_Attack_Head_2_38: -33024527697153053
+      PMRG_Attack_Head_2_39: 5820022201122799074
+      PMRG_Attack_Head_2_4: 4771771277084340253
+      PMRG_Attack_Head_2_40: -1074430837171745527
+      PMRG_Attack_Head_2_41: 8600323555208504011
+      PMRG_Attack_Head_2_42: -4178471144652875266
+      PMRG_Attack_Head_2_43: -1066551985084444306
+      PMRG_Attack_Head_2_44: 6738850169917005076
+      PMRG_Attack_Head_2_45: -7811011690699394195
+      PMRG_Attack_Head_2_46: -4597678049517320399
+      PMRG_Attack_Head_2_47: 8419606443110271051
+      PMRG_Attack_Head_2_48: 4165370863300261818
+      PMRG_Attack_Head_2_49: 353529573979889077
+      PMRG_Attack_Head_2_5: -2001785887427667465
+      PMRG_Attack_Head_2_50: 8518659019789068694
+      PMRG_Attack_Head_2_51: 65359053842968094
+      PMRG_Attack_Head_2_52: 2440840203504173174
+      PMRG_Attack_Head_2_53: -213214566122436786
+      PMRG_Attack_Head_2_54: -6147440984117423384
+      PMRG_Attack_Head_2_55: 5547634403718445740
+      PMRG_Attack_Head_2_56: 2507621592372446147
+      PMRG_Attack_Head_2_57: 6544309699076937641
+      PMRG_Attack_Head_2_58: 249224623028950959
+      PMRG_Attack_Head_2_59: 7296520575343547888
+      PMRG_Attack_Head_2_6: 7621760049924750797
+      PMRG_Attack_Head_2_60: -5177205305533880048
+      PMRG_Attack_Head_2_61: 6744877070276857997
+      PMRG_Attack_Head_2_62: 8520851992874716170
+      PMRG_Attack_Head_2_7: -1676453911636380463
+      PMRG_Attack_Head_2_8: -9098937065896586297
+      PMRG_Attack_Head_2_9: -6328472580080948771
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

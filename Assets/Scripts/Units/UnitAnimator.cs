@@ -22,6 +22,9 @@ namespace DDD.TNFY.BRAWL
         private StatusEffectInstance activeHoldInstance;
         private string activeHoldReleaseState;
 
+        private float _speedBeforeBigMoment     = 1f;
+        private bool  _bigMomentSpeedOverridden = false;
+
         private bool _isTalking      = false;
         private bool _isHurtIdle     = false;  
         private bool _isBadIdle      = false;  
@@ -221,6 +224,7 @@ namespace DDD.TNFY.BRAWL
             if (animator == null) return;
             if (!HasState(stateName)) return;
             if (currentAnimation == DOWNED_STATE) return;
+            if (currentAnimation == BIG_MOMENT_STATE) return;
 
             float frac = normalizedTime % 1f;
             animator.Play(stateName, 0, frac);
@@ -239,12 +243,12 @@ namespace DDD.TNFY.BRAWL
 
         public void AnimEvent_JumpLand() => OnJumpLandEvent?.Invoke();
 
+        public event System.Action<int> OnAbilityEffectEvent;
+        
         public event System.Action OnBigMomentCompleteEvent;
 
         public void AnimEvent_BigMomentComplete() => OnBigMomentCompleteEvent?.Invoke();
 
-        public event System.Action<int> OnAbilityEffectEvent;
-        
         public void AnimEvent_AbilityEffect0() => OnAbilityEffectEvent?.Invoke(0);
         public void AnimEvent_AbilityEffect1() => OnAbilityEffectEvent?.Invoke(1);
         public void AnimEvent_AbilityEffect2() => OnAbilityEffectEvent?.Invoke(2);
@@ -255,6 +259,61 @@ namespace DDD.TNFY.BRAWL
             if (isInKnockbackSequence) return;
             string idleState = ResolveIdleState(_isTalking);
             PlayAnimation(idleState, true);
+        }
+
+        public bool HasBigMomentAnimation => HasState(BIG_MOMENT_STATE);
+
+        public void BeginBigMoment()
+        {
+            if (animator == null) return;
+
+            if (!_bigMomentSpeedOverridden)
+            {
+                _speedBeforeBigMoment    = animator.speed;
+                _bigMomentSpeedOverridden = true;
+            }
+
+            animator.speed = 1f;
+
+            ForcePlayAnimation(BIG_MOMENT_STATE);
+        }
+
+        public IEnumerator WaitForBigMomentComplete(float maxWait)
+        {
+            if (animator == null) yield break;
+
+            bool completed = false;
+            void HandleComplete() => completed = true;
+
+            OnBigMomentCompleteEvent += HandleComplete;
+
+            float elapsed = 0f;
+            while (!completed && elapsed < maxWait)
+            {
+                elapsed += Time.deltaTime;
+                yield return null;
+            }
+
+            OnBigMomentCompleteEvent -= HandleComplete;
+
+            if (!completed)
+                Debug.LogWarning($"[UnitAnimator] '{BIG_MOMENT_STATE}' on {gameObject.name} did not raise " +
+                                 $"AnimEvent_BigMomentComplete within {maxWait:F1}s. Add an Animation Event on the " +
+                                 $"final frame of the {BIG_MOMENT_STATE} clip that calls AnimEvent_BigMomentComplete().", this);
+        }
+
+        public void EndBigMoment()
+        {
+            if (_bigMomentSpeedOverridden && animator != null)
+            {
+                animator.speed = _speedBeforeBigMoment;
+                _bigMomentSpeedOverridden = false;
+            }
+
+            if (currentAnimation == BIG_MOMENT_STATE)
+                currentAnimation = null;
+
+            PlayIdle();
         }
 
         private void PlayIdleAtRandomTime()
@@ -283,7 +342,10 @@ namespace DDD.TNFY.BRAWL
             string jumpState = ResolveJumpState();
             PlayAnimation(jumpState, false);
 
-            StartCoroutine(ReturnToIdleAfterAnimation(jumpState));
+            if (returnToIdleCoroutine != null)
+                StopCoroutine(returnToIdleCoroutine);
+
+            returnToIdleCoroutine = StartCoroutine(ReturnToIdleAfterAnimation(jumpState));
         }
 
         public void PlayAttack()
@@ -291,8 +353,11 @@ namespace DDD.TNFY.BRAWL
             if (isInKnockbackSequence) return; 
 
             PlayAnimation(ATTACK_STATE, false);
-            
-            StartCoroutine(ReturnToIdleAfterAnimation(ATTACK_STATE));
+
+            if (returnToIdleCoroutine != null)
+                StopCoroutine(returnToIdleCoroutine);
+
+            returnToIdleCoroutine = StartCoroutine(ReturnToIdleAfterAnimation(ATTACK_STATE));
         }
 
         public void PlayAnimation(string animationState)
@@ -383,8 +448,11 @@ namespace DDD.TNFY.BRAWL
             if (isInKnockbackSequence) return; 
 
             PlayAnimation(HURT_STATE, false);
-            
-            StartCoroutine(ReturnToIdleAfterAnimation(HURT_STATE));
+
+            if (returnToIdleCoroutine != null)
+                StopCoroutine(returnToIdleCoroutine);
+
+            returnToIdleCoroutine = StartCoroutine(ReturnToIdleAfterAnimation(HURT_STATE));
         }
         
         public IEnumerator WaitForHurtAnimation()
@@ -444,12 +512,21 @@ namespace DDD.TNFY.BRAWL
                     Debug.LogWarning($"[UnitAnimator] Expected '{stateName}' to still be playing on {gameObject.name} " +
                                      $"after {elapsed:F2}s, but the Animator had already moved on to " +
                                      $"'{IdentifyState(stateInfo)}'.");
+
+                    string actualState = IdentifyState(stateInfo);
+                    if (!actualState.StartsWith("unknown"))
+                        currentAnimation = actualState;
+
                     yield break;
                 }
 
                 elapsed += Time.deltaTime;
                 yield return null;
             }
+
+            Debug.LogWarning($"[UnitAnimator] WaitForAnimationToComplete('{stateName}') on {gameObject.name} timed out " +
+                             $"after {maxWait:F1}s at animator.speed={animator.speed:F2}. The caller has stopped waiting " +
+                             "while the clip is still playing.", this);
         }
         
         public void PlayDowned()
@@ -473,6 +550,12 @@ namespace DDD.TNFY.BRAWL
             if (!HasState(stateName))
             {
                 Debug.LogWarning($"[UnitAnimator] '{stateName}' is not a state on {gameObject.name}'s Animator Controller — nothing will play.", this);
+                return;
+            }
+
+            if (currentAnimation == BIG_MOMENT_STATE && stateName != BIG_MOMENT_STATE)
+            {
+                Debug.Log($"[UnitAnimator] Blocked ForcePlayAnimation('{stateName}') on {gameObject.name} — Big_Moment is still playing.\n{StackTraceUtility.ExtractStackTrace()}");
                 return;
             }
 
@@ -550,6 +633,7 @@ namespace DDD.TNFY.BRAWL
         {
             if (animator == null || !HasState(stateName)) return;
             if (currentAnimation == DOWNED_STATE) return;
+            if (currentAnimation == BIG_MOMENT_STATE && stateName != BIG_MOMENT_STATE) return;
 
             animator.Play(stateName);
             currentAnimation = stateName;
@@ -594,6 +678,12 @@ namespace DDD.TNFY.BRAWL
             }
 
             if (currentAnimation == DOWNED_STATE && stateName != DOWNED_STATE) return;
+
+            if (currentAnimation == BIG_MOMENT_STATE && stateName != BIG_MOMENT_STATE)
+            {
+                Debug.Log($"[UnitAnimator] Blocked PlayAnimation('{stateName}') on {gameObject.name} — Big_Moment is still playing.\n{StackTraceUtility.ExtractStackTrace()}");
+                return;
+            }
 
             if (isInKnockbackSequence && stateName != DOWNED_STATE &&
                 stateName != KNOCKBACK_START_STATE && stateName != KNOCKBACK_END_STATE) return;

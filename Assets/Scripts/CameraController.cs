@@ -179,6 +179,7 @@ namespace DDD.TNFY.BRAWL
                 transitionDuration = transitionDuration
             };
             _focusStack.Add(request);
+            Debug.Log($"[CameraController] PushFocus(id={request.id}, pos={worldPosition}, duration={transitionDuration}) — stack size now {_focusStack.Count}.\n{StackTraceUtility.ExtractStackTrace()}");
             transition = ActivateCurrent();
             return request.id;
         }
@@ -202,6 +203,7 @@ namespace DDD.TNFY.BRAWL
                 transitionDuration = initialTransitionDuration
             };
             _focusStack.Add(request);
+            Debug.Log($"[CameraController] PushFollow(id={request.id}, unit={(unit != null ? unit.name : "null")}, duration={initialTransitionDuration}) — stack size now {_focusStack.Count}.\n{StackTraceUtility.ExtractStackTrace()}");
             transition = ActivateCurrent();
             return request.id;
         }
@@ -214,10 +216,16 @@ namespace DDD.TNFY.BRAWL
             transition = null;
 
             int index = _focusStack.FindIndex(r => r.id == handle);
-            if (index < 0) return;
+            if (index < 0)
+            {
+                Debug.Log($"[CameraController] PopFocus(id={handle}) — handle not found on stack (already popped or invalid).\n{StackTraceUtility.ExtractStackTrace()}");
+                return;
+            }
 
             bool wasTop = index == _focusStack.Count - 1;
             _focusStack.RemoveAt(index);
+
+            Debug.Log($"[CameraController] PopFocus(id={handle}) — wasTop={wasTop}, stack size now {_focusStack.Count}.\n{StackTraceUtility.ExtractStackTrace()}");
 
             if (wasTop)
                 transition = ActivateCurrent();
@@ -229,6 +237,8 @@ namespace DDD.TNFY.BRAWL
         {
             _idleFocusUnit = unit;
             _idleFocusDuration = transitionDuration;
+
+            Debug.Log($"[CameraController] SetIdleFocus({(unit != null ? unit.name : "null")}, duration={transitionDuration}) — stack count={_focusStack.Count}.\n{StackTraceUtility.ExtractStackTrace()}");
 
             if (_focusStack.Count == 0)
                 return ActivateCurrent();
@@ -248,6 +258,7 @@ namespace DDD.TNFY.BRAWL
             {
                 StopCoroutine(_activeFocusCoroutine);
                 _activeFocusCoroutine = null;
+                isTransitioning = false;
             }
 
             if (_activeFollowCoroutine != null)
@@ -258,10 +269,13 @@ namespace DDD.TNFY.BRAWL
 
             if (_focusStack.Count > 0)
             {
-                _activeFocusCoroutine = StartCoroutine(RunFocus(_focusStack[_focusStack.Count - 1]));
+                var top = _focusStack[_focusStack.Count - 1];
+                Debug.Log($"[CameraController] ActivateCurrent — activating stack top id={top.id}, followUnit={(top.followUnit != null ? top.followUnit.name : "null")}, pos={top.targetPosition}, duration={top.transitionDuration}.");
+                _activeFocusCoroutine = StartCoroutine(RunFocus(top));
             }
             else if (_idleFocusUnit != null)
             {
+                Debug.Log($"[CameraController] ActivateCurrent — stack empty, falling back to idle focus on {_idleFocusUnit.name}.");
                 var idleRequest = new FocusRequest
                 {
                     id = 0,
@@ -270,6 +284,10 @@ namespace DDD.TNFY.BRAWL
                     transitionDuration = _idleFocusDuration
                 };
                 _activeFocusCoroutine = StartCoroutine(RunFocus(idleRequest));
+            }
+            else
+            {
+                Debug.Log("[CameraController] ActivateCurrent — stack empty and no idle focus set, camera stays put.");
             }
 
             return _activeFocusCoroutine;
@@ -288,14 +306,14 @@ namespace DDD.TNFY.BRAWL
             if (request.followUnit != null)
             {
                 if (request.followUnit.currentTile != null)
-                    yield return StartCoroutine(TransitionTo(UnitFocusPosition(request.followUnit), request.transitionDuration));
+                    yield return TransitionTo(UnitFocusPosition(request.followUnit), request.transitionDuration);
 
                 if (IsActiveRequest(request))
                     _activeFollowCoroutine = StartCoroutine(TrackFollow(request));
             }
             else
             {
-                yield return StartCoroutine(TransitionTo(request.targetPosition, request.transitionDuration));
+                yield return TransitionTo(request.targetPosition, request.transitionDuration);
             }
         }
 

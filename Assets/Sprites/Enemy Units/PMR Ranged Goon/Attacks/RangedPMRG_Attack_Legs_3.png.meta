@@ -1,0 +1,1972 @@
+fileFormatVersion: 2
+guid: cf2314858c35fef47b2b4bb7bbc5f27a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -307140768402079598
+    second: PMRG_Attack_Legs_3_0
+  - first:
+      213: 7217059321698088412
+    second: PMRG_Attack_Legs_3_1
+  - first:
+      213: -3205475368825495520
+    second: PMRG_Attack_Legs_3_2
+  - first:
+      213: -7655098498784854254
+    second: PMRG_Attack_Legs_3_3
+  - first:
+      213: -3090240669639474114
+    second: PMRG_Attack_Legs_3_4
+  - first:
+      213: -4236400763035361641
+    second: PMRG_Attack_Legs_3_5
+  - first:
+      213: 8821851202913859335
+    second: PMRG_Attack_Legs_3_6
+  - first:
+      213: 2785970834832099619
+    second: PMRG_Attack_Legs_3_7
+  - first:
+      213: 5822386875838376794
+    second: PMRG_Attack_Legs_3_8
+  - first:
+      213: -5106883422263058068
+    second: PMRG_Attack_Legs_3_9
+  - first:
+      213: 3152809498248522702
+    second: PMRG_Attack_Legs_3_10
+  - first:
+      213: -5706360882825814357
+    second: PMRG_Attack_Legs_3_11
+  - first:
+      213: 8048279558826063887
+    second: PMRG_Attack_Legs_3_12
+  - first:
+      213: 944631036329209439
+    second: PMRG_Attack_Legs_3_13
+  - first:
+      213: -8211140309179451051
+    second: PMRG_Attack_Legs_3_14
+  - first:
+      213: -110892341795092849
+    second: PMRG_Attack_Legs_3_15
+  - first:
+      213: 5693047737374868676
+    second: PMRG_Attack_Legs_3_16
+  - first:
+      213: -2791809853668970262
+    second: PMRG_Attack_Legs_3_17
+  - first:
+      213: -5608740812704690209
+    second: PMRG_Attack_Legs_3_18
+  - first:
+      213: 5575993706041330231
+    second: PMRG_Attack_Legs_3_19
+  - first:
+      213: 8959478622382619509
+    second: PMRG_Attack_Legs_3_20
+  - first:
+      213: -3562913123982115667
+    second: PMRG_Attack_Legs_3_21
+  - first:
+      213: 6144015185705621399
+    second: PMRG_Attack_Legs_3_22
+  - first:
+      213: 8218525585857760827
+    second: PMRG_Attack_Legs_3_23
+  - first:
+      213: 3505815723939462030
+    second: PMRG_Attack_Legs_3_24
+  - first:
+      213: -7791176124716578090
+    second: PMRG_Attack_Legs_3_25
+  - first:
+      213: -6234214284879263501
+    second: PMRG_Attack_Legs_3_26
+  - first:
+      213: -5809146163629976185
+    second: PMRG_Attack_Legs_3_27
+  - first:
+      213: 1452849700237331191
+    second: PMRG_Attack_Legs_3_28
+  - first:
+      213: 5507277025063162959
+    second: PMRG_Attack_Legs_3_29
+  - first:
+      213: -2327506537373623589
+    second: PMRG_Attack_Legs_3_30
+  - first:
+      213: -8519590864222262175
+    second: PMRG_Attack_Legs_3_31
+  - first:
+      213: 3701309844881955060
+    second: PMRG_Attack_Legs_3_32
+  - first:
+      213: 3556096400019467603
+    second: PMRG_Attack_Legs_3_33
+  - first:
+      213: 742048932553544002
+    second: PMRG_Attack_Legs_3_34
+  - first:
+      213: 168145598779677697
+    second: PMRG_Attack_Legs_3_35
+  - first:
+      213: -8974162175350600988
+    second: PMRG_Attack_Legs_3_36
+  - first:
+      213: 6550572570973292696
+    second: PMRG_Attack_Legs_3_37
+  - first:
+      213: 3051212404249983035
+    second: PMRG_Attack_Legs_3_38
+  - first:
+      213: -4151152203905831750
+    second: PMRG_Attack_Legs_3_39
+  - first:
+      213: -472198817389622740
+    second: PMRG_Attack_Legs_3_40
+  - first:
+      213: -7066735521977785499
+    second: PMRG_Attack_Legs_3_41
+  - first:
+      213: -5042222253283045175
+    second: PMRG_Attack_Legs_3_42
+  - first:
+      213: 4984491406924328402
+    second: PMRG_Attack_Legs_3_43
+  - first:
+      213: -3698792902842672692
+    second: PMRG_Attack_Legs_3_44
+  - first:
+      213: -4021478274680333375
+    second: PMRG_Attack_Legs_3_45
+  - first:
+      213: 5019361238634537536
+    second: PMRG_Attack_Legs_3_46
+  - first:
+      213: -6697686845993877325
+    second: PMRG_Attack_Legs_3_47
+  - first:
+      213: -5923732257316666765
+    second: PMRG_Attack_Legs_3_48
+  - first:
+      213: 6337903087376198579
+    second: PMRG_Attack_Legs_3_49
+  - first:
+      213: 5044876490967341096
+    second: PMRG_Attack_Legs_3_50
+  - first:
+      213: 8643027955459625274
+    second: PMRG_Attack_Legs_3_51
+  - first:
+      213: 2898284193189049061
+    second: PMRG_Attack_Legs_3_52
+  - first:
+      213: -5489735989364647095
+    second: PMRG_Attack_Legs_3_53
+  - first:
+      213: -133011073555750402
+    second: PMRG_Attack_Legs_3_54
+  - first:
+      213: 2051680384080393121
+    second: PMRG_Attack_Legs_3_55
+  - first:
+      213: -1540084311025556576
+    second: PMRG_Attack_Legs_3_56
+  - first:
+      213: -90211678899187849
+    second: PMRG_Attack_Legs_3_57
+  - first:
+      213: -5284947069064833489
+    second: PMRG_Attack_Legs_3_58
+  - first:
+      213: -2944315309472403169
+    second: PMRG_Attack_Legs_3_59
+  - first:
+      213: 3584524105794962142
+    second: PMRG_Attack_Legs_3_60
+  - first:
+      213: -6970898224438739300
+    second: PMRG_Attack_Legs_3_61
+  - first:
+      213: -7440074705216829745
+    second: PMRG_Attack_Legs_3_62
+  - first:
+      213: -6527777017510752234
+    second: PMRG_Attack_Legs_3_63
+  - first:
+      213: 5796947657394545095
+    second: PMRG_Attack_Legs_3_64
+  - first:
+      213: 6529848209281193685
+    second: PMRG_Attack_Legs_3_65
+  - first:
+      213: 91644774834905225
+    second: PMRG_Attack_Legs_3_66
+  - first:
+      213: -8672689374421008113
+    second: PMRG_Attack_Legs_3_67
+  - first:
+      213: 3070897042073582398
+    second: PMRG_Attack_Legs_3_68
+  - first:
+      213: -2069747749410119087
+    second: PMRG_Attack_Legs_3_69
+  - first:
+      213: -6098611841818322567
+    second: PMRG_Attack_Legs_3_70
+  - first:
+      213: -6900125548913669679
+    second: PMRG_Attack_Legs_3_71
+  - first:
+      213: -1468201068974618839
+    second: PMRG_Attack_Legs_3_72
+  - first:
+      213: -4263684001182397388
+    second: PMRG_Attack_Legs_3_73
+  - first:
+      213: 1780329584062401433
+    second: PMRG_Attack_Legs_3_74
+  - first:
+      213: -682632357089020896
+    second: PMRG_Attack_Legs_3_75
+  - first:
+      213: -8842746960116079849
+    second: PMRG_Attack_Legs_3_76
+  - first:
+      213: 461216354598298256
+    second: PMRG_Attack_Legs_3_77
+  - first:
+      213: -3808103997898316034
+    second: PMRG_Attack_Legs_3_78
+  - first:
+      213: 6642134515585538817
+    second: PMRG_Attack_Legs_3_79
+  - first:
+      213: -1926708580015482754
+    second: PMRG_Attack_Legs_3_80
+  - first:
+      213: 2026926905085274715
+    second: PMRG_Attack_Legs_3_81
+  - first:
+      213: 885739992501948915
+    second: PMRG_Attack_Legs_3_82
+  - first:
+      213: 7849938003392230520
+    second: PMRG_Attack_Legs_3_83
+  - first:
+      213: 926424891255292185
+    second: PMRG_Attack_Legs_3_84
+  - first:
+      213: 8890734032197188427
+    second: PMRG_Attack_Legs_3_85
+  - first:
+      213: 6052861060671653160
+    second: PMRG_Attack_Legs_3_86
+  - first:
+      213: -2521075615332994708
+    second: PMRG_Attack_Legs_3_87
+  - first:
+      213: -2388923696115651750
+    second: PMRG_Attack_Legs_3_88
+  - first:
+      213: -8750985228374884573
+    second: PMRG_Attack_Legs_3_89
+  - first:
+      213: 5360498746702141886
+    second: PMRG_Attack_Legs_3_90
+  - first:
+      213: 5756446434761078203
+    second: PMRG_Attack_Legs_3_91
+  - first:
+      213: -8598718660603646883
+    second: PMRG_Attack_Legs_3_92
+  - first:
+      213: -4067606862449579933
+    second: PMRG_Attack_Legs_3_93
+  - first:
+      213: 141980911097662613
+    second: PMRG_Attack_Legs_3_94
+  - first:
+      213: 884712413492646121
+    second: PMRG_Attack_Legs_3_95
+  - first:
+      213: 7957705815014604820
+    second: PMRG_Attack_Legs_3_96
+  - first:
+      213: 1269448592199094470
+    second: PMRG_Attack_Legs_3_97
+  - first:
+      213: 1874246453432411443
+    second: PMRG_Attack_Legs_3_98
+  - first:
+      213: 8605881211633439873
+    second: PMRG_Attack_Legs_3_99
+  - first:
+      213: 5095683864545380445
+    second: PMRG_Attack_Legs_3_100
+  - first:
+      213: -5519545366121477801
+    second: PMRG_Attack_Legs_3_101
+  - first:
+      213: -6447969320229772004
+    second: PMRG_Attack_Legs_3_102
+  - first:
+      213: -3897632539608267401
+    second: PMRG_Attack_Legs_3_103
+  - first:
+      213: 7959935503534112472
+    second: PMRG_Attack_Legs_3_104
+  - first:
+      213: 8955702520005790778
+    second: PMRG_Attack_Legs_3_105
+  - first:
+      213: 7716732487952221495
+    second: PMRG_Attack_Legs_3_106
+  - first:
+      213: -4485207015547760266
+    second: PMRG_Attack_Legs_3_107
+  - first:
+      213: -2213340450064796564
+    second: PMRG_Attack_Legs_3_108
+  - first:
+      213: 5556388632902323226
+    second: PMRG_Attack_Legs_3_109
+  - first:
+      213: 361690482242223432
+    second: PMRG_Attack_Legs_3_110
+  - first:
+      213: 5033255598015518162
+    second: PMRG_Attack_Legs_3_111
+  - first:
+      213: 4789959017022756992
+    second: PMRG_Attack_Legs_3_112
+  - first:
+      213: -9089980432226548070
+    second: PMRG_Attack_Legs_3_113
+  - first:
+      213: -867425500734667721
+    second: PMRG_Attack_Legs_3_114
+  - first:
+      213: 764339405614841461
+    second: PMRG_Attack_Legs_3_115
+  - first:
+      213: 3215464958251107770
+    second: PMRG_Attack_Legs_3_116
+  - first:
+      213: 3286197958702541252
+    second: PMRG_Attack_Legs_3_117
+  - first:
+      213: -3828987503998964495
+    second: PMRG_Attack_Legs_3_118
+  - first:
+      213: 3250425072356259434
+    second: PMRG_Attack_Legs_3_119
+  - first:
+      213: -7438793105288055633
+    second: PMRG_Attack_Legs_3_120
+  - first:
+      213: 8985815345871716783
+    second: PMRG_Attack_Legs_3_121
+  - first:
+      213: -5805609201745818960
+    second: PMRG_Attack_Legs_3_122
+  - first:
+      213: -1104346186186036568
+    second: PMRG_Attack_Legs_3_123
+  - first:
+      213: 5858436269150150021
+    second: PMRG_Attack_Legs_3_124
+  - first:
+      213: -4819479226717310185
+    second: PMRG_Attack_Legs_3_125
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6622
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2908a533911dcbbf0800000000000000
+      internalID: -307140768402079598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_1
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 6622
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd57cb82735282460800000000000000
+      internalID: 7217059321698088412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_2
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 6622
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02064e8a22dd383d0800000000000000
+      internalID: -3205475368825495520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_3
+      rect:
+        serializedVersion: 2
+        x: 2478
+        y: 6622
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21f7d4b4970a3c590800000000000000
+      internalID: -7655098498784854254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_4
+      rect:
+        serializedVersion: 2
+        x: 3304
+        y: 6622
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e348ca7db724d15d0800000000000000
+      internalID: -3090240669639474114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_5
+      rect:
+        serializedVersion: 2
+        x: 4130
+        y: 6622
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 79e551193f74535c0800000000000000
+      internalID: -4236400763035361641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_6
+      rect:
+        serializedVersion: 2
+        x: 4956
+        y: 6622
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 707780bcde28d6a70800000000000000
+      internalID: 8821851202913859335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_7
+      rect:
+        serializedVersion: 2
+        x: 5782
+        y: 6622
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32904cca6b1c9a620800000000000000
+      internalID: 2785970834832099619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5676
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a5b2e37e3064dc050800000000000000
+      internalID: 5822386875838376794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_9
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 5676
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c61edaab594b029b0800000000000000
+      internalID: -5106883422263058068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_10
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 5676
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecba49bc88701cb20800000000000000
+      internalID: 3152809498248522702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_11
+      rect:
+        serializedVersion: 2
+        x: 2478
+        y: 5676
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bae9bfab20feec0b0800000000000000
+      internalID: -5706360882825814357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_12
+      rect:
+        serializedVersion: 2
+        x: 3304
+        y: 5676
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f087ddcfd9b31bf60800000000000000
+      internalID: 8048279558826063887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_13
+      rect:
+        serializedVersion: 2
+        x: 4130
+        y: 5676
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5e26343ce00c1d00800000000000000
+      internalID: 944631036329209439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_14
+      rect:
+        serializedVersion: 2
+        x: 4956
+        y: 5676
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 559b77ea46b2c0e80800000000000000
+      internalID: -8211140309179451051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_15
+      rect:
+        serializedVersion: 2
+        x: 5782
+        y: 5676
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f860efea008067ef0800000000000000
+      internalID: -110892341795092849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4730
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c4029b01c4c10f40800000000000000
+      internalID: 5693047737374868676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_17
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 4730
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae030afcabf7149d0800000000000000
+      internalID: -2791809853668970262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_18
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 4730
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fdf408d72ffb922b0800000000000000
+      internalID: -5608740812704690209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_19
+      rect:
+        serializedVersion: 2
+        x: 2478
+        y: 4730
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73a48669bb8e16d40800000000000000
+      internalID: 5575993706041330231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_20
+      rect:
+        serializedVersion: 2
+        x: 3304
+        y: 4730
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57b72d37656765c70800000000000000
+      internalID: 8959478622382619509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_21
+      rect:
+        serializedVersion: 2
+        x: 4130
+        y: 4730
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dacf77f046dfd8ec0800000000000000
+      internalID: -3562913123982115667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_22
+      rect:
+        serializedVersion: 2
+        x: 4956
+        y: 4730
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 797d69e424de34550800000000000000
+      internalID: 6144015185705621399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_23
+      rect:
+        serializedVersion: 2
+        x: 5782
+        y: 4730
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3ec28a0a711e0270800000000000000
+      internalID: 8218525585857760827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3784
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e8bf36983d827a030800000000000000
+      internalID: 3505815723939462030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_25
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 3784
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6da83cf089e20e390800000000000000
+      internalID: -7791176124716578090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_26
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 3784
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f80b10632f9b79a0800000000000000
+      internalID: -6234214284879263501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_27
+      rect:
+        serializedVersion: 2
+        x: 2478
+        y: 3784
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7851384a754c16fa0800000000000000
+      internalID: -5809146163629976185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_28
+      rect:
+        serializedVersion: 2
+        x: 3304
+        y: 3784
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7facda6da1f892410800000000000000
+      internalID: 1452849700237331191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_29
+      rect:
+        serializedVersion: 2
+        x: 4130
+        y: 3784
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f445f868647cd6c40800000000000000
+      internalID: 5507277025063162959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_30
+      rect:
+        serializedVersion: 2
+        x: 4956
+        y: 3784
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bda127bc22903bfd0800000000000000
+      internalID: -2327506537373623589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_31
+      rect:
+        serializedVersion: 2
+        x: 5782
+        y: 3784
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16c6e5a6f3554c980800000000000000
+      internalID: -8519590864222262175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2838
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4f858db81b1bd5330800000000000000
+      internalID: 3701309844881955060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_33
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 2838
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35da436b5dac95130800000000000000
+      internalID: 3556096400019467603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_34
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 2838
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 241dfc692994c4a00800000000000000
+      internalID: 742048932553544002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_35
+      rect:
+        serializedVersion: 2
+        x: 2478
+        y: 2838
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10cdecdf78f555200800000000000000
+      internalID: 168145598779677697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_36
+      rect:
+        serializedVersion: 2
+        x: 3304
+        y: 2838
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ea0b757c0f557380800000000000000
+      internalID: -8974162175350600988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_37
+      rect:
+        serializedVersion: 2
+        x: 4130
+        y: 2838
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 898c7400c0f48ea50800000000000000
+      internalID: 6550572570973292696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_38
+      rect:
+        serializedVersion: 2
+        x: 4956
+        y: 2838
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b38f5910485185a20800000000000000
+      internalID: 3051212404249983035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_39
+      rect:
+        serializedVersion: 2
+        x: 5782
+        y: 2838
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: abcec9570152466c0800000000000000
+      internalID: -4151152203905831750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1892
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2ac12a6da96279f0800000000000000
+      internalID: -472198817389622740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_41
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 1892
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56321e2eb79eded90800000000000000
+      internalID: -7066735521977785499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_42
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 1892
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c09e72539d660ab0800000000000000
+      internalID: -5042222253283045175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_43
+      rect:
+        serializedVersion: 2
+        x: 2478
+        y: 1892
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2dd26bf86887c2540800000000000000
+      internalID: 4984491406924328402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_44
+      rect:
+        serializedVersion: 2
+        x: 3304
+        y: 1892
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc99350b37f3bacc0800000000000000
+      internalID: -3698792902842672692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_45
+      rect:
+        serializedVersion: 2
+        x: 4130
+        y: 1892
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cb5abdd0d6d038c0800000000000000
+      internalID: -4021478274680333375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_46
+      rect:
+        serializedVersion: 2
+        x: 4956
+        y: 1892
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0422d2ce37a58a540800000000000000
+      internalID: 5019361238634537536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_47
+      rect:
+        serializedVersion: 2
+        x: 5782
+        y: 1892
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b08ab7ac490d03a0800000000000000
+      internalID: -6697686845993877325
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 946
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3720e12b5ecaacda0800000000000000
+      internalID: -5923732257316666765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_49
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 946
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bbe8ef3741c4f750800000000000000
+      internalID: 6337903087376198579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_50
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 946
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 828d3db8070030640800000000000000
+      internalID: 5044876490967341096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_51
+      rect:
+        serializedVersion: 2
+        x: 2478
+        y: 946
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3111fcf12432f770800000000000000
+      internalID: 8643027955459625274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_52
+      rect:
+        serializedVersion: 2
+        x: 3304
+        y: 946
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e2b9213e16c83820800000000000000
+      internalID: 2898284193189049061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_53
+      rect:
+        serializedVersion: 2
+        x: 4130
+        y: 946
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94b1e3b143a80d3b0800000000000000
+      internalID: -5489735989364647095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_54
+      rect:
+        serializedVersion: 2
+        x: 4956
+        y: 946
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef124812223772ef0800000000000000
+      internalID: -133011073555750402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_55
+      rect:
+        serializedVersion: 2
+        x: 5782
+        y: 946
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a3bfb56078097c10800000000000000
+      internalID: 2051680384080393121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a36b259a7580aae0800000000000000
+      internalID: -1540084311025556576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_57
+      rect:
+        serializedVersion: 2
+        x: 826
+        y: 0
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77f4f9cb4f08fbef0800000000000000
+      internalID: -90211678899187849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_58
+      rect:
+        serializedVersion: 2
+        x: 1652
+        y: 0
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f2616ab34a818a6b0800000000000000
+      internalID: -5284947069064833489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_59
+      rect:
+        serializedVersion: 2
+        x: 2478
+        y: 0
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f11372063d0b327d0800000000000000
+      internalID: -2944315309472403169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_60
+      rect:
+        serializedVersion: 2
+        x: 3304
+        y: 0
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed2cbbebea9ceb130800000000000000
+      internalID: 3584524105794962142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_61
+      rect:
+        serializedVersion: 2
+        x: 4130
+        y: 0
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9e7dee8ff4624f90800000000000000
+      internalID: -6970898224438739300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PMRG_Attack_Legs_3_62
+      rect:
+        serializedVersion: 2
+        x: 4956
+        y: 0
+        width: 826
+        height: 946
+      alignment: 9
+      pivot: {x: 0.329, y: 0.071}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc68e2d897b8fb890800000000000000
+      internalID: -7440074705216829745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: a20649e377ab18c49b514770214a8631
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":8.0,"y":8.0},"gridSpriteSize":{"x":826.0,"y":946.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.32899999618530276,"y":0.07100000232458115},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      PMRG_Attack_Legs_3_0: -307140768402079598
+      PMRG_Attack_Legs_3_1: 7217059321698088412
+      PMRG_Attack_Legs_3_10: 3152809498248522702
+      PMRG_Attack_Legs_3_11: -5706360882825814357
+      PMRG_Attack_Legs_3_12: 8048279558826063887
+      PMRG_Attack_Legs_3_13: 944631036329209439
+      PMRG_Attack_Legs_3_14: -8211140309179451051
+      PMRG_Attack_Legs_3_15: -110892341795092849
+      PMRG_Attack_Legs_3_16: 5693047737374868676
+      PMRG_Attack_Legs_3_17: -2791809853668970262
+      PMRG_Attack_Legs_3_18: -5608740812704690209
+      PMRG_Attack_Legs_3_19: 5575993706041330231
+      PMRG_Attack_Legs_3_2: -3205475368825495520
+      PMRG_Attack_Legs_3_20: 8959478622382619509
+      PMRG_Attack_Legs_3_21: -3562913123982115667
+      PMRG_Attack_Legs_3_22: 6144015185705621399
+      PMRG_Attack_Legs_3_23: 8218525585857760827
+      PMRG_Attack_Legs_3_24: 3505815723939462030
+      PMRG_Attack_Legs_3_25: -7791176124716578090
+      PMRG_Attack_Legs_3_26: -6234214284879263501
+      PMRG_Attack_Legs_3_27: -5809146163629976185
+      PMRG_Attack_Legs_3_28: 1452849700237331191
+      PMRG_Attack_Legs_3_29: 5507277025063162959
+      PMRG_Attack_Legs_3_3: -7655098498784854254
+      PMRG_Attack_Legs_3_30: -2327506537373623589
+      PMRG_Attack_Legs_3_31: -8519590864222262175
+      PMRG_Attack_Legs_3_32: 3701309844881955060
+      PMRG_Attack_Legs_3_33: 3556096400019467603
+      PMRG_Attack_Legs_3_34: 742048932553544002
+      PMRG_Attack_Legs_3_35: 168145598779677697
+      PMRG_Attack_Legs_3_36: -8974162175350600988
+      PMRG_Attack_Legs_3_37: 6550572570973292696
+      PMRG_Attack_Legs_3_38: 3051212404249983035
+      PMRG_Attack_Legs_3_39: -4151152203905831750
+      PMRG_Attack_Legs_3_4: -3090240669639474114
+      PMRG_Attack_Legs_3_40: -472198817389622740
+      PMRG_Attack_Legs_3_41: -7066735521977785499
+      PMRG_Attack_Legs_3_42: -5042222253283045175
+      PMRG_Attack_Legs_3_43: 4984491406924328402
+      PMRG_Attack_Legs_3_44: -3698792902842672692
+      PMRG_Attack_Legs_3_45: -4021478274680333375
+      PMRG_Attack_Legs_3_46: 5019361238634537536
+      PMRG_Attack_Legs_3_47: -6697686845993877325
+      PMRG_Attack_Legs_3_48: -5923732257316666765
+      PMRG_Attack_Legs_3_49: 6337903087376198579
+      PMRG_Attack_Legs_3_5: -4236400763035361641
+      PMRG_Attack_Legs_3_50: 5044876490967341096
+      PMRG_Attack_Legs_3_51: 8643027955459625274
+      PMRG_Attack_Legs_3_52: 2898284193189049061
+      PMRG_Attack_Legs_3_53: -5489735989364647095
+      PMRG_Attack_Legs_3_54: -133011073555750402
+      PMRG_Attack_Legs_3_55: 2051680384080393121
+      PMRG_Attack_Legs_3_56: -1540084311025556576
+      PMRG_Attack_Legs_3_57: -90211678899187849
+      PMRG_Attack_Legs_3_58: -5284947069064833489
+      PMRG_Attack_Legs_3_59: -2944315309472403169
+      PMRG_Attack_Legs_3_6: 8821851202913859335
+      PMRG_Attack_Legs_3_60: 3584524105794962142
+      PMRG_Attack_Legs_3_61: -6970898224438739300
+      PMRG_Attack_Legs_3_62: -7440074705216829745
+      PMRG_Attack_Legs_3_7: 2785970834832099619
+      PMRG_Attack_Legs_3_8: 5822386875838376794
+      PMRG_Attack_Legs_3_9: -5106883422263058068
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -59,8 +59,6 @@ namespace DDD.TNFY.BRAWL
         {
             if (target == null)
             {
-                Debug.LogWarning("[OverworldCameraController] No target assigned. " +
-                                 "DebugOverworldSpawner should call SetTarget() after spawning.");
                 return;
             }
 

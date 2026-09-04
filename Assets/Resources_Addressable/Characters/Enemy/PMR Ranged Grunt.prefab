@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6296162380683165448}
   - component: {fileID: 7416203112659291049}
   m_Layer: 8
-  m_Name: Weapon_B
+  m_Name: Legs_B
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 808743075539079983}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.001}
+  m_LocalPosition: {x: 0, y: 0, z: 0.002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 16.25, y: 9.19}
+  m_Size: {x: 5.96, y: 9.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -114,8 +114,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: -1.1, y: 1.1, z: 1.1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8505012781419835820}
   - {fileID: 2143735755339341424}
@@ -182,7 +182,7 @@ Transform:
   m_GameObject: {fileID: 1469441408511300665}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.001}
+  m_LocalPosition: {x: 0, y: 0, z: -0.002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -237,7 +237,7 @@ SpriteRenderer:
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 16.25, y: 9.19}
+  m_Size: {x: 5.96, y: 9.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -269,7 +269,7 @@ Transform:
   m_GameObject: {fileID: 1641921135064934262}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.001}
+  m_LocalPosition: {x: 0, y: 0, z: -0.002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -319,7 +319,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 7959596794826549972, guid: 6191f17b99d517a4e8c81a74b2ac6f7d, type: 3}
+  m_Sprite: {fileID: -5023168857080860181, guid: 2c35df4379a81d94f9c485c36877f484, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -356,7 +356,7 @@ Transform:
   m_GameObject: {fileID: 1779667319932489842}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0.001}
+  m_LocalPosition: {x: 0, y: 0, z: -0.002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -411,7 +411,7 @@ SpriteRenderer:
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 16.25, y: 9.19}
+  m_Size: {x: 5.96, y: 9.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -493,7 +493,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 2497233732767543397, guid: 88cfd43f2b9c82c4f95f4b0c4ed92408, type: 3}
+  m_Sprite: {fileID: 3522170442115989964, guid: 9ba5af921b6ed7242a4459ce9d05030e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -515,7 +515,7 @@ GameObject:
   - component: {fileID: 5132586875812854491}
   - component: {fileID: 5276089867479909096}
   m_Layer: 8
-  m_Name: Weapon_C
+  m_Name: Legs_C
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -530,7 +530,7 @@ Transform:
   m_GameObject: {fileID: 2199453296943000306}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.001}
+  m_LocalPosition: {x: 0, y: 0, z: 0.002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -585,7 +585,7 @@ SpriteRenderer:
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 16.25, y: 9.19}
+  m_Size: {x: 5.96, y: 9.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -602,7 +602,7 @@ GameObject:
   - component: {fileID: 6040250065357850109}
   - component: {fileID: 136140531934981029}
   m_Layer: 8
-  m_Name: Weapon_A
+  m_Name: Legs_A
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -617,7 +617,7 @@ Transform:
   m_GameObject: {fileID: 3507565554147636769}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.001}
+  m_LocalPosition: {x: 0, y: 0, z: 0.002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -667,7 +667,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: -2185455867137529710, guid: 6fe8d22a9ff3e9a4ba2e05d52f943522, type: 3}
+  m_Sprite: {fileID: 6061771690035666706, guid: 58acca26e284c014bb8585b7d82e2289, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -695,7 +695,7 @@ GameObject:
   - component: {fileID: 8222727975510979697}
   - component: {fileID: 7866205181565842154}
   m_Layer: 8
-  m_Name: PMR Grunt
+  m_Name: PMR Ranged Grunt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -731,7 +731,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24484f0df14ab4d4fa53028920014d35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  characterData: {fileID: 11400000, guid: 8b8108f5cdb4797428a536b6a6ba49f1, type: 2}
+  characterData: {fileID: 11400000, guid: 91a6131e4422a7a43965344a3192db91, type: 2}
   team: -1
   goesFirst: 0
   currentHealth: 0
@@ -819,7 +819,7 @@ Animator:
   m_GameObject: {fileID: 3963197675195542672}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4f667f0a1279b11409b30994f5d9ffac, type: 2}
+  m_Controller: {fileID: 9100000, guid: 83db3d7f3ddd9584593274439ee5423b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -844,7 +844,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playIdleOnStart: 1
-  inactiveTurnSpeedMultiplier: 0.5
+  inactiveTurnSpeedMultiplier: 0.3
 --- !u!1 &7660107750329921412
 GameObject:
   m_ObjectHideFlags: 0
@@ -926,7 +926,7 @@ SpriteRenderer:
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 16.25, y: 9.19}
+  m_Size: {x: 5.96, y: 9.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -1069,7 +1069,7 @@ SpriteRenderer:
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 16.25, y: 9.19}
+  m_Size: {x: 5.96, y: 9.22}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0

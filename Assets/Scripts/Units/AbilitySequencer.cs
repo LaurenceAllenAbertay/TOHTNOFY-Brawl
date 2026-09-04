@@ -334,7 +334,8 @@ namespace DDD.TNFY.BRAWL
         private IEnumerator HandleSingleTargetingEffects(AbilityContext ctx, List<Unit> targets, HashSet<AbilityEffect> midAnimFiredEffects = null)
         {
             bool wideFraming = ctx.ability.cameraMode == CameraMode.PreExecutionZoom;
-            int previousHandle = -1;
+            int previousHandle = _abilityFocusHandle;
+            _abilityFocusHandle = -1;
 
             foreach (var target in targets)
             {
@@ -350,7 +351,10 @@ namespace DDD.TNFY.BRAWL
                 yield return transition;
 
                 yield return StartCoroutine(PlayTargetEffectsWithAnimation(ctx, new List<Unit> { target }, midAnimFiredEffects));
-                
+
+                if (BigMomentSequencer.Instance != null && BigMomentSequencer.Instance.HasPending)
+                    yield return StartCoroutine(BigMomentSequencer.Instance.DrainQueue());
+
                 if (!target.IsDead)
                     yield return new WaitForSeconds(0.3f);
             }
@@ -415,12 +419,15 @@ namespace DDD.TNFY.BRAWL
                     var targetAnimator  = target.GetComponentInChildren<UnitAnimator>();
                     var targetHealthBar = target.GetComponentInChildren<UnitHealthBarDisplay>();
 
+                    bool bigMomentPending = BigMomentSequencer.Instance != null
+                        && BigMomentSequencer.Instance.IsPending(target);
+
                     if (target.IsDead)
                     {
                         if (UnitDownedSequencer.Instance != null)
                             yield return StartCoroutine(UnitDownedSequencer.Instance.PresentDownedInline(target));
                     }
-                    else
+                    else if (!bigMomentPending)
                     {
                         PlayTargetAnimation(target, "Hurt");
 
