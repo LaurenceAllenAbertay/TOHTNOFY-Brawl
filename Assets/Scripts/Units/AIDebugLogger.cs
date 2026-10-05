@@ -135,12 +135,12 @@ namespace DDD.TNFY.BRAWL
                     parts.Add(FormatAbilityPart(plan));
 
                 if (plan.movementTarget != null && plan.movementTarget != unit.currentTile)
-                    parts.Add($"then {(plan.isJump ? "Jump" : "Move")} to {plan.movementTarget.name}");
+                    parts.Add($"then {DescribeMove(plan)}");
             }
             else
             {
                 if (plan.movementTarget != null && plan.movementTarget != unit.currentTile)
-                    parts.Add($"{(plan.isJump ? "Jump" : "Move")} to {plan.movementTarget.name}");
+                    parts.Add(DescribeMove(plan));
                 else
                     parts.Add("Stay in place");
 
@@ -149,6 +149,14 @@ namespace DDD.TNFY.BRAWL
             }
 
             return parts.Count > 0 ? string.Join(" + ", parts) : "No action";
+        }
+
+        private static string DescribeMove(ActionPlan plan)
+        {
+            if (plan.isJump && plan.jumpFromTile != null)
+                return $"Move to {plan.jumpFromTile.name} then Jump to {plan.movementTarget.name}";
+
+            return $"{(plan.isJump ? "Jump" : "Move")} to {plan.movementTarget.name}";
         }
 
         private static string FormatAbilityPart(ActionPlan plan)

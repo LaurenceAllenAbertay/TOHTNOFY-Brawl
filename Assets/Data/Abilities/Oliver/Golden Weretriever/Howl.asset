@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 538600722897cd54787bdb9601555fbf, type: 3}
+  m_Name: Howl
+  m_EditorClassIdentifier: 
+  abilityName: Howl
+  description: Apply frightened to EVERYONE around you.
+  image: {fileID: 21300000, guid: 749d9fd5cc9ebd54f9e0d706f7d71ee7, type: 3}
+  rangeType: 2
+  range: 4
+  damage: 0
+  cooldown: 0
+  attackType: 0
+  canHitEnemies: 1
+  canHitAllies: 1
+  canTargetNeutral: 0
+  passThroughUnits: 1
+  maxTargets: 99
+  canExecuteWithoutTargets: 0
+  endTurnOnCast: 0
+  legacySuppressCameraTransitions: 0
+  cameraMode: 5
+  animationState: 
+  animationHoldState: 
+  animationHoldReleaseState: 
+  castEffectPrefab: {fileID: 0}
+  castEffectOffset: {x: 0, y: 0, z: 0}
+  parentCastEffectToCaster: 0
+  hitEffectPrefab: {fileID: 0}
+  hitEffectOffset: {x: 0, y: 0, z: 0}
+  parentHitEffectToTarget: 0
+  targeting: {fileID: 11400000, guid: 94b073cd9dd6147438b93ffd24503b47, type: 2}
+  effects:
+  - {fileID: 11400000, guid: 7170756fd746ae54ba702f03f8f6b9ea, type: 2}

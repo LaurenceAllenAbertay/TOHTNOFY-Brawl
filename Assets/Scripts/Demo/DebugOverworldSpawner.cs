@@ -104,6 +104,7 @@ namespace DDD.TNFY.BRAWL
 
             Vector3 origin = spawnPoint != null ? spawnPoint.position : Vector3.zero;
             var     partyObjects = new List<GameObject>(characters.Count);
+            var     spawnedCharacters = new List<CharacterData>(characters.Count);
             var     handles      = new List<AsyncOperationHandle<GameObject>>(characters.Count);
 
             for (int i = 0; i < characters.Count; i++)
@@ -140,6 +141,7 @@ namespace DDD.TNFY.BRAWL
                     go.AddComponent<OverworldPartyLeader>();
 
                 partyObjects.Add(go);
+                spawnedCharacters.Add(characters[i]);
             }
 
             if (partyObjects.Count == 0)
@@ -148,7 +150,7 @@ namespace DDD.TNFY.BRAWL
                 yield break;
             }
 
-            partyManager.Initialise(partyObjects);
+            partyManager.Initialise(partyObjects, spawnedCharacters);
             
             if (cameraController != null)
                 cameraController.SetTarget(partyManager.LeaderTransform);

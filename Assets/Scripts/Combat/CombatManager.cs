@@ -17,13 +17,16 @@ namespace DDD.TNFY.BRAWL
     {
         public static CombatManager Instance { get; private set; }
 
+        public static bool InfiniteMovementEnabled { get; set; }
+        public static bool InfiniteAttacksEnabled { get; set; }
+
         #region Properties
 
         public bool CanMove => currentState == CombatState.WaitingForInput &&
                                !_movementLockedByAbility && !isWaitingForAnimation && !isMoving &&
                                GetRemainingMovement() > 0;
         public bool CanUseAbility => currentState == CombatState.WaitingForInput &&
-                                     !hasUsedAbilityThisTurn && !isWaitingForAnimation && !isMoving &&
+                                     (InfiniteAttacksEnabled || !hasUsedAbilityThisTurn) && !isWaitingForAnimation && !isMoving &&
                                      (currentActiveUnit == null || currentActiveUnit.CanUseAbilities());
         public bool IsTargetingAbility => targetingController != null && targetingController.IsTargetingAbility;
         public bool IsExecutingAbility => isWaitingForAnimation;
@@ -63,11 +66,12 @@ namespace DDD.TNFY.BRAWL
             }
         }
 
-        public int GetRemainingMovement() => Mathf.Max(0, totalMovementPoints - movementPointsUsed);
+        public int GetRemainingMovement() =>
+            InfiniteMovementEnabled ? totalMovementPoints : Mathf.Max(0, totalMovementPoints - movementPointsUsed);
         public int GetTotalMovement() => totalMovementPoints;
         public int GetUsedMovement() => movementPointsUsed;
         public bool HasMovementRemaining() => GetRemainingMovement() > 0;
-        public bool HasEnoughMovementForJump(int jumpRange) => GetRemainingMovement() >= jumpRange;
+        public bool HasEnoughMovementForJump(int jumpRange) => InfiniteMovementEnabled || GetRemainingMovement() >= jumpRange;
 
         #endregion
 
@@ -478,7 +482,7 @@ namespace DDD.TNFY.BRAWL
         public void EnterAbilityTargeting(int slot)
         {
             if (ShouldBlockInput()) return;
-            if (hasUsedAbilityThisTurn) return;
+            if (!InfiniteAttacksEnabled && hasUsedAbilityThisTurn) return;
             
             var abilities = UnitLoadoutManager.GetAbilities(currentActiveUnit);
             if (slot >= 0 && slot < abilities.Length && currentActiveUnit != null &&
@@ -595,22 +599,42 @@ namespace DDD.TNFY.BRAWL
             var affectedTiles = ability.targeting.GetTraversal(revealCtx);
 
             Vector3 casterPosition = currentActiveUnit.transform.position;
-            float worldRadius = 0f;
+
+            float minX = casterPosition.x, maxX = casterPosition.x;
+            float minZ = casterPosition.z, maxZ = casterPosition.z;
+            bool hasAffectedTile = false;
 
             if (affectedTiles != null)
             {
                 foreach (var tile in affectedTiles)
                 {
                     if (tile == null) continue;
-                    worldRadius = Mathf.Max(worldRadius, Vector3.Distance(casterPosition, tile.transform.position));
+                    hasAffectedTile = true;
+
+                    Vector3 pos = tile.transform.position;
+                    minX = Mathf.Min(minX, pos.x);
+                    maxX = Mathf.Max(maxX, pos.x);
+                    minZ = Mathf.Min(minZ, pos.z);
+                    maxZ = Mathf.Max(maxZ, pos.z);
                 }
+            }
+
+            if (!hasAffectedTile) yield break;
+
+            Vector3 center = new Vector3((minX + maxX) * 0.5f, casterPosition.y, (minZ + maxZ) * 0.5f);
+
+            float worldRadius = Vector3.Distance(center, casterPosition);
+            foreach (var tile in affectedTiles)
+            {
+                if (tile == null) continue;
+                worldRadius = Mathf.Max(worldRadius, Vector3.Distance(center, tile.transform.position));
             }
 
             if (worldRadius <= 0f) yield break;
 
             Coroutine transition;
             int zoomHandle = cameraController.PushFocus(
-                cameraController.FitRadius(casterPosition, worldRadius), 1f, out transition);
+                cameraController.FitRadius(center, worldRadius), 1f, out transition);
             yield return transition;
 
             yield return new WaitForSeconds(postExecutionZoomLingerDuration);
@@ -713,8 +737,12 @@ namespace DDD.TNFY.BRAWL
         
         public void SetMovementUsed()
         {
-            movementPointsUsed = totalMovementPoints;
-            _hasMovedThisTurn = true;
+            if (!InfiniteMovementEnabled)
+            {
+                movementPointsUsed = totalMovementPoints;
+                _hasMovedThisTurn = true;
+            }
+
             GridManager.Instance.SetHighlightMode(GridManager.HighlightMode.None);
             UIEvents.OnCombatStateChanged();
         }

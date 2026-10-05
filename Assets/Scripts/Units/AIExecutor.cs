@@ -65,27 +65,37 @@ namespace DDD.TNFY.BRAWL
 
         private IEnumerator ExecuteMovement(ActionPlan plan)
         {
-            logger?.LogMovement(plan.isJump ? "jumping" : "moving", plan.movementTarget);
+            if (!plan.isJump)
+            {
+                logger?.LogMovement("moving", plan.movementTarget);
+                yield return StartCoroutine(ExecuteRegularMovement(plan.movementTarget));
+                yield break;
+            }
 
-            if (plan.isJump)
+            if (jumpSystem == null)
             {
-                if (jumpSystem != null)
+                Debug.LogWarning($"[{unit.name}] JumpSystem not found - falling back to regular movement");
+                yield return StartCoroutine(ExecuteRegularMovement(plan.movementTarget));
+                yield break;
+            }
+
+            if (plan.jumpFromTile != null && plan.jumpFromTile != unit.currentTile)
+            {
+                logger?.LogMovement("moving", plan.jumpFromTile);
+                yield return StartCoroutine(ExecuteRegularMovement(plan.jumpFromTile));
+
+                if (unit.currentTile != plan.jumpFromTile)
                 {
-                    yield return StartCoroutine(ExecuteAIJump(plan.movementTarget));
-                }
-                else
-                {
-                    Debug.LogWarning($"[{unit.name}] JumpSystem not found - falling back to regular movement");
-                    yield return StartCoroutine(ExecuteRegularMovement(plan));
+                    Debug.LogWarning($"[{unit.name}] Could not reach jump launch tile {plan.jumpFromTile.name} - skipping jump");
+                    yield break;
                 }
             }
-            else
-            {
-                yield return StartCoroutine(ExecuteRegularMovement(plan));
-            }
+
+            logger?.LogMovement("jumping", plan.movementTarget);
+            yield return StartCoroutine(ExecuteAIJump(plan.movementTarget));
         }
 
-        private IEnumerator ExecuteRegularMovement(ActionPlan plan)
+        private IEnumerator ExecuteRegularMovement(Tile destination)
         {
             if (UnitMovementController.Instance == null)
             {
@@ -94,7 +104,7 @@ namespace DDD.TNFY.BRAWL
             }
 
             var waypoints = GridManager.Instance.FindPathOptimized(
-                unit.currentTile, plan.movementTarget, unit.GetEffectiveMovementRange());
+                unit.currentTile, destination, unit.GetEffectiveMovementRange());
 
             if (waypoints.Count > 0)
             {
@@ -103,7 +113,7 @@ namespace DDD.TNFY.BRAWL
 
                 yield return StartCoroutine(UnitMovementController.Instance.ExecuteAnimatedMovement(
                     unit,
-                    plan.movementTarget,
+                    destination,
                     waypoints));
 
                 if (focusHandle >= 0)
@@ -115,51 +125,31 @@ namespace DDD.TNFY.BRAWL
         {
             if (!CanAIJumpToTile(destination))
             {
-                Debug.LogError($"[{unit.name}] Invalid jump destination: {destination.name}");
+                Debug.LogError($"[{unit.name}] Invalid jump destination: {destination?.name ?? "null"}");
                 yield break;
             }
 
-            unit.SetCurrentTileLogical(destination);
+            Unit stompTarget = destination.occupied ? destination.currentUnit : null;
+            Tile originTile  = unit.currentTile;
 
             Vector3 startPos = unit.transform.position;
             Vector3 endPos = destination.transform.position;
+
+            unit.SetCurrentTileLogical(destination);
 
             var cam = CameraController.Instance;
             int focusHandle = -1;
             if (cam != null)
                 focusHandle = cam.PushFocus(cam.WorldFocusPosition(endPos));
 
-            yield return StartCoroutine(jumpSystem.JumpAnimation(unit, startPos, endPos));
+            yield return StartCoroutine(jumpSystem.JumpAnimation(unit, startPos, endPos, stompTarget, originTile));
 
             if (focusHandle >= 0)
                 cam.PopFocus(focusHandle);
         }
 
         private bool CanAIJumpToTile(Tile targetTile)
-        {
-            if (targetTile == null) return false;
-
-            int distance = GridManager.Instance.GetGridDistance(unit.currentTile, targetTile, true);
-            int maxRange = unit.JumpRange;
-            const int minRange = 2;
-
-            if (distance < minRange || distance > maxRange) return false;
-            if (!targetTile.passableTerrain) return false;
-
-            if (targetTile.occupied && !unit.CanStompOccupiedTiles) return false;
-
-            return !IsJumpBlockedByWalls(unit.currentTile, targetTile);
-        }
-
-        private bool IsJumpBlockedByWalls(Tile startTile, Tile targetTile)
-        {
-            if (startTile == null || targetTile == null) return true;
-            Vector3 rayStart = startTile.transform.position + Vector3.up * 0.5f;
-            Vector3 rayEnd = targetTile.transform.position + Vector3.up * 0.5f;
-            float checkDistance = Vector3.Distance(rayStart, rayEnd) * 0.9f;
-            int wallsLayerMask = LayerMask.GetMask("Walls");
-            return Physics.Raycast(rayStart, (rayEnd - rayStart).normalized, checkDistance, wallsLayerMask);
-        }
+            => jumpSystem != null && jumpSystem.IsValidJumpDestination(unit, unit.currentTile, targetTile);
 
         private IEnumerator ExecuteAbility(ActionPlan plan)
         {

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace DDD.TNFY.BRAWL
 {
+    [RequireComponent(typeof(Camera))]
     public class CameraController : MonoBehaviour
     {
         [Header("Movement Settings")]
@@ -13,8 +14,7 @@ namespace DDD.TNFY.BRAWL
         [SerializeField] private float cameraYOffset = 2f;
 
         [Header("AOE Zoom Settings")]
-        [SerializeField] private float aoeZoomYMultiplier = 0.8f;
-        [SerializeField] private float aoeZoomZMultiplier = 2f;
+        [SerializeField] private float aoeFramingPadding = 1.15f;
 
         [Header("Bounds")]
         [SerializeField] private BoxCollider boundsBox;
@@ -162,10 +162,20 @@ namespace DDD.TNFY.BRAWL
 
         public Vector3 FitRadius(Vector3 center, float worldRadius)
         {
+            float baseDistance = Mathf.Sqrt(cameraYOffset * cameraYOffset + cameraZOffset * cameraZOffset);
+
+            float verticalFovRad = cam.fieldOfView * Mathf.Deg2Rad;
+            float verticalDistance = worldRadius / Mathf.Tan(verticalFovRad * 0.5f);
+            float horizontalDistance = verticalDistance / cam.aspect;
+
+            float requiredDistance = Mathf.Max(verticalDistance, horizontalDistance) * aoeFramingPadding;
+            float totalDistance = Mathf.Max(baseDistance, requiredDistance);
+            float ratio = totalDistance / baseDistance;
+
             return ClampToBounds(new Vector3(
                 center.x,
-                center.y + cameraYOffset + worldRadius * aoeZoomYMultiplier,
-                center.z - cameraZOffset - worldRadius * aoeZoomZMultiplier
+                center.y + cameraYOffset * ratio,
+                center.z - cameraZOffset * ratio
             ));
         }
 

@@ -13,6 +13,9 @@ namespace DDD.TNFY.BRAWL
         public bool moveToEnd = true;
         public bool chargeUntilBlocked = false;
 
+        [Tooltip("Optional. Leave with no keyframes (default) to use the casting unit's own Movement Curve from their CharacterData. Add keyframes here to give this specific charge its own feel instead.")]
+        public AnimationCurve movementCurveOverride = new AnimationCurve();
+
         [Header("Animation")]
         [SerializeField] private string moveAnimationState = "";
         
@@ -108,6 +111,7 @@ namespace DDD.TNFY.BRAWL
             }
 
             float elapsed = 0f;
+            AnimationCurve movementCurve = caster.GetMovementCurve(movementCurveOverride);
             
             if (!casterWillMove)
             {
@@ -125,13 +129,13 @@ namespace DDD.TNFY.BRAWL
             {
                 elapsed += Time.deltaTime;
                 float t = Mathf.Clamp01(elapsed / duration);
-                float easedT = Mathf.Pow(t, 0.7f);
+                float easedT = Mathf.Clamp01(movementCurve.Evaluate(t));
 
                 caster.transform.position = Vector3.Lerp(startPos, endPos, easedT);
                 
                 foreach (var kvp in passProgressByTarget)
                 {
-                    if (!triggeredTargets.Contains(kvp.Key) && t >= kvp.Value)
+                    if (!triggeredTargets.Contains(kvp.Key) && easedT >= kvp.Value)
                     {
                         triggeredTargets.Add(kvp.Key);
                         TriggerPassThroughHit(ctx, kvp.Key);

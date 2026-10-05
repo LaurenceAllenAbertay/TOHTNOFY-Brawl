@@ -109,79 +109,45 @@ namespace DDD.TNFY.BRAWL
             }
             
             Vector2Int resolvedDir = GridDirectionUtility.FromTiles(originalTile, knockbackPath[0]);
+            Tile finalTile = knockbackPath[knockbackPath.Count - 1];
+            float totalMoveDuration = movementDurationPerTile * knockbackPath.Count;
 
             unitAnimator.PlayKnockbackStart();
 
-            if (knockbackPath.Count == 1)
+            var camera = followCamera ? Object.FindAnyObjectByType<CameraController>() : null;
+            int followHandle = -1;
+            if (camera != null)
             {
-                yield return new WaitForSeconds(0.1f);
-
-                bool movementComplete = false;
-                target.AnimateToTile(knockbackPath[0], movementDurationPerTile, () => movementComplete = true);
-                while (!movementComplete) yield return null;
-
-                if (enableCollisions)
-                {
-                    Tile beyondTile = GridManager.Instance.GetTileInDirection(knockbackPath[0], resolvedDir);
-                    if (beyondTile?.currentUnit != null && beyondTile.currentUnit != target)
-                        yield return HandleCollision(ctx, target, beyondTile.currentUnit, resolvedDir);
-                }
-
-                float remainingStart = knockbackStartDuration - 0.1f - movementDurationPerTile;
-                if (remainingStart > 0f)
-                    yield return new WaitForSeconds(remainingStart);
-
-                unitAnimator.PlayKnockbackEnd();
-                yield return new WaitForSeconds(knockbackEndDuration);
+                Vector3 finalFocus = camera.WorldFocusPosition(finalTile.transform.position);
+                followHandle = camera.PushFocus(finalFocus, totalMoveDuration);
             }
-            else
-            {
-                var camera = followCamera ? Object.FindAnyObjectByType<CameraController>() : null;
-                int followHandle = -1;
-                if (camera != null)
-                {
-                    float totalDuration = knockbackPath.Count * movementDurationPerTile;
-                    Vector3 finalFocus  = camera.WorldFocusPosition(knockbackPath[knockbackPath.Count - 1].transform.position);
-                    followHandle = camera.PushFocus(finalFocus, totalDuration);
-                }
 
-                yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.1f);
 
+            if (knockbackPath.Count > 1)
                 unitAnimator.PlayKnockbackMoving();
 
-                bool endTriggered = false;
+            bool movementComplete = false;
+            target.AnimateToTile(finalTile, totalMoveDuration, () => movementComplete = true);
+            while (!movementComplete) yield return null;
 
-                for (int i = 0; i < knockbackPath.Count; i++)
-                {
-                    if (i == knockbackPath.Count - 1)
-                    {
-                        unitAnimator.PlayKnockbackEnd();
-                        endTriggered = true;
-                    }
+            unitAnimator.PlayKnockbackEnd();
 
-                    bool moveComplete = false;
-                    target.AnimateToTile(knockbackPath[i], movementDurationPerTile, () => moveComplete = true);
-                    while (!moveComplete) yield return null;
-
-                    if (enableCollisions)
-                    {
-                        Tile beyondTile = GridManager.Instance.GetTileInDirection(knockbackPath[i], resolvedDir);
-                        if (beyondTile?.currentUnit != null && beyondTile.currentUnit != target)
-                        {
-                            yield return HandleCollision(ctx, target, beyondTile.currentUnit, resolvedDir);
-                            break;
-                        }
-                    }
-                }
-
-                if (!endTriggered)
-                    unitAnimator.PlayKnockbackEnd();
-
-                yield return new WaitForSeconds(knockbackEndDuration);
-
-                if (followHandle >= 0)
-                    camera.PopFocus(followHandle);
+            if (enableCollisions)
+            {
+                Tile beyondTile = GridManager.Instance.GetTileInDirection(finalTile, resolvedDir);
+                if (beyondTile?.currentUnit != null && beyondTile.currentUnit != target)
+                    yield return HandleCollision(ctx, target, beyondTile.currentUnit, resolvedDir);
             }
+
+            float remainingStart = knockbackStartDuration - 0.1f - totalMoveDuration;
+            if (remainingStart > 0f)
+                yield return new WaitForSeconds(remainingStart);
+
+            yield return new WaitForSeconds(knockbackEndDuration);
+
+            if (followHandle >= 0)
+                camera.PopFocus(followHandle);
 
             if (isPlayerSelfKnockback)
                 RestorePlayerStateAfterKnockback(target);

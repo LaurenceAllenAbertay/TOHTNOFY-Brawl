@@ -5,9 +5,9 @@ namespace DDD.TNFY.BRAWL
     public class PassiveAbilityHandler : MonoBehaviour
     {
         public Unit Owner { get; private set; }
-        
-        private bool _initialised;
-        
+
+        private PassiveAbility _initialisedPassive;
+
         public PassiveAbility Passive => UnitLoadoutManager.GetPassive(Owner);
 
         private void Awake()
@@ -22,17 +22,28 @@ namespace DDD.TNFY.BRAWL
 
         public void TryInitialisePassive()
         {
-            if (_initialised) return;
-            if (Passive == null) return;
+            var passive = Passive;
+            if (passive == _initialisedPassive) return;
 
-            _initialised = true;
-            Passive.Initialise(this);
+            CleanupCurrentPassive();
+
+            if (passive == null) return;
+
+            _initialisedPassive = passive;
+            passive.Initialise(this);
+        }
+
+        public void CleanupCurrentPassive()
+        {
+            if (_initialisedPassive == null) return;
+
+            _initialisedPassive.Cleanup(this);
+            _initialisedPassive = null;
         }
 
         private void OnDestroy()
         {
-            if (Passive != null)
-                Passive.Cleanup(this);
+            CleanupCurrentPassive();
         }
     }
 }

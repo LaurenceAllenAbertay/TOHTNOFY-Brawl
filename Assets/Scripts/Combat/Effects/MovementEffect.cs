@@ -70,55 +70,20 @@ namespace DDD.TNFY.BRAWL
             {
                 unitAnimator.PlayMove();
             }
-            
-            Vector3 currentPos = unitToMove.transform.position;
 
-            foreach (var tile in movementPath)
+            if (UnitMovementController.Instance == null)
             {
-                Vector3 segmentStart = currentPos;
-                Vector3 segmentEnd = tile.transform.position;
-                float segmentDuration = movementDurationPerTile;
-                
-                if (spriteRenderers != null)
-                {
-                    Vector3 direction = (segmentEnd - segmentStart).normalized;
-
-                    if (Mathf.Abs(direction.x) > 0.1f)
-                    {
-                        bool flipX = direction.x > 0;
-                        foreach (var sr in spriteRenderers)
-                        {
-                            if (sr == null) continue;
-                            sr.flipX = flipX;
-                        }
-                    }
-                }
-                
-                float segmentElapsed = 0f;
-                while (segmentElapsed < segmentDuration)
-                {
-                    segmentElapsed += Time.deltaTime;
-                    float segmentT = segmentElapsed / segmentDuration;
-                    
-                    float smoothSegmentT = Mathf.SmoothStep(0f, 1f, segmentT);
-                    unitToMove.transform.position = Vector3.Lerp(segmentStart, segmentEnd, smoothSegmentT);
-
-                    yield return null;
-                }
-
-                currentPos = segmentEnd;
-                
-                unitToMove.SetCurrentTileLogical(tile);
-                
-                if (tile.HasActiveEffects)
-                    yield return tile.TriggerOnEnterEffects(unitToMove);
+                Debug.LogError("MovementEffect: no UnitMovementController found in the scene, cannot animate movement.");
+                yield break;
             }
-            
-            if (movementPath.Count > 0)
-            {
-                unitToMove.transform.position = movementPath[movementPath.Count - 1].transform.position;
-                unitToMove.SetCurrentTile(movementPath[movementPath.Count - 1]);
-            }
+
+            float totalDuration = movementDurationPerTile * movementPath.Count;
+
+            yield return unitToMove.StartCoroutine(
+                UnitMovementController.Instance.MoveAlongWaypoints(
+                    unitToMove, movementPath, totalDuration, spriteRenderers, playDustFX: false));
+
+            unitToMove.SetCurrentTile(movementPath[movementPath.Count - 1]);
             
             if (unitAnimator != null)
             {

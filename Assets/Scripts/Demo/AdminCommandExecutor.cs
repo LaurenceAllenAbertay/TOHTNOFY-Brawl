@@ -377,9 +377,57 @@ namespace DDD.TNFY.BRAWL
 
         public static string ExecuteReset()
         {
+            CombatManager.InfiniteMovementEnabled = false;
+            CombatManager.InfiniteAttacksEnabled = false;
+            Time.timeScale = 1f;
+
             string sceneName = SceneManager.GetActiveScene().name;
             SceneManager.LoadScene(sceneName);
             return $"Reset combat — reloading '{sceneName}' from the beginning.";
+        }
+
+        public static string ExecuteInfiniteMovement(AdminParsedCommand command)
+        {
+            string valueRaw = command.ResolvePositional("value");
+            if (string.IsNullOrEmpty(valueRaw))
+                return "Syntax error: /infiniteMovement requires true or false.";
+
+            if (!bool.TryParse(valueRaw, out bool enabled))
+                return $"Syntax error: '{valueRaw}' is not true or false.";
+
+            CombatManager.InfiniteMovementEnabled = enabled;
+            return $"Infinite movement for player units: {(enabled ? "ON" : "OFF")}.";
+        }
+
+        public static string ExecuteInfiniteAttacks(AdminParsedCommand command)
+        {
+            string valueRaw = command.ResolvePositional("value");
+            if (string.IsNullOrEmpty(valueRaw))
+                return "Syntax error: /infiniteAttacks requires true or false.";
+
+            if (!bool.TryParse(valueRaw, out bool enabled))
+                return $"Syntax error: '{valueRaw}' is not true or false.";
+
+            CombatManager.InfiniteAttacksEnabled = enabled;
+            return $"Infinite attacks for player units: {(enabled ? "ON" : "OFF")}.";
+        }
+
+        public static string ExecuteTimeScale(AdminParsedCommand command)
+        {
+            string valueRaw = command.ResolvePositional("value");
+            if (string.IsNullOrEmpty(valueRaw))
+                return "Syntax error: /timescale requires a number between 0 and 2.";
+
+            if (!float.TryParse(valueRaw, out float scale))
+                return $"Syntax error: '{valueRaw}' is not a number.";
+
+            if (scale < 0f || scale > 2f)
+                return $"Syntax error: /timescale must be between 0 and 2, got '{valueRaw}'.";
+
+            Time.timeScale = scale;
+            return scale == 0f
+                ? "Timescale set to 0 — game is paused. /timescale 1 to resume."
+                : $"Timescale set to {scale}.";
         }
 
         public static IEnumerator ExecuteKill(Unit targetUnit, System.Action<string> onComplete)

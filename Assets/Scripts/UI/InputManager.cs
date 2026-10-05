@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.EventSystems;
@@ -13,6 +14,8 @@ namespace DDD.TNFY.BRAWL
         [SerializeField] private Camera mainCamera;
 
         [SerializeField] private LayerMask unitLayer;
+
+        [SerializeField] private LayerMask blockingUILayers;
         
         public static event Action<Vector3> OnMouseMoved;
         public static event Action<Vector3> OnMouseClicked;
@@ -51,6 +54,9 @@ namespace DDD.TNFY.BRAWL
         private Unit _hoveredUnit;
 
         private Func<bool> tileClickConsumer;
+
+        private PointerEventData pointerEventDataCache;
+        private readonly List<RaycastResult> uiRaycastResults = new List<RaycastResult>();
 
         public static void SetTileClickConsumer(Func<bool> isConsuming)
         {
@@ -255,10 +261,30 @@ namespace DDD.TNFY.BRAWL
             return Vector3.zero;
         }
 
-        private bool IsMouseOverUI() =>
-            EventSystem.current != null && EventSystem.current.IsPointerOverGameObject();
+        private bool IsMouseOverUI()
+        {
+            if (EventSystem.current == null) return false;
+
+            pointerEventDataCache ??= new PointerEventData(EventSystem.current);
+            pointerEventDataCache.position = mousePositionAction.ReadValue<Vector2>();
+
+            uiRaycastResults.Clear();
+            EventSystem.current.RaycastAll(pointerEventDataCache, uiRaycastResults);
+
+            for (int i = 0; i < uiRaycastResults.Count; i++)
+            {
+                GameObject hitObject = uiRaycastResults[i].gameObject;
+
+                if ((blockingUILayers.value & (1 << hitObject.layer)) != 0)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
 
         public static bool IsMouseOverUI_Static() =>
-            EventSystem.current != null && EventSystem.current.IsPointerOverGameObject();
+            Instance != null && Instance.IsMouseOverUI();
     }
 }

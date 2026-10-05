@@ -19,8 +19,9 @@ MonoBehaviour:
   effectType: 19
   stackingBehavior: 1
   maxStacks: 1
-  triggerTiming: 1
+  triggerTiming: 6
   triggersOnApplication: 0
+  expiryTiming: 0
   applicationVFX: {fileID: 0}
   persistentVFX: {fileID: 0}
   removalVFX: {fileID: 0}

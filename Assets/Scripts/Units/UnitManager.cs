@@ -13,6 +13,8 @@ namespace DDD.TNFY.BRAWL
         public static event System.Action<Unit> OnUnitMoved;
         public static event System.Action<Unit> OnUnitDied;
 
+        public static event System.Action<Unit, Unit> OnUnitKilled;
+
         public static event System.Action<Unit, Unit> OnUnitDamaged;
 
         public static event System.Action<Unit> OnBodySpawned;
@@ -122,6 +124,12 @@ namespace DDD.TNFY.BRAWL
             {
                 Instance.neutralUnits.Remove(neutral);
             }
+        }
+
+        public static void NotifyUnitKilled(Unit victim, Unit killer)
+        {
+            if (victim == null || killer == null) return;
+            OnUnitKilled?.Invoke(victim, killer);
         }
 
         public static void NotifyBodySpawned(Unit unit)

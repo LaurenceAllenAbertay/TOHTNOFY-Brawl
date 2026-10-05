@@ -99,6 +99,17 @@ namespace DDD.TNFY.BRAWL
         public Vector3 HitEffectOffset => hitEffectOffset;
         public bool ParentHitEffectToTarget => parentHitEffectToTarget;
 
+        public bool CanHit(Unit caster, Unit target)
+        {
+            if (caster == null || target == null) return false;
+
+            if (target.IsUntargetableBy(caster)) return false;
+
+            if (target.IsNeutral) return canTargetNeutral;
+
+            return target.IsAllyOf(caster) ? canHitAllies : canHitEnemies;
+        }
+
         public bool Execute(Unit caster, Vector2Int aimDirection)
         {
             if (caster == null || targeting == null || effects == null || effects.Count == 0)

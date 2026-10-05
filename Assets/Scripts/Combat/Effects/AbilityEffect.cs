@@ -21,7 +21,11 @@ namespace DDD.TNFY.BRAWL
         
         public virtual float ExpectedAnimationDuration => 0f;
         
+        public virtual bool IsRunning => false;
+        
         public virtual bool RequiresEmptyTargetTile => false;
+        
+        public virtual bool CanConfirmTargetTile(AbilityContext ctx, Tile tile) => true;
         
         public virtual bool IsSelfOnly(AbilityContext ctx) => false;
         

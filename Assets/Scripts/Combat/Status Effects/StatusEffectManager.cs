@@ -144,6 +144,25 @@ namespace DDD.TNFY.BRAWL
             return new List<StatusEffectInstance>(activeEffects[unit]);
         }
 
+        public void ClearAllStatusEffects(Unit unit)
+        {
+            if (unit == null) return;
+
+            const int maxPasses = 4;
+            for (int pass = 0; pass < maxPasses && activeEffects.ContainsKey(unit); pass++)
+            {
+                foreach (var effect in activeEffects[unit].ToList())
+                    RemoveStatusEffect(unit, effect);
+            }
+
+            activeEffects.Remove(unit);
+
+            stunnedApplicationCount.Remove(unit);
+            stunnedThisTurn.Remove(unit);
+            immuneApplicationCount.Remove(unit);
+            immuneThisTurn.Remove(unit);
+        }
+
         private void HandleTurnStarted(Unit unit)
         {
             UpdateEffectDurations(unit, StatusEffectData.EffectExpiryTiming.StartOfTurn);

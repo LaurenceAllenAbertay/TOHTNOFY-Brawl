@@ -6615,8 +6615,7 @@ MonoBehaviour:
   focusTransitionDuration: 1
   cameraZOffset: 3.5
   cameraYOffset: 2
-  aoeZoomYMultiplier: 0.8
-  aoeZoomZMultiplier: 2
+  aoeFramingPadding: 1.15
   boundsBox: {fileID: 400907951}
   boundsPadding: 1
   visualizeBounds: 0
@@ -9824,6 +9823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cameraTransitionDuration: 0.8
   bigMomentEventMaxWait: 5
+  lingerAfterBigMomentSeconds: 0.5
 --- !u!1 &753677266
 GameObject:
   m_ObjectHideFlags: 0
@@ -22162,6 +22162,9 @@ MonoBehaviour:
   unitLayer:
     serializedVersion: 2
     m_Bits: 256
+  blockingUILayers:
+    serializedVersion: 2
+    m_Bits: 1023
 --- !u!1 &1919113616
 GameObject:
   m_ObjectHideFlags: 0

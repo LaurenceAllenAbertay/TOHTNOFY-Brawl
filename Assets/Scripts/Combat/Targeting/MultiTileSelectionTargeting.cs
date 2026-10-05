@@ -150,21 +150,7 @@ namespace DDD.TNFY.BRAWL
                 var unit = tile.currentUnit;
                 if (unit == null) continue;
 
-                bool accepted = false;
-
-                if (unit.IsNeutral)
-                {
-                    if (ctx.ability.canTargetNeutral)
-                        accepted = true;
-                }
-                else
-                {
-                    bool isAlly = IsAlly(ctx.caster, unit);
-                    if ((isAlly && ctx.ability.canHitAllies) || (!isAlly && ctx.ability.canHitEnemies))
-                        accepted = true;
-                }
-
-                if (accepted)
+                if (ctx.ability.CanHit(ctx.caster, unit))
                     result.Add(unit);
             }
             return result;

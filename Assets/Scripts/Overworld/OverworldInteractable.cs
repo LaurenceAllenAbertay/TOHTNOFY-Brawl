@@ -1,69 +1,76 @@
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 namespace DDD.TNFY.BRAWL
 {
-    public class OverworldInteractable : MonoBehaviour
+    public abstract class OverworldInteractable : MonoBehaviour
     {
-        [Header("Scene Transition")]
-        [SerializeField] private string destinationSceneName = "Debug";
-
         [Header("UI")]
         [SerializeField] private GameObject interactPromptUI;
-        
+
         private bool _playerInRange;
-        
-        private void Awake()
+
+        protected bool PlayerInRange => _playerInRange;
+
+        protected virtual bool CanInteract => true;
+
+        protected virtual void Awake()
         {
             HidePrompt();
         }
 
-        private void OnEnable()
+        protected virtual void OnEnable()
         {
             OverworldInputHandler.OnInteractPressed += HandleInteract;
+            OverworldDialogueManager.OnConversationEnded += RefreshPrompt;
         }
 
-        private void OnDisable()
+        protected virtual void OnDisable()
         {
             OverworldInputHandler.OnInteractPressed -= HandleInteract;
+            OverworldDialogueManager.OnConversationEnded -= RefreshPrompt;
+
             _playerInRange = false;
             HidePrompt();
         }
-        
+
         private void OnTriggerEnter(Collider other)
         {
-            if (other.GetComponent<OverworldPartyLeader>() != null)
-            {
-                _playerInRange = true;
-                ShowPrompt();
-            }
+            if (other.GetComponent<OverworldPartyLeader>() == null) return;
+
+            _playerInRange = true;
+            RefreshPrompt();
         }
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.GetComponent<OverworldPartyLeader>() != null)
-            {
-                _playerInRange = false;
-                HidePrompt();
-            }
+            if (other.GetComponent<OverworldPartyLeader>() == null) return;
+
+            _playerInRange = false;
+            HidePrompt();
         }
-        
+
         private void HandleInteract()
         {
             if (!_playerInRange) return;
+            if (OverworldDialogueManager.IsPlaying) return;
+            if (!CanInteract) return;
 
-            if (string.IsNullOrEmpty(destinationSceneName))
-            {
-                return;
-            }
-
-            if (LoadingScreenController.Instance != null)
-                LoadingScreenController.Instance.LoadScene(destinationSceneName);
-            else
-                SceneManager.LoadScene(destinationSceneName);
+            HidePrompt();
+            OnInteract();
         }
-        
+
+        protected abstract void OnInteract();
+
+        protected void RefreshPrompt()
+        {
+            if (_playerInRange && CanInteract && !OverworldDialogueManager.IsPlaying)
+                ShowPrompt();
+            else
+                HidePrompt();
+        }
+
         private void ShowPrompt() => interactPromptUI?.SetActive(true);
+
         private void HidePrompt() => interactPromptUI?.SetActive(false);
     }
 }

@@ -87,6 +87,27 @@ namespace DDD.TNFY.BRAWL
                     "    admin command, kill, and action taken this session. No confirmation prompt, no target."
                 },
                 {
+                    AdminCommandType.InfiniteMovement,
+                    "> /infiniteMovement true/false\n" +
+                    "    true: player units can move (walk) as many times as they want per turn, each move using their full\n" +
+                    "    normal range again, and can jump for free too - including moving again after jumping.\n" +
+                    "    false: back to normal - one movement budget per turn, jumping spends all of it.\n" +
+                    "    Does not affect AI-controlled units."
+                },
+                {
+                    AdminCommandType.InfiniteAttacks,
+                    "> /infiniteAttacks true/false\n" +
+                    "    true: player units can use as many abilities as they want per turn, ignoring cooldowns.\n" +
+                    "    false: back to one ability per turn with normal cooldowns. Enemy AI units are never affected."
+                },
+                {
+                    AdminCommandType.TimeScale,
+                    "> /timescale value\n" +
+                    "    Sets Unity's global time scale, from 0 (paused) to 2 (double speed). 1 is normal speed.\n" +
+                    "    Works even mid-animation, so you can slow something down while it's playing to inspect it.\n" +
+                    "    /reset always puts this back to 1."
+                },
+                {
                     AdminCommandType.Help,
                     "> /help\n" +
                     "    Shows this message.\n" +

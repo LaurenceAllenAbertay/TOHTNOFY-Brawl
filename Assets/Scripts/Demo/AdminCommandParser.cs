@@ -17,6 +17,9 @@ namespace DDD.TNFY.BRAWL
         Knockback,
         Skip,
         Reset,
+        InfiniteMovement,
+        InfiniteAttacks,
+        TimeScale,
         Help
     }
 
@@ -73,6 +76,9 @@ namespace DDD.TNFY.BRAWL
                 { "knockback",    AdminCommandType.Knockback },
                 { "skip",         AdminCommandType.Skip },
                 { "reset",        AdminCommandType.Reset },
+                { "infinitemovement", AdminCommandType.InfiniteMovement },
+                { "infiniteattacks", AdminCommandType.InfiniteAttacks },
+                { "timescale",       AdminCommandType.TimeScale },
                 { "help",         AdminCommandType.Help },
             };
 

@@ -1,0 +1,740 @@
+fileFormatVersion: 2
+guid: 6dd18ae287ba58d4b93ab4526d3ef55a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5233397078512619458
+    second: Wire_3_0
+  - first:
+      213: 6126663868003880723
+    second: Wire_3_1
+  - first:
+      213: 5406292818714294273
+    second: Wire_3_2
+  - first:
+      213: -3636967316955657490
+    second: Wire_3_3
+  - first:
+      213: 6335992297490161627
+    second: Wire_3_4
+  - first:
+      213: -497698001217132110
+    second: Wire_3_5
+  - first:
+      213: -4203522622673525914
+    second: Wire_3_6
+  - first:
+      213: -2212909779569953584
+    second: Wire_3_7
+  - first:
+      213: -5258455143001308011
+    second: Wire_3_8
+  - first:
+      213: 7451208256192291367
+    second: Wire_3_9
+  - first:
+      213: 2707374092721800515
+    second: Wire_3_10
+  - first:
+      213: 1857001511426699548
+    second: Wire_3_11
+  - first:
+      213: 5205982273080260790
+    second: Wire_3_12
+  - first:
+      213: 7265599643631488410
+    second: Wire_3_13
+  - first:
+      213: -9051723990318475715
+    second: Wire_3_14
+  - first:
+      213: 4759268937356885663
+    second: Wire_3_15
+  - first:
+      213: 2414999679662736763
+    second: Wire_3_16
+  - first:
+      213: 7333379750600766285
+    second: Wire_3_17
+  - first:
+      213: 6759638655403291697
+    second: Wire_3_18
+  - first:
+      213: -6090628389680613362
+    second: Wire_3_19
+  - first:
+      213: 6401292063195071799
+    second: Wire_3_20
+  - first:
+      213: -6050287162239059542
+    second: Wire_3_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Wire_3_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3935
+        width: 3690
+        height: 787
+      alignment: 9
+      pivot: {x: 0.779, y: 0.21}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cfcf494ae2c0a840800000000000000
+      internalID: 5233397078512619458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_3_1
+      rect:
+        serializedVersion: 2
+        x: 3690
+        y: 3935
+        width: 3690
+        height: 787
+      alignment: 9
+      pivot: {x: 0.779, y: 0.21}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 31f8796d358460550800000000000000
+      internalID: 6126663868003880723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_3_2
+      rect:
+        serializedVersion: 2
+        x: 7380
+        y: 3935
+        width: 3690
+        height: 787
+      alignment: 9
+      pivot: {x: 0.779, y: 0.21}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 108f533cca2070b40800000000000000
+      internalID: 5406292818714294273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_3_3
+      rect:
+        serializedVersion: 2
+        x: 11070
+        y: 3935
+        width: 3690
+        height: 787
+      alignment: 9
+      pivot: {x: 0.779, y: 0.21}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eea0725ae75e68dc0800000000000000
+      internalID: -3636967316955657490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_3_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3148
+        width: 3690
+        height: 787
+      alignment: 9
+      pivot: {x: 0.779, y: 0.21}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bdf138fcc67fde750800000000000000
+      internalID: 6335992297490161627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_3_5
+      rect:
+        serializedVersion: 2
+        x: 3690
+        y: 3148
+        width: 3690
+        height: 787
+      alignment: 9
+      pivot: {x: 0.779, y: 0.21}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b9e7080e42d719f0800000000000000
+      internalID: -497698001217132110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_3_6
+      rect:
+        serializedVersion: 2
+        x: 7380
+        y: 3148
+        width: 3690
+        height: 787
+      alignment: 9
+      pivot: {x: 0.779, y: 0.21}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 663e93622761aa5c0800000000000000
+      internalID: -4203522622673525914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_3_7
+      rect:
+        serializedVersion: 2
+        x: 11070
+        y: 3148
+        width: 3690
+        height: 787
+      alignment: 9
+      pivot: {x: 0.779, y: 0.21}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d4bebca74a2a41e0800000000000000
+      internalID: -2212909779569953584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_3_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2361
+        width: 3690
+        height: 787
+      alignment: 9
+      pivot: {x: 0.779, y: 0.21}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 594c41e68e63607b0800000000000000
+      internalID: -5258455143001308011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_3_9
+      rect:
+        serializedVersion: 2
+        x: 3690
+        y: 2361
+        width: 3690
+        height: 787
+      alignment: 9
+      pivot: {x: 0.779, y: 0.21}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 722acc94e62086760800000000000000
+      internalID: 7451208256192291367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_3_10
+      rect:
+        serializedVersion: 2
+        x: 7380
+        y: 2361
+        width: 3690
+        height: 787
+      alignment: 9
+      pivot: {x: 0.779, y: 0.21}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34547ce9466829520800000000000000
+      internalID: 2707374092721800515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_3_11
+      rect:
+        serializedVersion: 2
+        x: 11070
+        y: 2361
+        width: 3690
+        height: 787
+      alignment: 9
+      pivot: {x: 0.779, y: 0.21}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c11b3fb290565c910800000000000000
+      internalID: 1857001511426699548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_3_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1574
+        width: 3690
+        height: 787
+      alignment: 9
+      pivot: {x: 0.779, y: 0.21}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b8fded7b4d5f3840800000000000000
+      internalID: 5205982273080260790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_3_13
+      rect:
+        serializedVersion: 2
+        x: 3690
+        y: 1574
+        width: 3690
+        height: 787
+      alignment: 9
+      pivot: {x: 0.779, y: 0.21}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9d0cde816894d460800000000000000
+      internalID: 7265599643631488410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_3_14
+      rect:
+        serializedVersion: 2
+        x: 7380
+        y: 1574
+        width: 3690
+        height: 787
+      alignment: 9
+      pivot: {x: 0.779, y: 0.21}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d369f282df0d16280800000000000000
+      internalID: -9051723990318475715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_3_15
+      rect:
+        serializedVersion: 2
+        x: 11070
+        y: 1574
+        width: 3690
+        height: 787
+      alignment: 9
+      pivot: {x: 0.779, y: 0.21}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9e35b102e15c0240800000000000000
+      internalID: 4759268937356885663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_3_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 787
+        width: 3690
+        height: 787
+      alignment: 9
+      pivot: {x: 0.779, y: 0.21}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b75caf6d96dc38120800000000000000
+      internalID: 2414999679662736763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_3_17
+      rect:
+        serializedVersion: 2
+        x: 3690
+        y: 787
+        width: 3690
+        height: 787
+      alignment: 9
+      pivot: {x: 0.779, y: 0.21}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d43f99d770665c560800000000000000
+      internalID: 7333379750600766285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_3_18
+      rect:
+        serializedVersion: 2
+        x: 7380
+        y: 787
+        width: 3690
+        height: 787
+      alignment: 9
+      pivot: {x: 0.779, y: 0.21}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 134ff410b8f0fcd50800000000000000
+      internalID: 6759638655403291697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_3_19
+      rect:
+        serializedVersion: 2
+        x: 11070
+        y: 787
+        width: 3690
+        height: 787
+      alignment: 9
+      pivot: {x: 0.779, y: 0.21}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e087d26cfbdb97ba0800000000000000
+      internalID: -6090628389680613362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_3_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 3690
+        height: 787
+      alignment: 9
+      pivot: {x: 0.779, y: 0.21}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 735054a4735f5d850800000000000000
+      internalID: 6401292063195071799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_3_21
+      rect:
+        serializedVersion: 2
+        x: 3690
+        y: 0
+        width: 3690
+        height: 787
+      alignment: 9
+      pivot: {x: 0.779, y: 0.21}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa972a9b1ef090ca0800000000000000
+      internalID: -6050287162239059542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wire_3_22
+      rect:
+        serializedVersion: 2
+        x: 7380
+        y: 0
+        width: 3690
+        height: 787
+      alignment: 9
+      pivot: {x: 0.779, y: 0.21}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9738c9ffd34597745923f4335e63c918
+      internalID: -1930685908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f684625cbf6e57a4ebe3bd7a47358b6f
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":4.0,"y":6.0},"gridSpriteSize":{"x":3690.0,"y":787.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.7789999842643738,"y":0.20999999344348908},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Wire_3_0: 5233397078512619458
+      Wire_3_1: 6126663868003880723
+      Wire_3_10: 2707374092721800515
+      Wire_3_11: 1857001511426699548
+      Wire_3_12: 5205982273080260790
+      Wire_3_13: 7265599643631488410
+      Wire_3_14: -9051723990318475715
+      Wire_3_15: 4759268937356885663
+      Wire_3_16: 2414999679662736763
+      Wire_3_17: 7333379750600766285
+      Wire_3_18: 6759638655403291697
+      Wire_3_19: -6090628389680613362
+      Wire_3_2: 5406292818714294273
+      Wire_3_20: 6401292063195071799
+      Wire_3_21: -6050287162239059542
+      Wire_3_22: -1930685908
+      Wire_3_3: -3636967316955657490
+      Wire_3_4: 6335992297490161627
+      Wire_3_5: -497698001217132110
+      Wire_3_6: -4203522622673525914
+      Wire_3_7: -2212909779569953584
+      Wire_3_8: -5258455143001308011
+      Wire_3_9: 7451208256192291367
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

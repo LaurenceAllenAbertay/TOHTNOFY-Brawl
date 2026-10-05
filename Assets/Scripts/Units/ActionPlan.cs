@@ -9,6 +9,8 @@ namespace DDD.TNFY.BRAWL
 
         public bool isJump;
 
+        public Tile jumpFromTile;
+
         public Ability abilityToUse;
 
         public int abilitySlot = -1;

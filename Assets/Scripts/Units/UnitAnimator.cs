@@ -543,6 +543,17 @@ namespace DDD.TNFY.BRAWL
             PlayAnimation(DOWNED_STATE, false);
         }
 
+        public void SetRuntimeController(RuntimeAnimatorController controller)
+        {
+            if (animator == null || controller == null) return;
+
+            animator.runtimeAnimatorController = controller;
+            animator.speed = 1f;
+            currentAnimation = null;
+
+            PlayIdle();
+        }
+
         public void ForcePlayAnimation(string stateName)
         {
             if (animator == null) return;

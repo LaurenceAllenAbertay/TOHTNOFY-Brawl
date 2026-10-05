@@ -464,6 +464,9 @@ namespace DDD.TNFY.BRAWL
 
         private void OnStartBattleClicked()
         {
+            if (startBattleButton != null)
+                startBattleButton.interactable = false;
+
             if (UnitLoadoutManager.Instance == null)
             {
                 Debug.LogError("[DebugLobby] UnitLoadoutManager not found in scene. " +

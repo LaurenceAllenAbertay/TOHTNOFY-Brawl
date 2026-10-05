@@ -683,16 +683,7 @@ namespace DDD.TNFY.BRAWL
                 var u = tile.currentUnit;
                 if (u != null)
                 {
-                    bool canHit;
-                    if (u.IsNeutral)
-                        canHit = ability.canTargetNeutral;
-                    else
-                    {
-                        bool isAlly = u.IsAllyOf(unit);
-                        canHit = (isAlly && ability.canHitAllies) || (!isAlly && ability.canHitEnemies);
-                    }
-
-                    if (canHit)
+                    if (ability.CanHit(unit, u))
                     {
                         tile.Highlight(TileHighlightType.AttackRange);
                         targetsHighlighted++;

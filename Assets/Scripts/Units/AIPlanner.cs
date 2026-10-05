@@ -13,7 +13,31 @@ namespace DDD.TNFY.BRAWL
         private readonly System.Func<Unit, bool>  canTargetUnit;
         private readonly System.Func<List<Unit>>  getTeammates;
         private readonly System.Func<Unit>         getLastAttacker;
+        private readonly JumpSystem    jumpSystem;
         private readonly AIDebugLogger logger;
+
+        private readonly struct MoveOption
+        {
+            public readonly Tile destination;
+            public readonly Tile jumpFrom;
+            public readonly bool isJump;
+
+            private MoveOption(Tile destination, Tile jumpFrom, bool isJump)
+            {
+                this.destination = destination;
+                this.jumpFrom    = jumpFrom;
+                this.isJump      = isJump;
+            }
+
+            public static MoveOption Walk(Tile destination)
+                => new MoveOption(destination, null, false);
+
+            public static MoveOption Jump(Tile destination)
+                => new MoveOption(destination, null, true);
+
+            public static MoveOption WalkThenJump(Tile destination, Tile jumpFrom)
+                => new MoveOption(destination, jumpFrom, true);
+        }
 
         public AIPlanner(
             Unit unit,
@@ -24,6 +48,7 @@ namespace DDD.TNFY.BRAWL
             System.Func<Unit, bool> isAlly,
             System.Func<List<Unit>> getTeammates,
             System.Func<Unit> getLastAttacker,
+            JumpSystem jumpSystem,
             AIDebugLogger logger)
         {
             this.unit                 = unit;
@@ -33,22 +58,22 @@ namespace DDD.TNFY.BRAWL
             this.canTargetUnit        = canTargetUnit;
             this.getTeammates         = getTeammates;
             this.getLastAttacker      = getLastAttacker;
+            this.jumpSystem           = jumpSystem;
             this.logger               = logger;
         }
 
         public ActionPlan Plan(List<Unit> targets)
         {
-            var abilities      = UnitLoadoutManager.GetAbilities(unit);
-            var reachableTiles = GetReachableTiles();
-            var jumpableTiles  = GetJumpableTiles();
+            var abilities   = UnitLoadoutManager.GetAbilities(unit);
+            var moveOptions = BuildMoveOptions();
 
             var anchor = PickWeightedTarget(targets);
 
-            var plan = TryFindKillShot(abilities, targets, reachableTiles, jumpableTiles)
-                    ?? TryAttackAnchor(abilities, anchor, reachableTiles, jumpableTiles)
+            var plan = TryFindKillShot(abilities, targets, moveOptions)
+                    ?? TryAttackAnchor(abilities, anchor, moveOptions)
                     ?? TryFindUsefulBuff(abilities)
-                    ?? TryTeleportToPosition(abilities, anchor, reachableTiles, jumpableTiles)
-                    ?? TryApproach(anchor, reachableTiles, jumpableTiles, abilities);
+                    ?? TryTeleportToPosition(abilities, anchor, moveOptions)
+                    ?? TryApproach(anchor, moveOptions, abilities);
 
             if (plan != null)
                 logger?.LogSelectionReason(plan.debugReason);
@@ -58,7 +83,7 @@ namespace DDD.TNFY.BRAWL
             return plan;
         }
 
-        private ActionPlan TryFindKillShot(Ability[] abilities, List<Unit> targets, List<Tile> reachableTiles, List<Tile> jumpableTiles)
+        private ActionPlan TryFindKillShot(Ability[] abilities, List<Unit> targets, List<MoveOption> moveOptions)
         {
             if (unit.currentTile != null)
             {
@@ -82,28 +107,26 @@ namespace DDD.TNFY.BRAWL
                 var plan = BuildAbilityPlan(ability, slot, unit.currentTile, target, isAbilityFirst: true);
                 if (plan != null) { plan.debugReason = "Kill shot (no move)"; return plan; }
 
-                foreach (var tile in reachableTiles)
+                foreach (var move in moveOptions)
                 {
-                    if (tile == unit.currentTile) continue;
-                    plan = BuildAbilityPlan(ability, slot, tile, target, isAbilityFirst: false);
-                    if (plan != null) { plan.movementTarget = tile; plan.debugReason = "Kill shot (after walk)"; return plan; }
-                }
+                    plan = BuildAbilityPlan(ability, slot, move.destination, target, isAbilityFirst: false);
+                    if (plan == null) continue;
 
-                foreach (var tile in jumpableTiles)
-                {
-                    plan = BuildAbilityPlan(ability, slot, tile, target, isAbilityFirst: false);
-                    if (plan != null) { plan.movementTarget = tile; plan.isJump = true; plan.debugReason = "Kill shot (after jump)"; return plan; }
+                    ApplyMove(plan, move);
+                    plan.debugReason = $"Kill shot (after {MoveLabel(move)})";
+                    return plan;
                 }
             }
             return null;
         }
 
-        private ActionPlan TryAttackAnchor(Ability[] abilities, Unit anchor, List<Tile> reachableTiles, List<Tile> jumpableTiles)
+        private ActionPlan TryAttackAnchor(Ability[] abilities, Unit anchor, List<MoveOption> moveOptions)
         {
             if (anchor == null) return null;
 
-            ActionPlan best    = null;
-            int        bestDmg = 0;
+            ActionPlan best     = null;
+            int        bestDmg  = 0;
+            int        bestRank = int.MaxValue;
 
             foreach (var (ability, slot) in UsableAbilities(abilities))
             {
@@ -111,40 +134,35 @@ namespace DDD.TNFY.BRAWL
                 int dmg = SimulateDamage(ability, anchor);
                 if (dmg <= 0) continue;
 
-                var plan = BuildAbilityPlan(ability, slot, unit.currentTile, anchor, isAbilityFirst: true);
-                if (plan != null && dmg > bestDmg)
+                if (IsBetterAttack(dmg, StayRank, bestDmg, bestRank))
                 {
-                    best = plan; bestDmg = dmg;
-                    best.debugReason = "Attack anchor (no move)";
-                }
-
-                foreach (var tile in reachableTiles)
-                {
-                    if (tile == unit.currentTile) continue;
-                    plan = BuildAbilityPlan(ability, slot, tile, anchor, isAbilityFirst: false);
-                    if (plan != null && dmg > bestDmg)
+                    var stayPlan = BuildAbilityPlan(ability, slot, unit.currentTile, anchor, isAbilityFirst: true);
+                    if (stayPlan != null)
                     {
-                        plan.movementTarget = tile;
-                        best = plan; bestDmg = dmg;
-                        best.debugReason = "Attack anchor (after walk)";
+                        stayPlan.debugReason = "Attack anchor (no move)";
+                        best = stayPlan; bestDmg = dmg; bestRank = StayRank;
                     }
                 }
 
-                foreach (var tile in jumpableTiles)
+                foreach (var move in moveOptions)
                 {
-                    plan = BuildAbilityPlan(ability, slot, tile, anchor, isAbilityFirst: false);
-                    if (plan != null && dmg > bestDmg)
-                    {
-                        plan.movementTarget = tile;
-                        plan.isJump = true;
-                        best = plan; bestDmg = dmg;
-                        best.debugReason = "Attack anchor (after jump)";
-                    }
+                    int rank = MoveRank(move);
+                    if (!IsBetterAttack(dmg, rank, bestDmg, bestRank)) continue;
+
+                    var plan = BuildAbilityPlan(ability, slot, move.destination, anchor, isAbilityFirst: false);
+                    if (plan == null) continue;
+
+                    ApplyMove(plan, move);
+                    plan.debugReason = $"Attack anchor (after {MoveLabel(move)})";
+                    best = plan; bestDmg = dmg; bestRank = rank;
                 }
             }
 
             return best;
         }
+
+        private static bool IsBetterAttack(int damage, int moveRank, int bestDamage, int bestRank)
+            => damage > bestDamage || (damage == bestDamage && moveRank < bestRank);
 
         private ActionPlan TryFindUsefulBuff(Ability[] abilities)
         {
@@ -169,7 +187,7 @@ namespace DDD.TNFY.BRAWL
             return null;
         }
 
-        private ActionPlan TryTeleportToPosition(Ability[] abilities, Unit anchor, List<Tile> reachableTiles, List<Tile> jumpableTiles)
+        private ActionPlan TryTeleportToPosition(Ability[] abilities, Unit anchor, List<MoveOption> moveOptions)
         {
             if (anchor?.currentTile == null) return null;
 
@@ -177,11 +195,15 @@ namespace DDD.TNFY.BRAWL
             float      bestScore = float.MinValue;
             int        maxDist   = GridManager.Instance.AllTiles.Count;
 
+            var moveDestinations = new HashSet<Tile>();
+            foreach (var move in moveOptions)
+                moveDestinations.Add(move.destination);
+
             foreach (var (ability, slot) in UsableAbilities(abilities))
             {
                 if (!IsTeleportAbility(ability)) continue;
 
-                void EvaluateOrigin(Tile originTile, Tile moveTile, bool moveIsJump)
+                void EvaluateOrigin(Tile originTile, MoveOption? move)
                 {
                     var saved = unit.currentTile;
                     try
@@ -202,7 +224,7 @@ namespace DDD.TNFY.BRAWL
                             if (tile == null || !tile.passableTerrain || tile.occupied) continue;
                             if (tile == originTile) continue;
 
-                            if (reachableTiles.Contains(tile) || jumpableTiles.Contains(tile)) continue;
+                            if (moveDestinations.Contains(tile)) continue;
 
                             float score = ScoreTile(tile, anchor.currentTile, abilities, anchor, maxDist);
                             if (score > bestScore)
@@ -213,15 +235,14 @@ namespace DDD.TNFY.BRAWL
                                     abilityToUse   = ability,
                                     abilitySlot    = slot,
                                     targetTile     = tile,
-                                    movementTarget = moveTile,
-                                    isJump         = moveIsJump,
                                     isAbilityFirst = false,
-                                    debugReason    = moveTile == null
+                                    debugReason    = !move.HasValue
                                                         ? "Teleport to position"
-                                                        : moveIsJump
-                                                            ? "Jump then teleport to position"
-                                                            : "Walk then teleport to position"
+                                                        : $"{MoveLabel(move.Value)} then teleport to position"
                                 };
+
+                                if (move.HasValue)
+                                    ApplyMove(best, move.Value);
                             }
                         }
                     }
@@ -231,18 +252,10 @@ namespace DDD.TNFY.BRAWL
                     }
                 }
 
-                EvaluateOrigin(unit.currentTile, moveTile: null, moveIsJump: false);
+                EvaluateOrigin(unit.currentTile, null);
 
-                foreach (var walkTile in reachableTiles)
-                {
-                    if (walkTile == unit.currentTile) continue;
-                    EvaluateOrigin(walkTile, moveTile: walkTile, moveIsJump: false);
-                }
-
-                foreach (var jumpTile in jumpableTiles)
-                {
-                    EvaluateOrigin(jumpTile, moveTile: jumpTile, moveIsJump: true);
-                }
+                foreach (var move in moveOptions)
+                    EvaluateOrigin(move.destination, move);
             }
 
             return best;
@@ -251,43 +264,44 @@ namespace DDD.TNFY.BRAWL
         private bool IsTeleportAbility(Ability ability)
             => ability?.effects != null && ability.effects.Any(e => e is TeleportEffect);
 
-        private ActionPlan TryApproach(Unit anchor, List<Tile> reachableTiles, List<Tile> jumpableTiles, Ability[] abilities)
+        private ActionPlan TryApproach(Unit anchor, List<MoveOption> moveOptions, Ability[] abilities)
         {
             if (anchor?.currentTile == null) return null;
 
-            Tile  bestTile   = null;
-            bool  bestIsJump = false;
-            float bestScore  = float.MinValue;
-            int   maxDist    = GridManager.Instance.AllTiles.Count;
+            MoveOption? bestMove  = null;
+            float       bestScore = float.MinValue;
+            int         maxDist   = GridManager.Instance.AllTiles.Count;
 
-            foreach (var tile in reachableTiles)
+            foreach (var move in moveOptions)
             {
-                if (tile == unit.currentTile) continue;
-                float score = ScoreTile(tile, anchor.currentTile, abilities, anchor, maxDist);
-                if (score > bestScore) { bestScore = score; bestTile = tile; bestIsJump = false; }
+                float score = ScoreTile(move.destination, anchor.currentTile, abilities, anchor, maxDist);
+                if (score > bestScore) { bestScore = score; bestMove = move; }
             }
 
-            foreach (var tile in jumpableTiles)
-            {
-                float score = ScoreTile(tile, anchor.currentTile, abilities, anchor, maxDist);
-                if (score > bestScore) { bestScore = score; bestTile = tile; bestIsJump = true; }
-            }
+            if (!bestMove.HasValue) return null;
 
-            if (bestTile == null) return null;
-
-            return new ActionPlan
+            var plan = new ActionPlan
             {
-                movementTarget = bestTile,
-                isJump         = bestIsJump,
-                debugReason    = bestIsJump ? "Approaching anchor (jump)" : "Approaching anchor"
+                debugReason = $"Approaching anchor ({MoveLabel(bestMove.Value)})"
             };
+            ApplyMove(plan, bestMove.Value);
+            return plan;
         }
 
         private float ScoreTile(Tile tile, Tile anchorTile, Ability[] abilities, Unit anchor, int maxDist)
         {
-            float closeness = 1f - Mathf.Clamp01((float)GridManager.Instance.GetGridDistance(tile, anchorTile, true) / maxDist);
+            const int yLevelWeight = 3;
+
+            int xzDistance = GridManager.Instance.GetGridDistance(tile, anchorTile, includeYLevel: false);
+            int yDistance  = Mathf.Abs(GridManager.Instance.GetYLevel(tile) - GridManager.Instance.GetYLevel(anchorTile));
+            int weightedDistance = xzDistance + (yDistance * yLevelWeight);
+
+            float closeness = 1f - Mathf.Clamp01((float)weightedDistance / maxDist);
             float danger    = DangerScore(tile);
             float score     = (closeness * aggressionBias) - (danger * (1f - aggressionBias));
+
+            if (GridManager.Instance.IsSameYLevel(tile, anchorTile))
+                score += 0.2f;
 
             if (lookAheadSteps >= 2 && AnyDamageAbilityReachesAnchorFromTile(tile, abilities, anchor))
                 score += 0.3f;
@@ -545,44 +559,87 @@ namespace DDD.TNFY.BRAWL
             return false;
         }
 
-        private List<Tile> GetReachableTiles()
+        private const int StayRank         = 0;
+        private const int WalkRank         = 1;
+        private const int JumpRank         = 2;
+        private const int WalkThenJumpRank = 3;
+
+        private static int MoveRank(MoveOption move)
+            => !move.isJump ? WalkRank : move.jumpFrom == null ? JumpRank : WalkThenJumpRank;
+
+        private static string MoveLabel(MoveOption move)
+            => !move.isJump ? "walk" : move.jumpFrom == null ? "jump" : "walk then jump";
+
+        private static void ApplyMove(ActionPlan plan, MoveOption move)
         {
-            if (unit.currentTile == null || !unit.CanMove()) return new List<Tile>();
-            return GridManager.Instance.GetReachableTiles(unit.currentTile, unit.GetEffectiveMovementRange());
+            plan.movementTarget = move.destination;
+            plan.isJump         = move.isJump;
+            plan.jumpFromTile   = move.jumpFrom;
         }
 
-        private List<Tile> GetJumpableTiles()
+        private List<MoveOption> BuildMoveOptions()
         {
-            var result = new List<Tile>();
-            if (unit.currentTile == null || unit.JumpRange < 2 || !unit.CanMove()) return result;
-            if (StatusEffectManager.Instance != null &&
-                StatusEffectManager.Instance.HasStatusEffect(unit, StatusEffectType.Encumbered)) return result;
+            var options = new List<MoveOption>();
+            if (unit.currentTile == null || !unit.CanMove()) return options;
 
-            Tile startTile    = unit.currentTile;
-            int  maxRange     = unit.JumpRange;
-            const int minRange = 2;
+            int  movementRange = unit.GetEffectiveMovementRange();
+            var  walkTiles     = GridManager.Instance.GetReachableTiles(unit.currentTile, movementRange);
+            var  walkReachable = new HashSet<Tile>(walkTiles);
 
-            foreach (var tile in GridManager.Instance.AllTiles)
+            foreach (var tile in walkTiles)
             {
-                if (tile == null || tile == startTile) continue;
-                if (!tile.passableTerrain) continue;
-                if (tile.occupied && !unit.CanStompOccupiedTiles) continue;
-
-                int dist = GridManager.Instance.GetGridDistance(startTile, tile, true);
-                if (dist < minRange || dist > maxRange) continue;
-
-                var walkPath = GridManager.Instance.FindPath(startTile, tile, unit.GetEffectiveMovementRange());
-                if (walkPath.Count > 0) continue;
-
-                Vector3 from = startTile.transform.position + Vector3.up * 0.5f;
-                Vector3 to   = tile.transform.position      + Vector3.up * 0.5f;
-                if (Physics.Raycast(from, (to - from).normalized, Vector3.Distance(from, to) * 0.9f, LayerMask.GetMask("Walls")))
-                    continue;
-
-                result.Add(tile);
+                if (tile == unit.currentTile) continue;
+                options.Add(MoveOption.Walk(tile));
             }
 
-            return result;
+            if (jumpSystem == null || !jumpSystem.CanUnitJump(unit)) return options;
+            if (movementRange < JumpSystem.MinJumpRange) return options;
+
+            var claimedDestinations = new HashSet<Tile>();
+
+            foreach (var tile in JumpDestinationsFrom(unit.currentTile, walkReachable, claimedDestinations))
+                options.Add(MoveOption.Jump(tile));
+
+            foreach (var launchTile in LaunchTilesWithMovementToSpare(walkTiles, movementRange))
+                foreach (var tile in JumpDestinationsFrom(launchTile, walkReachable, claimedDestinations))
+                    options.Add(MoveOption.WalkThenJump(tile, launchTile));
+
+            return options;
+        }
+
+        private List<Tile> LaunchTilesWithMovementToSpare(List<Tile> walkTiles, int movementRange)
+        {
+            var affordable = new List<(Tile tile, int cost)>();
+
+            foreach (var tile in walkTiles)
+            {
+                if (tile == unit.currentTile) continue;
+
+                int cost = GridManager.Instance.FindPath(unit.currentTile, tile, movementRange).Count;
+                if (cost <= 0) continue;
+                if (movementRange - cost < JumpSystem.MinJumpRange) continue;
+
+                affordable.Add((tile, cost));
+            }
+
+            affordable.Sort((a, b) => a.cost.CompareTo(b.cost));
+            return affordable.Select(entry => entry.tile).ToList();
+        }
+
+        private List<Tile> JumpDestinationsFrom(Tile origin, HashSet<Tile> walkReachable, HashSet<Tile> claimedDestinations)
+        {
+            var destinations = new List<Tile>();
+
+            foreach (var tile in jumpSystem.GetJumpableTilesFrom(unit, origin))
+            {
+                if (tile == unit.currentTile) continue;
+                if (walkReachable.Contains(tile)) continue;
+                if (!claimedDestinations.Add(tile)) continue;
+
+                destinations.Add(tile);
+            }
+
+            return destinations;
         }
 
         private Vector2Int DirectionToward(Tile from, Tile to)

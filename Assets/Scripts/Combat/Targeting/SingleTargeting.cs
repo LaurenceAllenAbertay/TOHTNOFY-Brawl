@@ -41,18 +41,9 @@ namespace DDD.TNFY.BRAWL
             else if (hoveredTile.currentUnit != null)
             {
                 var unit = hoveredTile.currentUnit;
-                bool canHit;
 
-                if (unit.IsNeutral)
-                    canHit = ctx.ability.canTargetNeutral;
-                else
-                {
-                    bool isAlly = IsAlly(unit, ctx.caster);
-                    canHit = (isAlly && ctx.ability.canHitAllies) ||
-                             (!isAlly && ctx.ability.canHitEnemies);
-                }
-
-                if (canHit) hoveredTile.Highlight(TileHighlightType.AttackRange);
+                if (ctx.ability.CanHit(ctx.caster, unit))
+                    hoveredTile.Highlight(TileHighlightType.AttackRange);
             }
         }
         
@@ -73,6 +64,9 @@ namespace DDD.TNFY.BRAWL
                 Debug.Log("Cannot target occupied or impassable tile. Try again.");
                 return false;
             }
+
+            if (ctx.ability.effects.Any(e => !e.CanConfirmTargetTile(ctx, tile)))
+                return false;
 
             outCtx = new AbilityContext
             {

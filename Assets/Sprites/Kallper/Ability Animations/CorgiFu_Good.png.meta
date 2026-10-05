@@ -1,0 +1,1767 @@
+fileFormatVersion: 2
+guid: 2b3343acd097802459fc6e54b8c01d23
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2115585988031986470
+    second: CorgiFu_Hurt_0
+  - first:
+      213: 5817153097740829603
+    second: CorgiFu_Hurt_1
+  - first:
+      213: -2027503494409965229
+    second: CorgiFu_Hurt_2
+  - first:
+      213: -3003009933629725954
+    second: CorgiFu_Hurt_3
+  - first:
+      213: -264646172732099970
+    second: CorgiFu_Hurt_4
+  - first:
+      213: 2933721234524134112
+    second: CorgiFu_Hurt_5
+  - first:
+      213: -4861795092060138961
+    second: CorgiFu_Hurt_6
+  - first:
+      213: -2213634390637600340
+    second: CorgiFu_Hurt_7
+  - first:
+      213: 7492120505185379180
+    second: CorgiFu_Hurt_8
+  - first:
+      213: 3369697192071764709
+    second: CorgiFu_Hurt_9
+  - first:
+      213: -4977683703244854982
+    second: CorgiFu_Hurt_10
+  - first:
+      213: -6088291191542961980
+    second: CorgiFu_Hurt_11
+  - first:
+      213: -799705405391802613
+    second: CorgiFu_Hurt_12
+  - first:
+      213: 3961064973488950567
+    second: CorgiFu_Hurt_13
+  - first:
+      213: -9179653620895486793
+    second: CorgiFu_Hurt_14
+  - first:
+      213: 8427818638250313291
+    second: CorgiFu_Hurt_15
+  - first:
+      213: -7141046785827465101
+    second: CorgiFu_Hurt_16
+  - first:
+      213: -4962731934552451028
+    second: CorgiFu_Hurt_17
+  - first:
+      213: -2934332996574425940
+    second: CorgiFu_Hurt_18
+  - first:
+      213: -7643517500835013393
+    second: CorgiFu_Hurt_19
+  - first:
+      213: -6396917495474369742
+    second: CorgiFu_Hurt_20
+  - first:
+      213: 2277765022403400415
+    second: CorgiFu_Hurt_21
+  - first:
+      213: -18262365100893194
+    second: CorgiFu_Hurt_22
+  - first:
+      213: 2027385164099608435
+    second: CorgiFu_Hurt_23
+  - first:
+      213: 888339269120171521
+    second: CorgiFu_Hurt_24
+  - first:
+      213: 2659657852833684021
+    second: CorgiFu_Hurt_25
+  - first:
+      213: 3568084636065450865
+    second: CorgiFu_Hurt_26
+  - first:
+      213: -7109715271968795620
+    second: CorgiFu_Hurt_27
+  - first:
+      213: -8980023344116530381
+    second: CorgiFu_Hurt_28
+  - first:
+      213: 1803195648934207647
+    second: CorgiFu_Hurt_29
+  - first:
+      213: -1483156591534483686
+    second: CorgiFu_Hurt_30
+  - first:
+      213: 2398250680019161820
+    second: CorgiFu_Hurt_31
+  - first:
+      213: -3696001728020497457
+    second: CorgiFu_Hurt_32
+  - first:
+      213: 2611301515367876803
+    second: CorgiFu_Hurt_33
+  - first:
+      213: -6136692657122785643
+    second: CorgiFu_Hurt_34
+  - first:
+      213: -8934470069978827391
+    second: CorgiFu_Hurt_35
+  - first:
+      213: 1813675442194513273
+    second: CorgiFu_Hurt_36
+  - first:
+      213: 951481133036036378
+    second: CorgiFu_Hurt_37
+  - first:
+      213: -3314106163147368491
+    second: CorgiFu_Hurt_38
+  - first:
+      213: -5127822766180562588
+    second: CorgiFu_Hurt_39
+  - first:
+      213: 6244111369656488835
+    second: CorgiFu_Hurt_40
+  - first:
+      213: 6748634072490934207
+    second: CorgiFu_Hurt_41
+  - first:
+      213: 1253943748424059180
+    second: CorgiFu_Hurt_42
+  - first:
+      213: -8999255645458251522
+    second: CorgiFu_Hurt_43
+  - first:
+      213: 2588705362756240255
+    second: CorgiFu_Hurt_44
+  - first:
+      213: -4169538456959354299
+    second: CorgiFu_Hurt_45
+  - first:
+      213: -2512023280672146972
+    second: CorgiFu_Hurt_46
+  - first:
+      213: -1026435481522058346
+    second: CorgiFu_Hurt_47
+  - first:
+      213: -6065995576917357084
+    second: CorgiFu_Hurt_48
+  - first:
+      213: 8917330942908587106
+    second: CorgiFu_Hurt_49
+  - first:
+      213: -8417622506390594999
+    second: CorgiFu_Hurt_50
+  - first:
+      213: -5785755920652777174
+    second: CorgiFu_Hurt_51
+  - first:
+      213: 3933851383502759466
+    second: CorgiFu_Hurt_52
+  - first:
+      213: -6709199892140328483
+    second: CorgiFu_Hurt_53
+  - first:
+      213: 2996302875711403115
+    second: CorgiFu_Hurt_54
+  - first:
+      213: -1310748399940473509
+    second: CorgiFu_Hurt_55
+  - first:
+      213: 4077409618041535718
+    second: CorgiFu_Hurt_56
+  - first:
+      213: 4393115341178108487
+    second: CorgiFu_Hurt_57
+  - first:
+      213: -5088711802842469905
+    second: CorgiFu_Hurt_58
+  - first:
+      213: -3272535792946168251
+    second: CorgiFu_Hurt_59
+  - first:
+      213: -5808983098655994591
+    second: CorgiFu_Hurt_60
+  - first:
+      213: -1566216096707855264
+    second: CorgiFu_Hurt_61
+  - first:
+      213: 466719790093707742
+    second: CorgiFu_Hurt_62
+  - first:
+      213: 6698728569323534997
+    second: CorgiFu_Hurt_63
+  - first:
+      213: -3101897226829506334
+    second: CorgiFu_Hurt_64
+  - first:
+      213: 769962463402037011
+    second: CorgiFu_Hurt_65
+  - first:
+      213: -8059659749163214917
+    second: CorgiFu_Hurt_66
+  - first:
+      213: 7216401381820595498
+    second: CorgiFu_Hurt_67
+  - first:
+      213: -5743441426670478181
+    second: CorgiFu_Hurt_68
+  - first:
+      213: -2627403406357391467
+    second: CorgiFu_Hurt_69
+  - first:
+      213: -7850222757129988993
+    second: CorgiFu_Hurt_70
+  - first:
+      213: 2814491124422535612
+    second: CorgiFu_Hurt_71
+  - first:
+      213: -7861079839354845880
+    second: CorgiFu_Hurt_72
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CorgiFu_Good_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6800
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac4e676860474e4b82a9c81992299c8
+      internalID: 5135386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_1
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 6800
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f2cb036b6e30c4da4ebd93f2a054aa
+      internalID: -2109483442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_2
+      rect:
+        serializedVersion: 2
+        x: 3028
+        y: 6800
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9806cce6ed382e4fb68d33b92e32359
+      internalID: -1900527595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_3
+      rect:
+        serializedVersion: 2
+        x: 4542
+        y: 6800
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2739268dbf3976f4daa7e1de620adf0a
+      internalID: -160748234
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_4
+      rect:
+        serializedVersion: 2
+        x: 6056
+        y: 6800
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c8d6d14bdc27449bc6b4e22e351a50
+      internalID: -1590074362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_5
+      rect:
+        serializedVersion: 2
+        x: 7570
+        y: 6800
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fab2f0e700a8c8b43a949230eab8cd68
+      internalID: 2092601466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6120
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3ee40fd7e7ae3d45b446dfaffdac917
+      internalID: 758422509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_7
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 6120
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69178e3bf50c6df4cae4168727236c16
+      internalID: -1981463393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_8
+      rect:
+        serializedVersion: 2
+        x: 3028
+        y: 6120
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2da0ba5cc2a19ec43b8c89c692a97346
+      internalID: 865770480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_9
+      rect:
+        serializedVersion: 2
+        x: 4542
+        y: 6120
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2226441c17762a147b2c74be47a80263
+      internalID: -445609620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_10
+      rect:
+        serializedVersion: 2
+        x: 6056
+        y: 6120
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 737561d3a908dc94e84180fa85e96284
+      internalID: -302109265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_11
+      rect:
+        serializedVersion: 2
+        x: 7570
+        y: 6120
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f457cf08a2920948920c80b76547603
+      internalID: 657466515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5440
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 108e27787dca1574dbccb478c3613de2
+      internalID: -875905313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_13
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 5440
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e51e7cc7b521f5043965a4429d08880f
+      internalID: -1121562821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_14
+      rect:
+        serializedVersion: 2
+        x: 3028
+        y: 5440
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c3993fcfa6b6404c9403d7c126a9276
+      internalID: 988870150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_15
+      rect:
+        serializedVersion: 2
+        x: 4542
+        y: 5440
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23627cc7443dc7c49b802b9678b56ac4
+      internalID: -161751164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_16
+      rect:
+        serializedVersion: 2
+        x: 6056
+        y: 5440
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3476f85cf8efd0438085e1111fc32b4
+      internalID: -1549548154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_17
+      rect:
+        serializedVersion: 2
+        x: 7570
+        y: 5440
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12b827f593b4e8a448c07afd07392a16
+      internalID: 404680176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4760
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cba136fbca90a9b4a9ef6136fcbc0ee9
+      internalID: 1892633405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_19
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 4760
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f185e6d7171707c4e8fa95ca71104774
+      internalID: 1573407731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_20
+      rect:
+        serializedVersion: 2
+        x: 3028
+        y: 4760
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c9645e419ab914b9058af68b891f95
+      internalID: -1198833288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_21
+      rect:
+        serializedVersion: 2
+        x: 4542
+        y: 4760
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5370497a2c522ab41b3e5367504ae79a
+      internalID: -747445973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_22
+      rect:
+        serializedVersion: 2
+        x: 6056
+        y: 4760
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc605a12383b950499bdc15f89edc275
+      internalID: 149013853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_23
+      rect:
+        serializedVersion: 2
+        x: 7570
+        y: 4760
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc8efbc057fc6fb46892c04778eec908
+      internalID: -997886224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4080
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98b32b830081fbf45a3763ca2fd5de1e
+      internalID: -570913226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_25
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 4080
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ef11445c08c9584eb9c7aa8732c1242
+      internalID: 191897288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_26
+      rect:
+        serializedVersion: 2
+        x: 3028
+        y: 4080
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f4fab975b2c3b64991282c9e8288d24
+      internalID: -1622845066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_27
+      rect:
+        serializedVersion: 2
+        x: 4542
+        y: 4080
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bd75f4e7762c5e4cb1f0bb355b3c45a
+      internalID: 187584346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_28
+      rect:
+        serializedVersion: 2
+        x: 6056
+        y: 4080
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35c18a05ba615924ba959e77af1ca9b9
+      internalID: -299947679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_29
+      rect:
+        serializedVersion: 2
+        x: 7570
+        y: 4080
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5467de17210df9648a82cb7164d66b16
+      internalID: -561113451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3400
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c7d5b4a6c8d4684ab02816c1527c514
+      internalID: 930424950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_31
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 3400
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17ed4422530581644b83c4f1f17b2fa6
+      internalID: -503574221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_32
+      rect:
+        serializedVersion: 2
+        x: 3028
+        y: 3400
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fafad64cf702184a97bad02e9f98469
+      internalID: 1711914249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_33
+      rect:
+        serializedVersion: 2
+        x: 4542
+        y: 3400
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dccedc79cd0e62b4db12ca66aae25cf7
+      internalID: 722827702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_34
+      rect:
+        serializedVersion: 2
+        x: 6056
+        y: 3400
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0af6c2750a503dc42bb424b91b0c6108
+      internalID: 1267001403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_35
+      rect:
+        serializedVersion: 2
+        x: 7570
+        y: 3400
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa910ba44e6879d42b21664cab63af29
+      internalID: -577478730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2720
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a5e83dc439aa7f4e8a7b0514204bff0
+      internalID: 1534079971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_37
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 2720
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c3762027e5d3a846860490384b57676
+      internalID: 921947153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_38
+      rect:
+        serializedVersion: 2
+        x: 3028
+        y: 2720
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7077a469f947a594fbbd33e0bbe30762
+      internalID: -1306403468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_39
+      rect:
+        serializedVersion: 2
+        x: 4542
+        y: 2720
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5b142854b67bba43aa849c8bccd9774
+      internalID: 1524985762
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_40
+      rect:
+        serializedVersion: 2
+        x: 6056
+        y: 2720
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9814a7216e2679458775808613deb29
+      internalID: -856338692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_41
+      rect:
+        serializedVersion: 2
+        x: 7570
+        y: 2720
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d97cd014c57d87847b39a13c26639e0e
+      internalID: -1137988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2040
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa7d580ad841c394a96f7af953a9e25a
+      internalID: -417067991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_43
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 2040
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d12ca04aa52012f48876b42d752372d9
+      internalID: 564287444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_44
+      rect:
+        serializedVersion: 2
+        x: 3028
+        y: 2040
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf8159a90db11914b9911104ff63cf14
+      internalID: -1763105036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_45
+      rect:
+        serializedVersion: 2
+        x: 4542
+        y: 2040
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3175a976ecf7b7d4190b04db3a73c08d
+      internalID: -533573817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_46
+      rect:
+        serializedVersion: 2
+        x: 6056
+        y: 2040
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5caa1b0d649c47f4e99e821375514188
+      internalID: 137772950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_47
+      rect:
+        serializedVersion: 2
+        x: 7570
+        y: 2040
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a6cbc2dc6c8be4c94fa2dee7501d7f
+      internalID: -889040979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1360
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f47a8e9475f8c6c47a41b17e929c8446
+      internalID: -825399634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_49
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 1360
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d15373f132f015042836e9e2008ef106
+      internalID: -1466623408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_50
+      rect:
+        serializedVersion: 2
+        x: 3028
+        y: 1360
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0bfef6795fb5b846a53f0c5270b79bb
+      internalID: 1833139123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_51
+      rect:
+        serializedVersion: 2
+        x: 4542
+        y: 1360
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c930ae5a7390234459c791c47e1299ef
+      internalID: -452015515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_52
+      rect:
+        serializedVersion: 2
+        x: 6056
+        y: 1360
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aae904709b90b34289f1c6efcb92f19
+      internalID: -1979530840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_53
+      rect:
+        serializedVersion: 2
+        x: 7570
+        y: 1360
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a6822e7e571ff646ba7a667203a4437
+      internalID: -1487161434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 680
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91611f1e85efbdd4ab33770dc5637614
+      internalID: 1713879611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_55
+      rect:
+        serializedVersion: 2
+        x: 1514
+        y: 680
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f48d77bc585a304c866f95875798a6b
+      internalID: -176430615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_56
+      rect:
+        serializedVersion: 2
+        x: 3028
+        y: 680
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1262494cb4176a347873761d0ed3a98b
+      internalID: -79268107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_57
+      rect:
+        serializedVersion: 2
+        x: 4542
+        y: 680
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a9bba41cf737684b80cce732cd493e7
+      internalID: 1061110236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_58
+      rect:
+        serializedVersion: 2
+        x: 6056
+        y: 680
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a62e854f9083627448e799c31cf31134
+      internalID: 97259822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_59
+      rect:
+        serializedVersion: 2
+        x: 7570
+        y: 680
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47a69f951dccfb4c91d660a5851a7f4
+      internalID: 409659669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CorgiFu_Good_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1514
+        height: 680
+      alignment: 9
+      pivot: {x: 0.491, y: 0.055}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ea2d43325b6f4a4298026094cb02637
+      internalID: 1083753494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: dd6dcce4a73cd624ba505c205b6a1d8a
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":6.0,"y":11.0},"gridSpriteSize":{"x":1514.0,"y":680.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.4909999966621399,"y":0.054999999701976779},"autoSlicingMethod":0,"spriteAlignment":9,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      CorgiFu_Good_0: 5135386
+      CorgiFu_Good_1: -2109483442
+      CorgiFu_Good_10: -302109265
+      CorgiFu_Good_11: 657466515
+      CorgiFu_Good_12: -875905313
+      CorgiFu_Good_13: -1121562821
+      CorgiFu_Good_14: 988870150
+      CorgiFu_Good_15: -161751164
+      CorgiFu_Good_16: -1549548154
+      CorgiFu_Good_17: 404680176
+      CorgiFu_Good_18: 1892633405
+      CorgiFu_Good_19: 1573407731
+      CorgiFu_Good_2: -1900527595
+      CorgiFu_Good_20: -1198833288
+      CorgiFu_Good_21: -747445973
+      CorgiFu_Good_22: 149013853
+      CorgiFu_Good_23: -997886224
+      CorgiFu_Good_24: -570913226
+      CorgiFu_Good_25: 191897288
+      CorgiFu_Good_26: -1622845066
+      CorgiFu_Good_27: 187584346
+      CorgiFu_Good_28: -299947679
+      CorgiFu_Good_29: -561113451
+      CorgiFu_Good_3: -160748234
+      CorgiFu_Good_30: 930424950
+      CorgiFu_Good_31: -503574221
+      CorgiFu_Good_32: 1711914249
+      CorgiFu_Good_33: 722827702
+      CorgiFu_Good_34: 1267001403
+      CorgiFu_Good_35: -577478730
+      CorgiFu_Good_36: 1534079971
+      CorgiFu_Good_37: 921947153
+      CorgiFu_Good_38: -1306403468
+      CorgiFu_Good_39: 1524985762
+      CorgiFu_Good_4: -1590074362
+      CorgiFu_Good_40: -856338692
+      CorgiFu_Good_41: -1137988
+      CorgiFu_Good_42: -417067991
+      CorgiFu_Good_43: 564287444
+      CorgiFu_Good_44: -1763105036
+      CorgiFu_Good_45: -533573817
+      CorgiFu_Good_46: 137772950
+      CorgiFu_Good_47: -889040979
+      CorgiFu_Good_48: -825399634
+      CorgiFu_Good_49: -1466623408
+      CorgiFu_Good_5: 2092601466
+      CorgiFu_Good_50: 1833139123
+      CorgiFu_Good_51: -452015515
+      CorgiFu_Good_52: -1979530840
+      CorgiFu_Good_53: -1487161434
+      CorgiFu_Good_54: 1713879611
+      CorgiFu_Good_55: -176430615
+      CorgiFu_Good_56: -79268107
+      CorgiFu_Good_57: 1061110236
+      CorgiFu_Good_58: 97259822
+      CorgiFu_Good_59: 409659669
+      CorgiFu_Good_6: 758422509
+      CorgiFu_Good_60: 1083753494
+      CorgiFu_Good_7: -1981463393
+      CorgiFu_Good_8: 865770480
+      CorgiFu_Good_9: -445609620
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

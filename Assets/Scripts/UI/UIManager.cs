@@ -307,10 +307,10 @@ namespace DDD.TNFY.BRAWL
                 abilityPanel?.CollapseIfExpanded();
         }
         
-        private void UpdateUIPositionAndScale()
+        private bool UpdateUIPositionAndScale()
         {
             if (currentPlayer == null || mainCamera == null || turnUIRectTransform == null || parentCanvas == null)
-                return;
+                return false;
 
             Vector3 worldPosition = currentPlayer.transform.position
                 + Vector3.up * worldOffset.y
@@ -324,7 +324,7 @@ namespace DDD.TNFY.BRAWL
                 bool inCameraState = combatManager != null && combatManager.currentState == CombatState.CameraTransition;
                 if (!cameraMoving && !inCameraState)
                     SetUIVisibility(false);
-                return;
+                return false;
             }
 
             RectTransform canvasRect = parentCanvas.GetComponent<RectTransform>();
@@ -345,6 +345,8 @@ namespace DDD.TNFY.BRAWL
             {
                 turnUIRectTransform.localScale = Vector3.one * (baseUISize / 100f);
             }
+
+            return true;
         }
 
         private bool ShouldShowUI()
@@ -383,6 +385,8 @@ namespace DDD.TNFY.BRAWL
             if (turnUI == null) return;
 
             if (visible && (uiHiddenForAnimation || uiHiddenForMovement)) return;
+
+            if (visible && !UpdateUIPositionAndScale()) return;
 
             turnUI.SetActive(visible);
             if (visible && debugMode)

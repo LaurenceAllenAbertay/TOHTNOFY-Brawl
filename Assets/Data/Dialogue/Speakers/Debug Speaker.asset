@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4ed598d829554a43b5aafc61d04e31b, type: 3}
+  m_Name: Debug Speaker
+  m_EditorClassIdentifier: 
+  speakerName: Debuggy
+  portrait: {fileID: 21300000, guid: 2832b80f7c990e849b1ef3ad7d16b22d, type: 3}
+  characterColour: {r: 0.32156864, g: 0.72156864, b: 0.6745098, a: 1}

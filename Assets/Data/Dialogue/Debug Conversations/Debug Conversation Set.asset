@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76948253596625542b59c070555aad3d, type: 3}
+  m_Name: Debug Conversation Set
+  m_EditorClassIdentifier: 
+  variants:
+  - requiredLeader: {fileID: 11400000, guid: 1e97e95d272eb8f449bd2b5c8cd1075a, type: 2}
+    requiredPartyMembers: []
+    excludedPartyMembers: []
+    conversation: {fileID: 11400000, guid: c174ee7c2e1709943929789a4fa89247, type: 2}
+  fallback: {fileID: 11400000, guid: 9fb3e515dc069ca4a83cc64d1273b255, type: 2}

@@ -71,7 +71,10 @@ namespace DDD.TNFY.BRAWL
             jumpSystem  = FindAnyObjectByType<JumpSystem>();
 
             logger  = new AIDebugLogger(unit, enableDebugLogging, logDetailedScoring, topActionsToLog);
-            planner = new AIPlanner(unit, aggressionBias, lookAheadSteps, targetCandidateCount, CanTargetUnit, IsAlly, GetTeammateUnits, GetLastAttacker, logger);
+            if (jumpSystem == null)
+                Debug.LogWarning($"[UnitAI] {gameObject.name} could not find a JumpSystem in the scene - jump planning is disabled.");
+
+            planner = new AIPlanner(unit, aggressionBias, lookAheadSteps, targetCandidateCount, CanTargetUnit, IsAlly, GetTeammateUnits, GetLastAttacker, jumpSystem, logger);
 
             executor = GetComponent<AIExecutor>();
             if (executor == null)

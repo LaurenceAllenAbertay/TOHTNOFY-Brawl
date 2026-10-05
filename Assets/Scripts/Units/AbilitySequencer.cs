@@ -7,6 +7,8 @@ namespace DDD.TNFY.BRAWL
 {
     public class AbilitySequencer : MonoBehaviour
     {
+        private const float MaxRunningDisplacementWait = 30f;
+
         public AbilityContext CurrentAbilityContext { get; private set; }
         
         private Unit unit;
@@ -406,6 +408,18 @@ namespace DDD.TNFY.BRAWL
 
                 float dispDuration = displacementEffects.Max(e => e.ExpectedAnimationDuration);
                 if (dispDuration > 0f) yield return new WaitForSeconds(dispDuration);
+
+                float runningElapsed = 0f;
+                while (displacementEffects.Any(e => e.IsRunning) && runningElapsed < MaxRunningDisplacementWait)
+                {
+                    runningElapsed += Time.deltaTime;
+                    yield return null;
+                }
+
+                if (runningElapsed >= MaxRunningDisplacementWait)
+                    Debug.LogWarning($"[AbilitySequencer] A displacement effect on {ctx.ability.abilityName} " +
+                                     $"still reported IsRunning after {MaxRunningDisplacementWait} seconds. " +
+                                     "The sequence was released so combat is not left blocked.");
             }
 
             if (!hasDisplacement && damageEffects.Count > 0)

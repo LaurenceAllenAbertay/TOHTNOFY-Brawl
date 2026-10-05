@@ -203,7 +203,12 @@ namespace DDD.TNFY.BRAWL
         }
 
         public bool IsAbilityOnCooldown(int slot)
-            => slot >= 0 && slot < _abilityCooldownsRemaining.Length && _abilityCooldownsRemaining[slot] > 0;
+        {
+            if (CombatManager.InfiniteAttacksEnabled && this is PlayerUnit)
+                return false;
+
+            return slot >= 0 && slot < _abilityCooldownsRemaining.Length && _abilityCooldownsRemaining[slot] > 0;
+        }
 
         public int GetAbilityCooldownRemaining(int slot)
             => (slot >= 0 && slot < _abilityCooldownsRemaining.Length) ? _abilityCooldownsRemaining[slot] : 0;
@@ -229,6 +234,39 @@ namespace DDD.TNFY.BRAWL
                 if (_abilityCooldownsRemaining[i] > 0)
                     _abilityCooldownsRemaining[i]--;
             }
+        }
+
+        public void ResetAbilityCooldowns()
+        {
+            for (int i = 0; i < _abilityCooldownsRemaining.Length; i++)
+                _abilityCooldownsRemaining[i] = 0;
+        }
+
+        public bool HasTransformed { get; private set; }
+
+        public void TransformInto(CharacterData newForm)
+        {
+            if (newForm == null)
+            {
+                Debug.LogWarning($"[Unit:{name}] TransformInto called with null CharacterData — ignored.");
+                return;
+            }
+
+            StatusEffectManager.Instance?.ClearAllStatusEffects(this);
+
+            ResetAbilityCooldowns();
+            pendingAction = null;
+
+            GetComponent<PassiveAbilityHandler>()?.CleanupCurrentPassive();
+
+            ApplyCharacterData(newForm);
+
+            HasTransformed = true;
+
+            NotifyHealthChanged(this);
+            UnitManager.NotifyUnitMoved(this);
+
+            Debug.Log($"[Unit:{name}] Transformed into {newForm.characterName}.");
         }
 
         private void FaceAttacker(Unit attacker)
@@ -308,11 +346,14 @@ namespace DDD.TNFY.BRAWL
 
             SetCurrentTileLogical(targetTile);
 
+            AnimationCurve curve = GetMovementCurve();
+            duration = Mathf.Max(duration, 0.001f);
+
             float elapsed = 0f;
             while (elapsed < duration)
             {
                 elapsed += Time.deltaTime;
-                float easedT = 1f - Mathf.Pow(1f - elapsed / duration, 3f);
+                float easedT = Mathf.Clamp01(curve.Evaluate(Mathf.Clamp01(elapsed / duration)));
                 transform.position = Vector3.Lerp(startPos, endPos, easedT);
                 yield return null;
             }
@@ -439,6 +480,7 @@ namespace DDD.TNFY.BRAWL
                 DialogueManager.Trigger(DialogueTrigger.AllyDownsEnemy, instigator: killer);
 
             UnitManager.NotifyUnitDied(this);
+            UnitManager.NotifyUnitKilled(this, killer);
 
             if (UnitDownedSequencer.Instance != null)
                 UnitDownedSequencer.Instance.EnqueueDowned(this, killer);
@@ -478,6 +520,45 @@ namespace DDD.TNFY.BRAWL
             return currentSpeed;
         }
 
+        private static readonly AnimationCurve DefaultMovementCurve = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
+
+        public AnimationCurve GetMovementCurve()
+        {
+            if (characterData != null && characterData.movementCurve != null && characterData.movementCurve.length > 0)
+                return characterData.movementCurve;
+
+            return DefaultMovementCurve;
+        }
+
+        public AnimationCurve GetMovementCurve(AnimationCurve effectOverride)
+        {
+            if (effectOverride != null && effectOverride.length > 0)
+                return effectOverride;
+
+            return GetMovementCurve();
+        }
+
+        private static readonly AnimationCurve DefaultJumpArcCurve = new AnimationCurve(
+            new Keyframe(0f, 0f, 0f, Mathf.PI),
+            new Keyframe(0.5f, 1f, 0f, 0f),
+            new Keyframe(1f, 0f, -Mathf.PI, 0f));
+
+        public AnimationCurve GetJumpTravelCurve()
+        {
+            if (characterData != null && characterData.jumpTravelCurve != null && characterData.jumpTravelCurve.length > 0)
+                return characterData.jumpTravelCurve;
+
+            return GetMovementCurve();
+        }
+
+        public AnimationCurve GetJumpArcCurve()
+        {
+            if (characterData != null && characterData.jumpArcCurve != null && characterData.jumpArcCurve.length > 0)
+                return characterData.jumpArcCurve;
+
+            return DefaultJumpArcCurve;
+        }
+
         public virtual bool CanTarget(Unit unit)
         {
             if (unit == null || unit == this) return false;
@@ -485,9 +566,7 @@ namespace DDD.TNFY.BRAWL
             if (unit.IsDead && !unit.IsBody) return false;
             if (unit.IsBody) return false; 
 
-            if (StatusEffectManager.Instance != null &&
-                StatusEffectManager.Instance.HasStatusEffect(unit, StatusEffectType.Untargetable))
-                return false;
+            if (unit.IsUntargetableBy(this)) return false;
             
             if (StatusEffectManager.Instance != null)
             {
@@ -497,6 +576,15 @@ namespace DDD.TNFY.BRAWL
             }
 
             return !IsAllyOf(unit);
+        }
+
+        public bool IsUntargetableBy(Unit caster)
+        {
+            if (caster == null) return false;
+            if (caster.IsAllyOf(this)) return false;
+            if (StatusEffectManager.Instance == null) return false;
+
+            return StatusEffectManager.Instance.HasStatusEffect(this, StatusEffectType.Untargetable);
         }
 
         public bool IsAllyOf(Unit other)

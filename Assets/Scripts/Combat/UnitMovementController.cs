@@ -11,6 +11,8 @@ namespace DDD.TNFY.BRAWL
         [Header("Settings")]
         [SerializeField] private float movementSpeed = 4f;
 
+        public float MovementSpeed => movementSpeed;
+
         void Awake()
         {
             if (Instance != null && Instance != this)
@@ -50,7 +52,10 @@ namespace DDD.TNFY.BRAWL
             if (unitAnimator != null)
                 unitAnimator.PlayMove();
 
-            yield return StartCoroutine(MoveAlongWaypoints(movingUnit, pathToUse, spriteRenderers));
+            float totalDistance = CalculateTotalDistance(movingUnit.transform.position, pathToUse);
+            float totalDuration = totalDistance / movementSpeed;
+
+            yield return StartCoroutine(MoveAlongWaypoints(movingUnit, pathToUse, totalDuration, spriteRenderers));
 
             if (unitAnimator != null)
                 unitAnimator.PlayIdle();
@@ -79,54 +84,140 @@ namespace DDD.TNFY.BRAWL
 
         #region Private Movement Coroutines
 
-        private IEnumerator MoveAlongWaypoints(Unit movingUnit, List<Tile> waypoints, SpriteRenderer[] spriteRenderers)
+        public IEnumerator MoveAlongWaypoints(
+            Unit movingUnit,
+            List<Tile> waypoints,
+            float totalDuration,
+            SpriteRenderer[] spriteRenderers = null,
+            bool playDustFX = true,
+            bool claimTilesLogically = true)
         {
-            Vector3 currentPos = movingUnit.transform.position;
+            if (movingUnit == null || waypoints == null || waypoints.Count == 0) yield break;
 
-            float totalDistance = CalculateTotalDistance(currentPos, waypoints);
-            float totalTime = totalDistance / movementSpeed;
+            AnimationCurve curve = movingUnit.GetMovementCurve();
+            totalDuration = Mathf.Max(totalDuration, 0.001f);
 
-            var dustFX = movingUnit.GetComponent<UnitMoveDustFX>();
-            bool hasPlayedBurst = false;
+            Vector3 startPos = movingUnit.transform.position;
 
-            foreach (var waypoint in waypoints)
+            var points = new List<Vector3>(waypoints.Count + 1) { startPos };
+            foreach (var wp in waypoints)
+                points.Add(wp.transform.position);
+
+            float totalDistance = 0f;
+            for (int i = 0; i < points.Count - 1; i++)
+                totalDistance += Vector3.Distance(points[i], points[i + 1]);
+            totalDistance = Mathf.Max(totalDistance, 0.001f);
+
+            var legEndIndices = new List<int>();
+            for (int i = 0; i < waypoints.Count; i++)
             {
-                Vector3 segmentStart = currentPos;
-                Vector3 segmentEnd = waypoint.transform.position;
-                float segmentDistance = Vector3.Distance(segmentStart, segmentEnd);
-                float segmentTime = (segmentDistance / totalDistance) * totalTime;
-
-                UpdateSpriteFacing(spriteRenderers, segmentStart, segmentEnd);
-
-                Vector2Int segmentDirection = GridDirectionUtility.DirectionFromPositions(segmentStart, segmentEnd);
-                if (dustFX != null && segmentDirection != Vector2Int.zero)
+                if (i == waypoints.Count - 1)
                 {
-                    if (!hasPlayedBurst)
-                    {
-                        dustFX.PlayBurst(segmentDirection);
-                        hasPlayedBurst = true;
-                    }
-                    dustFX.StartTrail(segmentDirection);
+                    legEndIndices.Add(i);
+                    continue;
                 }
 
-                float segmentElapsed = 0f;
-                while (segmentElapsed < segmentTime)
+                Vector2Int dirIn = GridDirectionUtility.DirectionFromPositions(points[i], points[i + 1]);
+                Vector2Int dirOut = GridDirectionUtility.DirectionFromPositions(points[i + 1], points[i + 2]);
+
+                if (dirIn != dirOut)
+                    legEndIndices.Add(i);
+            }
+
+            var dustFX = playDustFX ? movingUnit.GetComponent<UnitMoveDustFX>() : null;
+            bool hasPlayedBurst = false;
+
+            Vector3 legStartPos = startPos;
+            int waypointCursor = 0;
+
+            foreach (int legEndIndex in legEndIndices)
+            {
+                int legTileCount = legEndIndex - waypointCursor + 1;
+
+                var legCumulative = new float[legTileCount];
+                Vector3 prev = legStartPos;
+                float legDistance = 0f;
+                for (int k = 0; k < legTileCount; k++)
                 {
-                    segmentElapsed += Time.deltaTime;
-                    float smoothT = Mathf.SmoothStep(0f, 1f, segmentElapsed / segmentTime);
-                    movingUnit.transform.position = Vector3.Lerp(segmentStart, segmentEnd, smoothT);
+                    Vector3 tilePos = waypoints[waypointCursor + k].transform.position;
+                    legDistance += Vector3.Distance(prev, tilePos);
+                    legCumulative[k] = legDistance;
+                    prev = tilePos;
+                }
+                legDistance = Mathf.Max(legDistance, 0.001f);
+
+                float legDuration = Mathf.Max((legDistance / totalDistance) * totalDuration, 0.001f);
+                int nextTileToTrigger = 0;
+                float elapsed = 0f;
+
+                while (elapsed < legDuration)
+                {
+                    elapsed += Time.deltaTime;
+                    float t = Mathf.Clamp01(elapsed / legDuration);
+                    float targetDistance = Mathf.Clamp01(curve.Evaluate(t)) * legDistance;
+
+                    int segmentIndex = 0;
+                    while (segmentIndex < legTileCount - 1 && targetDistance >= legCumulative[segmentIndex])
+                        segmentIndex++;
+
+                    float segStartDist = segmentIndex == 0 ? 0f : legCumulative[segmentIndex - 1];
+                    Vector3 segStart = segmentIndex == 0 ? legStartPos : waypoints[waypointCursor + segmentIndex - 1].transform.position;
+                    Vector3 segEnd = waypoints[waypointCursor + segmentIndex].transform.position;
+                    float segLength = Mathf.Max(legCumulative[segmentIndex] - segStartDist, 0.001f);
+                    float segT = Mathf.Clamp01((targetDistance - segStartDist) / segLength);
+
+                    UpdateSpriteFacing(spriteRenderers, segStart, segEnd);
+                    movingUnit.transform.position = Vector3.Lerp(segStart, segEnd, segT);
+
+                    if (dustFX != null)
+                    {
+                        Vector2Int dustDirection = GridDirectionUtility.DirectionFromPositions(segStart, segEnd);
+                        if (dustDirection != Vector2Int.zero)
+                        {
+                            if (!hasPlayedBurst)
+                            {
+                                dustFX.PlayBurst(dustDirection);
+                                hasPlayedBurst = true;
+                            }
+                            dustFX.StartTrail(dustDirection);
+                        }
+                    }
+
+                    while (nextTileToTrigger < legTileCount &&
+                           targetDistance >= legCumulative[nextTileToTrigger] - 0.001f)
+                    {
+                        var tile = waypoints[waypointCursor + nextTileToTrigger];
+                        if (claimTilesLogically)
+                            movingUnit.SetCurrentTileLogical(tile);
+                        nextTileToTrigger++;
+
+                        if (tile.HasActiveEffects)
+                            yield return StartCoroutine(tile.TriggerOnEnterEffects(movingUnit));
+
+                        if (BigMomentSequencer.Instance != null)
+                            yield return StartCoroutine(BigMomentSequencer.Instance.DrainQueue());
+                    }
+
                     yield return null;
                 }
 
-                currentPos = segmentEnd;
-
-                if (waypoint.HasActiveEffects)
+                while (nextTileToTrigger < legTileCount)
                 {
-                    yield return StartCoroutine(waypoint.TriggerOnEnterEffects(movingUnit));
+                    var tile = waypoints[waypointCursor + nextTileToTrigger];
+                    if (claimTilesLogically)
+                        movingUnit.SetCurrentTileLogical(tile);
+                    nextTileToTrigger++;
+
+                    if (tile.HasActiveEffects)
+                        yield return StartCoroutine(tile.TriggerOnEnterEffects(movingUnit));
 
                     if (BigMomentSequencer.Instance != null)
                         yield return StartCoroutine(BigMomentSequencer.Instance.DrainQueue());
                 }
+
+                legStartPos = waypoints[legEndIndex].transform.position;
+                movingUnit.transform.position = legStartPos;
+                waypointCursor = legEndIndex + 1;
             }
 
             if (dustFX != null)

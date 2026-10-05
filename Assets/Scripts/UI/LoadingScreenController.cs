@@ -53,8 +53,17 @@ namespace DDD.TNFY.BRAWL
             progressFillImage.fillAmount = Mathf.Clamp01(normalisedProgress);
         }
 
+        private bool _isLoadingScene;
+
         public void LoadScene(string sceneName)
         {
+            if (_isLoadingScene)
+            {
+                Debug.LogWarning($"[LoadingScreenController] LoadScene('{sceneName}') ignored — a scene load is already in progress.");
+                return;
+            }
+
+            _isLoadingScene = true;
             StartCoroutine(LoadSceneRoutine(sceneName));
         }
 
@@ -69,6 +78,8 @@ namespace DDD.TNFY.BRAWL
                 SetProgress(sceneLoad.progress);
                 yield return null;
             }
+
+            _isLoadingScene = false;
         }
 
         public IEnumerator TrackHandles<T>(IList<AsyncOperationHandle<T>> handles)

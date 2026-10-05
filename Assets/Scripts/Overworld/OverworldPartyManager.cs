@@ -16,25 +16,48 @@ namespace DDD.TNFY.BRAWL
         private readonly List<Transform>      _transforms = new List<Transform>();
         private readonly List<UnitAnimator>   _animators  = new List<UnitAnimator>();
         private readonly List<SpriteRenderer> _renderers  = new List<SpriteRenderer>();
+        private readonly List<CharacterData>  _characters = new List<CharacterData>();
         
         private Vector3[] _prevPositions = new Vector3[0];
         
         private Vector2 _moveInput;
+
+        public static OverworldPartyManager Instance { get; private set; }
         
         public Transform LeaderTransform => _transforms.Count > 0 ? _transforms[0] : null;
 
-        public void Initialise(List<GameObject> partyObjects)
+        public CharacterData LeaderCharacter => _characters.Count > 0 ? _characters[0] : null;
+
+        public IReadOnlyList<CharacterData> PartyCharacters => _characters;
+
+        private void Awake()
+        {
+            if (Instance != null && Instance != this) { Destroy(gameObject); return; }
+            Instance = this;
+        }
+
+        private void OnDestroy()
+        {
+            if (Instance == this)
+                Instance = null;
+        }
+
+        public void Initialise(List<GameObject> partyObjects, List<CharacterData> partyCharacters)
         {
             _transforms.Clear();
             _animators.Clear();
             _renderers.Clear();
+            _characters.Clear();
 
-            foreach (var go in partyObjects)
+            for (int i = 0; i < partyObjects.Count; i++)
             {
+                var go = partyObjects[i];
                 if (go == null) continue;
+
                 _transforms.Add(go.transform);
                 _animators.Add(go.GetComponentInChildren<UnitAnimator>());
                 _renderers.Add(go.GetComponentInChildren<SpriteRenderer>());
+                _characters.Add(partyCharacters != null && i < partyCharacters.Count ? partyCharacters[i] : null);
             }
 
             _prevPositions = new Vector3[_transforms.Count];

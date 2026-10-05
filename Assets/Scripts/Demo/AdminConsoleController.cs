@@ -139,6 +139,12 @@ namespace DDD.TNFY.BRAWL
                 return;
             }
 
+            if (command.commandType == AdminCommandType.TimeScale)
+            {
+                RunSync(AdminCommandExecutor.ExecuteTimeScale(command));
+                return;
+            }
+
             if (CombatManager.Instance == null || !CombatManager.Instance.IsSafeForAdminCommand)
             {
                 Log("Error: cannot run admin commands right now (not your turn, or something is mid-action).");
@@ -155,6 +161,18 @@ namespace DDD.TNFY.BRAWL
             if (command.commandType == AdminCommandType.Clear)
             {
                 RunSync(AdminCommandExecutor.ExecuteClear(command));
+                return;
+            }
+
+            if (command.commandType == AdminCommandType.InfiniteMovement)
+            {
+                RunSync(AdminCommandExecutor.ExecuteInfiniteMovement(command));
+                return;
+            }
+
+            if (command.commandType == AdminCommandType.InfiniteAttacks)
+            {
+                RunSync(AdminCommandExecutor.ExecuteInfiniteAttacks(command));
                 return;
             }
 

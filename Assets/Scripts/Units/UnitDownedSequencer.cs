@@ -69,6 +69,9 @@ namespace DDD.TNFY.BRAWL
 
             _presentedInline.Clear();
             _isDraining = false;
+
+            if (TransformationSequencer.Instance != null)
+                yield return StartCoroutine(TransformationSequencer.Instance.DrainQueue());
         }
 
         public IEnumerator PresentDownedInline(Unit victim)

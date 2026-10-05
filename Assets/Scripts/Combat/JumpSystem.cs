@@ -6,6 +6,8 @@ namespace DDD.TNFY.BRAWL
 {
     public class JumpSystem : MonoBehaviour
     {
+        public const int MinJumpRange = 2;
+
         [SerializeField] private float jumpHeight = 2f;
         [SerializeField] private float fallbackArcDuration = 0.5f;
 
@@ -28,6 +30,17 @@ namespace DDD.TNFY.BRAWL
             }
         }
 
+        public bool CanUnitJump(Unit unit)
+        {
+            if (unit == null) return false;
+            if (unit.JumpRange < MinJumpRange) return false;
+            if (!unit.CanMove()) return false;
+            if (StatusEffectManager.Instance != null &&
+                StatusEffectManager.Instance.HasStatusEffect(unit, StatusEffectType.Encumbered)) return false;
+
+            return true;
+        }
+
         public bool CanUseJump(Unit unit)
         {
             if (unit == null || combatManager == null) return false;
@@ -36,11 +49,9 @@ namespace DDD.TNFY.BRAWL
             if (combatManager.IsExecutingAbility || combatManager.IsMoving) return false;
             if (combatManager.currentState != CombatState.WaitingForInput) return false;
             if (combatManager.IsMovementLocked) return false;
-            if (!unit.CanMove()) return false;
-            if (StatusEffectManager.Instance != null &&
-                StatusEffectManager.Instance.HasStatusEffect(unit, StatusEffectType.Encumbered)) return false;
-            
-            return combatManager.HasEnoughMovementForJump(2);
+            if (!CanUnitJump(unit)) return false;
+
+            return combatManager.HasEnoughMovementForJump(MinJumpRange);
         }
 
         public void StartJumpTargeting()
@@ -103,7 +114,7 @@ namespace DDD.TNFY.BRAWL
             
             GridManager.Instance.ClearAllHighlights();
             
-            var jumpTiles = GetJumpableTiles(currentUnit);
+            var jumpTiles = GetJumpableTilesFrom(currentUnit, currentUnit.currentTile);
             
             foreach (var tile in jumpTiles)
             {
@@ -119,31 +130,31 @@ namespace DDD.TNFY.BRAWL
             }
         }
 
-        private List<Tile> GetJumpableTiles(Unit unit)
+        public List<Tile> GetJumpableTilesFrom(Unit unit, Tile origin)
         {
             var jumpableTiles = new List<Tile>();
-            if (unit?.currentTile == null) return jumpableTiles;
-
-            Tile startTile = unit.currentTile;
-            int maxRange = unit.JumpRange;
-            const int minRange = 2;
+            if (unit == null || origin == null) return jumpableTiles;
 
             foreach (var tile in GridManager.Instance.AllTiles)
             {
-                if (tile == null || tile == startTile) continue;
-                if (!tile.passableTerrain) continue;
-
-                int distance = GridManager.Instance.GetGridDistance(startTile, tile, true);
-
-                if (distance < minRange || distance > maxRange) continue;
-                
-                if (tile.occupied && !unit.CanStompOccupiedTiles) continue;
-
-                if (!IsJumpBlockedByWalls(startTile, tile))
+                if (IsValidJumpDestination(unit, origin, tile))
                     jumpableTiles.Add(tile);
             }
 
             return jumpableTiles;
+        }
+
+        public bool IsValidJumpDestination(Unit unit, Tile origin, Tile destination)
+        {
+            if (unit == null || origin == null || destination == null) return false;
+            if (destination == origin) return false;
+            if (!destination.passableTerrain) return false;
+            if (destination.occupied && !unit.CanStompOccupiedTiles) return false;
+
+            int distance = GridManager.Instance.GetGridDistance(origin, destination, true);
+            if (distance < MinJumpRange || distance > unit.JumpRange) return false;
+
+            return !IsJumpBlockedByWalls(origin, destination);
         }
 
         void ExecuteJump(Tile targetTile)
@@ -151,31 +162,9 @@ namespace DDD.TNFY.BRAWL
             Unit currentUnit = combatManager.CurrentActiveUnit;
             if (currentUnit == null || targetTile == null) return;
 
-            int distance = GridManager.Instance.GetGridDistance(currentUnit.currentTile, targetTile, true);
-            int maxRange = currentUnit.JumpRange;
-            const int minRange = 2;
-
-            if (distance < minRange || distance > maxRange)
+            if (!IsValidJumpDestination(currentUnit, currentUnit.currentTile, targetTile))
             {
-                Debug.Log($"Invalid jump distance: {distance}. Must be between {minRange} and {maxRange} tiles away.");
-                return;
-            }
-
-            if (!targetTile.passableTerrain)
-            {
-                Debug.Log("Cannot jump to impassable tile!");
-                return;
-            }
-            
-            if (targetTile.occupied && !currentUnit.CanStompOccupiedTiles)
-            {
-                Debug.Log("Cannot jump to occupied tile!");
-                return;
-            }
-
-            if (IsJumpBlockedByWalls(currentUnit.currentTile, targetTile))
-            {
-                Debug.Log("Jump is blocked by walls!");
+                Debug.Log($"[JumpSystem] {targetTile.name} is not a valid jump destination for {currentUnit.name}.");
                 return;
             }
 
@@ -204,7 +193,7 @@ namespace DDD.TNFY.BRAWL
             combatManager.ReleaseAnimationBlock();
         }
 
-        private bool IsJumpBlockedByWalls(Tile startTile, Tile targetTile)
+        public static bool IsJumpBlockedByWalls(Tile startTile, Tile targetTile)
         {
             if (startTile == null || targetTile == null) return true;
 
@@ -221,18 +210,13 @@ namespace DDD.TNFY.BRAWL
 
             int wallsLayerMask = LayerMask.GetMask("Walls");
 
-            if (Physics.Raycast(rayStart, rayDirection, out RaycastHit hit, checkDistance, wallsLayerMask))
-            {
-                Debug.Log($"Jump blocked by wall: {hit.collider.name} at distance {hit.distance}");
-                return true;
-            }
-
-            return false;
+            return Physics.Raycast(rayStart, rayDirection, checkDistance, wallsLayerMask);
         }
 
-        public IEnumerator JumpAnimation(Unit unit, Vector3 startPos, Vector3 endPos, Unit stompTarget = null, Tile originTile = null)
+        public IEnumerator JumpAnimation(Unit unit, Vector3 startPos, Vector3 endPos, Unit stompTarget = null, Tile originTile = null, int stompDamageOverride = -1, bool fireMovementUIEvents = true)
         {
-            UIEvents.OnMovementAnimationStarted();
+            if (fireMovementUIEvents)
+                UIEvents.OnMovementAnimationStarted();
 
             Vector3 jumpDirection = (endPos - startPos).normalized;
             unit.FaceDirection(GetJumpDirection(jumpDirection));
@@ -275,14 +259,17 @@ namespace DDD.TNFY.BRAWL
 
                 const float landMaxWait = 3f;
                 float landElapsed = 0f;
+                AnimationCurve travelCurve = unit.GetJumpTravelCurve();
+                AnimationCurve arcCurve = unit.GetJumpArcCurve();
 
                 while (!landed && landElapsed < landMaxWait)
                 {
                     landElapsed += Time.deltaTime;
                     float t = Mathf.Clamp01(landElapsed / arcDuration);
+                    float easedT = Mathf.Clamp01(travelCurve.Evaluate(t));
 
-                    Vector3 currentPos = Vector3.Lerp(startPos, endPos, t);
-                    currentPos.y += Mathf.Sin(t * Mathf.PI) * jumpHeight;
+                    Vector3 currentPos = Vector3.Lerp(startPos, endPos, easedT);
+                    currentPos.y += arcCurve.Evaluate(t) * jumpHeight;
                     unit.transform.position = currentPos;
 
                     yield return null;
@@ -301,14 +288,17 @@ namespace DDD.TNFY.BRAWL
             {
                 float arcDuration = fallbackArcDuration;
                 float elapsed = 0f;
+                AnimationCurve travelCurve = unit.GetJumpTravelCurve();
+                AnimationCurve arcCurve = unit.GetJumpArcCurve();
 
                 while (elapsed < arcDuration)
                 {
                     elapsed += Time.deltaTime;
-                    float t = elapsed / arcDuration;
+                    float t = Mathf.Clamp01(elapsed / arcDuration);
+                    float easedT = Mathf.Clamp01(travelCurve.Evaluate(t));
 
-                    Vector3 currentPos = Vector3.Lerp(startPos, endPos, t);
-                    currentPos.y += Mathf.Sin(t * Mathf.PI) * jumpHeight;
+                    Vector3 currentPos = Vector3.Lerp(startPos, endPos, easedT);
+                    currentPos.y += arcCurve.Evaluate(t) * jumpHeight;
                     unit.transform.position = currentPos;
 
                     yield return null;
@@ -319,18 +309,22 @@ namespace DDD.TNFY.BRAWL
 
             unit.transform.position = endPos;
 
-            UIEvents.OnMovementAnimationComplete();
+            if (fireMovementUIEvents)
+                UIEvents.OnMovementAnimationComplete();
 
             if (stompTarget != null)
-                yield return StartCoroutine(ExecuteStomp(unit, stompTarget, originTile));
+                yield return StartCoroutine(ExecuteStomp(unit, stompTarget, originTile, stompDamageOverride));
         }
 
-        private IEnumerator ExecuteStomp(Unit stomper, Unit victim, Tile originTile)
+        private IEnumerator ExecuteStomp(Unit stomper, Unit victim, Tile originTile, int damageOverride = -1)
         {
             if (victim == null || stomper == null) yield break;
 
-            int damage = Mathf.Max(1, stomper.currentAttack - victim.currentDefense);
-            victim.ReceiveDamage(damage);
+            int damage = damageOverride >= 0
+                ? damageOverride
+                : Mathf.Max(1, stomper.currentAttack - victim.currentDefense);
+
+            victim.ReceiveDamage(damage, stomper);
             UnitManager.NotifyUnitDamaged(victim, stomper);
 
             if (BigMomentSequencer.Instance != null)
@@ -423,11 +417,7 @@ namespace DDD.TNFY.BRAWL
             return Vector3.zero;
         }
 
-        bool IsMouseOverUI()
-        {
-            return UnityEngine.EventSystems.EventSystem.current != null &&
-                   UnityEngine.EventSystems.EventSystem.current.IsPointerOverGameObject();
-        }
+        bool IsMouseOverUI() => InputManager.IsMouseOverUI_Static();
         
         public bool IsTargetingJump => isTargetingJump;
         public Unit CurrentActiveUnit => combatManager?.CurrentActiveUnit;
