@@ -1,0 +1,271 @@
+﻿<!doctype html>
+<html lang="en-GB">
+<head>
+    <!-- Decoding Type -->
+    <meta charset="utf-8">
+
+    <!-- Ensures the site is friendly to most resolutions -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Laurence Allen's Portfolio</title>
+
+    <!-- Shown under the title in search results and link previews -->
+    <meta name="description" content="Laurence Allen - game developer. C# Unity projects and CGAD Abertay University coursework.">
+
+    <!-- Tab Icon -->
+    <!-- preconnect makes the fonts download earlier  -->
+    <link rel="icon" href="ddd_icon_noBG.svg" type="image/svg+xml">
+
+    <!-- Embed code from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Chivo:wght@400;700&family=IBM+Plex+Mono:wght@400;600&display=swap">
+
+    <!-- The stylesheet is in the head so they are ready before the page paints -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <!--
+         Stays stuck to the top of the screen because the class is sticky.
+         Nav links jump to matching ids, handles navigation without JavaScript.
+    -->
+    <header>
+        <div class="wrap header-inner">
+            <a class="brand" href="#top">
+                <img src="ddd_icon_noBG.svg" alt="Laurence Allen's Portfolio">
+            </a>
+            <nav>
+                <a href="#projects">Projects</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="top">
+
+        <!-- HERO -->
+        <!--
+            Two-column grid, one for text and one for image.
+        -->
+        <section class="hero wrap">
+            <!-- Lede -->
+            <div>
+                <!-- 'Decal' is a small contextual piece of text -->
+                <p class="decal">Unity Game Developer</p>
+                <h1>Laurence<br>Allen</h1>
+                <p class="lede">
+                    Fourth-year Computer Games Application Development student at
+                    Abertay University and Founder &amp; Head Programmer at Double Down Digital.
+                    Gameplay mechanics, tools, and AI programming in C# and C++, especially with Unity 6.
+                </p>
+
+                <div class="actions">
+                    <a class="btn solid" href="#projects">See my projects</a>
+                    <a class="btn" href="#contact">Get in touch</a>
+                </div>
+            </div>
+
+            <!-- Double Down Digital Logo -->
+            <div class="hero-logo">
+                <img src="ddd_logo.svg" alt="Double Down Digital Logo">
+            </div>
+
+        </section>
+
+        <section id="projects" class="wrap">
+            <p class="decal">My Best Work</p>
+            <h2>Projects</h2>
+
+            <div class="projects">
+
+                <!-- --- Projects --- -->
+                <!-- TOHTNOFY: Trading Card Game -->
+                <article class="project reveal" data-kind="Double Down Digital">
+                    <div class="shots">
+                        <img class="shot on" src="images/TNFY-TCG-Gameplay1.png" alt="Gameplay">
+                        <img class="shot" src="images/TNFY-TCG-Gameplay2.png" alt="Card Preview">
+                        <img class="shot" src="images/TNFY-TCG-Gameplay3.png" alt="Playing a Card">
+                        <img class="shot" src="images/TNFY-TCG-DeckBuilder.png" alt="Deck Builder">
+                        <img class="shot" src="images/TNFY-TCG-MainMenu.png" alt="Main Menu">
+
+                        <button class="shot-nav prev" type="button" aria-label="Previous image">‹</button>
+                        <button class="shot-nav next" type="button" aria-label="Next image">›</button>
+                        <div class="dots"></div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>TOHTNOFY: Trading Card Game</h3>
+                        <p class="meta">Unity · C# · Solo · Jul-Aug 2026</p>
+                        <p>
+                            This was my month-long summer project before 4th year. It's a deck building card game for two players, or against an MCTS AI. Every card inherits from a single class defining
+                            its stats and giving it a unique ability or a common keyword that gives it a special function. All code and art was created entirely by me, aside from some card art that was
+                            sampled from other games/google images.
+                        </p>
+                        <a class="btn solid" href="https://doubledowndigital.itch.io/tohtnofy-tcg" target="_blank" rel="noopener">Play It</a>
+                    </div>
+                </article>
+
+                <!-- Incinder -->
+                <article class="project reveal" data-kind="Abertay">
+                    <div class="shots">
+                        <img class="shot on" src="images/Incinder-Gameplay1.png" alt="Gameplay 1">
+                        <img class="shot" src="images/Incinder-Gameplay2.png" alt="Gameplay 2">
+                        <img class="shot" src="images/Incinder-Intro.png" alt="Opening Cutscene">
+
+                        <button class="shot-nav prev" type="button" aria-label="Previous image">‹</button>
+                        <button class="shot-nav next" type="button" aria-label="Next image">›</button>
+                        <div class="dots"></div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>Incinder</h3>
+                        <p class="meta">Unity · C# · Team of 8 · Jan-May 2026</p>
+                        <p>
+                            My 3rd year team project, my role was the Gameplay Programmer designing all the gameplay features including player/camera movement, light detection system, the combat system, and the inventory system. Additionally, I also stepped out of my role to supply additional help to the team; I implemented all the art and UI into the project, I created a shader to help visualise the borders between light and shadow, I composed the 3 tracks featured in the game, and was a leader of the creative direction when the team was divided.
+                        </p>
+                        <a class="btn solid" href="https://happy-golem-games.itch.io/happy-golem-315" target="_blank" rel="noopener">Play It</a>
+                    </div>
+                </article>
+
+                <!-- TOHTNOFY Brawl -->
+                <article class="project reveal" data-kind="Double Down Digital">
+                    <div class="shots">
+                        <img class="shot on" src="images/TNFY-Brawl-Gameplay1.png" alt="Gameplay 1">
+                        <img class="shot" src="images/TNFY-Brawl-Gameplay2.png" alt="Gameplay 2">
+                        <img class="shot" src="images/TNFY-Brawl-Gameplay3.png" alt="Gameplay 3">
+
+                        <button class="shot-nav prev" type="button" aria-label="Previous image">‹</button>
+                        <button class="shot-nav next" type="button" aria-label="Next image">›</button>
+                        <div class="dots"></div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>TOHTNOFY Brawl</h3>
+                        <p class="meta">Unity · C# · Team of 3 · Jun 2025-Present</p>
+                        <p>
+                            My biggest project so far, and still a work in progress. a tile-based strategy brawler set in the TOHTNOFY universe, built with a small team of artists.. As the lead programmer, 
+                            my duties include developing tools to ease the integration of art and animation, creating core gameplay features e.g. a library of unique abilities for each character, a priority 
+                            AI with utility scoring, and dynamic music and dialogue systems that react to the battle.
+                        </p>
+                        <a class="btn solid" href="https://doubledowndigital.itch.io/tohtnofy-brawl" target="_blank" rel="noopener">Play It</a>
+                    </div>
+                </article>
+
+                <!-- TOHTNOFY Visual Novel! -->
+                <article class="project reveal" data-kind="Double Down Digital">
+                    <div class="shots">
+                        <img class="shot on" src="images/TNFY-VN-MainMenu.png" alt="Main Menu">
+                        <img class="shot" src="images/TNFY-VN-Gameplay1.png" alt="Gameplay 1">
+                        <img class="shot" src="images/TNFY-VN-Gameplay2.png" alt="Gameplay 2">
+
+                        <button class="shot-nav prev" type="button" aria-label="Previous image">‹</button>
+                        <button class="shot-nav next" type="button" aria-label="Next image">›</button>
+                        <div class="dots"></div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>TOHTNOFY Visual Novel!</h3>
+                        <p class="meta">Unity · C# · Team of 2 · Nov 2024-Apr 2025</p>
+                        <p>
+                            The first entry of games in the TOHTNOFY universe, a parody of typical romantic visual novels twisting it to be chaotic and comedic. You play as a Romanian exchange student at 
+                            the New New Zealand high school. I handled the entire engine side of this project, creating a dialogue engine from scratch, making it much simpler to write out scenes 
+                            and branching conversations.
+                        </p>
+                        <a class="btn solid" href="https://doubledowndigital.itch.io/tohtnofy-visual-novel" target="_blank" rel="noopener">Play It</a>
+                    </div>
+                </article>
+
+                <!-- Instrument Magic -->
+                <article class="project reveal" data-kind="Abertay">
+                    <div class="shots">
+                        <img class="shot on" src="images/CMP302-Tutorial.png" alt="Tutorial Area">
+                        <img class="shot" src="images/CMP302-PlayArea.png" alt="Full Area">
+                        <img class="shot" src="images/CMP302-Instruments.png" alt="Instrument Pickup">
+                        <img class="shot" src="images/CMP302-Flute.png" alt="Flute Casting">
+                        <img class="shot" src="images/CMP302-Drums.png" alt="Drum Casting">
+
+                        <button class="shot-nav prev" type="button" aria-label="Previous image">‹</button>
+                        <button class="shot-nav next" type="button" aria-label="Next image">›</button>
+                        <div class="dots"></div>
+                    </div>
+
+                    <div class="project-info">
+                        <h3>UE5 Instrument Magic System</h3>
+                        <p class="meta">Unreal Engine 5 · C++ · Solo · Sept-Dec 2025</p>
+                        <p>
+                            My most recent Unreal Engine 5 game, I developed this for one of my 3rd year modules where I received an A+. The application showcases a unique gameplay feature consisting of 
+                            multiple interactable items that then allow you to cast an array of spells following a specific input. Each instrument has a special way of receiving input, flute is based on 
+                            how you move your camera and the drum is operated through timed clicks. I focused on scalable and compatible design ensuring that each spell can be easily linked to any 
+                            instrument by defining it with a unique string of enum inputs.
+                        </p>
+                        <a class="btn solid" href="https://doubledowndigital.itch.io/laurence-allens-cmp302" target="_blank" rel="noopener">Play It</a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <!--
+            Two-column grid again
+        -->
+        <section id="about" class="wrap">
+            <p class="decal">About</p>
+
+            <div class="about">
+                <!-- About Me and Education -->
+                <div>
+                    <p>
+                        Hello! I'm Laurence Allen, or SevB online. What I enjoy most is crafting the systems others or myself end up working with, like dialogue engines, ability systems, and just tools that make the workflow more streamlined. If something is gonna need to be done often, it's better to spend time to save time, because who likes doing more work than they have to? On a team I'm always happy to pick up whatever's needed and help where I can. It matters to me that making games can be a fun process, or well as much as it can be, projects that are easy to work with are projects that get finished. I bring this mentality with me when creating gameplay features as well, I want to make sure the player has an easy and fun experience too. I'm looking for a graduate gameplay or tools programming role.
+                    </p>
+
+                    <h3 class="decal">Education</h3>
+                    <div class="edu">
+                        <p>2023-2027</p>
+                        <p class="degree">BSc (Hons) Computer Games Application Development</p>
+                        <p>Abertay University, Dundee</p>
+                    </div>
+                </div>
+
+                <!-- Quick Skills -->
+                <div class="skills">
+                    <h4>Engines &amp; API</h4>
+                    <p class="chips">Unity · Unreal Engine · DirectX11</p>
+                    <h4>Languages</h4>
+                    <p class="chips">C# · C++ · HLSL · GLSL · Python · HTML · CSS</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <!--
+            A clickable link to my email above and 3 buttons to other contact sites below
+        -->
+        <section id="contact" class="wrap">
+            <p class="decal">Contact Me</p>
+            <!-- Opens gmail draft to my email on click -->
+            <a class="email" href="mailto:lorns.allen@gmail.com">lorns.allen@gmail.com</a>
+
+            <div class="links">
+                <a href="https://github.com/LaurenceAllenAbertay">GitHub<span>@LaurenceAllenAbertay</span></a>
+                <a href="https://doubledowndigital.itch.io">itch.io<span>doubledowndigital.itch.io</span></a>
+                <a href="https://www.linkedin.com/in/laurence-allen-b80115296/">LinkedIn<span>Laurence Allen</span></a>
+                <a href="https://canva.link/laurence-allen-cv">Canva<span>My CV</span></a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="wrap footer-inner">
+            <p>Thank you for looking at my portfolio!</p>
+            <a href="#top">Back to top</a>
+        </div>
+    </footer>
+
+    <!-- Must be at the bottom of body so the HTML above already exists by the time the script runs looking for it -->
+    <script src="script.js"></script>
+</body>
+</html>

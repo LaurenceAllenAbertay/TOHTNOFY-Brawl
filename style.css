@@ -1,0 +1,565 @@
+﻿/* Padding and borders count inside an elements width, so without this a 300px box with 20px 
+   padding is treated as 340px wide and every layout calculation would then have to account for this */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    /* Double Down Digital palette colours */
+    --yellow: #E9CE36;
+    --black: #030303;
+    --grey: #8E8C7C;
+    /* contact link part */
+    --panel: #0D0D0B;
+    /* hairline borders between sections */
+    --line: #24231C;
+    /* body text */
+    --text: #F3F1E7;
+
+    /* fonts for the site, including fallbacks in case Google Fonts can't be accessed */
+    --display: "Archivo", Arial, sans-serif;
+    --body: "Chivo", Helvetica, Arial, sans-serif;
+    --mono: "IBM Plex Mono", Consolas, monospace;
+}
+
+/* Page Base */
+body {
+    margin: 0;
+    background: var(--black);
+    color: var(--text);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Links and Buttons */
+a {
+    color: var(--yellow);
+}
+
+/* Colour of text selection, very nifty */
+::selection {
+    background: var(--yellow);
+    color: var(--black);
+}
+
+/* Every section is a .wrap: clamped width, centred, with padding so text never touches the screen edge on narrow screens */
+.wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding-inline: 20px;
+}
+
+/* Section Borders */
+section.wrap {
+    padding-block: clamp(60px, 9vw, 100px);
+}
+
+/* 'blank + blank' syntax means when a section immediate follows another section */
+section + section {
+    border-top: 1px solid var(--line);
+}
+
+
+/* --- Typography --- */
+
+/* Hero Header */
+h1 {
+    font-family: var(--display);
+    font-variation-settings: "wdth" 70, "wght" 900;
+    font-size: clamp(46px, 8.4vw, 100px);
+    text-transform: uppercase;
+    line-height: 0.867;
+    margin: 12px 0 0;
+}
+
+h2, h3 {
+    font-family: var(--display);
+    font-variation-settings: "wdth" 72, "wght" 800;
+    text-transform: uppercase;
+    line-height: 0.95;
+    margin: 0;
+}
+
+h2 {
+    font-size: clamp(34px, 6vw, 58px);
+    margin-bottom: 28px;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+h4 {
+    font-family: var(--mono);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--grey);
+    margin: 0;
+}
+
+.decal {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--grey);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+    /* Little yellow dash */
+    .decal::before {
+        content: "";
+        width: 22px;
+        height: 2px;
+        background: var(--yellow);
+    }
+
+/* Little intro paragraph */
+.lede {
+    font-size: 17px;
+    color: var(--grey);
+    max-width: 55ch;
+    margin: 24px 0 0;
+}
+
+/* --- Header --- */
+
+/* Sticky so it stays at the top of the screen no matter where you are, and increased Z index to stay above other elements */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(3, 3, 3, 0.92);
+    border-bottom: 1px solid var(--line);
+}
+
+/* Ensures the name is on the left and the navigation is on the right */
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 62px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+    .brand img {
+        display: block;
+        height: 34px;
+        width: auto;
+    }
+
+nav {
+    display: flex;
+    gap: 4px;
+}
+
+    nav a {
+        font-family: var(--mono);
+        font-size: 12px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--grey);
+        text-decoration: none;
+        padding: 8px 10px;
+    }
+
+        nav a:hover {
+            color: var(--yellow);
+        }
+
+/* --- Buttons --- */
+
+.btn {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--text);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 13px 20px;
+}
+
+    .btn:hover {
+        border-color: var(--yellow);
+        color: var(--yellow);
+    }
+
+    /* Filled variant for main action buttons */
+    .btn.solid {
+        background: var(--yellow);
+        border-color: var(--yellow);
+        color: var(--black);
+    }
+
+        .btn.solid:hover {
+            background: #F0DE7A;
+            border-color: #F0DE7A;
+        }
+
+/* --- Hero --- */
+
+/* Two columns for text and image, slightly more space for the text */
+.hero {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Projects and Contact buttons */
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+/* Hide the logo when the size is not wide enough */
+@media (max-width: 800px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-logo {
+        display: none;
+    }
+}
+
+.hero-logo img {
+    display: block;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+/* Fade in and rise when appearing */
+.hero-logo img {
+    animation: fade-in 1.5s ease-out backwards;
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        translate: 0 12px;
+    }
+}
+
+/* --- Projects --- */
+
+/* Each project is a two colum row, a slide show and details */
+.project {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 44px;
+    align-items: center;
+    padding-block: 56px;
+    border-top: 1px solid var(--line);
+}
+    
+    /* First project doesn't need line above it, handled elsewhere */
+    .project:first-child {
+        border-top: none;
+        padding-top: 20px;
+    }
+
+    /* This ensures the alternating pattern, every second project moves the slideshow to after the details */
+    .project:nth-child(even) .shots {
+        order: 2;
+    }
+
+.project-info h3 {
+    font-size: clamp(26px, 3.4vw, 40px);
+    margin-bottom: 10px;
+}
+
+/* Scannable quick info line */
+.project-info .meta {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--yellow);
+    margin: 0 0 14px;
+}
+
+.project-info p {
+    color: var(--grey);
+    margin: 0 0 22px;
+}
+
+/* Stack to one column on narrow screens */
+@media (max-width: 800px) {
+    .project {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding-block: 40px;
+    }
+
+        .project:nth-child(even) .shots {
+            order: 0;
+        }
+}
+
+/* Slideshows */
+.shots {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: #08080A;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden; /* Masks the images to the rounded corners */
+}
+
+/* Every screenshot stacks on top of each other except transparent to allow the cross fade animation */
+.shot {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+/* JavaScript moves this between the images */
+    .shot.on {
+        opacity: 1;
+    }
+
+/* Navigation buttons for the slideshows */
+.shot-nav {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+    line-height: 1;
+    color: var(--text);
+    background: rgba(3, 3, 3, 0.7);
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+    .shot-nav:hover {
+        border-color: var(--yellow);
+        color: var(--yellow);
+    }
+
+    .shot-nav.prev {
+        left: 10px;
+    }
+
+    .shot-nav.next {
+        right: 10px;
+    }
+
+/* Dots to show image count and current image, JavaScript makes the buttons so it fits the amount automatically */
+.dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    translate: -50% 0;
+    display: flex;
+    gap: 6px;
+}
+
+    .dots button {
+        width: 7px;
+        height: 7px;
+        padding: 0;
+        border: 0;
+        border-radius: 50%;
+        background: rgba(243, 241, 231, 0.35);
+        cursor: pointer;
+    }
+
+        .dots button.on {
+            background: var(--yellow);
+        }
+
+/* Hide details when slideshow only has 1 image */
+.shots.solo .shot-nav,
+.shots.solo .dots {
+    display: none;
+}
+
+/* Project entrance animations, prefixed with .js so if JavaScript is disabled nothing stays hidden */
+.js .reveal {
+    opacity: 0;
+    translate: 0 24px;
+    transition: opacity 0.5s ease-out, translate 0.5s ease-out;
+}
+
+    .js .reveal.above {
+        translate: 0 -24px;
+    }
+
+    .js .reveal.seen {
+        opacity: 1;
+        translate: 0 0;
+    }
+
+/* --- About --- */
+
+/* Bio on the left, skills on the right */
+.about {
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 44px;
+    align-items: start;
+}
+
+@media (max-width: 800px) {
+    .about {
+        grid-template-columns: 1fr;
+    }
+}
+
+.about p {
+    color: var(--grey);
+}
+
+.about > div > p:first-child {
+    margin-top: 0;
+}
+
+.about .decal {
+    margin-top: 32px;
+}
+
+.edu {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 16px;
+}
+
+.about .edu p {
+    margin: 0;
+    font-family: var(--body);
+    font-size: 17px;
+    color: var(--grey);
+}
+
+    .about .edu .degree {
+        font-size: clamp(22px, 2.6vw, 30px);
+        line-height: 1.2;
+        color: var(--text);
+    }
+
+
+.skills h4 {
+    margin: 0 0 8px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line);
+}
+
+    .skills h4 + .chips {
+        margin: 0 0 22px;
+    }
+
+.chips {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.9;
+}
+
+/* --- Contact --- */
+
+.email {
+    display: inline-block;
+    font-family: var(--display);
+    font-variation-settings: "wdth" 74, "wght" 700;
+    font-size: clamp(20px, 3.6vw, 32px);
+    color: var(--text);
+    text-decoration: none;
+    border-bottom: 3px solid #6B5D1C; /* Custom Underline */
+    margin-top: 20px;
+    word-break: break-word;
+}
+
+    .email:hover {
+        color: var(--yellow);
+        border-color: var(--yellow);
+    }
+
+/* Extra contact cards that autofit the width automatically */
+.links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-top: 38px;
+}
+
+    .links a {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        padding: 16px 18px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: var(--panel);
+        text-decoration: none;
+        font-family: var(--mono);
+        font-size: 10px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--grey);
+    }
+
+        .links a:hover {
+            border-color: var(--yellow);
+        }
+
+        .links a span {
+            font-family: var(--body);
+            font-size: 15px;
+            letter-spacing: 0;
+            text-transform: none;
+            color: var(--text);
+        }
+
+/* --- Footer --- */
+
+/* Very similar to the header just stays at the bottom */
+footer {
+    border-top: 1px solid var(--line);
+    padding-block: 26px 34px;
+}
+
+.footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    font-family: var(--mono);
+    font-size: 11px;
+    color: var(--grey);
+}
+
+    .footer-inner p {
+        margin: 0;
+    }
+
+    .footer-inner a {
+        color: var(--grey);
+        text-decoration: none;
+    }
+
+        .footer-inner a:hover {
+            color: var(--yellow);
+        }
